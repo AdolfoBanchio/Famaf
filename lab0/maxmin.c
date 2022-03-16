@@ -42,9 +42,10 @@ int main (void){
         i= i+1;
     }
     result = compute_max_min(arreglo,tamano);
-    printf("%d\n", result.max_value); 
+    printf("%d\n", result.max_value);
     printf("%d\n", result.min_value);
     printf("%u\n", result.max_position);
     printf("%u\n", result.min_position);
     return(0);
+    //es un comentario de prueba 
 }
