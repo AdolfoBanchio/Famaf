@@ -12,7 +12,7 @@ int i,auxmin,auxmax,auxposmin,auxposmax;
 int largo = length ;
 max_min_result resultado;
     auxmin = array[0];
-    auxmax = array[0]; 
+    auxmax = array[0];
 for ( i = 0; i < largo; i++){
     if (array[i]<auxmin){
         auxmin = array[i];
@@ -42,9 +42,9 @@ int main (void){
         i= i+1;
     }
     result = compute_max_min(arreglo,tamano);
-    printf("%d\n", result.max_value); // Imprime 9
-    printf("%d\n", result.min_value); // Imprime -1
-    printf("%u\n", result.max_position); // Imprime 1
-    printf("%u\n", result.min_position);// Imprime
-    return(0); 
+    printf("%d\n", result.max_value); 
+    printf("%d\n", result.min_value);
+    printf("%u\n", result.max_position);
+    printf("%u\n", result.min_position);
+    return(0);
 }
