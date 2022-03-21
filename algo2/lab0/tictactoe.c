@@ -21,12 +21,28 @@ void print_board(char board[BOARD_SIZE][BOARD_SIZE])
     }
 }
 
-char get_winner(char board[BOARD_SIZE][BOARD_SIZE])
-{
+char get_winner(char board[BOARD_SIZE][BOARD_SIZE]){
     board = board;
     char winner = '-';
-
-    // IMPLEMENTAR
+    if (board[0][0] !='-' && board[0][0]==board[1][1] && board[1][1]==board[2][2]) {
+        winner=board[0][0];
+    }else if (board[2][0] !='-' && board[2][0]==board[1][1] && board[1][1]==board[0][2]) {
+        winner=board[0][2];
+    }
+    for(unsigned int i=0;i<BOARD_SIZE;i++){
+        //columnas
+        if(board[i][0]!='-' && board[i][0]==board[i][1] && board[i][1]==board[i][2]){
+          winner=board[i][0];
+          break;
+        }
+      }
+    for(unsigned int j=0; j<BOARD_SIZE;j++){
+        //columnas
+        if(board[0][j] !='-' && board[0][j]==board[1][j] && board[1][j]==board[2][j]){
+          winner=board[0][j];
+          break;
+        }
+      }
 
     return winner;
 }
@@ -34,10 +50,16 @@ char get_winner(char board[BOARD_SIZE][BOARD_SIZE])
 bool has_free_cell(char board[BOARD_SIZE][BOARD_SIZE])
 {
     board = board;
+    bool vacio = false;
+    for (int row = 0; row < BOARD_SIZE; ++row) {
+        for (int column = 0; column < BOARD_SIZE; ++column) {
+            if(board[row][column] == '-'){
+                vacio = true;
+            }
+        }
+    }
 
-    // IMPLEMENTAR
-
-    return true;
+    return(vacio);
 }
 
 int main(void)
