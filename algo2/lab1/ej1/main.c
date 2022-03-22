@@ -44,12 +44,16 @@ char *parse_filepath(int argc, char *argv[]) {
 unsigned int array_from_file(int array[],unsigned int max_size,const char *filepath) {
     //your code here!!!
     FILE *fp;
-    int valor ;
+    int valor,valor2;
+    char cadena[100];
+    valor = 2;
     printf("%s\n",filepath );
-    fp = fopen("filepath","r");
+    fp = fopen(filepath,"r");
     printf("abrio el archivo\n");
     fscanf (fp,"%d",&valor);
-    printf("%ls\n",&valor);
+    printf("%d\n",valor);
+    fscanf (fp,"d",array[]);
+    printf("%d\n",array[0]);
     return max_size;
 }
 
