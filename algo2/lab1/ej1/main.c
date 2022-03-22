@@ -44,16 +44,25 @@ char *parse_filepath(int argc, char *argv[]) {
 unsigned int array_from_file(int array[],unsigned int max_size,const char *filepath) {
     //your code here!!!
     FILE *fp;
-    int valor,valor2;
-    char cadena[100];
+    int valor,i,c;
     valor = 2;
+    i = 0;
     printf("%s\n",filepath );
     fp = fopen(filepath,"r");
     printf("abrio el archivo\n");
-    fscanf (fp,"%d",&valor);
-    printf("%d\n",valor);
-    fscanf (fp,"d",array[]);
-    printf("%d\n",array[0]);
+    //entiendo que la funcion fscanf busca el primer caracter que cumpla con el formato que pedimos en el segundo argumento
+    //fscanf (fp,"%d",&valor);
+    //printf("%d\n",valor);
+    //deberia poder buscar y guardar todos los enteros de la segunda linea en el array
+    //fscanf(fp,"%d",cadena);
+    while(!feof(fp)) {
+      c = fgetc(fp);
+      array[i] = c;
+      printf("c= %c\n", c);
+      i++;
+    }
+    //printf("%d\n",array[0] );
+    max_size = valor;
     return max_size;
 }
 
