@@ -41,32 +41,38 @@ char *parse_filepath(int argc, char *argv[]) {
     return result;
 }
 
-unsigned int array_from_file(int array[],
-           unsigned int max_size,
-           const char *filepath) {
+unsigned int array_from_file(int array[],unsigned int max_size,const char *filepath) {
     //your code here!!!
-
+    FILE *fp;
+    int valor ;
+    printf("%s\n",filepath );
+    fp = fopen("filepath","r");
+    printf("abrio el archivo\n");
+    fscanf (fp,"%d",&valor);
+    printf("%ls\n",&valor);
+    return max_size;
 }
 
 void array_dump(int a[], unsigned int length) {
-    //your code here!!!!!
+
 }
 
 
 int main(int argc, char *argv[]) {
     char *filepath = NULL;
-
+    //printf("%ls\n",&argc);
+    //printf("%s\n",argv );
     /* parse the filepath given in command line arguments */
     filepath = parse_filepath(argc, argv);
-    
+    printf("%s\n",filepath );
     /* create an array of MAX_SIZE elements */
     int array[MAX_SIZE];
-    
+
     /* parse the file to fill the array and obtain the actual length */
     unsigned int length = array_from_file(array, MAX_SIZE, filepath);
-    
+
     /*dumping the array*/
     array_dump(array, length);
-    
+
     return EXIT_SUCCESS;
 }
