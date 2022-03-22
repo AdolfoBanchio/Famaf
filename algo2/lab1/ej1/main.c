@@ -44,30 +44,31 @@ char *parse_filepath(int argc, char *argv[]) {
 unsigned int array_from_file(int array[],unsigned int max_size,const char *filepath) {
     //your code here!!!
     FILE *fp;
-    int valor,i,c;
+    unsigned int i,valor;
     valor = 2;
     i = 0;
-    printf("%s\n",filepath );
+    
     fp = fopen(filepath,"r");
-    printf("abrio el archivo\n");
-    //entiendo que la funcion fscanf busca el primer caracter que cumpla con el formato que pedimos en el segundo argumento
-    //fscanf (fp,"%d",&valor);
-    //printf("%d\n",valor);
-    //deberia poder buscar y guardar todos los enteros de la segunda linea en el array
-    //fscanf(fp,"%d",cadena);
-    while(!feof(fp)) {
-      c = fgetc(fp);
-      array[i] = c;
-      printf("c= %c\n", c);
-      i++;
-    }
-    //printf("%d\n",array[0] );
+    
+    //busco el primer entero en el archivo y lo guardo en valor
+    fscanf (fp,"%ud\n",&valor);
+    
+    //se que los eneteros restantes son los elementos asi que busco y guardo uno por uno
+    for(i=0;i<valor && i<max_size;i++){
+    fscanf(fp,"%d",&array[i]);    
+    };
+
     max_size = valor;
     return max_size;
 }
 
 void array_dump(int a[], unsigned int length) {
-
+    printf("[");
+    unsigned int i=0;
+    for(i=0;i<length;i++){
+        printf("%d ",a[i]);
+    };
+    printf("]\n");
 }
 
 
@@ -77,7 +78,7 @@ int main(int argc, char *argv[]) {
     //printf("%s\n",argv );
     /* parse the filepath given in command line arguments */
     filepath = parse_filepath(argc, argv);
-    printf("%s\n",filepath );
+    
     /* create an array of MAX_SIZE elements */
     int array[MAX_SIZE];
 
