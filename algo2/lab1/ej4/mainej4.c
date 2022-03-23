@@ -1,3 +1,5 @@
+#include <assert.h>
+#include <stdlib.h>
 #include "array_helpers.h"
 
 /* Maximum allowed length of the array */

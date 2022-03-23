@@ -1,7 +1,5 @@
-#include <assert.h>
 #include <stdbool.h>
 #include <stdio.h>
-#include <stdlib.h>
 #include "array_helpers.h"
 
 unsigned int array_from_file(int a[], unsigned int max_size,const char *filepath){

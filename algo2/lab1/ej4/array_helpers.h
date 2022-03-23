@@ -1,7 +1,5 @@
-#include <assert.h>
 #include <stdbool.h>
 #include <stdio.h>
-#include <stdlib.h>
 #ifndef ARRAY_HELPERS
 #define ARRAY_HELPERS
 
