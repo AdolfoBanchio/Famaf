@@ -1,29 +1,10 @@
-unsigned int array_from_file(int array[],unsigned int max_size,const char *filepath) {
-    //your code here!!!
-    FILE *fp;
-    unsigned int i,valor;
-    valor = 2;
-    i = 0;
 
-    fp = fopen(filepath,"r");
+#ifndef _ARRAYHELPERS
+#define _ARRAYHELPERS
 
-    //busco el primer entero en el archivo y lo guardo en valor
-    fscanf (fp,"%ud\n",&valor);
+unsigned int array_from_file(int a[], unsigned int max_size,const char *filepath);
+void array_dump(int a[], unsigned int length);
 
-    //se que los eneteros restantes son los elementos asi que busco y guardo uno por uno
-    for(i=0;i<valor && i<max_size;i++){
-    fscanf(fp,"%d",&array[i]);
-    };
 
-    max_size = valor;
-    return max_size;
-}
-
-void array_dump(int a[], unsigned int length) {
-    printf("[");
-    unsigned int i=0;
-    for(i=0;i<length;i++){
-        printf("%d ",a[i]);
-    };
-    printf("]\n");
-}
+#include "array_helpers.c"
+#endif
