@@ -1,6 +1,4 @@
-/* First, the standard lib includes, alphabetically ordered */
-
-#include "array_helpers.c"
+#include "array_helpers.h"
 
 /* Maximum allowed length of the array */
 #define MAX_SIZE 100000
