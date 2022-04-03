@@ -57,7 +57,7 @@ int main(int argc, char *argv[]) {
     /* create a copy of the array, to do some checks later */
     int copy[MAX_SIZE];
     array_copy(copy, array, length);
-
+    quick_sort(array,length);
     /* show the ordered array in the screen */
     array_dump(array, length);
 
