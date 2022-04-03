@@ -20,5 +20,5 @@
 }
 
 void quick_sort(int a[], unsigned int length) {
-    quick_sort_rec(a,0,length-1);
+    quick_sort_rec(a,0,(length == 0u) ? 0u : length - 1u);
 }
