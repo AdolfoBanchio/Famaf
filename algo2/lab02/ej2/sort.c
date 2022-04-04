@@ -7,15 +7,12 @@
 #include "sort.h"
 
 
-/*static*/ void quick_sort_rec(int a[], unsigned int izq, unsigned int der){
- /* needs implementation */
+static void quick_sort_rec(int a[], unsigned int izq, unsigned int der){
     unsigned int ppiv;
-    //ppiv = 0;
     if (der > izq){
       ppiv = partition(a,izq,der);
-      //printf("%u\n",ppiv );
-      quick_sort_rec(a,izq,ppiv);
-      quick_sort_rec(a,ppiv+1,der);
+      quick_sort_rec(a,izq,(ppiv == 0u) ? 0u : ppiv-1);
+      quick_sort_rec(a,(ppiv==der) ? der : ppiv+1u,der);
     }
 }
 
