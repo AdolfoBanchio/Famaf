@@ -1,4 +1,4 @@
-from cmath import tan
+from math import tan
 import math
 import sys
 import numpy
