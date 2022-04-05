@@ -37,9 +37,10 @@ def rbisec(fun,i,err,mit):
     return (hx,hf)
 
 hx , hf = rbisec(fun_ej2a,[0.8,1.4],1e-5,100)
-print(f"es la raiz para f(x)= tan(x)-2x \n es x={hx[len(hx)-1]}")
-print(f"\nf({hx[len(hx)-1]}) = {hf[len(hf)-1]}")
-
+print(f"La raiz para f(x)= tan(x)-2x \nes x = {hx[len(hx)-1]}")
+print(f"f({hx[len(hx)-1]}) = {hf[len(hf)-1]}")
+print(f"luego de {len(hx)}iteraciones")
 hx2 , hf2 = rbisec(fun_ej2b,[-105000,130000],1e-5,30)
-print(f"es la raiz para f(x)= x^3 - 5 \n es x={hx2[len(hx2)-1]}")
-print(f"\nf({hx2[len(hx2)-1]}) = {hf2[len(hf2)-1]}")
+print(f"\nLa raiz para f(x)= x^3 - 5 \nes x = {hx2[len(hx2)-1]}")
+print(f"f({hx2[len(hx2)-1]}) = {hf2[len(hf2)-1]}")
+print(f"luego de {len(hx2)} iteraciones")
