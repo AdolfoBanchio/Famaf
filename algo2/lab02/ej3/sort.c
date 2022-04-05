@@ -22,10 +22,10 @@ static unsigned int partition(int a[], unsigned int izq, unsigned int der) {
         i=i+1;
       }else if(goes_before(a[ppiv],a[j])){
         j=j-1;
-      }else if(goes_before(a[j],a[ppiv])){
+      }else if(goes_before(a[ppiv],a[i]) && goes_before(a[j],a[ppiv])){
         swap(a,i,j);
-        i=i+1;
-        j=j-1;
+        //i=i+1;
+        //j=j-1;
       }
     }
     swap(a,j,ppiv);
@@ -46,3 +46,4 @@ static void quick_sort_rec(int a[], unsigned int izq, unsigned int der) {
 void quick_sort(int a[], unsigned int length) {
     quick_sort_rec(a,0,(length == 0u) ? 0u : length-1u);
 }
+
