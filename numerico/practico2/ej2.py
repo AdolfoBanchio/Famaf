@@ -40,7 +40,7 @@ def rbisec(fun,i,err,mit):
 hx , hf = rbisec(fun_ej2a,[0.8,1.4],1e-5,100)
 hx2 , hf2 = rbisec(fun_ej2a,[4.5,4.7],1e-5,100)
 
-x = numpy.linspace(-10,10,120)
+x = numpy.linspace(0.8,1.4,120)
 plt.plot(hx,hf,"red",label="puntos medios[0.8,1.4]")
 plt.plot(hx2,hf2,"blue",label="puntos medios[4,5]")
 plt.plot(x,numpy.tan(x)-(2*x),"g", label="tan(x)-(2*x)")

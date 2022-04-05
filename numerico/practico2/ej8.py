@@ -2,10 +2,9 @@ from math import sqrt
 import math
 import sys
 
-
-def energia (x): 
-    f = 0.01328*(x**2)*(6.66667**3) - 500
-    fp = 0.01328*(2*x)*(6.66667**3)
+def ptoscriticos (x): #funcion para calcular los puntos criticos de tan(x)/x
+    f = ((x*(1/math.cos(x)))**2-(2*math.tan(x)))/x**3
+    fp = ((x*(1/math.cos(x)))**2-(2*math.tan(x)))/x**4
     return (f,fp)
 
 def rnewton (fun,x0,err,mit):
