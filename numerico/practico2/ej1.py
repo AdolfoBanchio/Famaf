@@ -9,7 +9,7 @@ def fun_ej2a(x):
     f = tan(x)-(2*x)
     return f
 def fun_ej2b (x):
-    f = x**2 - 3
+    f = x**3 - 5
     return f
 
 def rbisec(fun,i,err,mit):
@@ -40,6 +40,6 @@ hx , hf = rbisec(fun_ej2a,[0.8,1.4],1e-5,100)
 print(f"es la raiz para f(x)= tan(x)-2x \n es x={hx[len(hx)-1]}")
 print(f"\nf({hx[len(hx)-1]}) = {hf[len(hf)-1]}")
 
-hx2 , hf2 = rbisec(fun_ej2b,[0,3],1e-5,100)
-print(f"es la raiz para f(x)= x^2 - 3 \n es x={hx2[len(hx2)-1]}")
+hx2 , hf2 = rbisec(fun_ej2b,[-105000,130000],1e-5,30)
+print(f"es la raiz para f(x)= x^3 - 5 \n es x={hx2[len(hx2)-1]}")
 print(f"\nf({hx2[len(hx2)-1]}) = {hf2[len(hf2)-1]}")
