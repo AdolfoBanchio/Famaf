@@ -19,14 +19,14 @@ def rnewton (fun,x0,err,mit):
         xn = x0 -(im_x0/d_x0)
         im_x0,d_x0 = fun(xn)
         hx.append(xn)
-        hf.append(im_x0)        
+        hf.append(im_x0)
         if abs((xn - x0)/xn)<err or abs(im_x0)<err:
             return (hx,hf)
-        
+
         x0 = xn
     return (hx,hf)
 
-hx,hf = rnewton(energia,25,1e-6,100)
+hx,hf = rnewton(ptoscriticos,0.9,1e-6,100)
 
 print(hx)
 print(hf)
