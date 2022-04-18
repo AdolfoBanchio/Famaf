@@ -40,7 +40,7 @@ static void dump(char a[], unsigned int length) {
     printf("\n\n");
 }
 
-static merge_word (char sorted[],char letters[],unsigned int indexes[], unsigned int length){
+static void merge_word (char sorted[],char letters[],unsigned int indexes[], unsigned int length){
     for (unsigned int i = 0; i < length; i++){
         sorted[indexes[i]] = letters[i];
     }
@@ -52,11 +52,10 @@ int main(int argc, char *argv[]) {
     unsigned int indexes[MAX_SIZE];
     char letters[MAX_SIZE];
     char sorted[MAX_SIZE];
-    unsigned int length=0; 
+    unsigned int length=0;
     length = data_from_file(file,indexes,letters,MAX_SIZE);
     merge_word(sorted,letters,indexes,length);
     dump(sorted, length);
 
     return EXIT_SUCCESS;
 }
-
