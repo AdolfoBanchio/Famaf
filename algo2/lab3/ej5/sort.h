@@ -8,7 +8,7 @@
 #include "player.h"
 
 /**
- * @brief Returns true if player 'x' goes before player 'y' in a sorted array of players. 
+ * @brief Returns true if player 'x' goes before player 'y' in a sorted array of players.
  *
  * @param[in]  x Player 'x'
  * @param[in]  y Player 'y'
@@ -18,7 +18,7 @@
 bool goes_before(player_t x, player_t y);
 
 /**
- * @brief    Checks if the array 'a' is in ascending order according 
+ * @brief    Checks if the array 'a' is in ascending order according
  *           to the goes_before function
  *
  * @param[in]  atp     The Player array
@@ -30,8 +30,8 @@ bool array_is_sorted(player_t atp[], unsigned int length);
 
 
 /**
- * @brief Sort the array 'a' using any sorting algorithm. The resulting sort 
- *        will be ascending according to the goes_before funtion. 
+ * @brief Sort the array 'a' using any sorting algorithm. The resulting sort
+ *        will be ascending according to the goes_before funtion.
  *        The array 'a' must have exactly 'length' elements.
  *
  * @param[in]      a       Players array
@@ -39,5 +39,8 @@ bool array_is_sorted(player_t atp[], unsigned int length);
  */
 void sort(player_t a[], unsigned int length);
 
-
+void player_swap (player_t a[], unsigned int i, unsigned int j);
+unsigned int partition(player_t a[], unsigned int izq, unsigned int der);
+void quick_sort_rec(player_t a[], unsigned int izq, unsigned int der);
+void quick_sort(player_t a[], unsigned int length);
 #endif

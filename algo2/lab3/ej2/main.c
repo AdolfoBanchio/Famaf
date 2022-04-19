@@ -86,7 +86,7 @@ int main(int argc, char *argv[]) {
         start = clock();
 
         /* do the actual sorting */
-        sort(atp, length);
+        quick_sort(atp, length);
 
         end = clock();
 

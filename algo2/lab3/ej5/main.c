@@ -86,7 +86,7 @@ int main(int argc, char *argv[]) {
         start = clock();
 
         /* do the actual sorting */
-        sort(atp, length);
+        quick_sort(atp, length);
 
         end = clock();
 
@@ -108,3 +108,13 @@ int main(int argc, char *argv[]) {
     destroy(atp, length);
     return (EXIT_SUCCESS);
 }
+
+
+/*
+el tiempo que demora en ordenar un arreglo formado por punteros a 
+estructuras _player_t es significativamente menor(no se porque)
+
+se llama a destroy antes del luego de ordenar todo para eliminar todos
+los lugares de memoria dinamica que se usaron  ya que el fin del programa era
+dejar en un archivo todos los jugadores ordenados (¿?)
+*/
