@@ -10,6 +10,7 @@
 
 /* Then, this project's includes, alphabetically ordered */
 #include "array_helpers.h"
+#include "weather_utils.h"
 
 /**
  * @brief print usage help
@@ -58,6 +59,7 @@ char *parse_filepath(int argc, char *argv[]) {
  *
  * @return EXIT_SUCCESS when programs executes correctly, EXIT_FAILURE otherwise
  */
+
 int main(int argc, char *argv[]) {
     char *filepath = NULL;
 
@@ -66,12 +68,21 @@ int main(int argc, char *argv[]) {
 
     /* create an array with the type of tclimate */
     WeatherTable array;
-
+    int temps_maximas[YEARS];
+    month_t meses_mas_lluvia[YEARS];
     /* parse the file to fill the array and obtain the actual length */
     array_from_file(array, filepath);
 
     /* show the ordered array in the screen */
     array_dump(array);
-
+    printf("\ntemperatura minima de todo el periodo %d \n",min_temp(array));
+    procedimiento(array,temps_maximas);
+    for (unsigned int i = 0; i < YEARS; i++){
+        printf("temp maxima de %d fue %d\n",i+FST_YEAR,temps_maximas[i]);
+    }
+    mes_mas_lluvia(array,meses_mas_lluvia);
+    for (unsigned int i = 0; i < YEARS; i++){
+        printf("precipitaciones maximas de %d fue %d\n",i+FST_YEAR,meses_mas_lluvia[i]);
+    }
     return (EXIT_SUCCESS);
 }

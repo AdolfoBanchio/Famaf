@@ -26,7 +26,7 @@ def rnewton (fun,x0,err,mit):
         x0 = xn
     return (hx,hf)
 
-hx,hf = rnewton(ptoscriticos,0.9,1e-6,100)
+hx,hf = rnewton(ptoscriticos,0.8,1e-6,100)
 
 print(hx)
 print(hf)
