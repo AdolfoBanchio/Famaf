@@ -2184,4 +2184,4 @@ Valentin_Vanta ROU 2181 24 1 10
 Umut_Akkoyun TUR 2184 21 1 13
 Adrian_Oetzbach GER 2185 24 1 14
 
-cpu time used to sort the array: 0.000435 seconds.
+cpu time used to sort the array: 0.001068 seconds.
