@@ -66,6 +66,16 @@ char *parse_filepath(int argc, char *argv[]) {
  * @return EXIT_SUCCESS when programs executes correctly, EXIT_FAILURE otherwise
  */
 
+static int goes_before_ptrs(const void *x,const void *y){
+    player_t i = *(player_t *)x;
+    player_t j = *(player_t *)y;
+    if(i->rank < j->rank){
+        return -1;
+    }else{
+        return 1;
+    }
+}
+ 
 int main(int argc, char *argv[]) {
     char *filepath = NULL;
     player_t atp[MAX_PLAYERS];
@@ -79,7 +89,10 @@ int main(int argc, char *argv[]) {
     /* create a copy of the array, to do some checks later */
     player_t copy[MAX_PLAYERS];
     array_copy(copy, atp, length);
-
+    size_t nelems = sizeof(atp)/sizeof(struct _player_t) ;
+    /*calculo el tamaño del arreglo segun el tamaño de sus elementos y el tamaño del tipo de elementos
+    esto sirve para poder calcular el tamaño de un arreglo de manera generica sin necesidad de saber 
+    que cosas tiene adentro*/
     /* enable statistics for cpu utilization */
     {
         clock_t start, end;
@@ -87,7 +100,9 @@ int main(int argc, char *argv[]) {
         start = clock();
 
         /* do the actual sorting */
-        quick_sort(atp, length);
+        //quick_sort(atp, length); en vez de ordenar usando el algoritmo que cree, ordeno usando void pointers con la funcion quicksort nativa de C, y creo mi 
+        //funcion de comparacion goes_before_ptr paraa pasar como parametro
+        qsort((void *)atp,nelems,sizeof(struct _player_t),goes_before_ptrs);
         end = clock();
 
         /* cpu_time used to sort the array */

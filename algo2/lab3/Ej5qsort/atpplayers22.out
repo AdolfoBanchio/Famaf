@@ -1,0 +1,49 @@
+GNU gdb (Ubuntu 9.2-0ubuntu1~20.04.1) 9.2
+Copyright (C) 2020 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+Type "show copying" and "show warranty" for details.
+This GDB was configured as "x86_64-linux-gnu".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>.
+Find the GDB manual and other documentation resources online at:
+    <http://www.gnu.org/software/gdb/documentation/>.
+
+For help, type "help".
+Type "apropos word" to search for commands related to "word"...
+Reading symbols from ./mysort...
+(gdb) run
+Starting program: /home/adolfo/Documents/Famaf/algo2/lab3/Ej5qsort/mysort ../input/atp-players2022.in
+
+Program received signal SIGSEGV, Segmentation fault.
+0x0000555555555c8b in goes_before_ptrs (x=0x7ffffffee6e8, y=0x7ffffffee760) at main.c:72
+72	    if(i->rank > j->rank){
+(gdb) traceback
+(gdb) backtrace
+#0  0x0000555555555c8b in goes_before_ptrs (x=0x7ffffffee6e8, y=0x7ffffffee760) at main.c:72
+#1  0x00007ffff7e067b1 in msort_with_tmp (p=p@entry=0x7ffffffea240, b=b@entry=0x55555559f800, n=n@entry=2) at msort.c:124
+#2  0x00007ffff7e066b5 in msort_with_tmp (n=2, b=0x55555559f800, p=0x7ffffffea240) at msort.c:53
+#3  msort_with_tmp (p=p@entry=0x7ffffffea240, b=b@entry=0x55555559f800, n=n@entry=5) at msort.c:53
+#4  0x00007ffff7e066b5 in msort_with_tmp (n=5, b=0x55555559f800, p=0x7ffffffea240) at msort.c:53
+#5  msort_with_tmp (p=p@entry=0x7ffffffea240, b=b@entry=0x55555559f800, n=n@entry=10) at msort.c:53
+#6  0x00007ffff7e066b5 in msort_with_tmp (n=10, b=0x55555559f800, p=0x7ffffffea240) at msort.c:53
+#7  msort_with_tmp (p=p@entry=0x7ffffffea240, b=b@entry=0x55555559f800, n=n@entry=21) at msort.c:53
+#8  0x00007ffff7e066d2 in msort_with_tmp (n=21, b=0x55555559f800, p=0x7ffffffea240) at msort.c:54
+#9  msort_with_tmp (p=p@entry=0x7ffffffea240, b=b@entry=0x55555559f758, n=n@entry=42) at msort.c:54
+#10 0x00007ffff7e066d2 in msort_with_tmp (n=42, b=0x55555559f758, p=0x7ffffffea240) at msort.c:54
+#11 msort_with_tmp (p=p@entry=0x7ffffffea240, b=b@entry=0x55555559f610, n=n@entry=83) at msort.c:54
+#12 0x00007ffff7e066d2 in msort_with_tmp (n=83, b=0x55555559f610, p=0x7ffffffea240) at msort.c:54
+#13 msort_with_tmp (p=p@entry=0x7ffffffea240, b=b@entry=0x55555559f378, n=n@entry=166) at msort.c:54
+#14 0x00007ffff7e066b5 in msort_with_tmp (n=166, b=0x55555559f378, p=0x7ffffffea240) at msort.c:53
+#15 msort_with_tmp (p=p@entry=0x7ffffffea240, b=0x55555559f378, n=n@entry=333) at msort.c:53
+#16 0x00007ffff7e06cce in msort_with_tmp (n=333, b=<optimized out>, p=0x7ffffffea240) at msort.c:254
+#17 __GI___qsort_r (b=<optimized out>, n=<optimized out>, s=120, cmp=<optimized out>, arg=<optimized out>) at msort.c:254
+#18 0x0000555555555d84 in main (argc=2, argv=0x7fffffffdc78) at main.c:106
+(gdb) quit
+A debugging session is active.
+
+	Inferior 1 [process 18710] will be killed.
+
+Quit anyway? (y or n) y
