@@ -20,7 +20,18 @@ int main(void) {
     int x = 1;
     person_t m = {90, 'M'};
     int a[] = {0, 1, 2, 3};
+    int *puntero1 = NULL;
+    person_t *puntero2 = NULL;
+    puntero1 = &x;
+    *puntero1 = 9;
 
+    puntero2 = &m ;
+    puntero2->age = 100;
+    puntero2->name_initial = 'F';
+
+    puntero1 = &a[1];
+    *puntero1 = 42;
+  
     /* Completar aquí:
        Al finalizar la ejecución las variables deben tener los siguientes valores
        x = 9

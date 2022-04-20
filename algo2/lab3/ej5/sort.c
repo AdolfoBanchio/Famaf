@@ -33,7 +33,7 @@ bool array_is_sorted(player_t atp[], unsigned int length) {
     }
     return (i == length);
 }
-unsigned int partition(player_t a[], unsigned int izq, unsigned int der) {
+static unsigned int partition(player_t a[], unsigned int izq, unsigned int der) {
     unsigned int ppiv,i,j;
     ppiv = izq;
     i = izq+1;
@@ -52,7 +52,7 @@ unsigned int partition(player_t a[], unsigned int izq, unsigned int der) {
     return ppiv ;
 }
 
-void quick_sort_rec(player_t a[], unsigned int izq, unsigned int der) {
+static void quick_sort_rec(player_t a[], unsigned int izq, unsigned int der) {
     /* copiá acá la implementación que hiciste en el ejercicio 3 */
     unsigned int ppiv;
     if (der > izq){
