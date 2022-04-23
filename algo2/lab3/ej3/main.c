@@ -20,6 +20,7 @@ int main(void) {
     int x = 1;
     person_t m = {90, 'M'};
     int a[] = {0, 1, 2, 3};
+    /* resolucion usando dos punteros 
     int *puntero1 = NULL;
     person_t *puntero2 = NULL;
     puntero1 = &x;
@@ -31,7 +32,46 @@ int main(void) {
 
     puntero1 = &a[1];
     *puntero1 = 42;
+
+    esta implementacion funciona
+    */
+
+
+   /* resolucion usaando void pointers 
+
+   void *ptr = NULL;
+   ptr = &x ;
+   *(int *)ptr = 9;
+   ptr = &m.age;
+   *(int *)ptr = 100 ;
+   ptr = &m.name_initial; 
+   *(char *)ptr = 'F';
+
+   ptr = &a[1];
+   *(int *)ptr = 42;
+   
+   esta implementacion tambien funciona
+
   
+  void *ptr = NULL;
+  ptr = &x ;
+  *(int *)ptr = 9;
+  ptr = &m ;
+  person_t g = {100, 'F'};
+  *(person_t *)ptr = g;
+
+  ptr = &a[1];
+   *(int *)ptr = 42;
+  */
+  void *ptr = NULL;
+  ptr = &x ;
+  *(int *)ptr = 9;
+  ptr = &m ;
+  ((person_t *)ptr)->age = 100;
+  ((person_t *)ptr)->name_initial = 'F';
+  ptr = &a;
+  ((int *)ptr)[1] = 42;
+
     /* Completar aquí:
        Al finalizar la ejecución las variables deben tener los siguientes valores
        x = 9

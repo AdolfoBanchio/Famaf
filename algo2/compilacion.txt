@@ -1,0 +1,13 @@
+paraa crear los archivos .o
+gcc -Wall -Werror -Wextra -pedantic -std=c99 -c archivos.c
+
+para linkear todos mis archivos .o a un ejecutable 
+gcc -Wall -Werror -Wextra -pedantic -std=c99 archivos.o -o miejectuable
+
+la flag Werror convierte todas las flags en errores y no permite la compilacion
+
+agregar gdb al inicio de las dos lineas de compilacion para hacer un archivo debugeable 
+
+al llamar el ejecutable y querer debugear llamar 
+
+gdb --args  ./miejecutable <argumentos_si_hacen_falta>  --> por ej una ruta de archivo
