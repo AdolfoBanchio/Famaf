@@ -41,4 +41,4 @@ plt.legend()
 plt.grid()
 plt.show()
 
-# un grafico para ver donde se encuentran las raices
+# grafico los puntos para ver donde se encuentran las raices en la funcion serie_seno

@@ -17,4 +17,5 @@ def rsteffensen (fun,x0,err,mit):
         
         x0 = xn
     return (hx,hf)
-
+#implemento el metodo de steffensen usando la condicion de frenado que esta en la consigna
+# |f(xn)|<err , uso como base el metodo de newton y modifico solo la iteracion

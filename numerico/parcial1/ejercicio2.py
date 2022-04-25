@@ -1,5 +1,6 @@
 from ejercicio1 import serie_seno
 import matplotlib.pyplot as plt
+#importo la funcion serie_seno del ej1
 
 #visualizar la serie de taylor del sen(x) centrada en 0 en el intervalo [0,6.4]
 

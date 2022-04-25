@@ -1,8 +1,8 @@
 from ejercicio4 import rsteffensen
 from ejercicio1 import serie_seno
 import matplotlib.pyplot as plt
-#calculo la primera raiz positiva con x0 = 3
 
+#calculo la primera raiz positiva con x0 = 3 en el metodo steffensen
 hx1,hf1 = rsteffensen(serie_seno,3,1e-5,100)
 print("primera raiz positiva = ",hx1[-1])
 print("cantidad de iteraciones necesarias =",len(hx1))
@@ -26,6 +26,7 @@ for i in range(0,640):
 #en una lista calculo todos los x entre [0,6.40] separados por una diferencia de 0.01
 #en la otra lista (Tf) calculo  los valores de la serie para cada uno de esos x
 
+#grafico la serie y las raices para poder verlas y compararlas con lo obtenido en el metodo de biseccion
 plt.plot(Tx,Tf,label="Serie de Taylor")
 plt.xlabel("eje x")
 plt.ylabel("eje y")
@@ -39,6 +40,9 @@ plt.grid()
 plt.show()
 
 '''
-Noto que las raices que se obtienen aproximmando en 3 y 6  son exactas a las obtenidas con biseccion, 
-pero en el caso de x0 = 4.5 el resultado obtenido es bastante lejano a ser una raiz
+Noto que las raices que se obtienen aproximmando en 3 y 6  son exactas a las obtenidas con biseccion,
+tambien se nota que es mucho mas rapido el metodo de steffensen que el metodo de biseccion.
+
+pero en el caso de x0 = 4.5 el resultado obtenido es bastante lejano a ser una raiz, el metodo usa todas las iteraciones
+y no converge en una raiz. no lo grafico
 '''
