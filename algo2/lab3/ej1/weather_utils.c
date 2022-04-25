@@ -49,6 +49,7 @@ void mes_mas_lluvia(WeatherTable arr, month_t output[YEARS]){
             }
             if (prec_max < prec_m) {
                 mes_max = m;
+                prec_max = prec_m;
             }
         }
     output[a] = mes_max;
