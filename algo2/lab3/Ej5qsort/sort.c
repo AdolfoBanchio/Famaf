@@ -28,6 +28,6 @@ int goes_before_ptrs(const void *x,const void *y){
     }else{
         return 1;
     }
-    */
+    */  
    return(i->rank - j->rank);
 }
