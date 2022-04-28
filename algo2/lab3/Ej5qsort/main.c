@@ -81,7 +81,7 @@ int main(int argc, char *argv[]) {
     /* create a copy of the array, to do some checks later */
     player_t copy[MAX_PLAYERS];
     array_copy(copy, atp, length);
-    size_t nelems = sizeof(atp)/sizeof(struct _player_t) ;
+    size_t nelems = length;
     /*calculo el tamaño del arreglo segun el tamaño de sus elementos y el tamaño del tipo de elementos
     esto sirve para poder calcular el tamaño de un arreglo de manera generica sin necesidad de saber 
     que cosas tiene adentro*/
