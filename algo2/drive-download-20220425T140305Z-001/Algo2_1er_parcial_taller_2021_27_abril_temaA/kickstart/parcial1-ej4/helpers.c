@@ -65,6 +65,10 @@ void playlist_dump(song_t playlist[], unsigned int length) {
 static unsigned int process_FILE(FILE *file, song_t playlist[], unsigned int max_size) {
     unsigned int i = 0u;
     while (!feof(file)) {
+     	if( i==max_size){
+            printf("Array is too long!");
+            exit(EXIT_FAILURE);
+        }
         unsigned int readed=0;
         process_string(file, SEPARATOR, playlist[i].song_name, MAX_NAME_LENGTH + 1u);
         process_string(file, SEPARATOR, playlist[i].artist_name, MAX_ARTIST_LENGTH + 1u);
@@ -73,10 +77,7 @@ static unsigned int process_FILE(FILE *file, song_t playlist[], unsigned int max
             printf("Invalid array");
             exit(EXIT_FAILURE);
         }
-         if( i==max_size){
-            printf("Array is too long!");
-            exit(EXIT_FAILURE);
-        }
+        
         ++i;
     }
     return (i);
