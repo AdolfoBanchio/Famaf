@@ -25,3 +25,9 @@ int main(void) {
     q = pair_destroy(q);
     return EXIT_SUCCESS;
 }
+
+/*
+esta implementacin no logra encapsulamiento ya que en el modulo main
+logre acceder al tipoo concreto con el que esta definido pair_t, lo que rompe la abstraccion
+
+*/

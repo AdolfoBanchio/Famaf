@@ -24,9 +24,11 @@ int main(void) {
     q = pair_destroy(q);
     return EXIT_SUCCESS;
 }
-
 /*
-esta especificacion que hay en pair.h permite poder haccer que valga para pares
-de cualquier tipo, solo con cambiar el tipo de la especificacion de elem,
-las implementaiones funcionarian para cualquier tipo. 
+esta implementacion si logra encapsulamiento, porque cuando se incluye la libreria pair.h 
+no se incluye la definicion de la estructura a la que apunta el puntero, solo se importa
+el tipo struct s_pair_t * (un puntero a una estructura)
+
+por lo que desde main no se puede romper la abstraccion y acceder a esa estructura ya que no se 
+inlcuye el como esta implementada esa estructura
 */

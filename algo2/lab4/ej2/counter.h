@@ -6,7 +6,6 @@
 /* counter as a pointer to structs to guarantee encapsulation */
 typedef struct _counter * counter;
 
-
 /* Constructors */
 counter counter_init(void);
 /*
