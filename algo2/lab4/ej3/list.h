@@ -32,7 +32,7 @@ unsigned int length(list l);
 list concat(list l,list l2);
 /*agrega al final de l todos los elementos de l2*/
 
-list_elem index(list l,unsigned int i);
+list_elem index(list l,unsigned int n);
 /*devuelve el n-esimo elemento de la lista l
 el primer elemento es de indice 0
 pre: length(l)>n*/
