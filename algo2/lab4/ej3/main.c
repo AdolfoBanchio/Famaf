@@ -84,5 +84,6 @@ int main(int argc, char *argv[]) {
     /* call the average function */
     printf("The average is: %.2f \n", average(l));
 
+    destroy_list(l);
     return (EXIT_SUCCESS);
 }

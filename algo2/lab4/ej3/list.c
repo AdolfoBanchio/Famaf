@@ -44,7 +44,7 @@ list tail(list l){
 
 list addr(list l, list_elem e){
     list aux,newe;
-    newe = malloc(sizeof(list));
+    newe = malloc(sizeof(struct node));
     aux = l;
     if(aux != NULL){
         while (aux->next != NULL)
@@ -130,7 +130,7 @@ list drop(list l, unsigned int n){
     unsigned int i = 0;
     while (l!= NULL && i < n)
     {
-        tail(l);
+        l = tail(l);
         ++i;
     }
     return l;
@@ -151,9 +151,9 @@ list copy_list(list l){
 
 void destroy_list(list l){
     while(l!=NULL){
-        tail(l);
+        l = tail(l);
     }
-    free(l);
+    //free(l);
 }
 /*libera memoria de ser necesario*/
 
