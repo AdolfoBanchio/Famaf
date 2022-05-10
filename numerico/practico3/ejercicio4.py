@@ -25,6 +25,8 @@ calculo f(x) en los 200 puntos igualmente espaciados entre
 1 y -1 para el grafico
 
 """
+fig = plt.figure()
+axs = []
 for n in range (1,16):
     xpn = [ (2*(i-1)/n)-1 for i in range (1,n+2)]
     xqn = [math.cos(puntosq(i,n)) for i in range (0,n)]
@@ -36,16 +38,23 @@ for n in range (1,16):
     para el polin de newton y lagrange
     """
     wpn = (inewton(xpn,ypn,z))
-    wqn = (ilagrange(xqn,yqn,z))
+    wqn = (inewton(xqn,yqn,z))
     """
-    calculo el polinomio de lagrange y de newton que interpolan a los pares (xi,yi)i=1..n
+    calculo el polinomio de newton que interpolan a los pares (xi,yi)i=1..n
     y en wpn y wqn guardo los resultados al ser evaluados en los 200 puntos 
     igualmente espaciados entre 1 y -1 
     """
     wpng.append(wpn)
     wqng.append(wqn)
+    axs.append(fig.add_subplot(5,3,n))
+    axs[-1].plot(z,wpn,label="p_n")
+    axs[-1].plot(z,wqn,label="q_n")    
+    axs[-1].plot(z,yf,label="f(x)")
+    axs[-1].legend()
+    axs[-1].grid(color = "black" ,linestyle="-",linewidth=1)
+        
    
-
+"""
 fig, ax = plt.subplots(5,3)
 l=0
 for idx in range(5):
@@ -57,6 +66,6 @@ for idx in range(5):
         ax[idx][idy].grid(color = "black" ,linestyle="-",linewidth=1)
         
     l = l+3
-        
+"""     
 fig.show()
 plt.show()
