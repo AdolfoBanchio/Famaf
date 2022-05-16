@@ -28,6 +28,7 @@ char letters[],unsigned int max_size){
         fscanf(fp,"%u '%c'\n",&indexes[i],&letters[i]);
         i++;
     };
+    fclose(fp);
     return i;
 }
 
@@ -57,5 +58,6 @@ int main(int argc, char *argv[]) {
     merge_word(sorted,letters,indexes,length);
     dump(sorted, length);
 
+    
     return EXIT_SUCCESS;
 }
