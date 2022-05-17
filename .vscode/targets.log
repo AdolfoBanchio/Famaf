@@ -8,7 +8,7 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Wed May 11 22:40:09 2022
+# Make data base, printed on Mon May 16 18:42:24 2022
 
 # Variables
 
@@ -47,7 +47,7 @@ VTE_VERSION = 6003
 # environment
 VSCODE_NLS_CONFIG = {"locale":"en-us","availableLanguages":{},"_languagePackSupport":true}
 # environment
-JOURNAL_STREAM = 8:41011
+JOURNAL_STREAM = 8:39194
 # environment
 XDG_CONFIG_DIRS = /etc/xdg/xdg-zorin:/etc/xdg
 # makefile
@@ -69,7 +69,7 @@ VSCODE_VERBOSE_LOGGING = true
 # environment
 _ = /usr/bin/code
 # environment
-MANAGERPID = 1111
+MANAGERPID = 1090
 # environment
 LESSOPEN = | /usr/bin/lesspipe %s
 # environment
@@ -85,7 +85,7 @@ PATH = /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/
 # environment
 GPG_AGENT_INFO = /run/user/1000/gnupg/S.gpg-agent:0:1
 # environment
-SESSION_MANAGER = local/adolfo-zorin:@/tmp/.ICE-unix/1403,unix/adolfo-zorin:/tmp/.ICE-unix/1403
+SESSION_MANAGER = local/adolfo-zorin:@/tmp/.ICE-unix/1364,unix/adolfo-zorin:/tmp/.ICE-unix/1364
 # environment
 XDG_RUNTIME_DIR = /run/user/1000
 # environment
@@ -95,7 +95,7 @@ VSCODE_LOG_STACK = false
 # environment
 ELECTRON_RUN_AS_NODE = 1
 # environment
-INVOCATION_ID = e74a644c22cd41da970f343a11ab01b0
+INVOCATION_ID = 7b9cb27dd5c34f0da4e7a70a01adbaaa
 # default
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver output-sync check-symlink load
 # environment
@@ -117,7 +117,7 @@ QT_QPA_PLATFORMTHEME = gtk3
 # default
 .LOADED := 
 # environment
-SSH_AGENT_PID = 1350
+SSH_AGENT_PID = 1311
 # environment
 ORIGINAL_XDG_CURRENT_DESKTOP = zorin:GNOME
 # environment
@@ -161,7 +161,7 @@ SHLVL = 1
 # environment
 GNOME_SHELL_SESSION_MODE = zorin
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-7a33b320-32d9-4741-8901-7c9856304597.sock
+VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-a25f5534-2ee7-43da-bcaf-b9edb7557421.sock
 # default
 MAKE_VERSION := 4.2.1
 # environment
@@ -211,11 +211,11 @@ LC_MEASUREMENT = es_AR.UTF-8
 # environment
 LC_ALL = C
 # environment
-GNOME_TERMINAL_SCREEN = /org/gnome/Terminal/screen/6866544d_b13e_492d_977e_cd592b7ed7fd
+GNOME_TERMINAL_SCREEN = /org/gnome/Terminal/screen/294c3ea5_461f_4747_b647_833797462a57
 # automatic
 ^F = $(notdir $^)
 # environment
-GNOME_TERMINAL_SERVICE = :1.945
+GNOME_TERMINAL_SERVICE = :1.95
 # default
 SUFFIXES := 
 # environment
@@ -235,7 +235,7 @@ LANG = C
 # environment
 TERM = xterm-256color
 # environment
-VSCODE_PID = 43693
+VSCODE_PID = 4511
 # variable set hash-table stats:
 # Load=112/1024=11%, Rehash=0, Collisions=18/134=13%
 
@@ -279,7 +279,6 @@ makefile:
 # Not a target:
 .DEFAULT:
 #  Implicit rule search has not been done.
- 
 #  Modification time never checked.
 #  File has not been updated.
 
@@ -301,9 +300,10 @@ GNUmakefile:
 # strcache buffers: 1 (0) / strings = 17 / storage = 140 B / avg = 8 B
 # current buf: size = 8162 B / used = 140 B / count = 17 / avg = 8 B
 
+ 
 # strcache performance: lookups = 20 / hit rate = 15%
 # hash-table stats:
 # Load=17/8192=0%, Rehash=0, Collisions=1/20=5%
-# Finished Make data base on Wed May 11 22:40:09 2022
+# Finished Make data base on Mon May 16 18:42:24 2022
 
  
