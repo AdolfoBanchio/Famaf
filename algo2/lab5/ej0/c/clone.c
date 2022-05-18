@@ -4,6 +4,7 @@
 char *string_clone(const char *str, size_t length) {
     //char clone[length + 1];
     char *output=calloc(length+1,sizeof(char));
+    //char *output = clone;
     for (size_t i=0; i<length; i++) {
         output[i] = str[i];
     }

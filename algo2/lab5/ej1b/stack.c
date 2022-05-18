@@ -2,11 +2,14 @@
 #include <assert.h>
 #include "stack.h"
  
-struct _s_stack
+struct node
 {
     stack_elem elem;
-    struct _s_stack *next;
-    unsigned int stack_len;
+    struct node *next;
+};
+struct _s_stack{
+    struct node * stack;
+    unsigned int size;
 };
 
 /*
@@ -15,73 +18,66 @@ cada elemento del stack, en el campo stack_len, tendra
 la cantidad de elementos que hay desde el mismo hacia el final.
 */
 stack stack_empty(){
-    stack s = malloc(sizeof(struct _s_stack));
-    s->stack_len = 0;
+    stack s = NULL;
+    s = malloc(sizeof(struct _s_stack));
+    s->stack = NULL;
+    s->size = 0;
     return s;
 }
 
 
 stack stack_push(stack s, stack_elem e){
-    if (s->stack_len == 0)
-    {
-        s->elem = e;
-        s->next = NULL;
-        s->stack_len++;
-    }else{
-        stack aux = malloc(sizeof(struct _s_stack));
-        aux->elem = e;
-        aux->next = s;
-        aux->stack_len = s->stack_len;
-        /*
-        guardo en aux la distancia que habia entre el primer elemento y el final
-        ANTES de sumar este nuevo elemento.
-        */
-        s = aux ;
-        s->stack_len++;
-        /*
-        le sumo 1 al largo total de la lista(nodo inicial).
-        tq el nodo inicial tiene la nueva distancia hacia el fin de la lista.
-        */
-    } 
+    struct node *aux = NULL;
+    aux = malloc(sizeof(struct node));
+    aux->elem = e;
+    aux->next = s->stack ;
+    s->stack = aux ;
+    s->size = s->size+1;
     return s;
 }
 
 
 stack stack_pop(stack s){
-     stack p;
-     p = s;
-     s = s->next;
-     p->next = NULL;
-     stack_destroy(p);
-     return s;
+    assert(!stack_is_empty(s));
+     struct node *p = NULL;
+    p = s->stack;
+    s->stack = (s->stack)->next;
+    s->size = s->size-1;
+    p->next = NULL;
+    free(p);
+    p=NULL;
+    return s;
 }
 
 unsigned int stack_size(stack s){
-    return s->stack_len;
+    return s->size;
 }
 
 bool stack_is_empty(stack s){
-    return (s->stack_len == 0);
+    return (s->size==0 && s->stack ==NULL);
 }
 
 stack_elem stack_top (stack s){
-    assert(s->stack_len != 0);
-    stack_elem e ;
-    e = s->elem;
+    assert(!stack_is_empty(s));
+    stack_elem e = 0;
+    e = (s->stack)->elem;
     return e ;
 }
 
+
+
 stack_elem *stack_to_array(stack s){
-    stack_elem * array;
-    if (s->stack_len != 0)
+    stack_elem * array = NULL;
+    if (stack_is_empty(s))
     {
         return NULL;
     }
     array = calloc(stack_size(s),sizeof(stack_elem));
-    stack p = s;
+    struct node * p = NULL;
+    p = s->stack;
     for (unsigned int i = 0; i < stack_size(s); i++)
     {
-        array[(stack_size(s)-1)-i] = stack_top(p);
+        array[(stack_size(s)-1)-i] = p->elem;
         p = p->next;
     }
     return array;
@@ -89,15 +85,15 @@ stack_elem *stack_to_array(stack s){
 
 
 stack stack_destroy(stack s){
-    stack p;
-    while (s != NULL)
+    struct node* p = NULL;
+    p = s->stack;
+    while (s->stack != NULL)
     {
-        p = s;
-        s = s->next;
+        s->stack = s->stack->next;
         p->next = NULL;
         free(p);
+        p = s->stack;
     }
     free(s);
     return s;
 }
-

@@ -18,15 +18,15 @@ size_t string_length(const char *str){
 char *string_filter(const char *str,char c){
     char *filtered;
     filtered = NULL;
-    unsigned int j,len;
+    unsigned int c_count,len,j;
     size_t strlen = string_length(str);
-    j = 0u;
+    c_count = 0u;
     len = 0u;
     for(unsigned int i = 0u; i < strlen; i++)
     {
         if (str[i]== c)
         {
-            ++j;
+            ++c_count;
         }
     }
     /*
@@ -34,7 +34,7 @@ char *string_filter(const char *str,char c){
     el largo real - cantidad de caracteres que voy a excluir
     */
     len = (strlen-j);
-    filtered = malloc(len*8);
+    filtered = malloc((len+1)*sizeof(char));
     j=0;
     for(unsigned int i = 0u; i < strlen; i++)
     {
@@ -44,6 +44,7 @@ char *string_filter(const char *str,char c){
             ++j;    
         }
     }
+    filtered[len] = '\0';
     return filtered;
 }
 /*

@@ -27,7 +27,8 @@ hanoi_t hanoi_init(unsigned int disk_count) {
     hanoi_t hanoi = malloc(sizeof(struct _hanoi));
     assert(hanoi != NULL);
     hanoi->aux = stack_empty();
-    hanoi->target = NULL;
+    hanoi->target =stack_empty();
+    hanoi->source = stack_empty();
     hanoi->disk_count = disk_count;
     for (unsigned int i = disk_count; i > 0; --i) {
         hanoi->source = stack_push(hanoi->source, i);
