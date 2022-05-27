@@ -8,8 +8,12 @@ p_y = 0.75 *pares - 0.5
 dispersion = np.random.randn(20)
 pares_con_ruido = p_y + dispersion
 
-ajuste_l = np.polyfit(pares,pares_con_ruido,1)
+ajuste_l = np.polyfit(pares,pares_con_ruido,1) 
+""" crea una recta ajustada por cuadrados minimos entre xs entre 0,10 y pares random"""
 recta_ajustada = np.polyval(ajuste_l,pares)
+"""evalua la recta de ajuste por cuadrados minimos """
+
+
 plt.plot(pares,p_y,'o',label="puntos entre [0,10] sin ruido")
 plt.plot(pares,pares_con_ruido,'*',label="pares con ruido")
 plt.plot(pares,recta_ajustada,'g',label="Recta por cuadrados minimos")
