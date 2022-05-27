@@ -4,32 +4,33 @@ main.elf:     file format elf64-littleaarch64
 
 Disassembly of section .text:
 
-0000000040080000 <loop-0x10>:
-    40080000:	58000141 	ldr	x1, 40080028 <y>
-    40080004:	d2800000 	mov	x0, #0x0                   	// #0
-    40080008:	d280004a 	mov	x10, #0x2                   	// #2
-    4008000c:	d280006b 	mov	x11, #0x3                   	// #3
+0000000040080000 <infloop-0x30>:
+    40080000:	d2801683 	mov	x3, #0xb4                  	// #180
+    40080004:	d2800b44 	mov	x4, #0x5a                  	// #90
+    40080008:	d28012c6 	mov	x6, #0x96                  	// #150
+    4008000c:	9b067cc6 	mul	x6, x6, x6
+    40080010:	d105006e 	sub	x14, x3, #0x140
+    40080014:	d103c08f 	sub	x15, x4, #0xf0
+    40080018:	9b0e7dce 	mul	x14, x14, x14
+    4008001c:	9b0f7def 	mul	x15, x15, x15
+    40080020:	cb0f01d0 	sub	x16, x14, x15
+    40080024:	eb06021f 	cmp	x16, x6
+    40080028:	5400004d 	b.le	40080030 <infloop>
+    4008002c:	d2800000 	mov	x0, #0x0                   	// #0
 
-0000000040080010 <loop>:
-    40080010:	91000800 	add	x0, x0, #0x2
-    40080014:	d1000421 	sub	x1, x1, #0x1
-    40080018:	b5ffffc1 	cbnz	x1, 40080010 <loop>
-    4008001c:	d2800061 	mov	x1, #0x3                   	// #3
-    40080020:	9b0b0540 	madd	x0, x10, x11, x1
-
-0000000040080024 <infloop>:
-    40080024:	14000000 	b	40080024 <infloop>
+0000000040080030 <infloop>:
+    40080030:	14000000 	b	40080030 <infloop>
 
 Disassembly of section .data:
 
-0000000040080028 <y>:
-    40080028:	00000002 	.inst	0x00000002 ; undefined
-    4008002c:	00000000 	.inst	0x00000000 ; undefined
+0000000040080034 <y>:
+    40080034:	00000002 	.inst	0x00000002 ; undefined
+    40080038:	00000000 	.inst	0x00000000 ; undefined
 
 Disassembly of section .debug_line:
 
 0000000000000000 <.debug_line>:
-   0:	0000003d 	.inst	0x0000003d ; undefined
+   0:	00000040 	.inst	0x00000040 ; undefined
    4:	001d0003 	.inst	0x001d0003 ; undefined
    8:	01040000 	.inst	0x01040000 ; undefined
    c:	000d0efb 	.inst	0x000d0efb ; undefined
@@ -42,11 +43,10 @@ Disassembly of section .debug_line:
   28:	00000209 	.inst	0x00000209 ; undefined
   2c:	00004008 	.inst	0x00004008 ; undefined
   30:	21160000 	.inst	0x21160000 ; undefined
-  34:	21232121 	.inst	0x21232121 ; undefined
-  38:	22212121 	.inst	0x22212121 ; undefined
-  3c:	01000102 	.inst	0x01000102 ; undefined
-  40:	Address 0x0000000000000040 is out of bounds.
-
+  34:	21212121 	.inst	0x21212121 ; undefined
+  38:	21212121 	.inst	0x21212121 ; undefined
+  3c:	02232121 	.inst	0x02232121 ; undefined
+  40:	01010001 	.inst	0x01010001 ; undefined
 
 Disassembly of section .debug_info:
 
@@ -57,7 +57,7 @@ Disassembly of section .debug_info:
    c:	00000000 	.inst	0x00000000 ; undefined
   10:	40080000 	.inst	0x40080000 ; undefined
   14:	00000000 	.inst	0x00000000 ; undefined
-  18:	40080028 	.inst	0x40080028 ; undefined
+  18:	40080034 	.inst	0x40080034 ; undefined
 	...
   24:	00000007 	.inst	0x00000007 ; undefined
   28:	00000035 	.inst	0x00000035 ; undefined
@@ -67,7 +67,7 @@ Disassembly of section .debug_info:
 Disassembly of section .debug_abbrev:
 
 0000000000000000 <.debug_abbrev>:
-   0:	10001101 	adr	x1, 220 <loop-0x4007fdf0>
+   0:	10001101 	adr	x1, 220 <infloop-0x4007fe10>
    4:	12011106 	and	w6, w8, #0x8000000f
    8:	1b0e0301 	madd	w1, w24, w14, w0
    c:	130e250e 	sbfiz	w14, w8, #18, #10
@@ -82,7 +82,7 @@ Disassembly of section .debug_aranges:
    c:	00000000 	.inst	0x00000000 ; undefined
   10:	40080000 	.inst	0x40080000 ; undefined
   14:	00000000 	.inst	0x00000000 ; undefined
-  18:	00000028 	.inst	0x00000028 ; undefined
+  18:	00000034 	.inst	0x00000034 ; undefined
 	...
 
 Disassembly of section .debug_str:
@@ -103,5 +103,5 @@ Disassembly of section .debug_str:
   30:	612f3770 	.inst	0x612f3770 ; undefined
   34:	554e4700 	.inst	0x554e4700 ; undefined
   38:	20534120 	.inst	0x20534120 ; undefined
-  3c:	34332e32 	cbz	w18, 66600 <loop-0x40019a10>
+  3c:	34332e32 	cbz	w18, 66600 <infloop-0x40019a30>
 	...

@@ -6,7 +6,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Mon May 23 21:05:15 2022
+# Make data base, printed on Fri May 27 01:00:11 2022
 
 # Variables
 
@@ -45,7 +45,7 @@ VTE_VERSION = 6003
 # environment
 VSCODE_NLS_CONFIG = {"locale":"en-us","availableLanguages":{},"_languagePackSupport":true}
 # environment
-JOURNAL_STREAM = 8:36776
+JOURNAL_STREAM = 8:38768
 # environment
 XDG_CONFIG_DIRS = /etc/xdg/xdg-zorin:/etc/xdg
 # makefile (from 'Makefile', line 1)
@@ -67,7 +67,7 @@ VSCODE_VERBOSE_LOGGING = true
 # environment
 _ = /usr/bin/code
 # environment
-MANAGERPID = 1119
+MANAGERPID = 1104
 # environment
 LESSOPEN = | /usr/bin/lesspipe %s
 # environment
@@ -83,7 +83,7 @@ PATH = /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/
 # environment
 GPG_AGENT_INFO = /run/user/1000/gnupg/S.gpg-agent:0:1
 # environment
-SESSION_MANAGER = local/adolfo-zorin:@/tmp/.ICE-unix/1392,unix/adolfo-zorin:/tmp/.ICE-unix/1392
+SESSION_MANAGER = local/adolfo-zorin:@/tmp/.ICE-unix/1380,unix/adolfo-zorin:/tmp/.ICE-unix/1380
 # environment
 XDG_RUNTIME_DIR = /run/user/1000
 # environment
@@ -93,7 +93,7 @@ VSCODE_LOG_STACK = false
 # environment
 ELECTRON_RUN_AS_NODE = 1
 # environment
-INVOCATION_ID = e97d2956cbab4029936b5819a26c11d8
+INVOCATION_ID = 07609ac1101c48278f0ea712b3b7f24b
 # default
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver output-sync check-symlink load
 # environment
@@ -117,7 +117,7 @@ QT_QPA_PLATFORMTHEME = gtk3
 # default
 .LOADED := 
 # environment
-SSH_AGENT_PID = 1339
+SSH_AGENT_PID = 1327
 # environment
 ORIGINAL_XDG_CURRENT_DESKTOP = zorin:GNOME
 # environment
@@ -161,7 +161,7 @@ SHLVL = 1
 # environment
 GNOME_SHELL_SESSION_MODE = zorin
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-12c09e56-2322-4616-8d02-259bf6376f9d.sock
+VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-4a3edaef-20f3-4259-b47b-38da728a741a.sock
 # default
 MAKE_VERSION := 4.2.1
 # environment
@@ -176,7 +176,6 @@ XDG_CURRENT_DESKTOP = zorin:GNOME
 %D = $(patsubst %/,%,$(dir $%))
 # environment
 LC_TELEPHONE = es_AR.UTF-8
- 
 # default
 MAKE_COMMAND := make
 # environment
@@ -216,11 +215,11 @@ LC_MEASUREMENT = es_AR.UTF-8
 # environment
 LC_ALL = C
 # environment
-GNOME_TERMINAL_SCREEN = /org/gnome/Terminal/screen/f0b76e6c_8518_4b34_a762_a34fb26ff56f
+GNOME_TERMINAL_SCREEN = /org/gnome/Terminal/screen/f7053ec5_6e41_42ae_be16_0babdb017e47
 # automatic
 ^F = $(notdir $^)
 # environment
-GNOME_TERMINAL_SERVICE = :1.94
+GNOME_TERMINAL_SERVICE = :1.92
 # default
 SUFFIXES := 
 # environment
@@ -240,7 +239,7 @@ LANG = C
 # environment
 TERM = xterm-256color
 # environment
-VSCODE_PID = 4619
+VSCODE_PID = 4230
 # variable set hash-table stats:
 # Load=115/1024=11%, Rehash=0, Collisions=18/141=13%
 
@@ -270,7 +269,7 @@ all: asm
 # Not a target:
 main.s:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-18 20:39:35.036069142
+#  Last modified 2022-05-27 00:57:14.967844892
 #  File has been updated.
 #  Successfully updated.
 
@@ -278,6 +277,7 @@ main.s:
 Makefile:
 #  Implicit rule search has been done.
 #  Last modified 2022-05-18 20:32:38.526180587
+ 
 #  File has been updated.
 #  Successfully updated.
 
@@ -316,7 +316,7 @@ runQEMU:
 
 main.o: main.s
 #  Implicit rule search has not been done.
-#  Last modified 2022-05-18 20:39:46.212125032
+#  Last modified 2022-05-27 00:57:24.943841676
 #  File has been updated.
 #  Successfully updated.
 #  recipe to execute (from 'Makefile', line 19):
@@ -337,7 +337,7 @@ asm: kernel.img
 
 kernel.img: memmap main.o
 #  Implicit rule search has not been done.
-#  Last modified 2022-05-18 20:39:46.216125052
+#  Last modified 2022-05-27 00:57:24.951841674
 #  File has been updated.
 #  Successfully updated.
 #  recipe to execute (from 'Makefile', line 23):
@@ -360,6 +360,6 @@ kernel.img: memmap main.o
 # strcache performance: lookups = 41 / hit rate = 46%
 # hash-table stats:
 # Load=22/8192=0%, Rehash=0, Collisions=1/41=2%
-# Finished Make data base on Mon May 23 21:05:15 2022
+# Finished Make data base on Fri May 27 01:00:11 2022
 
  
