@@ -42,19 +42,23 @@ def ptomedio(fun,a,b,n):
 
 
 def intenumcomp(fun,a,b,N,regla):
-    if regla == "trapecio":
-        return trapecio(fun,a,b,N)
-    elif regla == "pm":
-        return ptomedio(fun,a,b,N)
-    elif regla == "simpson":
-        return simpson(fun,a,b,N)
+    if N == 0:
+        return 0
     else:
-        print("entrada incorrecta, debe ser 'trapecio' 'pm' 'simpson' ")
-        sys.exit()
+        if regla == "trapecio":
+            return trapecio(fun,a,b,N)
+        elif regla == "pm":
+            return ptomedio(fun,a,b,N)
+        elif regla == "simpson":
+            return simpson(fun,a,b,N)
+        else:
+            print("entrada incorrecta, debe ser 'trapecio' 'pm' 'simpson' ")
+            sys.exit()
 
 def cuadrado(x):
     return x**2
-
+"""
 print(intenumcomp(cuadrado,0,3,10,"simpson"))
 print(intenumcomp(cuadrado,0,3,10,"trapecio"))
 print(intenumcomp(cuadrado,0,3,1000,"pm"))
+"""
