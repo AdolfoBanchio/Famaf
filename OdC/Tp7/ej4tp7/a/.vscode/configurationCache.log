@@ -1,0 +1,1 @@
+{"buildTargets":["all","asm","clean","kernel.img","main.o","runGDB","runQEMU"],"launchTargets":["/home/adolfo/Documents/Famaf/OdC/Tp7/ej4tp7/a>main.elf()"],"customConfigurationProvider":{"workspaceBrowse":{"browsePath":[],"compilerArgs":[]},"fileIndex":[]}}

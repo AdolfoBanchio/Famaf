@@ -52,7 +52,9 @@ bool matching_parentheses(FILE * file) {
             counter_dec(c);
         }
     }
-    return (balanced && counter_is_init(c));
+    balanced = balanced && counter_is_init(c);
+    counter_destroy(c);
+    return (balanced);
 }
 
 int main(int argc, char *argv[]) {
@@ -71,6 +73,6 @@ int main(int argc, char *argv[]) {
     } else {
         printf("Parentheses mismatch.\n");
     }
-
+    fclose(file);
     return (EXIT_SUCCESS);
 }

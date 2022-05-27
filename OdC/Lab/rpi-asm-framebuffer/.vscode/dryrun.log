@@ -1,0 +1,9 @@
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory '/home/adolfo/Documents/Famaf/OdC/Lab/rpi-asm-framebuffer'
+aarch64-linux-gnu-as -g --warn --fatal-warnings app.s -o app.o
+aarch64-linux-gnu-as -g --warn --fatal-warnings start.s -o start.o
+aarch64-linux-gnu-ld app.o start.o -T memmap -o kernel8.elf -M > memory_map.txt
+aarch64-linux-gnu-objdump -D kernel8.elf > kernel8.list
+aarch64-linux-gnu-objcopy kernel8.elf -O binary kernel8.img
+make: Leaving directory '/home/adolfo/Documents/Famaf/OdC/Lab/rpi-asm-framebuffer'
+ 

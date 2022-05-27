@@ -4,7 +4,6 @@ import numpy as np
 import matplotlib.pyplot as plt
 import math
 
-
 fp = "../datos/datos_aeroCBA.dat"
 
 data = np.loadtxt(fp,usecols=(0,1))

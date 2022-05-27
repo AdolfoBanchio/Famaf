@@ -1,0 +1,9 @@
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory '/home/adolfo/Documents/Famaf/OdC/Tp7/ej4tp7/a'
+aarch64-linux-gnu-as -g --warn --fatal-warnings main.s -o main.o
+aarch64-linux-gnu-ld main.o -T memmap -o main.elf -M > memory_map.txt
+aarch64-linux-gnu-objdump -D main.elf > main.list
+aarch64-linux-gnu-objcopy main.elf -O ihex main.hex
+aarch64-linux-gnu-objcopy main.elf -O binary kernel.img
+make: Leaving directory '/home/adolfo/Documents/Famaf/OdC/Tp7/ej4tp7/a'
+ 

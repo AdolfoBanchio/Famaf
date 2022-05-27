@@ -1,0 +1,1 @@
+{"buildTargets":["all","app.o","clean","kernel8.img","run","runGDB","runQEMU"],"launchTargets":["/home/adolfo/Documents/Famaf/OdC/Lab/rpi-asm-framebuffer>kernel8.elf()"],"customConfigurationProvider":{"workspaceBrowse":{"browsePath":[],"compilerArgs":[]},"fileIndex":[]}}
