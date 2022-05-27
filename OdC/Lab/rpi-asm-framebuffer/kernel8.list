@@ -16451,7 +16451,7 @@ Desensamblado de la sección .text:
 	...
    900a0:	00080000 	.inst	0x00080000 ; undefined
    900a4:	00000000 	.inst	0x00000000 ; undefined
-   900a8:	00110140 	.inst	0x00110140 ; undefined
+   900a8:	001101a0 	.inst	0x001101a0 ; undefined
    900ac:	00000000 	.inst	0x00000000 ; undefined
    900b0:	00090008 	.inst	0x00090008 ; undefined
    900b4:	00000000 	.inst	0x00000000 ; undefined
@@ -16460,6 +16460,7 @@ Desensamblado de la sección .text:
    900c0:	0009008c 	.inst	0x0009008c ; undefined
 	...
 
+<<<<<<< HEAD
 00000000001100c8 <main>:
   1100c8:	aa0003f4 	mov	x20, x0
   1100cc:	d2a0190a 	mov	x10, #0xc80000              	// #13107200
@@ -16501,17 +16502,96 @@ Desensamblado de la sección .text:
 
 000000000011013c <InfLoop>:
   11013c:	14000000 	b	11013c <InfLoop>
+=======
+00000000000900c8 <main>:
+   900c8:	aa0003f4 	mov	x20, x0
+   900cc:	d2a0190a 	mov	x10, #0xc80000              	// #13107200
+   900d0:	f293332a 	movk	x10, #0x9999
+   900d4:	d2a001eb 	mov	x11, #0xf0000               	// #983040
+   900d8:	f29ebdcb 	movk	x11, #0xf5ee
+   900dc:	d2805009 	mov	x9, #0x280                 	// #640
+   900e0:	d2801543 	mov	x3, #0xaa                  	// #170
+   900e4:	d2800b44 	mov	x4, #0x5a                  	// #90
+   900e8:	d2802582 	mov	x2, #0x12c                 	// #300
+
+00000000000900ec <square>:
+   900ec:	aa1403e0 	mov	x0, x20
+   900f0:	9b090c85 	madd	x5, x4, x9, x3
+   900f4:	d37ef4a5 	lsl	x5, x5, #2
+   900f8:	8b050280 	add	x0, x20, x5
+   900fc:	d2802581 	mov	x1, #0x12c                 	// #300
+
+0000000000090100 <loop4>:
+   90100:	b800000b 	stur	w11, [x0]
+   90104:	91001000 	add	x0, x0, #0x4
+   90108:	d1000421 	sub	x1, x1, #0x1
+   9010c:	b5ffffa1 	cbnz	x1, 90100 <loop4>
+   90110:	d1000442 	sub	x2, x2, #0x1
+   90114:	91000484 	add	x4, x4, #0x1
+   90118:	b5fffea2 	cbnz	x2, 900ec <square>
+   9011c:	d2801543 	mov	x3, #0xaa                  	// #170
+   90120:	d2800b44 	mov	x4, #0x5a                  	// #90
+   90124:	d2802807 	mov	x7, #0x140                 	// #320
+   90128:	d2801e08 	mov	x8, #0xf0                  	// #240
+   9012c:	d28afc86 	mov	x6, #0x57e4                	// #22500
+   90130:	d2802582 	mov	x2, #0x12c                 	// #300
+   90134:	d2802581 	mov	x1, #0x12c                 	// #300
+   90138:	14000008 	b	90158 <loop_c>
+
+000000000009013c <movy>:
+   9013c:	91000484 	add	x4, x4, #0x1
+   90140:	d1000442 	sub	x2, x2, #0x1
+   90144:	d2802581 	mov	x1, #0x12c                 	// #300
+   90148:	14000004 	b	90158 <loop_c>
+
+000000000009014c <circle>:
+   9014c:	b4ffff81 	cbz	x1, 9013c <movy>
+   90150:	b800000a 	stur	w10, [x0]
+   90154:	91000463 	add	x3, x3, #0x1
+
+0000000000090158 <loop_c>:
+   90158:	9b090c85 	madd	x5, x4, x9, x3
+   9015c:	d37ef4a5 	lsl	x5, x5, #2
+   90160:	8b050280 	add	x0, x20, x5
+   90164:	cb07006e 	sub	x14, x3, x7
+   90168:	cb08008f 	sub	x15, x4, x8
+   9016c:	9b4e7dce 	smulh	x14, x14, x14
+   90170:	9b4f7def 	smulh	x15, x15, x15
+   90174:	8b0f01d0 	add	x16, x14, x15
+   90178:	d1000421 	sub	x1, x1, #0x1
+   9017c:	91000463 	add	x3, x3, #0x1
+   90180:	eb06021f 	cmp	x16, x6
+   90184:	54fffe4d 	b.le	9014c <circle>
+   90188:	91000463 	add	x3, x3, #0x1
+   9018c:	b5fffe61 	cbnz	x1, 90158 <loop_c>
+   90190:	b4fffd61 	cbz	x1, 9013c <movy>
+
+0000000000090194 <InfLoop>:
+   90194:	14000000 	b	90194 <InfLoop>
+	...
+
+Disassembly of section .bss:
+
+0000000000110198 <__bss_end-0x8>:
+	...
+>>>>>>> 47171a65c590369d356e890335b5efeb3eefb6a9
 
 Desensamblado de la sección .debug_line:
 
 0000000000000000 <.debug_line>:
+<<<<<<< HEAD
    0:	0000004f 	.inst	0x0000004f ; undefined
    4:	001e0003 	.inst	0x001e0003 ; undefined
+=======
+   0:	0000006c 	.inst	0x0000006c ; undefined
+   4:	001c0003 	.inst	0x001c0003 ; undefined
+>>>>>>> 47171a65c590369d356e890335b5efeb3eefb6a9
    8:	01040000 	.inst	0x01040000 ; undefined
    c:	000d0efb 	.inst	0x000d0efb ; undefined
   10:	01010101 	.inst	0x01010101 ; undefined
   14:	01000000 	.inst	0x01000000 ; undefined
   18:	00010000 	.inst	0x00010000 ; undefined
+<<<<<<< HEAD
   1c:	72617473 	.inst	0x72617473 ; undefined
   20:	00732e74 	.inst	0x00732e74 ; undefined
   24:	00000000 	.inst	0x00000000 ; undefined
@@ -16548,6 +16628,50 @@ Desensamblado de la sección .debug_line:
   a0:	26212121 	.inst	0x26212121 ; undefined
   a4:	01000102 	.inst	0x01000102 ; undefined
   a8:	La dirección 0x00000000000000a8 está fuera de los límites.
+=======
+  1c:	2e707061 	uabdl	v1.4s, v3.4h, v16.4h
+  20:	00000073 	.inst	0x00000073 ; undefined
+  24:	09000000 	.inst	0x09000000 ; undefined
+  28:	0900c802 	.inst	0x0900c802 ; undefined
+  2c:	00000000 	.inst	0x00000000 ; undefined
+  30:	010a0300 	.inst	0x010a0300 ; undefined
+  34:	21222123 	.inst	0x21222123 ; undefined
+  38:	200f0322 	.inst	0x200f0322 ; undefined
+  3c:	21222221 	.inst	0x21222221 ; undefined
+  40:	22212121 	.inst	0x22212121 ; undefined
+  44:	21212121 	.inst	0x21212121 ; undefined
+  48:	21282121 	.inst	0x21282121 ; undefined
+  4c:	21212122 	.inst	0x21212122 ; undefined
+  50:	21222121 	.inst	0x21222121 ; undefined
+  54:	21222121 	.inst	0x21222121 ; undefined
+  58:	21212221 	.inst	0x21212221 ; undefined
+  5c:	21212123 	.inst	0x21212123 ; undefined
+  60:	21212121 	.inst	0x21212121 ; undefined
+  64:	21212121 	.inst	0x21212121 ; undefined
+  68:	02201403 	.inst	0x02201403 ; undefined
+  6c:	01010001 	.inst	0x01010001 ; undefined
+  70:	0000004f 	.inst	0x0000004f ; undefined
+  74:	001e0003 	.inst	0x001e0003 ; undefined
+  78:	01040000 	.inst	0x01040000 ; undefined
+  7c:	000d0efb 	.inst	0x000d0efb ; undefined
+  80:	01010101 	.inst	0x01010101 ; undefined
+  84:	01000000 	.inst	0x01000000 ; undefined
+  88:	00010000 	.inst	0x00010000 ; undefined
+  8c:	72617473 	.inst	0x72617473 ; undefined
+  90:	00732e74 	.inst	0x00732e74 ; undefined
+  94:	00000000 	.inst	0x00000000 ; undefined
+  98:	00020900 	.inst	0x00020900 ; undefined
+  9c:	00000800 	.inst	0x00000800 ; undefined
+  a0:	03000000 	.inst	0x03000000 ; undefined
+  a4:	21210130 	.inst	0x21210130 ; undefined
+  a8:	23212423 	.inst	0x23212423 ; undefined
+  ac:	21212221 	.inst	0x21212221 ; undefined
+  b0:	21212421 	.inst	0x21212421 ; undefined
+  b4:	21212121 	.inst	0x21212121 ; undefined
+  b8:	21212121 	.inst	0x21212121 ; undefined
+  bc:	01809c02 	.inst	0x01809c02 ; undefined
+  c0:	Address 0x00000000000000c0 is out of bounds.
+>>>>>>> 47171a65c590369d356e890335b5efeb3eefb6a9
 
 
 Desensamblado de la sección .debug_info:
@@ -16559,13 +16683,18 @@ Desensamblado de la sección .debug_info:
    c:	00000000 	.inst	0x00000000 ; undefined
   10:	00080000 	.inst	0x00080000 ; undefined
   14:	00000000 	.inst	0x00000000 ; undefined
+<<<<<<< HEAD
   18:	000900c8 	.inst	0x000900c8 ; undefined
+=======
+  18:	00090198 	.inst	0x00090198 ; undefined
+>>>>>>> 47171a65c590369d356e890335b5efeb3eefb6a9
 	...
   24:	00000008 	.inst	0x00000008 ; undefined
   28:	00000041 	.inst	0x00000041 ; undefined
   2c:	002a8001 	.inst	0x002a8001 ; NYI
   30:	00020000 	.inst	0x00020000 ; undefined
   34:	00000014 	.inst	0x00000014 ; undefined
+<<<<<<< HEAD
   38:	00530108 	.inst	0x00530108 ; undefined
   3c:	00c80000 	.inst	0x00c80000 ; undefined
   40:	00000011 	.inst	0x00000011 ; undefined
@@ -16574,6 +16703,16 @@ Desensamblado de la sección .debug_info:
   4c:	004d0000 	.inst	0x004d0000 ; undefined
   50:	00080000 	.inst	0x00080000 ; undefined
   54:	00410000 	.inst	0x00410000 ; undefined
+=======
+  38:	00700108 	.inst	0x00700108 ; undefined
+  3c:	00000000 	.inst	0x00000000 ; undefined
+  40:	00000008 	.inst	0x00000008 ; undefined
+  44:	00c80000 	.inst	0x00c80000 ; undefined
+  48:	00000009 	.inst	0x00000009 ; undefined
+  4c:	004b0000 	.inst	0x004b0000 ; undefined
+  50:	00060000 	.inst	0x00060000 ; undefined
+  54:	003f0000 	.inst	0x003f0000 ; NYI
+>>>>>>> 47171a65c590369d356e890335b5efeb3eefb6a9
   58:	80010000 	.inst	0x80010000 ; undefined
 
 Desensamblado de la sección .debug_abbrev:
@@ -16599,7 +16738,11 @@ Desensamblado de la sección .debug_aranges:
    c:	00000000 	.inst	0x00000000 ; undefined
   10:	00080000 	.inst	0x00080000 ; undefined
   14:	00000000 	.inst	0x00000000 ; undefined
+<<<<<<< HEAD
   18:	000100c8 	.inst	0x000100c8 ; undefined
+=======
+  18:	000000d0 	.inst	0x000000d0 ; undefined
+>>>>>>> 47171a65c590369d356e890335b5efeb3eefb6a9
 	...
   30:	0000002c 	.inst	0x0000002c ; undefined
   34:	002e0002 	.inst	0x002e0002 ; NYI

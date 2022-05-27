@@ -19,7 +19,7 @@ main:
 
 	mov x9,0x280 //guardo 640 en hex para poder usarlo para calcular
 				  // posiciones en el frame
-
+/* 
 	mov x2, SCREEN_HEIGH         // Y Size 
 loop1:
 	mov x1, SCREEN_WIDTH         // X Size
@@ -30,15 +30,11 @@ loop0:
 	cbnz x1,loop0	   // If not end row jump
 	sub x2,x2,1	   // Decrement Y counter
 	cbnz x2,loop1	   // if not last row, jump
-
-
-
-
-//guardo los (x,y) del frame donde voy a querer arrancar a dibujar
-	mov x3, 0xaa //170
+*/
+//cuadrado
+    mov x3, 0xaa //170
 	mov x4,0x5a  // 90
 	
-
 	mov x2, square_heigh //300
 square:
 	mov x0,x20 //guardo en x0 la direccion base del frame
@@ -55,8 +51,65 @@ loop4:
 	add x4,x4,1 //aumento mi'y' para calcular la base de la linea de abajo
 	cbnz x2,square
 
+//------------------------------------------------------------------------------------------
+
+
+
+
+//guardo los (x,y) del frame donde voy a querer arrancar a dibujar
+		mov x3, 0xaa //170
+		mov x4,0x5a  // 90  esquina izquierda del cuadrado 
+		
+		mov x7, 0x140  //centro en x
+		mov x8, 0xf0  //centro del circulo y
+		mov x6, 0x57E4 // radio al cuadrado  
+		mov x2, 300 //300
+		mov x1, 300 //300
+		b loop_c
+movy:
+		add x4,x4,1
+		sub x2,x2,1
+		mov x1, 300 //300
+		b loop_c
+circle: 
+		cbz x1, movy
+		stur w10,[x0]
+		add x3,x3,1
+loop_c:
+		madd x5,x4,x9,x3 //x5 = x9 +(x12*x13) calculo el inicio de la linea del cuadrado
+		lsl x5,x5,2 //multiplico por 4
+		add x0,x20,x5 //x0 = direc.base.frame + 4*(x+(y*640)) inicio demi nueva linea
+		//stur w10,[x0]
+
+		sub x14,x3,x7 //x-320
+		sub x15,x4,x8 //y-240
+		smulh x14,x14,x14 //(x-320)^2
+		smulh x15,x15,x15 //(y-240)^2
+		add x16,x14,x15 // (x- 320)^2 + (y - 240 )^2
+		sub x1,x1,1
+		add x3,x3,1 //me muevo al sig x 
+		cmp x16,x6 // (x- 320)^2 + (y - 240 )^2 <= r^2
+		B.LE circle //si pertenece al circulo pintamos,sino aanzamos en x
+		add x3,x3,1  //next pixel
+		cbnz x1,loop_c
+		cbz x1, movy
+		/*
+		sub x2,x2,1
+		add x4,x4,1 //aumento mi'y' para calcular la base de la linea de abajo
+		cbnz x2,circle
+		*/
+
+	/*
+	mi centro es (320,240) quiero un circulo de radio 150, por lo que todos los puntos pertenecientes al circulo seran los (x,y)
+	tal que  (320 - x)^2 + (240 - y)^2 <= r^2
+	r^2= 22500 = 0x57E4
+	320 = 0x140
+	240 = 0xF0
+
+	 */
+	
+	
 	//---------------------------------------------------------------
 	// Infinite Loop 
-
 InfLoop: 
 	b InfLoop
