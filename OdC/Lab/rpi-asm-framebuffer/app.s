@@ -12,13 +12,13 @@ main:
 	//---------------- CODE HERE ------------------------------------
 	
 	movz x10, 0xC8, lsl 16
-	movk x10, 0x9999, lsl 00
+	movk x10, 0x9900, lsl 00
 
 	movz x11, 0x0F, lsl 16
 	movk x11, 0xF5ee, lsl 00 //color celeste
 
-	mov x9,0x280 //guardo 640 en hex para poder usarlo para calcular
-				  // posiciones en el frame
+	mov x9, 640 //guardo 640 en hex para poder usarlo para calcular
+				// posiciones en el frame
 /* 
 	mov x2, SCREEN_HEIGH         // Y Size 
 loop1:
@@ -31,7 +31,8 @@ loop0:
 	sub x2,x2,1	   // Decrement Y counter
 	cbnz x2,loop1	   // if not last row, jump
 */
-//cuadrado
+//cuadrado 
+
     mov x3, 0xaa //170
 	mov x4,0x5a  // 90
 	
@@ -57,47 +58,43 @@ loop4:
 
 
 //guardo los (x,y) del frame donde voy a querer arrancar a dibujar
-		mov x3, 0xaa //170
-		mov x4,0x5a  // 90  esquina izquierda del cuadrado 
+		mov x3, 170 // 170 (x)
+		mov x4, 90  // 90  (y) esquina izquierda del cuadrado 
 		
-		mov x7, 0x140  //centro en x
-		mov x8, 0xf0  //centro del circulo y
-		mov x6, 0x57E4 // radio al cuadrado  
-		mov x2, 300 //300
-		mov x1, 300 //300
+		mov x6, 150 // radio  
+		mul x6,x6,x6 //radio al cuadrado
+		mov x2, 300
+		mov x1, 300
 		b loop_c
 movy:
-		add x4,x4,1
-		sub x2,x2,1
+		add x4,x4,1 //aumento el y
+		mov x3, 170 //170 (x) vuelvo a setear x
+		sub x2,x2,1 //le quito uno a mi contador de eje y
 		mov x1, 300 //300
+		cbz x2, InfLoop
 		b loop_c
 circle: 
-		cbz x1, movy
-		stur w10,[x0]
-		add x3,x3,1
-loop_c:
-		madd x5,x4,x9,x3 //x5 = x9 +(x12*x13) calculo el inicio de la linea del cuadrado
+		madd x5,x4,x9,x3 //x5 = x3 +(x4*x9) = x +(y*640) calculo el inicio de la linea del cuadrado
 		lsl x5,x5,2 //multiplico por 4
 		add x0,x20,x5 //x0 = direc.base.frame + 4*(x+(y*640)) inicio demi nueva linea
-		//stur w10,[x0]
-
-		sub x14,x3,x7 //x-320
-		sub x15,x4,x8 //y-240
-		smulh x14,x14,x14 //(x-320)^2
-		smulh x15,x15,x15 //(y-240)^2
-		add x16,x14,x15 // (x- 320)^2 + (y - 240 )^2
+		stur w10,[x0]
+		add x3,x3,1 //me muevo al sig x
 		sub x1,x1,1
-		add x3,x3,1 //me muevo al sig x 
+		cbz x1, movy // si me pase de linea, reseteo a 300 de vuelta y aumento mi 'y' y vuelvo a setear x en el inicio de la linea
+loop_c:
+		sub x14,x3,320 //x-320
+		sub x15,x4,240 //y-240
+		madd x14,x14,x14,xzr //(x-320)^2
+		madd x15,x15,x15,xzr //(y-240)^2
+		add x16,x14,x15 // (x- 320)^2 + (y - 240 )^2
 		cmp x16,x6 // (x- 320)^2 + (y - 240 )^2 <= r^2
-		B.LE circle //si pertenece al circulo pintamos,sino aanzamos en x
-		add x3,x3,1  //next pixel
+		B.LE circle //si pertenece al circulo pintamos
+		sub x1,x1,1
+		add x3,x3,1
 		cbnz x1,loop_c
 		cbz x1, movy
-		/*
-		sub x2,x2,1
-		add x4,x4,1 //aumento mi'y' para calcular la base de la linea de abajo
-		cbnz x2,circle
-		*/
+
+
 
 	/*
 	mi centro es (320,240) quiero un circulo de radio 150, por lo que todos los puntos pertenecientes al circulo seran los (x,y)
