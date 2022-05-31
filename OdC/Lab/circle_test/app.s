@@ -94,8 +94,6 @@ loop_c:
 		cbnz x1,loop_c
 		cbz x1, movy
 
-
-
 	/*
 	mi centro es (320,240) quiero un circulo de radio 150, por lo que todos los puntos pertenecientes al circulo seran los (x,y)
 	tal que  (320 - x)^2 + (240 - y)^2 <= r^2
