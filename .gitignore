@@ -1,2 +1,11 @@
 test.txt
+#objetos
+*.o
 
+#assembler
+
+kernel8.elf
+kernel8.img
+kernel8.list
+.gdb_history 
+memory_map.txt
