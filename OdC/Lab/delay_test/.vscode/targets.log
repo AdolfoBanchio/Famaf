@@ -6,7 +6,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Fri May 27 00:05:03 2022
+# Make data base, printed on Tue May 31 01:10:09 2022
 
 # Variables
 
@@ -37,7 +37,7 @@ GDMSESSION = zorin
 # environment
 XMODIFIERS = @im=ibus
 # makefile
-CURDIR := /home/adolfo/Documents/Famaf/OdC/Lab/rpi-asm-framebuffer
+CURDIR := /home/adolfo/Documents/Famaf/OdC/Lab/delay_test
 # makefile
 SHELL = /bin/sh
 # environment
@@ -45,7 +45,7 @@ VTE_VERSION = 6003
 # environment
 VSCODE_NLS_CONFIG = {"locale":"en-us","availableLanguages":{},"_languagePackSupport":true}
 # environment
-JOURNAL_STREAM = 8:38768
+JOURNAL_STREAM = 8:36462
 # environment
 XDG_CONFIG_DIRS = /etc/xdg/xdg-zorin:/etc/xdg
 # makefile (from 'Makefile', line 1)
@@ -67,13 +67,13 @@ VSCODE_VERBOSE_LOGGING = true
 # environment
 _ = /usr/bin/code
 # environment
-MANAGERPID = 1104
+MANAGERPID = 1109
 # environment
 LESSOPEN = | /usr/bin/lesspipe %s
 # environment
 LC_NAME = es_AR.UTF-8
 # environment
-VSCODE_CWD = /home/adolfo/Documents/Famaf/OdC/Lab/rpi-asm-framebuffer
+VSCODE_CWD = /home/adolfo/Documents/Famaf/OdC/Lab/delay_test
 # environment
 QT_STYLE_OVERRIDE = adwaita
 # default
@@ -83,7 +83,7 @@ PATH = /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/
 # environment
 GPG_AGENT_INFO = /run/user/1000/gnupg/S.gpg-agent:0:1
 # environment
-SESSION_MANAGER = local/adolfo-zorin:@/tmp/.ICE-unix/1380,unix/adolfo-zorin:/tmp/.ICE-unix/1380
+SESSION_MANAGER = local/adolfo-zorin:@/tmp/.ICE-unix/1399,unix/adolfo-zorin:/tmp/.ICE-unix/1399
 # environment
 XDG_RUNTIME_DIR = /run/user/1000
 # environment
@@ -93,7 +93,7 @@ VSCODE_LOG_STACK = false
 # environment
 ELECTRON_RUN_AS_NODE = 1
 # environment
-INVOCATION_ID = 07609ac1101c48278f0ea712b3b7f24b
+INVOCATION_ID = 63510b42e07649008d84f39497ae9704
 # default
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver output-sync check-symlink load
 # environment
@@ -111,7 +111,7 @@ ARMGNU = aarch64-linux-gnu
 # environment
 VSCODE_PIPE_LOGGING = true
 # environment
-PWD = /home/adolfo/Documents/Famaf/OdC/Lab/rpi-asm-framebuffer
+PWD = /home/adolfo/Documents/Famaf/OdC/Lab/delay_test
 # environment
 QT_QPA_PLATFORMTHEME = gtk3
 # default
@@ -136,6 +136,7 @@ VSCODE_CLI = 1
 VSCODE_CODE_CACHE_PATH = /home/adolfo/.config/Code/CachedData/c3511e6c69bb39013c4a4b7b9566ec1ca73fc4d5
 # environment
 LOGNAME = adolfo
+ 
 # environment
 APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
 # automatic
@@ -163,7 +164,7 @@ SHLVL = 1
 # environment
 GNOME_SHELL_SESSION_MODE = zorin
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-f36d4000-7f8d-47f2-9621-58d7874ceca1.sock
+VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-1a339d7c-e7af-4b34-92e6-ce8653cfb129.sock
 # default
 MAKE_VERSION := 4.2.1
 # environment
@@ -181,7 +182,7 @@ LC_TELEPHONE = es_AR.UTF-8
 # default
 MAKE_COMMAND := make
 # environment
-OLDPWD = /home/adolfo/Documents/Famaf/OdC/Lab
+OLDPWD = /home/adolfo/Documents/Famaf/OdC
 # default
 .VARIABLES := 
 # automatic
@@ -217,11 +218,11 @@ LC_MEASUREMENT = es_AR.UTF-8
 # environment
 LC_ALL = C
 # environment
-GNOME_TERMINAL_SCREEN = /org/gnome/Terminal/screen/ac338632_a665_489d_bf18_eb16eff25b7e
+GNOME_TERMINAL_SCREEN = /org/gnome/Terminal/screen/994cf0fc_9f2c_4d6a_b795_a92c3cc307c8
 # automatic
 ^F = $(notdir $^)
 # environment
-GNOME_TERMINAL_SERVICE = :1.92
+GNOME_TERMINAL_SERVICE = :1.507
 # default
 SUFFIXES := 
 # environment
@@ -241,9 +242,9 @@ LANG = C
 # environment
 TERM = xterm-256color
 # environment
-VSCODE_PID = 4230
+VSCODE_PID = 11582
 # variable set hash-table stats:
-# Load=116/1024=11%, Rehash=0, Collisions=18/144=12%
+# Load=116/1024=11%, Rehash=0, Collisions=18/152=12%
 
 # Pattern-specific Variable Values
 
@@ -251,9 +252,9 @@ VSCODE_PID = 4230
 
 # Directories
 
-# . (device 2082, inode 4592610): 15 files, no impossibilities.
+# . (device 2082, inode 4587521): 11 files, no impossibilities.
 
-# 15 files, no impossibilities in 1 directories.
+# 11 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -270,7 +271,15 @@ all: kernel8.img
 #  Implicit rule search has been done.
 #  File does not exist.
 #  File has been updated.
-#  Successfully updated.
+#  Needs to be updated (-q is set).
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/8=0%
+
+# Not a target:
+.SUFFIXES:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 # Not a target:
 Makefile:
@@ -282,7 +291,7 @@ Makefile:
 start.o: start.s
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: 'start'
-#  Last modified 2022-05-26 22:51:06.220742357
+#  Last modified 2022-05-31 00:59:24.99849694
 #  File has been updated.
 #  Successfully updated.
 #  recipe to execute (from 'Makefile', line 10):
@@ -291,7 +300,7 @@ start.o: start.s
 app.o: app.s
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: 'app'
-#  Last modified 2022-05-26 23:00:22.181904109
+#  Last modified 2022-05-31 00:59:24.990496881
 #  File has been updated.
 #  Successfully updated.
 #  recipe to execute (from 'Makefile', line 10):
@@ -320,7 +329,7 @@ run: all
 # Not a target:
 app.s:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-26 23:00:15.589937493
+#  Last modified 2022-05-31 00:59:22.042475404
 #  File has been updated.
 #  Successfully updated.
 
@@ -335,7 +344,6 @@ runGDB:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
- 
 #  recipe to execute (from 'Makefile', line 27):
 	gdb-multiarch -ex "set architecture aarch64" -ex "target remote localhost:1234" --ex "dashboard registers -style list 'x0 x1 x2 x3 x4 x5 x6 x7 x8 x9 x10 x11 x12 x13 x14 x15 x16 x17 x18 x19 x20 x21 x22 x23 x24 x25 x26 x27 x28 x29 x30 sp pc cpsr'"
 
@@ -355,28 +363,47 @@ memmap:
 
 kernel8.img: memmap app.o start.o
 #  Implicit rule search has not been done.
-#  Last modified 2022-05-27 00:02:04.877652895
+#  Implicit/static pattern stem: ''
+#  File does not exist.
 #  File has been updated.
-#  Successfully updated.
+#  Needs to be updated (-q is set).
+# automatic
+# @ := kernel8.img
+# automatic
+# % := 
+# automatic
+# * := 
+# automatic
+# + := memmap app.o start.o
+# automatic
+# | := 
+# automatic
+# < := memmap
+# automatic
+# ^ := memmap app.o start.o
+# automatic
+# ? := memmap app.o start.o
+# variable set hash-table stats:
+# Load=8/32=25%, Rehash=0, Collisions=4/16=25%
 #  recipe to execute (from 'Makefile', line 16):
 	$(ARMGNU)-ld $(ASM_OBJS) -T memmap -o kernel8.elf -M > memory_map.txt
 	$(ARMGNU)-objdump -D kernel8.elf > kernel8.list
 	$(ARMGNU)-objcopy kernel8.elf -O binary kernel8.img
 
 # files hash-table stats:
-# Load=14/1024=1%, Rehash=0, Collisions=0/38=0%
+# Load=14/1024=1%, Rehash=0, Collisions=0/39=0%
 # VPATH Search Paths
 
 # No 'vpath' search paths.
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 28 / storage = 230 B / avg = 8 B
-# current buf: size = 8162 B / used = 230 B / count = 28 / avg = 8 B
+# strcache buffers: 1 (0) / strings = 25 / storage = 192 B / avg = 7 B
+# current buf: size = 8162 B / used = 192 B / count = 25 / avg = 7 B
 
-# strcache performance: lookups = 50 / hit rate = 44%
+# strcache performance: lookups = 47 / hit rate = 46%
 # hash-table stats:
-# Load=28/8192=0%, Rehash=0, Collisions=1/50=2%
-# Finished Make data base on Fri May 27 00:05:03 2022
+# Load=25/8192=0%, Rehash=0, Collisions=1/47=2%
+# Finished Make data base on Tue May 31 01:10:09 2022
 
  
