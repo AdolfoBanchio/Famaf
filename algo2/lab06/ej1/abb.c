@@ -121,7 +121,7 @@ unsigned int abb_length(abb tree) {
 //devuelve el nodo con el valor minimo de un arbol binario
 static abb minValueNode(abb tree){
     abb current = tree ;
-    while (abb_is_empty(current) && abb_is_empty(current->left))
+    while (!abb_is_empty(current) && !abb_is_empty(current->left))
     {
         current = current->left;
     }
