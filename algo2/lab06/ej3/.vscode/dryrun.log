@@ -1,0 +1,5 @@
+make --dry-run --keep-going --print-directory
+make: Entering directory '/home/adolfo/Documents/Famaf/algo2/lab06/ej3'
+make: Nothing to be done for 'all'.
+make: Leaving directory '/home/adolfo/Documents/Famaf/algo2/lab06/ej3'
+ 
