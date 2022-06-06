@@ -1,0 +1,7 @@
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory '/home/adolfo/Documents/Famaf/algo2/practicas parcial2/ParcialA'
+gcc -Wall -Werror -Wextra -pedantic -std=c99 -g -c pqueue.c -o pqueue.o
+gcc -Wall -Werror -Wextra -pedantic -std=c99 -g -c main.c -o main.o
+gcc -Wall -Werror -Wextra -pedantic -std=c99 -g -o dispatch_patients pqueue.o main.o  
+make: Leaving directory '/home/adolfo/Documents/Famaf/algo2/practicas parcial2/ParcialA'
+ 
