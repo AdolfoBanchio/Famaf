@@ -1,0 +1,94 @@
+
+3. Una panaderı́a recibe n pedidos por importes m 1 , . . . , m n , pero sólo queda en depósito una cantidad
+H de harina en buen estado. Sabiendo que los pedidos requieren una cantidad h 1 , . . . , h n de harina
+(respectivamente), determinar el máximo importe que es posible obtener con la harina disponible.
+
+datos:
+    tengo n pedidos
+    cada uno tiene un mi importe y consume hi harina
+    tengo solo H harina
+
+    maximizar el importe obtenido
+
+casos a considerar:
+- n=0 ==> 0, no tengo pedidos por hacer
+- H=0 ==> 0, no tengo harina para hacer pedidos
+- la harina del pedido i es mayor que la harina disponible
+- caso simple, puedo optar por hacer y no hacer el pedido
+
+definicion:
+
+panaderia(n,H) =
+[] 0 , si n = 0 || H = 0
+[] panaderia(n-1,H) , si h_n > H
+[] max(panaderia(n-1,H),panaderia(n-1,H-h_n)+m_n)  {hago o no hago el pedido}
+
+en dinamica:
+como reciobo dos parametros, la canitadd de importes y de harina,
+lo represento en una matriz p de tamaño N*H, donde p[i,j] = tiene le importe de haber hecho i pedidos con j harina
+por la forma en la que estan definidos los casos bases, debo llenar la matrizz de arriba abajo y de izquierda a derecha
+
+fun panaderia(n,H:nat, m:array[1..n], h:array[1..n]) ret max_plata:nat
+    var p:array[0..n,0..H]
+    for i=0 to n do p[i,0] = 0 od {si tengo 0 harina no genero importes en ninguna cantidad de pedidos}
+    for j=0 to H do p[0,j] = 0 od {si tngo 0 pedidos no genero importes no importa la cantidad de harina que tenga}  
+    for i=1 to n do
+        for j=1 to H do
+            p[i,j] = max(p[i-1,j],p[i-1,j-h[i]] + m[i])
+        od
+    od
+    max_plata= p[n,H]
+endfun
+
+
+4. Usted se encuentra en un globo aerostático sobrevolando el océano cuando descubre que empieza a
+perder altura porque la lona está levemente dañada. Tiene consigo n objetos cuyos pesos p 1 , . . . , p n
+y valores v 1 , . . . , v n conoce. Si se desprende de al menos P kilogramos logrará recuperar altura y
+llegar a tierra firme, y afortunadamente la suma de los pesos de los objetos supera holgadamente
+P . ¿Cuál es el menor valor total de los objetos que necesita arrojar para llegar sano y salvo a la
+costa?
+
+datos
+- debo perder p peso
+- tengo n objetos con p[1..n] peso y v[1..n] valor
+- minimizar el valor perdido , habiendo perdido todo el peso necesario
+
+casos a considerar:
+-si tengo n=0 objetos y p>0 ==> inf (perdi)
+-si tengo p<= 0, ==> 0, no debo perder peso ==> no pierdo valor
+-si n>0 y p>0
+
+llamada general para perder p peso con n objetos 
+perder_peso(n,p) 
+definicion:
+
+perder_peso(o,k)=
+[] 0, si k <= 0
+[] inf, si n=0 && k>0
+[] min(perder_peso(o-1,k),perder_peso(o-1,k-pes[o])+valor[o])
+
+
+en programacion dinamica:
+como recibo dos datos como argumento voy a representarlo como una matriz p de tamaño[1..o,1..k] donde en el elemento p[i,j] = el minimo valor perdido al haber tirado j kilos con i objetos
+
+
+fun perder_peso_dinamic(n:nat,p:nat,valor:array[1..n],peso[1..n]) ret min_valor_perd :nat
+    p:array[0..n,0..p]
+    for i=0 to n do p[i,0] = 0 od {si tengo 0 peso a perder, no importa los objetos que tenga, tengo 0 valor a perder}
+    for j=1 to p do p[0,j] = inf od {si tengo 0 objetos y todavia algo de peso que perder, entonces no puedo obtener una solucion}
+    
+    for i=1 to n do
+        for j=1 to p do
+            if peso[i] >= j then
+                p[i,j] = min(p[i-1,j],p[i-1,0] + valor[i])
+            else
+                p[i,j] = min(p[i-1,j],p[i-1,j-peso[i]] + valor[i])
+            od
+    od
+    min_valor_perd=p[n,p]
+endfun
+
+
+5. Sus amigos quedaron encantados con el teléfono satelital, para las próximas vacaciones ofrecen
+pagarle un alquiler por él. Además del dı́a de partida y de regreso (p i y r i ) cada amigo ofrece un
+monto m i por dı́a. Determinar el máximo valor alcanzable alquilando el teléfono.                                                                                                                           

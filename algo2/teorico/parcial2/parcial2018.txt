@@ -1,0 +1,100 @@
+1. Vos y tus amigos, en total son m personas, se quieren ir de viaje por el fin de semana y tienen a
+disposici ́on n autos, cada uno con capacidad para llevar una cantidad de personas c1, . . . , cn. ¿Cu ́al es
+la menor cantidad de autos necesaria para que las m personas puedan viajar?
+
+voy a resolver el problema usando un algoritmo voraz,
+la idea es seleccionar el auto de mayor capacidad, hasta que todas las m personas tenga un lugar en el auto
+
+estructura de los datos:
+M, cantidad de personas
+cant:array[1..N], tiene las capacidades de los n autos ordenadas de menor a mayor
+
+suponemos que la suma total de luguares de los autos es mayor que la cantidad de personas a llevar
+fun auto_greedy(M:Nat,cant:array[1..N]of nat)ret autos :nat
+    var m_aux,i: nat
+    var auto_aux : auto
+    m_aux = M
+    autos := 0
+    i := n
+    while( m_aux>= 0 && i>= 0) do 
+        m_aux := m_aux - cant[i]
+        autos := autos + 1
+        i := i-1
+    od
+endfun
+
+
+2. El profe de algoritmos 2 tiene n medias diferentes, con n n ́umero par (digamos n = 2m). Hay una
+tabla P[1..n, 1..n] tal que P[i, j] es un n ́umero que indica cu ́an parecida es la media i con la media j.
+Tenemos P[i, j] = P[j, i] y P[i, i] = 0. Dar un algoritmo que determine la mejor manera de aparear
+las n medias en m pares. La mejor manera significa que la suma total de los P[i, j] lograda sea
+lo mayor posible. Es decir, si decidimos aparear i1 con j1, i2 con j2, . . . . im con jm, la sumatoria
+P[i1, j1]+P[i2, j2]+...P[im, jm] debe ser lo mayor posible. Un apareamiento debe aparear exactamente
+una vez cada media.
+typdef pares :tuple
+    media i :nat
+    media j: nat
+              endtuple
+
+como pij = pji, recorro unicamente la parte superior de la matriz.
+debo encontrar el maximio valor de similitud para la media i, y todas sus posibles combinaciones j 
+
+fun medias(p:array [1..n,1..n])ret res: set of pares {devuelve todos los pares que tienen la maxima similitud}
+    var max_simil :nat
+    var par_aux : pares
+    max_simil := -inf
+    
+    for i=1 to n do 
+        for j=i to n do
+            if (p[i,j] >= max_simil) then
+                max_simil = p[i,j]
+                par_aux.mediai := i
+                par_aux.mediaj := j
+            else
+        od
+        add(res,par_aux) {agrego la mayor combinacion posible para la media i }
+    od
+endfun
+
+--resolucion usando backtracking--
+..
+
+
+
+
+
+3. Dados c1, c2, . . . , cn y d1, d2, . . . , dk, la siguiente definici ́on recursiva de la funci ́on m, para 1 ≤ i ≤ n
+y 1 ≤ j ≤ k, determinar un programa que utilice la t ́ecnica de programaci ́on din ́amica para calcular
+el valor de m(1, 1).
+
+m(i, j) =
+ ci si j = k
+ dj si i = n ∧ j < k
+ m(i, j + 1) + m(i + 1, j) si j < k ∧ i < n
+
+dada una matriz p[1..n,1..k]
+p[:,k]] = c[i]  , i [1 ... n]        1 2 3 .. k-1  k
+p[n,:] = d[j] , j [1 .. k-1]    1 |                 c1  |
+                                2 |                 c2  |
+                                . |                 ..  |
+                              n-1 |                 ..  |
+                                n | d1 d2     dk-1  cn  |
+
+luego si tenemos m(1,1) = m(1,1+1) + m(1+1,1)
+                        = m(1,2) + m(2,1)
+
+de esta forma nos damos cuenta que la matriz se debe llenar desde abajo hacia arriba y de derecha a izquierda,
+ya que si por ejemplo tenemos k = 5 y n = 5 , si queremos el elemento m(4,4) = necesitamos m(4,5) (el elemento de la derecha )  y m(5,4) el elemento debajo
+por ende el algoritmo se veria de esta forma
+
+fun ej3(c:array [1..n] , d:array[1..k]) ret res: ..
+    p :array[1..n,1..k]
+    for i=1 to n do p[i,k] = c[i] od
+    for j=1 to k-1 do p[n,j] = d[j] od 
+    for i=n-1 downto 1 do
+        for j=k-1 downto 1 do
+            p[i,j] = p[i,j+1] + p[i+1,j]
+        od 
+    od
+    res = p[1,1]
+endfun

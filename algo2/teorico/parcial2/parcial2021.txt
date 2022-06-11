@@ -1,0 +1,97 @@
+1. (Voraz) Finalmente tenés la posibilidad de irte N días (con sus respectivas noches) de viaje y en el recorrido que
+armaste, cada día/noche i estarás en una ciudad Ci
+
+. Contás con M pesos en total de presupuesto para gastar en
+alojamiento y para cada ciudad conocés el costo ki por noche del único hotel que tiene. Cada noche i podés elegir
+entre dormir en el hotel de la ciudad, lo que te costará ki , o dormir en una carpa que llevaste, que te cuesta 0. 
+Se pide indicar en qué ciudades dormirás en hotel, de manera tal que el monto total gastado en alojamiento en los N
+días no supere el presupuesto M, minimizando la cantidad de noches que dormís en carpa. Para ello:
+
+(a) Indicá de manera simple y concreta, cuál es el criterio de selección voraz para construir la solución.
+(b) Indicá qué estructuras de datos utilizarás para resolver el problema.
+(c) Explicá en palabras cómo el algoritmo resolverá el problema.
+(d) Implementá el algoritmo en el lenguaje de la materia de manera precisa.
+
+Criterio de seleccion:
+	el criterio sera seleccionar las ciudades de menor costo para dormir primero y por ultimo las de mayor costo
+Estructuras para resolver el problema
+	typdef Ciudad :	tuple
+		id:nat
+		costo:nat
+			endtuple
+	Argumentos:
+	C:aray [1..N] of ciudad
+	N:nat
+	M:nat
+
+el algoritmo por cada dia de vacaciones, seleccionara una ciudad de costo minimo para dormir (siempre y cuando no haya tenido en cuenta esa ciudada antes)
+si el costo de esa ciudad es menor que mi presupuesto restante, restare el costo a mi presupuesto restante y agregare la ciudad al conjunto de solucion
+si el costo es mayor que el presupuesto restante, entonces no lo agregare a la solucion.
+
+fun vacaciones_greedy(N:nat,M:nat,C:array [1..N] of ciudad ) ret: Sol:set of ciudad
+	var M_aux :nat
+	var ciud : Ciudad
+	M_aux:= M
+	for i=1 to N do {por cada dia elijo si duermo o no}
+		ciud := menor_costo(C,Sol)
+		if (ciud.costo <= M_aux) then
+			M_aux := m_aux - ciud.costo
+			add(Sol,ciud)
+		else
+	od {podria implementarlo con un while con un contador y que el prespuesto sea >= 0, funcina igual pero este termina despues}
+endfun
+
+fun menor_costo(c:array[1..N] of ciudad, S : set of ciudad) ret Ciud :ciudad
+	var min :nat
+	min := inf
+	for i=1 to N do
+		if (c[i].costo < min && not is_member(sol,c[i]) then
+			min:=c[i].costo
+			ciud := c[i]
+		else
+	od
+endfun
+
+
+
+
+2. (Backtracking) En el piso 17 de un edicio que cuenta con n ocinas iguales dispuestas de manera alineada una al
+lado de la otra, se quieren pintar las mismas de modo tal que no haya dos ocinas contiguas que resulten pintadas
+con el mismo color. Se dispone de 3 colores diferentes cuyo costo por ocina es C1, C2 y C3 respectivamente. Para
+cada ocina i, el ocinista ha expresado su preferencia por cada uno de los tres colores dando tres números pi1 pi2 pi3
+, maximizar la sumatoria desde i a n de pi/ci  , sin usar el mismo color para oficinas continuas
+
+Datos:
+-N oficinas
+_C1,C2,C3 costo de cada color
+-no puede haber dos colores iguales consecutivos
+-para cada oficina i, el oficinista dio una preferencia de color pi1,pi2,pi3
+-Maximizar el valor pij/cij 
+
+Casos a considerar:
+-si no tengo oficinas para pintar , n=0
+-si el color de la anterior
+
+
+Explicacion:
+-la llamada recursiva calculara el maximo valor de haber pintado o no las oficinas de cada color
+
+oficinas(n) {
+		0 , si n=0
+		
+		max(oficinas(n-1)+pi1/c1,oficinas(n-1)+pi2/c2) , si oficina anterior = c3
+
+		max(oficinas(n-1)+pi1/c1,oficinas(n-1)+pi3/c3) , si oficina anterior = c2
+
+		max(oficinas(n-1)+pi2/c2,oficinas(n-1)+pi3/c3) , si oficina anterior = c1
+
+
+		max(max(oficinas(n-1)+pi1/c1,oficinas(n-1)+pi2/c2), oficinas(n-1)+pi3/c3) , si no hay oficina anterior
+		   {valor de pintar C1, valor de pintar c2}
+
+		}
+
+
+
+3) tratar de hacerlo  en dinamica
+a) que dimensiones tiene la tabla?
