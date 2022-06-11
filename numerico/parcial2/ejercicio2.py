@@ -5,27 +5,22 @@ Instrucciones de ejecucion:
     -ejecutar por terminal el archivo
     e imprimira por pantalla la respuesta al inciso c.
 
+trapecio realiza la regla simple del trapecio dados dos puntos a b y f(a) y f(b)
 
-Esta funcion recibira como argumentos los a b del intervalo a calcular la integral
-(necesarios para poder calcular el h)
-
-luego datospart es una lista que contiene los f(xi) (incluidos f(a) y f(b))
-tal que los xi no son equidistantes. 
-
-luego el n para calcular h = b-a/n , n = la cantidad de elementos de datospart, es decir
-la cantidad de puntos
-
+y en trapecio adaptativo lo que hago es llamar la regla simple por cada
+subintervalo en los datos de la tabla (13 datos 12 subintervalos), 
+porque trapecio compuesto utiliza una separacion igual para cada subintervalo,
+en este caso tengo una distancia diferente en cada subintervalo. 
+por lo que es mas exacto usar la simple
 """
-def trapecio_adaptativo(a,b,datospart):
-    h = (b-a)/len(datospart)
-    sxi = 0
-    sx = 0
-    xi = 0
-    for i in range(1,len(datospart)-1):
-        sxi = sxi + datospart[i]
-    sx = (datospart[0] + 2*sxi + datospart[-1]) *h/2
-    return sx
+def trapecio(a,b,fa,fb):
+    return ((b-a)/2)*(fa+fb)
 
+def trapecio_adapt(xi,yi):
+    res = 0
+    for i in range(len(xi)-1):
+        res = res + trapecio(xi[i],xi[i+1],yi[i],yi[i+1])
+    return res
 """ 
     En el resultado esta el valor de la cantidad de metros cuadrados
 de tierra que hay en la "cara" del terreno, lo que representan los datos 
@@ -37,4 +32,4 @@ en el grafico de la consigna.
 debo multiplicar por la profundidad el resultado y esa sera la cantidad de tierra a sacar
 
 """
-print(f"La cantidad de metros cubicos a ser remmovidos son : {trapecio_adaptativo(0,12,fxi)*10}")
+print(f"La cantidad de metros cubicos a ser remmovidos son : {trapecio_adapt(xi,fxi)*10}")
