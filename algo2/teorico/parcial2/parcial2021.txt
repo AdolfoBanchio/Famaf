@@ -31,13 +31,16 @@ si el costo es mayor que el presupuesto restante, entonces no lo agregare a la s
 fun vacaciones_greedy(N:nat,M:nat,C:array [1..N] of ciudad ) ret: Sol:set of ciudad
 	var M_aux :nat
 	var ciud : Ciudad
+    var i:nat
+    i := 1
 	M_aux:= M
-	for i=1 to N do {por cada dia elijo si duermo o no}
+	while(i<=N && M_aux > 0)
 		ciud := menor_costo(C,Sol)
 		if (ciud.costo <= M_aux) then
-			M_aux := m_aux - ciud.costo
+			M_aux := M_aux - ciud.costo
 			add(Sol,ciud)
 		else
+        i = i+1 {veo de no pasarme de dias}
 	od {podria implementarlo con un while con un contador y que el prespuesto sea >= 0, funcina igual pero este termina despues}
 endfun
 

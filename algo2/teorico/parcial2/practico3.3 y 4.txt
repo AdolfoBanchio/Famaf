@@ -119,18 +119,23 @@ maximo_{i tq p[i]=d} m[i]*(r[i]-p[i]+1)+prestar_tel(r[i]+1)
 En dinamica:
 al tener una sola dimension de argumentos, representare la tabla solo con un arreglo
 conformado por todos los dias que mis amigos estan de vacaiones, desde el dia 0, hasta el ultimo dia de regreso
+
 fun prestar_tel_dynamic(p:aray[1..n],r[1..n],m[1..n],ultima_partida:nat,ultimo_regreso:nat)ret gano:nat
     var tabla:array[0..ultimo] of nat
-    var aux:nat
+    var aux,amigo:nat
     for i=ultima_partida+1 to ultimo_regreso do tabla[i] = 0 od {en esos dias no puedo prestarle el telefono a nadie}
     for d:= ultima_partida downto 0 do
         aux:= 0
-        for i=0 to n do
+        for i=1 to n do
             if(p[i]=d) then 
                 aux := aux max (m[i]*(r[i]-p[i]+1) + tabla[r[i]+1])
+                amigo := i
             else
         od
         tabla[d] := tabla[d+1] max aux  {el maximo de haberlo prestado hoy , o el dia que sigue}
+    od
+    gano:=tabla[0]
+endfun
 
 
 6. Un artesano utiliza materia prima de dos tipos: A y B. Dispone de una cantidad M A y M B de
@@ -313,20 +318,16 @@ traspaso[1..2,1..n]
 
 voy a repreentar los datos en una tabla de tamaño t[1..2,1..n] 
 como la tabla de traspasos tiene la informacion de el valor de la proxima estacion, debo recorrerla de derecha a izquierda
+
 fun fabrica_dinamica(costo:array[1..2,1..n] of nat,traspaso[1..2,1..n],N:nat)ret cost_min:nat
     var t:array[1..2,1..n] of nat
     t[1,n] := c[1,n] {costo de la ultma estacion}
     t[2,n] := c[2,n] {costo de la ultma estacion} casos base
 
     for e:=n-1 downto 1 do
-        for l=1 to 2 do
-            if l==1 then
-                t[l,e] = min(t[l,e+1]+c[l,e],t[2,e+1]+c[l,e]+t[l,e]) 
-                {analizo el minimo de el costo de la estacion actual+de la que sigue  y el ccosto de la actual el traspaso + mas de la que sigue en la otra linea}
-            else
-                t[l,e] = min(t[l,e+1]+c[l,e],t[1,e+1]+c[l,e]+t[l,e])
-            fi
-        od
+        t[1,e] = min(t[1,e+1]+c[1,e],t[2,e+1]+c[1,e]+t[1,e]) 
+        {analizo el minimo de el costo de la estacion actual+de la que sigue  y el ccosto de la actual +el traspaso + mas de la que sigue en la otra linea}
+        t[2,e] = min(t[2,e+1]+c[2,e],t[1,e+1]+c[2,e]+t[2,e])
     od
     cost_min = min(t[1,1],t[2,1])
 endfun
