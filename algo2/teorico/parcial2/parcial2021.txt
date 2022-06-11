@@ -75,19 +75,18 @@ Casos a considerar:
 
 Explicacion:
 -la llamada recursiva calculara el maximo valor de haber pintado o no las oficinas de cada color
-
-oficinas(n) {
+prefs[1..n] que tiene las preferencias de cada oficinista i
+oficinas(n,col) {
 		0 , si n=0
 		
-		max(oficinas(n-1)+pi1/c1,oficinas(n-1)+pi2/c2) , si oficina anterior = c3
+		max(oficinas(n-1,1)+pref[n].1/c1,oficinas(n-1,2)+pref[n].2/c2) , col = c3
 
-		max(oficinas(n-1)+pi1/c1,oficinas(n-1)+pi3/c3) , si oficina anterior = c2
+		max(oficinas(n-1,1)+pref[n].1/c1,oficinas(n-1,3)+pref[n].3/c3) , col = c2
 
-		max(oficinas(n-1)+pi2/c2,oficinas(n-1)+pi3/c3) , si oficina anterior = c1
+		max(oficinas(n-1,2)+pref[n].2/c2,oficinas(n-1,3)+pref[n].3/c3) , col = c1
 
 
-		max(max(oficinas(n-1)+pi1/c1,oficinas(n-1)+pi2/c2), oficinas(n-1)+pi3/c3) , si no hay oficina anterior
-		   {valor de pintar C1, valor de pintar c2}
+		max(max(oficinas(n-1,1)+pref[n]1/c1,oficinas(n-1,2)+pref[n]2/c2), oficinas(n-1,3)+pref[n].3/c3) , col = 0
 
 		}
 

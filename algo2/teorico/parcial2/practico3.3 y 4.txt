@@ -92,3 +92,242 @@ endfun
 5. Sus amigos quedaron encantados con el teléfono satelital, para las próximas vacaciones ofrecen
 pagarle un alquiler por él. Además del dı́a de partida y de regreso (p i y r i ) cada amigo ofrece un
 monto m i por dı́a. Determinar el máximo valor alcanzable alquilando el teléfono.                                                                                                                           
+
+datos:
+- dia de partida y regreso de cada amigo
+- monto que paga cada amigo por dia
+- obj: maximizar el monto alcanzable
+
+vamos a suponer que los dias de partida estan ordenados de manera ascendente 
+
+casos a considerar:
+- si el dia actual es > que el ultimo dia de partida de mis amigos. (digamos tengo n amigos actual>partida[n])
+- prestar en el dia actual a mi amigo, o no prestarlo y ver que hago con los amigos que siguen 
+llamda principal:
+
+prestar_tel(0) 
+
+especificacion:
+p:array[1..n] r:array[1..n] m[1..n]
+
+prestar_tel(d)=
+[] 0 , si d > partida[i] , para todo i [1..n]
+[] prestar_tel(d+1) max
+maximo_{i tq p[i]=d} m[i]*(r[i]-p[i]+1)+prestar_tel(r[i]+1) 
+
+
+En dinamica:
+al tener una sola dimension de argumentos, representare la tabla solo con un arreglo
+conformado por todos los dias que mis amigos estan de vacaiones, desde el dia 0, hasta el ultimo dia de regreso
+fun prestar_tel_dynamic(p:aray[1..n],r[1..n],m[1..n],ultima_partida:nat,ultimo_regreso:nat)ret gano:nat
+    var tabla:array[0..ultimo] of nat
+    var aux:nat
+    for i=ultima_partida+1 to ultimo_regreso do tabla[i] = 0 od {en esos dias no puedo prestarle el telefono a nadie}
+    for d:= ultima_partida downto 0 do
+        aux:= 0
+        for i=0 to n do
+            if(p[i]=d) then 
+                aux := aux max (m[i]*(r[i]-p[i]+1) + tabla[r[i]+1])
+            else
+        od
+        tabla[d] := tabla[d+1] max aux  {el maximo de haberlo prestado hoy , o el dia que sigue}
+
+
+6. Un artesano utiliza materia prima de dos tipos: A y B. Dispone de una cantidad M A y M B de
+cada una de ellas. Tiene a su vez pedidos de fabricar n productos p 1 , . . . , p n (uno de cada uno).
+Cada uno de ellos tiene un valor de venta v 1 , . . . , v n y requiere para su elaboración cantidades
+a 1 , . . . , a n de materia prima de tipo A y b 1 , . . . , b n de materia prima de tipo B. ¿Cuál es el mayor
+valor alcanzable con las cantidades de materia prima disponible?
+
+
+datos:
+- tenemos dos materias primas A,B 
+- tengo que hacer n productos , que tienen un valore v[1..n] y usan materia prima A a[1..n] y B b[1..n]
+- maximizar el valor posible con las cantidades de materia prima disponibles.
+
+Casos a considerar:
+- n=0, no tengo pedidos para hacer 
+- A = B = 0, no tengo materia prima para hacer pedidos
+- un pedido usa mas materia prima A de la que tengo disponible
+- idem con b
+- puedo decidir hacerlo o no hacerlo 
+
+Llamada principal:
+artesano(n,MA,MB) = "mayor cantidad de ingreso posible"
+
+Especificacion:
+
+artesano(i,t,r)=
+[] 0, si i=0
+[] artesano(i-1,t,r), si a[i]>t || b[i]>r
+[] max(artesano(i-1,t,r), artesano(i-1,t-a[i],r-b[i]) + v[i]) 
+
+
+en programacion dinamica:
+tendre que representar los valores en una matriz de 3 dimensiones, dada por la cantidad de productos y cantidad de materias primas.
+forma de representacin de los datos
+cant productos--> n:nat
+cant de materia prima--> A:nat B:nat
+valor --> v[1..n]
+costo a --> a[1..n]
+cpsto b--> b[1..n]
+
+en la matriz p[p,i,j] = tendre el maximo valor de hacer p porductos con i y j materia prima
+como en la recursion necesito saber que valores habia antes  la tabla la debo recorrer de arriba hacia abajo (completando primero los casos base)
+
+
+fun artesano_dinamico (n:nat,A:nat,B:nat,a:array[1..n] of nat,b:array[1..n] of nat,v:array[1..n] of nat)ret mayor_valor:nat
+    var t:array[0..n,0..A,0..B]
+
+    for i=0 to A do
+        for j=0 to B do
+            t[0,i,j] = 0 {si tengo 0 objetos por hacer, no gano nada sin importar la materia prima que tenga}
+        od
+    od
+
+    for i=1 to A do
+        for j=0 to B do
+            for p=0 to n do
+                if a[p]>i || b[p]>j then
+                    t[p,i,j] = t[p-1,i,j] {si la materia prima que exige el producto es mayor a la que tengo, la ganancia sera = a la ganancia de no haberlo hecho}
+                else
+                    t[p,i,j] = max(t[p-1,i,j],t[p-1,i-a[p],j-b[p]]+v[p])
+            od
+        od
+    od
+    mayor_valor = t[n,A,B]
+endfun
+
+
+7. En el problema de la mochila se buscaba el máximo valor alcanzable al seleccionar entre n objetos
+de valores v 1 , . . . , v n y pesos w 1 , . . . , w n , respectivamente, una combinación de ellos que quepa en
+una mochila de capacidad W. Si se tienen dos mochilas con capacidades W 1 y W 2 , ¿cuál es el valor
+máximo alcanzable al seleccionar objetos para cargar en ambas mochilas?
+
+datos:
+-n objetos a selecionar con valores v[1..n] y peso w[1..n]
+-tengo dos mochilas de peso W1 y W2
+- maximizar el valor entre las dos mohilas sin exceder el peso
+
+casos a considerar:
+- si n=0, no tengo objetos que seleccionar
+- que el objeto no entre en ningna mochila
+- que el objeto no entre en la mochila 1
+- que el objeto no entre en la mochila 2
+- que el objeto entre en ambas
+
+Llamada principal:
+
+llenar_mochilas(n,W1,W2) = maximo valor alcanzable
+
+Especificacion:
+n objetos a selecionar con valores v[1..n] y peso w[1..n]
+
+llenar_mochilas(o,a,b)=
+[] 0 , si o = 0
+[] 0 , si a=b=0
+[] llenar_mochilas(o-1,a,b) , si w[o]>a && w[o]>b {no entra en ninguna mochila}
+[] max(llenar_mochilas(o-1,a,b),llenar_mochilas(o-1,a,b-w[o])+v[o]) , si w[o]>a && w[o]<= b
+[] max(llenar_mochilas(o-1,a,b),llenar_mochilas(o-1,a-w[o],b)+v[o]) , si w[o]>b && w[o]<= a
+[] max( max(llenar_mochilas(o-1,a,b),llenar_mochilas(o-1,a,b-w[o])+v[o]),
+        llenar_mochilas(o-1,a-w[o],b)+v[o])                         , si w[o]<=a && w[o]<=b
+
+
+en programacion dinamica:
+como tengo 3 parametros representare los datos en una tabla de 3 dimensiones, dada por la cantidad de elementos y los pesos
+
+estructuras:
+- n:nat cantidad de elementos
+- W1,W2:nat pesos
+- v[1..n] w[1..n] valor y peso de cada objeto
+
+como en las llamadas recursivas siempre tengo en cuenta que sucede si no tengo en cuenta el objeto actual pero si todos los anteriores,
+entones la tabla de datos la debo llenar de arribaa  abajo
+voy a llenar de 0 todos los casos en el que tenga 0 objetos que agregar
+
+en la tabla t[o,i,j] = maximo valor obtenido al llenar las mochilas con capacidad i y j usando o objetos
+
+fun dynamic_bags (n:nat,W1,W2:nat,v:array[1..n] of nat,w:array[1..n of nat]) ret max_value:nat
+    var t:array[0..n,0..W1,0..W2] 
+    for i=0 to W1 do
+        for j=0 to W2 do
+            t[0,i,j] = 0
+        od
+    od
+    for i:=0 to n do
+        t[i,0,0]:= 0
+    od
+
+    for o=1 to n do
+        for i=0 to W1 do
+            for j=0 to W2 do
+                if j=0 && i==0 then skip else
+                if w[o]>i && w[o]>j then t[o,i,j] = t[o-1,i,j] else
+                if w[o]>i && w[o]<=j then t[o,i,j] = max(t[o-1,i,j], t[o-1,i,j-w[o]] +v[o]) else
+                if w[o]<=i && w[o]>j then t[o,i,j] = max(t[o-1,i,j], t[o-1,i-w[o],j] +v[o]) else
+                if w[o]<=i && w[o]<=j then t[o,i,j] = max(max(t[o-1,i,j],t[o-1,i-w[o],j] +v[o]) , t[o-1,i,j-w[o]] +v[o])
+                fi
+            od
+        od
+    od
+    max_value := t[n,W1,W2]
+
+
+
+8. Una fábrica de automóviles tiene dos lı́neas de ensamblaje y cada lı́nea tiene n estaciones de
+trabajo, S 1,1 , . . . , S 1,n para la primera y S 2,1 , . . . , S 2,n para la segunda. Dos estaciones S 1,i y S 2,i
+(para i = 1, . . . , n), hacen el mismo trabajo, pero lo hacen con costos a 1,i y a 2,i respectivamente,
+que pueden ser diferentes. Para fabricar un auto debemos pasar por n estaciones de trabajo
+S i 1 ,1 , S i 2 ,2 . . . , S i n ,n no necesariamente todas de la misma lı́nea de montaje (i k = 1, 2). Si el
+automóvil está en la estación S i,j , transferirlo a la otra lı́nea de montaje (es decir continuar en
+S i 0 ,j+1 con i 0 6 = i) cuesta t i,j . Encontrar el costo mı́nimo de fabricar un automóvil usando ambas
+lı́neas.
+
+datos:
+-tengo n estaiones de ensamblado por cada linea de ensamblado
+    s[1..2,1..n] con un costo
+    c[1..2,1..n] c1,i para cada estacion s1,i y c2,i para cada estacion s2,i
+-para fabricar el auto debo pasar por n estaciones de ensamblado si o si, pero no necesariamente de la misma linea,
+pasar de una linea a otra tiene un costo. pasar de Si,j a Si',j+1(siguiente estacion en otra linea) cuesta t[i,j] 
+-encontrar el costo minimo de fabricar un automovil usando ambas lineas
+
+casos a considerar
+- no tengo mas estaciones por hacer 
+- lo hago en la misma linea , me cambio de linea
+
+llamada principal 
+fabrica(0,0) =
+
+Especificacion:
+
+fabrica(n,i)=
+[] c[i,n] , si n=N, cantidad de estaciones N
+[] min(fabrica(n+1,1)+c[1,n],fabrica(n+1,2)+c[2,n], si i=0
+[] min(fabrica(n+1,1)+c[1,n],fabrica(n+1,2)+c[1,n]+t[1,n]) , si i=1
+[] min(fabrica(n+1,2)+c[2,n],fabrica(n+1,1)+c[2,n]+t[2,n]) , si i=2
+
+en programacion dinamica
+
+costo[1..2,1..n]
+traspaso[1..2,1..n]
+
+voy a repreentar los datos en una tabla de tamaño t[1..2,1..n] 
+como la tabla de traspasos tiene la informacion de el valor de la proxima estacion, debo recorrerla de derecha a izquierda
+fun fabrica_dinamica(costo:array[1..2,1..n] of nat,traspaso[1..2,1..n],N:nat)ret cost_min:nat
+    var t:array[1..2,1..n] of nat
+    t[1,n] := c[1,n] {costo de la ultma estacion}
+    t[2,n] := c[2,n] {costo de la ultma estacion} casos base
+
+    for e:=n-1 downto 1 do
+        for l=1 to 2 do
+            if l==1 then
+                t[l,e] = min(t[l,e+1]+c[l,e],t[2,e+1]+c[l,e]+t[l,e]) 
+                {analizo el minimo de el costo de la estacion actual+de la que sigue  y el ccosto de la actual el traspaso + mas de la que sigue en la otra linea}
+            else
+                t[l,e] = min(t[l,e+1]+c[l,e],t[1,e+1]+c[l,e]+t[l,e])
+            fi
+        od
+    od
+    cost_min = min(t[1,1],t[2,1])
+endfun
+
