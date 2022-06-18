@@ -31,33 +31,16 @@ las n medias en m pares. La mejor manera significa que la suma total de los P[i,
 lo mayor posible. Es decir, si decidimos aparear i1 con j1, i2 con j2, . . . . im con jm, la sumatoria
 P[i1, j1]+P[i2, j2]+...P[im, jm] debe ser lo mayor posible. Un apareamiento debe aparear exactamente
 una vez cada media.
-typdef pares :tuple
-    media i :nat
-    media j: nat
-              endtuple
 
-como pij = pji, recorro unicamente la parte superior de la matriz.
-debo encontrar el maximio valor de similitud para la media i, y todas sus posibles combinaciones j 
-
-fun medias(p:array [1..n,1..n])ret res: set of pares {devuelve todos los pares que tienen la maxima similitud}
-    var max_simil :nat
-    var par_aux : pares
-    max_simil := -inf
-    
-    for i=1 to n do 
-        for j=i to n do
-            if (p[i,j] >= max_simil) then
-                max_simil = p[i,j]
-                par_aux.mediai := i
-                par_aux.mediaj := j
-            else
-        od
-        add(res,par_aux) {agrego la mayor combinacion posible para la media i }
-    od
-endfun
-
---resolucion usando backtracking--
-..
+n medias (con n par)
+valores P[i, j] indicado parecido entre media i y media j
+queremos armar m (= n / 2) pares de medias maximizando la suma de parecidos.
+Función recursiva: aparear(S) = “suma de parecidos del mejor apareamiento considerando medias sacadas del conjunto S.”
+Llamada principal: aparear({1, 2, … , n})
+Definición recursiva:
+aparear(S) = ( 0  	→  si S es vacío
+             | max_{i, j en S tal que i != j} P[i,j] + aparear(S / {i, j}) → si S es no vacío
+                      )
 
 
 

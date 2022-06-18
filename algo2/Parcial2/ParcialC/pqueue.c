@@ -176,7 +176,7 @@ pqueue pqueue_destroy(pqueue q) {
             aux = destroy_node(aux);
         }        
     }
-    free(q->cola);;
+    free(q->cola); 
     free(q);
     q = NULL;
     return q;
