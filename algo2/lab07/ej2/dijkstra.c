@@ -1,12 +1,8 @@
 #include <assert.h>
 #include <stdlib.h>
-
 #include "cost.h"
 #include "graph.h"
 #include "mini_set.h"
-static cost_t min(cost_t a,cost_t b){
-    return (a>b) ? b : a;
-}
 static unsigned int minimum(set vertexs,cost_t *distances,unsigned int max_vertexs){
     cost_t min;
     unsigned int ret;
@@ -25,12 +21,11 @@ cost_t *dijkstra(graph_t graph, vertex_t init) {
     unsigned int c;
     set vertexs = set_empty();
     cost_t *distances = calloc(graph_max_vertexs(graph),sizeof(cost_t));
-
+    cost_t suma;
     for (unsigned int i = 0; i < graph_max_vertexs(graph); i++)
     {
         vertexs = set_add(vertexs,i);
     }
-
     vertexs = set_elim(vertexs,init);
     for (unsigned int i = 0; i < graph_max_vertexs(graph); i++)
     {
@@ -44,7 +39,11 @@ cost_t *dijkstra(graph_t graph, vertex_t init) {
         {
             if (set_member(j,vertexs))
             {
-                distances[j] = min(distances[j],graph_get_cost(graph,c,j) + distances[c] );
+                suma = cost_sum(distances[c],graph_get_cost(graph,c,j));
+                if (cost_le(suma,distances[j]))
+                {
+                    distances[j] = suma;
+                }
             }
         }
     }
