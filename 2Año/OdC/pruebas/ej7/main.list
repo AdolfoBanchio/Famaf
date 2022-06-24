@@ -1,0 +1,95 @@
+
+main.elf:     file format elf64-littleaarch64
+
+
+Disassembly of section .text:
+
+0000000040080000 <infloop-0x8>:
+    40080000:	58000060 	ldr	x0, 4008000c <A>
+    40080004:	d350fc00 	lsr	x0, x0, #16
+
+0000000040080008 <infloop>:
+    40080008:	14000000 	b	40080008 <infloop>
+
+Disassembly of section .data:
+
+000000004008000c <A>:
+    4008000c:	ffff0000 	.inst	0xffff0000 ; undefined
+    40080010:	00000000 	.inst	0x00000000 ; undefined
+
+Disassembly of section .debug_line:
+
+0000000000000000 <.debug_line>:
+   0:	00000036 	.inst	0x00000036 ; undefined
+   4:	001d0003 	.inst	0x001d0003 ; undefined
+   8:	01040000 	.inst	0x01040000 ; undefined
+   c:	000d0efb 	.inst	0x000d0efb ; undefined
+  10:	01010101 	.inst	0x01010101 ; undefined
+  14:	01000000 	.inst	0x01000000 ; undefined
+  18:	00010000 	.inst	0x00010000 ; undefined
+  1c:	6e69616d 	rsubhn2	v13.8h, v11.4s, v9.4s
+  20:	0000732e 	.inst	0x0000732e ; undefined
+  24:	00000000 	.inst	0x00000000 ; undefined
+  28:	00000209 	.inst	0x00000209 ; undefined
+  2c:	00004008 	.inst	0x00004008 ; undefined
+  30:	21150000 	.inst	0x21150000 ; undefined
+  34:	00010222 	.inst	0x00010222 ; undefined
+  38:	Address 0x0000000000000038 is out of bounds.
+
+
+Disassembly of section .debug_info:
+
+0000000000000000 <.debug_info>:
+   0:	0000002a 	.inst	0x0000002a ; undefined
+   4:	00000002 	.inst	0x00000002 ; undefined
+   8:	01080000 	.inst	0x01080000 ; undefined
+   c:	00000000 	.inst	0x00000000 ; undefined
+  10:	40080000 	.inst	0x40080000 ; undefined
+  14:	00000000 	.inst	0x00000000 ; undefined
+  18:	4008000c 	.inst	0x4008000c ; undefined
+	...
+  24:	00000007 	.inst	0x00000007 ; undefined
+  28:	00000034 	.inst	0x00000034 ; undefined
+  2c:	Address 0x000000000000002c is out of bounds.
+
+
+Disassembly of section .debug_abbrev:
+
+0000000000000000 <.debug_abbrev>:
+   0:	10001101 	adr	x1, 220 <infloop-0x4007fde8>
+   4:	12011106 	and	w6, w8, #0x8000000f
+   8:	1b0e0301 	madd	w1, w24, w14, w0
+   c:	130e250e 	sbfiz	w14, w8, #18, #10
+  10:	00000005 	.inst	0x00000005 ; undefined
+
+Disassembly of section .debug_aranges:
+
+0000000000000000 <.debug_aranges>:
+   0:	0000002c 	.inst	0x0000002c ; undefined
+   4:	00000002 	.inst	0x00000002 ; undefined
+   8:	00080000 	.inst	0x00080000 ; undefined
+   c:	00000000 	.inst	0x00000000 ; undefined
+  10:	40080000 	.inst	0x40080000 ; undefined
+  14:	00000000 	.inst	0x00000000 ; undefined
+  18:	0000000c 	.inst	0x0000000c ; undefined
+	...
+
+Disassembly of section .debug_str:
+
+0000000000000000 <.debug_str>:
+   0:	6e69616d 	rsubhn2	v13.8h, v11.4s, v9.4s
+   4:	2f00732e 	.inst	0x2f00732e ; undefined
+   8:	656d6f68 	fnmls	z8.h, p3/m, z27.h, z13.h
+   c:	6f64612f 	umlsl2	v15.4s, v9.8h, v4.h[2]
+  10:	2f6f666c 	.inst	0x2f6f666c ; undefined
+  14:	75636f44 	.inst	0x75636f44 ; undefined
+  18:	746e656d 	.inst	0x746e656d ; undefined
+  1c:	61462f73 	.inst	0x61462f73 ; undefined
+  20:	2f66616d 	umlsl	v13.4s, v11.4h, v6.h[2]
+  24:	2f43644f 	.inst	0x2f43644f ; undefined
+  28:	65757270 	fnmls	z16.h, p4/m, z19.h, z21.h
+  2c:	2f736162 	umlsl	v2.4s, v11.4h, v3.h[3]
+  30:	00376a65 	.inst	0x00376a65 ; NYI
+  34:	20554e47 	.inst	0x20554e47 ; undefined
+  38:	32205341 	orr	w1, w26, #0x1fffff
+  3c:	0034332e 	.inst	0x0034332e ; NYI
