@@ -332,3 +332,96 @@ fun fabrica_dinamica(costo:array[1..2,1..n] of nat,traspaso[1..2,1..n],N:nat)ret
     cost_min = min(t[1,1],t[2,1])
 endfun
 
+
+
+Practico 3.3)
+el arreglo denomin viene ordenado de menor a mayor
+fun cambio_dinamic(denomin :array[1..n] , costo:nat)ret r :nat 
+    var tabla:array[0..n,0..costo]
+    for i:=0 to n do
+        tabla[i,0]:= 0
+    od
+
+    for j:=1 to costo do
+        tabla[0,j]:= inf
+    od
+
+    for i:= 1 to n do
+        for j:=1 to costo do 
+            cambio[i,j]:= calc_min(i,j,cambio)
+        od
+    od
+    r:= cambio[n,c]
+endfun
+
+fun calc_min(i :nat,j:nat,cambio:array[0..n,0..c] of nat)ret r:nat
+    var min:nat
+    min:= inf
+    for q:=0 to (j%d[i]) do
+        if min > q+cambio[i-1,j-q*d[i]] then
+            min := q+cambio[i-1,j-q*d[i]]
+        else skip
+    od
+    r := min
+endfun
+
+
+ej3)
+a)
+cambio(i,j)=
+{
+[] 0 , si j = 0
+[] 1+min i'{1,2..,i|d_i' <= j} (cambio(i',j-d_i'), si j>0
+} 
+
+fun cambio_dinamic(denomin :array[1..n] , costo:nat)ret r :nat 
+    var tabla:array[0..n,0..costo]
+    for i:=0 to n do
+        tabla[i,0]:= 0
+    od
+
+    for i:= 1 to n do
+        for j:=1 to costo do 
+            cambio[i,j]:= 1 + calc_min(i,j,cambio,denoms)
+        od
+    od
+    r:= cambio[n,c]
+endfun
+
+fun calc_min(i :nat,j:nat,cambio:array[0..n,0..c] of nat,denoms:array[1..n])ret r:nat
+    var min:nat
+    min:= inf
+    for i':=0 to i do
+        if d[i']<= j && min > cambio[i',j-d[i']] then
+            min := cambio[i',j-d[i']]
+        else skip
+    od
+    r := min
+endfun
+
+b)
+
+cambio(i,j)=
+{
+[] 0 , si j = 0
+[] inf , si j>0 && i=n
+[] cambio(i+1,j), si d_i > j > 0 && i < n
+[] min(cambio(i+1,j),cambio(i,j-d_i)+1)) , j>= d_i >0 && i < n 
+} 
+
+fun cambio_dinamic(denom:array[0..n-1],costo :nat)ret r :nat
+    var cambio[0..n,0..costo]
+    for i:=0 to n do cambio[i,0]:=0 od
+    for j:=1 to costo do cambio[n,j]:= inf od
+
+    for i:=n-1 downto 0 do
+        for j:=1 to costo do
+            if d[i]>j then 
+                cambio[i,j]:= cambio[i+1,j]
+            else 
+                cambio[i,j]:= min(cambio[i+1,j],cambio[i,j-d[i]]+1)
+            fi
+        od
+    od
+    r := cambio[0,costo]
+endfun

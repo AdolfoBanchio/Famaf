@@ -1,0 +1,185 @@
+1)
+un colectivero conduce su pequeño colectivo. Muy pequeño. Solamente hay lugar para un pasajero.
+Mas que un colectivo, parece una moto. Su recorrido o viaje va de la parada 1 hasta la parada n
+pasando por las paradas intermedias 2,3,..,n-1. Hay m pasajeros esperando. Para cada pasajero i
+sabemos en que parada se quiere subir (Si), y en que parada se va a bajar (b_i con 1<= s_i < b_i < n)
+La intencion del colectiver es trasaladar en un viaje a la mayor cantidad de pasajeros posible. El
+colectivero no tiene obligacion de levantar a un pasajero por mas que este libre, puede preferir 
+reservarlo para un pasajero que sube despues.
+
+a) indicar de manera simple y concreta, cual es el criterio de seleccion voraz para construir 
+la solucion?
+b) indicar que estructuras de datos utilizaras para resolver el problema.
+c) explicar en palabras como resolvera el problema el algoritmo
+d) implementar el algoritmo en el lenguaje de la amteria de manera precisa.
+
+Criterio de seleccion:
+    - la idea sera seleccionar a los pasajeros que se bajen mas rapido,
+    es decir que para el pasajero i, b(parada donde se baja i) sea la mas cercana a la parada actual
+
+Estructuras:
+    - typdef pasajero: tuple
+                id: nat
+                subida: nat
+                bajada: nat
+                    endtuple
+
+    - set of pasajero
+
+c)
+la idea es recorrer el set de pasajeros y seleccionar al que tenga la bajada mas pronta,
+luego eliminar del set a los pasajeros que se quieren subir mientras tengo al otro pasajero encima. 
+de manera que para cuando se baje, los otros pasajeros no seran elegibles porque ya pase su parada.
+
+algoritmo:
+
+fun colectivo(pasajeros : set of pasajero)ret total_pas : nat
+    var pasajero_aux : pasajero
+    var pasajeros_aux : set of pasajero
+    pasajeros_aux := copy_set(pasajeros)
+
+    while(!empty_set(pasajeros_aux)) do
+        pasajero_aux := selec_prox_pas(pasajeros_aux)
+        {-elegimos al pasajero optimo-}
+        elim(pasajeros_aux,pasajero_aux)
+        {-eliminamos al pasajero ya seleccionado}
+        elim_pasajeros_noop(pasajeros_aux,pasajero_aux.bajada)
+        {-eliminamos a los pasajeros no optimos-}
+        total_pas := total_pas +1
+    od
+endfun
+
+
+fun selec_prox_pas(pasajeros : set of pasajero)ret p :pasajero
+    var pasajeros_aux:set of pasajero
+    var min_b : nat
+    var p_aux : pasajero
+    pasajeros_aux := copy_set(pasajeros)
+    min_b := inf
+
+    while(!is_empty(pasajeros_aux)) do
+        p_aux:= get(pasajeros_aux)
+        if(p_aux.bajada < min_b) then
+            p := p_aux
+            min_b := p_aux.bajada
+        fi
+        elim(pasajeros_aux,p_aux)
+    od
+    destroy(pasajeros_aux)
+endfun       
+
+
+proc elim_pasajeros_noop(in/out pasajeros : set of pasajero, subida_min : nat)
+    var p_aux : pasajero
+    while(!is_empty(pasajeros))do
+        p_aux := get(pasajeros)
+        if(p_aux.subida < subida_min) then
+            elim(pasajeros,p_aux)
+        fi
+    od
+endproc
+
+
+2)
+el presidente de tu pais te acaba de elegir como asesor para tomar una serie de medidas de produccion
+que mejoren la situacion economica. En el analisis preliminar se proponen n medidas, donde cada 
+medida i {1...n} producira una mejora economica de m, puntosm con m_i > 0. Tambien se analizo 
+para cada una el nivel de daño ecologico d_i que producira, donde d_i >0, El puntaje que tendra cada
+medida i esta dado por la relacion m_i/d_i.
+
+se debe determinar cual es el maxiomo puntaje obtenible eligiendo K medidas con K<n, de manera tal 
+que la suma total del daño ecologico no sea mayor a C.
+
+Se pide lo siguiente.
+
+a) Especifica precisamente que calcula al funcion recursiva que resolvera el problema, indicando que
+argumentos toma y la utilidad de cada uno.
+b) Da la llamada o la expresion principal que resuelve el problema.
+c) Defini la funcion en notacion matematica.
+
+
+a) la funcion recursiva calculara el maximo puntaje posible obtenible al tener que realizar K medidas
+economicas tal que el daño ecologico sea menor a C. los argumentos seran la cantidadd de medidas a elegir
+y el daño ecologico permitido a hacer y la cantida de medidas que estoy considerando de 0 hasta i.
+
+medidas(i,c,k) = obitene la maxima mejora economica posible eligiendo k propuestas entre la 1 y la i,
+de manera tal que la suma total del daño de las medidas elegidas no supere c
+
+b) la llamada principal seria :
+    medidas(n,K,C) =
+
+c) funcion recursiva 
+
+medidas(i,k,c)=
+{
+[] max(medidas(i-1,k,c),medidas(i-1,k-1,c - d_k) + m_k/d_k), si d_k <= c, i>0,k>0
+[] medidas(i-1,k,c) , si d_i > c , i>0 , k>0
+[] 0 , si k = 0 
+[] -inf , si i = 0 && k > 0 {si no tengo propuesas pero si algo que elegir}
+}
+
+
+
+3) se tiene la siguiente definicion recursiva para 0<= i,j <= n
+
+
+gunthonacci(i,j)={
+[] 1 , si i = 0 && j = 0
+[] 1 , si i = 0 && j = 1
+[] 1 , si i = 1 && j = 0
+[] gunthonacci(i,j-2)+gunthonacci(i,j-1) , si i = 0 && j > 1
+[] gunthonacci(i-2,j)+gunthonacci(i-1,j) , si i > 1 && j = 0
+[] gunthonacci(i,j-1)+gunthonacci(i-1,j) , si i > 0 && j > 0
+}
+
+ y la llamada principal es gunthonacci(n,n)
+
+ a) dar una definicion de la misma funcion usando programacion dinamica
+ b) explicar la eleccion de las dimensiones de la tabla de valores, del orden en que la misma 
+ se completa, y el valor del retorno.
+
+la tabla sera de dimensiones n*n , y como para todos los casos se necesitan saber valores anteriores, 
+se llenara de arriba a abajo y de derecha a izquierda. y el valor de retorno estara en la posicion n n
+
+fun gunthonacci_din(n : nat)ret r: nat
+    var tabla : array[0..n,0..n]
+    {lleno los casos base}
+    tabla[0,0]:= 1
+    tabla[0,1]:= 1
+    tabla[1,0]:= 1
+    
+    {lleno los casos especificos cuando i = 0 && j = 0}
+    for j:=2 to n do
+        tabla[0,j] = tabla[0,j-2]+tabla[0,j-1]
+        tabla[j,0] = tabla[j-2,0]+tabla[j-1,0]
+    od
+
+    for i:=1 to n do 
+        for j:=1 to n do 
+            tabla[i,j] = tabla[i,j-1]+tabla[i-1,j]
+        od
+    od
+
+    r := tabla[n,n]
+
+endfun
+
+
+4) Sea T un arbol (no necesariamente binario) y supongamos que deseamos encontrar la hoja que se
+encentra mas cerca de la raiz.¿cuales son las distintas maneras de recorerr T?¿cual de ellas
+elegirias para encontrar esa hoja y porque?
+
+
+de las siguientes tres maneras de recorrer un arbol binario ¿cuales son ejemplos de recorridas en DFS
+y cuales son ejemplos de recorridas en BFS? justificar sus respuestas explicando con clardiad.
+
+-recorrida en pre-orden
+-recorrida en in-orden
+-recorrida en pos-orden
+
+ninguna es una recorrida en BFS(recorrida a lo ancho), todas son recorridas en profundidad.
+ya que o compienzan por la raiz y van hasta lo mas profundo del arbol izquierdo, o comienzan desde lo mas
+profundo del arbol izquierdo. y al terminar con el arbol izquierdo arrancan desde lo mas profundo del arbol derecho
+o van desde la raiz a lo mas profundo del arbol derecho.
+
+las recorridas BFS en cambio recorren por nivel de izquierda a derecha.
