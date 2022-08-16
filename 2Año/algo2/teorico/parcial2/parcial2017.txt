@@ -1,0 +1,31 @@
+1. Es viernes a las 18 y usted tiene ganas de tomar limonada con sus amigos. Hay n bares cerca, donde
+cada bar i tiene un precio Pi de la pinta de limonada y un horario de happy hour Hi
+, medido en horas
+a partir de las 18 (por ejemplo, si el happy hour del bar i es hasta las 19, entonces Hi = 1), en el cual
+la pinta costar´a un 50% menos. Usted toma una cantidad fija de 2 pintas por hora y no se considera
+el tiempo de moverse de un bar a otro. Escribir un algoritmo que obtenga el menor dinero posible que
+usted puede gastar para tomar limonada desde las 18 hasta las 02 am (es decir que usted tomar´a 16
+pintas) eligiendo en cada hora el bar que m´as le convenga.
+
+el criterio de seleccion sera seleccionar el bar mas barato en la hora actual, considerando si el bar esta o no en happy hour
+typdef bar : tuple
+            p:nat
+            h:nat
+            endtuple
+fun hhgreedy (bares:array[1..n] of Bar)ret r:nat
+    var min_p:nat
+    min_p := inf
+    r := 0
+
+    for h_act:=1 to 8 do
+        for i:=1 to n do
+            if bares[i].h >= h_act && bares[i].p/2 < min_p then
+                    min_p := bares[i].p/2
+           {si el bar esta en hh veo si su precio en hh es minimo}
+            else if bares[i].p < min_p then
+                min_p := bares[i].p
+            fi
+        od
+        r := r + min_p *2  {tomo 2 pintas}
+    od
+endfun               

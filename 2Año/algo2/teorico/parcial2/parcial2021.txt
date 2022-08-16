@@ -66,7 +66,7 @@ cada ocina i, el ocinista ha expresado su preferencia por cada uno de los tres c
 
 Datos:
 -N oficinas
-_C1,C2,C3 costo de cada color
+-C1,C2,C3 costo de cada color
 -no puede haber dos colores iguales consecutivos
 -para cada oficina i, el oficinista dio una preferencia de color pi1,pi2,pi3
 -Maximizar el valor pij/cij 
