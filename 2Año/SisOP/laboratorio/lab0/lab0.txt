@@ -1,0 +1,13 @@
+#ejercicio 1
+grep "model name" /proc/cpuinfo -m 1
+#ejercicio 2
+grep "model name" /proc/cpuinfo | wc -l
+#ejercicio 3
+wget https://www.gutenberg.org/files/11/11-0.txt && sed 's/Alice/Adolfo/g' 11-0.txt > ADOLFO_in_wonderland.txt && rm 11-0.txt
+#ejercicio 4
+sort -k 5 -n weather_cordoba.in > weather_sort.txt && head weather_sort.txt -n 1 && tail weather_sort.txt -n 1
+
+#ejercicio 5
+sort -k 3 -n atpplayers.in > atpplayers_sorted.in
+#ejercicio 6
+
