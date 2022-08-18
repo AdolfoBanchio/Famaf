@@ -13,10 +13,10 @@ sort -k 5 -n weather_cordoba.in > weather_sort.txt && head weather_sort.txt -n 1
 sort -k 3 -n atpplayers.in > atpplayers_sorted.in
 
 #ejercicio 6
-awk 'dif=$7-$8 {print $0, dif}' superliga.in > superligadif.in && sort -k 2 -n -r superligadif.in > superliga_sorted.in
+awk 'dif=$7-$8 {print $0, dif}' superliga.in | sort -k 2 -k 9 -n 
 
 #ejercicio 7
-ip link | grep 'link/ether' -i \
+ip link | grep 'link/ether' -i
 
 #ejercicio 8
 crea la carpeta y los archivos
