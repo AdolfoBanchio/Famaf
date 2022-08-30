@@ -1,0 +1,7 @@
+Integrantes del grupo:
+    Bustos Delprato, Franco Nicolás - 43694127
+    Banchio, Adolfo - 44805643
+    Viglianco, Agustín - 43997494
+
+Simulación de una partida infinita del "Galaga", un videojuego creado en 1981 donde 
+el jugador conduce una nave que debe enfrentarse y destruir a enemigos con forma de insecto.

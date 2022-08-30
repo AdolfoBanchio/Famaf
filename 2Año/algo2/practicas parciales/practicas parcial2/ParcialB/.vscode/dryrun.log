@@ -1,7 +1,0 @@
-make --dry-run --always-make --keep-going --print-directory
-make: Entering directory '/home/adolfo/Documents/Famaf/algo2/practicas parcial2/ParcialB'
-gcc -Wall -Werror -Wextra -pedantic -std=c99 -g -c pstack.c -o pstack.o
-gcc -Wall -Werror -Wextra -pedantic -std=c99 -g -c main.c -o main.o
-gcc -Wall -Werror -Wextra -pedantic -std=c99 -g -o pstack_test pstack.o main.o  
-make: Leaving directory '/home/adolfo/Documents/Famaf/algo2/practicas parcial2/ParcialB'
- 

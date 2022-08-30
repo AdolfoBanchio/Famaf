@@ -1,9 +1,0 @@
-make --dry-run --always-make --keep-going --print-directory
-make: Entering directory '/home/adolfo/Documents/Famaf/algo2/lab07/ej2'
-gcc -Wall -Wextra -Werror -pedantic -std=c99 -g   -c -o mini_set.o mini_set.c
-gcc -Wall -Wextra -Werror -pedantic -std=c99 -g   -c -o dijkstra.o dijkstra.c
-gcc -Wall -Wextra -Werror -pedantic -std=c99 -g   -c -o cost.o cost.c
-gcc -Wall -Wextra -Werror -pedantic -std=c99 -g   -c -o graph.o graph.c
-gcc -Wall -Wextra -Werror -pedantic -std=c99 -g -o dijkstra mini_set.o dijkstra.o cost.o graph.o main.c
-make: Leaving directory '/home/adolfo/Documents/Famaf/algo2/lab07/ej2'
- 
