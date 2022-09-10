@@ -21,7 +21,7 @@ secondary_buffer: .skip BYTES_FRAMEBUFFER
     Esta constante regula la ejecución de los delay_loops que generan el retardo entre frames.
     Puede modificarse a gusto para regular la velocidad de ejecución de la animación.
 */
-delay_time: .dword 0x8ffff
+delay_time: .dword 0x8fffff
 
 // Arreglos de posiciones
 /*

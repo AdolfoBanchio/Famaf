@@ -1,0 +1,9 @@
+leaktest.o: leaktest.c test_scommand.h test_pipeline.h
+run_tests.o: run_tests.c
+syscall_mock.o: syscall_mock.c syscall_mock.h
+test_execute.o: test_execute.c test_execute.h ../tests/syscall_mock.h \
+ ../execute.h ../command.h
+test_parsing.o: test_parsing.c test_parser.h ../parser.h ../command.h \
+ ../parsing.h ../parser.h
+test_pipeline.o: test_pipeline.c test_pipeline.h ../command.h
+test_scommand.o: test_scommand.c test_scommand.h ../command.h
