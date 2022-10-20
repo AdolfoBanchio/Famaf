@@ -1,0 +1,19 @@
+Dado el esquema de paginacion i386 (10,10,12) traducir las direcciones virtuales a fisicas
+el esquema tiene 32 bits, por lo tanto direcciona a 4GB de adress space 
+el PD usa 10 bits para direccionar, por lo que tiene 1024(0..1023) PDE
+que redirigen a 1024 PT que cada una tiene 1024 PTE que redirigen a alguna pagina fisica  
+-0x003FF666
+ 0000 0000 00 11 1111 1111   0110 0110 0110
+|     PD     |      PFN     |     offset    |
+
+PD = 0   PFN = 3FF = 1023 
+PTE = 0xCAEEA = 1100 1010 1110 1110 1010 0000 0000 0000 
+                | offset                 0110 0110 0110    
+           PA = C     A    E   E    A    6     6   6
+-0x00000AB0
+PD = 0    PFN = 0 offset = AB0
+PA = CAFEC AB0
+-0x00700B0B 
+PD = 0000 0000 01  PFN = 11 0000 0000  offset = BOB
+   = 1                 =   
+ 
