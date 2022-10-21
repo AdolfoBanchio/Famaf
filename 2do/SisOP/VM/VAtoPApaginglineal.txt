@@ -1,0 +1,49 @@
+espacio direccionable de 4kb, y la tabla de paginado guarda 16 tablas 
+entonces la VA tendra 12 (para direccionar dentro de los 4kb) + 4 (para direccionar entre las 16 PTE de la tabla)
+
+   0000   0000   0000   0000
+  ~~~~~~ ~~~~~~~~~~~~~~~~~~~~~
+   VPN          offset
+   
+   
+si quisiera extraer solo el VPN de ese numero de bits, deberia hacer un shift right
+de 12 bits
+
+ej, tengo la VA = 39424 = 1001 0101 0000 0000
+				
+			1001 0101 0000 0000 >> 12 --> 1001 = 9 -> Index de la page table
+			
+			voy a la page table en ese lugar y tiene el PFN 110 , que luego para poder formar la PA con el PFN y el Offset debo hacer un shift de vuelta y luego hacer un or bit a bit entre el PFN y el offset
+			
+				 0110 << 12
+				 
+		        0110 0000 0000 0000  
+		        
+		        0110 0000 0000 0000
+	(or bit a bit) |
+			0000 0101 0000 0000
+		--------------------------------
+			0110 0101 0000 0000  = 27136 PA final 
+			
+Ahora, hacer un shift >> o << es lomismo que dividir y multiplicar por por 2^n 
+entonces si al numero inicial, hago el mismo procedimiento algebraico que hice para binario pero para decimales, entonces obtengo el mismo numero. >> 12 (dividir por 2^12)
+
+    			39424 / 2^12(4096) = 9.625 la division entera dejara de cociente = 9
+    			
+    			entonces 9 es mi VPN osea mi index en la page table
+    			
+    			luego 
+    			
+    			39424 - (9 * 4096) --> calculo el resto de la division entera 
+    			= 2560 
+    					
+    			en la PTE tengo 110 = 6 , 
+    			
+    			6* 4096 = 24576 --> es mi PFN 
+    			
+    			hacer un or bit a bit es lo mismo que sumar decimales
+    			
+    			24576   +   2560   =   27136
+    			~~~~~      ~~~~~~     ~~~~~~~
+    			 PFN       Offset        PA
+    			

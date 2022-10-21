@@ -1,0 +1,106 @@
+ej14)
+dado el sistema i386 de paginacion (10,10,12) indicar
+a)TAma;o total ocupado por el directorio y las tablas de pagina para mapear 32 MB
+al principio de la memoria virtual
+
+como el offset es 12, se que page size es de 4K, por ende si quiero
+mapear 32MB de memoria debo usar 8 paginas.
+
+teniendo en cuenta el PD que debe estar si o si, y que puede direccionar a 
+1024 PT distintas, tendre
+
+PD                    PT 
+0   | .... | 1 ----->  0 | .... | 1
+1   | .... | 0         1 | .... | 1
+2   | .... | 0         2 | .... | 1 
+.   | .... | 0         . | .... | 1
+.   | .... | 0         7 | .... | 1
+.   | .... | 0         . | .... | 0
+1023| .... | 0      1023 | .... | 0
+
+entonces las el PD y las tablas solo ocupan 8KB de memoria
+
+
+b)Tama;o total del directorio y tablas de paginas si estan mapeados los 4GB de memoria
+el directorio ocupa 4kb, y si estan mapeados los 4gb, significa que estan en uso las 
+1024 entradas del directorio, por ende hay 1024 PT disponibles, cada una siendo una pagina de 
+4k tenemos 1024*4kb = 4MB  ocupaod en PT + el PD
+
+c) dado el ej anterior, ocuparia menos o mas memoria si fuese una tabla lineal?
+si fuese una tabla lineal para ocupar 4GB de memoria necesitaria usar 1024*1024 paginas de
+4kb, por ende en mi tabla deberia tener 1024*1024 PTE de 4B cada uno, sabiendo que cada 
+pagina puede guardar 1024 entradas, entonces necesito 1024 paginas. 
+entonces la tabla tambien pesa 4MB
+
+d)mostrar el directorio y las tablas de pagina para el siguiente mapeo de virtual a fisica
+
+virtual         | fisica
+[0MB,4MB)       |  [0MB,4MB)
+[8MB,8MB+32KB)  |  [128MB,128MB+32KB)
+
+para mapear 4mb voy a ocupar 1024 paginas, y para guardar los PFN de esas 1024 paginas
+usare una sola PT.  que estara en la primera PDE ,
+es decir nos dimos cuenta que cada PDE mapea 4MB de memoria fisica. entonces el otro segmento
+ocupara la 3ra entrada de la PD 
+PD 
+PD                    PT 0                
+0   |   0  | 1         0 |   0  | 1
+1   | .... | 0         1 |   1  | 1
+2   |   1  | 0         2 |   2  | 1 
+.   | .... | 0         . | .... | 1
+.   | .... | 0         7 |   7  | 1
+.   | .... | 0         . | .... | 0
+1023| .... | 0      1023 | 1023 | 0
+La direccion fisica base de esta tabla sera los 128 MB, para pasarlo a decimal calculo
+128MB/4kb = (2^20*128)/4096 = 32768 = 0x8000
+  PT 1
+   0 | 0x8000 | 1
+   1 | 0x8001 | 1
+   2 |   .... | 1
+   . |   .... | 1
+   7 | 0x8007 | 1
+   . |   .... | 0
+1023 | ?????? | 0
+
+
+ej15) porque un i386 no puede mapear los 4 GB completos de memoria virtual. cual es el maximo?
+no se puede, porque la estructura del PD ocupa lugar extra. Es decir,
+la arquitectura se basa en 32 bits, por lo que solo puede direccionar 4GB en total, y
+si quiero tener mapeados 4GB virtuales, necesitaria 4KB extra para la PD.
+
+ej16)explicar como podria extender el esquema de memoria virtual de i386 para que, aunque
+cada proceso tenga acceso a 4GB de memoria virtual, en total se puedan usar 64GB(36 bits) de 
+memoria fisica.
+
+esos 4 bits que se agregan, se utilizaran para direccionar 4 PD, que cada PD direccionara
+a 1024 page tables, que cada page table direccionara a 1024 PTE (osea pages de 4KB).
+
+ej17)
+(a) Hay un page directory por cada proceso.
+si estamos hablando de la implementacion i386, entonces si, pq el paginado es de dos niveles
+
+(b) La MMU siempre mapea una memoria virtual mas grande a una memoria fısica mas peque ̃na.
+Si, pero tambien depende de el sitema operativo, depende de cuanto sea el adress space que este le
+otorgue a los procesos
+(c) Dos p ́aginas virtuales de un mismo proceso se pueden mapear a la misma p ́agina f ́ısica.
+si
+(d) Dos p ́aginas virtuales de dos procesos se pueden mapear a la misma p ́agina f ́ısica.
+si, las pagionas correspondientes al SO, que cada proceso tiene visible en su adress space
+(e) Dos p ́aginas f ́ısicas de un mismo proceso se pueden mapear a la misma p ́agina virtual.
+no
+(f) En procesadores de 32 bits y gracias a la memoria virtual, cada proceso tiene 2^32 direcciones de
+memoria virtuales.
+?????
+(g) La memoria virtual se puede usar para ahorrar memoria.
+no ??
+(h) Toda la memoria virtual tiene que estar mapeada a memoria f ́ısica.
+no, justamente la implemetacion de tablas de paginacion multinivel permiten
+creer que un proceso tiene disponible x cantidad de memoria, poero solo esta mapeada la 
+que tienen en uso
+(i) El page directory en i386 se comparte entre todos los procesos.
+(j) Puede haber marcos de memoria f ́ısica que no tienen un marco de memoria virtual que los apunte.
+(k) Por culpa de la memoria virtual hacer un fork resulta muy caro en t ́erminos de memoria.
+(l) Los procesadores tienen instrucciones especiales para acceder a la memoria f ́ısica evitando la
+MMU.
+(m) Es imposible hacer el mapeo inverso de f ́ısica a vitrual.
+(n) No se puede meter un todo un Sistema Operativo completo con memoria paginada i386 en 4 KiB.
