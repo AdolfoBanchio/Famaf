@@ -1,0 +1,67 @@
+Ej1)
+Pre: x = 0
+
+P0 :1 a0 = x         P1 : 4 x = x + 1      P2 : 6 a2 = x
+    2 ;a0 = a0 + 1        5 ;x = x + 1          7 ;a2 = a2 + 1
+    3 ;x = a0                                   8 ;x = a2
+                        
+a) que valores finales puede tomar x
+- Los posibles resultados son 1 ,2 ,3 o 4 
+b) Mostrar para cad uno de los valores como se tienen que ejecutar las sentencias
+para que se de cada resultado.
+
+    -1:
+        1 4 5 6 7 8 2 3
+    -2: 
+
+b) cuantos escenarios de ejecucion hay
+suma de todas las istrucciones = 8
+!8 permutaciones totales, tengo que eliminar las invalidas para cada codigo 
+!8/3!2!3!
+
+
+
+Ej2)
+dados los dos procesos en paralelo
+
+Pre: x = 0
+P0 : while(1) {    P1 : while(1) {
+1 x = x + 1                  3 x = x + 1
+2 ; x = x −1                 4 ; x = x −1
+}                       }
+
+a) el multiprograma termina?
+no
+b)
+0 1  2
+
+
+ej3)
+            Pre: cont ∧ x= 1 ∧ y= 2
+P0 : while (cont && x<20) {     P1 : y = y + 2;
+            x = x * y              ;cont = false;
+        }       
+                Post: ¬cont ∧ x=? ∧ y=?
+
+ej4)
+el programa termina, pero para que p0 termine, si o si necesita de una ejecicion de P1
+a)
+   n  y m vale 99, entra a la guarda de ambos while, ejecuta n+1 vale 100, ejecuta *2, 200
+   m valia 99, diferencia 101. 
+b)
+la forma mas rapida de llegar a 100, es con 8 iteraciones, 
+una vez p1, luego 7 veces p0
+
+infinito, ya que no sabemos cuantas veces se va a ejecutar p0 primero antes 
+de que se ejecute alguna vez p1.
+c) que valores pueden tomar n y m en la Post
+puede tomar valores entre 100 y 200 , 
+no puede ser menor que 100, ya que sino nunca terminaria. 
+no puede ser mas de 200, pq implicaria que n entre el while valiendo mas de 99.
+lo que puede suceder es que entre
+n y m vale 99, entra a la guarda de ambos while, ejecuta n+1 vale 100, ejecuta *2, 200
+luego no entra mas al while
+
+
+
+ 
