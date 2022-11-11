@@ -1,0 +1,65 @@
+1)
+disco de 8TiB, 7200 RPM
+4,16 ms de latencia de busqueda (promedio de cuanto tarda
+en mover el cabezal)
+215 MiB/s tasa de transferencia 
+
+a) cuantos ms tarda en dar una veluelta completa
+7200 RPMin / 60 = 120 RPSeg
+
+1/120 = 8,33 ms tarda en dar una vuelta 
+
+b)indicar la tasa de transferencia de lectura al azar de 
+bloques de 4096 bytes
+
+1ro el disco movera el cabezal al lugar donde debe buscar 
+la informacion (4.16 ms de latencia) luego el disco 
+debera rotar en a lo sumo 8,33 ms hasta llevar la informacion
+al cabezal. 
+
+primero debo calcular cuanto tarda en leer un bloque de 4096 bytes
+215 Mib --- s  215Mib ~~ 225320 K
+4096 K
+4096/225320 = 18 microsegundos ~~ 0,018ms
+4,16 ms media de cuanto tarda en dar una vuelta +
+4,16 ms tasa de latencia de busqueda +
+0,018 ms = 8,338 ms 
+
+tarda en leer un bloque de 4096K  
+
+luego la tasa de transferencia sera 4096K/8,338 = 491 B/ms 
+
+
+
+
+2)Computar el tamaño de la FAT para 
+a) un diskette de doble cara doble densidad 360 Kib (~1982): FAT12,cluster de 512 bytes.
+fat12 significa que cada entrada de la fat ocupa 12 bits.
+
+cuantas entradas de la fat tengo? 360 Kib ~~ 368640 B
+368640 B / 512B = 720 entradas de 12 bits ~~ 1,5 bytes
+720*1,5 = 1080 bytes ocupara la FAT.
+
+b)un disco duro de 4Gib : FAT16 cluster de 4096bytes ~ 4 KiB
+4GiB* 2^30 =  4294967296 bytes
+4294967296 / 4096 = 1048576 de entradas va a tener la tabla
+1048576 * 2 (tamaño de la entrada de la tabla) = 2097152 B ~~ 215MB
+
+c) un pendrive de 32Gib FAT32 cluster de 16384
+32Gib ~~ 34359738368 bytes 
+34359738368 / 16384 =  2097152 de entradas 
+2097152 * 4B(tamaño de la entrada) = 8388608 B = 8 MB
+
+ej3)El sistema de archivos de xv6 es una estructura `a la Fast-Filesystem for UNIX (UFS),
+con par ́ametros: bloque de 512 bytes, 12 bloques directos, 1 bloque indirecto,  ́ındices de bloque de 32
+bits.
+(a) Calcule el tamaño maximo de un archivo.
+ocupara los 12 directos 12 * 512 B
+el bloque indirecto tendra 512 B / 4B entradas = 128 
+el tamaño maximo de un archivo esta dado por 
+(12*512B)+(128*512)= 71680 B ~~ 70KB 
+
+(b) Calcule el tamaño de la sobrecarga para un archivo de tamano maximo.
+
+(c) ¿Se podr ́ıan codificar los n ́umeros de bloque con menos bits? ¿Qu ́e otros efectos producir ́ıa utilizar
+la m ́ınima cantidad de bits?
