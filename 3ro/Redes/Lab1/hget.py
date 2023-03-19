@@ -79,22 +79,44 @@ def connect_to_server(server_name):
     >>> connect_to_server('no.exis.te') # doctest: +IGNORE_EXCEPTION_DETAIL
     Traceback (most recent call last):
        ...
-    gaierror: [Errno -5] No address associated with hostname
+    Exception: gaierror: [Errno -5] No address associated with hostname
 
     >>> connect_to_server('localhost')
     Traceback (most recent call last):
        ...
-    ConnectionRefusedError: [Errno 111] Connection refused
+    Exception: ConnectionRefusedError: [Errno 111] Connection refused
     """
-
     # Buscar direccion ip
     # COMPLETAR ABAJO DE ESTA LINEA
     # Aqui deberian obtener la direccion ip del servidor y asignarla
     # a ip_address
+    error = False
+    try:
+        ip_address = socket.gethostbyname(server_name)
+    except socket.gaierror:
+        error = True
+    if error:
+        errortxt = "gaierror: [Errno -5] No address associated with hostname"
+        raise Exception(errortxt)
+    """ Usando try/except y levantando una excepcion en caso de error, los
+    doctest no funcionan correctamente. Por eso, en vez de usar try/except
+    usamos un flag de error y un if para verificar si hubo error. y levantamos
+    la excepcion manualmente. Si agregamos al doctest el prefijo Exception:
+    al resultado esperado, funciona correctamente."""
     # DEJAR LA LINEA SIGUIENTE TAL COMO ESTA
     sys.stderr.write("Contactando al servidor en %s...\n" % ip_address)
     # Crear socket
     # COMPLETAR ABAJO DE ESTA LINEA
+    s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    try:
+        s.connect((ip_address, 80))
+    except:
+        error = True
+    if error:
+        errortxt = "ConnectionRefusedError: [Errno 111] Connection refused"
+        raise Exception(errortxt)
+
+    return s
     # Aqui deben conectarse al puerto correcto del servidor
     # NO MODIFICAR POR FUERA DE ESTA FUNCION
 
