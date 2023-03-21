@@ -75,14 +75,24 @@ morePolGeneralMap (x:xs) f = f x : morePolGeneralMap xs f
 
 --Ejercicio 1: 
 --a) redefinir la función "duplica" y "mas1" en términos de "generalMap" y "polGeneralMap".
+porDos :: Int -> Int
+porDos x = 2*x
+reDuplica :: [Int] -> [Int]
+reDuplica xs = generalMap xs porDos
+
+masUno :: Int -> Int
+masUno x = x+1
+reMas1 :: [Int] -> [Int]
+reMas1 xs = generalMap xs masUno
+
 --b) definir la función esPar:: [Int] -> [Bool] en términos de "morePolGeneralMap". 
 --Donde la función "esPar" mapea cada elemento de la lista a un booleano que indica si el mismo es un numero par. 
 --Por ejemplo, esPar [2,9,4,5] = [True, False, True,False]. 
---
---
---
---
---
+aux :: Int -> Bool
+aux x = mod x 2 == 0
+esPar :: [Int]->[Bool]
+esPar [] = []
+esPar xs = morePolGeneralMap xs aux
 
 --Funciones recursivas del tipo "FILTER":
 soloPares :: [Int] -> [Int]
@@ -96,13 +106,20 @@ soloPares (x:xs) | mod x 2 == 0 = x : soloPares xs
 
 --Ejercicio 2: 
 --a) generalizar la funciones de tipo "FILTER" sobre lista de enteros.
+generalFilter :: [Int] -> (Int -> Bool) -> [Int]
+generalFilter [] f = []
+generalFilter (x:xs) f | f x == True = x : generalFilter xs f
+                       | f x == False = generalFilter xs f
 --b) dar una versión polimorfica de la misma.
+polgeneralFilter :: [a] -> (a -> Bool) -> [a]
+polgeneralFilter [] f = []
+polgeneralFilter (x:xs) f | f x == True = x : polgeneralFilter xs f
+                          | f x == False = polgeneralFilter xs f
 --c) redefinir la función "soloPares" en términos de dicha generalización.
---
---
---
---                 
-
+resoloPares :: [Int] -> [Int]
+resoloPares [] = []
+resoloPares xs = polgeneralFilter xs aux
+                 
 --Funciones recursivas del tipo "FOLD":
 sumatoria :: [Int] -> Int          
 sumatoria [] = 0                  
@@ -113,12 +130,17 @@ sumatoria (x:xs) = x + sumatoria (xs)
 
 --Ejercicio 3: 
 --a) generalizar la funciones de tipo "FOLD" sobre lista de enteros.
+generalFold :: [Int] -> (Int -> Int -> Int) -> Int
+generalFold [] f = 0
+generalFold (x:xs) f = f x (generalFold xs f)
 --b) dar una versión polimorfica de la misma.
+polgeneralFold :: [a] -> (a -> a -> a) -> a
+--polgeneralFold [] f = 0
+polgeneralFold (x:xs) f = f x (polgeneralFold xs f)
 --c) redefinir la función "sumatoria" en términos de dicha generalización.
---
---
---
---                 
+reSumatoria :: [Int] -> Int
+reSumatoria [] = 0
+reSumatoria xs = generalFold xs (+)          
 
 
 --Otro concepto interesante del paradigma funcional, es que, podemos definir 
@@ -146,11 +168,11 @@ perimetro (Rectangulo ancho alto) = 2 * ancho + 2 * alto
 perimetro (Punto) = error "no se puede calcular el perimetro del punto"
 
 --Ejercicio 4: definir una función que devuelva la superficie de una "Figura"
---
---
---
---
-
+superficie :: Figura -> Float
+superficie (Circulo radio) = pi * (radio^2)
+superficie (Cuadrado lado) = lado * lado
+superficie (Rectangulo ancho alto) = ancho * alto
+superficie (Punto) = error "no se puede calcular el area de un punto"
 
 --Ejercicio 5:
 
@@ -160,23 +182,38 @@ perimetro (Punto) = error "no se puede calcular el perimetro del punto"
 --Por ejemplo: (5 :*: 3) :+: 10 :-: 2 es una "Expr"
 --
 --
+data Expr = Num Int
+          | Expr :+: Expr
+          | Expr :-: Expr
+          | Expr :*: Expr
+          deriving (Eq, Show)
+
 
 --b)Luego, definir su semántica, i.e., definir una función que evalúa (en forma
 --natural) una expresión aritmética "Expr". Por ejemplo: 
 --
 --evaluar ((5 :*: 3) :+: 10 :-: 2) = 5*3 + 10 - 2 = 23
 --
-   
+evaluar :: Expr -> Int
+evaluar (Num n) = n
+evaluar (num1 :+: num2) = evaluar num1 + evaluar num2
+evaluar (num1 :-: num2) = evaluar num1 - evaluar num2
+evaluar (num1 :*: num2) = evaluar num1 * evaluar num2 
 
 --Ejercicio 6:
 
 --a) Definir un tipo "BinTree" que permita representar un arbol binario
 --genérico, en cuyos nodos se almacenen valores de un tipo arbitrario.
-
+data BinTree = Empty
+             | Node a (BinTree a) (BinTree a)
+             deriving (Eq, Show) 
 --b) Definir una función de _folding_ que recorra los elementos del arbol en
 --alguna de los tres ordenes posibles (preorder,inorder o posorder).
 --Ayuda: devolver una lista con los elementos del arbol en el orden en el que 
 --fueron visitados.
+TreeFold :: (a -> b -> b -> b) -> b -> BinTree a -> b
+TreeFold f z Empty = z
+TreeFold f z (Node x izq der) = f x (TreeFold f z izq) (TreeFold f z der)
 
 --c) Definir una función que devuelva la profundidad de un arbol binario. Luego,
 --redefinirla en terminos de una funcion fold que opera sobre arboles binarios.
