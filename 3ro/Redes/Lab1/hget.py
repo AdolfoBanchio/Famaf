@@ -90,7 +90,6 @@ def connect_to_server(server_name):
     # COMPLETAR ABAJO DE ESTA LINEA
     # Aqui deberian obtener la direccion ip del servidor y asignarla
     # a ip_address
-    error = False
     ip_address = socket.gethostbyname(server_name)
     # DEJAR LA LINEA SIGUIENTE TAL COMO ESTA
     sys.stderr.write("Contactando al servidor en %s...\n" % ip_address)
@@ -99,13 +98,13 @@ def connect_to_server(server_name):
     try:
         s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     except socket.error as x:
-        print("Error creando socket %s" % x)
+        sys.stderr.write("Error creando socket %s" % x)
         sys.exit(1)
 
     try:
         s.connect((ip_address, HTTP_PORT))
     except socket.gaierror as x:
-        print("Error en direccion ip: %s" % x)
+        sys.stderr.write("Error en direccion ip: %s" % x)
         sys.exit(1)
     return s
     # Aqui deben conectarse al puerto correcto del servidor
