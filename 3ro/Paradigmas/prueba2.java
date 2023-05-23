@@ -1,23 +1,21 @@
 public class prueba2 {
 
-    public static void main ( String [] args )
-{
-try
-{
-int a [ ] = { 1 , 2 , 3 , 4 } ;
-for ( int i = 1 ; i <= 4 ; i ++)
-{
-System.out.println( "a [" + i + "]=" + a [ i ] + "\n" ) ;
-}
-}
-catch ( Exception e )
-{
-    System.out.println ( " e r r o r = " + e) ;
-}
-catch (ArrayIndexOutOfBoundsException e)
-{
-    System.out.println("ArrayIndexOutOfBoundsException");
-}
-}
+    public static void main ( String [] args ){
+        try{
+            try{
+                throw new Exception("excepcion del try interno");
+            }catch (Exception e){
+                System.out.println("catch interno manejando "+e.getMessage());
+                throw new Exception("excepcion del catch interno");
+            }finally{
+                System.out.println("bloque finally del try interno");
+                throw new Exception("excepcion del finally interno");
+            }
+        }catch(Exception e){
+            System.out.println("catch externo manejando "+e.getMessage());
+        }finally{
+            System.out.println("bloque finally del try externo");
+        }
+    }
 }
 
