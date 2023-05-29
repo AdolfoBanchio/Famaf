@@ -56,7 +56,7 @@ public class testSpark {
         });
 
         //Use .reduce() to create a new article list with the modified articles
-        List<NamedEntity> combinedNamedEntiys = modifiedArticlesRDD.reduce(testSpark::combineArticles);
+        List<NamedEntity> combinedNamedEntiys = modifiedArticlesRDD.reduce(testSpark::combineNes);
 
         //Print the new list
         for (NamedEntity ne : combinedNamedEntiys) {
@@ -64,7 +64,7 @@ public class testSpark {
         }
         sc.close();
     }
-    private static List<NamedEntity> combineArticles(List<NamedEntity> list1, List<NamedEntity> list2) {
+    private static List<NamedEntity> combineNes(List<NamedEntity> list1, List<NamedEntity> list2) {
         List<NamedEntity> combinedList = new ArrayList<>(list1);
         //this function recives two namedEntity list, it must return a combined list where if a namedEntity is repeated it increments its frequency and do not adds it twice
         //to know if a named entity is repeated its necessary to compare the name of the named entity
@@ -85,4 +85,22 @@ public class testSpark {
     }
 
 }
+
+/*
+* Como hacer para computar todas las named entity de los articulos en paralelo, sin tener que chequear si estan o no.
+*
+* En un Feed voy a tener un article list, hago feed.articlelist.paralelice() y me devuelve un JavaRDD<Article>
+* Para el JavaRDD hago map con el computedNameEntity de cada articulo, pero. Al cumpute named entity le paso la lista
+* de namedentiy DEL FEED, entonces cada erticulo en paralelo se fijara si el nombre de la entidad nombrada que encontro existe ya en la lista.
+*
+* De forma que todos iran agregandolo a la lista del FEED, y al final del map, el feed tendra una lista de named entitys completa sin repeticiones.
+*
+* ¿Que pasa si dos articulos al mismo tiempo encuentran la misma named entity y consultan si existe y en ese momento NO existia?
+* se cargara dos veces??
+*
+* en este caso no use Reduce para juntar las listas. Pero es mas eficiente que
+*
+* Cada articulo crea su lista independientemente de los otros articulos, y al momento de unir todas las listas de todos los articulos
+* uso la funcion combineNes creada aca. 
+* */
 
