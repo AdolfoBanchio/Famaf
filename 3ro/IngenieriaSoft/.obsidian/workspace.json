@@ -1,0 +1,175 @@
+{
+  "main": {
+    "id": "ba8992430e717d5d",
+    "type": "split",
+    "children": [
+      {
+        "id": "4ef930ab851d68cd",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "4e76c1e7c0588ed3",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Ing Software/Capitulo 3(Analisis y especificacion de requerimientos.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "deb27ab6463d2f44",
+    "type": "split",
+    "children": [
+      {
+        "id": "5c79282624ded908",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "79bd52f2d9e5a6aa",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "658790b3156238f2",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "af033b18c7e1432e",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 463.5
+  },
+  "right": {
+    "id": "2d7868d783b89ada",
+    "type": "split",
+    "children": [
+      {
+        "id": "7a31f483a4651d51",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "a82c6cdbf903b25b",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Ing Software/Capitulo 3(Analisis y especificacion de requerimientos.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "5c5741d63f995471",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Ing Software/Capitulo 3(Analisis y especificacion de requerimientos.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "aba3b5d3b0ad4a19",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "e32710397844aacc",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Ing Software/Capitulo 3(Analisis y especificacion de requerimientos.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "4e76c1e7c0588ed3",
+  "lastOpenFiles": [
+    "Ing Software/Capitulo 4.md",
+    "Ing Software.md",
+    "Ing Software/Capitulo 3(Analisis y especificacion de requerimientos.md",
+    "Untitled.md",
+    "(Texts in Computer Science) Pankaj Jalote - An Integrated Approach to Software Engineering-Springer (2005).pdf",
+    "Capitulo 3(Analisis y especificacion de requerimie 31e7b7a1b1564c2f92feb5f6d3e5d481/Untitled.png.md",
+    "Capitulo 3(Analisis y especificacion de requerimie 31e7b7a1b1564c2f92feb5f6d3e5d481/Untitled 4.png.md",
+    "Capitulo 3(Analisis y especificacion de requerimie 31e7b7a1b1564c2f92feb5f6d3e5d481",
+    "Ing Software bda244c2798d4e499dbdcd83c90795d2/Capitulo 3(Analisis y especificacion de requerimie 31e7b7a1b1564c2f92feb5f6d3e5d481.md",
+    "Ing Software bda244c2798d4e499dbdcd83c90795d2",
+    "Ing Software/Capitulo 3(Analisis y especificacion de requerimientos/Untitled.png",
+    "Ing Software/Capitulo 3(Analisis y especificacion de requerimientos/Untitled 9.png",
+    "Ing Software/Capitulo 3(Analisis y especificacion de requerimientos/Untitled 8.png",
+    "Ing Software/Capitulo 3(Analisis y especificacion de requerimientos/Untitled 7.png",
+    "Ing Software/Capitulo 3(Analisis y especificacion de requerimientos/Untitled 6.png",
+    "Ing Software/Capitulo 3(Analisis y especificacion de requerimientos/Untitled 5.png",
+    "Ing Software/Capitulo 3(Analisis y especificacion de requerimientos/Untitled 4.png",
+    "Ing Software/Capitulo 3(Analisis y especificacion de requerimientos/Untitled 3.png",
+    "Ing Software/Capitulo 3(Analisis y especificacion de requerimientos/Untitled 2.png",
+    "Ing Software/Capitulo 3(Analisis y especificacion de requerimientos/Untitled 1.png",
+    "Ing Software/Capitulo 3(Analisis y especificacion de requerimientos",
+    "Ing Software",
+    "Ing Software bda244c2798d4e499dbdcd83c90795d2/Capitulo 3(Analisis y especificacion de requerimie 31e7b7a1b1564c2f92feb5f6d3e5d481"
+  ]
+}

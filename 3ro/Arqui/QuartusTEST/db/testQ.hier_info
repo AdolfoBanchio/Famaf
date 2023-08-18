@@ -1,7 +1,66 @@
-|sillyfunction
-a => y.IN0
-b => y.IN1
-c => y.IN1
-y << y.DB_MAX_OUTPUT_PORT_TYPE
+|mux2_8
+d0[0] => d0[0].IN1
+d0[1] => d0[1].IN1
+d0[2] => d0[2].IN1
+d0[3] => d0[3].IN1
+d0[4] => d0[4].IN1
+d0[5] => d0[5].IN1
+d0[6] => d0[6].IN1
+d0[7] => d0[7].IN1
+d1[0] => d1[0].IN1
+d1[1] => d1[1].IN1
+d1[2] => d1[2].IN1
+d1[3] => d1[3].IN1
+d1[4] => d1[4].IN1
+d1[5] => d1[5].IN1
+d1[6] => d1[6].IN1
+d1[7] => d1[7].IN1
+s => s.IN2
+y[0] <= mux2:lsbmux.port3
+y[1] <= mux2:lsbmux.port3
+y[2] <= mux2:lsbmux.port3
+y[3] <= mux2:lsbmux.port3
+y[4] <= mux2:msbmux.port3
+y[5] <= mux2:msbmux.port3
+y[6] <= mux2:msbmux.port3
+y[7] <= mux2:msbmux.port3
+
+
+|mux2_8|mux2:lsbmux
+d20[0] => y2.DATAA
+d20[1] => y2.DATAA
+d20[2] => y2.DATAA
+d20[3] => y2.DATAA
+d21[0] => y2.DATAB
+d21[1] => y2.DATAB
+d21[2] => y2.DATAB
+d21[3] => y2.DATAB
+s2 => y2.OUTPUTSELECT
+s2 => y2.OUTPUTSELECT
+s2 => y2.OUTPUTSELECT
+s2 => y2.OUTPUTSELECT
+y2[0] <= y2.DB_MAX_OUTPUT_PORT_TYPE
+y2[1] <= y2.DB_MAX_OUTPUT_PORT_TYPE
+y2[2] <= y2.DB_MAX_OUTPUT_PORT_TYPE
+y2[3] <= y2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mux2_8|mux2:msbmux
+d20[0] => y2.DATAA
+d20[1] => y2.DATAA
+d20[2] => y2.DATAA
+d20[3] => y2.DATAA
+d21[0] => y2.DATAB
+d21[1] => y2.DATAB
+d21[2] => y2.DATAB
+d21[3] => y2.DATAB
+s2 => y2.OUTPUTSELECT
+s2 => y2.OUTPUTSELECT
+s2 => y2.OUTPUTSELECT
+s2 => y2.OUTPUTSELECT
+y2[0] <= y2.DB_MAX_OUTPUT_PORT_TYPE
+y2[1] <= y2.DB_MAX_OUTPUT_PORT_TYPE
+y2[2] <= y2.DB_MAX_OUTPUT_PORT_TYPE
+y2[3] <= y2.DB_MAX_OUTPUT_PORT_TYPE
 
 

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for testQ
-Fri Aug 18 10:12:02 2023
+Fri Aug 18 12:38:47 2023
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -43,16 +43,16 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri Aug 18 10:12:02 2023       ;
+; Analysis & Synthesis Status        ; Successful - Fri Aug 18 12:38:47 2023       ;
 ; Quartus Prime Version              ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                      ; testQ                                       ;
-; Top-level Entity Name              ; sillyfunction                               ;
+; Top-level Entity Name              ; mux2_8                                      ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 1                                           ;
-;     Total combinational functions  ; 1                                           ;
+; Total logic elements               ; 8                                           ;
+;     Total combinational functions  ; 8                                           ;
 ;     Dedicated logic registers      ; 0                                           ;
 ; Total registers                    ; 0                                           ;
-; Total pins                         ; 4                                           ;
+; Total pins                         ; 25                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
@@ -66,7 +66,7 @@ https://fpgasoftware.intel.com/eula.
 ; Option                                                           ; Setting            ; Default Value      ;
 +------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                           ; EP4CE22F17C6       ;                    ;
-; Top-level entity name                                            ; sillyfunction      ; testQ              ;
+; Top-level entity name                                            ; mux2_8             ; testQ              ;
 ; Family name                                                      ; Cyclone IV E       ; Cyclone V          ;
 ; Use smart compilation                                            ; Off                ; Off                ;
 ; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
@@ -162,54 +162,57 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                   ;
-+----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                               ; Library ;
-+----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------+---------+
-; sillyfunction.sv                 ; yes             ; User SystemVerilog HDL File  ; /home/adolfobanchio/Documents/Famaf/3ro/Arqui/QuartusTEST/sillyfunction.sv ;         ;
-+----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------+---------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                            ;
++----------------------------------+-----------------+------------------------------+---------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                        ; Library ;
++----------------------------------+-----------------+------------------------------+---------------------------------------------------------------------+---------+
+; mux2.sv                          ; yes             ; User SystemVerilog HDL File  ; /home/adolfobanchio/Documents/Famaf/3ro/Arqui/QuartusTEST/mux2.sv   ;         ;
+; mux2_8.sv                        ; yes             ; User SystemVerilog HDL File  ; /home/adolfobanchio/Documents/Famaf/3ro/Arqui/QuartusTEST/mux2_8.sv ;         ;
++----------------------------------+-----------------+------------------------------+---------------------------------------------------------------------+---------+
 
 
-+-----------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary         ;
-+---------------------------------------------+-------+
-; Resource                                    ; Usage ;
-+---------------------------------------------+-------+
-; Estimated Total logic elements              ; 1     ;
-;                                             ;       ;
-; Total combinational functions               ; 1     ;
-; Logic element usage by number of LUT inputs ;       ;
-;     -- 4 input functions                    ; 0     ;
-;     -- 3 input functions                    ; 1     ;
-;     -- <=2 input functions                  ; 0     ;
-;                                             ;       ;
-; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 1     ;
-;     -- arithmetic mode                      ; 0     ;
-;                                             ;       ;
-; Total registers                             ; 0     ;
-;     -- Dedicated logic registers            ; 0     ;
-;     -- I/O registers                        ; 0     ;
-;                                             ;       ;
-; I/O pins                                    ; 4     ;
-;                                             ;       ;
-; Embedded Multiplier 9-bit elements          ; 0     ;
-;                                             ;       ;
-; Maximum fan-out node                        ; y~0   ;
-; Maximum fan-out                             ; 1     ;
-; Total fan-out                               ; 8     ;
-; Average fan-out                             ; 0.89  ;
-+---------------------------------------------+-------+
++-------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary           ;
++---------------------------------------------+---------+
+; Resource                                    ; Usage   ;
++---------------------------------------------+---------+
+; Estimated Total logic elements              ; 8       ;
+;                                             ;         ;
+; Total combinational functions               ; 8       ;
+; Logic element usage by number of LUT inputs ;         ;
+;     -- 4 input functions                    ; 0       ;
+;     -- 3 input functions                    ; 8       ;
+;     -- <=2 input functions                  ; 0       ;
+;                                             ;         ;
+; Logic elements by mode                      ;         ;
+;     -- normal mode                          ; 8       ;
+;     -- arithmetic mode                      ; 0       ;
+;                                             ;         ;
+; Total registers                             ; 0       ;
+;     -- Dedicated logic registers            ; 0       ;
+;     -- I/O registers                        ; 0       ;
+;                                             ;         ;
+; I/O pins                                    ; 25      ;
+;                                             ;         ;
+; Embedded Multiplier 9-bit elements          ; 0       ;
+;                                             ;         ;
+; Maximum fan-out node                        ; s~input ;
+; Maximum fan-out                             ; 8       ;
+; Total fan-out                               ; 57      ;
+; Average fan-out                             ; 0.98    ;
++---------------------------------------------+---------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                        ;
-+----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+---------------+--------------+
-; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name   ; Library Name ;
-+----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+---------------+--------------+
-; |sillyfunction             ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 4    ; 0            ; |sillyfunction      ; sillyfunction ; work         ;
-+----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+---------------+--------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                      ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
+; |mux2_8                    ; 8 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 25   ; 0            ; |mux2_8             ; mux2_8      ; work         ;
+;    |mux2:lsbmux|           ; 4 (4)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mux2_8|mux2:lsbmux ; mux2        ; work         ;
+;    |mux2:msbmux|           ; 4 (4)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mux2_8|mux2:msbmux ; mux2        ; work         ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -233,10 +236,10 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 4                           ;
-; cycloneiii_lcell_comb ; 1                           ;
-;     normal            ; 1                           ;
-;         3 data inputs ; 1                           ;
+; boundary_port         ; 25                          ;
+; cycloneiii_lcell_comb ; 8                           ;
+;     normal            ; 8                           ;
+;         3 data inputs ; 8                           ;
 ;                       ;                             ;
 ; Max LUT depth         ; 1.00                        ;
 ; Average LUT depth     ; 1.00                        ;
@@ -258,26 +261,29 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Fri Aug 18 10:11:50 2023
+    Info: Processing started: Fri Aug 18 12:38:35 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off testQ -c testQ
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
-Info (12021): Found 1 design units, including 1 entities, in source file sillyfunction.sv
-    Info (12023): Found entity 1: sillyfunction File: /home/adolfobanchio/Documents/Famaf/3ro/Arqui/QuartusTEST/sillyfunction.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file sillyfunction_tb.sv
-    Info (12023): Found entity 1: sillyfunction_tb File: /home/adolfobanchio/Documents/Famaf/3ro/Arqui/QuartusTEST/sillyfunction_tb.sv Line: 1
-Info (12127): Elaborating entity "sillyfunction" for the top level hierarchy
+Info (12021): Found 1 design units, including 1 entities, in source file mux2.sv
+    Info (12023): Found entity 1: mux2 File: /home/adolfobanchio/Documents/Famaf/3ro/Arqui/QuartusTEST/mux2.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file mux4.sv
+    Info (12023): Found entity 1: mux4 File: /home/adolfobanchio/Documents/Famaf/3ro/Arqui/QuartusTEST/mux4.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file mux2_8.sv
+    Info (12023): Found entity 1: mux2_8 File: /home/adolfobanchio/Documents/Famaf/3ro/Arqui/QuartusTEST/mux2_8.sv Line: 1
+Info (12127): Elaborating entity "mux2_8" for the top level hierarchy
+Info (12128): Elaborating entity "mux2" for hierarchy "mux2:lsbmux" File: /home/adolfobanchio/Documents/Famaf/3ro/Arqui/QuartusTEST/mux2_8.sv Line: 5
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 5 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 3 input pins
-    Info (21059): Implemented 1 output pins
-    Info (21061): Implemented 1 logic cells
+Info (21057): Implemented 33 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 17 input pins
+    Info (21059): Implemented 8 output pins
+    Info (21061): Implemented 8 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 394 megabytes
-    Info: Processing ended: Fri Aug 18 10:12:02 2023
+    Info: Peak virtual memory: 393 megabytes
+    Info: Processing ended: Fri Aug 18 12:38:47 2023
     Info: Elapsed time: 00:00:12
-    Info: Total CPU time (on all processors): 00:00:34
+    Info: Total CPU time (on all processors): 00:00:33
 
 
