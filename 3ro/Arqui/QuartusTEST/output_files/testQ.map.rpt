@@ -1,5 +1,9 @@
 Analysis & Synthesis report for testQ
+<<<<<<< HEAD
 Wed Aug 23 11:54:33 2023
+=======
+Tue Aug 22 21:19:37 2023
+>>>>>>> 118de9ae3d870df2d41bb89eb5a248c550f7c25b
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -43,7 +47,11 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
+<<<<<<< HEAD
 ; Analysis & Synthesis Status        ; Successful - Wed Aug 23 11:54:33 2023       ;
+=======
+; Analysis & Synthesis Status        ; Successful - Tue Aug 22 21:19:37 2023       ;
+>>>>>>> 118de9ae3d870df2d41bb89eb5a248c550f7c25b
 ; Quartus Prime Version              ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                      ; testQ                                       ;
 ; Top-level Entity Name              ; mux2_8                                      ;
@@ -261,7 +269,11 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
+<<<<<<< HEAD
     Info: Processing started: Wed Aug 23 11:54:26 2023
+=======
+    Info: Processing started: Tue Aug 22 21:19:31 2023
+>>>>>>> 118de9ae3d870df2d41bb89eb5a248c550f7c25b
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off testQ -c testQ
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
@@ -285,9 +297,16 @@ Info (21057): Implemented 33 device resources after synthesis - the final resour
     Info (21059): Implemented 8 output pins
     Info (21061): Implemented 8 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
+<<<<<<< HEAD
     Info: Peak virtual memory: 411 megabytes
     Info: Processing ended: Wed Aug 23 11:54:33 2023
     Info: Elapsed time: 00:00:07
     Info: Total CPU time (on all processors): 00:00:13
+=======
+    Info: Peak virtual memory: 393 megabytes
+    Info: Processing ended: Tue Aug 22 21:19:37 2023
+    Info: Elapsed time: 00:00:06
+    Info: Total CPU time (on all processors): 00:00:15
+>>>>>>> 118de9ae3d870df2d41bb89eb5a248c550f7c25b
 
 
