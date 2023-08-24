@@ -1,5 +1,5 @@
 Analysis & Synthesis report for testQ
-Fri Aug 18 12:38:47 2023
+Wed Aug 23 11:54:33 2023
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -43,7 +43,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri Aug 18 12:38:47 2023       ;
+; Analysis & Synthesis Status        ; Successful - Wed Aug 23 11:54:33 2023       ;
 ; Quartus Prime Version              ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                      ; testQ                                       ;
 ; Top-level Entity Name              ; mux2_8                                      ;
@@ -151,8 +151,8 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 8           ;
-; Maximum allowed            ; 4           ;
+; Number detected on machine ; 6           ;
+; Maximum allowed            ; 6           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
 ; Maximum used               ; 1           ;
@@ -162,14 +162,14 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                            ;
-+----------------------------------+-----------------+------------------------------+---------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                        ; Library ;
-+----------------------------------+-----------------+------------------------------+---------------------------------------------------------------------+---------+
-; mux2.sv                          ; yes             ; User SystemVerilog HDL File  ; /home/adolfobanchio/Documents/Famaf/3ro/Arqui/QuartusTEST/mux2.sv   ;         ;
-; mux2_8.sv                        ; yes             ; User SystemVerilog HDL File  ; /home/adolfobanchio/Documents/Famaf/3ro/Arqui/QuartusTEST/mux2_8.sv ;         ;
-+----------------------------------+-----------------+------------------------------+---------------------------------------------------------------------+---------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                     ;
++----------------------------------+-----------------+------------------------------+--------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                 ; Library ;
++----------------------------------+-----------------+------------------------------+--------------------------------------------------------------+---------+
+; mux2.sv                          ; yes             ; User SystemVerilog HDL File  ; /home/adolfo/Documents/Famaf/3ro/Arqui/QuartusTEST/mux2.sv   ;         ;
+; mux2_8.sv                        ; yes             ; User SystemVerilog HDL File  ; /home/adolfo/Documents/Famaf/3ro/Arqui/QuartusTEST/mux2_8.sv ;         ;
++----------------------------------+-----------------+------------------------------+--------------------------------------------------------------+---------+
 
 
 +-------------------------------------------------------+
@@ -251,7 +251,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:01     ;
+; Top            ; 00:00:00     ;
 +----------------+--------------+
 
 
@@ -261,18 +261,22 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Fri Aug 18 12:38:35 2023
+    Info: Processing started: Wed Aug 23 11:54:26 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off testQ -c testQ
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file sillyfunction_tb.sv
+    Info (12023): Found entity 1: sillyfunction_tb File: /home/adolfo/Documents/Famaf/3ro/Arqui/QuartusTEST/sillyfunction_tb.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file sillyfunction.sv
+    Info (12023): Found entity 1: sillyfunction File: /home/adolfo/Documents/Famaf/3ro/Arqui/QuartusTEST/sillyfunction.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file mux2.sv
-    Info (12023): Found entity 1: mux2 File: /home/adolfobanchio/Documents/Famaf/3ro/Arqui/QuartusTEST/mux2.sv Line: 1
+    Info (12023): Found entity 1: mux2 File: /home/adolfo/Documents/Famaf/3ro/Arqui/QuartusTEST/mux2.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file mux4.sv
-    Info (12023): Found entity 1: mux4 File: /home/adolfobanchio/Documents/Famaf/3ro/Arqui/QuartusTEST/mux4.sv Line: 1
+    Info (12023): Found entity 1: mux4 File: /home/adolfo/Documents/Famaf/3ro/Arqui/QuartusTEST/mux4.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file mux2_8.sv
-    Info (12023): Found entity 1: mux2_8 File: /home/adolfobanchio/Documents/Famaf/3ro/Arqui/QuartusTEST/mux2_8.sv Line: 1
+    Info (12023): Found entity 1: mux2_8 File: /home/adolfo/Documents/Famaf/3ro/Arqui/QuartusTEST/mux2_8.sv Line: 1
 Info (12127): Elaborating entity "mux2_8" for the top level hierarchy
-Info (12128): Elaborating entity "mux2" for hierarchy "mux2:lsbmux" File: /home/adolfobanchio/Documents/Famaf/3ro/Arqui/QuartusTEST/mux2_8.sv Line: 5
+Info (12128): Elaborating entity "mux2" for hierarchy "mux2:lsbmux" File: /home/adolfo/Documents/Famaf/3ro/Arqui/QuartusTEST/mux2_8.sv Line: 5
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
@@ -281,9 +285,9 @@ Info (21057): Implemented 33 device resources after synthesis - the final resour
     Info (21059): Implemented 8 output pins
     Info (21061): Implemented 8 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 393 megabytes
-    Info: Processing ended: Fri Aug 18 12:38:47 2023
-    Info: Elapsed time: 00:00:12
-    Info: Total CPU time (on all processors): 00:00:33
+    Info: Peak virtual memory: 411 megabytes
+    Info: Processing ended: Wed Aug 23 11:54:33 2023
+    Info: Elapsed time: 00:00:07
+    Info: Total CPU time (on all processors): 00:00:13
 
 

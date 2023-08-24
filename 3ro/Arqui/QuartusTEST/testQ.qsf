@@ -63,6 +63,8 @@ set_global_assignment -name EDA_TEST_BENCH_NAME sillyfunction_tb -section_id eda
 set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id sillyfunction_tb
 set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME sillyfunction_tb -section_id sillyfunction_tb
 set_global_assignment -name EDA_TEST_BENCH_FILE sillyfunction_tb.sv -section_id sillyfunction_tb
+set_global_assignment -name SYSTEMVERILOG_FILE sillyfunction_tb.sv
+set_global_assignment -name SYSTEMVERILOG_FILE sillyfunction.sv
 set_global_assignment -name SYSTEMVERILOG_FILE mux2.sv
 set_global_assignment -name SYSTEMVERILOG_FILE mux4.sv
 set_global_assignment -name SYSTEMVERILOG_FILE mux2_8.sv

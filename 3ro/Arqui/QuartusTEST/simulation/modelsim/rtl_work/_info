@@ -8,55 +8,55 @@ z2
 !i10e 25
 !i10f 100
 cModel Technology
-Z0 d/home/adolfobanchio/Documents/Famaf/3ro/Arqui/QuartusTEST/simulation/modelsim
+Z0 d/home/adolfo/Documents/Famaf/3ro/Arqui/QuartusTEST/simulation/modelsim
 vsillyfunction
 Z1 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
-Z2 !s110 1692364107
+Z2 !s110 1692802208
 !i10b 1
-!s100 1=aJ^Rh;;Oefab8ZN6K4=2
+!s100 V?N_ec?X]UDh9[co:;6X32
 Z3 !s11b Dg1SIo80bB@j0V0VzS_@n1
-I@RF9FeUmDP_[<U_62nQ3`1
+IfID5z[_`HdELb:[0K[gm13
 Z4 VDg1SIo80bB@j0V0VzS_@n1
 S1
 R0
-w1692363697
-8/home/adolfobanchio/Documents/Famaf/3ro/Arqui/QuartusTEST/sillyfunction.sv
-F/home/adolfobanchio/Documents/Famaf/3ro/Arqui/QuartusTEST/sillyfunction.sv
+w1692794515
+8/home/adolfo/Documents/Famaf/3ro/Arqui/QuartusTEST/sillyfunction.sv
+F/home/adolfo/Documents/Famaf/3ro/Arqui/QuartusTEST/sillyfunction.sv
 !i122 0
-L0 1 5
+L0 1 4
 Z5 OV;L;2020.1;71
 r1
 !s85 0
 31
-Z6 !s108 1692364107.000000
-!s107 /home/adolfobanchio/Documents/Famaf/3ro/Arqui/QuartusTEST/sillyfunction.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+/home/adolfobanchio/Documents/Famaf/3ro/Arqui/QuartusTEST|/home/adolfobanchio/Documents/Famaf/3ro/Arqui/QuartusTEST/sillyfunction.sv|
+Z6 !s108 1692802208.000000
+!s107 /home/adolfo/Documents/Famaf/3ro/Arqui/QuartusTEST/sillyfunction.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+/home/adolfo/Documents/Famaf/3ro/Arqui/QuartusTEST|/home/adolfo/Documents/Famaf/3ro/Arqui/QuartusTEST/sillyfunction.sv|
 !i113 1
 Z7 o-sv -work work
-Z8 !s92 -sv -work work +incdir+/home/adolfobanchio/Documents/Famaf/3ro/Arqui/QuartusTEST
+Z8 !s92 -sv -work work +incdir+/home/adolfo/Documents/Famaf/3ro/Arqui/QuartusTEST
 Z9 tCvgOpt 0
 vsillyfunction_tb
 R1
 R2
 !i10b 1
-!s100 n?5dXf<S;?GHW]0YlW`G_1
+!s100 1<Q@<hW[SkEVFZ<g`5:<?1
 R3
-ImKA[@mJ^HU:hGX55>KE7c2
+IOhAkXfcKgRc0DGl10d4HD2
 R4
 S1
 R0
-w1692364086
-8/home/adolfobanchio/Documents/Famaf/3ro/Arqui/QuartusTEST/sillyfunction_tb.sv
-F/home/adolfobanchio/Documents/Famaf/3ro/Arqui/QuartusTEST/sillyfunction_tb.sv
+w1692794680
+8/home/adolfo/Documents/Famaf/3ro/Arqui/QuartusTEST/sillyfunction_tb.sv
+F/home/adolfo/Documents/Famaf/3ro/Arqui/QuartusTEST/sillyfunction_tb.sv
 !i122 1
-L0 1 12
+L0 1 60
 R5
 r1
 !s85 0
 31
 R6
-!s107 /home/adolfobanchio/Documents/Famaf/3ro/Arqui/QuartusTEST/sillyfunction_tb.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+/home/adolfobanchio/Documents/Famaf/3ro/Arqui/QuartusTEST|/home/adolfobanchio/Documents/Famaf/3ro/Arqui/QuartusTEST/sillyfunction_tb.sv|
+!s107 /home/adolfo/Documents/Famaf/3ro/Arqui/QuartusTEST/sillyfunction_tb.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+/home/adolfo/Documents/Famaf/3ro/Arqui/QuartusTEST|/home/adolfo/Documents/Famaf/3ro/Arqui/QuartusTEST/sillyfunction_tb.sv|
 !i113 1
 R7
 R8
