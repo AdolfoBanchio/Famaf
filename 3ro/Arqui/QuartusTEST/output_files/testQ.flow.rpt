@@ -1,5 +1,5 @@
 Flow report for testQ
-Fri Aug 18 12:38:47 2023
+Tue Aug 22 21:19:37 2023
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -41,7 +41,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Fri Aug 18 12:38:47 2023       ;
+; Flow Status                        ; Successful - Tue Aug 22 21:19:37 2023       ;
 ; Quartus Prime Version              ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                      ; testQ                                       ;
 ; Top-level Entity Name              ; mux2_8                                      ;
@@ -65,7 +65,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 08/18/2023 12:38:35 ;
+; Start date & time ; 08/22/2023 21:19:31 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; testQ               ;
 +-------------------+---------------------+
@@ -76,7 +76,7 @@ https://fpgasoftware.intel.com/eula.
 +--------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
 ; Assignment Name                      ; Value                                  ; Default Value ; Entity Name ; Section Id                        ;
 +--------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
-; COMPILER_SIGNATURE_ID                ; 233214608178275.169237311521110        ; --            ; --          ; --                                ;
+; COMPILER_SIGNATURE_ID                ; 233214608178275.169274997111504        ; --            ; --          ; --                                ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; sillyfunction_tb                  ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST      ; Off                                    ; --            ; --          ; eda_board_design_timing           ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST      ; Off                                    ; --            ; --          ; eda_board_design_boundary_scan    ;
@@ -108,8 +108,8 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:12     ; 1.0                     ; 389 MB              ; 00:00:33                           ;
-; Total                ; 00:00:12     ; --                      ; --                  ; 00:00:33                           ;
+; Analysis & Synthesis ; 00:00:06     ; 1.0                     ; 388 MB              ; 00:00:15                           ;
+; Total                ; 00:00:06     ; --                      ; --                  ; 00:00:15                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

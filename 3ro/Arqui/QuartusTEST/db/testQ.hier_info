@@ -16,14 +16,14 @@ d1[5] => d1[5].IN1
 d1[6] => d1[6].IN1
 d1[7] => d1[7].IN1
 s => s.IN2
-y[0] <= mux2:lsbmux.port3
-y[1] <= mux2:lsbmux.port3
-y[2] <= mux2:lsbmux.port3
-y[3] <= mux2:lsbmux.port3
-y[4] <= mux2:msbmux.port3
-y[5] <= mux2:msbmux.port3
-y[6] <= mux2:msbmux.port3
-y[7] <= mux2:msbmux.port3
+y[0] << mux2:lsbmux.port3
+y[1] << mux2:lsbmux.port3
+y[2] << mux2:lsbmux.port3
+y[3] << mux2:lsbmux.port3
+y[4] << mux2:msbmux.port3
+y[5] << mux2:msbmux.port3
+y[6] << mux2:msbmux.port3
+y[7] << mux2:msbmux.port3
 
 
 |mux2_8|mux2:lsbmux
