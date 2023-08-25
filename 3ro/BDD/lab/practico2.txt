@@ -16,14 +16,23 @@ select `Language` , Percentage from countrylanguage c where IsOfficial <>'T';
 
 
 Actualizar el valor de porcentaje del idioma inglés en el país con código 'AIA' a 100.0
+UPDATE  countrylanguage set Percentage = 100 where CountryCode ='AIA';
+
 
 Listar las ciudades que pertenecen a Córdoba (District) dentro de Argentina.
+select * from city c where District ='Cordoba';
 
 Eliminar todas las ciudades que pertenezcan a Córdoba fuera de Argentina.
+delete from city where District ='Cordoba' and CountryCode !='ARG';
 
 Listar los países cuyo Jefe de Estado se llame John.
+select * from country c where HeadOfState LIKE 'John%';
 
 Listar los países cuya población esté entre 35 M y 45 M ordenados por población de forma descendente.
+select * from country c where Population BETWEEN 35000000 and 45000000 order by Population DESC ;
+
 
 Identificar las redundancias en el esquema final.
+
+
 
