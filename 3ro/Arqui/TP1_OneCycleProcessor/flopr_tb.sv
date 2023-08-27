@@ -7,6 +7,4 @@ module flopr_tb();
 		begin 
 			clk = 1; #5; clk=0; #5;
 		end
-	initial
-		
 endmodule

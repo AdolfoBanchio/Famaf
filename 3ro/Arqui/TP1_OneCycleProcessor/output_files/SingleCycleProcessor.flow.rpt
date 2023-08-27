@@ -1,5 +1,9 @@
 Flow report for SingleCycleProcessor
+<<<<<<< HEAD
 Sat Aug 26 21:19:46 2023
+=======
+Fri Aug 25 20:01:22 2023
+>>>>>>> e06d1d684e22b6016cbcadcd1ef29cf0fa65478d
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -41,7 +45,11 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
+<<<<<<< HEAD
 ; Flow Status                        ; Flow Failed - Sat Aug 26 21:19:46 2023      ;
+=======
+; Flow Status                        ; Successful - Fri Aug 25 20:01:22 2023       ;
+>>>>>>> e06d1d684e22b6016cbcadcd1ef29cf0fa65478d
 ; Quartus Prime Version              ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                      ; SingleCycleProcessor                        ;
 ; Top-level Entity Name              ; flopr                                       ;
@@ -65,7 +73,11 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+----------------------+
 ; Option            ; Setting              ;
 +-------------------+----------------------+
+<<<<<<< HEAD
 ; Start date & time ; 08/26/2023 21:19:41  ;
+=======
+; Start date & time ; 08/25/2023 20:01:15  ;
+>>>>>>> e06d1d684e22b6016cbcadcd1ef29cf0fa65478d
 ; Main task         ; Compilation          ;
 ; Revision Name     ; SingleCycleProcessor ;
 +-------------------+----------------------+
@@ -76,7 +88,11 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------+----------------------------------------+----------------------+-------------+-----------------------------------+
 ; Assignment Name                     ; Value                                  ; Default Value        ; Entity Name ; Section Id                        ;
 +-------------------------------------+----------------------------------------+----------------------+-------------+-----------------------------------+
+<<<<<<< HEAD
 ; COMPILER_SIGNATURE_ID               ; 233214608178275.169309558106143        ; --                   ; --          ; --                                ;
+=======
+; COMPILER_SIGNATURE_ID               ; 198112232858878.169300447506181        ; --                   ; --          ; --                                ;
+>>>>>>> e06d1d684e22b6016cbcadcd1ef29cf0fa65478d
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --                   ; --          ; eda_board_design_timing           ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --                   ; --          ; eda_board_design_boundary_scan    ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --                   ; --          ; eda_board_design_signal_integrity ;
@@ -100,6 +116,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
+<<<<<<< HEAD
 ; Analysis & Synthesis ; 00:00:05     ; 1.0                     ; 347 MB              ; 00:00:14                           ;
 ; Total                ; 00:00:05     ; --                      ; --                  ; 00:00:14                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
@@ -112,6 +129,20 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+------------------+--------------+------------+----------------+
 ; Analysis & Synthesis ; hpadolfo         ; Ubuntu 23.04 ; 23         ; x86_64         ;
 +----------------------+------------------+--------------+------------+----------------+
+=======
+; Analysis & Synthesis ; 00:00:06     ; 1.0                     ; 417 MB              ; 00:00:13                           ;
+; Total                ; 00:00:06     ; --                      ; --                  ; 00:00:13                           ;
++----------------------+--------------+-------------------------+---------------------+------------------------------------+
+
+
++----------------------------------------------------------------------------------------+
+; Flow OS Summary                                                                        ;
++----------------------+------------------+----------------+------------+----------------+
+; Module Name          ; Machine Hostname ; OS Name        ; OS Version ; Processor type ;
++----------------------+------------------+----------------+------------+----------------+
+; Analysis & Synthesis ; adolfo           ; Ubuntu 22.04.3 ; 22         ; x86_64         ;
++----------------------+------------------+----------------+------------+----------------+
+>>>>>>> e06d1d684e22b6016cbcadcd1ef29cf0fa65478d
 
 
 ------------
