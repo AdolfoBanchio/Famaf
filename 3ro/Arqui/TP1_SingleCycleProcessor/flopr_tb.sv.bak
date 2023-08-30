@@ -1,0 +1,45 @@
+module flopr_tb();
+	logic clk, reset;
+	logic [63:0] in, out, expectedout;
+	flopr #(64) dut(clk,reset,in,out);
+	logic [63:0] vectornum, errors;
+	logic [127:0] testvectors [0:9] ={128'h0000_0000',
+												 128'h0001_0000',
+												 128'h0002_0000',
+												 128'h0003_0000',
+												 128'h0005_0000',
+												 128'h0006_0006',
+												 128'h0007_0007',
+												 128'h0008_0008',
+												 128'h0009_0009',
+												 128'h000A_000A',};
+	always 
+		begin 
+			clk = 1; #10; clk=0; #10;
+		end
+	initial 
+		begin 
+			vectornum= 0; errors = 0; reset = 1;#100;
+			reset = 0;
+		end
+	
+		always @(posedge clk)
+			begin 
+				{in,expectedout} = testvectors[vectornum];#10;
+			end
+
+		always @(negedge clk)
+			if (~reset) begin 
+				if(out !== expectedout) begin
+					$display("Error: input = %b", in);
+					$display("output = %b (%b expected) reset = %b",out,expectedout,reset);
+					errors = errors + 1;
+				end
+				vectornum = vectornum +1;
+				if (testvectors[vectornum] === 128'bx) begin 
+					$display("%d tests completed with %d errors",vectornum, errors);
+					// $finish;
+					$stop;
+				end
+			end
+endmodule

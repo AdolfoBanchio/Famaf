@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Wed Aug 30 11:46:58 2023
+Quartus Prime Version : 20.1.0 Build 711 06/05/2020 SJ Lite Edition
+Revision Name : SingleCycleProcessor
+Top-level Entity Name : flopr
+Family : Cyclone IV E
+Total logic elements : 64
+    Total combinational functions : 0
+    Dedicated logic registers : 64
+Total registers : 64
+Total pins : 130
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0
