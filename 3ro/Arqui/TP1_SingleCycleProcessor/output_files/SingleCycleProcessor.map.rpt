@@ -1,5 +1,5 @@
 Analysis & Synthesis report for SingleCycleProcessor
-Wed Aug 30 11:46:58 2023
+Wed Aug 30 13:02:31 2023
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -10,14 +10,7 @@ Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
   2. Analysis & Synthesis Summary
   3. Analysis & Synthesis Settings
   4. Parallel Compilation
-  5. Analysis & Synthesis Source Files Read
-  6. Analysis & Synthesis Resource Usage Summary
-  7. Analysis & Synthesis Resource Utilization by Entity
-  8. General Register Statistics
-  9. Parameter Settings for User Entity Instance: Top-level Entity: |flopr
- 10. Post-Synthesis Netlist Statistics for Top Partition
- 11. Elapsed Time Per Partition
- 12. Analysis & Synthesis Messages
+  5. Analysis & Synthesis Messages
 
 
 
@@ -44,20 +37,20 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Aug 30 11:46:58 2023       ;
+; Analysis & Synthesis Status        ; Failed - Wed Aug 30 13:02:31 2023           ;
 ; Quartus Prime Version              ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                      ; SingleCycleProcessor                        ;
 ; Top-level Entity Name              ; flopr                                       ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 64                                          ;
-;     Total combinational functions  ; 0                                           ;
-;     Dedicated logic registers      ; 64                                          ;
-; Total registers                    ; 64                                          ;
-; Total pins                         ; 130                                         ;
-; Total virtual pins                 ; 0                                           ;
-; Total memory bits                  ; 0                                           ;
-; Embedded Multiplier 9-bit elements ; 0                                           ;
-; Total PLLs                         ; 0                                           ;
+; Total logic elements               ; N/A until Partition Merge                   ;
+;     Total combinational functions  ; N/A until Partition Merge                   ;
+;     Dedicated logic registers      ; N/A until Partition Merge                   ;
+; Total registers                    ; N/A until Partition Merge                   ;
+; Total pins                         ; N/A until Partition Merge                   ;
+; Total virtual pins                 ; N/A until Partition Merge                   ;
+; Total memory bits                  ; N/A until Partition Merge                   ;
+; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                   ;
+; Total PLLs                         ; N/A until Partition Merge                   ;
 +------------------------------------+---------------------------------------------+
 
 
@@ -163,112 +156,13 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                  ;
-+----------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                              ; Library ;
-+----------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------+---------+
-; flopr.sv                         ; yes             ; User SystemVerilog HDL File  ; /home/adolfo/Documentos/Famaf/3ro/Arqui/TP1_SingleCycleProcessor/flopr.sv ;         ;
-+----------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------+---------+
-
-
-+---------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary             ;
-+---------------------------------------------+-----------+
-; Resource                                    ; Usage     ;
-+---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 64        ;
-;                                             ;           ;
-; Total combinational functions               ; 0         ;
-; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 0         ;
-;     -- 3 input functions                    ; 0         ;
-;     -- <=2 input functions                  ; 0         ;
-;                                             ;           ;
-; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 0         ;
-;     -- arithmetic mode                      ; 0         ;
-;                                             ;           ;
-; Total registers                             ; 64        ;
-;     -- Dedicated logic registers            ; 64        ;
-;     -- I/O registers                        ; 0         ;
-;                                             ;           ;
-; I/O pins                                    ; 130       ;
-;                                             ;           ;
-; Embedded Multiplier 9-bit elements          ; 0         ;
-;                                             ;           ;
-; Maximum fan-out node                        ; clk~input ;
-; Maximum fan-out                             ; 64        ;
-; Total fan-out                               ; 386       ;
-; Average fan-out                             ; 1.19      ;
-+---------------------------------------------+-----------+
-
-
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                      ;
-+----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
-; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
-+----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
-; |flopr                     ; 0 (0)               ; 64 (64)                   ; 0           ; 0            ; 0       ; 0         ; 130  ; 0            ; |flopr              ; flopr       ; work         ;
-+----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
-Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
-
-
-+------------------------------------------------------+
-; General Register Statistics                          ;
-+----------------------------------------------+-------+
-; Statistic                                    ; Value ;
-+----------------------------------------------+-------+
-; Total registers                              ; 64    ;
-; Number of registers using Synchronous Clear  ; 0     ;
-; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 64    ;
-; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 0     ;
-; Number of registers using Preset             ; 0     ;
-+----------------------------------------------+-------+
-
-
-+-----------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: Top-level Entity: |flopr ;
-+----------------+-------+----------------------------------------------+
-; Parameter Name ; Value ; Type                                         ;
-+----------------+-------+----------------------------------------------+
-; N              ; 64    ; Signed Integer                               ;
-+----------------+-------+----------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-----------------------------------------------------+
-; Post-Synthesis Netlist Statistics for Top Partition ;
-+-------------------+---------------------------------+
-; Type              ; Count                           ;
-+-------------------+---------------------------------+
-; boundary_port     ; 130                             ;
-; cycloneiii_ff     ; 64                              ;
-;     CLR           ; 64                              ;
-;                   ;                                 ;
-; Max LUT depth     ; 0.00                            ;
-; Average LUT depth ; 0.00                            ;
-+-------------------+---------------------------------+
-
-
-+-------------------------------+
-; Elapsed Time Per Partition    ;
-+----------------+--------------+
-; Partition Name ; Elapsed Time ;
-+----------------+--------------+
-; Top            ; 00:00:00     ;
-+----------------+--------------+
-
-
 +-------------------------------+
 ; Analysis & Synthesis Messages ;
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Wed Aug 30 11:46:52 2023
+    Info: Processing started: Wed Aug 30 13:02:25 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off SingleCycleProcessor -c SingleCycleProcessor
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -278,26 +172,27 @@ Info (12021): Found 1 design units, including 1 entities, in source file signext
     Info (12023): Found entity 1: signext File: /home/adolfo/Documentos/Famaf/3ro/Arqui/TP1_SingleCycleProcessor/signext.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file mux2.sv
     Info (12023): Found entity 1: mux2 File: /home/adolfo/Documentos/Famaf/3ro/Arqui/TP1_SingleCycleProcessor/mux2.sv Line: 3
-Info (12021): Found 1 design units, including 1 entities, in source file flopr_tb.sv
-    Info (12023): Found entity 1: flopr_tb File: /home/adolfo/Documentos/Famaf/3ro/Arqui/TP1_SingleCycleProcessor/flopr_tb.sv Line: 1
+Error (10170): Verilog HDL syntax error at flopr_tb.sv(33) near text: "#";  expecting "endmodule". Check for and fix any syntax errors that appear immediately before or at the specified keyword. The Intel FPGA Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: /home/adolfo/Documentos/Famaf/3ro/Arqui/TP1_SingleCycleProcessor/flopr_tb.sv Line: 33
+Error (10149): Verilog HDL Declaration error at flopr_tb.sv(36): identifier "in" is already declared in the present scope File: /home/adolfo/Documentos/Famaf/3ro/Arqui/TP1_SingleCycleProcessor/flopr_tb.sv Line: 36
+Error (10149): Verilog HDL Declaration error at flopr_tb.sv(37): identifier "expectedout" is already declared in the present scope File: /home/adolfo/Documentos/Famaf/3ro/Arqui/TP1_SingleCycleProcessor/flopr_tb.sv Line: 37
+Error (10149): Verilog HDL Declaration error at flopr_tb.sv(37): identifier "reset" is already declared in the present scope File: /home/adolfo/Documentos/Famaf/3ro/Arqui/TP1_SingleCycleProcessor/flopr_tb.sv Line: 37
+Error (10170): Verilog HDL syntax error at flopr_tb.sv(37) near text: ")";  expecting ";". Check for and fix any syntax errors that appear immediately before or at the specified keyword. The Intel FPGA Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: /home/adolfo/Documentos/Famaf/3ro/Arqui/TP1_SingleCycleProcessor/flopr_tb.sv Line: 37
+Error (10170): Verilog HDL syntax error at flopr_tb.sv(41) near text: "===";  expecting ".", or an identifier. Check for and fix any syntax errors that appear immediately before or at the specified keyword. The Intel FPGA Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: /home/adolfo/Documentos/Famaf/3ro/Arqui/TP1_SingleCycleProcessor/flopr_tb.sv Line: 41
+Error (10149): Verilog HDL Declaration error at flopr_tb.sv(42): identifier "vectornum" is already declared in the present scope File: /home/adolfo/Documentos/Famaf/3ro/Arqui/TP1_SingleCycleProcessor/flopr_tb.sv Line: 42
+Error (10149): Verilog HDL Declaration error at flopr_tb.sv(42): identifier "errors" is already declared in the present scope File: /home/adolfo/Documentos/Famaf/3ro/Arqui/TP1_SingleCycleProcessor/flopr_tb.sv Line: 42
+Error (10170): Verilog HDL syntax error at flopr_tb.sv(42) near text: ")";  expecting ";". Check for and fix any syntax errors that appear immediately before or at the specified keyword. The Intel FPGA Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: /home/adolfo/Documentos/Famaf/3ro/Arqui/TP1_SingleCycleProcessor/flopr_tb.sv Line: 42
+Error (10112): Ignored design unit "flopr_tb" at flopr_tb.sv(1) due to previous errors File: /home/adolfo/Documentos/Famaf/3ro/Arqui/TP1_SingleCycleProcessor/flopr_tb.sv Line: 1
+Info (12021): Found 0 design units, including 0 entities, in source file flopr_tb.sv
 Info (12021): Found 1 design units, including 1 entities, in source file flopr.sv
     Info (12023): Found entity 1: flopr File: /home/adolfo/Documentos/Famaf/3ro/Arqui/TP1_SingleCycleProcessor/flopr.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file alu.sv
     Info (12023): Found entity 1: alu File: /home/adolfo/Documentos/Famaf/3ro/Arqui/TP1_SingleCycleProcessor/alu.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file adder.sv
     Info (12023): Found entity 1: adder File: /home/adolfo/Documentos/Famaf/3ro/Arqui/TP1_SingleCycleProcessor/adder.sv Line: 3
-Info (12127): Elaborating entity "flopr" for the top level hierarchy
-Info (286030): Timing-Driven Synthesis is running
-Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
-    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 194 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 66 input pins
-    Info (21059): Implemented 64 output pins
-    Info (21061): Implemented 64 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 400 megabytes
-    Info: Processing ended: Wed Aug 30 11:46:58 2023
-    Info: Elapsed time: 00:00:06
-    Info: Total CPU time (on all processors): 00:00:16
+Error: Quartus Prime Analysis & Synthesis was unsuccessful. 10 errors, 1 warning
+    Error: Peak virtual memory: 351 megabytes
+    Error: Processing ended: Wed Aug 30 13:02:31 2023
+    Error: Elapsed time: 00:00:06
+    Error: Total CPU time (on all processors): 00:00:18
 
 

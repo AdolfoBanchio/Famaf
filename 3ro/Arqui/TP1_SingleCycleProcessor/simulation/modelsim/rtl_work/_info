@@ -11,7 +11,7 @@ cModel Technology
 Z0 d/home/adolfo/Documentos/Famaf/3ro/Arqui/TP1_SingleCycleProcessor/simulation/modelsim
 vflopr
 Z1 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
-Z2 !s110 1693406824
+Z2 !s110 1693410764
 !i10b 1
 !s100 FUkiY=<X6N5P2M<9OMQXb0
 Z3 !s11b Dg1SIo80bB@j0V0VzS_@n1
@@ -28,7 +28,7 @@ Z5 OV;L;2020.1;71
 r1
 !s85 0
 31
-Z6 !s108 1693406824.000000
+Z6 !s108 1693410764.000000
 !s107 /home/adolfo/Documentos/Famaf/3ro/Arqui/TP1_SingleCycleProcessor/flopr.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/adolfo/Documentos/Famaf/3ro/Arqui/TP1_SingleCycleProcessor|/home/adolfo/Documentos/Famaf/3ro/Arqui/TP1_SingleCycleProcessor/flopr.sv|
 !i113 1
@@ -39,17 +39,17 @@ vflopr_tb
 R1
 R2
 !i10b 1
-!s100 ^YGZQNbhM^WFI8Z>f`ih<3
+!s100 oWcOV@i;fSKQ8]`6ehMFP0
 R3
-IMZWQ_BN3Y8TS:cUoB^1F51
+INm7z4:AJnU:b@CV]VNH:?2
 R4
 S1
 R0
-w1693406811
+w1693410189
 8/home/adolfo/Documentos/Famaf/3ro/Arqui/TP1_SingleCycleProcessor/flopr_tb.sv
 F/home/adolfo/Documentos/Famaf/3ro/Arqui/TP1_SingleCycleProcessor/flopr_tb.sv
 !i122 1
-L0 1 45
+L0 1 46
 R5
 r1
 !s85 0

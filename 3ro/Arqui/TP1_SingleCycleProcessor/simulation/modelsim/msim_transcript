@@ -11,29 +11,29 @@
 # 
 # vlog -sv -work work +incdir+/home/adolfo/Documentos/Famaf/3ro/Arqui/TP1_SingleCycleProcessor {/home/adolfo/Documentos/Famaf/3ro/Arqui/TP1_SingleCycleProcessor/flopr.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 11:47:04 on Aug 30,2023
+# Start time: 12:52:44 on Aug 30,2023
 # vlog -reportprogress 300 -sv -work work "+incdir+/home/adolfo/Documentos/Famaf/3ro/Arqui/TP1_SingleCycleProcessor" /home/adolfo/Documentos/Famaf/3ro/Arqui/TP1_SingleCycleProcessor/flopr.sv 
 # -- Compiling module flopr
 # 
 # Top level modules:
 # 	flopr
-# End time: 11:47:04 on Aug 30,2023, Elapsed time: 0:00:00
+# End time: 12:52:44 on Aug 30,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vlog -sv -work work +incdir+/home/adolfo/Documentos/Famaf/3ro/Arqui/TP1_SingleCycleProcessor {/home/adolfo/Documentos/Famaf/3ro/Arqui/TP1_SingleCycleProcessor/flopr_tb.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 11:47:04 on Aug 30,2023
+# Start time: 12:52:44 on Aug 30,2023
 # vlog -reportprogress 300 -sv -work work "+incdir+/home/adolfo/Documentos/Famaf/3ro/Arqui/TP1_SingleCycleProcessor" /home/adolfo/Documentos/Famaf/3ro/Arqui/TP1_SingleCycleProcessor/flopr_tb.sv 
 # -- Compiling module flopr_tb
 # 
 # Top level modules:
 # 	flopr_tb
-# End time: 11:47:04 on Aug 30,2023, Elapsed time: 0:00:00
+# End time: 12:52:44 on Aug 30,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc"  flopr_tb
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs=""+acc"" flopr_tb 
-# Start time: 11:47:04 on Aug 30,2023
+# Start time: 12:52:44 on Aug 30,2023
 # Loading sv_std.std
 # Loading work.flopr_tb
 # Loading work.flopr
@@ -44,35 +44,27 @@
 # view signals
 # .main_pane.objects.interior.cs.body.tree
 # run -all
-# Error: input = 0000000200000000
-# output = 0000000100000000 (0000000000000000 expected) reset = 0
-# Error: input = 0000000300000000
-# output = 0000000200000000 (0000000000000000 expected) reset = 0
-# Error: input = 0000000500000000
-# output = 0000000300000000 (0000000000000000 expected) reset = 0
-# Error: input = 0000000600000006
-# output = 0000000500000000 (0000000000000000 expected) reset = 0
-# Error: input = 0000000700000007
-# output = 0000000600000006 (0000000000000000 expected) reset = 0
-# Error: input = 0000000800000008
-# output = 0000000700000007 (0000000000000000 expected) reset = 0
-# Error: input = 0000000900000009
-# output = 0000000800000008 (0000000000000000 expected) reset = 0
-# Error: input = 0000000a0000000a
-# output = 0000000900000009 (0000000000000000 expected) reset = 0
-# 000000000000000a tests completed with 0000000000000008 errors
-# ** Note: $stop    : /home/adolfo/Documentos/Famaf/3ro/Arqui/TP1_SingleCycleProcessor/flopr_tb.sv(42)
+# Error: input = 0000000000000002
+# output = 0000000000000001 (0000000000000000 expected) reset = 0
+# Error: input = 0000000000000003
+# output = 0000000000000002 (0000000000000000 expected) reset = 0
+# Error: input = 0000000000000005
+# output = 0000000000000003 (0000000000000000 expected) reset = 0
+# Error: input = 0000000000000006
+# output = 0000000000000005 (0000000000000006 expected) reset = 0
+# Error: input = 0000000000000007
+# output = 0000000000000006 (0000000000000007 expected) reset = 0
+# Error: input = 0000000000000008
+# output = 0000000000000007 (0000000000000008 expected) reset = 0
+# Error: input = 0000000000000009
+# output = 0000000000000008 (0000000000000009 expected) reset = 0
+# Error: input = 000000000000000a
+# output = 0000000000000009 (000000000000000a expected) reset = 0
+#                   10 tests completed with                    8 errors
+# ** Note: $stop    : /home/adolfo/Documentos/Famaf/3ro/Arqui/TP1_SingleCycleProcessor/flopr_tb.sv(43)
 #    Time: 145 ps  Iteration: 1  Instance: /flopr_tb
-# Break in Module flopr_tb at /home/adolfo/Documentos/Famaf/3ro/Arqui/TP1_SingleCycleProcessor/flopr_tb.sv line 42
+# Break in Module flopr_tb at /home/adolfo/Documentos/Famaf/3ro/Arqui/TP1_SingleCycleProcessor/flopr_tb.sv line 43
 # 
 # stdin: <EOF>
-# A time value could not be extracted from the current line
-run -all
-# Error: input = xxxxxxxxxxxxxxxx
-# output = 0000000a0000000a (xxxxxxxxxxxxxxxx expected) reset = 0
-# 000000000000000b tests completed with 0000000000000009 errors
-# ** Note: $stop    : /home/adolfo/Documentos/Famaf/3ro/Arqui/TP1_SingleCycleProcessor/flopr_tb.sv(42)
-#    Time: 155 ps  Iteration: 1  Instance: /flopr_tb
-# Break in Module flopr_tb at /home/adolfo/Documentos/Famaf/3ro/Arqui/TP1_SingleCycleProcessor/flopr_tb.sv line 42
-# End time: 11:48:15 on Aug 30,2023, Elapsed time: 0:01:11
+# End time: 16:43:09 on Aug 30,2023, Elapsed time: 3:50:25
 # Errors: 0, Warnings: 0
