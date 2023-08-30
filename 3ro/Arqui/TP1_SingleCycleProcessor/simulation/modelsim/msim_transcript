@@ -1,3 +1,4 @@
+# ERROR: No extended dataflow license exists
 # do SingleCycleProcessor_run_msim_rtl_verilog.do
 # if {[file exists rtl_work]} {
 # 	vdel -lib rtl_work -all
@@ -9,34 +10,34 @@
 # Copying /home/adolfo/intelFPGA_lite/20.1/modelsim_ase/linuxaloem/../modelsim.ini to modelsim.ini
 # Modifying modelsim.ini
 # 
-# vlog -sv -work work +incdir+/home/adolfo/Documentos/Famaf/3ro/Arqui/TP1_SingleCycleProcessor {/home/adolfo/Documentos/Famaf/3ro/Arqui/TP1_SingleCycleProcessor/flopr.sv}
+# vlog -sv -work work +incdir+/home/adolfo/Documents/Famaf/3ro/Arqui/TP1_SingleCycleProcessor {/home/adolfo/Documents/Famaf/3ro/Arqui/TP1_SingleCycleProcessor/alu.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 12:52:44 on Aug 30,2023
-# vlog -reportprogress 300 -sv -work work "+incdir+/home/adolfo/Documentos/Famaf/3ro/Arqui/TP1_SingleCycleProcessor" /home/adolfo/Documentos/Famaf/3ro/Arqui/TP1_SingleCycleProcessor/flopr.sv 
-# -- Compiling module flopr
+# Start time: 20:17:37 on Aug 30,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+/home/adolfo/Documents/Famaf/3ro/Arqui/TP1_SingleCycleProcessor" /home/adolfo/Documents/Famaf/3ro/Arqui/TP1_SingleCycleProcessor/alu.sv 
+# -- Compiling module alu
 # 
 # Top level modules:
-# 	flopr
-# End time: 12:52:44 on Aug 30,2023, Elapsed time: 0:00:00
+# 	alu
+# End time: 20:17:37 on Aug 30,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
-# vlog -sv -work work +incdir+/home/adolfo/Documentos/Famaf/3ro/Arqui/TP1_SingleCycleProcessor {/home/adolfo/Documentos/Famaf/3ro/Arqui/TP1_SingleCycleProcessor/flopr_tb.sv}
+# vlog -sv -work work +incdir+/home/adolfo/Documents/Famaf/3ro/Arqui/TP1_SingleCycleProcessor {/home/adolfo/Documents/Famaf/3ro/Arqui/TP1_SingleCycleProcessor/alu_tb.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 12:52:44 on Aug 30,2023
-# vlog -reportprogress 300 -sv -work work "+incdir+/home/adolfo/Documentos/Famaf/3ro/Arqui/TP1_SingleCycleProcessor" /home/adolfo/Documentos/Famaf/3ro/Arqui/TP1_SingleCycleProcessor/flopr_tb.sv 
-# -- Compiling module flopr_tb
+# Start time: 20:17:37 on Aug 30,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+/home/adolfo/Documents/Famaf/3ro/Arqui/TP1_SingleCycleProcessor" /home/adolfo/Documents/Famaf/3ro/Arqui/TP1_SingleCycleProcessor/alu_tb.sv 
+# -- Compiling module alu_tb
 # 
 # Top level modules:
-# 	flopr_tb
-# End time: 12:52:44 on Aug 30,2023, Elapsed time: 0:00:00
+# 	alu_tb
+# End time: 20:17:37 on Aug 30,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
-# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc"  flopr_tb
-# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs=""+acc"" flopr_tb 
-# Start time: 12:52:44 on Aug 30,2023
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc"  alu_tb
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs=""+acc"" alu_tb 
+# Start time: 20:17:37 on Aug 30,2023
 # Loading sv_std.std
-# Loading work.flopr_tb
-# Loading work.flopr
+# Loading work.alu_tb
+# Loading work.alu
 # 
 # add wave *
 # view structure
@@ -44,27 +45,11 @@
 # view signals
 # .main_pane.objects.interior.cs.body.tree
 # run -all
-# Error: input = 0000000000000002
-# output = 0000000000000001 (0000000000000000 expected) reset = 0
-# Error: input = 0000000000000003
-# output = 0000000000000002 (0000000000000000 expected) reset = 0
-# Error: input = 0000000000000005
-# output = 0000000000000003 (0000000000000000 expected) reset = 0
-# Error: input = 0000000000000006
-# output = 0000000000000005 (0000000000000006 expected) reset = 0
-# Error: input = 0000000000000007
-# output = 0000000000000006 (0000000000000007 expected) reset = 0
-# Error: input = 0000000000000008
-# output = 0000000000000007 (0000000000000008 expected) reset = 0
-# Error: input = 0000000000000009
-# output = 0000000000000008 (0000000000000009 expected) reset = 0
-# Error: input = 000000000000000a
-# output = 0000000000000009 (000000000000000a expected) reset = 0
-#                   10 tests completed with                    8 errors
-# ** Note: $stop    : /home/adolfo/Documentos/Famaf/3ro/Arqui/TP1_SingleCycleProcessor/flopr_tb.sv(43)
-#    Time: 145 ps  Iteration: 1  Instance: /flopr_tb
-# Break in Module flopr_tb at /home/adolfo/Documentos/Famaf/3ro/Arqui/TP1_SingleCycleProcessor/flopr_tb.sv line 43
+#                   15 tests completed with                    0 errors
+# ** Note: $stop    : /home/adolfo/Documents/Famaf/3ro/Arqui/TP1_SingleCycleProcessor/alu_tb.sv(78)
+#    Time: 145 ns  Iteration: 1  Instance: /alu_tb
+# Break in Module alu_tb at /home/adolfo/Documents/Famaf/3ro/Arqui/TP1_SingleCycleProcessor/alu_tb.sv line 78
 # 
 # stdin: <EOF>
-# End time: 16:43:09 on Aug 30,2023, Elapsed time: 3:50:25
+# End time: 20:17:49 on Aug 30,2023, Elapsed time: 0:00:12
 # Errors: 0, Warnings: 0

@@ -1,4 +1,4 @@
-module flopr_tb();
+module signext_tb();
 	logic clk, reset;
 	logic [63:0] in, out, expectedout;
 	
