@@ -1,0 +1,48 @@
+module alu_tb();
+	logic clk,reset, zero, expected_zero;
+	logic [63:0]a,b,result, expected_result;
+	logic [3:0] aluControl;
+	logic [63:0] vectornum, errors;
+	logic [131:0] testvector [0:6] ='{//alucontrol b a 
+													{4b'0000,64'b10101,64'b01010},
+													{4b'0000,{61{1'b1}},3'b001,{61{1'b1}},3'b011},
+													{4b'0000,{61{1'b1}},3'b001,64'b111},
+													};
+	logic [64:0] testvector_result [0:6] ='{ 
+															{1'b1,64'b00000},
+															{1'b0,{61{1'b1}},3'b001},
+															{1'b0,{61{1'b0}},3'b001}
+														};
+	
+	alu dut(a,b,aluControl,result,zero);
+	always begin 
+			clk = 1; #5ns; clk=0; #5ns;
+	end
+			
+	initial 
+		begin 
+			vectornum= 0; errors = 0; reset = 1;#30;
+			reset = 0;
+		end
+	
+	always @(posedge clk) begin 
+			#1; 
+			{alucontrol,b,a} = testvector[vectornum];
+			{expected_zero,expected_result} = testvector_result[vectornum];
+	end
+
+	always @(negedge clk)
+			if(~reset) begin //durante el reset skip, para que el sistema se acostumbre a las condiciones
+				if(result !== expected_result && zero !== expected_zero) begin
+					$display("Error: input = %b", a);
+					$display("output = %b (%b expected) ",y,expected_y);
+					errors = errors + 1;
+				end
+			vectornum = vectornum +1;
+			if (testvector_a[vectornum] === 'bx) begin 
+				$display("%d tests completed with %d errors",vectornum, errors);
+				// $finish;
+				$stop;
+			end
+		end
+endmodule
