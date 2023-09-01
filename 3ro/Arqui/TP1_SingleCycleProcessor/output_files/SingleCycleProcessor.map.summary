@@ -1,13 +1,13 @@
-Analysis & Synthesis Status : Successful - Wed Aug 30 20:17:31 2023
+Analysis & Synthesis Status : Successful - Fri Sep  1 12:54:14 2023
 Quartus Prime Version : 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 Revision Name : SingleCycleProcessor
-Top-level Entity Name : alu
+Top-level Entity Name : fetch
 Family : Cyclone IV E
-Total logic elements : 350
-    Total combinational functions : 350
-    Dedicated logic registers : 0
-Total registers : 0
-Total pins : 197
+Total logic elements : 64
+    Total combinational functions : 62
+    Dedicated logic registers : 64
+Total registers : 64
+Total pins : 133
 Total virtual pins : 0
 Total memory bits : 0
 Embedded Multiplier 9-bit elements : 0
