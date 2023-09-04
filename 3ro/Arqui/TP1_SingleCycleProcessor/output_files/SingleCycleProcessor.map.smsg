@@ -1,1 +1,5 @@
-Warning (10273): Verilog HDL warning at signext_tb.sv(48): extended using "x" or "z" File: /home/adolfo/Documents/Famaf/3ro/Arqui/TP1_SingleCycleProcessor/signext_tb.sv Line: 48
+Warning (10273): Verilog HDL warning at signext_tb.sv(48): extended using "x" or "z" File: /home/adolfo/Documentos/Famaf/3ro/Arqui/TP1_SingleCycleProcessor/signext_tb.sv Line: 48
+Warning (10273): Verilog HDL warning at alu_tb.sv(75): extended using "x" or "z" File: /home/adolfo/Documentos/Famaf/3ro/Arqui/TP1_SingleCycleProcessor/alu_tb.sv Line: 75
+Warning (10273): Verilog HDL warning at flopr_tb.sv(40): extended using "x" or "z" File: /home/adolfo/Documentos/Famaf/3ro/Arqui/TP1_SingleCycleProcessor/flopr_tb.sv Line: 40
+Warning (10273): Verilog HDL warning at imem_tb.sv(80): extended using "x" or "z" File: /home/adolfo/Documentos/Famaf/3ro/Arqui/TP1_SingleCycleProcessor/imem_tb.sv Line: 80
+Warning (10273): Verilog HDL warning at regfile_tb.sv(67): extended using "x" or "z" File: /home/adolfo/Documentos/Famaf/3ro/Arqui/TP1_SingleCycleProcessor/regfile_tb.sv Line: 67

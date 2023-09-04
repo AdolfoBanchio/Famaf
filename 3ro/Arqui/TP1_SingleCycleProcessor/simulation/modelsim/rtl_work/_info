@@ -8,55 +8,55 @@ z2
 !i10e 25
 !i10f 100
 cModel Technology
-Z0 d/home/adolfo/Documents/Famaf/3ro/Arqui/TP1_SingleCycleProcessor/simulation/modelsim
-valu
+Z0 d/home/adolfo/Documentos/Famaf/3ro/Arqui/TP1_SingleCycleProcessor/simulation/modelsim
+vsignext
 Z1 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
-Z2 !s110 1693437457
+Z2 !s110 1693581784
 !i10b 1
-!s100 HJh=ohcU0^gl`AON:dg_m2
+!s100 7ElJUfR6=R7l6B<Zfm`gY1
 Z3 !s11b Dg1SIo80bB@j0V0VzS_@n1
-I[B37hVO_JgYU;I:^eZ<WD2
+I?V?EiLh[YJeTzmgek5Cma0
 Z4 VDg1SIo80bB@j0V0VzS_@n1
 S1
 R0
-w1693424919
-8/home/adolfo/Documents/Famaf/3ro/Arqui/TP1_SingleCycleProcessor/alu.sv
-F/home/adolfo/Documents/Famaf/3ro/Arqui/TP1_SingleCycleProcessor/alu.sv
+w1693581769
+8/home/adolfo/Documentos/Famaf/3ro/Arqui/TP1_SingleCycleProcessor/signext.sv
+F/home/adolfo/Documentos/Famaf/3ro/Arqui/TP1_SingleCycleProcessor/signext.sv
 !i122 0
-L0 1 19
+L0 1 13
 Z5 OV;L;2020.1;71
 r1
 !s85 0
 31
-Z6 !s108 1693437457.000000
-!s107 /home/adolfo/Documents/Famaf/3ro/Arqui/TP1_SingleCycleProcessor/alu.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+/home/adolfo/Documents/Famaf/3ro/Arqui/TP1_SingleCycleProcessor|/home/adolfo/Documents/Famaf/3ro/Arqui/TP1_SingleCycleProcessor/alu.sv|
+Z6 !s108 1693581784.000000
+!s107 /home/adolfo/Documentos/Famaf/3ro/Arqui/TP1_SingleCycleProcessor/signext.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+/home/adolfo/Documentos/Famaf/3ro/Arqui/TP1_SingleCycleProcessor|/home/adolfo/Documentos/Famaf/3ro/Arqui/TP1_SingleCycleProcessor/signext.sv|
 !i113 1
 Z7 o-sv -work work
-Z8 !s92 -sv -work work +incdir+/home/adolfo/Documents/Famaf/3ro/Arqui/TP1_SingleCycleProcessor
+Z8 !s92 -sv -work work +incdir+/home/adolfo/Documentos/Famaf/3ro/Arqui/TP1_SingleCycleProcessor
 Z9 tCvgOpt 0
-valu_tb
+vsignext_tb
 R1
 R2
 !i10b 1
-!s100 YQ;^WDlLSNY_2]c8VRNnj1
+!s100 h^>Z7IzA9N=_f1=__0gz[3
 R3
-ISbLcTSeb^WJ=80ZhoIjm23
+Ibe[aZj<lk38hcHh;YdMC01
 R4
 S1
 R0
-w1693437444
-8/home/adolfo/Documents/Famaf/3ro/Arqui/TP1_SingleCycleProcessor/alu_tb.sv
-F/home/adolfo/Documents/Famaf/3ro/Arqui/TP1_SingleCycleProcessor/alu_tb.sv
+w1693511292
+8/home/adolfo/Documentos/Famaf/3ro/Arqui/TP1_SingleCycleProcessor/signext_tb.sv
+F/home/adolfo/Documentos/Famaf/3ro/Arqui/TP1_SingleCycleProcessor/signext_tb.sv
 !i122 1
-L0 1 81
+L0 1 54
 R5
 r1
 !s85 0
 31
 R6
-!s107 /home/adolfo/Documents/Famaf/3ro/Arqui/TP1_SingleCycleProcessor/alu_tb.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+/home/adolfo/Documents/Famaf/3ro/Arqui/TP1_SingleCycleProcessor|/home/adolfo/Documents/Famaf/3ro/Arqui/TP1_SingleCycleProcessor/alu_tb.sv|
+!s107 /home/adolfo/Documentos/Famaf/3ro/Arqui/TP1_SingleCycleProcessor/signext_tb.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+/home/adolfo/Documentos/Famaf/3ro/Arqui/TP1_SingleCycleProcessor|/home/adolfo/Documentos/Famaf/3ro/Arqui/TP1_SingleCycleProcessor/signext_tb.sv|
 !i113 1
 R7
 R8

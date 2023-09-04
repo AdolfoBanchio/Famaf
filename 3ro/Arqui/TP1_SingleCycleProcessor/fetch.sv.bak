@@ -1,0 +1,4 @@
+module fetch (input logic PCSrc_F,clk,reset,
+			  input logic [64:0]PCBranch_F,
+			  output logic [64:0]imem_addr_F);
+			 

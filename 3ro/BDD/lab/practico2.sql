@@ -1,3 +1,39 @@
+/*Crear tabla continente llenarla y agregar clave foranea a country*/
+Create table continent( 
+		Name varchar(255) primary key,
+		Area int,
+		LanPercentage numeric(4,2),
+		MostPopulatedCity int UNIQUE,
+		FOREIGN KEY (MostPopulatedCity) REFERENCES city(id)
+		);
+	
+Insert into continent (Name, Area,LanPercentage,MostPopulatedCity)
+values ('Africa',30370000,20.4,608);
+
+Insert into continent (Name, Area,LanPercentage,MostPopulatedCity)
+values ('Antartica',14000000,9.2,71);
+
+Insert into continent (Name, Area,LanPercentage,MostPopulatedCity)
+values ('Asia',44579000,29.5,1024);
+
+Insert into continent (Name, Area,LanPercentage,MostPopulatedCity)
+values ('Europa',10180000,6.8,3357);
+
+Insert into continent (Name, Area,LanPercentage,MostPopulatedCity)
+values ('North America',24709000,16.5,2515);
+
+Insert into continent (Name, Area,LanPercentage,MostPopulatedCity)
+values ('Oceania',8600000,5.9,130);
+
+Insert into continent (Name, Area,LanPercentage,MostPopulatedCity)
+values ('South America',17840000,12.0,206);
+
+
+
+
+
+
+
 /*Devuelva una lista de los nombres y las 
 regiones a las que pertenece cada país ordenada alfabéticamente.*/
 select name, region from country order by name ASC ;

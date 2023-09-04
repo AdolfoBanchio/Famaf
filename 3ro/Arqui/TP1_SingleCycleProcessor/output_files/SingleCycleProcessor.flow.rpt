@@ -1,5 +1,5 @@
 Flow report for SingleCycleProcessor
-Wed Aug 30 20:17:31 2023
+Fri Sep  1 12:54:14 2023
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -41,18 +41,18 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Wed Aug 30 20:17:31 2023       ;
+; Flow Status                        ; Successful - Fri Sep  1 12:54:14 2023       ;
 ; Quartus Prime Version              ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                      ; SingleCycleProcessor                        ;
-; Top-level Entity Name              ; alu                                         ;
+; Top-level Entity Name              ; fetch                                       ;
 ; Family                             ; Cyclone IV E                                ;
 ; Device                             ; EP4CE22F17C6                                ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 350                                         ;
-;     Total combinational functions  ; 350                                         ;
-;     Dedicated logic registers      ; 0                                           ;
-; Total registers                    ; 0                                           ;
-; Total pins                         ; 197                                         ;
+; Total logic elements               ; 64                                          ;
+;     Total combinational functions  ; 62                                          ;
+;     Dedicated logic registers      ; 64                                          ;
+; Total registers                    ; 64                                          ;
+; Total pins                         ; 133                                         ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
@@ -65,7 +65,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+----------------------+
 ; Option            ; Setting              ;
 +-------------------+----------------------+
-; Start date & time ; 08/30/2023 20:17:25  ;
+; Start date & time ; 09/01/2023 12:54:07  ;
 ; Main task         ; Compilation          ;
 ; Revision Name     ; SingleCycleProcessor ;
 +-------------------+----------------------+
@@ -76,30 +76,42 @@ https://fpgasoftware.intel.com/eula.
 +--------------------------------------+----------------------------------------+----------------------+-------------+-----------------------------------+
 ; Assignment Name                      ; Value                                  ; Default Value        ; Entity Name ; Section Id                        ;
 +--------------------------------------+----------------------------------------+----------------------+-------------+-----------------------------------+
-; COMPILER_SIGNATURE_ID                ; 198112232858878.169343744533941        ; --                   ; --          ; --                                ;
+; COMPILER_SIGNATURE_ID                ; 233214608178275.169358364711979        ; --                   ; --          ; --                                ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --                   ; --          ; regfile_tb                        ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --                   ; --          ; imem_tb                           ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --                   ; --          ; signext_tb                        ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --                   ; --          ; alu_tb                            ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST      ; Off                                    ; --                   ; --          ; eda_board_design_timing           ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST      ; Off                                    ; --                   ; --          ; eda_board_design_boundary_scan    ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST      ; Off                                    ; --                   ; --          ; eda_board_design_signal_integrity ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST      ; Off                                    ; --                   ; --          ; eda_board_design_symbol           ;
-; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; alu_tb                                 ; --                   ; --          ; eda_simulation                    ;
+; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; signext_tb                             ; --                   ; --          ; eda_simulation                    ;
 ; EDA_OUTPUT_DATA_FORMAT               ; Systemverilog Hdl                      ; --                   ; --          ; eda_simulation                    ;
 ; EDA_SIMULATION_TOOL                  ; ModelSim-Altera (SystemVerilog)        ; <None>               ; --          ; --                                ;
 ; EDA_TEST_BENCH_ENABLE_STATUS         ; TEST_BENCH_MODE                        ; --                   ; --          ; eda_simulation                    ;
+; EDA_TEST_BENCH_FILE                  ; regfile_tb.sv                          ; --                   ; --          ; regfile_tb                        ;
+; EDA_TEST_BENCH_FILE                  ; imem_tb.sv                             ; --                   ; --          ; imem_tb                           ;
+; EDA_TEST_BENCH_FILE                  ; signext_tb.sv                          ; --                   ; --          ; signext_tb                        ;
 ; EDA_TEST_BENCH_FILE                  ; alu_tb.sv                              ; --                   ; --          ; alu_tb                            ;
+; EDA_TEST_BENCH_MODULE_NAME           ; regfile_tb                             ; --                   ; --          ; regfile_tb                        ;
+; EDA_TEST_BENCH_MODULE_NAME           ; imem_tb                                ; --                   ; --          ; imem_tb                           ;
+; EDA_TEST_BENCH_MODULE_NAME           ; signext_tb                             ; --                   ; --          ; signext_tb                        ;
 ; EDA_TEST_BENCH_MODULE_NAME           ; alu_tb                                 ; --                   ; --          ; alu_tb                            ;
 ; EDA_TEST_BENCH_NAME                  ; alu_tb                                 ; --                   ; --          ; eda_simulation                    ;
+; EDA_TEST_BENCH_NAME                  ; imem_tb                                ; --                   ; --          ; eda_simulation                    ;
+; EDA_TEST_BENCH_NAME                  ; regfile_tb                             ; --                   ; --          ; eda_simulation                    ;
+; EDA_TEST_BENCH_NAME                  ; signext_tb                             ; --                   ; --          ; eda_simulation                    ;
 ; EDA_TIME_SCALE                       ; 1 ps                                   ; --                   ; --          ; eda_simulation                    ;
 ; MAX_CORE_JUNCTION_TEMP               ; 85                                     ; --                   ; --          ; --                                ;
 ; MIN_CORE_JUNCTION_TEMP               ; 0                                      ; --                   ; --          ; --                                ;
 ; NOMINAL_CORE_SUPPLY_VOLTAGE          ; 1.2V                                   ; --                   ; --          ; --                                ;
-; PARTITION_COLOR                      ; -- (Not supported for targeted family) ; --                   ; alu         ; Top                               ;
-; PARTITION_FITTER_PRESERVATION_LEVEL  ; -- (Not supported for targeted family) ; --                   ; alu         ; Top                               ;
-; PARTITION_NETLIST_TYPE               ; -- (Not supported for targeted family) ; --                   ; alu         ; Top                               ;
+; PARTITION_COLOR                      ; -- (Not supported for targeted family) ; --                   ; fetch       ; Top                               ;
+; PARTITION_FITTER_PRESERVATION_LEVEL  ; -- (Not supported for targeted family) ; --                   ; fetch       ; Top                               ;
+; PARTITION_NETLIST_TYPE               ; -- (Not supported for targeted family) ; --                   ; fetch       ; Top                               ;
 ; POWER_BOARD_THERMAL_MODEL            ; None (CONSERVATIVE)                    ; --                   ; --          ; --                                ;
 ; POWER_PRESET_COOLING_SOLUTION        ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW  ; --                   ; --          ; --                                ;
 ; PROJECT_OUTPUT_DIRECTORY             ; output_files                           ; --                   ; --          ; --                                ;
-; TOP_LEVEL_ENTITY                     ; alu                                    ; SingleCycleProcessor ; --          ; --                                ;
+; TOP_LEVEL_ENTITY                     ; fetch                                  ; SingleCycleProcessor ; --          ; --                                ;
 +--------------------------------------+----------------------------------------+----------------------+-------------+-----------------------------------+
 
 
@@ -108,18 +120,18 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:06     ; 1.0                     ; 413 MB              ; 00:00:13                           ;
-; Total                ; 00:00:06     ; --                      ; --                  ; 00:00:13                           ;
+; Analysis & Synthesis ; 00:00:08     ; 1.0                     ; 428 MB              ; 00:00:18                           ;
+; Total                ; 00:00:08     ; --                      ; --                  ; 00:00:18                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
-+----------------------------------------------------------------------------------------+
-; Flow OS Summary                                                                        ;
-+----------------------+------------------+----------------+------------+----------------+
-; Module Name          ; Machine Hostname ; OS Name        ; OS Version ; Processor type ;
-+----------------------+------------------+----------------+------------+----------------+
-; Analysis & Synthesis ; adolfo           ; Ubuntu 22.04.3 ; 22         ; x86_64         ;
-+----------------------+------------------+----------------+------------+----------------+
++--------------------------------------------------------------------------------------+
+; Flow OS Summary                                                                      ;
++----------------------+------------------+--------------+------------+----------------+
+; Module Name          ; Machine Hostname ; OS Name      ; OS Version ; Processor type ;
++----------------------+------------------+--------------+------------+----------------+
+; Analysis & Synthesis ; adolfo-HP        ; Ubuntu 23.04 ; 23         ; x86_64         ;
++----------------------+------------------+--------------+------------+----------------+
 
 
 ------------
