@@ -1,11 +1,11 @@
 // CONTROLLER
 
 module controller(input logic [10:0] instr,
-				input logic reset, ExtlRQ, ExcAck,
+				input logic reset, ExtIRQ, ExcAck,
 				output logic [3:0] AluControl, EStatus,
 				output logic [1:0] AluSrc,
 				output logic reg2loc, regWrite, Branch,
-				memtoReg, memRead, memWrite, ERet, Exc, ExtlAck);
+				memtoReg, memRead, memWrite, ERet, Exc, ExtIAck);
 											
 	logic [1:0] AluOp_s;
 											

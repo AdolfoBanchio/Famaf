@@ -148,7 +148,7 @@ instr[8] => instr[8].IN2
 instr[9] => instr[9].IN2
 instr[10] => instr[10].IN2
 reset => ~NO_FANOUT~
-ExtlIRQ => ~NO_FANOUT~
+ExtIRQ => ~NO_FANOUT~
 ExcAck => ~NO_FANOUT~
 AluControl[0] <= aludec:decAlu.alucontrol
 AluControl[1] <= aludec:decAlu.alucontrol
@@ -168,7 +168,7 @@ memRead <= maindec:decPpal.port5
 memWrite <= maindec:decPpal.port6
 ERet <= <GND>
 Exc <= <GND>
-ExtlAck <= <GND>
+ExtIAck <= <GND>
 
 
 |processor_arm|controller:c|maindec:decPpal
