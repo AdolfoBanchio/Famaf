@@ -1,5 +1,5 @@
 Flow report for arm_processor_w_exceptions
-Wed Sep 13 13:44:00 2023
+Wed Sep 13 15:00:46 2023
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -41,7 +41,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Wed Sep 13 13:43:59 2023       ;
+; Flow Status                        ; Successful - Wed Sep 13 15:00:46 2023       ;
 ; Quartus Prime Version              ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                      ; arm_processor_w_exceptions                  ;
 ; Top-level Entity Name              ; processor_arm                               ;
@@ -65,38 +65,44 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+----------------------------+
 ; Option            ; Setting                    ;
 +-------------------+----------------------------+
-; Start date & time ; 09/13/2023 13:42:50        ;
+; Start date & time ; 09/13/2023 14:59:29        ;
 ; Main task         ; Compilation                ;
 ; Revision Name     ; arm_processor_w_exceptions ;
 +-------------------+----------------------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Flow Non-Default Global Settings                                                                                                                              ;
-+-------------------------------------+----------------------------------------+----------------------------+---------------+-----------------------------------+
-; Assignment Name                     ; Value                                  ; Default Value              ; Entity Name   ; Section Id                        ;
-+-------------------------------------+----------------------------------------+----------------------------+---------------+-----------------------------------+
-; COMPILER_SIGNATURE_ID               ; 198112232858878.169462337006082        ; --                         ; --            ; --                                ;
-; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --                         ; --            ; eda_board_design_timing           ;
-; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --                         ; --            ; eda_board_design_boundary_scan    ;
-; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --                         ; --            ; eda_board_design_signal_integrity ;
-; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --                         ; --            ; eda_board_design_symbol           ;
-; EDA_OUTPUT_DATA_FORMAT              ; Systemverilog Hdl                      ; --                         ; --            ; eda_simulation                    ;
-; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (SystemVerilog)        ; <None>                     ; --            ; --                                ;
-; EDA_TIME_SCALE                      ; 1 ps                                   ; --                         ; --            ; eda_simulation                    ;
-; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --                         ; --            ; --                                ;
-; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --                         ; --            ; --                                ;
-; NOMINAL_CORE_SUPPLY_VOLTAGE         ; 1.2V                                   ; --                         ; --            ; --                                ;
-; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --                         ; processor_arm ; Top                               ;
-; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --                         ; processor_arm ; Top                               ;
-; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --                         ; processor_arm ; Top                               ;
-; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                    ; --                         ; --            ; --                                ;
-; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW  ; --                         ; --            ; --                                ;
-; PROJECT_OUTPUT_DIRECTORY            ; output_files                           ; --                         ; --            ; --                                ;
-; TOP_LEVEL_ENTITY                    ; processor_arm                          ; arm_processor_w_exceptions ; --            ; --                                ;
-; VHDL_INPUT_VERSION                  ; VHDL_2008                              ; VHDL_1993                  ; --            ; --                                ;
-; VHDL_SHOW_LMF_MAPPING_MESSAGES      ; Off                                    ; --                         ; --            ; --                                ;
-+-------------------------------------+----------------------------------------+----------------------------+---------------+-----------------------------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                                                               ;
++--------------------------------------+----------------------------------------+----------------------------+---------------+-----------------------------------+
+; Assignment Name                      ; Value                                  ; Default Value              ; Entity Name   ; Section Id                        ;
++--------------------------------------+----------------------------------------+----------------------------+---------------+-----------------------------------+
+; COMPILER_SIGNATURE_ID                ; 233214608178275.169462796907332        ; --                         ; --            ; --                                ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --                         ; --            ; processor_tb                      ;
+; EDA_GENERATE_FUNCTIONAL_NETLIST      ; Off                                    ; --                         ; --            ; eda_board_design_timing           ;
+; EDA_GENERATE_FUNCTIONAL_NETLIST      ; Off                                    ; --                         ; --            ; eda_board_design_boundary_scan    ;
+; EDA_GENERATE_FUNCTIONAL_NETLIST      ; Off                                    ; --                         ; --            ; eda_board_design_signal_integrity ;
+; EDA_GENERATE_FUNCTIONAL_NETLIST      ; Off                                    ; --                         ; --            ; eda_board_design_symbol           ;
+; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; processor_tb                           ; --                         ; --            ; eda_simulation                    ;
+; EDA_OUTPUT_DATA_FORMAT               ; Systemverilog Hdl                      ; --                         ; --            ; eda_simulation                    ;
+; EDA_SIMULATION_TOOL                  ; ModelSim-Altera (SystemVerilog)        ; <None>                     ; --            ; --                                ;
+; EDA_TEST_BENCH_ENABLE_STATUS         ; TEST_BENCH_MODE                        ; --                         ; --            ; eda_simulation                    ;
+; EDA_TEST_BENCH_FILE                  ; processor_tb.sv                        ; --                         ; --            ; processor_tb                      ;
+; EDA_TEST_BENCH_MODULE_NAME           ; processor_tb                           ; --                         ; --            ; processor_tb                      ;
+; EDA_TEST_BENCH_NAME                  ; processor_tb                           ; --                         ; --            ; eda_simulation                    ;
+; EDA_TIME_SCALE                       ; 1 ps                                   ; --                         ; --            ; eda_simulation                    ;
+; MAX_CORE_JUNCTION_TEMP               ; 85                                     ; --                         ; --            ; --                                ;
+; MIN_CORE_JUNCTION_TEMP               ; 0                                      ; --                         ; --            ; --                                ;
+; NOMINAL_CORE_SUPPLY_VOLTAGE          ; 1.2V                                   ; --                         ; --            ; --                                ;
+; PARTITION_COLOR                      ; -- (Not supported for targeted family) ; --                         ; processor_arm ; Top                               ;
+; PARTITION_FITTER_PRESERVATION_LEVEL  ; -- (Not supported for targeted family) ; --                         ; processor_arm ; Top                               ;
+; PARTITION_NETLIST_TYPE               ; -- (Not supported for targeted family) ; --                         ; processor_arm ; Top                               ;
+; POWER_BOARD_THERMAL_MODEL            ; None (CONSERVATIVE)                    ; --                         ; --            ; --                                ;
+; POWER_PRESET_COOLING_SOLUTION        ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW  ; --                         ; --            ; --                                ;
+; PROJECT_OUTPUT_DIRECTORY             ; output_files                           ; --                         ; --            ; --                                ;
+; TOP_LEVEL_ENTITY                     ; processor_arm                          ; arm_processor_w_exceptions ; --            ; --                                ;
+; VHDL_INPUT_VERSION                   ; VHDL_2008                              ; VHDL_1993                  ; --            ; --                                ;
+; VHDL_SHOW_LMF_MAPPING_MESSAGES       ; Off                                    ; --                         ; --            ; --                                ;
++--------------------------------------+----------------------------------------+----------------------------+---------------+-----------------------------------+
 
 
 +--------------------------------------------------------------------------------------------------------------------------+
@@ -104,18 +110,18 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:01:07     ; 1.0                     ; 596 MB              ; 00:01:13                           ;
-; Total                ; 00:01:07     ; --                      ; --                  ; 00:01:13                           ;
+; Analysis & Synthesis ; 00:01:15     ; 1.0                     ; 578 MB              ; 00:01:26                           ;
+; Total                ; 00:01:15     ; --                      ; --                  ; 00:01:26                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
-+----------------------------------------------------------------------------------------+
-; Flow OS Summary                                                                        ;
-+----------------------+------------------+----------------+------------+----------------+
-; Module Name          ; Machine Hostname ; OS Name        ; OS Version ; Processor type ;
-+----------------------+------------------+----------------+------------+----------------+
-; Analysis & Synthesis ; adolfo           ; Ubuntu 22.04.3 ; 22         ; x86_64         ;
-+----------------------+------------------+----------------+------------+----------------+
++--------------------------------------------------------------------------------------+
+; Flow OS Summary                                                                      ;
++----------------------+------------------+--------------+------------+----------------+
+; Module Name          ; Machine Hostname ; OS Name      ; OS Version ; Processor type ;
++----------------------+------------------+--------------+------------+----------------+
+; Analysis & Synthesis ; adolfo-HP        ; Ubuntu 23.04 ; 23         ; x86_64         ;
++----------------------+------------------+--------------+------------+----------------+
 
 
 ------------
