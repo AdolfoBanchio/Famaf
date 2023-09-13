@@ -1,13 +1,13 @@
-Analysis & Synthesis Status : Successful - Tue Sep 12 10:24:15 2023
+Analysis & Synthesis Status : Successful - Tue Sep 12 21:25:47 2023
 Quartus Prime Version : 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 Revision Name : arm_processor_w_exceptions
-Top-level Entity Name : processor_arm
+Top-level Entity Name : controller
 Family : Cyclone IV E
-Total logic elements : 0
-    Total combinational functions : 0
+Total logic elements : 37
+    Total combinational functions : 37
     Dedicated logic registers : 0
 Total registers : 0
-Total pins : 134
+Total pins : 33
 Total virtual pins : 0
 Total memory bits : 0
 Embedded Multiplier 9-bit elements : 0

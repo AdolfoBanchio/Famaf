@@ -1,3 +1,4 @@
+# ERROR: No extended dataflow license exists
 # do processor_arm_run_msim_rtl_systemverilog.do
 # if {[file exists rtl_work]} {
 # 	vdel -lib rtl_work -all
@@ -9,190 +10,190 @@
 # Copying /home/adolfo/intelFPGA_lite/20.1/modelsim_ase/linuxaloem/../modelsim.ini to modelsim.ini
 # Modifying modelsim.ini
 # 
-# vlog -sv -work work +incdir+/home/adolfo/Documentos/Famaf/3ro/Arqui/TP2_arm_processor {/home/adolfo/Documentos/Famaf/3ro/Arqui/TP2_arm_processor/writeback.sv}
+# vlog -sv -work work +incdir+/home/adolfo/Documents/Famaf/3ro/Arqui/TP2_arm_processor {/home/adolfo/Documents/Famaf/3ro/Arqui/TP2_arm_processor/writeback.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 12:03:26 on Sep 08,2023
-# vlog -reportprogress 300 -sv -work work "+incdir+/home/adolfo/Documentos/Famaf/3ro/Arqui/TP2_arm_processor" /home/adolfo/Documentos/Famaf/3ro/Arqui/TP2_arm_processor/writeback.sv 
+# Start time: 19:26:49 on Sep 12,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+/home/adolfo/Documents/Famaf/3ro/Arqui/TP2_arm_processor" /home/adolfo/Documents/Famaf/3ro/Arqui/TP2_arm_processor/writeback.sv 
 # -- Compiling module writeback
 # 
 # Top level modules:
 # 	writeback
-# End time: 12:03:26 on Sep 08,2023, Elapsed time: 0:00:00
+# End time: 19:26:50 on Sep 12,2023, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+/home/adolfo/Documentos/Famaf/3ro/Arqui/TP2_arm_processor {/home/adolfo/Documentos/Famaf/3ro/Arqui/TP2_arm_processor/flopr.sv}
+# vlog -sv -work work +incdir+/home/adolfo/Documents/Famaf/3ro/Arqui/TP2_arm_processor {/home/adolfo/Documents/Famaf/3ro/Arqui/TP2_arm_processor/flopr.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 12:03:26 on Sep 08,2023
-# vlog -reportprogress 300 -sv -work work "+incdir+/home/adolfo/Documentos/Famaf/3ro/Arqui/TP2_arm_processor" /home/adolfo/Documentos/Famaf/3ro/Arqui/TP2_arm_processor/flopr.sv 
+# Start time: 19:26:50 on Sep 12,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+/home/adolfo/Documents/Famaf/3ro/Arqui/TP2_arm_processor" /home/adolfo/Documents/Famaf/3ro/Arqui/TP2_arm_processor/flopr.sv 
 # -- Compiling module flopr
 # 
 # Top level modules:
 # 	flopr
-# End time: 12:03:26 on Sep 08,2023, Elapsed time: 0:00:00
+# End time: 19:26:50 on Sep 12,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+/home/adolfo/Documentos/Famaf/3ro/Arqui/TP2_arm_processor {/home/adolfo/Documentos/Famaf/3ro/Arqui/TP2_arm_processor/imem.sv}
+# vlog -sv -work work +incdir+/home/adolfo/Documents/Famaf/3ro/Arqui/TP2_arm_processor {/home/adolfo/Documents/Famaf/3ro/Arqui/TP2_arm_processor/imem.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 12:03:26 on Sep 08,2023
-# vlog -reportprogress 300 -sv -work work "+incdir+/home/adolfo/Documentos/Famaf/3ro/Arqui/TP2_arm_processor" /home/adolfo/Documentos/Famaf/3ro/Arqui/TP2_arm_processor/imem.sv 
+# Start time: 19:26:50 on Sep 12,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+/home/adolfo/Documents/Famaf/3ro/Arqui/TP2_arm_processor" /home/adolfo/Documents/Famaf/3ro/Arqui/TP2_arm_processor/imem.sv 
 # -- Compiling module imem
 # 
 # Top level modules:
 # 	imem
-# End time: 12:03:26 on Sep 08,2023, Elapsed time: 0:00:00
+# End time: 19:26:50 on Sep 12,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+/home/adolfo/Documentos/Famaf/3ro/Arqui/TP2_arm_processor {/home/adolfo/Documentos/Famaf/3ro/Arqui/TP2_arm_processor/maindec.sv}
+# vlog -sv -work work +incdir+/home/adolfo/Documents/Famaf/3ro/Arqui/TP2_arm_processor {/home/adolfo/Documents/Famaf/3ro/Arqui/TP2_arm_processor/maindec.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 12:03:26 on Sep 08,2023
-# vlog -reportprogress 300 -sv -work work "+incdir+/home/adolfo/Documentos/Famaf/3ro/Arqui/TP2_arm_processor" /home/adolfo/Documentos/Famaf/3ro/Arqui/TP2_arm_processor/maindec.sv 
+# Start time: 19:26:50 on Sep 12,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+/home/adolfo/Documents/Famaf/3ro/Arqui/TP2_arm_processor" /home/adolfo/Documents/Famaf/3ro/Arqui/TP2_arm_processor/maindec.sv 
 # -- Compiling module maindec
 # 
 # Top level modules:
 # 	maindec
-# End time: 12:03:26 on Sep 08,2023, Elapsed time: 0:00:00
+# End time: 19:26:50 on Sep 12,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+/home/adolfo/Documentos/Famaf/3ro/Arqui/TP2_arm_processor {/home/adolfo/Documentos/Famaf/3ro/Arqui/TP2_arm_processor/memory.sv}
+# vlog -sv -work work +incdir+/home/adolfo/Documents/Famaf/3ro/Arqui/TP2_arm_processor {/home/adolfo/Documents/Famaf/3ro/Arqui/TP2_arm_processor/memory.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 12:03:26 on Sep 08,2023
-# vlog -reportprogress 300 -sv -work work "+incdir+/home/adolfo/Documentos/Famaf/3ro/Arqui/TP2_arm_processor" /home/adolfo/Documentos/Famaf/3ro/Arqui/TP2_arm_processor/memory.sv 
+# Start time: 19:26:50 on Sep 12,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+/home/adolfo/Documents/Famaf/3ro/Arqui/TP2_arm_processor" /home/adolfo/Documents/Famaf/3ro/Arqui/TP2_arm_processor/memory.sv 
 # -- Compiling module memory
 # 
 # Top level modules:
 # 	memory
-# End time: 12:03:26 on Sep 08,2023, Elapsed time: 0:00:00
+# End time: 19:26:50 on Sep 12,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+/home/adolfo/Documentos/Famaf/3ro/Arqui/TP2_arm_processor {/home/adolfo/Documentos/Famaf/3ro/Arqui/TP2_arm_processor/mux2.sv}
+# vlog -sv -work work +incdir+/home/adolfo/Documents/Famaf/3ro/Arqui/TP2_arm_processor {/home/adolfo/Documents/Famaf/3ro/Arqui/TP2_arm_processor/mux2.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 12:03:26 on Sep 08,2023
-# vlog -reportprogress 300 -sv -work work "+incdir+/home/adolfo/Documentos/Famaf/3ro/Arqui/TP2_arm_processor" /home/adolfo/Documentos/Famaf/3ro/Arqui/TP2_arm_processor/mux2.sv 
+# Start time: 19:26:50 on Sep 12,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+/home/adolfo/Documents/Famaf/3ro/Arqui/TP2_arm_processor" /home/adolfo/Documents/Famaf/3ro/Arqui/TP2_arm_processor/mux2.sv 
 # -- Compiling module mux2
 # 
 # Top level modules:
 # 	mux2
-# End time: 12:03:26 on Sep 08,2023, Elapsed time: 0:00:00
+# End time: 19:26:50 on Sep 12,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+/home/adolfo/Documentos/Famaf/3ro/Arqui/TP2_arm_processor {/home/adolfo/Documentos/Famaf/3ro/Arqui/TP2_arm_processor/processor_arm.sv}
+# vlog -sv -work work +incdir+/home/adolfo/Documents/Famaf/3ro/Arqui/TP2_arm_processor {/home/adolfo/Documents/Famaf/3ro/Arqui/TP2_arm_processor/processor_arm.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 12:03:26 on Sep 08,2023
-# vlog -reportprogress 300 -sv -work work "+incdir+/home/adolfo/Documentos/Famaf/3ro/Arqui/TP2_arm_processor" /home/adolfo/Documentos/Famaf/3ro/Arqui/TP2_arm_processor/processor_arm.sv 
+# Start time: 19:26:50 on Sep 12,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+/home/adolfo/Documents/Famaf/3ro/Arqui/TP2_arm_processor" /home/adolfo/Documents/Famaf/3ro/Arqui/TP2_arm_processor/processor_arm.sv 
 # -- Compiling module processor_arm
 # 
 # Top level modules:
 # 	processor_arm
-# End time: 12:03:26 on Sep 08,2023, Elapsed time: 0:00:00
+# End time: 19:26:50 on Sep 12,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+/home/adolfo/Documentos/Famaf/3ro/Arqui/TP2_arm_processor {/home/adolfo/Documentos/Famaf/3ro/Arqui/TP2_arm_processor/regfile.sv}
+# vlog -sv -work work +incdir+/home/adolfo/Documents/Famaf/3ro/Arqui/TP2_arm_processor {/home/adolfo/Documents/Famaf/3ro/Arqui/TP2_arm_processor/regfile.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 12:03:26 on Sep 08,2023
-# vlog -reportprogress 300 -sv -work work "+incdir+/home/adolfo/Documentos/Famaf/3ro/Arqui/TP2_arm_processor" /home/adolfo/Documentos/Famaf/3ro/Arqui/TP2_arm_processor/regfile.sv 
+# Start time: 19:26:50 on Sep 12,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+/home/adolfo/Documents/Famaf/3ro/Arqui/TP2_arm_processor" /home/adolfo/Documents/Famaf/3ro/Arqui/TP2_arm_processor/regfile.sv 
 # -- Compiling module regfile
 # 
 # Top level modules:
 # 	regfile
-# End time: 12:03:26 on Sep 08,2023, Elapsed time: 0:00:00
+# End time: 19:26:50 on Sep 12,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+/home/adolfo/Documentos/Famaf/3ro/Arqui/TP2_arm_processor {/home/adolfo/Documentos/Famaf/3ro/Arqui/TP2_arm_processor/signext.sv}
+# vlog -sv -work work +incdir+/home/adolfo/Documents/Famaf/3ro/Arqui/TP2_arm_processor {/home/adolfo/Documents/Famaf/3ro/Arqui/TP2_arm_processor/signext.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 12:03:26 on Sep 08,2023
-# vlog -reportprogress 300 -sv -work work "+incdir+/home/adolfo/Documentos/Famaf/3ro/Arqui/TP2_arm_processor" /home/adolfo/Documentos/Famaf/3ro/Arqui/TP2_arm_processor/signext.sv 
+# Start time: 19:26:50 on Sep 12,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+/home/adolfo/Documents/Famaf/3ro/Arqui/TP2_arm_processor" /home/adolfo/Documents/Famaf/3ro/Arqui/TP2_arm_processor/signext.sv 
 # -- Compiling module signext
 # 
 # Top level modules:
 # 	signext
-# End time: 12:03:26 on Sep 08,2023, Elapsed time: 0:00:00
+# End time: 19:26:50 on Sep 12,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+/home/adolfo/Documentos/Famaf/3ro/Arqui/TP2_arm_processor {/home/adolfo/Documentos/Famaf/3ro/Arqui/TP2_arm_processor/sl2.sv}
+# vlog -sv -work work +incdir+/home/adolfo/Documents/Famaf/3ro/Arqui/TP2_arm_processor {/home/adolfo/Documents/Famaf/3ro/Arqui/TP2_arm_processor/sl2.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 12:03:26 on Sep 08,2023
-# vlog -reportprogress 300 -sv -work work "+incdir+/home/adolfo/Documentos/Famaf/3ro/Arqui/TP2_arm_processor" /home/adolfo/Documentos/Famaf/3ro/Arqui/TP2_arm_processor/sl2.sv 
+# Start time: 19:26:50 on Sep 12,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+/home/adolfo/Documents/Famaf/3ro/Arqui/TP2_arm_processor" /home/adolfo/Documents/Famaf/3ro/Arqui/TP2_arm_processor/sl2.sv 
 # -- Compiling module sl2
 # 
 # Top level modules:
 # 	sl2
-# End time: 12:03:26 on Sep 08,2023, Elapsed time: 0:00:00
+# End time: 19:26:50 on Sep 12,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+/home/adolfo/Documentos/Famaf/3ro/Arqui/TP2_arm_processor {/home/adolfo/Documentos/Famaf/3ro/Arqui/TP2_arm_processor/fetch.sv}
+# vlog -sv -work work +incdir+/home/adolfo/Documents/Famaf/3ro/Arqui/TP2_arm_processor {/home/adolfo/Documents/Famaf/3ro/Arqui/TP2_arm_processor/fetch.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 12:03:26 on Sep 08,2023
-# vlog -reportprogress 300 -sv -work work "+incdir+/home/adolfo/Documentos/Famaf/3ro/Arqui/TP2_arm_processor" /home/adolfo/Documentos/Famaf/3ro/Arqui/TP2_arm_processor/fetch.sv 
+# Start time: 19:26:50 on Sep 12,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+/home/adolfo/Documents/Famaf/3ro/Arqui/TP2_arm_processor" /home/adolfo/Documents/Famaf/3ro/Arqui/TP2_arm_processor/fetch.sv 
 # -- Compiling module fetch
 # 
 # Top level modules:
 # 	fetch
-# End time: 12:03:26 on Sep 08,2023, Elapsed time: 0:00:00
+# End time: 19:26:50 on Sep 12,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+/home/adolfo/Documentos/Famaf/3ro/Arqui/TP2_arm_processor {/home/adolfo/Documentos/Famaf/3ro/Arqui/TP2_arm_processor/execute.sv}
+# vlog -sv -work work +incdir+/home/adolfo/Documents/Famaf/3ro/Arqui/TP2_arm_processor {/home/adolfo/Documents/Famaf/3ro/Arqui/TP2_arm_processor/execute.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 12:03:26 on Sep 08,2023
-# vlog -reportprogress 300 -sv -work work "+incdir+/home/adolfo/Documentos/Famaf/3ro/Arqui/TP2_arm_processor" /home/adolfo/Documentos/Famaf/3ro/Arqui/TP2_arm_processor/execute.sv 
+# Start time: 19:26:50 on Sep 12,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+/home/adolfo/Documents/Famaf/3ro/Arqui/TP2_arm_processor" /home/adolfo/Documents/Famaf/3ro/Arqui/TP2_arm_processor/execute.sv 
 # -- Compiling module execute
 # 
 # Top level modules:
 # 	execute
-# End time: 12:03:26 on Sep 08,2023, Elapsed time: 0:00:00
+# End time: 19:26:50 on Sep 12,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+/home/adolfo/Documentos/Famaf/3ro/Arqui/TP2_arm_processor {/home/adolfo/Documentos/Famaf/3ro/Arqui/TP2_arm_processor/decode.sv}
+# vlog -sv -work work +incdir+/home/adolfo/Documents/Famaf/3ro/Arqui/TP2_arm_processor {/home/adolfo/Documents/Famaf/3ro/Arqui/TP2_arm_processor/decode.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 12:03:26 on Sep 08,2023
-# vlog -reportprogress 300 -sv -work work "+incdir+/home/adolfo/Documentos/Famaf/3ro/Arqui/TP2_arm_processor" /home/adolfo/Documentos/Famaf/3ro/Arqui/TP2_arm_processor/decode.sv 
+# Start time: 19:26:50 on Sep 12,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+/home/adolfo/Documents/Famaf/3ro/Arqui/TP2_arm_processor" /home/adolfo/Documents/Famaf/3ro/Arqui/TP2_arm_processor/decode.sv 
 # -- Compiling module decode
 # 
 # Top level modules:
 # 	decode
-# End time: 12:03:26 on Sep 08,2023, Elapsed time: 0:00:00
+# End time: 19:26:50 on Sep 12,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+/home/adolfo/Documentos/Famaf/3ro/Arqui/TP2_arm_processor {/home/adolfo/Documentos/Famaf/3ro/Arqui/TP2_arm_processor/datapath.sv}
+# vlog -sv -work work +incdir+/home/adolfo/Documents/Famaf/3ro/Arqui/TP2_arm_processor {/home/adolfo/Documents/Famaf/3ro/Arqui/TP2_arm_processor/datapath.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 12:03:26 on Sep 08,2023
-# vlog -reportprogress 300 -sv -work work "+incdir+/home/adolfo/Documentos/Famaf/3ro/Arqui/TP2_arm_processor" /home/adolfo/Documentos/Famaf/3ro/Arqui/TP2_arm_processor/datapath.sv 
+# Start time: 19:26:50 on Sep 12,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+/home/adolfo/Documents/Famaf/3ro/Arqui/TP2_arm_processor" /home/adolfo/Documents/Famaf/3ro/Arqui/TP2_arm_processor/datapath.sv 
 # -- Compiling module datapath
 # 
 # Top level modules:
 # 	datapath
-# End time: 12:03:26 on Sep 08,2023, Elapsed time: 0:00:00
+# End time: 19:26:50 on Sep 12,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+/home/adolfo/Documentos/Famaf/3ro/Arqui/TP2_arm_processor {/home/adolfo/Documentos/Famaf/3ro/Arqui/TP2_arm_processor/aludec.sv}
+# vlog -sv -work work +incdir+/home/adolfo/Documents/Famaf/3ro/Arqui/TP2_arm_processor {/home/adolfo/Documents/Famaf/3ro/Arqui/TP2_arm_processor/aludec.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 12:03:27 on Sep 08,2023
-# vlog -reportprogress 300 -sv -work work "+incdir+/home/adolfo/Documentos/Famaf/3ro/Arqui/TP2_arm_processor" /home/adolfo/Documentos/Famaf/3ro/Arqui/TP2_arm_processor/aludec.sv 
+# Start time: 19:26:50 on Sep 12,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+/home/adolfo/Documents/Famaf/3ro/Arqui/TP2_arm_processor" /home/adolfo/Documents/Famaf/3ro/Arqui/TP2_arm_processor/aludec.sv 
 # -- Compiling module aludec
 # 
 # Top level modules:
 # 	aludec
-# End time: 12:03:27 on Sep 08,2023, Elapsed time: 0:00:00
+# End time: 19:26:50 on Sep 12,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+/home/adolfo/Documentos/Famaf/3ro/Arqui/TP2_arm_processor {/home/adolfo/Documentos/Famaf/3ro/Arqui/TP2_arm_processor/controller.sv}
+# vlog -sv -work work +incdir+/home/adolfo/Documents/Famaf/3ro/Arqui/TP2_arm_processor {/home/adolfo/Documents/Famaf/3ro/Arqui/TP2_arm_processor/controller.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 12:03:27 on Sep 08,2023
-# vlog -reportprogress 300 -sv -work work "+incdir+/home/adolfo/Documentos/Famaf/3ro/Arqui/TP2_arm_processor" /home/adolfo/Documentos/Famaf/3ro/Arqui/TP2_arm_processor/controller.sv 
+# Start time: 19:26:50 on Sep 12,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+/home/adolfo/Documents/Famaf/3ro/Arqui/TP2_arm_processor" /home/adolfo/Documents/Famaf/3ro/Arqui/TP2_arm_processor/controller.sv 
 # -- Compiling module controller
 # 
 # Top level modules:
 # 	controller
-# End time: 12:03:27 on Sep 08,2023, Elapsed time: 0:00:00
+# End time: 19:26:50 on Sep 12,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+/home/adolfo/Documentos/Famaf/3ro/Arqui/TP2_arm_processor {/home/adolfo/Documentos/Famaf/3ro/Arqui/TP2_arm_processor/alu.sv}
+# vlog -sv -work work +incdir+/home/adolfo/Documents/Famaf/3ro/Arqui/TP2_arm_processor {/home/adolfo/Documents/Famaf/3ro/Arqui/TP2_arm_processor/alu.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 12:03:27 on Sep 08,2023
-# vlog -reportprogress 300 -sv -work work "+incdir+/home/adolfo/Documentos/Famaf/3ro/Arqui/TP2_arm_processor" /home/adolfo/Documentos/Famaf/3ro/Arqui/TP2_arm_processor/alu.sv 
+# Start time: 19:26:50 on Sep 12,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+/home/adolfo/Documents/Famaf/3ro/Arqui/TP2_arm_processor" /home/adolfo/Documents/Famaf/3ro/Arqui/TP2_arm_processor/alu.sv 
 # -- Compiling module alu
 # 
 # Top level modules:
 # 	alu
-# End time: 12:03:27 on Sep 08,2023, Elapsed time: 0:00:00
+# End time: 19:26:50 on Sep 12,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+/home/adolfo/Documentos/Famaf/3ro/Arqui/TP2_arm_processor {/home/adolfo/Documentos/Famaf/3ro/Arqui/TP2_arm_processor/adder.sv}
+# vlog -sv -work work +incdir+/home/adolfo/Documents/Famaf/3ro/Arqui/TP2_arm_processor {/home/adolfo/Documents/Famaf/3ro/Arqui/TP2_arm_processor/adder.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 12:03:27 on Sep 08,2023
-# vlog -reportprogress 300 -sv -work work "+incdir+/home/adolfo/Documentos/Famaf/3ro/Arqui/TP2_arm_processor" /home/adolfo/Documentos/Famaf/3ro/Arqui/TP2_arm_processor/adder.sv 
+# Start time: 19:26:50 on Sep 12,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+/home/adolfo/Documents/Famaf/3ro/Arqui/TP2_arm_processor" /home/adolfo/Documents/Famaf/3ro/Arqui/TP2_arm_processor/adder.sv 
 # -- Compiling module adder
 # 
 # Top level modules:
 # 	adder
-# End time: 12:03:27 on Sep 08,2023, Elapsed time: 0:00:00
+# End time: 19:26:50 on Sep 12,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vcom -2008 -work work {/home/adolfo/Documentos/Famaf/3ro/Arqui/TP2_arm_processor/dmem.vhd}
+# vcom -2008 -work work {/home/adolfo/Documents/Famaf/3ro/Arqui/TP2_arm_processor/dmem.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 12:03:27 on Sep 08,2023
-# vcom -reportprogress 300 -2008 -work work /home/adolfo/Documentos/Famaf/3ro/Arqui/TP2_arm_processor/dmem.vhd 
+# Start time: 19:26:50 on Sep 12,2023
+# vcom -reportprogress 300 -2008 -work work /home/adolfo/Documents/Famaf/3ro/Arqui/TP2_arm_processor/dmem.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
@@ -201,24 +202,24 @@
 # -- Loading package NUMERIC_STD
 # -- Compiling entity dmem
 # -- Compiling architecture behave of dmem
-# ** Warning: /home/adolfo/Documentos/Famaf/3ro/Arqui/TP2_arm_processor/dmem.vhd(30): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
-# End time: 12:03:27 on Sep 08,2023, Elapsed time: 0:00:00
+# ** Warning: /home/adolfo/Documents/Famaf/3ro/Arqui/TP2_arm_processor/dmem.vhd(30): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
+# End time: 19:26:50 on Sep 12,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 1
 # 
-# vlog -sv -work work +incdir+/home/adolfo/Documentos/Famaf/3ro/Arqui/TP2_arm_processor {/home/adolfo/Documentos/Famaf/3ro/Arqui/TP2_arm_processor/processor_tb.sv}
+# vlog -sv -work work +incdir+/home/adolfo/Documents/Famaf/3ro/Arqui/TP2_arm_processor {/home/adolfo/Documents/Famaf/3ro/Arqui/TP2_arm_processor/processor_tb.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 12:03:27 on Sep 08,2023
-# vlog -reportprogress 300 -sv -work work "+incdir+/home/adolfo/Documentos/Famaf/3ro/Arqui/TP2_arm_processor" /home/adolfo/Documentos/Famaf/3ro/Arqui/TP2_arm_processor/processor_tb.sv 
+# Start time: 19:26:50 on Sep 12,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+/home/adolfo/Documents/Famaf/3ro/Arqui/TP2_arm_processor" /home/adolfo/Documents/Famaf/3ro/Arqui/TP2_arm_processor/processor_tb.sv 
 # -- Compiling module processor_tb
 # 
 # Top level modules:
 # 	processor_tb
-# End time: 12:03:27 on Sep 08,2023, Elapsed time: 0:00:00
+# End time: 19:26:50 on Sep 12,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc"  processor_tb
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs=""+acc"" processor_tb 
-# Start time: 12:03:27 on Sep 08,2023
+# Start time: 19:26:50 on Sep 12,2023
 # Loading sv_std.std
 # Loading work.processor_tb
 # Loading work.processor_arm
@@ -255,10 +256,10 @@
 # run -all
 # ** Note: fin del testdump
 #    Time: 10020 ps  Iteration: 1  Instance: /processor_tb/dut/dataMem
-# ** Note: $stop    : /home/adolfo/Documentos/Famaf/3ro/Arqui/TP2_arm_processor/processor_tb.sv(26)
+# ** Note: $stop    : /home/adolfo/Documents/Famaf/3ro/Arqui/TP2_arm_processor/processor_tb.sv(26)
 #    Time: 10040 ps  Iteration: 0  Instance: /processor_tb
-# Break in Module processor_tb at /home/adolfo/Documentos/Famaf/3ro/Arqui/TP2_arm_processor/processor_tb.sv line 26
+# Break in Module processor_tb at /home/adolfo/Documents/Famaf/3ro/Arqui/TP2_arm_processor/processor_tb.sv line 26
 # 
 # stdin: <EOF>
-# End time: 12:10:12 on Sep 08,2023, Elapsed time: 0:06:45
+# End time: 19:36:27 on Sep 12,2023, Elapsed time: 0:09:37
 # Errors: 0, Warnings: 0

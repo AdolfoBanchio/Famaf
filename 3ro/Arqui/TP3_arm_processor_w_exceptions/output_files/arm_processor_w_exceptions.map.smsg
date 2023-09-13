@@ -1,0 +1,4 @@
+Warning (10273): Verilog HDL warning at maindec.sv(62): extended using "x" or "z" File: /home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/maindec.sv Line: 62
+Warning (10273): Verilog HDL warning at maindec.sv(124): extended using "x" or "z" File: /home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/maindec.sv Line: 124
+Warning (10273): Verilog HDL warning at maindec.sv(125): extended using "x" or "z" File: /home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/maindec.sv Line: 125
+Warning (10273): Verilog HDL warning at maindec.sv(131): extended using "x" or "z" File: /home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/maindec.sv Line: 131

@@ -1,5 +1,5 @@
 Flow report for processor_arm
-Tue Sep  5 17:49:51 2023
+Tue Sep 12 19:26:38 2023
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -41,7 +41,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Tue Sep  5 17:49:51 2023       ;
+; Flow Status                        ; Successful - Tue Sep 12 19:26:38 2023       ;
 ; Quartus Prime Version              ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                      ; processor_arm                               ;
 ; Top-level Entity Name              ; processor_arm                               ;
@@ -65,7 +65,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 09/05/2023 17:49:40 ;
+; Start date & time ; 09/12/2023 19:26:28 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; processor_arm       ;
 +-------------------+---------------------+
@@ -76,7 +76,7 @@ https://fpgasoftware.intel.com/eula.
 +--------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
 ; Assignment Name                      ; Value                                  ; Default Value ; Entity Name ; Section Id                        ;
 +--------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
-; COMPILER_SIGNATURE_ID                ; 198112232858878.169394698024210        ; --            ; --          ; --                                ;
+; COMPILER_SIGNATURE_ID                ; 198112232858878.169455758829049        ; --            ; --          ; --                                ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; processor_tb                      ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST      ; Off                                    ; --            ; --          ; eda_board_design_timing           ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST      ; Off                                    ; --            ; --          ; eda_board_design_boundary_scan    ;
@@ -109,8 +109,8 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:10     ; 1.0                     ; 466 MB              ; 00:00:16                           ;
-; Total                ; 00:00:10     ; --                      ; --                  ; 00:00:16                           ;
+; Analysis & Synthesis ; 00:00:11     ; 1.0                     ; 466 MB              ; 00:00:16                           ;
+; Total                ; 00:00:11     ; --                      ; --                  ; 00:00:16                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

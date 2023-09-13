@@ -9,32 +9,32 @@ z2
 !i10e 25
 !i10f 100
 cModel Technology
-Z0 d/home/adolfo/Documentos/Famaf/3ro/Arqui/TP2_arm_processor/simulation/modelsim
+Z0 d/home/adolfo/Documents/Famaf/3ro/Arqui/TP2_arm_processor/simulation/modelsim
 vadder
 Z1 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
-Z2 !s110 1694185407
+Z2 !s110 1694557610
 !i10b 1
 !s100 a3zDN1NYD4EHE0kQDg6Iz2
 Z3 !s11b Dg1SIo80bB@j0V0VzS_@n1
-I_R_`FjzXBVR94KHMZ<UJK1
+I?hVkH=dCellzaoaa[hlm>1
 Z4 VDg1SIo80bB@j0V0VzS_@n1
 S1
 R0
-Z5 w1693949581
-8/home/adolfo/Documentos/Famaf/3ro/Arqui/TP2_arm_processor/adder.sv
-F/home/adolfo/Documentos/Famaf/3ro/Arqui/TP2_arm_processor/adder.sv
+Z5 w1693424919
+8/home/adolfo/Documents/Famaf/3ro/Arqui/TP2_arm_processor/adder.sv
+F/home/adolfo/Documents/Famaf/3ro/Arqui/TP2_arm_processor/adder.sv
 !i122 17
 L0 3 7
 Z6 OV;L;2020.1;71
 r1
 !s85 0
 31
-Z7 !s108 1694185407.000000
-!s107 /home/adolfo/Documentos/Famaf/3ro/Arqui/TP2_arm_processor/adder.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+/home/adolfo/Documentos/Famaf/3ro/Arqui/TP2_arm_processor|/home/adolfo/Documentos/Famaf/3ro/Arqui/TP2_arm_processor/adder.sv|
+Z7 !s108 1694557610.000000
+!s107 /home/adolfo/Documents/Famaf/3ro/Arqui/TP2_arm_processor/adder.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+/home/adolfo/Documents/Famaf/3ro/Arqui/TP2_arm_processor|/home/adolfo/Documents/Famaf/3ro/Arqui/TP2_arm_processor/adder.sv|
 !i113 1
 Z8 o-sv -work work
-Z9 !s92 -sv -work work +incdir+/home/adolfo/Documentos/Famaf/3ro/Arqui/TP2_arm_processor
+Z9 !s92 -sv -work work +incdir+/home/adolfo/Documents/Famaf/3ro/Arqui/TP2_arm_processor
 Z10 tCvgOpt 0
 valu
 R1
@@ -42,13 +42,13 @@ R2
 !i10b 1
 !s100 HJh=ohcU0^gl`AON:dg_m2
 R3
-IVP6_lG6JEmkm`VBz7oAGo3
+I2[OQJPK<[RP=LU9]eAU_k0
 R4
 S1
 R0
 R5
-8/home/adolfo/Documentos/Famaf/3ro/Arqui/TP2_arm_processor/alu.sv
-F/home/adolfo/Documentos/Famaf/3ro/Arqui/TP2_arm_processor/alu.sv
+8/home/adolfo/Documents/Famaf/3ro/Arqui/TP2_arm_processor/alu.sv
+F/home/adolfo/Documents/Famaf/3ro/Arqui/TP2_arm_processor/alu.sv
 !i122 16
 Z11 L0 1 19
 R6
@@ -56,8 +56,8 @@ r1
 !s85 0
 31
 R7
-!s107 /home/adolfo/Documentos/Famaf/3ro/Arqui/TP2_arm_processor/alu.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+/home/adolfo/Documentos/Famaf/3ro/Arqui/TP2_arm_processor|/home/adolfo/Documentos/Famaf/3ro/Arqui/TP2_arm_processor/alu.sv|
+!s107 /home/adolfo/Documents/Famaf/3ro/Arqui/TP2_arm_processor/alu.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+/home/adolfo/Documents/Famaf/3ro/Arqui/TP2_arm_processor|/home/adolfo/Documents/Famaf/3ro/Arqui/TP2_arm_processor/alu.sv|
 !i113 1
 R8
 R9
@@ -68,13 +68,13 @@ R2
 !i10b 1
 !s100 :;H73aVU>X;gEYYfBOVnz2
 R3
-I:E=cSO_IP5XfmOWZekeZ21
+IA;oK0AiCNcze2QTd8^HFm0
 R4
 S1
 R0
-R5
-8/home/adolfo/Documentos/Famaf/3ro/Arqui/TP2_arm_processor/aludec.sv
-F/home/adolfo/Documentos/Famaf/3ro/Arqui/TP2_arm_processor/aludec.sv
+Z12 w1693487124
+8/home/adolfo/Documents/Famaf/3ro/Arqui/TP2_arm_processor/aludec.sv
+F/home/adolfo/Documents/Famaf/3ro/Arqui/TP2_arm_processor/aludec.sv
 !i122 14
 L0 3 13
 R6
@@ -82,8 +82,8 @@ r1
 !s85 0
 31
 R7
-!s107 /home/adolfo/Documentos/Famaf/3ro/Arqui/TP2_arm_processor/aludec.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+/home/adolfo/Documentos/Famaf/3ro/Arqui/TP2_arm_processor|/home/adolfo/Documentos/Famaf/3ro/Arqui/TP2_arm_processor/aludec.sv|
+!s107 /home/adolfo/Documents/Famaf/3ro/Arqui/TP2_arm_processor/aludec.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+/home/adolfo/Documents/Famaf/3ro/Arqui/TP2_arm_processor|/home/adolfo/Documents/Famaf/3ro/Arqui/TP2_arm_processor/aludec.sv|
 !i113 1
 R8
 R9
@@ -94,13 +94,13 @@ R2
 !i10b 1
 !s100 >RNkGSj:1UU?ZD6n0KISb2
 R3
-I?941_KmnW[@EQg[N7MNE21
+I2m7LJk@6d9Wj8>N5W9CzQ3
 R4
 S1
 R0
-R5
-8/home/adolfo/Documentos/Famaf/3ro/Arqui/TP2_arm_processor/controller.sv
-F/home/adolfo/Documentos/Famaf/3ro/Arqui/TP2_arm_processor/controller.sv
+w1693867469
+8/home/adolfo/Documents/Famaf/3ro/Arqui/TP2_arm_processor/controller.sv
+F/home/adolfo/Documents/Famaf/3ro/Arqui/TP2_arm_processor/controller.sv
 !i122 15
 L0 3 23
 R6
@@ -108,315 +108,315 @@ r1
 !s85 0
 31
 R7
-!s107 /home/adolfo/Documentos/Famaf/3ro/Arqui/TP2_arm_processor/controller.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+/home/adolfo/Documentos/Famaf/3ro/Arqui/TP2_arm_processor|/home/adolfo/Documentos/Famaf/3ro/Arqui/TP2_arm_processor/controller.sv|
+!s107 /home/adolfo/Documents/Famaf/3ro/Arqui/TP2_arm_processor/controller.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+/home/adolfo/Documents/Famaf/3ro/Arqui/TP2_arm_processor|/home/adolfo/Documents/Famaf/3ro/Arqui/TP2_arm_processor/controller.sv|
 !i113 1
 R8
 R9
 R10
 vdatapath
 R1
-Z12 !s110 1694185406
+R2
 !i10b 1
 !s100 NGWT``[B?aQfDWRFmE@b20
 R3
-I9kW]MJkOV@P=FUD?2TDKg1
+IN?8UL6KAH163`1>m=<1OK1
 R4
 S1
 R0
-R5
-8/home/adolfo/Documentos/Famaf/3ro/Arqui/TP2_arm_processor/datapath.sv
-F/home/adolfo/Documentos/Famaf/3ro/Arqui/TP2_arm_processor/datapath.sv
+w1693866873
+8/home/adolfo/Documents/Famaf/3ro/Arqui/TP2_arm_processor/datapath.sv
+F/home/adolfo/Documents/Famaf/3ro/Arqui/TP2_arm_processor/datapath.sv
 !i122 13
 L0 3 71
 R6
 r1
 !s85 0
 31
-Z13 !s108 1694185406.000000
-!s107 /home/adolfo/Documentos/Famaf/3ro/Arqui/TP2_arm_processor/datapath.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+/home/adolfo/Documentos/Famaf/3ro/Arqui/TP2_arm_processor|/home/adolfo/Documentos/Famaf/3ro/Arqui/TP2_arm_processor/datapath.sv|
+R7
+!s107 /home/adolfo/Documents/Famaf/3ro/Arqui/TP2_arm_processor/datapath.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+/home/adolfo/Documents/Famaf/3ro/Arqui/TP2_arm_processor|/home/adolfo/Documents/Famaf/3ro/Arqui/TP2_arm_processor/datapath.sv|
 !i113 1
 R8
 R9
 R10
 vdecode
 R1
-R12
+R2
 !i10b 1
 !s100 ez[Sj6NLDB;VJc@X`e1Ui0
 R3
-I]BBPePH3HCASBznXb76k30
+I@ZAh0iCAH^dmM5hGkRO@Q0
 R4
 S1
 R0
-R5
-8/home/adolfo/Documentos/Famaf/3ro/Arqui/TP2_arm_processor/decode.sv
-F/home/adolfo/Documentos/Famaf/3ro/Arqui/TP2_arm_processor/decode.sv
+R12
+8/home/adolfo/Documents/Famaf/3ro/Arqui/TP2_arm_processor/decode.sv
+F/home/adolfo/Documents/Famaf/3ro/Arqui/TP2_arm_processor/decode.sv
 !i122 12
 L0 3 17
 R6
 r1
 !s85 0
 31
-R13
-!s107 /home/adolfo/Documentos/Famaf/3ro/Arqui/TP2_arm_processor/decode.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+/home/adolfo/Documentos/Famaf/3ro/Arqui/TP2_arm_processor|/home/adolfo/Documentos/Famaf/3ro/Arqui/TP2_arm_processor/decode.sv|
+R7
+!s107 /home/adolfo/Documents/Famaf/3ro/Arqui/TP2_arm_processor/decode.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+/home/adolfo/Documents/Famaf/3ro/Arqui/TP2_arm_processor|/home/adolfo/Documents/Famaf/3ro/Arqui/TP2_arm_processor/decode.sv|
 !i113 1
 R8
 R9
 R10
 Edmem
-R5
-Z14 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
-Z15 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
-Z16 DPx4 ieee 16 std_logic_signed 0 22 C<aanc0R`<LWPSe[JYRP^3
-Z17 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
-Z18 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+R12
+Z13 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
+Z14 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
+Z15 DPx4 ieee 16 std_logic_signed 0 22 C<aanc0R`<LWPSe[JYRP^3
+Z16 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z17 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
 !i122 18
 R0
-Z19 8/home/adolfo/Documentos/Famaf/3ro/Arqui/TP2_arm_processor/dmem.vhd
-Z20 F/home/adolfo/Documentos/Famaf/3ro/Arqui/TP2_arm_processor/dmem.vhd
+Z18 8/home/adolfo/Documents/Famaf/3ro/Arqui/TP2_arm_processor/dmem.vhd
+Z19 F/home/adolfo/Documents/Famaf/3ro/Arqui/TP2_arm_processor/dmem.vhd
 l0
 L12 1
 Vbn3b0?2?3c<CA[;DdzR8^2
 !s100 9UhgcemjCI:F<bA>GRZY=0
-Z21 OV;C;2020.1;71
+Z20 OV;C;2020.1;71
 33
 R2
 !i10b 1
 R7
-Z22 !s90 -reportprogress|300|-2008|-work|work|/home/adolfo/Documentos/Famaf/3ro/Arqui/TP2_arm_processor/dmem.vhd|
-Z23 !s107 /home/adolfo/Documentos/Famaf/3ro/Arqui/TP2_arm_processor/dmem.vhd|
+Z21 !s90 -reportprogress|300|-2008|-work|work|/home/adolfo/Documents/Famaf/3ro/Arqui/TP2_arm_processor/dmem.vhd|
+Z22 !s107 /home/adolfo/Documents/Famaf/3ro/Arqui/TP2_arm_processor/dmem.vhd|
 !i113 1
-Z24 o-2008 -work work
-Z25 tExplicit 1 CvgOpt 0
+Z23 o-2008 -work work
+Z24 tExplicit 1 CvgOpt 0
 Abehave
+R13
 R14
 R15
 R16
 R17
-R18
 DEx4 work 4 dmem 0 22 bn3b0?2?3c<CA[;DdzR8^2
 !i122 18
 l50
 L21 49
 V6hfU40U9zKmGmMdkMk@^90
 !s100 a2K;HL21gA:Y<M8M2VzYh0
-R21
+R20
 33
 R2
 !i10b 1
 R7
+R21
 R22
-R23
 !i113 1
+R23
 R24
-R25
 vexecute
 R1
-R12
+R2
 !i10b 1
 !s100 J:dlUnfUj_YN17EWA[:eI0
 R3
-IYfIWh>I537c7]_CTXI?MW2
+Ia?L^=EVnG>6aWcNER:Y<d1
 R4
 S1
 R0
-R5
-8/home/adolfo/Documentos/Famaf/3ro/Arqui/TP2_arm_processor/execute.sv
-F/home/adolfo/Documentos/Famaf/3ro/Arqui/TP2_arm_processor/execute.sv
+w1693865381
+8/home/adolfo/Documents/Famaf/3ro/Arqui/TP2_arm_processor/execute.sv
+F/home/adolfo/Documents/Famaf/3ro/Arqui/TP2_arm_processor/execute.sv
 !i122 11
 R11
 R6
 r1
 !s85 0
 31
-R13
-!s107 /home/adolfo/Documentos/Famaf/3ro/Arqui/TP2_arm_processor/execute.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+/home/adolfo/Documentos/Famaf/3ro/Arqui/TP2_arm_processor|/home/adolfo/Documentos/Famaf/3ro/Arqui/TP2_arm_processor/execute.sv|
+R7
+!s107 /home/adolfo/Documents/Famaf/3ro/Arqui/TP2_arm_processor/execute.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+/home/adolfo/Documents/Famaf/3ro/Arqui/TP2_arm_processor|/home/adolfo/Documents/Famaf/3ro/Arqui/TP2_arm_processor/execute.sv|
 !i113 1
 R8
 R9
 R10
 vfetch
 R1
-R12
+R2
 !i10b 1
 !s100 4?jg?1:G43ab:EO2ZKldJ2
 R3
-I4n8MVkDZIRVo<_En0=2^l3
+IA8L7@[W>cSj0`kU5zOGUK2
 R4
 S1
 R0
-R5
-8/home/adolfo/Documentos/Famaf/3ro/Arqui/TP2_arm_processor/fetch.sv
-F/home/adolfo/Documentos/Famaf/3ro/Arqui/TP2_arm_processor/fetch.sv
+w1693867849
+8/home/adolfo/Documents/Famaf/3ro/Arqui/TP2_arm_processor/fetch.sv
+F/home/adolfo/Documents/Famaf/3ro/Arqui/TP2_arm_processor/fetch.sv
 !i122 10
 L0 1 14
 R6
 r1
 !s85 0
 31
-R13
-!s107 /home/adolfo/Documentos/Famaf/3ro/Arqui/TP2_arm_processor/fetch.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+/home/adolfo/Documentos/Famaf/3ro/Arqui/TP2_arm_processor|/home/adolfo/Documentos/Famaf/3ro/Arqui/TP2_arm_processor/fetch.sv|
+R7
+!s107 /home/adolfo/Documents/Famaf/3ro/Arqui/TP2_arm_processor/fetch.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+/home/adolfo/Documents/Famaf/3ro/Arqui/TP2_arm_processor|/home/adolfo/Documents/Famaf/3ro/Arqui/TP2_arm_processor/fetch.sv|
 !i113 1
 R8
 R9
 R10
 vflopr
 R1
-R12
+R2
 !i10b 1
 !s100 FUkiY=<X6N5P2M<9OMQXb0
 R3
-IcjZJ3[:G73T1=6U5D`FSF1
+IY>:k84Ah=mm<]eS3<BjKh1
 R4
 S1
 R0
 R5
-8/home/adolfo/Documentos/Famaf/3ro/Arqui/TP2_arm_processor/flopr.sv
-F/home/adolfo/Documentos/Famaf/3ro/Arqui/TP2_arm_processor/flopr.sv
+8/home/adolfo/Documents/Famaf/3ro/Arqui/TP2_arm_processor/flopr.sv
+F/home/adolfo/Documents/Famaf/3ro/Arqui/TP2_arm_processor/flopr.sv
 !i122 1
 L0 1 10
 R6
 r1
 !s85 0
 31
-R13
-!s107 /home/adolfo/Documentos/Famaf/3ro/Arqui/TP2_arm_processor/flopr.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+/home/adolfo/Documentos/Famaf/3ro/Arqui/TP2_arm_processor|/home/adolfo/Documentos/Famaf/3ro/Arqui/TP2_arm_processor/flopr.sv|
+R7
+!s107 /home/adolfo/Documents/Famaf/3ro/Arqui/TP2_arm_processor/flopr.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+/home/adolfo/Documents/Famaf/3ro/Arqui/TP2_arm_processor|/home/adolfo/Documents/Famaf/3ro/Arqui/TP2_arm_processor/flopr.sv|
 !i113 1
 R8
 R9
 R10
 vimem
 R1
-R12
+R2
 !i10b 1
 !s100 XK]2=63HZiNXK0WI46M5b0
 R3
-I9EMBM7@:8I57KF=h<^UI83
+INjSA1ka:;N5DlW7QLaW9<0
 R4
 S1
 R0
-R5
-8/home/adolfo/Documentos/Famaf/3ro/Arqui/TP2_arm_processor/imem.sv
-F/home/adolfo/Documentos/Famaf/3ro/Arqui/TP2_arm_processor/imem.sv
+w1693946881
+8/home/adolfo/Documents/Famaf/3ro/Arqui/TP2_arm_processor/imem.sv
+F/home/adolfo/Documents/Famaf/3ro/Arqui/TP2_arm_processor/imem.sv
 !i122 2
 L0 1 24
 R6
 r1
 !s85 0
 31
-R13
-!s107 /home/adolfo/Documentos/Famaf/3ro/Arqui/TP2_arm_processor/imem.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+/home/adolfo/Documentos/Famaf/3ro/Arqui/TP2_arm_processor|/home/adolfo/Documentos/Famaf/3ro/Arqui/TP2_arm_processor/imem.sv|
+R7
+!s107 /home/adolfo/Documents/Famaf/3ro/Arqui/TP2_arm_processor/imem.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+/home/adolfo/Documents/Famaf/3ro/Arqui/TP2_arm_processor|/home/adolfo/Documents/Famaf/3ro/Arqui/TP2_arm_processor/imem.sv|
 !i113 1
 R8
 R9
 R10
 vmaindec
 R1
-R12
+R2
 !i10b 1
 !s100 ^RUWmnMHeaZljeo6:Hk[<1
 R3
-IiI`8>:ilEcP47[KQ?MZHT0
+IdD8<Y4R@lEedU4Rc``V882
 R4
 S1
 R0
-R5
-8/home/adolfo/Documentos/Famaf/3ro/Arqui/TP2_arm_processor/maindec.sv
-F/home/adolfo/Documentos/Famaf/3ro/Arqui/TP2_arm_processor/maindec.sv
+Z25 w1693864086
+8/home/adolfo/Documents/Famaf/3ro/Arqui/TP2_arm_processor/maindec.sv
+F/home/adolfo/Documents/Famaf/3ro/Arqui/TP2_arm_processor/maindec.sv
 !i122 3
 L0 1 93
 R6
 r1
 !s85 0
 31
-R13
-!s107 /home/adolfo/Documentos/Famaf/3ro/Arqui/TP2_arm_processor/maindec.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+/home/adolfo/Documentos/Famaf/3ro/Arqui/TP2_arm_processor|/home/adolfo/Documentos/Famaf/3ro/Arqui/TP2_arm_processor/maindec.sv|
+R7
+!s107 /home/adolfo/Documents/Famaf/3ro/Arqui/TP2_arm_processor/maindec.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+/home/adolfo/Documents/Famaf/3ro/Arqui/TP2_arm_processor|/home/adolfo/Documents/Famaf/3ro/Arqui/TP2_arm_processor/maindec.sv|
 !i113 1
 R8
 R9
 R10
 vmemory
 R1
-R12
+R2
 !i10b 1
 !s100 LP[7i;OQNRmgDe[<ZEPcc0
 R3
-IfQ0=8Zl2O<cfNAbnHCHCD3
+Iml1B?H24S4I>BIOzeHV?M1
 R4
 S1
 R0
-R5
-8/home/adolfo/Documentos/Famaf/3ro/Arqui/TP2_arm_processor/memory.sv
-F/home/adolfo/Documentos/Famaf/3ro/Arqui/TP2_arm_processor/memory.sv
+R12
+8/home/adolfo/Documents/Famaf/3ro/Arqui/TP2_arm_processor/memory.sv
+F/home/adolfo/Documents/Famaf/3ro/Arqui/TP2_arm_processor/memory.sv
 !i122 4
 L0 3 6
 R6
 r1
 !s85 0
 31
-R13
-!s107 /home/adolfo/Documentos/Famaf/3ro/Arqui/TP2_arm_processor/memory.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+/home/adolfo/Documentos/Famaf/3ro/Arqui/TP2_arm_processor|/home/adolfo/Documentos/Famaf/3ro/Arqui/TP2_arm_processor/memory.sv|
+R7
+!s107 /home/adolfo/Documents/Famaf/3ro/Arqui/TP2_arm_processor/memory.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+/home/adolfo/Documents/Famaf/3ro/Arqui/TP2_arm_processor|/home/adolfo/Documents/Famaf/3ro/Arqui/TP2_arm_processor/memory.sv|
 !i113 1
 R8
 R9
 R10
 vmux2
 R1
-R12
+R2
 !i10b 1
 !s100 XfdfLdSb9dmK[VUYkeA:Q1
 R3
-I^gneKVKAc=H5IN6Y]KJWX2
+IWi;^_VE4NL3Goj4m?hThS3
 R4
 S1
 R0
 R5
-8/home/adolfo/Documentos/Famaf/3ro/Arqui/TP2_arm_processor/mux2.sv
-F/home/adolfo/Documentos/Famaf/3ro/Arqui/TP2_arm_processor/mux2.sv
+8/home/adolfo/Documents/Famaf/3ro/Arqui/TP2_arm_processor/mux2.sv
+F/home/adolfo/Documents/Famaf/3ro/Arqui/TP2_arm_processor/mux2.sv
 !i122 5
 Z26 L0 3 8
 R6
 r1
 !s85 0
 31
-R13
-!s107 /home/adolfo/Documentos/Famaf/3ro/Arqui/TP2_arm_processor/mux2.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+/home/adolfo/Documentos/Famaf/3ro/Arqui/TP2_arm_processor|/home/adolfo/Documentos/Famaf/3ro/Arqui/TP2_arm_processor/mux2.sv|
+R7
+!s107 /home/adolfo/Documents/Famaf/3ro/Arqui/TP2_arm_processor/mux2.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+/home/adolfo/Documents/Famaf/3ro/Arqui/TP2_arm_processor|/home/adolfo/Documents/Famaf/3ro/Arqui/TP2_arm_processor/mux2.sv|
 !i113 1
 R8
 R9
 R10
 vprocessor_arm
 R1
-R12
+R2
 !i10b 1
 !s100 ZeNRfI>jjlb:;YUZbb8A73
 R3
-I551J^hEYJK<JLdHGk`1Vk1
+Ii;5776`PMV?dZ`hMPc>7m0
 R4
 S1
 R0
-R5
-8/home/adolfo/Documentos/Famaf/3ro/Arqui/TP2_arm_processor/processor_arm.sv
-F/home/adolfo/Documentos/Famaf/3ro/Arqui/TP2_arm_processor/processor_arm.sv
+R12
+8/home/adolfo/Documents/Famaf/3ro/Arqui/TP2_arm_processor/processor_arm.sv
+F/home/adolfo/Documents/Famaf/3ro/Arqui/TP2_arm_processor/processor_arm.sv
 !i122 6
 L0 3 55
 R6
 r1
 !s85 0
 31
-R13
-!s107 /home/adolfo/Documentos/Famaf/3ro/Arqui/TP2_arm_processor/processor_arm.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+/home/adolfo/Documentos/Famaf/3ro/Arqui/TP2_arm_processor|/home/adolfo/Documentos/Famaf/3ro/Arqui/TP2_arm_processor/processor_arm.sv|
+R7
+!s107 /home/adolfo/Documents/Famaf/3ro/Arqui/TP2_arm_processor/processor_arm.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+/home/adolfo/Documents/Famaf/3ro/Arqui/TP2_arm_processor|/home/adolfo/Documents/Famaf/3ro/Arqui/TP2_arm_processor/processor_arm.sv|
 !i113 1
 R8
 R9
@@ -427,13 +427,13 @@ R2
 !i10b 1
 !s100 Vc^Ti;1EFLEX3TGz>zZ>H1
 R3
-I=0G<<4[7gEGKIX0T>DlfM3
+I_9zL^5AOX86hQz1NKSh6i1
 R4
 S1
 R0
-R5
-8/home/adolfo/Documentos/Famaf/3ro/Arqui/TP2_arm_processor/processor_tb.sv
-F/home/adolfo/Documentos/Famaf/3ro/Arqui/TP2_arm_processor/processor_tb.sv
+w1693946979
+8/home/adolfo/Documents/Famaf/3ro/Arqui/TP2_arm_processor/processor_tb.sv
+F/home/adolfo/Documents/Famaf/3ro/Arqui/TP2_arm_processor/processor_tb.sv
 !i122 19
 L0 4 25
 R6
@@ -441,112 +441,112 @@ r1
 !s85 0
 31
 R7
-!s107 /home/adolfo/Documentos/Famaf/3ro/Arqui/TP2_arm_processor/processor_tb.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+/home/adolfo/Documentos/Famaf/3ro/Arqui/TP2_arm_processor|/home/adolfo/Documentos/Famaf/3ro/Arqui/TP2_arm_processor/processor_tb.sv|
+!s107 /home/adolfo/Documents/Famaf/3ro/Arqui/TP2_arm_processor/processor_tb.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+/home/adolfo/Documents/Famaf/3ro/Arqui/TP2_arm_processor|/home/adolfo/Documents/Famaf/3ro/Arqui/TP2_arm_processor/processor_tb.sv|
 !i113 1
 R8
 R9
 R10
 vregfile
 R1
-R12
+R2
 !i10b 1
 !s100 DDfl=em`SkN_[FLXFzGGe0
 R3
-IhGLnR4V]ljliCJY_Z9j_?1
+I81^kR?zPLeRX?8NVWUL;U0
 R4
 S1
 R0
-R5
-8/home/adolfo/Documentos/Famaf/3ro/Arqui/TP2_arm_processor/regfile.sv
-F/home/adolfo/Documentos/Famaf/3ro/Arqui/TP2_arm_processor/regfile.sv
+R25
+8/home/adolfo/Documents/Famaf/3ro/Arqui/TP2_arm_processor/regfile.sv
+F/home/adolfo/Documents/Famaf/3ro/Arqui/TP2_arm_processor/regfile.sv
 !i122 7
 L0 1 23
 R6
 r1
 !s85 0
 31
-R13
-!s107 /home/adolfo/Documentos/Famaf/3ro/Arqui/TP2_arm_processor/regfile.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+/home/adolfo/Documentos/Famaf/3ro/Arqui/TP2_arm_processor|/home/adolfo/Documentos/Famaf/3ro/Arqui/TP2_arm_processor/regfile.sv|
+R7
+!s107 /home/adolfo/Documents/Famaf/3ro/Arqui/TP2_arm_processor/regfile.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+/home/adolfo/Documents/Famaf/3ro/Arqui/TP2_arm_processor|/home/adolfo/Documents/Famaf/3ro/Arqui/TP2_arm_processor/regfile.sv|
 !i113 1
 R8
 R9
 R10
 vsignext
 R1
-R12
+R2
 !i10b 1
 !s100 7ElJUfR6=R7l6B<Zfm`gY1
 R3
-I<JX`5OE>:HOI5XiIQ:mHd0
+I@n8jo_^hhi1KeMWlf[DC[1
 R4
 S1
 R0
-R5
-8/home/adolfo/Documentos/Famaf/3ro/Arqui/TP2_arm_processor/signext.sv
-F/home/adolfo/Documentos/Famaf/3ro/Arqui/TP2_arm_processor/signext.sv
+R25
+8/home/adolfo/Documents/Famaf/3ro/Arqui/TP2_arm_processor/signext.sv
+F/home/adolfo/Documents/Famaf/3ro/Arqui/TP2_arm_processor/signext.sv
 !i122 8
 L0 1 13
 R6
 r1
 !s85 0
 31
-R13
-!s107 /home/adolfo/Documentos/Famaf/3ro/Arqui/TP2_arm_processor/signext.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+/home/adolfo/Documentos/Famaf/3ro/Arqui/TP2_arm_processor|/home/adolfo/Documentos/Famaf/3ro/Arqui/TP2_arm_processor/signext.sv|
+R7
+!s107 /home/adolfo/Documents/Famaf/3ro/Arqui/TP2_arm_processor/signext.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+/home/adolfo/Documents/Famaf/3ro/Arqui/TP2_arm_processor|/home/adolfo/Documents/Famaf/3ro/Arqui/TP2_arm_processor/signext.sv|
 !i113 1
 R8
 R9
 R10
 vsl2
 R1
-R12
+R2
 !i10b 1
 !s100 `c@h0_TfTnn`3CajieZiC2
 R3
-IaRj2EHfO46Q=kh6f_CBFH3
+I^T6lb?87O<?Wa[Mf`Z@<[0
 R4
 S1
 R0
 R5
-8/home/adolfo/Documentos/Famaf/3ro/Arqui/TP2_arm_processor/sl2.sv
-F/home/adolfo/Documentos/Famaf/3ro/Arqui/TP2_arm_processor/sl2.sv
+8/home/adolfo/Documents/Famaf/3ro/Arqui/TP2_arm_processor/sl2.sv
+F/home/adolfo/Documents/Famaf/3ro/Arqui/TP2_arm_processor/sl2.sv
 !i122 9
 L0 3 9
 R6
 r1
 !s85 0
 31
-R13
-!s107 /home/adolfo/Documentos/Famaf/3ro/Arqui/TP2_arm_processor/sl2.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+/home/adolfo/Documentos/Famaf/3ro/Arqui/TP2_arm_processor|/home/adolfo/Documentos/Famaf/3ro/Arqui/TP2_arm_processor/sl2.sv|
+R7
+!s107 /home/adolfo/Documents/Famaf/3ro/Arqui/TP2_arm_processor/sl2.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+/home/adolfo/Documents/Famaf/3ro/Arqui/TP2_arm_processor|/home/adolfo/Documents/Famaf/3ro/Arqui/TP2_arm_processor/sl2.sv|
 !i113 1
 R8
 R9
 R10
 vwriteback
 R1
-R12
+R2
 !i10b 1
 !s100 lem0cZaoaK<4K2n`WO?nY2
 R3
-I<PhA;NLXB5?nzYQl;:;gT3
+InIUB3?X^ldMc6lCOUU`TJ2
 R4
 S1
 R0
-R5
-8/home/adolfo/Documentos/Famaf/3ro/Arqui/TP2_arm_processor/writeback.sv
-F/home/adolfo/Documentos/Famaf/3ro/Arqui/TP2_arm_processor/writeback.sv
+R12
+8/home/adolfo/Documents/Famaf/3ro/Arqui/TP2_arm_processor/writeback.sv
+F/home/adolfo/Documents/Famaf/3ro/Arqui/TP2_arm_processor/writeback.sv
 !i122 0
 R26
 R6
 r1
 !s85 0
 31
-R13
-!s107 /home/adolfo/Documentos/Famaf/3ro/Arqui/TP2_arm_processor/writeback.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+/home/adolfo/Documentos/Famaf/3ro/Arqui/TP2_arm_processor|/home/adolfo/Documentos/Famaf/3ro/Arqui/TP2_arm_processor/writeback.sv|
+!s108 1694557609.000000
+!s107 /home/adolfo/Documents/Famaf/3ro/Arqui/TP2_arm_processor/writeback.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+/home/adolfo/Documents/Famaf/3ro/Arqui/TP2_arm_processor|/home/adolfo/Documents/Famaf/3ro/Arqui/TP2_arm_processor/writeback.sv|
 !i113 1
 R8
 R9

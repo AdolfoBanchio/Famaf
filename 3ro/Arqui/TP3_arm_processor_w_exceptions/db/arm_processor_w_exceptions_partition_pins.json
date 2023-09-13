@@ -2,7 +2,128 @@
 	"partitions" : [
 		{
 			"name" : "Top",
-			"pins" : []
+			"pins" : [
+				{
+					"name" : "AluControl[0]",
+					"strict" : false
+				},
+				{
+					"name" : "AluControl[1]",
+					"strict" : false
+				},
+				{
+					"name" : "AluControl[2]",
+					"strict" : false
+				},
+				{
+					"name" : "EStatus[0]",
+					"strict" : false
+				},
+				{
+					"name" : "EStatus[1]",
+					"strict" : false
+				},
+				{
+					"name" : "AluSrc[0]",
+					"strict" : false
+				},
+				{
+					"name" : "AluSrc[1]",
+					"strict" : false
+				},
+				{
+					"name" : "reg2loc",
+					"strict" : false
+				},
+				{
+					"name" : "regWrite",
+					"strict" : false
+				},
+				{
+					"name" : "Branch",
+					"strict" : false
+				},
+				{
+					"name" : "memtoReg",
+					"strict" : false
+				},
+				{
+					"name" : "memRead",
+					"strict" : false
+				},
+				{
+					"name" : "memWrite",
+					"strict" : false
+				},
+				{
+					"name" : "ERet",
+					"strict" : false
+				},
+				{
+					"name" : "Exc",
+					"strict" : false
+				},
+				{
+					"name" : "ExtIAck",
+					"strict" : false
+				},
+				{
+					"name" : "instr[10]",
+					"strict" : false
+				},
+				{
+					"name" : "instr[6]",
+					"strict" : false
+				},
+				{
+					"name" : "instr[0]",
+					"strict" : false
+				},
+				{
+					"name" : "instr[2]",
+					"strict" : false
+				},
+				{
+					"name" : "instr[5]",
+					"strict" : false
+				},
+				{
+					"name" : "instr[4]",
+					"strict" : false
+				},
+				{
+					"name" : "instr[1]",
+					"strict" : false
+				},
+				{
+					"name" : "instr[7]",
+					"strict" : false
+				},
+				{
+					"name" : "instr[9]",
+					"strict" : false
+				},
+				{
+					"name" : "instr[8]",
+					"strict" : false
+				},
+				{
+					"name" : "instr[3]",
+					"strict" : false
+				},
+				{
+					"name" : "reset",
+					"strict" : false
+				},
+				{
+					"name" : "ExtIRQ",
+					"strict" : false
+				},
+				{
+					"name" : "ExcAck",
+					"strict" : false
+				}
+			]
 		}
 	]
 }

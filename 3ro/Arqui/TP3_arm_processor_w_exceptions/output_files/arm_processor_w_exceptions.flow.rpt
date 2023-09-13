@@ -1,5 +1,5 @@
 Flow report for arm_processor_w_exceptions
-Tue Sep 12 10:24:15 2023
+Tue Sep 12 21:25:47 2023
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -41,18 +41,18 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Tue Sep 12 10:24:15 2023       ;
+; Flow Status                        ; Successful - Tue Sep 12 21:25:47 2023       ;
 ; Quartus Prime Version              ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                      ; arm_processor_w_exceptions                  ;
-; Top-level Entity Name              ; processor_arm                               ;
+; Top-level Entity Name              ; controller                                  ;
 ; Family                             ; Cyclone IV E                                ;
 ; Device                             ; EP4CE22F17C6                                ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 0                                           ;
-;     Total combinational functions  ; 0                                           ;
+; Total logic elements               ; 37                                          ;
+;     Total combinational functions  ; 37                                          ;
 ;     Dedicated logic registers      ; 0                                           ;
 ; Total registers                    ; 0                                           ;
-; Total pins                         ; 134                                         ;
+; Total pins                         ; 33                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
@@ -65,38 +65,38 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+----------------------------+
 ; Option            ; Setting                    ;
 +-------------------+----------------------------+
-; Start date & time ; 09/12/2023 10:24:04        ;
+; Start date & time ; 09/12/2023 21:25:40        ;
 ; Main task         ; Compilation                ;
 ; Revision Name     ; arm_processor_w_exceptions ;
 +-------------------+----------------------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Flow Non-Default Global Settings                                                                                                                              ;
-+-------------------------------------+----------------------------------------+----------------------------+---------------+-----------------------------------+
-; Assignment Name                     ; Value                                  ; Default Value              ; Entity Name   ; Section Id                        ;
-+-------------------------------------+----------------------------------------+----------------------------+---------------+-----------------------------------+
-; COMPILER_SIGNATURE_ID               ; 233214608178275.169452504408719        ; --                         ; --            ; --                                ;
-; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --                         ; --            ; eda_board_design_timing           ;
-; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --                         ; --            ; eda_board_design_boundary_scan    ;
-; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --                         ; --            ; eda_board_design_signal_integrity ;
-; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --                         ; --            ; eda_board_design_symbol           ;
-; EDA_OUTPUT_DATA_FORMAT              ; Systemverilog Hdl                      ; --                         ; --            ; eda_simulation                    ;
-; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (SystemVerilog)        ; <None>                     ; --            ; --                                ;
-; EDA_TIME_SCALE                      ; 1 ps                                   ; --                         ; --            ; eda_simulation                    ;
-; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --                         ; --            ; --                                ;
-; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --                         ; --            ; --                                ;
-; NOMINAL_CORE_SUPPLY_VOLTAGE         ; 1.2V                                   ; --                         ; --            ; --                                ;
-; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --                         ; processor_arm ; Top                               ;
-; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --                         ; processor_arm ; Top                               ;
-; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --                         ; processor_arm ; Top                               ;
-; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                    ; --                         ; --            ; --                                ;
-; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW  ; --                         ; --            ; --                                ;
-; PROJECT_OUTPUT_DIRECTORY            ; output_files                           ; --                         ; --            ; --                                ;
-; TOP_LEVEL_ENTITY                    ; processor_arm                          ; arm_processor_w_exceptions ; --            ; --                                ;
-; VHDL_INPUT_VERSION                  ; VHDL_2008                              ; VHDL_1993                  ; --            ; --                                ;
-; VHDL_SHOW_LMF_MAPPING_MESSAGES      ; Off                                    ; --                         ; --            ; --                                ;
-+-------------------------------------+----------------------------------------+----------------------------+---------------+-----------------------------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                                                            ;
++-------------------------------------+----------------------------------------+----------------------------+-------------+-----------------------------------+
+; Assignment Name                     ; Value                                  ; Default Value              ; Entity Name ; Section Id                        ;
++-------------------------------------+----------------------------------------+----------------------------+-------------+-----------------------------------+
+; COMPILER_SIGNATURE_ID               ; 198112232858878.169456474033871        ; --                         ; --          ; --                                ;
+; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --                         ; --          ; eda_board_design_timing           ;
+; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --                         ; --          ; eda_board_design_boundary_scan    ;
+; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --                         ; --          ; eda_board_design_signal_integrity ;
+; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --                         ; --          ; eda_board_design_symbol           ;
+; EDA_OUTPUT_DATA_FORMAT              ; Systemverilog Hdl                      ; --                         ; --          ; eda_simulation                    ;
+; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (SystemVerilog)        ; <None>                     ; --          ; --                                ;
+; EDA_TIME_SCALE                      ; 1 ps                                   ; --                         ; --          ; eda_simulation                    ;
+; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --                         ; --          ; --                                ;
+; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --                         ; --          ; --                                ;
+; NOMINAL_CORE_SUPPLY_VOLTAGE         ; 1.2V                                   ; --                         ; --          ; --                                ;
+; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --                         ; controller  ; Top                               ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --                         ; controller  ; Top                               ;
+; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --                         ; controller  ; Top                               ;
+; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                    ; --                         ; --          ; --                                ;
+; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW  ; --                         ; --          ; --                                ;
+; PROJECT_OUTPUT_DIRECTORY            ; output_files                           ; --                         ; --          ; --                                ;
+; TOP_LEVEL_ENTITY                    ; controller                             ; arm_processor_w_exceptions ; --          ; --                                ;
+; VHDL_INPUT_VERSION                  ; VHDL_2008                              ; VHDL_1993                  ; --          ; --                                ;
+; VHDL_SHOW_LMF_MAPPING_MESSAGES      ; Off                                    ; --                         ; --          ; --                                ;
++-------------------------------------+----------------------------------------+----------------------------+-------------+-----------------------------------+
 
 
 +--------------------------------------------------------------------------------------------------------------------------+
@@ -104,18 +104,18 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:11     ; 1.0                     ; 533 MB              ; 00:00:22                           ;
-; Total                ; 00:00:11     ; --                      ; --                  ; 00:00:22                           ;
+; Analysis & Synthesis ; 00:00:07     ; 1.0                     ; 427 MB              ; 00:00:13                           ;
+; Total                ; 00:00:07     ; --                      ; --                  ; 00:00:13                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
-+--------------------------------------------------------------------------------------+
-; Flow OS Summary                                                                      ;
-+----------------------+------------------+--------------+------------+----------------+
-; Module Name          ; Machine Hostname ; OS Name      ; OS Version ; Processor type ;
-+----------------------+------------------+--------------+------------+----------------+
-; Analysis & Synthesis ; adolfo-HP        ; Ubuntu 23.04 ; 23         ; x86_64         ;
-+----------------------+------------------+--------------+------------+----------------+
++----------------------------------------------------------------------------------------+
+; Flow OS Summary                                                                        ;
++----------------------+------------------+----------------+------------+----------------+
+; Module Name          ; Machine Hostname ; OS Name        ; OS Version ; Processor type ;
++----------------------+------------------+----------------+------------+----------------+
+; Analysis & Synthesis ; adolfo           ; Ubuntu 22.04.3 ; 22         ; x86_64         ;
++----------------------+------------------+----------------+------------+----------------+
 
 
 ------------
