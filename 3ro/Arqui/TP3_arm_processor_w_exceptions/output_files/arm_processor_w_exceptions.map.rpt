@@ -1,5 +1,5 @@
 Analysis & Synthesis report for arm_processor_w_exceptions
-Tue Sep 12 21:25:47 2023
+Wed Sep 13 13:44:00 2023
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -13,11 +13,44 @@ Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. General Register Statistics
-  9. Post-Synthesis Netlist Statistics for Top Partition
- 10. Elapsed Time Per Partition
- 11. Analysis & Synthesis Messages
- 12. Analysis & Synthesis Suppressed Messages
+  8. User-Specified and Inferred Latches
+  9. Registers Removed During Synthesis
+ 10. Removed Registers Triggering Further Register Optimizations
+ 11. General Register Statistics
+ 12. Inverted Register Statistics
+ 13. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 14. Parameter Settings for User Entity Instance: Top-level Entity: |processor_arm
+ 15. Parameter Settings for User Entity Instance: datapath:dp
+ 16. Parameter Settings for User Entity Instance: datapath:dp|fetch:FETCH
+ 17. Parameter Settings for User Entity Instance: datapath:dp|fetch:FETCH|flopr:PC
+ 18. Parameter Settings for User Entity Instance: datapath:dp|fetch:FETCH|adder:Add
+ 19. Parameter Settings for User Entity Instance: datapath:dp|fetch:FETCH|mux2:MUX1
+ 20. Parameter Settings for User Entity Instance: datapath:dp|fetch:FETCH|mux2:MUX2
+ 21. Parameter Settings for User Entity Instance: datapath:dp|decode:DECODE
+ 22. Parameter Settings for User Entity Instance: datapath:dp|decode:DECODE|mux2:ra2mux
+ 23. Parameter Settings for User Entity Instance: datapath:dp|decode:DECODE|regfile:registers
+ 24. Parameter Settings for User Entity Instance: datapath:dp|execute:EXECUTE
+ 25. Parameter Settings for User Entity Instance: datapath:dp|execute:EXECUTE|mux4:MUX_E
+ 26. Parameter Settings for User Entity Instance: datapath:dp|execute:EXECUTE|alu:ALU
+ 27. Parameter Settings for User Entity Instance: datapath:dp|execute:EXECUTE|sl2:ShiftLeft_E
+ 28. Parameter Settings for User Entity Instance: datapath:dp|execute:EXECUTE|adder:Add_E
+ 29. Parameter Settings for User Entity Instance: datapath:dp|writeback:WRITEBACK
+ 30. Parameter Settings for User Entity Instance: datapath:dp|writeback:WRITEBACK|mux2:MtoRmux
+ 31. Parameter Settings for User Entity Instance: datapath:dp|exception:EXCEPTION|comp_n:EV_Comp
+ 32. Parameter Settings for User Entity Instance: datapath:dp|exception:EXCEPTION|flopr_e:ERR
+ 33. Parameter Settings for User Entity Instance: datapath:dp|exception:EXCEPTION|flopr_e:ELR
+ 34. Parameter Settings for User Entity Instance: datapath:dp|exception:EXCEPTION|flopr_e:ESR
+ 35. Parameter Settings for User Entity Instance: datapath:dp|exception:EXCEPTION|mux2:RET_SEL
+ 36. Parameter Settings for User Entity Instance: datapath:dp|exception:EXCEPTION|mux4:D_SEL
+ 37. Parameter Settings for User Entity Instance: imem:instrMem
+ 38. Port Connectivity Checks: "datapath:dp|exception:EXCEPTION|mux4:D_SEL"
+ 39. Port Connectivity Checks: "datapath:dp|exception:EXCEPTION|comp_n:EV_Comp"
+ 40. Port Connectivity Checks: "datapath:dp|fetch:FETCH|adder:Add"
+ 41. Port Connectivity Checks: "datapath:dp"
+ 42. Post-Synthesis Netlist Statistics for Top Partition
+ 43. Elapsed Time Per Partition
+ 44. Analysis & Synthesis Messages
+ 45. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -44,16 +77,16 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Sep 12 21:25:47 2023       ;
+; Analysis & Synthesis Status        ; Successful - Wed Sep 13 13:43:59 2023       ;
 ; Quartus Prime Version              ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                      ; arm_processor_w_exceptions                  ;
-; Top-level Entity Name              ; controller                                  ;
+; Top-level Entity Name              ; processor_arm                               ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 37                                          ;
-;     Total combinational functions  ; 37                                          ;
-;     Dedicated logic registers      ; 0                                           ;
-; Total registers                    ; 0                                           ;
-; Total pins                         ; 33                                          ;
+; Total logic elements               ; 32,979                                      ;
+;     Total combinational functions  ; 14,811                                      ;
+;     Dedicated logic registers      ; 18,494                                      ;
+; Total registers                    ; 18494                                       ;
+; Total pins                         ; 134                                         ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
@@ -67,7 +100,7 @@ https://fpgasoftware.intel.com/eula.
 ; Option                                                           ; Setting            ; Default Value              ;
 +------------------------------------------------------------------+--------------------+----------------------------+
 ; Device                                                           ; EP4CE22F17C6       ;                            ;
-; Top-level entity name                                            ; controller         ; arm_processor_w_exceptions ;
+; Top-level entity name                                            ; processor_arm      ; arm_processor_w_exceptions ;
 ; Family name                                                      ; Cyclone IV E       ; Cyclone V                  ;
 ; VHDL Show LMF Mapping Messages                                   ; Off                ;                            ;
 ; VHDL Version                                                     ; VHDL_2008          ; VHDL_1993                  ;
@@ -156,67 +189,155 @@ https://fpgasoftware.intel.com/eula.
 ; Number detected on machine ; 6           ;
 ; Maximum allowed            ; 6           ;
 ;                            ;             ;
-; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
+; Average used               ; 1.01        ;
+; Maximum used               ; 6           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.2%      ;
+;     Processor 3            ;   0.2%      ;
+;     Processor 4            ;   0.2%      ;
+;     Processor 5            ;   0.2%      ;
+;     Processor 6            ;   0.1%      ;
 +----------------------------+-------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                            ;
-+----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                        ; Library ;
-+----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------------------+---------+
-; maindec.sv                       ; yes             ; User SystemVerilog HDL File  ; /home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/maindec.sv    ;         ;
-; aludec.sv                        ; yes             ; User SystemVerilog HDL File  ; /home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/aludec.sv     ;         ;
-; controller.sv                    ; yes             ; User SystemVerilog HDL File  ; /home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/controller.sv ;         ;
-+----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------------------+---------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                               ;
++----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                           ; Library ;
++----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------------------+---------+
+; maindec.sv                       ; yes             ; User SystemVerilog HDL File  ; /home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/maindec.sv       ;         ;
+; aludec.sv                        ; yes             ; User SystemVerilog HDL File  ; /home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/aludec.sv        ;         ;
+; controller.sv                    ; yes             ; User SystemVerilog HDL File  ; /home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/controller.sv    ;         ;
+; writeback.sv                     ; yes             ; User SystemVerilog HDL File  ; /home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/writeback.sv     ;         ;
+; sl2.sv                           ; yes             ; User SystemVerilog HDL File  ; /home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/sl2.sv           ;         ;
+; signext.sv                       ; yes             ; User SystemVerilog HDL File  ; /home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/signext.sv       ;         ;
+; regfile.sv                       ; yes             ; User SystemVerilog HDL File  ; /home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/regfile.sv       ;         ;
+; processor_arm.sv                 ; yes             ; User SystemVerilog HDL File  ; /home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/processor_arm.sv ;         ;
+; mux4.sv                          ; yes             ; User SystemVerilog HDL File  ; /home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/mux4.sv          ;         ;
+; mux2.sv                          ; yes             ; User SystemVerilog HDL File  ; /home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/mux2.sv          ;         ;
+; memory.sv                        ; yes             ; User SystemVerilog HDL File  ; /home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/memory.sv        ;         ;
+; imem.sv                          ; yes             ; User SystemVerilog HDL File  ; /home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/imem.sv          ;         ;
+; flopr_e.sv                       ; yes             ; User SystemVerilog HDL File  ; /home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/flopr_e.sv       ;         ;
+; flopr.sv                         ; yes             ; User SystemVerilog HDL File  ; /home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/flopr.sv         ;         ;
+; fetch.sv                         ; yes             ; User SystemVerilog HDL File  ; /home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/fetch.sv         ;         ;
+; execute.sv                       ; yes             ; User SystemVerilog HDL File  ; /home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/execute.sv       ;         ;
+; exception.sv                     ; yes             ; User SystemVerilog HDL File  ; /home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/exception.sv     ;         ;
+; esync.sv                         ; yes             ; User SystemVerilog HDL File  ; /home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/esync.sv         ;         ;
+; dmem.vhd                         ; yes             ; User VHDL File               ; /home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/dmem.vhd         ;         ;
+; decode.sv                        ; yes             ; User SystemVerilog HDL File  ; /home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/decode.sv        ;         ;
+; datapath.sv                      ; yes             ; User SystemVerilog HDL File  ; /home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/datapath.sv      ;         ;
+; comp_n.sv                        ; yes             ; User SystemVerilog HDL File  ; /home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/comp_n.sv        ;         ;
+; alu.sv                           ; yes             ; User SystemVerilog HDL File  ; /home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/alu.sv           ;         ;
+; adder.sv                         ; yes             ; User SystemVerilog HDL File  ; /home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/adder.sv         ;         ;
++----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------------------+---------+
 
 
-+-----------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary               ;
-+---------------------------------------------+-------------+
-; Resource                                    ; Usage       ;
-+---------------------------------------------+-------------+
-; Estimated Total logic elements              ; 37          ;
-;                                             ;             ;
-; Total combinational functions               ; 37          ;
-; Logic element usage by number of LUT inputs ;             ;
-;     -- 4 input functions                    ; 19          ;
-;     -- 3 input functions                    ; 13          ;
-;     -- <=2 input functions                  ; 5           ;
-;                                             ;             ;
-; Logic elements by mode                      ;             ;
-;     -- normal mode                          ; 37          ;
-;     -- arithmetic mode                      ; 0           ;
-;                                             ;             ;
-; Total registers                             ; 0           ;
-;     -- Dedicated logic registers            ; 0           ;
-;     -- I/O registers                        ; 0           ;
-;                                             ;             ;
-; I/O pins                                    ; 33          ;
-;                                             ;             ;
-; Embedded Multiplier 9-bit elements          ; 0           ;
-;                                             ;             ;
-; Maximum fan-out node                        ; reset~input ;
-; Maximum fan-out                             ; 14          ;
-; Total fan-out                               ; 174         ;
-; Average fan-out                             ; 1.69        ;
-+---------------------------------------------+-------------+
++--------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                  ;
++---------------------------------------------+----------------+
+; Resource                                    ; Usage          ;
++---------------------------------------------+----------------+
+; Estimated Total logic elements              ; 32,979         ;
+;                                             ;                ;
+; Total combinational functions               ; 14811          ;
+; Logic element usage by number of LUT inputs ;                ;
+;     -- 4 input functions                    ; 14135          ;
+;     -- 3 input functions                    ; 513            ;
+;     -- <=2 input functions                  ; 163            ;
+;                                             ;                ;
+; Logic elements by mode                      ;                ;
+;     -- normal mode                          ; 14686          ;
+;     -- arithmetic mode                      ; 125            ;
+;                                             ;                ;
+; Total registers                             ; 18494          ;
+;     -- Dedicated logic registers            ; 18494          ;
+;     -- I/O registers                        ; 0              ;
+;                                             ;                ;
+; I/O pins                                    ; 134            ;
+;                                             ;                ;
+; Embedded Multiplier 9-bit elements          ; 0              ;
+;                                             ;                ;
+; Maximum fan-out node                        ; CLOCK_50~input ;
+; Maximum fan-out                             ; 18494          ;
+; Total fan-out                               ; 114133         ;
+; Average fan-out                             ; 3.40           ;
++---------------------------------------------+----------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                              ;
-+----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------+-------------+--------------+
-; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name         ; Entity Name ; Library Name ;
-+----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------+-------------+--------------+
-; |controller                ; 37 (3)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 33   ; 0            ; |controller                 ; controller  ; work         ;
-;    |aludec:decAlu|         ; 9 (9)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |controller|aludec:decAlu   ; aludec      ; work         ;
-;    |maindec:decPpal|       ; 25 (25)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |controller|maindec:decPpal ; maindec     ; work         ;
-+----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------+-------------+--------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                    ;
++------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------+---------------+--------------+
+; Compilation Hierarchy Node   ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                           ; Entity Name   ; Library Name ;
++------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------+---------------+--------------+
+; |processor_arm               ; 14811 (1)           ; 18494 (0)                 ; 0           ; 0            ; 0       ; 0         ; 134  ; 0            ; |processor_arm                                                ; processor_arm ; work         ;
+;    |controller:c|            ; 42 (2)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor_arm|controller:c                                   ; controller    ; work         ;
+;       |aludec:decAlu|        ; 15 (15)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor_arm|controller:c|aludec:decAlu                     ; aludec        ; work         ;
+;       |maindec:decPpal|      ; 25 (25)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor_arm|controller:c|maindec:decPpal                   ; maindec       ; work         ;
+;    |datapath:dp|             ; 14308 (0)           ; 2110 (0)                  ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor_arm|datapath:dp                                    ; datapath      ; work         ;
+;       |decode:DECODE|        ; 2826 (0)            ; 2048 (0)                  ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor_arm|datapath:dp|decode:DECODE                      ; decode        ; work         ;
+;          |mux2:ra2mux|       ; 5 (5)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor_arm|datapath:dp|decode:DECODE|mux2:ra2mux          ; mux2          ; work         ;
+;          |regfile:registers| ; 2817 (2817)         ; 2048 (2048)               ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor_arm|datapath:dp|decode:DECODE|regfile:registers    ; regfile       ; work         ;
+;          |signext:ext|       ; 4 (4)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor_arm|datapath:dp|decode:DECODE|signext:ext          ; signext       ; work         ;
+;       |exception:EXCEPTION|  ; 24 (1)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor_arm|datapath:dp|exception:EXCEPTION                ; exception     ; work         ;
+;          |comp_n:EV_Comp|    ; 21 (21)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor_arm|datapath:dp|exception:EXCEPTION|comp_n:EV_Comp ; comp_n        ; work         ;
+;          |esync:ESync|       ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor_arm|datapath:dp|exception:EXCEPTION|esync:ESync    ; esync         ; work         ;
+;       |execute:EXECUTE|      ; 429 (0)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor_arm|datapath:dp|execute:EXECUTE                    ; execute       ; work         ;
+;          |adder:Add_E|       ; 26 (26)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor_arm|datapath:dp|execute:EXECUTE|adder:Add_E        ; adder         ; work         ;
+;          |alu:ALU|           ; 393 (393)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor_arm|datapath:dp|execute:EXECUTE|alu:ALU            ; alu           ; work         ;
+;          |mux4:MUX_E|        ; 10 (10)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor_arm|datapath:dp|execute:EXECUTE|mux4:MUX_E         ; mux4          ; work         ;
+;       |fetch:FETCH|          ; 62 (0)              ; 62 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor_arm|datapath:dp|fetch:FETCH                        ; fetch         ; work         ;
+;          |flopr:PC|          ; 62 (62)             ; 62 (62)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor_arm|datapath:dp|fetch:FETCH|flopr:PC               ; flopr         ; work         ;
+;       |memory:MEMORY|        ; 23 (23)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor_arm|datapath:dp|memory:MEMORY                      ; memory        ; work         ;
+;       |writeback:WRITEBACK|  ; 10944 (0)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor_arm|datapath:dp|writeback:WRITEBACK                ; writeback     ; work         ;
+;          |mux2:MtoRmux|      ; 10944 (10944)       ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor_arm|datapath:dp|writeback:WRITEBACK|mux2:MtoRmux   ; mux2          ; work         ;
+;    |dmem:dataMem|            ; 341 (341)           ; 16384 (16384)             ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor_arm|dmem:dataMem                                   ; dmem          ; work         ;
+;    |imem:instrMem|           ; 119 (119)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor_arm|imem:instrMem                                  ; imem          ; work         ;
++------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------+---------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++---------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                               ;
++----------------------------------------------------+---------------------+------------------------+
+; Latch Name                                         ; Latch Enable Signal ; Free of Timing Hazards ;
++----------------------------------------------------+---------------------+------------------------+
+; datapath:dp|exception:EXCEPTION|esync:ESync|out    ; GND                 ; yes                    ;
+; Number of user-specified and inferred latches = 1  ;                     ;                        ;
++----------------------------------------------------+---------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++-----------------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                                    ;
++--------------------------------------------------------+--------------------------------------------------------------+
+; Register name                                          ; Reason for Removal                                           ;
++--------------------------------------------------------+--------------------------------------------------------------+
+; datapath:dp|exception:EXCEPTION|flopr_e:ESR|q[2,3]     ; Stuck at GND due to stuck port data_in                       ;
+; datapath:dp|exception:EXCEPTION|flopr_e:ERR|q[1]       ; Merged with datapath:dp|exception:EXCEPTION|flopr_e:ERR|q[0] ;
+; datapath:dp|exception:EXCEPTION|flopr_e:ELR|q[1]       ; Merged with datapath:dp|exception:EXCEPTION|flopr_e:ELR|q[0] ;
+; datapath:dp|fetch:FETCH|flopr:PC|q[1]                  ; Merged with datapath:dp|fetch:FETCH|flopr:PC|q[0]            ;
+; datapath:dp|exception:EXCEPTION|flopr_e:ESR|q[0]       ; Lost fanout                                                  ;
+; datapath:dp|exception:EXCEPTION|flopr_e:ELR|q[0]       ; Lost fanout                                                  ;
+; datapath:dp|exception:EXCEPTION|flopr_e:ESR|q[1]       ; Lost fanout                                                  ;
+; datapath:dp|exception:EXCEPTION|flopr_e:ELR|q[2..63]   ; Lost fanout                                                  ;
+; datapath:dp|exception:EXCEPTION|flopr_e:ERR|q[0,2..63] ; Lost fanout                                                  ;
+; datapath:dp|fetch:FETCH|flopr:PC|q[0]                  ; Stuck at GND due to stuck port data_in                       ;
+; Total Number of Removed Registers = 134                ;                                                              ;
++--------------------------------------------------------+--------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                     ;
++--------------------------------------------------+---------------------------+--------------------------------------------------+
+; Register name                                    ; Reason for Removal        ; Registers Removed due to This Register           ;
++--------------------------------------------------+---------------------------+--------------------------------------------------+
+; datapath:dp|exception:EXCEPTION|flopr_e:ESR|q[3] ; Stuck at GND              ; datapath:dp|exception:EXCEPTION|flopr_e:ELR|q[3] ;
+;                                                  ; due to stuck port data_in ;                                                  ;
+; datapath:dp|exception:EXCEPTION|flopr_e:ESR|q[2] ; Stuck at GND              ; datapath:dp|exception:EXCEPTION|flopr_e:ELR|q[2] ;
+;                                                  ; due to stuck port data_in ;                                                  ;
++--------------------------------------------------+---------------------------+--------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -224,14 +345,378 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 0     ;
+; Total registers                              ; 18494 ;
 ; Number of registers using Synchronous Clear  ; 0     ;
-; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Synchronous Load   ; 62    ;
+; Number of registers using Asynchronous Clear ; 62    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Clock Enable       ; 18432 ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
+
+
++---------------------------------------------------+
+; Inverted Register Statistics                      ;
++-----------------------------------------+---------+
+; Inverted Register                       ; Fan out ;
++-----------------------------------------+---------+
+; dmem:dataMem|mem[142][0]                ; 1       ;
+; dmem:dataMem|mem[135][0]                ; 1       ;
+; dmem:dataMem|mem[130][1]                ; 1       ;
+; dmem:dataMem|mem[129][1]                ; 1       ;
+; dmem:dataMem|mem[141][1]                ; 1       ;
+; dmem:dataMem|mem[142][2]                ; 1       ;
+; dmem:dataMem|mem[135][2]                ; 1       ;
+; dmem:dataMem|mem[136][2]                ; 1       ;
+; dmem:dataMem|mem[141][2]                ; 1       ;
+; dmem:dataMem|mem[138][3]                ; 1       ;
+; dmem:dataMem|mem[144][3]                ; 1       ;
+; dmem:dataMem|mem[131][3]                ; 1       ;
+; dmem:dataMem|mem[132][3]                ; 1       ;
+; dmem:dataMem|mem[131][4]                ; 1       ;
+; dmem:dataMem|mem[144][4]                ; 1       ;
+; dmem:dataMem|mem[132][4]                ; 1       ;
+; dmem:dataMem|mem[143][4]                ; 1       ;
+; dmem:dataMem|mem[139][4]                ; 1       ;
+; dmem:dataMem|mem[1][4]                  ; 1       ;
+; dmem:dataMem|mem[132][5]                ; 1       ;
+; dmem:dataMem|mem[145][5]                ; 1       ;
+; dmem:dataMem|mem[133][5]                ; 1       ;
+; dmem:dataMem|mem[1][5]                  ; 1       ;
+; dmem:dataMem|mem[139][5]                ; 1       ;
+; dmem:dataMem|mem[137][5]                ; 1       ;
+; dmem:dataMem|mem[139][6]                ; 1       ;
+; dmem:dataMem|mem[137][6]                ; 1       ;
+; dmem:dataMem|mem[144][6]                ; 1       ;
+; dmem:dataMem|mem[131][7]                ; 1       ;
+; dmem:dataMem|mem[138][7]                ; 1       ;
+; dmem:dataMem|mem[133][7]                ; 1       ;
+; dmem:dataMem|mem[132][7]                ; 1       ;
+; dmem:dataMem|mem[134][9]                ; 1       ;
+; dmem:dataMem|mem[140][9]                ; 1       ;
+; dmem:dataMem|mem[140][10]               ; 1       ;
+; dmem:dataMem|mem[0][10]                 ; 1       ;
+; dmem:dataMem|mem[140][11]               ; 1       ;
+; dmem:dataMem|mem[134][11]               ; 1       ;
+; dmem:dataMem|mem[140][12]               ; 1       ;
+; dmem:dataMem|mem[128][12]               ; 1       ;
+; dmem:dataMem|mem[140][13]               ; 1       ;
+; dmem:dataMem|mem[128][14]               ; 1       ;
+; dmem:dataMem|mem[140][14]               ; 1       ;
+; dmem:dataMem|mem[134][14]               ; 1       ;
+; dmem:dataMem|mem[140][15]               ; 1       ;
+; dmem:dataMem|mem[134][15]               ; 1       ;
+; dmem:dataMem|mem[128][15]               ; 1       ;
+; dmem:dataMem|mem[128][16]               ; 1       ;
+; dmem:dataMem|mem[128][17]               ; 1       ;
+; dmem:dataMem|mem[140][17]               ; 1       ;
+; dmem:dataMem|mem[128][18]               ; 1       ;
+; dmem:dataMem|mem[140][19]               ; 1       ;
+; dmem:dataMem|mem[128][19]               ; 1       ;
+; dmem:dataMem|mem[128][20]               ; 1       ;
+; dmem:dataMem|mem[128][21]               ; 1       ;
+; dmem:dataMem|mem[140][22]               ; 1       ;
+; dmem:dataMem|mem[134][22]               ; 1       ;
+; dmem:dataMem|mem[128][22]               ; 1       ;
+; dmem:dataMem|mem[134][23]               ; 1       ;
+; dmem:dataMem|mem[128][23]               ; 1       ;
+; dmem:dataMem|mem[140][23]               ; 1       ;
+; Total number of inverted registers = 61 ;         ;
++-----------------------------------------+---------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                  ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                        ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------+
+; 8:1                ; 64 bits   ; 320 LEs       ; 256 LEs              ; 64 LEs                 ; No         ; |processor_arm|datapath:dp|execute:EXECUTE|alu:ALU|Mux36          ;
+; 257:1              ; 64 bits   ; 10944 LEs     ; 10944 LEs            ; 0 LEs                  ; No         ; |processor_arm|datapath:dp|writeback:WRITEBACK|mux2:MtoRmux|y[46] ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Top-level Entity: |processor_arm ;
++----------------+-------+------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                 ;
++----------------+-------+------------------------------------------------------+
+; N              ; 64    ; Signed Integer                                       ;
++----------------+-------+------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------+
+; Parameter Settings for User Entity Instance: datapath:dp ;
++----------------+-------+---------------------------------+
+; Parameter Name ; Value ; Type                            ;
++----------------+-------+---------------------------------+
+; N              ; 64    ; Signed Integer                  ;
++----------------+-------+---------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: datapath:dp|fetch:FETCH ;
++----------------+-------+---------------------------------------------+
+; Parameter Name ; Value ; Type                                        ;
++----------------+-------+---------------------------------------------+
+; N              ; 64    ; Signed Integer                              ;
++----------------+-------+---------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: datapath:dp|fetch:FETCH|flopr:PC ;
++----------------+-------+------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                 ;
++----------------+-------+------------------------------------------------------+
+; N              ; 64    ; Signed Integer                                       ;
++----------------+-------+------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: datapath:dp|fetch:FETCH|adder:Add ;
++----------------+-------+-------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                  ;
++----------------+-------+-------------------------------------------------------+
+; N              ; 64    ; Signed Integer                                        ;
++----------------+-------+-------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: datapath:dp|fetch:FETCH|mux2:MUX1 ;
++----------------+-------+-------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                  ;
++----------------+-------+-------------------------------------------------------+
+; N              ; 64    ; Signed Integer                                        ;
++----------------+-------+-------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: datapath:dp|fetch:FETCH|mux2:MUX2 ;
++----------------+-------+-------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                  ;
++----------------+-------+-------------------------------------------------------+
+; N              ; 64    ; Signed Integer                                        ;
++----------------+-------+-------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: datapath:dp|decode:DECODE ;
++----------------+-------+-----------------------------------------------+
+; Parameter Name ; Value ; Type                                          ;
++----------------+-------+-----------------------------------------------+
+; N              ; 64    ; Signed Integer                                ;
++----------------+-------+-----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: datapath:dp|decode:DECODE|mux2:ra2mux ;
++----------------+-------+-----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                      ;
++----------------+-------+-----------------------------------------------------------+
+; N              ; 5     ; Signed Integer                                            ;
++----------------+-------+-----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: datapath:dp|decode:DECODE|regfile:registers ;
++----------------+-------+-----------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                            ;
++----------------+-------+-----------------------------------------------------------------+
+; N              ; 64    ; Signed Integer                                                  ;
++----------------+-------+-----------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: datapath:dp|execute:EXECUTE ;
++----------------+-------+-------------------------------------------------+
+; Parameter Name ; Value ; Type                                            ;
++----------------+-------+-------------------------------------------------+
+; N              ; 64    ; Signed Integer                                  ;
++----------------+-------+-------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: datapath:dp|execute:EXECUTE|mux4:MUX_E ;
++----------------+-------+------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                       ;
++----------------+-------+------------------------------------------------------------+
+; N              ; 64    ; Signed Integer                                             ;
++----------------+-------+------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: datapath:dp|execute:EXECUTE|alu:ALU ;
++----------------+-------+---------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                    ;
++----------------+-------+---------------------------------------------------------+
+; N              ; 64    ; Signed Integer                                          ;
++----------------+-------+---------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: datapath:dp|execute:EXECUTE|sl2:ShiftLeft_E ;
++----------------+-------+-----------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                            ;
++----------------+-------+-----------------------------------------------------------------+
+; N              ; 64    ; Signed Integer                                                  ;
++----------------+-------+-----------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: datapath:dp|execute:EXECUTE|adder:Add_E ;
++----------------+-------+-------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                        ;
++----------------+-------+-------------------------------------------------------------+
+; N              ; 64    ; Signed Integer                                              ;
++----------------+-------+-------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: datapath:dp|writeback:WRITEBACK ;
++----------------+-------+-----------------------------------------------------+
+; Parameter Name ; Value ; Type                                                ;
++----------------+-------+-----------------------------------------------------+
+; N              ; 64    ; Signed Integer                                      ;
++----------------+-------+-----------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: datapath:dp|writeback:WRITEBACK|mux2:MtoRmux ;
++----------------+-------+------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                             ;
++----------------+-------+------------------------------------------------------------------+
+; N              ; 64    ; Signed Integer                                                   ;
++----------------+-------+------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: datapath:dp|exception:EXCEPTION|comp_n:EV_Comp ;
++----------------+-------+--------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                               ;
++----------------+-------+--------------------------------------------------------------------+
+; N              ; 64    ; Signed Integer                                                     ;
++----------------+-------+--------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: datapath:dp|exception:EXCEPTION|flopr_e:ERR ;
++----------------+-------+-----------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                            ;
++----------------+-------+-----------------------------------------------------------------+
+; N              ; 64    ; Signed Integer                                                  ;
++----------------+-------+-----------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: datapath:dp|exception:EXCEPTION|flopr_e:ELR ;
++----------------+-------+-----------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                            ;
++----------------+-------+-----------------------------------------------------------------+
+; N              ; 64    ; Signed Integer                                                  ;
++----------------+-------+-----------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: datapath:dp|exception:EXCEPTION|flopr_e:ESR ;
++----------------+-------+-----------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                            ;
++----------------+-------+-----------------------------------------------------------------+
+; N              ; 4     ; Signed Integer                                                  ;
++----------------+-------+-----------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: datapath:dp|exception:EXCEPTION|mux2:RET_SEL ;
++----------------+-------+------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                             ;
++----------------+-------+------------------------------------------------------------------+
+; N              ; 64    ; Signed Integer                                                   ;
++----------------+-------+------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: datapath:dp|exception:EXCEPTION|mux4:D_SEL ;
++----------------+-------+----------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                           ;
++----------------+-------+----------------------------------------------------------------+
+; N              ; 64    ; Signed Integer                                                 ;
++----------------+-------+----------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: imem:instrMem ;
++----------------+-------+-----------------------------------+
+; Parameter Name ; Value ; Type                              ;
++----------------+-------+-----------------------------------+
+; N              ; 32    ; Signed Integer                    ;
++----------------+-------+-----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------+
+; Port Connectivity Checks: "datapath:dp|exception:EXCEPTION|mux4:D_SEL" ;
++-----------+-------+----------+-----------------------------------------+
+; Port      ; Type  ; Severity ; Details                                 ;
++-----------+-------+----------+-----------------------------------------+
+; d2[63..4] ; Input ; Info     ; Stuck at GND                            ;
+; d3        ; Input ; Info     ; Stuck at GND                            ;
++-----------+-------+----------+-----------------------------------------+
+
+
++----------------------------------------------------------------------------+
+; Port Connectivity Checks: "datapath:dp|exception:EXCEPTION|comp_n:EV_Comp" ;
++----------+-------+----------+----------------------------------------------+
+; Port     ; Type  ; Severity ; Details                                      ;
++----------+-------+----------+----------------------------------------------+
+; b[7..6]  ; Input ; Info     ; Stuck at VCC                                 ;
+; b[4..3]  ; Input ; Info     ; Stuck at VCC                                 ;
+; b[63..8] ; Input ; Info     ; Stuck at GND                                 ;
+; b[2..0]  ; Input ; Info     ; Stuck at GND                                 ;
+; b[5]     ; Input ; Info     ; Stuck at GND                                 ;
++----------+-------+----------+----------------------------------------------+
+
+
++---------------------------------------------------------------+
+; Port Connectivity Checks: "datapath:dp|fetch:FETCH|adder:Add" ;
++----------+-------+----------+---------------------------------+
+; Port     ; Type  ; Severity ; Details                         ;
++----------+-------+----------+---------------------------------+
+; b[63..3] ; Input ; Info     ; Stuck at GND                    ;
+; b[1..0]  ; Input ; Info     ; Stuck at GND                    ;
+; b[2]     ; Input ; Info     ; Stuck at VCC                    ;
++----------+-------+----------+---------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "datapath:dp"                                                                                  ;
++----------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port           ; Type   ; Severity ; Details                                                                             ;
++----------------+--------+----------+-------------------------------------------------------------------------------------+
+; IM_addr[63..9] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; IM_addr[1..0]  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------------+--------+----------+-------------------------------------------------------------------------------------+
 
 
 +-----------------------------------------------------+
@@ -239,16 +724,22 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 33                          ;
-; cycloneiii_lcell_comb ; 38                          ;
-;     normal            ; 38                          ;
+; boundary_port         ; 134                         ;
+; cycloneiii_ff         ; 18494                       ;
+;     CLR SLD           ; 62                          ;
+;     ENA               ; 18432                       ;
+; cycloneiii_lcell_comb ; 14811                       ;
+;     arith             ; 125                         ;
+;         3 data inputs ; 125                         ;
+;     normal            ; 14686                       ;
 ;         0 data inputs ; 1                           ;
-;         2 data inputs ; 5                           ;
-;         3 data inputs ; 13                          ;
-;         4 data inputs ; 19                          ;
+;         1 data inputs ; 136                         ;
+;         2 data inputs ; 26                          ;
+;         3 data inputs ; 388                         ;
+;         4 data inputs ; 14135                       ;
 ;                       ;                             ;
-; Max LUT depth         ; 6.00                        ;
-; Average LUT depth     ; 4.71                        ;
+; Max LUT depth         ; 35.50                       ;
+; Average LUT depth     ; 15.93                       ;
 +-----------------------+-----------------------------+
 
 
@@ -257,7 +748,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:00     ;
+; Top            ; 00:01:00     ;
 +----------------+--------------+
 
 
@@ -267,7 +758,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Tue Sep 12 21:25:40 2023
+    Info: Processing started: Wed Sep 13 13:42:50 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off arm_processor_w_exceptions -c arm_processor_w_exceptions
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
@@ -322,30 +813,59 @@ Info (12021): Found 1 design units, including 1 entities, in source file alu.sv
     Info (12023): Found entity 1: alu File: /home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/alu.sv Line: 3
 Info (12021): Found 1 design units, including 1 entities, in source file adder.sv
     Info (12023): Found entity 1: adder File: /home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/adder.sv Line: 3
-Info (12127): Elaborating entity "controller" for the top level hierarchy
-Info (12128): Elaborating entity "maindec" for hierarchy "maindec:decPpal" File: /home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/controller.sv Line: 23
-Warning (10230): Verilog HDL assignment warning at maindec.sv(62): truncated value with size 32 to match size of target (1) File: /home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/maindec.sv Line: 62
-Warning (10230): Verilog HDL assignment warning at maindec.sv(124): truncated value with size 32 to match size of target (1) File: /home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/maindec.sv Line: 124
-Warning (10230): Verilog HDL assignment warning at maindec.sv(125): truncated value with size 32 to match size of target (2) File: /home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/maindec.sv Line: 125
-Warning (10230): Verilog HDL assignment warning at maindec.sv(131): truncated value with size 32 to match size of target (2) File: /home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/maindec.sv Line: 131
-Info (12128): Elaborating entity "aludec" for hierarchy "aludec:decAlu" File: /home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/controller.sv Line: 28
-Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "AluControl[3]" is stuck at GND File: /home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/controller.sv Line: 5
-    Warning (13410): Pin "EStatus[2]" is stuck at GND File: /home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/controller.sv Line: 5
-    Warning (13410): Pin "EStatus[3]" is stuck at GND File: /home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/controller.sv Line: 5
+Info (12127): Elaborating entity "processor_arm" for the top level hierarchy
+Info (12128): Elaborating entity "controller" for hierarchy "controller:c" File: /home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/processor_arm.sv Line: 35
+Info (12128): Elaborating entity "maindec" for hierarchy "controller:c|maindec:decPpal" File: /home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/controller.sv Line: 23
+Warning (10230): Verilog HDL assignment warning at maindec.sv(75): truncated value with size 32 to match size of target (1) File: /home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/maindec.sv Line: 75
+Warning (10230): Verilog HDL assignment warning at maindec.sv(137): truncated value with size 32 to match size of target (1) File: /home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/maindec.sv Line: 137
+Warning (10230): Verilog HDL assignment warning at maindec.sv(138): truncated value with size 32 to match size of target (2) File: /home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/maindec.sv Line: 138
+Warning (10230): Verilog HDL assignment warning at maindec.sv(144): truncated value with size 32 to match size of target (2) File: /home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/maindec.sv Line: 144
+Info (12128): Elaborating entity "aludec" for hierarchy "controller:c|aludec:decAlu" File: /home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/controller.sv Line: 28
+Info (12128): Elaborating entity "datapath" for hierarchy "datapath:dp" File: /home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/processor_arm.sv Line: 58
+Info (12128): Elaborating entity "fetch" for hierarchy "datapath:dp|fetch:FETCH" File: /home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/datapath.sv Line: 36
+Info (12128): Elaborating entity "flopr" for hierarchy "datapath:dp|fetch:FETCH|flopr:PC" File: /home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/fetch.sv Line: 8
+Info (12128): Elaborating entity "adder" for hierarchy "datapath:dp|fetch:FETCH|adder:Add" File: /home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/fetch.sv Line: 9
+Info (12128): Elaborating entity "mux2" for hierarchy "datapath:dp|fetch:FETCH|mux2:MUX1" File: /home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/fetch.sv Line: 10
+Info (12128): Elaborating entity "decode" for hierarchy "datapath:dp|decode:DECODE" File: /home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/datapath.sv Line: 47
+Info (12128): Elaborating entity "mux2" for hierarchy "datapath:dp|decode:DECODE|mux2:ra2mux" File: /home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/decode.sv Line: 11
+Info (12128): Elaborating entity "regfile" for hierarchy "datapath:dp|decode:DECODE|regfile:registers" File: /home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/decode.sv Line: 14
+Info (12128): Elaborating entity "signext" for hierarchy "datapath:dp|decode:DECODE|signext:ext" File: /home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/decode.sv Line: 17
+Info (12128): Elaborating entity "execute" for hierarchy "datapath:dp|execute:EXECUTE" File: /home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/datapath.sv Line: 61
+Info (12128): Elaborating entity "mux4" for hierarchy "datapath:dp|execute:EXECUTE|mux4:MUX_E" File: /home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/execute.sv Line: 10
+Info (12128): Elaborating entity "alu" for hierarchy "datapath:dp|execute:EXECUTE|alu:ALU" File: /home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/execute.sv Line: 11
+Info (12128): Elaborating entity "sl2" for hierarchy "datapath:dp|execute:EXECUTE|sl2:ShiftLeft_E" File: /home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/execute.sv Line: 12
+Info (12128): Elaborating entity "memory" for hierarchy "datapath:dp|memory:MEMORY" File: /home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/datapath.sv Line: 65
+Info (12128): Elaborating entity "writeback" for hierarchy "datapath:dp|writeback:WRITEBACK" File: /home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/datapath.sv Line: 72
+Info (12128): Elaborating entity "exception" for hierarchy "datapath:dp|exception:EXCEPTION" File: /home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/datapath.sv Line: 86
+Info (12128): Elaborating entity "comp_n" for hierarchy "datapath:dp|exception:EXCEPTION|comp_n:EV_Comp" File: /home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/exception.sv Line: 17
+Info (12128): Elaborating entity "esync" for hierarchy "datapath:dp|exception:EXCEPTION|esync:ESync" File: /home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/exception.sv Line: 18
+Warning (10240): Verilog HDL Always Construct warning at esync.sv(4): inferring latch(es) for variable "out", which holds its previous value in one or more paths through the always construct File: /home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/esync.sv Line: 4
+Info (10041): Inferred latch for "out" at esync.sv(4) File: /home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/esync.sv Line: 4
+Info (12128): Elaborating entity "flopr_e" for hierarchy "datapath:dp|exception:EXCEPTION|flopr_e:ERR" File: /home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/exception.sv Line: 22
+Info (12128): Elaborating entity "flopr_e" for hierarchy "datapath:dp|exception:EXCEPTION|flopr_e:ESR" File: /home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/exception.sv Line: 24
+Info (12128): Elaborating entity "imem" for hierarchy "imem:instrMem" File: /home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/processor_arm.sv Line: 62
+Warning (10030): Net "ROM.data_a" at imem.sv(7) has no driver or initial value, using a default initial value '0' File: /home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/imem.sv Line: 7
+Warning (10030): Net "ROM.waddr_a" at imem.sv(7) has no driver or initial value, using a default initial value '0' File: /home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/imem.sv Line: 7
+Warning (10030): Net "ROM.we_a" at imem.sv(7) has no driver or initial value, using a default initial value '0' File: /home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/imem.sv Line: 7
+Info (12128): Elaborating entity "dmem" for hierarchy "dmem:dataMem" File: /home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/processor_arm.sv Line: 71
+Info (276014): Found 1 instances of uninferred RAM logic
+    Info (276007): RAM logic "datapath:dp|decode:DECODE|regfile:registers|REGS" is uninferred due to asynchronous read logic File: /home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/regfile.sv Line: 7
 Info (286030): Timing-Driven Synthesis is running
+Info (17049): 128 registers lost all their fanouts during netlist optimizations.
 Info (144001): Generated suppressed messages file /home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/output_files/arm_processor_w_exceptions.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 70 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 14 input pins
-    Info (21059): Implemented 19 output pins
-    Info (21061): Implemented 37 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 9 warnings
-    Info: Peak virtual memory: 427 megabytes
-    Info: Processing ended: Tue Sep 12 21:25:47 2023
-    Info: Elapsed time: 00:00:07
-    Info: Total CPU time (on all processors): 00:00:13
+Warning (21074): Design contains 1 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "dump" File: /home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/processor_arm.sv Line: 9
+Info (21057): Implemented 33241 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 4 input pins
+    Info (21059): Implemented 130 output pins
+    Info (21061): Implemented 33107 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 11 warnings
+    Info: Peak virtual memory: 596 megabytes
+    Info: Processing ended: Wed Sep 13 13:44:00 2023
+    Info: Elapsed time: 00:01:10
+    Info: Total CPU time (on all processors): 00:01:16
 
 
 +------------------------------------------+

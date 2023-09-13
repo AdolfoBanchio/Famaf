@@ -26,16 +26,18 @@ module controller(input logic [10:0] instr,
 	aludec 	decAlu 	(.funct(instr), 
 							.aluop(AluOp_s), 
 							.alucontrol(AluControl));
-
-	always_comb begin
-    Exc <= ExtIRQ || NotAnInstr;
-    ExtIAck<= ExcAck && ExtIRQ;
     
-    if (NotAnInstr)
-        EStatus <= 4'b0010;
-    else if (ExtIRQ)
-        EStatus <= 4'b0001;
-    else
-        EStatus <= 4'b0000;
+    assign Exc = (ExtIRQ || NotAnInstr) && ~reset;
+    assign ExtIAck = (ExcAck && ExtIRQ) && ~reset;
+    
+	always_comb begin
+        if (reset)
+            EStatus <= 4'b0000;
+        else if (NotAnInstr)
+            EStatus <= 4'b0010;
+        else if (ExtIRQ)
+            EStatus <= 4'b0001;
+        else
+            EStatus <= 4'b0000;
     end
 endmodule

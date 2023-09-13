@@ -60,7 +60,7 @@ module maindec(input logic [10:0]op,
 								Reg2Loc='b0;
 								ALUSrc='b00;
 								MemtoReg='b0;
-								RegWrite='b1;
+								RegWrite='b0;
 								MemRead='b0;
 								MemWrite='b0;
 								Branch='b0;
