@@ -2,9 +2,21 @@
 
 /*Listar el nombre de la ciudad y el nombre del país de todas las ciudades 
  * que pertenezcan a países con una población menor a 10000 habitantes.*/
-select ci.name Ciudad, c.Name Pais 
-from (city ci inner join country c on ci.CountryCode = c.Code) 
-where (ci.CountryCode) IN (select c.Code  from country c where Population < 10000);
+select
+	ci.name Ciudad,
+	c.Name Pais
+from
+	(city ci
+inner join country c on
+	ci.CountryCode = c.Code)
+where
+	(ci.CountryCode) IN (
+	select
+		c.Code
+	from
+		country c
+	where
+		Population < 10000);
 
 SELECT city.Name Ciudad, 
        (SELECT country.Name FROM country WHERE country.Code = city.CountryCode) AS Pais
@@ -78,11 +90,43 @@ from unoficial_lenguages ul
 where ul.Percentage > ALL (select avg(l.Percentage) from countrylanguage l where l.IsOfficial='T' and ul.Code = l.CountryCode);
 
 /*Listar la cantidad de habitantes por continente ordenado en forma descendente.*/
-
+select cont.Name Continente , sum(c.Population) Poblacion
+from (continent cont inner join
+	  country c on 
+	  cont.Name=c.Continent)
+GROUP BY Continente
+order by Poblacion DESC ;
+		
 /*Listar el promedio de esperanza de vida (LifeExpectancy) por continente con una esperanza de vida entre 40 y 70 años.*/
+select cont.Name Continente , avg(c.LifeExpectancy) EsperanzaDeVida
+from (continent cont inner join
+	  country c on 
+	  cont.Name=c.Continent)
+WHERE c.LifeExpectancy BETWEEN 40 AND 70
+GROUP BY Continente
+order by  EsperanzaDeVida DESC ; -- Esperanza de vida promedio entre los paises con esperanza de vida de 40 a 70
 
+select cont.Name Continente , avg(c.LifeExpectancy) EsperanzaDeVida
+from (continent cont inner join
+	  country c on 
+	  cont.Name=c.Continent)
+GROUP BY Continente
+HAVING EsperanzaDeVida BETWEEN 40 AND 70
+ORDER BY EsperanzaDeVida DESC ;
 /*Listar la cantidad máxima, mínima, promedio y suma de habitantes por continente.*/
-
+select
+	cont.Name Continente ,
+	MIN(c.Population) Pop_min,
+	MAX(c.Population) Pop_max,
+	AVG(c.Population) Pop_avg,
+	SUM(c.Population) Pop_sum
+from
+	(continent cont
+inner join
+	  country c on 
+	  cont.Name = c.Continent)
+GROUP BY
+	Continente;		
 -- Parte II - Preguntas
 
 /*Si en la consulta 6 se quisiera devolver, además de las columnas ya solicitadas, el nombre de la ciudad más poblada. 
