@@ -1,16 +1,10 @@
 	.text
 	.org 0x0000
-	// N = 29
-	ADD x2, xzr, xzr // x2 = 0
-loop: // while x0 != 30
-	SUB x3, x0, x30
-	CBZ x3, end
-	STUR x0, [x2, #0]
-	ADD x0, x1, x0
-	ADD x2, x2, x8
-	CBZ xzr, loop
-end:
-	
+	add x1, x2, x3 //x1 =5
+	stur x1, [x0, #0] //mem[0] = 5
+	sub x2, x15, x1 //x2 = 15-5 = 10
+	stur x2, [x0, #4] //mem[1] = 10
+	ldur x3, [x0, #0] //x3 = mem[0] = 5
+	add x4, x3, x2 //x4 = 5+10 = 15
+	ldur x4, [x0, #8] //mem[2] = 10
 
-infLoop:  
-	cbz XZR, infLoop

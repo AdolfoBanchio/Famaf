@@ -1,7 +1,7 @@
 module maindec(input logic [10:0]op,
 					input logic reset,
 					output logic Reg2Loc,MemtoReg,RegWrite,
-					MemRead,MemWrite,Branch,NotAnInstr,ERet,
+					MemRead,MemWrite,Branch,NotAnInstr,ERet, UncondBranch,
 					output logic [1:0]ALUOp,ALUSrc);
 	always_comb begin
 		if (!reset) begin
@@ -15,6 +15,7 @@ module maindec(input logic [10:0]op,
 								MemRead='b0;
 								MemWrite='b0;
 								Branch='b0;
+                                UncondBranch='b0;
 								ALUOp='b10;
 								NotAnInstr='b0;
 								ERet='b0;
@@ -27,6 +28,7 @@ module maindec(input logic [10:0]op,
 								MemRead='b0;
 								MemWrite='b0;
 								Branch='b0;
+                                UncondBranch='b0;
 								ALUOp='b10;
 								NotAnInstr='b0;
 								ERet='b0;
@@ -39,6 +41,7 @@ module maindec(input logic [10:0]op,
 								MemRead='b0;
 								MemWrite='b0;
 								Branch='b0;
+                                UncondBranch='b0;
 								ALUOp='b10;
 								NotAnInstr='b0;
 								ERet='b0;
@@ -51,6 +54,7 @@ module maindec(input logic [10:0]op,
 								MemRead='b0;
 								MemWrite='b0;
 								Branch='b0;
+                                UncondBranch='b0;
 								ALUOp='b10;
 								NotAnInstr='b0;
 								ERet='b0;
@@ -64,6 +68,7 @@ module maindec(input logic [10:0]op,
 								MemRead='b0;
 								MemWrite='b0;
 								Branch='b0;
+                                UncondBranch='b1;
 								ALUOp='b10;
 								NotAnInstr='b0;
 								ERet='b0;
@@ -77,6 +82,7 @@ module maindec(input logic [10:0]op,
 								MemRead='b0;
 								MemWrite='b0;
 								Branch='b1;
+                                UncondBranch='b0;
 								ALUOp='b01;
 								NotAnInstr='b0;
 								ERet='b1;
@@ -90,6 +96,7 @@ module maindec(input logic [10:0]op,
 								MemRead='b0;
 								MemWrite='b0;
 								Branch='b0;
+                                UncondBranch='b0;
 								ALUOp='b01;
 								NotAnInstr='b0;
 								ERet='b0;
@@ -103,6 +110,7 @@ module maindec(input logic [10:0]op,
 								MemRead='b1;
 								MemWrite='b0;
 								Branch='b0;
+                                UncondBranch='b0;
 								ALUOp='b00;
 								NotAnInstr='b0;
 								ERet='b0;
@@ -116,6 +124,7 @@ module maindec(input logic [10:0]op,
 								MemRead='b0;
 								MemWrite='b1;
 								Branch='b0;
+                                UncondBranch='b0;
 								ALUOp='b00;
 								NotAnInstr='b0;
 								ERet='b0;
@@ -129,6 +138,7 @@ module maindec(input logic [10:0]op,
 								MemRead='b0;
 								MemWrite='b0;
 								Branch='b1;
+                                UncondBranch='b0;
 								ALUOp='b01;
 								NotAnInstr='b0;
 								ERet='b0;
@@ -141,6 +151,7 @@ module maindec(input logic [10:0]op,
 						 MemRead='b0;
 						 MemWrite='b0;
 						 Branch='b1;
+                         UncondBranch='b0;
 						 ALUOp='bXX;
 						 NotAnInstr='b1;
 						 ERet='b0;
@@ -154,6 +165,7 @@ module maindec(input logic [10:0]op,
 			MemRead='b0;
 			MemWrite='b0;
 			Branch='b0;
+            UncondBranch='b0;
 			ALUOp='b00;
 			NotAnInstr='b0;
 			ERet='b0;
