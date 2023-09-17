@@ -1,5 +1,9 @@
 Analysis & Synthesis report for arm_processor_w_exceptions
+<<<<<<< HEAD
 Wed Sep 13 18:21:54 2023
+=======
+Wed Sep 13 15:00:46 2023
+>>>>>>> 5fc8d1ef87bedbe36cc02a4eb8e3abb49b57f021
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -80,7 +84,11 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
+<<<<<<< HEAD
 ; Analysis & Synthesis Status        ; Successful - Wed Sep 13 18:21:53 2023       ;
+=======
+; Analysis & Synthesis Status        ; Successful - Wed Sep 13 15:00:46 2023       ;
+>>>>>>> 5fc8d1ef87bedbe36cc02a4eb8e3abb49b57f021
 ; Quartus Prime Version              ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                      ; arm_processor_w_exceptions                  ;
 ; Top-level Entity Name              ; processor_arm                               ;
@@ -189,52 +197,55 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 6           ;
-; Maximum allowed            ; 6           ;
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
 ;                            ;             ;
 ; Average used               ; 1.01        ;
-; Maximum used               ; 6           ;
+; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
 ;     Processor 2            ;   0.3%      ;
 ;     Processor 3            ;   0.3%      ;
 ;     Processor 4            ;   0.2%      ;
+<<<<<<< HEAD
 ;     Processor 5            ;   0.2%      ;
 ;     Processor 6            ;   0.2%      ;
+=======
+>>>>>>> 5fc8d1ef87bedbe36cc02a4eb8e3abb49b57f021
 +----------------------------+-------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                               ;
-+----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                           ; Library ;
-+----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------------------+---------+
-; maindec.sv                       ; yes             ; User SystemVerilog HDL File  ; /home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/maindec.sv       ;         ;
-; aludec.sv                        ; yes             ; User SystemVerilog HDL File  ; /home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/aludec.sv        ;         ;
-; controller.sv                    ; yes             ; User SystemVerilog HDL File  ; /home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/controller.sv    ;         ;
-; writeback.sv                     ; yes             ; User SystemVerilog HDL File  ; /home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/writeback.sv     ;         ;
-; sl2.sv                           ; yes             ; User SystemVerilog HDL File  ; /home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/sl2.sv           ;         ;
-; signext.sv                       ; yes             ; User SystemVerilog HDL File  ; /home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/signext.sv       ;         ;
-; regfile.sv                       ; yes             ; User SystemVerilog HDL File  ; /home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/regfile.sv       ;         ;
-; processor_arm.sv                 ; yes             ; User SystemVerilog HDL File  ; /home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/processor_arm.sv ;         ;
-; mux4.sv                          ; yes             ; User SystemVerilog HDL File  ; /home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/mux4.sv          ;         ;
-; mux2.sv                          ; yes             ; User SystemVerilog HDL File  ; /home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/mux2.sv          ;         ;
-; memory.sv                        ; yes             ; User SystemVerilog HDL File  ; /home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/memory.sv        ;         ;
-; imem.sv                          ; yes             ; User SystemVerilog HDL File  ; /home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/imem.sv          ;         ;
-; flopr_e.sv                       ; yes             ; User SystemVerilog HDL File  ; /home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/flopr_e.sv       ;         ;
-; flopr.sv                         ; yes             ; User SystemVerilog HDL File  ; /home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/flopr.sv         ;         ;
-; fetch.sv                         ; yes             ; User SystemVerilog HDL File  ; /home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/fetch.sv         ;         ;
-; execute.sv                       ; yes             ; User SystemVerilog HDL File  ; /home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/execute.sv       ;         ;
-; exception.sv                     ; yes             ; User SystemVerilog HDL File  ; /home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/exception.sv     ;         ;
-; esync.sv                         ; yes             ; User SystemVerilog HDL File  ; /home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/esync.sv         ;         ;
-; dmem.vhd                         ; yes             ; User VHDL File               ; /home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/dmem.vhd         ;         ;
-; decode.sv                        ; yes             ; User SystemVerilog HDL File  ; /home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/decode.sv        ;         ;
-; datapath.sv                      ; yes             ; User SystemVerilog HDL File  ; /home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/datapath.sv      ;         ;
-; comp_n.sv                        ; yes             ; User SystemVerilog HDL File  ; /home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/comp_n.sv        ;         ;
-; alu.sv                           ; yes             ; User SystemVerilog HDL File  ; /home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/alu.sv           ;         ;
-; adder.sv                         ; yes             ; User SystemVerilog HDL File  ; /home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/adder.sv         ;         ;
-+----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------------------+---------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                ;
++----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                            ; Library ;
++----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------------------------+---------+
+; maindec.sv                       ; yes             ; User SystemVerilog HDL File  ; /home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/maindec.sv       ;         ;
+; aludec.sv                        ; yes             ; User SystemVerilog HDL File  ; /home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/aludec.sv        ;         ;
+; controller.sv                    ; yes             ; User SystemVerilog HDL File  ; /home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/controller.sv    ;         ;
+; writeback.sv                     ; yes             ; User SystemVerilog HDL File  ; /home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/writeback.sv     ;         ;
+; sl2.sv                           ; yes             ; User SystemVerilog HDL File  ; /home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/sl2.sv           ;         ;
+; signext.sv                       ; yes             ; User SystemVerilog HDL File  ; /home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/signext.sv       ;         ;
+; regfile.sv                       ; yes             ; User SystemVerilog HDL File  ; /home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/regfile.sv       ;         ;
+; processor_arm.sv                 ; yes             ; User SystemVerilog HDL File  ; /home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/processor_arm.sv ;         ;
+; mux4.sv                          ; yes             ; User SystemVerilog HDL File  ; /home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/mux4.sv          ;         ;
+; mux2.sv                          ; yes             ; User SystemVerilog HDL File  ; /home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/mux2.sv          ;         ;
+; memory.sv                        ; yes             ; User SystemVerilog HDL File  ; /home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/memory.sv        ;         ;
+; imem.sv                          ; yes             ; User SystemVerilog HDL File  ; /home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/imem.sv          ;         ;
+; flopr_e.sv                       ; yes             ; User SystemVerilog HDL File  ; /home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/flopr_e.sv       ;         ;
+; flopr.sv                         ; yes             ; User SystemVerilog HDL File  ; /home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/flopr.sv         ;         ;
+; fetch.sv                         ; yes             ; User SystemVerilog HDL File  ; /home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/fetch.sv         ;         ;
+; execute.sv                       ; yes             ; User SystemVerilog HDL File  ; /home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/execute.sv       ;         ;
+; exception.sv                     ; yes             ; User SystemVerilog HDL File  ; /home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/exception.sv     ;         ;
+; esync.sv                         ; yes             ; User SystemVerilog HDL File  ; /home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/esync.sv         ;         ;
+; dmem.vhd                         ; yes             ; User VHDL File               ; /home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/dmem.vhd         ;         ;
+; decode.sv                        ; yes             ; User SystemVerilog HDL File  ; /home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/decode.sv        ;         ;
+; datapath.sv                      ; yes             ; User SystemVerilog HDL File  ; /home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/datapath.sv      ;         ;
+; comp_n.sv                        ; yes             ; User SystemVerilog HDL File  ; /home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/comp_n.sv        ;         ;
+; alu.sv                           ; yes             ; User SystemVerilog HDL File  ; /home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/alu.sv           ;         ;
+; adder.sv                         ; yes             ; User SystemVerilog HDL File  ; /home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/adder.sv         ;         ;
++----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------------------------+---------+
 
 
 +--------------------------------------------------------------+
@@ -2316,7 +2327,11 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
+<<<<<<< HEAD
 ; Top            ; 00:00:34     ;
+=======
+; Top            ; 00:01:06     ;
+>>>>>>> 5fc8d1ef87bedbe36cc02a4eb8e3abb49b57f021
 +----------------+--------------+
 
 
@@ -2326,62 +2341,67 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
+<<<<<<< HEAD
     Info: Processing started: Wed Sep 13 18:21:10 2023
+=======
+    Info: Processing started: Wed Sep 13 14:59:29 2023
+>>>>>>> 5fc8d1ef87bedbe36cc02a4eb8e3abb49b57f021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off arm_processor_w_exceptions -c arm_processor_w_exceptions
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file maindec.sv
-    Info (12023): Found entity 1: maindec File: /home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/maindec.sv Line: 1
+    Info (12023): Found entity 1: maindec File: /home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/maindec.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file aludec.sv
-    Info (12023): Found entity 1: aludec File: /home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/aludec.sv Line: 3
+    Info (12023): Found entity 1: aludec File: /home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/aludec.sv Line: 3
 Info (12021): Found 1 design units, including 1 entities, in source file controller.sv
-    Info (12023): Found entity 1: controller File: /home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/controller.sv Line: 3
+    Info (12023): Found entity 1: controller File: /home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/controller.sv Line: 3
 Info (12021): Found 1 design units, including 1 entities, in source file writeback.sv
-    Info (12023): Found entity 1: writeback File: /home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/writeback.sv Line: 3
+    Info (12023): Found entity 1: writeback File: /home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/writeback.sv Line: 3
 Info (12021): Found 1 design units, including 1 entities, in source file sl2.sv
-    Info (12023): Found entity 1: sl2 File: /home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/sl2.sv Line: 3
+    Info (12023): Found entity 1: sl2 File: /home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/sl2.sv Line: 3
 Info (12021): Found 1 design units, including 1 entities, in source file signext.sv
-    Info (12023): Found entity 1: signext File: /home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/signext.sv Line: 3
+    Info (12023): Found entity 1: signext File: /home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/signext.sv Line: 3
 Info (12021): Found 1 design units, including 1 entities, in source file regfile.sv
-    Info (12023): Found entity 1: regfile File: /home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/regfile.sv Line: 1
+    Info (12023): Found entity 1: regfile File: /home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/regfile.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file processor_tb.sv
-    Info (12023): Found entity 1: processor_tb File: /home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/processor_tb.sv Line: 4
+    Info (12023): Found entity 1: processor_tb File: /home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/processor_tb.sv Line: 4
 Info (12021): Found 1 design units, including 1 entities, in source file processor_arm.sv
-    Info (12023): Found entity 1: processor_arm File: /home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/processor_arm.sv Line: 3
+    Info (12023): Found entity 1: processor_arm File: /home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/processor_arm.sv Line: 3
 Info (12021): Found 1 design units, including 1 entities, in source file mux4.sv
-    Info (12023): Found entity 1: mux4 File: /home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/mux4.sv Line: 1
+    Info (12023): Found entity 1: mux4 File: /home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/mux4.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file mux2.sv
-    Info (12023): Found entity 1: mux2 File: /home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/mux2.sv Line: 3
+    Info (12023): Found entity 1: mux2 File: /home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/mux2.sv Line: 3
 Info (12021): Found 1 design units, including 1 entities, in source file memory.sv
-    Info (12023): Found entity 1: memory File: /home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/memory.sv Line: 3
+    Info (12023): Found entity 1: memory File: /home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/memory.sv Line: 3
 Info (12021): Found 1 design units, including 1 entities, in source file imem.sv
-    Info (12023): Found entity 1: imem File: /home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/imem.sv Line: 3
+    Info (12023): Found entity 1: imem File: /home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/imem.sv Line: 3
 Info (12021): Found 1 design units, including 1 entities, in source file flopr_e.sv
-    Info (12023): Found entity 1: flopr_e File: /home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/flopr_e.sv Line: 1
+    Info (12023): Found entity 1: flopr_e File: /home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/flopr_e.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file flopr.sv
-    Info (12023): Found entity 1: flopr File: /home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/flopr.sv Line: 3
+    Info (12023): Found entity 1: flopr File: /home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/flopr.sv Line: 3
 Info (12021): Found 1 design units, including 1 entities, in source file fetch.sv
-    Info (12023): Found entity 1: fetch File: /home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/fetch.sv Line: 1
+    Info (12023): Found entity 1: fetch File: /home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/fetch.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file execute.sv
-    Info (12023): Found entity 1: execute File: /home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/execute.sv Line: 1
+    Info (12023): Found entity 1: execute File: /home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/execute.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file exception.sv
-    Info (12023): Found entity 1: exception File: /home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/exception.sv Line: 1
+    Info (12023): Found entity 1: exception File: /home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/exception.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file esync.sv
-    Info (12023): Found entity 1: esync File: /home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/esync.sv Line: 1
+    Info (12023): Found entity 1: esync File: /home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/esync.sv Line: 1
 Info (12021): Found 2 design units, including 1 entities, in source file dmem.vhd
-    Info (12022): Found design unit 1: dmem-behave File: /home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/dmem.vhd Line: 22
-    Info (12023): Found entity 1: dmem File: /home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/dmem.vhd Line: 13
+    Info (12022): Found design unit 1: dmem-behave File: /home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/dmem.vhd Line: 22
+    Info (12023): Found entity 1: dmem File: /home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/dmem.vhd Line: 13
 Info (12021): Found 1 design units, including 1 entities, in source file decode.sv
-    Info (12023): Found entity 1: decode File: /home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/decode.sv Line: 3
+    Info (12023): Found entity 1: decode File: /home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/decode.sv Line: 3
 Info (12021): Found 1 design units, including 1 entities, in source file datapath.sv
-    Info (12023): Found entity 1: datapath File: /home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/datapath.sv Line: 3
+    Info (12023): Found entity 1: datapath File: /home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/datapath.sv Line: 3
 Info (12021): Found 1 design units, including 1 entities, in source file comp_n.sv
-    Info (12023): Found entity 1: comp_n File: /home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/comp_n.sv Line: 1
+    Info (12023): Found entity 1: comp_n File: /home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/comp_n.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file alu.sv
-    Info (12023): Found entity 1: alu File: /home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/alu.sv Line: 3
+    Info (12023): Found entity 1: alu File: /home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/alu.sv Line: 3
 Info (12021): Found 1 design units, including 1 entities, in source file adder.sv
-    Info (12023): Found entity 1: adder File: /home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/adder.sv Line: 3
+    Info (12023): Found entity 1: adder File: /home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/adder.sv Line: 3
 Info (12127): Elaborating entity "processor_arm" for the top level hierarchy
+<<<<<<< HEAD
 Info (12128): Elaborating entity "controller" for hierarchy "controller:c" File: /home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/processor_arm.sv Line: 35
 Info (12128): Elaborating entity "maindec" for hierarchy "controller:c|maindec:decPpal" File: /home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/controller.sv Line: 24
 Warning (10230): Verilog HDL assignment warning at maindec.sv(80): truncated value with size 32 to match size of target (1) File: /home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/maindec.sv Line: 80
@@ -2437,11 +2457,65 @@ Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 14 warnings
     Info: Processing ended: Wed Sep 13 18:21:54 2023
     Info: Elapsed time: 00:00:44
     Info: Total CPU time (on all processors): 00:00:50
+=======
+Info (12128): Elaborating entity "controller" for hierarchy "controller:c" File: /home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/processor_arm.sv Line: 35
+Info (12128): Elaborating entity "maindec" for hierarchy "controller:c|maindec:decPpal" File: /home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/controller.sv Line: 23
+Warning (10230): Verilog HDL assignment warning at maindec.sv(75): truncated value with size 32 to match size of target (1) File: /home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/maindec.sv Line: 75
+Warning (10230): Verilog HDL assignment warning at maindec.sv(137): truncated value with size 32 to match size of target (1) File: /home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/maindec.sv Line: 137
+Warning (10230): Verilog HDL assignment warning at maindec.sv(138): truncated value with size 32 to match size of target (2) File: /home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/maindec.sv Line: 138
+Warning (10230): Verilog HDL assignment warning at maindec.sv(144): truncated value with size 32 to match size of target (2) File: /home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/maindec.sv Line: 144
+Info (12128): Elaborating entity "aludec" for hierarchy "controller:c|aludec:decAlu" File: /home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/controller.sv Line: 28
+Info (12128): Elaborating entity "datapath" for hierarchy "datapath:dp" File: /home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/processor_arm.sv Line: 58
+Info (12128): Elaborating entity "fetch" for hierarchy "datapath:dp|fetch:FETCH" File: /home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/datapath.sv Line: 36
+Info (12128): Elaborating entity "flopr" for hierarchy "datapath:dp|fetch:FETCH|flopr:PC" File: /home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/fetch.sv Line: 8
+Info (12128): Elaborating entity "adder" for hierarchy "datapath:dp|fetch:FETCH|adder:Add" File: /home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/fetch.sv Line: 9
+Info (12128): Elaborating entity "mux2" for hierarchy "datapath:dp|fetch:FETCH|mux2:MUX1" File: /home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/fetch.sv Line: 10
+Info (12128): Elaborating entity "decode" for hierarchy "datapath:dp|decode:DECODE" File: /home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/datapath.sv Line: 47
+Info (12128): Elaborating entity "mux2" for hierarchy "datapath:dp|decode:DECODE|mux2:ra2mux" File: /home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/decode.sv Line: 11
+Info (12128): Elaborating entity "regfile" for hierarchy "datapath:dp|decode:DECODE|regfile:registers" File: /home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/decode.sv Line: 14
+Info (12128): Elaborating entity "signext" for hierarchy "datapath:dp|decode:DECODE|signext:ext" File: /home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/decode.sv Line: 17
+Info (12128): Elaborating entity "execute" for hierarchy "datapath:dp|execute:EXECUTE" File: /home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/datapath.sv Line: 61
+Info (12128): Elaborating entity "mux4" for hierarchy "datapath:dp|execute:EXECUTE|mux4:MUX_E" File: /home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/execute.sv Line: 10
+Info (12128): Elaborating entity "alu" for hierarchy "datapath:dp|execute:EXECUTE|alu:ALU" File: /home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/execute.sv Line: 11
+Info (12128): Elaborating entity "sl2" for hierarchy "datapath:dp|execute:EXECUTE|sl2:ShiftLeft_E" File: /home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/execute.sv Line: 12
+Info (12128): Elaborating entity "memory" for hierarchy "datapath:dp|memory:MEMORY" File: /home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/datapath.sv Line: 65
+Info (12128): Elaborating entity "writeback" for hierarchy "datapath:dp|writeback:WRITEBACK" File: /home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/datapath.sv Line: 72
+Info (12128): Elaborating entity "exception" for hierarchy "datapath:dp|exception:EXCEPTION" File: /home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/datapath.sv Line: 86
+Info (12128): Elaborating entity "comp_n" for hierarchy "datapath:dp|exception:EXCEPTION|comp_n:EV_Comp" File: /home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/exception.sv Line: 17
+Info (12128): Elaborating entity "esync" for hierarchy "datapath:dp|exception:EXCEPTION|esync:ESync" File: /home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/exception.sv Line: 18
+Warning (10240): Verilog HDL Always Construct warning at esync.sv(4): inferring latch(es) for variable "out", which holds its previous value in one or more paths through the always construct File: /home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/esync.sv Line: 4
+Info (10041): Inferred latch for "out" at esync.sv(4) File: /home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/esync.sv Line: 4
+Info (12128): Elaborating entity "flopr_e" for hierarchy "datapath:dp|exception:EXCEPTION|flopr_e:ERR" File: /home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/exception.sv Line: 22
+Info (12128): Elaborating entity "flopr_e" for hierarchy "datapath:dp|exception:EXCEPTION|flopr_e:ESR" File: /home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/exception.sv Line: 24
+Info (12128): Elaborating entity "imem" for hierarchy "imem:instrMem" File: /home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/processor_arm.sv Line: 62
+Warning (10030): Net "ROM.data_a" at imem.sv(7) has no driver or initial value, using a default initial value '0' File: /home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/imem.sv Line: 7
+Warning (10030): Net "ROM.waddr_a" at imem.sv(7) has no driver or initial value, using a default initial value '0' File: /home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/imem.sv Line: 7
+Warning (10030): Net "ROM.we_a" at imem.sv(7) has no driver or initial value, using a default initial value '0' File: /home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/imem.sv Line: 7
+Info (12128): Elaborating entity "dmem" for hierarchy "dmem:dataMem" File: /home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/processor_arm.sv Line: 71
+Info (276014): Found 1 instances of uninferred RAM logic
+    Info (276007): RAM logic "datapath:dp|decode:DECODE|regfile:registers|REGS" is uninferred due to asynchronous read logic File: /home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/regfile.sv Line: 7
+Info (286030): Timing-Driven Synthesis is running
+Info (17049): 128 registers lost all their fanouts during netlist optimizations.
+Info (144001): Generated suppressed messages file /home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/output_files/arm_processor_w_exceptions.map.smsg
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 1 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "dump" File: /home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/processor_arm.sv Line: 9
+Info (21057): Implemented 33241 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 4 input pins
+    Info (21059): Implemented 130 output pins
+    Info (21061): Implemented 33107 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 11 warnings
+    Info: Peak virtual memory: 578 megabytes
+    Info: Processing ended: Wed Sep 13 15:00:46 2023
+    Info: Elapsed time: 00:01:17
+    Info: Total CPU time (on all processors): 00:01:29
+>>>>>>> 5fc8d1ef87bedbe36cc02a4eb8e3abb49b57f021
 
 
 +------------------------------------------+
 ; Analysis & Synthesis Suppressed Messages ;
 +------------------------------------------+
-The suppressed messages can be found in /home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/output_files/arm_processor_w_exceptions.map.smsg.
+The suppressed messages can be found in /home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/output_files/arm_processor_w_exceptions.map.smsg.
 
 

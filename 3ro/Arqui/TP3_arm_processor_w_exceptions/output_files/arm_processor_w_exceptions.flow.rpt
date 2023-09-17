@@ -1,5 +1,9 @@
 Flow report for arm_processor_w_exceptions
+<<<<<<< HEAD
 Wed Sep 13 18:21:54 2023
+=======
+Wed Sep 13 15:00:46 2023
+>>>>>>> 5fc8d1ef87bedbe36cc02a4eb8e3abb49b57f021
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -41,7 +45,11 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
+<<<<<<< HEAD
 ; Flow Status                        ; Successful - Wed Sep 13 18:21:53 2023       ;
+=======
+; Flow Status                        ; Successful - Wed Sep 13 15:00:46 2023       ;
+>>>>>>> 5fc8d1ef87bedbe36cc02a4eb8e3abb49b57f021
 ; Quartus Prime Version              ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                      ; arm_processor_w_exceptions                  ;
 ; Top-level Entity Name              ; processor_arm                               ;
@@ -65,7 +73,11 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+----------------------------+
 ; Option            ; Setting                    ;
 +-------------------+----------------------------+
+<<<<<<< HEAD
 ; Start date & time ; 09/13/2023 18:21:10        ;
+=======
+; Start date & time ; 09/13/2023 14:59:29        ;
+>>>>>>> 5fc8d1ef87bedbe36cc02a4eb8e3abb49b57f021
 ; Main task         ; Compilation                ;
 ; Revision Name     ; arm_processor_w_exceptions ;
 +-------------------+----------------------------+
@@ -76,7 +88,11 @@ https://fpgasoftware.intel.com/eula.
 +--------------------------------------+----------------------------------------+----------------------------+---------------+-----------------------------------+
 ; Assignment Name                      ; Value                                  ; Default Value              ; Entity Name   ; Section Id                        ;
 +--------------------------------------+----------------------------------------+----------------------------+---------------+-----------------------------------+
+<<<<<<< HEAD
 ; COMPILER_SIGNATURE_ID                ; 198112232858878.169464007016915        ; --                         ; --            ; --                                ;
+=======
+; COMPILER_SIGNATURE_ID                ; 233214608178275.169462796907332        ; --                         ; --            ; --                                ;
+>>>>>>> 5fc8d1ef87bedbe36cc02a4eb8e3abb49b57f021
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --                         ; --            ; processor_tb                      ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST      ; Off                                    ; --                         ; --            ; eda_board_design_timing           ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST      ; Off                                    ; --                         ; --            ; eda_board_design_boundary_scan    ;
@@ -110,18 +126,23 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
+<<<<<<< HEAD
 ; Analysis & Synthesis ; 00:00:41     ; 1.0                     ; 645 MB              ; 00:00:48                           ;
 ; Total                ; 00:00:41     ; --                      ; --                  ; 00:00:48                           ;
+=======
+; Analysis & Synthesis ; 00:01:15     ; 1.0                     ; 578 MB              ; 00:01:26                           ;
+; Total                ; 00:01:15     ; --                      ; --                  ; 00:01:26                           ;
+>>>>>>> 5fc8d1ef87bedbe36cc02a4eb8e3abb49b57f021
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
-+----------------------------------------------------------------------------------------+
-; Flow OS Summary                                                                        ;
-+----------------------+------------------+----------------+------------+----------------+
-; Module Name          ; Machine Hostname ; OS Name        ; OS Version ; Processor type ;
-+----------------------+------------------+----------------+------------+----------------+
-; Analysis & Synthesis ; adolfo           ; Ubuntu 22.04.3 ; 22         ; x86_64         ;
-+----------------------+------------------+----------------+------------+----------------+
++--------------------------------------------------------------------------------------+
+; Flow OS Summary                                                                      ;
++----------------------+------------------+--------------+------------+----------------+
+; Module Name          ; Machine Hostname ; OS Name      ; OS Version ; Processor type ;
++----------------------+------------------+--------------+------------+----------------+
+; Analysis & Synthesis ; adolfo-HP        ; Ubuntu 23.04 ; 23         ; x86_64         ;
++----------------------+------------------+--------------+------------+----------------+
 
 
 ------------

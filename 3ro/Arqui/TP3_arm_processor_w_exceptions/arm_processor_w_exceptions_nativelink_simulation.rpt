@@ -18,6 +18,10 @@ Sim dir               :  simulation/modelsim
 
 Info: Starting NativeLink simulation with ModelSim-Altera software
 Sourced NativeLink script /home/adolfo/intelFPGA_lite/20.1/quartus/common/tcl/internal/nativelink/modelsim.tcl
+<<<<<<< HEAD
 Warning: File arm_processor_w_exceptions_run_msim_rtl_systemverilog.do already exists - backing up current file as arm_processor_w_exceptions_run_msim_rtl_systemverilog.do.bak10
+=======
+Warning: File arm_processor_w_exceptions_run_msim_rtl_systemverilog.do already exists - backing up current file as arm_processor_w_exceptions_run_msim_rtl_systemverilog.do.bak2
+>>>>>>> 5fc8d1ef87bedbe36cc02a4eb8e3abb49b57f021
 Info: Spawning ModelSim-Altera Simulation software 
 Info: NativeLink simulation flow was successful

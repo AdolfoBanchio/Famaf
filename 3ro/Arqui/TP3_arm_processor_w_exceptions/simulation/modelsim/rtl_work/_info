@@ -9,32 +9,42 @@ z2
 !i10e 25
 !i10f 100
 cModel Technology
-Z0 d/home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/simulation/modelsim
+Z0 d/home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/simulation/modelsim
 vadder
 Z1 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
+<<<<<<< HEAD
 Z2 !s110 1694639897
+=======
+Z2 !s110 1694628228
+>>>>>>> 5fc8d1ef87bedbe36cc02a4eb8e3abb49b57f021
 !i10b 1
 !s100 a3zDN1NYD4EHE0kQDg6Iz2
 Z3 !s11b Dg1SIo80bB@j0V0VzS_@n1
-IG=l?Tlm=Y_STS9AhIh=4k3
+IEVIK2OiiZSf93SUB6fm8N1
 Z4 VDg1SIo80bB@j0V0VzS_@n1
 S1
 R0
-Z5 w1694455283
-8/home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/adder.sv
-F/home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/adder.sv
+Z5 w1694180086
+8/home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/adder.sv
+F/home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/adder.sv
 !i122 22
 L0 3 7
 Z6 OV;L;2020.1;71
 r1
 !s85 0
 31
+<<<<<<< HEAD
 Z7 !s108 1694639897.000000
 !s107 /home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/adder.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions|/home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/adder.sv|
+=======
+Z7 !s108 1694628228.000000
+!s107 /home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/adder.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+/home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions|/home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/adder.sv|
+>>>>>>> 5fc8d1ef87bedbe36cc02a4eb8e3abb49b57f021
 !i113 1
 Z8 o-sv -work work
-Z9 !s92 -sv -work work +incdir+/home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions
+Z9 !s92 -sv -work work +incdir+/home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions
 Z10 tCvgOpt 0
 valu
 R1
@@ -42,13 +52,13 @@ R2
 !i10b 1
 !s100 IaISLA29klS_X4[OFSE:B1
 R3
-I]NSF<6d6W1R_5UU4XFA]<2
+IFZ>KD9PQHgXe;JCAfZ1OO3
 R4
 S1
 R0
 R5
-8/home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/alu.sv
-F/home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/alu.sv
+8/home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/alu.sv
+F/home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/alu.sv
 !i122 21
 L0 3 20
 R6
@@ -56,34 +66,44 @@ r1
 !s85 0
 31
 R7
-!s107 /home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/alu.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+/home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions|/home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/alu.sv|
+!s107 /home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/alu.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+/home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions|/home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/alu.sv|
 !i113 1
 R8
 R9
 R10
 valudec
 R1
+<<<<<<< HEAD
 Z11 !s110 1694639896
+=======
+Z11 !s110 1694628227
+>>>>>>> 5fc8d1ef87bedbe36cc02a4eb8e3abb49b57f021
 !i10b 1
 !s100 :;H73aVU>X;gEYYfBOVnz2
 R3
-I?Pel;W]iPc]Z8ik3H^VPN3
+IJV_NLaeT[RaNf`mLf:C^41
 R4
 S1
 R0
-R5
-8/home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/aludec.sv
-F/home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/aludec.sv
+w1693949581
+8/home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/aludec.sv
+F/home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/aludec.sv
 !i122 1
 L0 3 13
 R6
 r1
 !s85 0
 31
+<<<<<<< HEAD
 Z12 !s108 1694639896.000000
 !s107 /home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/aludec.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions|/home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/aludec.sv|
+=======
+Z12 !s108 1694628227.000000
+!s107 /home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/aludec.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+/home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions|/home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/aludec.sv|
+>>>>>>> 5fc8d1ef87bedbe36cc02a4eb8e3abb49b57f021
 !i113 1
 R8
 R9
@@ -94,13 +114,13 @@ R2
 !i10b 1
 !s100 U2=gFHlRmR;3=`CDM^;a62
 R3
-IzSE2HccQ`n_05V^1@Xf^h1
+IJ2zZX70URaKS=bED;n>W_0
 R4
 S1
 R0
 R5
-8/home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/comp_n.sv
-F/home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/comp_n.sv
+8/home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/comp_n.sv
+F/home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/comp_n.sv
 !i122 20
 L0 1 5
 R6
@@ -108,8 +128,8 @@ r1
 !s85 0
 31
 R7
-!s107 /home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/comp_n.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+/home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions|/home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/comp_n.sv|
+!s107 /home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/comp_n.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+/home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions|/home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/comp_n.sv|
 !i113 1
 R8
 R9
@@ -120,6 +140,7 @@ R11
 !i10b 1
 !s100 g]g9g5TmYNO<L1D0T7U283
 R3
+<<<<<<< HEAD
 I:BY[H;KXUU=6nYZ:O0X<O1
 R4
 S1
@@ -127,6 +148,15 @@ R0
 w1694629770
 8/home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/controller.sv
 F/home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/controller.sv
+=======
+I^_PlR12TMhoeCOfJ6aB4=2
+R4
+S1
+R0
+Z13 w1694625266
+8/home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/controller.sv
+F/home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/controller.sv
+>>>>>>> 5fc8d1ef87bedbe36cc02a4eb8e3abb49b57f021
 !i122 2
 L0 3 42
 R6
@@ -134,8 +164,8 @@ r1
 !s85 0
 31
 R12
-!s107 /home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/controller.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+/home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions|/home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/controller.sv|
+!s107 /home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/controller.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+/home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions|/home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/controller.sv|
 !i113 1
 R8
 R9
@@ -146,6 +176,7 @@ R2
 !i10b 1
 !s100 km0O>_[:JMNh3jZ]?Gd_Y0
 R3
+<<<<<<< HEAD
 IRGONaM3a`jCE6jD^Sk7M_3
 R4
 S1
@@ -153,6 +184,15 @@ R0
 w1694630291
 8/home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/datapath.sv
 F/home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/datapath.sv
+=======
+IT<kdBf@D1[UXbna7C0A5z2
+R4
+S1
+R0
+R13
+8/home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/datapath.sv
+F/home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/datapath.sv
+>>>>>>> 5fc8d1ef87bedbe36cc02a4eb8e3abb49b57f021
 !i122 19
 L0 3 92
 R6
@@ -160,8 +200,8 @@ r1
 !s85 0
 31
 R7
-!s107 /home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/datapath.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+/home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions|/home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/datapath.sv|
+!s107 /home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/datapath.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+/home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions|/home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/datapath.sv|
 !i113 1
 R8
 R9
@@ -172,13 +212,13 @@ R2
 !i10b 1
 !s100 ez[Sj6NLDB;VJc@X`e1Ui0
 R3
-I@S]F7Nc07_>jC29SMn@Gl2
+I]Y]]^o`QP;VlkNGE58GKD0
 R4
 S1
 R0
 R5
-8/home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/decode.sv
-F/home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/decode.sv
+8/home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/decode.sv
+F/home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/decode.sv
 !i122 18
 L0 3 17
 R6
@@ -186,72 +226,72 @@ r1
 !s85 0
 31
 R7
-!s107 /home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/decode.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+/home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions|/home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/decode.sv|
+!s107 /home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/decode.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+/home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions|/home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/decode.sv|
 !i113 1
 R8
 R9
 R10
 Edmem
 R5
-Z13 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
-Z14 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
-Z15 DPx4 ieee 16 std_logic_signed 0 22 C<aanc0R`<LWPSe[JYRP^3
-Z16 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
-Z17 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+Z14 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
+Z15 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
+Z16 DPx4 ieee 16 std_logic_signed 0 22 C<aanc0R`<LWPSe[JYRP^3
+Z17 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z18 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
 !i122 23
 R0
-Z18 8/home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/dmem.vhd
-Z19 F/home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/dmem.vhd
+Z19 8/home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/dmem.vhd
+Z20 F/home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/dmem.vhd
 l0
 L13 1
 V8NKO;a7f`@i6W9?9GKbAG3
 !s100 _XJfF77i20WL?`n1Z6AUf1
-Z20 OV;C;2020.1;71
+Z21 OV;C;2020.1;71
 33
 R2
 !i10b 1
 R7
-Z21 !s90 -reportprogress|300|-2008|-work|work|/home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/dmem.vhd|
-Z22 !s107 /home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/dmem.vhd|
+Z22 !s90 -reportprogress|300|-2008|-work|work|/home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/dmem.vhd|
+Z23 !s107 /home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/dmem.vhd|
 !i113 1
-Z23 o-2008 -work work
-Z24 tExplicit 1 CvgOpt 0
+Z24 o-2008 -work work
+Z25 tExplicit 1 CvgOpt 0
 Abehave
-R13
 R14
 R15
 R16
 R17
+R18
 DEx4 work 4 dmem 0 22 8NKO;a7f`@i6W9?9GKbAG3
 !i122 23
 l71
 L22 69
 VAVYRToK?ElT5le?`6c_<70
 !s100 [L=ecZ7hKj?8>?QiDG8QS3
-R20
+R21
 33
 R2
 !i10b 1
 R7
-R21
 R22
-!i113 1
 R23
+!i113 1
 R24
+R25
 vesync
 R1
 R2
 !i10b 1
 !s100 MhR0J0k?aZEOeHEebCjZI2
 R3
-I74oz`3?;mMRVhGKM0?GeM0
+I:?HB<NZii55RmiYX4OnHA2
 R4
 S1
 R0
 R5
-8/home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/esync.sv
-F/home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/esync.sv
+8/home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/esync.sv
+F/home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/esync.sv
 !i122 17
 L0 1 9
 R6
@@ -259,8 +299,8 @@ r1
 !s85 0
 31
 R7
-!s107 /home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/esync.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+/home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions|/home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/esync.sv|
+!s107 /home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/esync.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+/home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions|/home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/esync.sv|
 !i113 1
 R8
 R9
@@ -271,13 +311,13 @@ R2
 !i10b 1
 !s100 LPjNa1UaGOaKLFoTKOSbn2
 R3
-IQlEH4=zROi::Te;;[SdYM0
+IMhP8?l@`HCgTioa:z?ZHY1
 R4
 S1
 R0
 R5
-8/home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/exception.sv
-F/home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/exception.sv
+8/home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/exception.sv
+F/home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/exception.sv
 !i122 16
 L0 1 28
 R6
@@ -285,8 +325,8 @@ r1
 !s85 0
 31
 R7
-!s107 /home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/exception.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+/home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions|/home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/exception.sv|
+!s107 /home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/exception.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+/home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions|/home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/exception.sv|
 !i113 1
 R8
 R9
@@ -297,6 +337,7 @@ R2
 !i10b 1
 !s100 O=SflIN0<9?iDhmT9n@VX2
 R3
+<<<<<<< HEAD
 Ihgc>2Cc:X^ZFIUA?GW[gE2
 R4
 S1
@@ -304,6 +345,15 @@ R0
 w1694639498
 8/home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/execute.sv
 F/home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/execute.sv
+=======
+I5IVKQOZi3n=icXJHgmFm31
+R4
+S1
+R0
+R5
+8/home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/execute.sv
+F/home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/execute.sv
+>>>>>>> 5fc8d1ef87bedbe36cc02a4eb8e3abb49b57f021
 !i122 15
 L0 1 19
 R6
@@ -311,8 +361,8 @@ r1
 !s85 0
 31
 R7
-!s107 /home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/execute.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+/home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions|/home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/execute.sv|
+!s107 /home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/execute.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+/home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions|/home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/execute.sv|
 !i113 1
 R8
 R9
@@ -323,13 +373,13 @@ R2
 !i10b 1
 !s100 j[<IlKWHon8niW:>:;nkb1
 R3
-IEC^^h;hQ6T<o4YbGW68Ee0
+Il79fh9K12N[lRRlSjV6if0
 R4
 S1
 R0
 R5
-8/home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/fetch.sv
-F/home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/fetch.sv
+8/home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/fetch.sv
+F/home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/fetch.sv
 !i122 14
 L0 1 15
 R6
@@ -337,8 +387,8 @@ r1
 !s85 0
 31
 R7
-!s107 /home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/fetch.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+/home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions|/home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/fetch.sv|
+!s107 /home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/fetch.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+/home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions|/home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/fetch.sv|
 !i113 1
 R8
 R9
@@ -349,22 +399,28 @@ R2
 !i10b 1
 !s100 bM5CA4K===imT;n`<gFX]0
 R3
-I>a7hkIGOAVBL=hCY2:Q3c2
+IZ9AH2FHGGXfdaBXKBFFfS3
 R4
 S1
 R0
 R5
-8/home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/flopr.sv
-F/home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/flopr.sv
+8/home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/flopr.sv
+F/home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/flopr.sv
 !i122 13
 L0 3 10
 R6
 r1
 !s85 0
 31
+<<<<<<< HEAD
 R7
 !s107 /home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/flopr.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions|/home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/flopr.sv|
+=======
+R12
+!s107 /home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/flopr.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+/home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions|/home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/flopr.sv|
+>>>>>>> 5fc8d1ef87bedbe36cc02a4eb8e3abb49b57f021
 !i113 1
 R8
 R9
@@ -375,22 +431,28 @@ R2
 !i10b 1
 !s100 TBUeil0mgVjRF@c6JM]b02
 R3
-IBF^b<[WMcoaJN`RY3CB<Y3
+IEB[`zE60@A`M<Lgmf0dYn1
 R4
 S1
 R0
 R5
-8/home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/flopr_e.sv
-F/home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/flopr_e.sv
+8/home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/flopr_e.sv
+F/home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/flopr_e.sv
 !i122 12
 L0 1 10
 R6
 r1
 !s85 0
 31
+<<<<<<< HEAD
 R7
 !s107 /home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/flopr_e.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions|/home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/flopr_e.sv|
+=======
+R12
+!s107 /home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/flopr_e.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+/home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions|/home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/flopr_e.sv|
+>>>>>>> 5fc8d1ef87bedbe36cc02a4eb8e3abb49b57f021
 !i113 1
 R8
 R9
@@ -401,6 +463,7 @@ R2
 !i10b 1
 !s100 UOG2cJTdzoH8[03Ez^WfH3
 R3
+<<<<<<< HEAD
 IMIA;4mL`NR^JfDCjEA3bb0
 R4
 S1
@@ -408,15 +471,30 @@ R0
 w1694639239
 8/home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/imem.sv
 F/home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/imem.sv
+=======
+IUFI9Pn;9^b2e_h6>B2:_A3
+R4
+S1
+R0
+w1694624944
+8/home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/imem.sv
+F/home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/imem.sv
+>>>>>>> 5fc8d1ef87bedbe36cc02a4eb8e3abb49b57f021
 !i122 11
 L0 3 22
 R6
 r1
 !s85 0
 31
+<<<<<<< HEAD
 R7
 !s107 /home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/imem.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions|/home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/imem.sv|
+=======
+R12
+!s107 /home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/imem.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+/home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions|/home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/imem.sv|
+>>>>>>> 5fc8d1ef87bedbe36cc02a4eb8e3abb49b57f021
 !i113 1
 R8
 R9
@@ -427,6 +505,7 @@ R11
 !i10b 1
 !s100 :EdWz29QSZIYB;WcU20mi1
 R3
+<<<<<<< HEAD
 I^KFcbP@l@hC3]I<H`1oOR0
 R4
 S1
@@ -434,6 +513,15 @@ R0
 w1694629705
 8/home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/maindec.sv
 F/home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/maindec.sv
+=======
+IlAijz0?;I5j1E_YZn0BM81
+R4
+S1
+R0
+R13
+8/home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/maindec.sv
+F/home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/maindec.sv
+>>>>>>> 5fc8d1ef87bedbe36cc02a4eb8e3abb49b57f021
 !i122 0
 L0 1 174
 R6
@@ -441,8 +529,8 @@ r1
 !s85 0
 31
 R12
-!s107 /home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/maindec.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+/home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions|/home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/maindec.sv|
+!s107 /home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/maindec.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+/home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions|/home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/maindec.sv|
 !i113 1
 R8
 R9
@@ -453,6 +541,7 @@ R2
 !i10b 1
 !s100 X2TKcaO>ab4W?S^2R:Sjz2
 R3
+<<<<<<< HEAD
 IaF_Gm14ZYEOz:moBQ<`090
 R4
 S1
@@ -460,15 +549,30 @@ R0
 w1694639495
 8/home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/memory.sv
 F/home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/memory.sv
+=======
+IhlEV?P7=[AzC[8G6l>hbm1
+R4
+S1
+R0
+R5
+8/home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/memory.sv
+F/home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/memory.sv
+>>>>>>> 5fc8d1ef87bedbe36cc02a4eb8e3abb49b57f021
 !i122 10
-Z25 L0 3 6
+Z26 L0 3 6
 R6
 r1
 !s85 0
 31
+<<<<<<< HEAD
 R7
 !s107 /home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/memory.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions|/home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/memory.sv|
+=======
+R12
+!s107 /home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/memory.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+/home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions|/home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/memory.sv|
+>>>>>>> 5fc8d1ef87bedbe36cc02a4eb8e3abb49b57f021
 !i113 1
 R8
 R9
@@ -479,22 +583,28 @@ R2
 !i10b 1
 !s100 fI1Am19Zz4BR=Telh`>5<1
 R3
-InB33Q]L@]Jk?nUD`g6C^J0
+IEJZKF:^V?1jG1WHhhnLi<0
 R4
 S1
 R0
 R5
-8/home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/mux2.sv
-F/home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/mux2.sv
+8/home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/mux2.sv
+F/home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/mux2.sv
 !i122 9
-R25
+R26
 R6
 r1
 !s85 0
 31
+<<<<<<< HEAD
 R7
 !s107 /home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/mux2.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions|/home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/mux2.sv|
+=======
+R12
+!s107 /home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/mux2.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+/home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions|/home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/mux2.sv|
+>>>>>>> 5fc8d1ef87bedbe36cc02a4eb8e3abb49b57f021
 !i113 1
 R8
 R9
@@ -505,22 +615,28 @@ R2
 !i10b 1
 !s100 ]3EG<=BV4N`hO_@Ro?QFz2
 R3
-I]gfWL?OR>oFm@J0zoS<X62
+I3dBTgnl90Snf34=gfagV_0
 R4
 S1
 R0
 R5
-8/home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/mux4.sv
-F/home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/mux4.sv
+8/home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/mux4.sv
+F/home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/mux4.sv
 !i122 8
 L0 1 7
 R6
 r1
 !s85 0
 31
+<<<<<<< HEAD
 R7
 !s107 /home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/mux4.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions|/home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/mux4.sv|
+=======
+R12
+!s107 /home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/mux4.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+/home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions|/home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/mux4.sv|
+>>>>>>> 5fc8d1ef87bedbe36cc02a4eb8e3abb49b57f021
 !i113 1
 R8
 R9
@@ -531,22 +647,28 @@ R2
 !i10b 1
 !s100 W7RHZWJzRaon]5n3aA9Ic2
 R3
-IJ6^[`T=fno:_hF^eZz_VU0
+IT@DZegd]IkjHW7g>M@[lF0
 R4
 S1
 R0
 R5
-8/home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/processor_arm.sv
-F/home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/processor_arm.sv
+8/home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/processor_arm.sv
+F/home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/processor_arm.sv
 !i122 7
 L0 3 71
 R6
 r1
 !s85 0
 31
+<<<<<<< HEAD
 R7
 !s107 /home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/processor_arm.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions|/home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/processor_arm.sv|
+=======
+R12
+!s107 /home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/processor_arm.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+/home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions|/home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/processor_arm.sv|
+>>>>>>> 5fc8d1ef87bedbe36cc02a4eb8e3abb49b57f021
 !i113 1
 R8
 R9
@@ -557,13 +679,13 @@ R2
 !i10b 1
 !s100 kPA1KQ=@]GWH]Q1hDVYQE1
 R3
-I@<L;3`iCz7OUJlG`lImI>2
+I9e[:Y9NZEmQZmm`=R`@2e3
 R4
 S1
 R0
 R5
-8/home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/processor_tb.sv
-F/home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/processor_tb.sv
+8/home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/processor_tb.sv
+F/home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/processor_tb.sv
 !i122 24
 L0 4 26
 R6
@@ -571,8 +693,8 @@ r1
 !s85 0
 31
 R7
-!s107 /home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/processor_tb.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+/home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions|/home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/processor_tb.sv|
+!s107 /home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/processor_tb.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+/home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions|/home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/processor_tb.sv|
 !i113 1
 R8
 R9
@@ -583,22 +705,28 @@ R2
 !i10b 1
 !s100 n0E79k:mZYTNXbmLaEP2]0
 R3
-INHmb5OMFLW]bD?W7;RcNJ0
+IfX]V6a<CYXTZadj9oU<m_2
 R4
 S1
 R0
 R5
-8/home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/regfile.sv
-F/home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/regfile.sv
+8/home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/regfile.sv
+F/home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/regfile.sv
 !i122 6
 L0 1 24
 R6
 r1
 !s85 0
 31
+<<<<<<< HEAD
 R7
 !s107 /home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/regfile.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions|/home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/regfile.sv|
+=======
+R12
+!s107 /home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/regfile.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+/home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions|/home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/regfile.sv|
+>>>>>>> 5fc8d1ef87bedbe36cc02a4eb8e3abb49b57f021
 !i113 1
 R8
 R9
@@ -609,22 +737,28 @@ R2
 !i10b 1
 !s100 o^[Lce[5hZU`=^OfM`MWW0
 R3
-IGRQRF=Q^VXPg^954@3Okf3
+IEkCl<_dDK1d4C1N7jj=:Y2
 R4
 S1
 R0
 R5
-8/home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/signext.sv
-F/home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/signext.sv
+8/home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/signext.sv
+F/home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/signext.sv
 !i122 5
 L0 3 12
 R6
 r1
 !s85 0
 31
+<<<<<<< HEAD
 R7
 !s107 /home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/signext.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions|/home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/signext.sv|
+=======
+R12
+!s107 /home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/signext.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+/home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions|/home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/signext.sv|
+>>>>>>> 5fc8d1ef87bedbe36cc02a4eb8e3abb49b57f021
 !i113 1
 R8
 R9
@@ -635,13 +769,13 @@ R11
 !i10b 1
 !s100 `c@h0_TfTnn`3CajieZiC2
 R3
-I87k[_Y`PUzjk`dVkRo9fH2
+In0TePKf^@=6cc47@[jaSF2
 R4
 S1
 R0
 R5
-8/home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/sl2.sv
-F/home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/sl2.sv
+8/home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/sl2.sv
+F/home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/sl2.sv
 !i122 4
 L0 3 9
 R6
@@ -649,8 +783,8 @@ r1
 !s85 0
 31
 R12
-!s107 /home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/sl2.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+/home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions|/home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/sl2.sv|
+!s107 /home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/sl2.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+/home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions|/home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/sl2.sv|
 !i113 1
 R8
 R9
@@ -661,13 +795,13 @@ R11
 !i10b 1
 !s100 lem0cZaoaK<4K2n`WO?nY2
 R3
-IaKn?SOkJ]>zACFEC_STPS1
+IYHYfgL4NF`KInOkBJPFPS2
 R4
 S1
 R0
 R5
-8/home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/writeback.sv
-F/home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/writeback.sv
+8/home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/writeback.sv
+F/home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/writeback.sv
 !i122 3
 L0 3 8
 R6
@@ -675,8 +809,8 @@ r1
 !s85 0
 31
 R12
-!s107 /home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/writeback.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+/home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions|/home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/writeback.sv|
+!s107 /home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/writeback.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+/home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions|/home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/writeback.sv|
 !i113 1
 R8
 R9
