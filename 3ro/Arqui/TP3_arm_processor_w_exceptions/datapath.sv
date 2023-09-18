@@ -6,6 +6,7 @@ module datapath #(parameter N = 64)
 				  input logic [1:0] AluSrc,
 				  input logic [3:0] AluControl,
 				  input logic Branch,
+                  input logic UncondBranch,
 				  input logic memRead,
 				  input logic memWrite,
 				  input logic regWrite,
@@ -48,7 +49,8 @@ module datapath #(parameter N = 64)
 
 
 
-	execute #(64)   EXECUTE    (.AluSrc(AluSrc),
+	execute #(64)   EXECUTE    (.UncondBranch_E(UncondBranch),
+                                .AluSrc(AluSrc),
 								.AluControl(AluControl),
 								.PC_E(IM_addr),
 								.signImm_E(signImm),
@@ -62,6 +64,7 @@ module datapath #(parameter N = 64)
 
 	memory  		MEMORY     (.Branch_M(Branch),
 								.zero_M(zero),
+                                .UncondBranch_M(UncondBranch),
 								.PCSrc_M(PCSrc));
 
 

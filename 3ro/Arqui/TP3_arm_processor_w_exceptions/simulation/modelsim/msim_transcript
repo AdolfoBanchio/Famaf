@@ -11,238 +11,638 @@
 # 
 # vlog -sv -work work +incdir+/home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions {/home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/maindec.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+<<<<<<< HEAD
 # Start time: 09:23:21 on Sep 15,2023
+=======
+<<<<<<< HEAD
+# Start time: 18:18:16 on Sep 13,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+/home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions" /home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/maindec.sv 
+=======
+# Start time: 15:03:47 on Sep 13,2023
+>>>>>>> 00b7528607b209c3bd096117d060b1799bc48505
 # vlog -reportprogress 300 -sv -work work "+incdir+/home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions" /home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/maindec.sv 
+>>>>>>> 5fc8d1ef87bedbe36cc02a4eb8e3abb49b57f021
 # -- Compiling module maindec
 # 
 # Top level modules:
 # 	maindec
+<<<<<<< HEAD
 # End time: 09:23:22 on Sep 15,2023, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+/home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions {/home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/aludec.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
 # Start time: 09:23:22 on Sep 15,2023
+=======
+<<<<<<< HEAD
+# End time: 18:18:16 on Sep 13,2023, Elapsed time: 0:00:00
+=======
+# End time: 15:03:47 on Sep 13,2023, Elapsed time: 0:00:00
+>>>>>>> 5fc8d1ef87bedbe36cc02a4eb8e3abb49b57f021
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+/home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions {/home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/aludec.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+<<<<<<< HEAD
+# Start time: 18:18:16 on Sep 13,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+/home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions" /home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/aludec.sv 
+=======
+# Start time: 15:03:47 on Sep 13,2023
+>>>>>>> 00b7528607b209c3bd096117d060b1799bc48505
 # vlog -reportprogress 300 -sv -work work "+incdir+/home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions" /home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/aludec.sv 
+>>>>>>> 5fc8d1ef87bedbe36cc02a4eb8e3abb49b57f021
 # -- Compiling module aludec
 # 
 # Top level modules:
 # 	aludec
+<<<<<<< HEAD
 # End time: 09:23:22 on Sep 15,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+/home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions {/home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/controller.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
 # Start time: 09:23:22 on Sep 15,2023
+=======
+<<<<<<< HEAD
+# End time: 18:18:16 on Sep 13,2023, Elapsed time: 0:00:00
+=======
+# End time: 15:03:47 on Sep 13,2023, Elapsed time: 0:00:00
+>>>>>>> 5fc8d1ef87bedbe36cc02a4eb8e3abb49b57f021
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+/home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions {/home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/controller.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+<<<<<<< HEAD
+# Start time: 18:18:16 on Sep 13,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+/home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions" /home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/controller.sv 
+=======
+# Start time: 15:03:47 on Sep 13,2023
+>>>>>>> 00b7528607b209c3bd096117d060b1799bc48505
 # vlog -reportprogress 300 -sv -work work "+incdir+/home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions" /home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/controller.sv 
+>>>>>>> 5fc8d1ef87bedbe36cc02a4eb8e3abb49b57f021
 # -- Compiling module controller
 # 
 # Top level modules:
 # 	controller
+<<<<<<< HEAD
 # End time: 09:23:22 on Sep 15,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+/home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions {/home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/writeback.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
 # Start time: 09:23:22 on Sep 15,2023
+=======
+<<<<<<< HEAD
+# End time: 18:18:16 on Sep 13,2023, Elapsed time: 0:00:00
+=======
+# End time: 15:03:47 on Sep 13,2023, Elapsed time: 0:00:00
+>>>>>>> 5fc8d1ef87bedbe36cc02a4eb8e3abb49b57f021
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+/home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions {/home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/writeback.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+<<<<<<< HEAD
+# Start time: 18:18:16 on Sep 13,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+/home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions" /home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/writeback.sv 
+=======
+# Start time: 15:03:47 on Sep 13,2023
+>>>>>>> 00b7528607b209c3bd096117d060b1799bc48505
 # vlog -reportprogress 300 -sv -work work "+incdir+/home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions" /home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/writeback.sv 
+>>>>>>> 5fc8d1ef87bedbe36cc02a4eb8e3abb49b57f021
 # -- Compiling module writeback
 # 
 # Top level modules:
 # 	writeback
+<<<<<<< HEAD
 # End time: 09:23:22 on Sep 15,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+/home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions {/home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/sl2.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
 # Start time: 09:23:22 on Sep 15,2023
+=======
+<<<<<<< HEAD
+# End time: 18:18:16 on Sep 13,2023, Elapsed time: 0:00:00
+=======
+# End time: 15:03:47 on Sep 13,2023, Elapsed time: 0:00:00
+>>>>>>> 5fc8d1ef87bedbe36cc02a4eb8e3abb49b57f021
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+/home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions {/home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/sl2.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+<<<<<<< HEAD
+# Start time: 18:18:16 on Sep 13,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+/home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions" /home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/sl2.sv 
+=======
+# Start time: 15:03:47 on Sep 13,2023
+>>>>>>> 00b7528607b209c3bd096117d060b1799bc48505
 # vlog -reportprogress 300 -sv -work work "+incdir+/home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions" /home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/sl2.sv 
+>>>>>>> 5fc8d1ef87bedbe36cc02a4eb8e3abb49b57f021
 # -- Compiling module sl2
 # 
 # Top level modules:
 # 	sl2
+<<<<<<< HEAD
 # End time: 09:23:22 on Sep 15,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+/home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions {/home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/signext.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
 # Start time: 09:23:22 on Sep 15,2023
+=======
+<<<<<<< HEAD
+# End time: 18:18:16 on Sep 13,2023, Elapsed time: 0:00:00
+=======
+# End time: 15:03:47 on Sep 13,2023, Elapsed time: 0:00:00
+>>>>>>> 5fc8d1ef87bedbe36cc02a4eb8e3abb49b57f021
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+/home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions {/home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/signext.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+<<<<<<< HEAD
+# Start time: 18:18:17 on Sep 13,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+/home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions" /home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/signext.sv 
+=======
+# Start time: 15:03:47 on Sep 13,2023
+>>>>>>> 00b7528607b209c3bd096117d060b1799bc48505
 # vlog -reportprogress 300 -sv -work work "+incdir+/home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions" /home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/signext.sv 
+>>>>>>> 5fc8d1ef87bedbe36cc02a4eb8e3abb49b57f021
 # -- Compiling module signext
 # 
 # Top level modules:
 # 	signext
+<<<<<<< HEAD
 # End time: 09:23:22 on Sep 15,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+/home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions {/home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/regfile.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
 # Start time: 09:23:22 on Sep 15,2023
+=======
+<<<<<<< HEAD
+# End time: 18:18:17 on Sep 13,2023, Elapsed time: 0:00:00
+=======
+# End time: 15:03:47 on Sep 13,2023, Elapsed time: 0:00:00
+>>>>>>> 5fc8d1ef87bedbe36cc02a4eb8e3abb49b57f021
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+/home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions {/home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/regfile.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+<<<<<<< HEAD
+# Start time: 18:18:17 on Sep 13,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+/home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions" /home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/regfile.sv 
+=======
+# Start time: 15:03:47 on Sep 13,2023
+>>>>>>> 00b7528607b209c3bd096117d060b1799bc48505
 # vlog -reportprogress 300 -sv -work work "+incdir+/home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions" /home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/regfile.sv 
+>>>>>>> 5fc8d1ef87bedbe36cc02a4eb8e3abb49b57f021
 # -- Compiling module regfile
 # 
 # Top level modules:
 # 	regfile
+<<<<<<< HEAD
 # End time: 09:23:22 on Sep 15,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+/home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions {/home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/processor_arm.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
 # Start time: 09:23:22 on Sep 15,2023
+=======
+<<<<<<< HEAD
+# End time: 18:18:17 on Sep 13,2023, Elapsed time: 0:00:00
+=======
+# End time: 15:03:47 on Sep 13,2023, Elapsed time: 0:00:00
+>>>>>>> 5fc8d1ef87bedbe36cc02a4eb8e3abb49b57f021
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+/home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions {/home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/processor_arm.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+<<<<<<< HEAD
+# Start time: 18:18:17 on Sep 13,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+/home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions" /home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/processor_arm.sv 
+=======
+# Start time: 15:03:47 on Sep 13,2023
+>>>>>>> 00b7528607b209c3bd096117d060b1799bc48505
 # vlog -reportprogress 300 -sv -work work "+incdir+/home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions" /home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/processor_arm.sv 
+>>>>>>> 5fc8d1ef87bedbe36cc02a4eb8e3abb49b57f021
 # -- Compiling module processor_arm
 # 
 # Top level modules:
 # 	processor_arm
+<<<<<<< HEAD
 # End time: 09:23:22 on Sep 15,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+/home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions {/home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/mux4.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
 # Start time: 09:23:22 on Sep 15,2023
+=======
+<<<<<<< HEAD
+# End time: 18:18:17 on Sep 13,2023, Elapsed time: 0:00:00
+=======
+# End time: 15:03:47 on Sep 13,2023, Elapsed time: 0:00:00
+>>>>>>> 5fc8d1ef87bedbe36cc02a4eb8e3abb49b57f021
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+/home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions {/home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/mux4.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+<<<<<<< HEAD
+# Start time: 18:18:17 on Sep 13,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+/home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions" /home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/mux4.sv 
+=======
+# Start time: 15:03:47 on Sep 13,2023
+>>>>>>> 00b7528607b209c3bd096117d060b1799bc48505
 # vlog -reportprogress 300 -sv -work work "+incdir+/home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions" /home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/mux4.sv 
+>>>>>>> 5fc8d1ef87bedbe36cc02a4eb8e3abb49b57f021
 # -- Compiling module mux4
 # 
 # Top level modules:
 # 	mux4
+<<<<<<< HEAD
 # End time: 09:23:22 on Sep 15,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+/home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions {/home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/mux2.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
 # Start time: 09:23:22 on Sep 15,2023
+=======
+<<<<<<< HEAD
+# End time: 18:18:17 on Sep 13,2023, Elapsed time: 0:00:00
+=======
+# End time: 15:03:47 on Sep 13,2023, Elapsed time: 0:00:00
+>>>>>>> 5fc8d1ef87bedbe36cc02a4eb8e3abb49b57f021
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+/home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions {/home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/mux2.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+<<<<<<< HEAD
+# Start time: 18:18:17 on Sep 13,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+/home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions" /home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/mux2.sv 
+=======
+# Start time: 15:03:47 on Sep 13,2023
+>>>>>>> 00b7528607b209c3bd096117d060b1799bc48505
 # vlog -reportprogress 300 -sv -work work "+incdir+/home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions" /home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/mux2.sv 
+>>>>>>> 5fc8d1ef87bedbe36cc02a4eb8e3abb49b57f021
 # -- Compiling module mux2
 # 
 # Top level modules:
 # 	mux2
+<<<<<<< HEAD
 # End time: 09:23:22 on Sep 15,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+/home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions {/home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/memory.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
 # Start time: 09:23:22 on Sep 15,2023
+=======
+<<<<<<< HEAD
+# End time: 18:18:17 on Sep 13,2023, Elapsed time: 0:00:00
+=======
+# End time: 15:03:47 on Sep 13,2023, Elapsed time: 0:00:00
+>>>>>>> 5fc8d1ef87bedbe36cc02a4eb8e3abb49b57f021
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+/home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions {/home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/memory.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+<<<<<<< HEAD
+# Start time: 18:18:17 on Sep 13,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+/home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions" /home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/memory.sv 
+=======
+# Start time: 15:03:47 on Sep 13,2023
+>>>>>>> 00b7528607b209c3bd096117d060b1799bc48505
 # vlog -reportprogress 300 -sv -work work "+incdir+/home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions" /home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/memory.sv 
+>>>>>>> 5fc8d1ef87bedbe36cc02a4eb8e3abb49b57f021
 # -- Compiling module memory
 # 
 # Top level modules:
 # 	memory
+<<<<<<< HEAD
 # End time: 09:23:22 on Sep 15,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+/home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions {/home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/imem.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
 # Start time: 09:23:22 on Sep 15,2023
+=======
+<<<<<<< HEAD
+# End time: 18:18:17 on Sep 13,2023, Elapsed time: 0:00:00
+=======
+# End time: 15:03:47 on Sep 13,2023, Elapsed time: 0:00:00
+>>>>>>> 5fc8d1ef87bedbe36cc02a4eb8e3abb49b57f021
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+/home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions {/home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/imem.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+<<<<<<< HEAD
+# Start time: 18:18:17 on Sep 13,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+/home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions" /home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/imem.sv 
+=======
+# Start time: 15:03:47 on Sep 13,2023
+>>>>>>> 00b7528607b209c3bd096117d060b1799bc48505
 # vlog -reportprogress 300 -sv -work work "+incdir+/home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions" /home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/imem.sv 
+>>>>>>> 5fc8d1ef87bedbe36cc02a4eb8e3abb49b57f021
 # -- Compiling module imem
 # 
 # Top level modules:
 # 	imem
+<<<<<<< HEAD
 # End time: 09:23:22 on Sep 15,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+/home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions {/home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/flopr_e.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
 # Start time: 09:23:22 on Sep 15,2023
+=======
+<<<<<<< HEAD
+# End time: 18:18:17 on Sep 13,2023, Elapsed time: 0:00:00
+=======
+# End time: 15:03:47 on Sep 13,2023, Elapsed time: 0:00:00
+>>>>>>> 5fc8d1ef87bedbe36cc02a4eb8e3abb49b57f021
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+/home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions {/home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/flopr_e.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+<<<<<<< HEAD
+# Start time: 18:18:17 on Sep 13,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+/home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions" /home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/flopr_e.sv 
+=======
+# Start time: 15:03:47 on Sep 13,2023
+>>>>>>> 00b7528607b209c3bd096117d060b1799bc48505
 # vlog -reportprogress 300 -sv -work work "+incdir+/home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions" /home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/flopr_e.sv 
+>>>>>>> 5fc8d1ef87bedbe36cc02a4eb8e3abb49b57f021
 # -- Compiling module flopr_e
 # 
 # Top level modules:
 # 	flopr_e
+<<<<<<< HEAD
 # End time: 09:23:22 on Sep 15,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+/home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions {/home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/flopr.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
 # Start time: 09:23:22 on Sep 15,2023
+=======
+<<<<<<< HEAD
+# End time: 18:18:17 on Sep 13,2023, Elapsed time: 0:00:00
+=======
+# End time: 15:03:47 on Sep 13,2023, Elapsed time: 0:00:00
+>>>>>>> 5fc8d1ef87bedbe36cc02a4eb8e3abb49b57f021
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+/home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions {/home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/flopr.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+<<<<<<< HEAD
+# Start time: 18:18:17 on Sep 13,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+/home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions" /home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/flopr.sv 
+=======
+# Start time: 15:03:47 on Sep 13,2023
+>>>>>>> 00b7528607b209c3bd096117d060b1799bc48505
 # vlog -reportprogress 300 -sv -work work "+incdir+/home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions" /home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/flopr.sv 
+>>>>>>> 5fc8d1ef87bedbe36cc02a4eb8e3abb49b57f021
 # -- Compiling module flopr
 # 
 # Top level modules:
 # 	flopr
+<<<<<<< HEAD
 # End time: 09:23:22 on Sep 15,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+/home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions {/home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/fetch.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
 # Start time: 09:23:22 on Sep 15,2023
+=======
+<<<<<<< HEAD
+# End time: 18:18:17 on Sep 13,2023, Elapsed time: 0:00:00
+=======
+# End time: 15:03:48 on Sep 13,2023, Elapsed time: 0:00:01
+>>>>>>> 5fc8d1ef87bedbe36cc02a4eb8e3abb49b57f021
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+/home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions {/home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/fetch.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+<<<<<<< HEAD
+# Start time: 18:18:17 on Sep 13,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+/home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions" /home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/fetch.sv 
+=======
+# Start time: 15:03:48 on Sep 13,2023
+>>>>>>> 00b7528607b209c3bd096117d060b1799bc48505
 # vlog -reportprogress 300 -sv -work work "+incdir+/home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions" /home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/fetch.sv 
+>>>>>>> 5fc8d1ef87bedbe36cc02a4eb8e3abb49b57f021
 # -- Compiling module fetch
 # 
 # Top level modules:
 # 	fetch
+<<<<<<< HEAD
 # End time: 09:23:22 on Sep 15,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+/home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions {/home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/execute.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
 # Start time: 09:23:22 on Sep 15,2023
+=======
+<<<<<<< HEAD
+# End time: 18:18:17 on Sep 13,2023, Elapsed time: 0:00:00
+=======
+# End time: 15:03:48 on Sep 13,2023, Elapsed time: 0:00:00
+>>>>>>> 5fc8d1ef87bedbe36cc02a4eb8e3abb49b57f021
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+/home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions {/home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/execute.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+<<<<<<< HEAD
+# Start time: 18:18:17 on Sep 13,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+/home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions" /home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/execute.sv 
+=======
+# Start time: 15:03:48 on Sep 13,2023
+>>>>>>> 00b7528607b209c3bd096117d060b1799bc48505
 # vlog -reportprogress 300 -sv -work work "+incdir+/home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions" /home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/execute.sv 
+>>>>>>> 5fc8d1ef87bedbe36cc02a4eb8e3abb49b57f021
 # -- Compiling module execute
 # 
 # Top level modules:
 # 	execute
+<<<<<<< HEAD
 # End time: 09:23:22 on Sep 15,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+/home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions {/home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/exception.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
 # Start time: 09:23:22 on Sep 15,2023
+=======
+<<<<<<< HEAD
+# End time: 18:18:17 on Sep 13,2023, Elapsed time: 0:00:00
+=======
+# End time: 15:03:48 on Sep 13,2023, Elapsed time: 0:00:00
+>>>>>>> 5fc8d1ef87bedbe36cc02a4eb8e3abb49b57f021
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+/home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions {/home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/exception.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+<<<<<<< HEAD
+# Start time: 18:18:17 on Sep 13,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+/home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions" /home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/exception.sv 
+=======
+# Start time: 15:03:48 on Sep 13,2023
+>>>>>>> 00b7528607b209c3bd096117d060b1799bc48505
 # vlog -reportprogress 300 -sv -work work "+incdir+/home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions" /home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/exception.sv 
+>>>>>>> 5fc8d1ef87bedbe36cc02a4eb8e3abb49b57f021
 # -- Compiling module exception
 # 
 # Top level modules:
 # 	exception
+<<<<<<< HEAD
 # End time: 09:23:22 on Sep 15,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+/home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions {/home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/esync.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
 # Start time: 09:23:22 on Sep 15,2023
+=======
+<<<<<<< HEAD
+# End time: 18:18:17 on Sep 13,2023, Elapsed time: 0:00:00
+=======
+# End time: 15:03:48 on Sep 13,2023, Elapsed time: 0:00:00
+>>>>>>> 5fc8d1ef87bedbe36cc02a4eb8e3abb49b57f021
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+/home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions {/home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/esync.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+<<<<<<< HEAD
+# Start time: 18:18:17 on Sep 13,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+/home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions" /home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/esync.sv 
+=======
+# Start time: 15:03:48 on Sep 13,2023
+>>>>>>> 00b7528607b209c3bd096117d060b1799bc48505
 # vlog -reportprogress 300 -sv -work work "+incdir+/home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions" /home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/esync.sv 
+>>>>>>> 5fc8d1ef87bedbe36cc02a4eb8e3abb49b57f021
 # -- Compiling module esync
 # 
 # Top level modules:
 # 	esync
+<<<<<<< HEAD
 # End time: 09:23:22 on Sep 15,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+/home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions {/home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/decode.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
 # Start time: 09:23:22 on Sep 15,2023
+=======
+<<<<<<< HEAD
+# End time: 18:18:17 on Sep 13,2023, Elapsed time: 0:00:00
+=======
+# End time: 15:03:48 on Sep 13,2023, Elapsed time: 0:00:00
+>>>>>>> 5fc8d1ef87bedbe36cc02a4eb8e3abb49b57f021
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+/home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions {/home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/decode.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+<<<<<<< HEAD
+# Start time: 18:18:17 on Sep 13,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+/home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions" /home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/decode.sv 
+=======
+# Start time: 15:03:48 on Sep 13,2023
+>>>>>>> 00b7528607b209c3bd096117d060b1799bc48505
 # vlog -reportprogress 300 -sv -work work "+incdir+/home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions" /home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/decode.sv 
+>>>>>>> 5fc8d1ef87bedbe36cc02a4eb8e3abb49b57f021
 # -- Compiling module decode
 # 
 # Top level modules:
 # 	decode
+<<<<<<< HEAD
 # End time: 09:23:22 on Sep 15,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+/home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions {/home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/datapath.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
 # Start time: 09:23:22 on Sep 15,2023
+=======
+<<<<<<< HEAD
+# End time: 18:18:17 on Sep 13,2023, Elapsed time: 0:00:00
+=======
+# End time: 15:03:48 on Sep 13,2023, Elapsed time: 0:00:00
+>>>>>>> 5fc8d1ef87bedbe36cc02a4eb8e3abb49b57f021
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+/home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions {/home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/datapath.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+<<<<<<< HEAD
+# Start time: 18:18:17 on Sep 13,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+/home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions" /home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/datapath.sv 
+=======
+# Start time: 15:03:48 on Sep 13,2023
+>>>>>>> 00b7528607b209c3bd096117d060b1799bc48505
 # vlog -reportprogress 300 -sv -work work "+incdir+/home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions" /home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/datapath.sv 
+>>>>>>> 5fc8d1ef87bedbe36cc02a4eb8e3abb49b57f021
 # -- Compiling module datapath
 # 
 # Top level modules:
 # 	datapath
+<<<<<<< HEAD
 # End time: 09:23:22 on Sep 15,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+/home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions {/home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/comp_n.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
 # Start time: 09:23:22 on Sep 15,2023
+=======
+<<<<<<< HEAD
+# End time: 18:18:17 on Sep 13,2023, Elapsed time: 0:00:00
+=======
+# End time: 15:03:48 on Sep 13,2023, Elapsed time: 0:00:00
+>>>>>>> 5fc8d1ef87bedbe36cc02a4eb8e3abb49b57f021
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+/home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions {/home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/comp_n.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+<<<<<<< HEAD
+# Start time: 18:18:17 on Sep 13,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+/home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions" /home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/comp_n.sv 
+=======
+# Start time: 15:03:48 on Sep 13,2023
+>>>>>>> 00b7528607b209c3bd096117d060b1799bc48505
 # vlog -reportprogress 300 -sv -work work "+incdir+/home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions" /home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/comp_n.sv 
+>>>>>>> 5fc8d1ef87bedbe36cc02a4eb8e3abb49b57f021
 # -- Compiling module comp_n
 # 
 # Top level modules:
 # 	comp_n
+<<<<<<< HEAD
 # End time: 09:23:22 on Sep 15,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+/home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions {/home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/alu.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
 # Start time: 09:23:22 on Sep 15,2023
+=======
+<<<<<<< HEAD
+# End time: 18:18:17 on Sep 13,2023, Elapsed time: 0:00:00
+=======
+# End time: 15:03:48 on Sep 13,2023, Elapsed time: 0:00:00
+>>>>>>> 5fc8d1ef87bedbe36cc02a4eb8e3abb49b57f021
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+/home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions {/home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/alu.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+<<<<<<< HEAD
+# Start time: 18:18:17 on Sep 13,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+/home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions" /home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/alu.sv 
+=======
+# Start time: 15:03:48 on Sep 13,2023
+>>>>>>> 00b7528607b209c3bd096117d060b1799bc48505
 # vlog -reportprogress 300 -sv -work work "+incdir+/home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions" /home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/alu.sv 
+>>>>>>> 5fc8d1ef87bedbe36cc02a4eb8e3abb49b57f021
 # -- Compiling module alu
 # 
 # Top level modules:
 # 	alu
+<<<<<<< HEAD
 # End time: 09:23:22 on Sep 15,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+/home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions {/home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/adder.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
 # Start time: 09:23:22 on Sep 15,2023
+=======
+<<<<<<< HEAD
+# End time: 18:18:17 on Sep 13,2023, Elapsed time: 0:00:00
+=======
+# End time: 15:03:48 on Sep 13,2023, Elapsed time: 0:00:00
+>>>>>>> 5fc8d1ef87bedbe36cc02a4eb8e3abb49b57f021
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+/home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions {/home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/adder.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+<<<<<<< HEAD
+# Start time: 18:18:17 on Sep 13,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+/home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions" /home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/adder.sv 
+=======
+# Start time: 15:03:48 on Sep 13,2023
+>>>>>>> 00b7528607b209c3bd096117d060b1799bc48505
 # vlog -reportprogress 300 -sv -work work "+incdir+/home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions" /home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/adder.sv 
+>>>>>>> 5fc8d1ef87bedbe36cc02a4eb8e3abb49b57f021
 # -- Compiling module adder
 # 
 # Top level modules:
 # 	adder
+<<<<<<< HEAD
 # End time: 09:23:22 on Sep 15,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -2008 -work work {/home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/dmem.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
 # Start time: 09:23:22 on Sep 15,2023
+=======
+<<<<<<< HEAD
+# End time: 18:18:17 on Sep 13,2023, Elapsed time: 0:00:00
+=======
+# End time: 15:03:48 on Sep 13,2023, Elapsed time: 0:00:00
+>>>>>>> 5fc8d1ef87bedbe36cc02a4eb8e3abb49b57f021
+# Errors: 0, Warnings: 0
+# vcom -2008 -work work {/home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/dmem.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+<<<<<<< HEAD
+# Start time: 18:18:17 on Sep 13,2023
+# vcom -reportprogress 300 -2008 -work work /home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/dmem.vhd 
+=======
+# Start time: 15:03:48 on Sep 13,2023
+>>>>>>> 00b7528607b209c3bd096117d060b1799bc48505
 # vcom -reportprogress 300 -2008 -work work /home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/dmem.vhd 
+>>>>>>> 5fc8d1ef87bedbe36cc02a4eb8e3abb49b57f021
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
@@ -251,24 +651,58 @@
 # -- Loading package NUMERIC_STD
 # -- Compiling entity dmem
 # -- Compiling architecture behave of dmem
+<<<<<<< HEAD
+# ** Warning: /home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/dmem.vhd(53): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
+# End time: 18:18:17 on Sep 13,2023, Elapsed time: 0:00:00
+=======
 # ** Warning: /home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/dmem.vhd(53): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
+<<<<<<< HEAD
 # End time: 09:23:22 on Sep 15,2023, Elapsed time: 0:00:00
+=======
+# End time: 15:03:48 on Sep 13,2023, Elapsed time: 0:00:00
+>>>>>>> 5fc8d1ef87bedbe36cc02a4eb8e3abb49b57f021
+>>>>>>> 00b7528607b209c3bd096117d060b1799bc48505
 # Errors: 0, Warnings: 1
 # 
 # vlog -sv -work work +incdir+/home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions {/home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/processor_tb.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+<<<<<<< HEAD
 # Start time: 09:23:22 on Sep 15,2023
+=======
+<<<<<<< HEAD
+# Start time: 18:18:17 on Sep 13,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+/home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions" /home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/processor_tb.sv 
+=======
+# Start time: 15:03:48 on Sep 13,2023
+>>>>>>> 00b7528607b209c3bd096117d060b1799bc48505
 # vlog -reportprogress 300 -sv -work work "+incdir+/home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions" /home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/processor_tb.sv 
+>>>>>>> 5fc8d1ef87bedbe36cc02a4eb8e3abb49b57f021
 # -- Compiling module processor_tb
 # 
 # Top level modules:
 # 	processor_tb
+<<<<<<< HEAD
 # End time: 09:23:22 on Sep 15,2023, Elapsed time: 0:00:00
+=======
+<<<<<<< HEAD
+# End time: 18:18:17 on Sep 13,2023, Elapsed time: 0:00:00
+=======
+# End time: 15:03:48 on Sep 13,2023, Elapsed time: 0:00:00
+>>>>>>> 5fc8d1ef87bedbe36cc02a4eb8e3abb49b57f021
+>>>>>>> 00b7528607b209c3bd096117d060b1799bc48505
 # Errors: 0, Warnings: 0
 # 
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc"  processor_tb
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs=""+acc"" processor_tb 
+<<<<<<< HEAD
 # Start time: 09:23:22 on Sep 15,2023
+=======
+<<<<<<< HEAD
+# Start time: 18:18:17 on Sep 13,2023
+=======
+# Start time: 15:03:48 on Sep 13,2023
+>>>>>>> 5fc8d1ef87bedbe36cc02a4eb8e3abb49b57f021
+>>>>>>> 00b7528607b209c3bd096117d060b1799bc48505
 # Loading sv_std.std
 # Loading work.processor_tb
 # Loading work.processor_arm
@@ -301,6 +735,16 @@
 # Loading ieee.std_logic_signed(body)
 # Loading ieee.numeric_std(body)
 # Loading work.dmem(behave)
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'c'.  Expected 17, found 16.
+#    Time: 0 ps  Iteration: 0  Instance: /processor_tb/dut/c File: /home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/processor_arm.sv Line: 20
+# ** Warning: (vsim-3722) /home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/processor_arm.sv(20): [TFMPC] - Missing connection for port 'UncondBranch'.
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (2) for port 'UncondBranch'. The port definition is at: /home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/maindec.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /processor_tb/dut/c/decPpal File: /home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/controller.sv Line: 12
+# ** Warning: (vsim-3015) [PCDPC] - Port size (2) does not match connection size (1) for port 'ALUOp'. The port definition is at: /home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/maindec.sv(5).
+#    Time: 0 ps  Iteration: 0  Instance: /processor_tb/dut/c/decPpal File: /home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/controller.sv Line: 12
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'dp'.  Expected 22, found 21.
+#    Time: 0 ps  Iteration: 0  Instance: /processor_tb/dut/dp File: /home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/processor_arm.sv Line: 38
+# ** Warning: (vsim-3722) /home/adolfo/Documents/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/processor_arm.sv(38): [TFMPC] - Missing connection for port 'UncondBranch'.
 # 
 # add wave *
 # view structure
@@ -315,5 +759,14 @@
 # Break in Module processor_tb at /home/adolfo/Documentos/Famaf/3ro/Arqui/TP3_arm_processor_w_exceptions/processor_tb.sv line 27
 # 
 # stdin: <EOF>
+<<<<<<< HEAD
 # End time: 09:23:57 on Sep 15,2023, Elapsed time: 0:00:35
+=======
+<<<<<<< HEAD
+# End time: 18:18:51 on Sep 13,2023, Elapsed time: 0:00:34
+# Errors: 0, Warnings: 6
+=======
+# End time: 15:04:32 on Sep 13,2023, Elapsed time: 0:00:44
+>>>>>>> 00b7528607b209c3bd096117d060b1799bc48505
 # Errors: 0, Warnings: 0
+>>>>>>> 5fc8d1ef87bedbe36cc02a4eb8e3abb49b57f021
