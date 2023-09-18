@@ -116,6 +116,7 @@ Seleccionar las respuestas correctas de las siguientes afirmaciones:
 
 Considere que la siguiente sección de código está presente en el vector de excepciones del procesador implementado. En el caso de una excepción por OpCode invalido, este código deberá ejecutar un procedimiento alojado en la dirección 0x0400, usando X0 como argumento que contenga la dirección del OpCode invalido.
 Completar el código con los argumentos faltantes:
+
 ![Alt text](image-1.png)
 
 ### Ejercicio 8
@@ -129,7 +130,9 @@ forzar la ejecución de este nuevo OpCode.
 - Cualquier otra fuente de excepción el procesador debe quedar atrapado en un lazo infinito dentro del vector de excepciones.
 
 1. Completar el código con los argumentos faltantes.
+
     ![Alt text](image-2.png)
+
     Que hace?
     Primero chequea que el tipo de excepcion sea IRQ, si es asi, salta a la ISR. Si no es IRQ, chequea si es un opcode invalido, si es asi, reemplaza el opcode invalido por el valor 0x8B1F03FF y lo ejecuta. Si no es IRQ ni opcode invalido, se queda en un lazo infinito.
 

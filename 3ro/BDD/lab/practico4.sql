@@ -10,19 +10,7 @@ from
 inner join country c on
 	ci.CountryCode = c.Code)
 where
-	(ci.CountryCode) IN (
-	select
-		c.Code
-	from
-		country c
-	where
-		Population < 10000);
-
-SELECT city.Name Ciudad, 
-       (SELECT country.Name FROM country WHERE country.Code = city.CountryCode) AS Pais
-FROM city
-WHERE city.CountryCode IN (SELECT Code FROM country WHERE Population < 10000);
-
+	c.Population < 10000;
 /*Listar todas aquellas ciudades cuya población sea mayor que 
  * la población promedio entre todas las ciudades.*/
 select Name from city where Population > ALL (select avg(Population) from city); 
@@ -65,8 +53,8 @@ SELECT DISTINCT c.Region
 FROM country c 
 WHERE c.SurfaceArea < 1000
 AND EXISTS (SELECT ci.Name 
-			FROM (city ci INNER JOIN country ON c.Code = ci.CountryCode)
-			WHERE ci.Population>100000);
+			FROM (city ci INNER JOIN country AS c2 ON c2.Code = ci.CountryCode)
+			WHERE ci.Population>100000); 
 
 /*Listar el nombre de cada país con la cantidad de habitantes de su 
  * ciudad más poblada. (Hint: Hay dos maneras de llegar al mismo resultado. 
@@ -130,4 +118,11 @@ GROUP BY
 -- Parte II - Preguntas
 
 /*Si en la consulta 6 se quisiera devolver, además de las columnas ya solicitadas, el nombre de la ciudad más poblada. 
- * ¿Podría lograrse con agrupaciones? ¿y con una subquery escalar?*/
+ * ¿Podría lograrse con agrupaciones? ¿y con una subquery escalar?
+ * 
+ * 
+ * */
+SELECT  c.name AS Pais , 
+		(SELECT max(ci.Population) FROM city ci WHERE ci.CountryCode = c.Code) AS maxPop,
+		(SELECT ci.Name FROM city ci WHERE ci.Population=maxPop AND ci.CountryCode=c.Code) AS Nombre
+FROM country c ORDER BY maxPop DESC;
