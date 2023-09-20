@@ -1,17 +1,13 @@
-<<<<<<< HEAD
-Analysis & Synthesis Status : Successful - Wed Aug 23 11:54:33 2023
-=======
-Analysis & Synthesis Status : Successful - Tue Aug 22 21:19:37 2023
->>>>>>> 118de9ae3d870df2d41bb89eb5a248c550f7c25b
+Analysis & Synthesis Status : Successful - Wed Sep 20 12:29:09 2023
 Quartus Prime Version : 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 Revision Name : testQ
-Top-level Entity Name : mux2_8
+Top-level Entity Name : ej14
 Family : Cyclone IV E
-Total logic elements : 8
-    Total combinational functions : 8
-    Dedicated logic registers : 0
-Total registers : 0
-Total pins : 25
+Total logic elements : 5
+    Total combinational functions : 0
+    Dedicated logic registers : 5
+Total registers : 5
+Total pins : 9
 Total virtual pins : 0
 Total memory bits : 0
 Embedded Multiplier 9-bit elements : 0

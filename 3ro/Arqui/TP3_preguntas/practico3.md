@@ -106,11 +106,11 @@ Seleccionar las respuestas correctas de las siguientes afirmaciones:
 
         a. … no realiza ninguna acción.
 
-        b. … siempre retorna a la dirección de memoria de la instrucción que generó la excepción + 4. <--
+        b. … siempre retorna a la dirección de memoria de la instrucción que generó la excepción + 4.
 
         c. Ambas son correctas.
 
-        d. Ninguna es correcta
+        d. Ninguna es correctaz   z
 
 ### Ejercicio 7
 
@@ -151,9 +151,8 @@ forzar la ejecución de este nuevo OpCode.
         iv. No se realiza ninguna acción porque ya está en el vector de
         excepciones y retorna normalmente.
         
-        v. En cualquier caso se reemplaza el OpCode Invalido y se retorna al
-        flujo original del programa, previo a la ocurrencia de la primera
-        interrupción.
+        v. En cualquier caso se reemplaza el OpCode Invalido y se retorna al flujo original del programa, previo a la ocurrencia de la primera
+        interrupción. <--
         
         vi. Ninguna es correcta, ya que la lógica dependerá del tipo de
         excepción.
@@ -163,5 +162,6 @@ forzar la ejecución de este nuevo OpCode.
         i. no es posible para el procesador determinar la dirección de retorno para este contexto.
         ii. siempre queda atrapado en el lazo “exc_trap”.
         iii. siempre retorna a la dirección de memoria de la instrucción que generó la excepción + 4.
-        iv. siempre retorna a la dirección de memoria de la instrucción que generó la excepción.
+        iv. siempre retorna a la dirección de memoria de la instrucción que generó la excepción. <--
+        vuelve a la instruccion apuntada por el ELR (la que genero la excepcion) Pero ahora lo que apunta el ELR esta corregido por lo que no generara un opcodeInvalido.
         v. Ninguna es correcta
