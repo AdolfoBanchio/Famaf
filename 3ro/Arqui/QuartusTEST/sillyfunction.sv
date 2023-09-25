@@ -1,16 +1,9 @@
-module sillyfunction
-(input logic clk,a, b, c, d,
-output logic x, y);
-logic n1, n2;
-logic areg, breg, creg, dreg;
-always_ff @(posedge clk) begin
-areg <= a;
-breg <= b;
-creg <= c;
-dreg <= d;
-x <= n2;
-y <= ~(dreg | n2);
+module sillyfunction (input logic A, B, C, clk,
+output logic Z);
+logic P;
+assign P = A & B;
+always_ff @ (posedge clk)
+begin
+Z <= P | C;
 end
-assign n1 = areg & breg;
-assign n2 = n1 | creg;
 endmodule

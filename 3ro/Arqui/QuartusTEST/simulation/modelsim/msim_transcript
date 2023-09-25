@@ -1,3 +1,4 @@
+# ERROR: No extended dataflow license exists
 # do testQ_run_msim_rtl_verilog.do
 # if {[file exists rtl_work]} {
 # 	vdel -lib rtl_work -all
@@ -11,29 +12,29 @@
 # 
 # vlog -sv -work work +incdir+/home/adolfo/Documents/Famaf/3ro/Arqui/QuartusTEST {/home/adolfo/Documents/Famaf/3ro/Arqui/QuartusTEST/sillyfunction.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 11:50:08 on Aug 23,2023
+# Start time: 20:36:56 on Sep 21,2023
 # vlog -reportprogress 300 -sv -work work "+incdir+/home/adolfo/Documents/Famaf/3ro/Arqui/QuartusTEST" /home/adolfo/Documents/Famaf/3ro/Arqui/QuartusTEST/sillyfunction.sv 
 # -- Compiling module sillyfunction
 # 
 # Top level modules:
 # 	sillyfunction
-# End time: 11:50:08 on Aug 23,2023, Elapsed time: 0:00:00
+# End time: 20:36:56 on Sep 21,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vlog -sv -work work +incdir+/home/adolfo/Documents/Famaf/3ro/Arqui/QuartusTEST {/home/adolfo/Documents/Famaf/3ro/Arqui/QuartusTEST/sillyfunction_tb.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 11:50:08 on Aug 23,2023
+# Start time: 20:36:56 on Sep 21,2023
 # vlog -reportprogress 300 -sv -work work "+incdir+/home/adolfo/Documents/Famaf/3ro/Arqui/QuartusTEST" /home/adolfo/Documents/Famaf/3ro/Arqui/QuartusTEST/sillyfunction_tb.sv 
 # -- Compiling module sillyfunction_tb
 # 
 # Top level modules:
 # 	sillyfunction_tb
-# End time: 11:50:08 on Aug 23,2023, Elapsed time: 0:00:00
+# End time: 20:36:56 on Sep 21,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc"  sillyfunction_tb
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs=""+acc"" sillyfunction_tb 
-# Start time: 11:50:08 on Aug 23,2023
+# Start time: 20:36:56 on Sep 21,2023
 # Loading sv_std.std
 # Loading work.sillyfunction_tb
 # Loading work.sillyfunction
@@ -44,26 +45,10 @@
 # view signals
 # .main_pane.objects.interior.cs.body.tree
 # run -all
-#          8 tests completed with          0 errors
-# ** Note: $stop    : /home/adolfo/Documents/Famaf/3ro/Arqui/QuartusTEST/sillyfunction_tb.sv(56)
-#    Time: 105 ps  Iteration: 1  Instance: /sillyfunction_tb
-# Break in Module sillyfunction_tb at /home/adolfo/Documents/Famaf/3ro/Arqui/QuartusTEST/sillyfunction_tb.sv line 56
+# ** Note: $stop    : /home/adolfo/Documents/Famaf/3ro/Arqui/QuartusTEST/sillyfunction_tb.sv(12)
+#    Time: 45 ps  Iteration: 0  Instance: /sillyfunction_tb
+# Break in Module sillyfunction_tb at /home/adolfo/Documents/Famaf/3ro/Arqui/QuartusTEST/sillyfunction_tb.sv line 12
 # 
 # stdin: <EOF>
-# WARNING: No extended dataflow license exists
-# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
-# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
-# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
-# WARNING: No extended dataflow license exists
-# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
-# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
-# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
-# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
-# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
-# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
-# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
-# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
-# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
-# WARNING: No extended dataflow license exists
-# End time: 11:54:15 on Aug 23,2023, Elapsed time: 0:04:07
+# End time: 20:42:44 on Sep 21,2023, Elapsed time: 0:05:48
 # Errors: 0, Warnings: 0
