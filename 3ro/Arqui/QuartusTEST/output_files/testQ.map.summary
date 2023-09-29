@@ -1,13 +1,13 @@
-Analysis & Synthesis Status : Successful - Wed Sep 20 12:29:09 2023
+Analysis & Synthesis Status : Successful - Thu Sep 21 21:17:33 2023
 Quartus Prime Version : 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 Revision Name : testQ
-Top-level Entity Name : ej14
+Top-level Entity Name : circuito
 Family : Cyclone IV E
-Total logic elements : 5
-    Total combinational functions : 0
-    Dedicated logic registers : 5
-Total registers : 5
-Total pins : 9
+Total logic elements : 8
+    Total combinational functions : 8
+    Dedicated logic registers : 8
+Total registers : 8
+Total pins : 32
 Total virtual pins : 0
 Total memory bits : 0
 Embedded Multiplier 9-bit elements : 0

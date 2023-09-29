@@ -11,24 +11,24 @@ cModel Technology
 Z0 d/home/adolfo/Documents/Famaf/3ro/Arqui/QuartusTEST/simulation/modelsim
 vsillyfunction
 Z1 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
-Z2 !s110 1692802208
+Z2 !s110 1695339416
 !i10b 1
-!s100 V?N_ec?X]UDh9[co:;6X32
+!s100 3Y]@T5]9fjaYBnN_YLk6Z0
 Z3 !s11b Dg1SIo80bB@j0V0VzS_@n1
-IfID5z[_`HdELb:[0K[gm13
+IeP>EO^RK`>R44Kn>4LPXX0
 Z4 VDg1SIo80bB@j0V0VzS_@n1
 S1
 R0
-w1692794515
+w1695339262
 8/home/adolfo/Documents/Famaf/3ro/Arqui/QuartusTEST/sillyfunction.sv
 F/home/adolfo/Documents/Famaf/3ro/Arqui/QuartusTEST/sillyfunction.sv
 !i122 0
-L0 1 4
+L0 1 9
 Z5 OV;L;2020.1;71
 r1
 !s85 0
 31
-Z6 !s108 1692802208.000000
+Z6 !s108 1695339416.000000
 !s107 /home/adolfo/Documents/Famaf/3ro/Arqui/QuartusTEST/sillyfunction.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/adolfo/Documents/Famaf/3ro/Arqui/QuartusTEST|/home/adolfo/Documents/Famaf/3ro/Arqui/QuartusTEST/sillyfunction.sv|
 !i113 1
@@ -39,17 +39,17 @@ vsillyfunction_tb
 R1
 R2
 !i10b 1
-!s100 1<Q@<hW[SkEVFZ<g`5:<?1
+!s100 P::imgVhQ94S8m@V;^SjL3
 R3
-IOhAkXfcKgRc0DGl10d4HD2
+I1gH=RIka2]<c@KBFL?n690
 R4
 S1
 R0
-w1692794680
+w1695339398
 8/home/adolfo/Documents/Famaf/3ro/Arqui/QuartusTEST/sillyfunction_tb.sv
 F/home/adolfo/Documents/Famaf/3ro/Arqui/QuartusTEST/sillyfunction_tb.sv
 !i122 1
-L0 1 60
+L0 1 16
 R5
 r1
 !s85 0
