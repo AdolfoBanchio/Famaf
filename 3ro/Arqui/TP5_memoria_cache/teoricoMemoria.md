@@ -1,4 +1,4 @@
-# Memoria
+# Memoria y cache
 
 Principio de localidad dice que los programas acceden a relaitivamente pqueñas porciones de memoria del _Adress Space_ de los programas en cualquier instante. 2 tipos de localidad
 

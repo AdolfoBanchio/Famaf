@@ -102,19 +102,16 @@ GROUP BY Continente
 HAVING EsperanzaDeVida BETWEEN 40 AND 70
 ORDER BY EsperanzaDeVida DESC ;
 /*Listar la cantidad máxima, mínima, promedio y suma de habitantes por continente.*/
+
 select
-	cont.Name Continente ,
+	c.Continent as Continente ,
 	MIN(c.Population) Pop_min,
 	MAX(c.Population) Pop_max,
 	AVG(c.Population) Pop_avg,
 	SUM(c.Population) Pop_sum
-from
-	(continent cont
-inner join
-	  country c on 
-	  cont.Name = c.Continent)
+from country as c 
 GROUP BY
-	Continente;		
+	Continente;
 -- Parte II - Preguntas
 
 /*Si en la consulta 6 se quisiera devolver, además de las columnas ya solicitadas, el nombre de la ciudad más poblada. 
