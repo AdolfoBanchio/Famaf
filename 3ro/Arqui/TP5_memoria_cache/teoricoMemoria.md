@@ -47,5 +47,42 @@ La cache esta basada en una estructura _direct-mapped cache_ que es una estructu
 
     (Direccion de memoria) modulo (Numero de bloques en la cache)
 
-Por ejemplo si una cache tiene 8 bloques, entonces solamente utiliza los ultimos 3 bits de la direccion de memoria para encontrar la ubicacion del bloque en la cache.
+Por ejemplo si una cache tiene 8(2^3) bloques, entonces solamente utiliza los ultimos 3 bits de la direccion de memoria para encontrar la ubicacion del bloque en la cache. (esos 3 bits seran el indice en la cache)
 
+Una _line_ de cache esta compuesta por
+
+        (Tag, Valid bit, Data)
+El tag es un campo que identifica la direccion de memoria del bloque almacenado en la cache. El valid bit indica si el bloque es valido o no. El data es el bloque de memoria que se almacena en la linea de cache.
+
+![Alt text](image-2.png)
+![Alt text](image-3.png)
+
+Existen diferentes formas de mapear los bloques de memoria en la cache
+
+### Direct Mapped Cache
+
+Cada bloque de memoria tiene un unico lugar en la cache donde puede ser almacenado. Para encontrar la ubicacion de la cache de una direccion de memoria se hace:
+
+    (Direccion de memoria) modulo (Numero de bloques en la cache)
+
+### Set Associative Cache
+
+Cada bloque de memoria puede ser almacenado en un subconjunto de la cache. Para encontrar la ubicacion de la cache de una direccion de memoria se hace:
+
+    (Direccion de memoria) modulo (Numero de sets en la cache)
+
+Como el bloque puede estar colocado en cualquier elemento de su set corresopndiente, se deben buscar todas las tags de los elementos del set.
+
+### Fully Associative Cache
+
+Cada bloque de memoria puede ser almacenado en cualquier lugar de la cache. Para poder encontrar su ubicacion en la cache, se mapea cada linea de la misma.
+
+![Alt text](image-4.png)
+
+![Alt text](image-5.png)
+
+### AMAT (Average Memory Access Time)
+
+Es el tiempo promedio de acceso a la memoria. Se calcula como:
+
+    AMAT = Hit time + Miss rate * Miss penalty
