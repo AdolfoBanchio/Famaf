@@ -1,14 +1,19 @@
 
-main.elf:     file format elf64-littleaarch64
+main.elf:     formato del fichero elf64-littleaarch64
 
 
-Disassembly of section .text:
+Desensamblado de la sección .text:
 
 0000000000000000 <.text>:
-   0:	8b030041 	add	x1, x2, x3
-   4:	f8000001 	stur	x1, [x0]
-   8:	cb0101e2 	sub	x2, x15, x1
-   c:	f8004002 	stur	x2, [x0, #4]
-  10:	f8400003 	ldur	x3, [x0]
-  14:	8b020064 	add	x4, x3, x2
-  18:	f8408004 	ldur	x4, [x0, #8]
+   0:	d2800000 	mov	x0, #0x0                   	// #0
+   4:	d2800101 	mov	x1, #0x8                   	// #8
+   8:	d2800202 	mov	x2, #0x10                  	// #16
+   c:	d2800303 	mov	x3, #0x18                  	// #24
+  10:	d28320a4 	mov	x4, #0x1905                	// #6405
+  14:	d2a320a5 	mov	x5, #0x19050000            	// #419758080
+  18:	d2c320a6 	mov	x6, #0x190500000000        	// #27509265530880
+  1c:	d2e320a7 	mov	x7, #0x1905000000000000    	// #1802847225831751680
+  20:	f8000004 	stur	x4, [x0]
+  24:	f8000025 	stur	x5, [x1]
+  28:	f8000046 	stur	x6, [x2]
+  2c:	f8000067 	stur	x7, [x3]
