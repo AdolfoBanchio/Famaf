@@ -1,14 +1,36 @@
 	.text
 	.org 0x0000
-	MOVZ x0, #0x0, LSL #0
-	MOVZ x1, #0x8, LSL #0
-	MOVZ x2, #0x10, LSL #0
-	MOVZ x3, #0x18, LSL #0
-	MOVZ x4, #0x1905, LSL #0
-	MOVZ x5, #0x1905, LSL #16
-	MOVZ x6, #0x1905, LSL #32
-	MOVZ x7, #0x1905, LSL #48
-	STUR x4, [x0, #0x0]
-	STUR x5, [x1, #0x0]
-	STUR x6, [x2, #0x0]
-	STUR x7, [x3, #0x0]
+	STUR X1, [X0, #0]
+	STUR X2, [X0, #8]
+	STUR X3, [X16, #0]
+	ADD X3, X4, X5
+	ADD XZR, XZR, XZR
+	STUR X3, [X0, #24]
+	SUB X3, X4, X5
+	ADD XZR, XZR, XZR		
+	STUR X3, [X0, #32]
+	SUB X4, XZR, X10
+	ADD XZR, XZR, XZR
+	STUR X4, [X0, #40]
+	ADD X4, X3, X4
+	ADD XZR, XZR, XZR
+	STUR X4, [X0, #48]
+	SUB X5, X1, X3
+	ADD XZR, XZR, XZR
+	STUR X5, [X0, #56]
+	AND X5, X10, XZR
+	ADD XZR, XZR, XZR
+	STUR X5, [X0, #64]
+	AND X5, X10, X3
+	ADD XZR, XZR, XZR
+	STUR X5, [X0, #72]
+	AND X20, X20, X20
+	ADD XZR, XZR, XZR
+	STUR X20, [X0, #80]
+	ORR X6, X11, XZR
+	ADD XZR, XZR, XZR
+	STUR X6, [X0, #88]
+	ORR X6, X11, X3
+	ADD XZR, XZR, XZR
+	STUR X6, [X0, #96]
+finloop:	CBZ XZR, finloop

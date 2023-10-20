@@ -4,16 +4,40 @@ main.elf:     formato del fichero elf64-littleaarch64
 
 Desensamblado de la sección .text:
 
-0000000000000000 <.text>:
-   0:	d2800000 	mov	x0, #0x0                   	// #0
-   4:	d2800101 	mov	x1, #0x8                   	// #8
-   8:	d2800202 	mov	x2, #0x10                  	// #16
-   c:	d2800303 	mov	x3, #0x18                  	// #24
-  10:	d28320a4 	mov	x4, #0x1905                	// #6405
-  14:	d2a320a5 	mov	x5, #0x19050000            	// #419758080
-  18:	d2c320a6 	mov	x6, #0x190500000000        	// #27509265530880
-  1c:	d2e320a7 	mov	x7, #0x1905000000000000    	// #1802847225831751680
-  20:	f8000004 	stur	x4, [x0]
-  24:	f8000025 	stur	x5, [x1]
-  28:	f8000046 	stur	x6, [x2]
-  2c:	f8000067 	stur	x7, [x3]
+0000000000000000 <finloop-0x84>:
+   0:	f8000001 	stur	x1, [x0]
+   4:	f8008002 	stur	x2, [x0, #8]
+   8:	f8000203 	stur	x3, [x16]
+   c:	8b050083 	add	x3, x4, x5
+  10:	8b1f03ff 	add	xzr, xzr, xzr
+  14:	f8018003 	stur	x3, [x0, #24]
+  18:	cb050083 	sub	x3, x4, x5
+  1c:	8b1f03ff 	add	xzr, xzr, xzr
+  20:	f8020003 	stur	x3, [x0, #32]
+  24:	cb0a03e4 	neg	x4, x10
+  28:	8b1f03ff 	add	xzr, xzr, xzr
+  2c:	f8028004 	stur	x4, [x0, #40]
+  30:	8b040064 	add	x4, x3, x4
+  34:	8b1f03ff 	add	xzr, xzr, xzr
+  38:	f8030004 	stur	x4, [x0, #48]
+  3c:	cb030025 	sub	x5, x1, x3
+  40:	8b1f03ff 	add	xzr, xzr, xzr
+  44:	f8038005 	stur	x5, [x0, #56]
+  48:	8a1f0145 	and	x5, x10, xzr
+  4c:	8b1f03ff 	add	xzr, xzr, xzr
+  50:	f8040005 	stur	x5, [x0, #64]
+  54:	8a030145 	and	x5, x10, x3
+  58:	8b1f03ff 	add	xzr, xzr, xzr
+  5c:	f8048005 	stur	x5, [x0, #72]
+  60:	8a140294 	and	x20, x20, x20
+  64:	8b1f03ff 	add	xzr, xzr, xzr
+  68:	f8050014 	stur	x20, [x0, #80]
+  6c:	aa1f0166 	orr	x6, x11, xzr
+  70:	8b1f03ff 	add	xzr, xzr, xzr
+  74:	f8058006 	stur	x6, [x0, #88]
+  78:	aa030166 	orr	x6, x11, x3
+  7c:	8b1f03ff 	add	xzr, xzr, xzr
+  80:	f8060006 	stur	x6, [x0, #96]
+
+0000000000000084 <finloop>:
+  84:	b400001f 	cbz	xzr, 84 <finloop>
