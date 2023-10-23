@@ -1,4 +1,4 @@
-make: No se hace nada para 'asm'.
+make: Nothing to be done for 'asm'.
 ROM [0:5] ='{32'hf8000001,
 32'hf8008002,
 32'hf8000203,
