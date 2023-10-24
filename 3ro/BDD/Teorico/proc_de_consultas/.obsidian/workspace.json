@@ -1,30 +1,18 @@
 {
   "main": {
-    "id": "1c2f34416ba102df",
+    "id": "1f2fc6b1a0876f23",
     "type": "split",
     "children": [
       {
-        "id": "8f02ebedc7c13107",
+        "id": "255ddae0caa75b5c",
         "type": "tabs",
         "children": [
           {
-            "id": "16ba09140c96635a",
+            "id": "4f428a1c899d3e73",
             "type": "leaf",
             "state": {
-              "type": "pdf",
-              "state": {
-                "file": "Retorno de información.pdf"
-              }
-            }
-          },
-          {
-            "id": "07c74545ec5eec80",
-            "type": "leaf",
-            "state": {
-              "type": "pdf",
-              "state": {
-                "file": "Retorno de información en la web.pdf"
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -33,15 +21,15 @@
     "direction": "vertical"
   },
   "left": {
-    "id": "3e08ea64d15f39da",
+    "id": "a35749905b489337",
     "type": "split",
     "children": [
       {
-        "id": "22bc20de4328ab71",
+        "id": "2389c0f253f64cb4",
         "type": "tabs",
         "children": [
           {
-            "id": "05ff67a5ac990880",
+            "id": "9e3b03e0d2c96db9",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -51,7 +39,7 @@
             }
           },
           {
-            "id": "52c1a29c3192ce1d",
+            "id": "aeee6c1256db9a98",
             "type": "leaf",
             "state": {
               "type": "search",
@@ -66,7 +54,7 @@
             }
           },
           {
-            "id": "4e239939d1afc9d8",
+            "id": "e92b667c39d51877",
             "type": "leaf",
             "state": {
               "type": "bookmarks",
@@ -80,20 +68,19 @@
     "width": 200
   },
   "right": {
-    "id": "f0cf85fc9e44bb1c",
+    "id": "f0697a3ed6da15b8",
     "type": "split",
     "children": [
       {
-        "id": "25a1ee8d1bc239e2",
+        "id": "00b2690eaf88c134",
         "type": "tabs",
         "children": [
           {
-            "id": "ec3f12b15f8a3dd5",
+            "id": "007be3e55fd98882",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Retorno de información.pdf",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -105,19 +92,18 @@
             }
           },
           {
-            "id": "040304dd9a91bd93",
+            "id": "be98f2fbfbd11a83",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Retorno de información.pdf",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
             }
           },
           {
-            "id": "6c896ae34bc6f2d4",
+            "id": "240e8e2f0c19b888",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -128,13 +114,11 @@
             }
           },
           {
-            "id": "48e45bede3606b5f",
+            "id": "254a625c3bcb93ff",
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "Retorno de información.pdf"
-              }
+              "state": {}
             }
           }
         ]
@@ -151,31 +135,9 @@
       "canvas:Create new canvas": false,
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
-      "command-palette:Open command palette": false,
-      "obsidian-excalidraw-plugin:Create new drawing": false
+      "command-palette:Open command palette": false
     }
   },
-  "active": "16ba09140c96635a",
-  "lastOpenFiles": [
-    "Retorno de información en la web.pdf",
-    "Retorno de información.pdf",
-    "Retorno de información.md",
-    "Excalidraw/Drawing 2023-10-24 14.06.23.excalidraw.md",
-    "Excalidraw",
-    "Excalidraw/Drawing 2023-10-24 02.03.25.excalidraw.md",
-    "Excalidraw/Drawing 2023-10-24 02.02.32.excalidraw.md",
-    "imgs/Pasted image 20231023222031.png",
-    "Retorno de información en la web.md",
-    "imgs/Pasted image 20231024014639.png",
-    "imgs/Pasted image 20231024014626.png",
-    "imgs/Pasted image 20231024013300.png",
-    "imgs/Pasted image 20231024013243.png",
-    "imgs/Pasted image 20231023222855.png",
-    "imgs/Pasted image 20231023221815.png",
-    "imgs",
-    "TF-IDF.md",
-    "imgs/Pasted image 20231023220629.png",
-    "imgs/Pasted image 20231023220347.png",
-    "imgs/Pasted image 20231023214444.png"
-  ]
+  "active": "4f428a1c899d3e73",
+  "lastOpenFiles": []
 }

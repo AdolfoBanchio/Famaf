@@ -1,29 +1,47 @@
 {
   "main": {
-    "id": "1c2f34416ba102df",
+    "id": "98cd6e4180c2b533",
     "type": "split",
     "children": [
       {
-        "id": "8f02ebedc7c13107",
+        "id": "1af5037e1cc0b6e5",
         "type": "tabs",
         "children": [
           {
-            "id": "16ba09140c96635a",
+            "id": "a5cfa531d2336a25",
             "type": "leaf",
             "state": {
               "type": "pdf",
               "state": {
-                "file": "Retorno de información.pdf"
+                "file": "proc_de_consultas/Factor de selectividad y operadores físicos.pdf"
               }
             }
           },
           {
-            "id": "07c74545ec5eec80",
+            "id": "d9974e5d64801bff",
             "type": "leaf",
             "state": {
               "type": "pdf",
               "state": {
-                "file": "Retorno de información en la web.pdf"
+                "file": "Silberchatz - Fundamentos de BD 4ta ed.pdf"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "183ccca00c881b9b",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "02ecd5ef442075bd",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "proc_de_consultas/Costo de operadores.md",
+                "mode": "source",
+                "source": false
               }
             }
           }
@@ -33,15 +51,15 @@
     "direction": "vertical"
   },
   "left": {
-    "id": "3e08ea64d15f39da",
+    "id": "13301256100ad3a4",
     "type": "split",
     "children": [
       {
-        "id": "22bc20de4328ab71",
+        "id": "47eeeb21238dceea",
         "type": "tabs",
         "children": [
           {
-            "id": "05ff67a5ac990880",
+            "id": "4cdbc38faf583a09",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -51,7 +69,7 @@
             }
           },
           {
-            "id": "52c1a29c3192ce1d",
+            "id": "60c8ed0bb4b37a23",
             "type": "leaf",
             "state": {
               "type": "search",
@@ -66,7 +84,7 @@
             }
           },
           {
-            "id": "4e239939d1afc9d8",
+            "id": "ca25ba38e6885099",
             "type": "leaf",
             "state": {
               "type": "bookmarks",
@@ -77,23 +95,24 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 200,
+    "collapsed": true
   },
   "right": {
-    "id": "f0cf85fc9e44bb1c",
+    "id": "870171e06d711139",
     "type": "split",
     "children": [
       {
-        "id": "25a1ee8d1bc239e2",
+        "id": "ad1b991c18a9aa77",
         "type": "tabs",
         "children": [
           {
-            "id": "ec3f12b15f8a3dd5",
+            "id": "355741202c1a8eac",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Retorno de información.pdf",
+                "file": "proc_de_consultas/Costo de operadores.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -105,19 +124,19 @@
             }
           },
           {
-            "id": "040304dd9a91bd93",
+            "id": "52acd56e0dacb6e8",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Retorno de información.pdf",
+                "file": "proc_de_consultas/Costo de operadores.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
             }
           },
           {
-            "id": "6c896ae34bc6f2d4",
+            "id": "8620d058ad017c8e",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -128,12 +147,12 @@
             }
           },
           {
-            "id": "48e45bede3606b5f",
+            "id": "abd54013ec199ac3",
             "type": "leaf",
             "state": {
               "type": "outline",
               "state": {
-                "file": "Retorno de información.pdf"
+                "file": "proc_de_consultas/Costo de operadores.md"
               }
             }
           }
@@ -151,31 +170,16 @@
       "canvas:Create new canvas": false,
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
-      "command-palette:Open command palette": false,
-      "obsidian-excalidraw-plugin:Create new drawing": false
+      "command-palette:Open command palette": false
     }
   },
-  "active": "16ba09140c96635a",
+  "active": "02ecd5ef442075bd",
   "lastOpenFiles": [
-    "Retorno de información en la web.pdf",
-    "Retorno de información.pdf",
-    "Retorno de información.md",
-    "Excalidraw/Drawing 2023-10-24 14.06.23.excalidraw.md",
-    "Excalidraw",
-    "Excalidraw/Drawing 2023-10-24 02.03.25.excalidraw.md",
-    "Excalidraw/Drawing 2023-10-24 02.02.32.excalidraw.md",
-    "imgs/Pasted image 20231023222031.png",
-    "Retorno de información en la web.md",
-    "imgs/Pasted image 20231024014639.png",
-    "imgs/Pasted image 20231024014626.png",
-    "imgs/Pasted image 20231024013300.png",
-    "imgs/Pasted image 20231024013243.png",
-    "imgs/Pasted image 20231023222855.png",
-    "imgs/Pasted image 20231023221815.png",
-    "imgs",
-    "TF-IDF.md",
-    "imgs/Pasted image 20231023220629.png",
-    "imgs/Pasted image 20231023220347.png",
-    "imgs/Pasted image 20231023214444.png"
+    "proc_de_consultas/Costo de operadores.pdf",
+    "proc_de_consultas/Factor de selectividad y operadores físicos.pdf",
+    "Silberchatz - Fundamentos de BD 4ta ed.pdf",
+    "proc_de_consultas/Costo de operadores.md",
+    "proc_de_consultas/orga_de_archivos_e_indices.pdf",
+    "proc_de_consultas/procesamiento de consultas.pdf"
   ]
 }

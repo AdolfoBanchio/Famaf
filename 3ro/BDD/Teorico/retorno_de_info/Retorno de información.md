@@ -97,7 +97,7 @@ ___
 
 ___
 #### Medición de la eficacia (relevancia) de los resultados
-![[Pasted image 20231023222031.png]]
+![[Pasted image 20231023222031.png|639]]
 Existen métricas relevantes para medir el desempeño
 - Precision: proporcion de los documentos relevantes retornados en el total de documentos retornados por la consulta. 
 - Cobertura: proporcion de los documentos relevantes retornados en el total de documentos relevantes en la BD (retornados y no retornados)
@@ -110,7 +110,7 @@ Existen métricas relevantes para medir el desempeño
 ### Lucene
 Es una maquina de busqueda e indexado popular en la industria y academia
 - Los documentos no estructurados pasan por un proceso de indexado previo a estar disponibles para consultas.
-- Un documento de lucene se forma de **campos** que tienen un **tipo** (binario,numerico,texto)
+- Un documento de Lucene se forma de **campos** que tienen un **tipo** (binario,numerico,texto)
 	- texto puede ser no tokenizado o un stream de simbolos
 - Posee una **API de consultas** 
 	- Las consultas retornan una lista ordenada de docs por rango, usando variante de [[#TF-IDF (frecuencia de termino-frecuencia inversa de doc)| TF-IDF]] para dar valor a los docs.
