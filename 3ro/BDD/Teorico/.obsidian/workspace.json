@@ -8,16 +8,6 @@
         "type": "tabs",
         "children": [
           {
-            "id": "a5cfa531d2336a25",
-            "type": "leaf",
-            "state": {
-              "type": "pdf",
-              "state": {
-                "file": "proc_de_consultas/Factor de selectividad y operadores físicos.pdf"
-              }
-            }
-          },
-          {
             "id": "d9974e5d64801bff",
             "type": "leaf",
             "state": {
@@ -28,7 +18,17 @@
             }
           },
           {
-            "id": "02ecd5ef442075bd",
+            "id": "58b6c284d25ecb1e",
+            "type": "leaf",
+            "state": {
+              "type": "pdf",
+              "state": {
+                "file": "proc_de_consultas/Costo de operadores.pdf"
+              }
+            }
+          },
+          {
+            "id": "02ee5f4b51db2516",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -36,6 +36,16 @@
                 "file": "proc_de_consultas/Costo de operadores.md",
                 "mode": "source",
                 "source": false
+              }
+            }
+          },
+          {
+            "id": "02ecd5ef442075bd",
+            "type": "leaf",
+            "state": {
+              "type": "pdf",
+              "state": {
+                "file": "proc_de_consultas/Factor de selectividad y operadores físicos.pdf"
               }
             }
           }
@@ -167,13 +177,14 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "02ecd5ef442075bd",
+  "active": "02ee5f4b51db2516",
   "lastOpenFiles": [
     "proc_de_consultas/Costo de operadores.pdf",
     "proc_de_consultas/Factor de selectividad y operadores físicos.pdf",
     "Silberchatz - Fundamentos de BD 4ta ed.pdf",
-    "proc_de_consultas/Costo de operadores.md",
+    "proc_de_consultas/procesamiento de consultas.pdf",
     "proc_de_consultas/orga_de_archivos_e_indices.pdf",
-    "proc_de_consultas/procesamiento de consultas.pdf"
+    "proc_de_consultas/resumen_proc_de_consultas.pdf",
+    "proc_de_consultas/Costo de operadores.md"
   ]
 }

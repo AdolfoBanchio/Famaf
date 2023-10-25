@@ -1,4 +1,6 @@
-make: Nothing to be done for 'asm'.
+aarch64-linux-gnu-as --warn --fatal-warnings main.s -o main.o
+aarch64-linux-gnu-ld main.o -T memmap -o main.elf -M > memory_map.txt
+aarch64-linux-gnu-objdump -D main.elf > main.list
 ROM [0:5] ='{32'hf8000001,
 32'hf8008002,
 32'hf8000203,

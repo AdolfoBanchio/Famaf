@@ -1,8 +1,8 @@
 
-main.elf:     file format elf64-littleaarch64
+main.elf:     formato del fichero elf64-littleaarch64
 
 
-Disassembly of section .text:
+Desensamblado de la sección .text:
 
 0000000000000000 <finloop-0x14>:
    0:	f8000001 	stur	x1, [x0]

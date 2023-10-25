@@ -4,5 +4,8 @@
 	STUR X2, [X0, #8]
 	STUR X3, [X16, #0]
 	ADD X3, X4, X5
+	/* ADD X5, X3, XZR
+	STUR X1, [X0, #0]
+	STUR X2, [X0, #8] */
 	STUR X3, [X0, #24]
 finloop:	CBZ XZR, finloop
