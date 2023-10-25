@@ -26,13 +26,7 @@
                 "file": "Silberchatz - Fundamentos de BD 4ta ed.pdf"
               }
             }
-          }
-        ]
-      },
-      {
-        "id": "183ccca00c881b9b",
-        "type": "tabs",
-        "children": [
+          },
           {
             "id": "02ecd5ef442075bd",
             "type": "leaf",
@@ -45,7 +39,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -95,8 +90,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 288.5
   },
   "right": {
     "id": "870171e06d711139",
