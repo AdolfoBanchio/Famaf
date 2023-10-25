@@ -1,0 +1,151 @@
+{
+  "main": {
+    "id": "7e28429d3a5b91f0",
+    "type": "split",
+    "children": [
+      {
+        "id": "20a95cf26568ffe6",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "40679601a7ef94c1",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "b70d525eb7980557",
+    "type": "split",
+    "children": [
+      {
+        "id": "d1c8e2c1d97041a3",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "6de356c1bfb5559b",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "eba4e38efc3c1546",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "ae4d47dca6568678",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "d07eb638b3a64642",
+    "type": "split",
+    "children": [
+      {
+        "id": "5b41856268ea4832",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "92d42e8bb5f71560",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "5f7877906d89268d",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "9aee5a3fb0e5407f",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "02561c8369c225a5",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "40679601a7ef94c1",
+  "lastOpenFiles": [
+    "Practico 6.md",
+    "imgs",
+    "Clase TP6.pdf",
+    "TP6_Técnicas de mejora de rendimiento.pdf",
+    "tecnias_de_mejora.pdf",
+    "imgs/Practico 6-20231025003957996.webp",
+    "imgs/Pasted image 20231024233102.png"
+  ]
+}

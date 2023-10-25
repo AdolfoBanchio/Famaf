@@ -4,27 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "8f02ebedc7c13107",
+        "id": "634dbe7831221cd7",
         "type": "tabs",
         "children": [
           {
-            "id": "16ba09140c96635a",
+            "id": "0450f1b1a4195b96",
             "type": "leaf",
             "state": {
-              "type": "pdf",
-              "state": {
-                "file": "Retorno de información.pdf"
-              }
-            }
-          },
-          {
-            "id": "07c74545ec5eec80",
-            "type": "leaf",
-            "state": {
-              "type": "pdf",
-              "state": {
-                "file": "Retorno de información en la web.pdf"
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -93,7 +81,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Retorno de información.pdf",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +97,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Retorno de información.pdf",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -132,9 +118,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "Retorno de información.pdf"
-              }
+              "state": {}
             }
           }
         ]
@@ -155,7 +139,7 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "16ba09140c96635a",
+  "active": "0450f1b1a4195b96",
   "lastOpenFiles": [
     "Retorno de información en la web.pdf",
     "Retorno de información.pdf",
