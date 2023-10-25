@@ -8,7 +8,7 @@ Busqueda binaria | Si el campo de la seleccion es la calve con la que esta orden
 A3 | Indice primario, igualdad basada en la clave | $\log_(n/2) (K) + 1$ 
 A4 | Indice primario, igualdad en atributo no clave  | $\log_(n/2) (K) + b_s$|$b_S$ cantidad de bloques conteniendo registroscon la clave de busqueda especificada que son leidos
 A5 | Indice secundario, igualdad en clave| $h_i + 1$ | 
-A5bis| Indice secundario, igualdad en no clave | $h_i + n$ |$n$ cantidad de registros que se seleccionan. Asumiendo peor caso -> cada registro esta en un bloque diferente.
+A5bis| Indice secundario, igualdad en no clave | $h_i * n$ |$n$ cantidad de registros que se seleccionan. Asumiendo peor caso -> cada registro esta en un bloque diferente.
 
 ##### Involucrando comparaciones
 Selecciones de la forma $\sigma_{(A<=V)}$ o $\sigma_{A>=V}$
@@ -20,8 +20,8 @@ Condicion | costo(en bloques) | aclaracion
 :--: |:--:|:--:
 Indice primario con tabla ordenada en A para >=| $hi +b$ | b = numero de bloques conteniendo registros A>=V
 Para <= | se escanea la tabla secuencial-mente = $b$| b = cantidad de bloques de la tabla 
-Indice secundario para A>=V| $h_i + 2n$ | $n$ cantidad de registros que cumplen la condición. Se usa la primera entrada de indice >= V, se recorren los indices secuencialmente
-Indice secundario para A<=V | $h_i +2n$ | n cantidad de registros que cumplen la condicion. Se recorren los indices secuencialmente hasta la primera entrada > V.
+Indice secundario para A>=V| $h_i * n$ | $n$ cantidad de registros que cumplen la condición. Se usa la primera entrada de indice >= V, se recorren los indices secuencialmente
+Indice secundario para A<=V | $h_i * n$ | n cantidad de registros que cumplen la condicion. Se recorren los indices secuencialmente hasta la primera entrada > V.
 
 
 ### Operación de proyección
