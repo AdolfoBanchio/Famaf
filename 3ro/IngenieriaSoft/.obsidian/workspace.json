@@ -1,41 +1,29 @@
 {
   "main": {
-    "id": "98cd6e4180c2b533",
+    "id": "e8ea96655fe7428d",
     "type": "split",
     "children": [
       {
-        "id": "355e6057b7e6fa0d",
+        "id": "21d428ee5948d1c4",
         "type": "tabs",
         "children": [
           {
-            "id": "8cedf6657c2b204c",
+            "id": "88cca757332259ba",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {}
+            }
+          },
+          {
+            "id": "7fb2776e66d5285b",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "proc_de_consultas/Costo de operadores.md",
+                "file": "Temas para 2do parcial.md",
                 "mode": "source",
                 "source": false
-              }
-            }
-          },
-          {
-            "id": "25bbcd99037a7b6b",
-            "type": "leaf",
-            "state": {
-              "type": "pdf",
-              "state": {
-                "file": "retorno_de_info/Retorno de información en la web.pdf"
-              }
-            }
-          },
-          {
-            "id": "66363503729e3780",
-            "type": "leaf",
-            "state": {
-              "type": "pdf",
-              "state": {
-                "file": "retorno_de_info/Retorno de información.pdf"
               }
             }
           }
@@ -46,15 +34,15 @@
     "direction": "vertical"
   },
   "left": {
-    "id": "13301256100ad3a4",
+    "id": "9d858c1336ec721e",
     "type": "split",
     "children": [
       {
-        "id": "47eeeb21238dceea",
+        "id": "cefc51792abeecea",
         "type": "tabs",
         "children": [
           {
-            "id": "4cdbc38faf583a09",
+            "id": "37102676694f184e",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -64,7 +52,7 @@
             }
           },
           {
-            "id": "60c8ed0bb4b37a23",
+            "id": "22b059d49754b61b",
             "type": "leaf",
             "state": {
               "type": "search",
@@ -79,7 +67,7 @@
             }
           },
           {
-            "id": "ca25ba38e6885099",
+            "id": "a7b917ac38527069",
             "type": "leaf",
             "state": {
               "type": "bookmarks",
@@ -90,23 +78,24 @@
       }
     ],
     "direction": "horizontal",
-    "width": 338.5
+    "width": 200,
+    "collapsed": true
   },
   "right": {
-    "id": "870171e06d711139",
+    "id": "05c744833f60c6c2",
     "type": "split",
     "children": [
       {
-        "id": "ad1b991c18a9aa77",
+        "id": "430a09ca3c6938cc",
         "type": "tabs",
         "children": [
           {
-            "id": "355741202c1a8eac",
+            "id": "3572cc360c30e57c",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-                "file": "retorno_de_info/Retorno de información en la web.pdf",
+                "file": "Temas para 2do parcial.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -118,19 +107,19 @@
             }
           },
           {
-            "id": "52acd56e0dacb6e8",
+            "id": "cc157a18b8427a6d",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "retorno_de_info/Retorno de información en la web.pdf",
+                "file": "Temas para 2do parcial.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
             }
           },
           {
-            "id": "8620d058ad017c8e",
+            "id": "6a630f13c906132d",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -141,12 +130,12 @@
             }
           },
           {
-            "id": "abd54013ec199ac3",
+            "id": "2e8ee480699d61be",
             "type": "leaf",
             "state": {
               "type": "outline",
               "state": {
-                "file": "retorno_de_info/Retorno de información en la web.pdf"
+                "file": "Temas para 2do parcial.md"
               }
             }
           }
@@ -167,17 +156,10 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "25bbcd99037a7b6b",
+  "active": "7fb2776e66d5285b",
   "lastOpenFiles": [
-    "proc_de_consultas/Costo de operadores.md",
-    "retorno_de_info/Retorno de información.pdf",
-    "proc_de_consultas/Factor de selectividad y operadores físicos.pdf",
-    "retorno_de_info/Retorno de información en la web.pdf",
-    "Silberchatz - Fundamentos de BD 4ta ed.pdf",
-    "practicas1erParcial.pdf",
-    "proc_de_consultas/Costo de operadores.pdf",
-    "proc_de_consultas/procesamiento de consultas.pdf",
-    "proc_de_consultas/orga_de_archivos_e_indices.pdf",
-    "proc_de_consultas/resumen_proc_de_consultas.pdf"
+    "(Texts in Computer Science) Pankaj Jalote - An Integrated Approach to Software Engineering-Springer (2005).pdf",
+    "Temas para 2do parcial.md",
+    "Untitled"
   ]
 }
