@@ -18,8 +18,29 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "25bbcd99037a7b6b",
+            "type": "leaf",
+            "state": {
+              "type": "pdf",
+              "state": {
+                "file": "retorno_de_info/Retorno de información en la web.pdf"
+              }
+            }
+          },
+          {
+            "id": "66363503729e3780",
+            "type": "leaf",
+            "state": {
+              "type": "pdf",
+              "state": {
+                "file": "retorno_de_info/Retorno de información.pdf"
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -85,7 +106,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "proc_de_consultas/Costo de operadores.md",
+                "file": "retorno_de_info/Retorno de información.pdf",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +123,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "proc_de_consultas/Costo de operadores.md",
+                "file": "retorno_de_info/Retorno de información.pdf",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +146,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "proc_de_consultas/Costo de operadores.md"
+                "file": "retorno_de_info/Retorno de información.pdf"
               }
             }
           }
@@ -172,8 +193,8 @@
           }
         ],
         "direction": "vertical",
-        "x": 2311,
-        "y": 326,
+        "x": 2303,
+        "y": 67,
         "width": 1537,
         "height": 1013,
         "maximize": true,
@@ -181,12 +202,13 @@
       }
     ]
   },
-  "active": "8cedf6657c2b204c",
+  "active": "66363503729e3780",
   "lastOpenFiles": [
+    "retorno_de_info/Retorno de información en la web.pdf",
+    "proc_de_consultas/Costo de operadores.md",
     "proc_de_consultas/Factor de selectividad y operadores físicos.pdf",
     "Silberchatz - Fundamentos de BD 4ta ed.pdf",
     "practicas1erParcial.pdf",
-    "proc_de_consultas/Costo de operadores.md",
     "proc_de_consultas/Costo de operadores.pdf",
     "proc_de_consultas/procesamiento de consultas.pdf",
     "proc_de_consultas/orga_de_archivos_e_indices.pdf",
