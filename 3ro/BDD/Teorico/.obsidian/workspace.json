@@ -40,7 +40,7 @@
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -90,7 +90,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 338.5
+    "width": 200
   },
   "right": {
     "id": "870171e06d711139",
@@ -106,7 +106,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "retorno_de_info/Retorno de información en la web.pdf",
+                "file": "retorno_de_info/Retorno de información.pdf",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -123,7 +123,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "retorno_de_info/Retorno de información en la web.pdf",
+                "file": "retorno_de_info/Retorno de información.pdf",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -146,7 +146,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "retorno_de_info/Retorno de información en la web.pdf"
+                "file": "retorno_de_info/Retorno de información.pdf"
               }
             }
           }
@@ -167,12 +167,12 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "25bbcd99037a7b6b",
+  "active": "66363503729e3780",
   "lastOpenFiles": [
+    "retorno_de_info/Retorno de información en la web.pdf",
     "proc_de_consultas/Costo de operadores.md",
     "retorno_de_info/Retorno de información.pdf",
     "proc_de_consultas/Factor de selectividad y operadores físicos.pdf",
-    "retorno_de_info/Retorno de información en la web.pdf",
     "Silberchatz - Fundamentos de BD 4ta ed.pdf",
     "practicas1erParcial.pdf",
     "proc_de_consultas/Costo de operadores.pdf",
