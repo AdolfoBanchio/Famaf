@@ -1,11 +1,16 @@
 	.text
 	.org 0x0000
-	STUR X1, [X0, #0]
-	STUR X2, [X0, #8]
-	STUR X3, [X16, #0]
-	ADD X3, X4, X5
-	/* ADD X5, X3, XZR
-	STUR X1, [X0, #0]
-	STUR X2, [X0, #8] */
-	STUR X3, [X0, #24]
+	STUR X1, [X0, #0] // MEM 0:0x1
+STUR X2, [X0, #8] // MEM 1:0x2
+STUR X3, [X16, #0] // MEM 2:0x3
+ADD X3, X4, X5
+STUR X3, [X0, #24] // MEM 3:0x9
+SUB X3, X4, X5
+STUR X3, [X0, #32] // MEM 4:0xFFFFFFFFFFFFFFFF
+SUB X4, XZR, X10
+STUR X4, [X0, #40] // MEM 5:0xFFFFFFFFFFFFFFF6
+ADD X4, X3, X4
+STUR X4, [X0, #48] // MEM 6:0xFFFFFFFFFFFFFFF5
+SUB X5, X1, X3
+STUR X5, [X0, #56] // MEM 7:0x2
 finloop:	CBZ XZR, finloop

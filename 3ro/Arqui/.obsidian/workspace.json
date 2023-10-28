@@ -18,8 +18,39 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "85d1abd57ac78d26",
+            "type": "leaf",
+            "state": {
+              "type": "pdf",
+              "state": {
+                "file": "TP6_tecnicas_de_mejora/tecnias_de_mejora.pdf"
+              }
+            }
+          },
+          {
+            "id": "48435649165ece0b",
+            "type": "leaf",
+            "state": {
+              "type": "pdf",
+              "state": {
+                "file": "TP6_tecnicas_de_mejora/TP6_Técnicas de mejora de rendimiento.pdf"
+              }
+            }
+          },
+          {
+            "id": "b55eeb454313fca6",
+            "type": "leaf",
+            "state": {
+              "type": "pdf",
+              "state": {
+                "file": "Computer Organization and Design ARM edition.pdf"
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -29,7 +60,7 @@
     "type": "split",
     "children": [
       {
-        "id": "5ee95f01674158fc",
+        "id": "f3e11cd63d07a4d4",
         "type": "tabs",
         "children": [
           {
@@ -69,7 +100,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "5c1a5abbd1638cff",
@@ -85,7 +117,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "TP6_tecnicas_de_mejora/Practico 6.md",
+                "file": "Computer Organization and Design ARM edition.pdf",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +134,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "TP6_tecnicas_de_mejora/Practico 6.md",
+                "file": "Computer Organization and Design ARM edition.pdf",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +157,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "TP6_tecnicas_de_mejora/Practico 6.md"
+                "file": "Computer Organization and Design ARM edition.pdf"
               }
             }
           }
@@ -148,9 +180,15 @@
   },
   "active": "a29ecae6cb881cb1",
   "lastOpenFiles": [
-    "TP7_dynamic_scheduling",
+    "armv8 createAssembly-Template/main.list",
+    "armv8 createAssembly-Template/main.elf",
+    "armv8 createAssembly-Template/memory_map.txt",
+    "armv8 createAssembly-Template/main.o",
+    "TP6_tecnicas_de_mejora/TP6_Técnicas de mejora de rendimiento.pdf",
     "TP6_tecnicas_de_mejora/tecnias_de_mejora.pdf",
     "TP6_tecnicas_de_mejora/Practico 6.md",
+    "TP6_tecnicas_de_mejora/tecnias_de_mejora.xopp~",
+    "TP7_dynamic_scheduling",
     "TP6_tecnicas_de_mejora/Practico 6-20231025003957996.webp",
     "TP6_tecnicas_de_mejora/imgs/Practico 6-20231025003957996.webp",
     "TP6_tecnicas_de_mejora/Pasted image 20231024233102.png",
@@ -158,13 +196,7 @@
     "TP6_tecnicas_de_mejora/imgs",
     "TP6_tecnicas_de_mejora/Untitled",
     "TP6_tecnicas_de_mejora/Clase TP6.pdf",
-    "TP6_tecnicas_de_mejora/TP6_Técnicas de mejora de rendimiento.pdf",
-    "TP8_arqui_paralelas/Introducción a las arquitecturas paralelas.pdf",
-    "TP5_memoria_cache/practico5_annotated.pdf",
     "TP5_memoria_cache/Teorico Memoria.md",
-    "TP3_preguntas/TP3_Procesador de un ciclo con excepciones.pdf",
-    "TP3_preguntas/practico3.md",
-    "TP4_pipelines/Procesador con pipeline.pdf",
-    "ADC_Clase_T_2023_02.pdf"
+    "TP3_preguntas/practico3.md"
   ]
 }

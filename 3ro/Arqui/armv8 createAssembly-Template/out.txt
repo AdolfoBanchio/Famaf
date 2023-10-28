@@ -1,9 +1,17 @@
 aarch64-linux-gnu-as --warn --fatal-warnings main.s -o main.o
 aarch64-linux-gnu-ld main.o -T memmap -o main.elf -M > memory_map.txt
 aarch64-linux-gnu-objdump -D main.elf > main.list
-ROM [0:5] ='{32'hf8000001,
+rom [0:13] ='{32'hf8000001,
 32'hf8008002,
 32'hf8000203,
 32'h8b050083,
 32'hf8018003,
+32'hcb050083,
+32'hf8020003,
+32'hcb0a03e4,
+32'hf8028004,
+32'h8b040064,
+32'hf8030004,
+32'hcb030025,
+32'hf8038005,
 32'hb400001f};

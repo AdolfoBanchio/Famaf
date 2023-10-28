@@ -28,21 +28,7 @@ ___ | ___ |___ |___ |___ |___ | ___
 5(i) | 3 | i<100 | 1110 | 0000 | Taken | 11 (hit)
 
 ###### b) 
-Para el predictor de 2 bits (sin diferenciar por valor de PC, es decir es gral para todo el sistema?)
-- Comienza en 00 (strongly not taken), 
-- 00, 1 salto j = 0 se toma (miss)
-- 01, 2 salto j = 1, se toma (miss)
-- 10, 3 salto j = 2, se toma (hit)
-- 11, 4 salto j = 3, no se toma (miss)
-- 10, 5 salto i=0, se toma (hit)
-- 11, 6 salto  j=0, se toma (hit)
-- 11, 7 salto j=1, se toma (hit)
-- 11, 8 salto j=2, se toma (hit)
-- 11, 9 salto j=3, no se toma (miss)
-- 10, 10 salto  i=1, se toma (hit)
-- 11, 11 salto  j = 0, se toma (hit)
-
-Esto solo fallara para cada j=3 y cuando i = 100. 
+Para el predictor de 2 bits (sin diferenciar por valor de PC, es decir es gral para todo el sistema?) 
 
 
 ##### Ejercicio 6
@@ -57,3 +43,4 @@ Sin embargo el salto B1 si es un salto local ya que se beneficia de ejecuciones 
 
 b) Si, la condicion para que B4 se tome, esta relacionada con las condiciones de B3 o B2, ya que un numero es divisible por 6 si lo es por 2 y 3. 
 Luego si B2 y B3 son Taken B4 tambien lo sera. 
+

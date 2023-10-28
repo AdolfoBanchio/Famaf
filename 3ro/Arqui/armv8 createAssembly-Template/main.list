@@ -4,12 +4,20 @@ main.elf:     formato del fichero elf64-littleaarch64
 
 Desensamblado de la sección .text:
 
-0000000000000000 <finloop-0x14>:
+0000000000000000 <finloop-0x34>:
    0:	f8000001 	stur	x1, [x0]
    4:	f8008002 	stur	x2, [x0, #8]
    8:	f8000203 	stur	x3, [x16]
    c:	8b050083 	add	x3, x4, x5
   10:	f8018003 	stur	x3, [x0, #24]
+  14:	cb050083 	sub	x3, x4, x5
+  18:	f8020003 	stur	x3, [x0, #32]
+  1c:	cb0a03e4 	neg	x4, x10
+  20:	f8028004 	stur	x4, [x0, #40]
+  24:	8b040064 	add	x4, x3, x4
+  28:	f8030004 	stur	x4, [x0, #48]
+  2c:	cb030025 	sub	x5, x1, x3
+  30:	f8038005 	stur	x5, [x0, #56]
 
-0000000000000014 <finloop>:
-  14:	b400001f 	cbz	xzr, 14 <finloop>
+0000000000000034 <finloop>:
+  34:	b400001f 	cbz	xzr, 34 <finloop>
