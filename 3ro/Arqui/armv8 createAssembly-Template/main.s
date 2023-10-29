@@ -13,4 +13,5 @@ ADD X4, X3, X4
 STUR X4, [X0, #48] // MEM 6:0xFFFFFFFFFFFFFFF5
 SUB X5, X1, X3
 STUR X5, [X0, #56] // MEM 7:0x2
+
 finloop:	CBZ XZR, finloop
