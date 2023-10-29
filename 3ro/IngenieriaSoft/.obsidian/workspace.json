@@ -6,15 +6,8 @@
       {
         "id": "21d428ee5948d1c4",
         "type": "tabs",
+        "dimension": 41.57782515991471,
         "children": [
-          {
-            "id": "88cca757332259ba",
-            "type": "leaf",
-            "state": {
-              "type": "empty",
-              "state": {}
-            }
-          },
           {
             "id": "7fb2776e66d5285b",
             "type": "leaf",
@@ -27,8 +20,26 @@
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
+      },
+      {
+        "id": "1d110db357dc6ace",
+        "type": "tabs",
+        "dimension": 58.42217484008528,
+        "children": [
+          {
+            "id": "bc4819d496321844",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Clase 9-Testing.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
       }
     ],
     "direction": "vertical"
@@ -78,7 +89,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
+    "width": 277.5,
     "collapsed": true
   },
   "right": {
@@ -95,7 +106,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Temas para 2do parcial.md",
+                "file": "Clase 9-Testing.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -112,7 +123,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Temas para 2do parcial.md",
+                "file": "Clase 9-Testing.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -135,7 +146,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Temas para 2do parcial.md"
+                "file": "Clase 9-Testing.md"
               }
             }
           }
@@ -156,10 +167,14 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "7fb2776e66d5285b",
+  "active": "bc4819d496321844",
   "lastOpenFiles": [
-    "(Texts in Computer Science) Pankaj Jalote - An Integrated Approach to Software Engineering-Springer (2005).pdf",
+    "Clase 9-Testing-20231028133744934.webp",
+    "Clase 9-Testing-20231028132343498.webp",
     "Temas para 2do parcial.md",
+    "Clase 9-Testing.md",
+    "Pasted image 20231028125221.png",
+    "(Texts in Computer Science) Pankaj Jalote - An Integrated Approach to Software Engineering-Springer (2005).pdf",
     "Untitled"
   ]
 }
