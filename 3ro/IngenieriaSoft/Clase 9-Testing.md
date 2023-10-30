@@ -1,3 +1,4 @@
+___
 ## Defecto y desperfecto
 - **Desperfecto**: un desperfecto de software ocurre si el comportamiento de este es distinto del esperado/especificado.
 - **Defecto:** es lo que genera el desperfecto. = bug.
@@ -7,14 +8,13 @@
 - La idea del testing es poder identificar los defectos del sw para garantizar calidad.
 	- Durante el testing, el programa se lo ejecuta en un conjunto de casos de test. Buscando causar desperfectos para así detectar la presencia de defectos. Luego para identificar el defecto real, se debe debuggear.
 
+___
 
 ## Oráculos de tests
 Un oraculo es una entidad que conoce el resultado esperado de los casos de test. Su funcion es poder verificar la ocurrencia de un desperfecto en la ejecucion de un caso de test.
 ![[Pasted image 20231028125221.png|331]]
 
 	El oraculo puede ser generado automaticamente a partir de la especificacion. (y en pocos casos es humano). Lo ideal es que sea algo generado automaticamente.
-
-
 ### Casos de test y criterios de seleccion
 A la hora de realizar el testing, deseamos poder construir un conjunto de test tal que la ejecucion satisfactoria de todos ellos imploque la ausencia de defectos. Como testear es costoso, se busca que sea un conjunto reducido.
 
@@ -22,6 +22,9 @@ A la hora de elegirlos se usa algun **criterio de seleccion de tests**
 
 	El criterio de seleccion especifica las condiciones que el conjunto de casos de test debe satisfacer con respecto al programa y/o a la especificacion.
 
+Se busca que los casos de test cumplan dos propiedades, **confiabilidad** y **validez**. 
+
+___
 
 ## Testing de caja negra
 Se basa en que el software a testear se trata como una **caja negra**:
@@ -34,7 +37,6 @@ La **premisa** es que el comportamiento esperado está especificado. Luego solo 
 - Para el testing del sistema: la SRS define el comportamiento esperado
 
 El testing **exhaustivo** es el mas minucioso. Ya que un sw esta diseñado para trabajar sobre un espacio de entrada -> Se testea el sw con todos los elementos del espacio de entrada. Esto es algo claramente muy costoso e inviable.
-
 #### Clases de equivalencia
 Se divide el espacio de entrada en clases de equivalencias
 - De modo que si el software funciona para un caso de test en una clase, muy probablemente funcione de la misma manera para todos los elementos de la misma clase.
@@ -48,7 +50,6 @@ Ademas se deben considerar las clases de equivalencia de los datos de salida y g
 1) Seleccionar cada caso de test cubriendo tantas clases como sea posible
 2) Dar un caso de tes que cubra a lo sumo una clase válida por cada entrada.
 - Ademas de los casos de test separados por cada clase inválida.
-
 ##### Análisis de valores limites
 Los programas generalmente fallan sobre valores especiales. Estos valores suelen estar en los limites de las clases de equivalencia. (también llamados casos extremos).
 
@@ -59,7 +60,6 @@ Un caso de test de valores límites es un conjunto de datos de entrada que se en
 	1) ejecutar todas lass combinaciones posibles de las variables $7^n$ casos de test.
 	2) Seleccionar los casos limites para una varaible y mantener las demas en casos normales. mas el caso de todo normal. $6n +1$ casos de test.
 ![[Clase 9-Testing-20231028133744934.webp]]
-
 #### Grafo causa efecto
 Los analisis de clase de equivalencia y valores limites consideran cada entrada separadamente. Para manipular las entradas, distintas combinaciones de las clases de equivalencia deben ser ejecutadas. Si hay n condiciones en la entrada que puden ser validas o invalidas hay $2^n$ clases de eq.
 
@@ -71,7 +71,6 @@ Se busca identificar cuales causas pueden producir que efectos; las causas se pu
 Las causas y efectos son nodos en el grafo, y las aristas determinan dependancia (positivas o negativas) tambien hay nodos and y or para combinar causalidad. 
 
 El grafo sirve para poder crear **tabla de decision**. Que esta se usa para armar distintos casos de test.
-
 #### Testing de a pares
 El comportamiento del sistema suele estar determinado por muchos parametros. Estos puden ser entradas o seteos y toman distintos valores o rango de valores. 
 
@@ -81,7 +80,6 @@ El comportamiento del sistema suele estar determinado por muchos parametros. Est
 Hacer test combinatorio (osea testear cada combinacion posible de parametros) no es factible ya que demora mucho tiempo. Y como la mayoria de defectos se revelan con interaccion de apares. Se testea en cada par posible.
 
 Todos los pares de valores deben ser ejercitados. Si tenemos n parametros  con m valores. Para cada par de parametros tenemos m * m pares. Luego el total de test que habra por hacer sera  $m^2 *n *(n-1)/2$. Y en el mejor caso un test cubre $n*(n-1)/2$ pares. Luego en el mejor caso total, tendremos $m^2$ casos de test distintos que proveen cobertura completa.
-
 #### Testing basado en estados
 Esta dirigido para los sistemas que según su estado cambian su comportamiento. Un estado del sistema representa el impacto acumulado de las entradas pasadas. Estos sistemas pueden modelarse con un modelo de estados , suele construirse a partir de las especificaciones o los requerimientos. El desafío mas importante es a partir de la especificación/requerimientos identificar el conjunto de estados que captura las propiedades claves. Tiene 4 componentes.
 - Un conjunto de estados: son estados lógicos representando el impacto acumulativo del sistema
@@ -93,12 +91,12 @@ Los casos de test que se generan para los sistemas que tienen modelos de estados
 - Cobertura de par de transiciones: T debe ejecutar todo par de transiciones adyacentes que entran y salen de un estado.
 - Cobertura de árbol de transiciones: T debe ejecutar todos los caminos simples. (del estado inicial al final o a uno visitado)
 
+___
 
 ## Testing de caja blanca
 - Se enfoca en el código. 
 - El objetivo es ejecutar las distintas estructuras del programa con el fin de descubrir errores.
 - Los casos de test se derivan a partir de código
-
 #### Flujo de control
 Se considera al programa como un grado de flujo de control. 
 	- Los nodos representan bloques de código.
@@ -106,20 +104,16 @@ Se considera al programa como un grado de flujo de control.
 ##### Cobertura de sentencia
 Busca que cada sentencia se ejecute al menos una vez durante el testing. El conjunto de caminos ejecutados durante el testing debe incluir todos los nodos. 
 	- No es posible garantizar 100% de cobertura debido a que puede haber nodos inalcanzables
-
 ###### Cobertura de ramificaciones
 - Cada arista debe ejecutarse al menos una vez en el testing.(Cada decision debe ejercitarse como verdadera y como falsa durante el testing.)
 - Implica la cobertura de sentencias.
 - Si hay múltiples condiciones en una decisión luego no todas las condiciones se ejercitan como verdadera y falsa. 
-
 ###### Cobertura de caminos
 - Todos los posibles caminos del estado inicial al final deben ser ejercitados 
 - Cobertura de caminos implica cobertura de bifurcación
 - La cantidad de caminos puede ser infinita y algunos no realizables.
 
 En general el criterio de flujo de control se utiliza para proveer alguna idea cuantitativa de la "amplitud" y cobertura del conjunto de casos de test. Se suele utilizar mas para evaluar el nivel de testing que para seleccionar los casos de test.
-
-
 #### Flujo de datos
 Se construye un grafo de definicón-uso etiquetando apropiadamente el grado de flujo de control 
 Una sentencia en el grafo de flujo de control puede ser de tres tipos
@@ -132,6 +126,7 @@ Algunos criterios son:
 - Todos los usos-p: todos los usos-p de todas las definiciones deben testearse
 - otros criterios: todos los usos-c, algunos usos-p, algunos usos-c.
 
+___
 
 ## Proceso de testing
 
@@ -143,30 +138,25 @@ Existen diferentes niveles de testing para revelar los distintos tipos de defect
 - Cada modulo del programa se testean separademente contra el diseño.
 - Se enfoca en los defectos inyectados durante la codificación. 
 - En gral son realizados por el mismo programador que realizo el modulo.
-
 ###### Testing de integración 
 - Se enfoca en la interacción de módulos de un subsistema 
 - Los módulos ya testeados unitariamente se combinan para formar subsistemas. Y se someten a test de integracion
 - Los casos de test deben generarse con el objeto de ejercitar de distinta manera la interaccion entre los módulos.
-
 ###### Testing del sistema
 - Se testea el sistema de sw completo.
 - Se busca ver si implementa los requerimientos, forma parte de la validacion del sistema.
 - Se realiza antes de entregar el mismo y por personal independiente.
-
 ###### Testing de aceptación
 - Se enfoca en verificar que el software satisfaga las necesidades del usuario. 
 - Es realizado por un usuario en el entorno del cliente y con datos reales.
 - El plan de test de aceptacion se basa en el criterio del test de aceptacion y la SRS.
 
 ![[Clase 9-Testing-20231029172913644.webp]]
-
 #### El plan de test
 El testing usualmente comienza ocn la realizacion del plan de test y finaliza con el testing de aceptación. Es un documento que toma como entradas el plan del proyecto, la SRS y el diseño. Define el alcance y el enfoque del testing para el proyecto completo, debe ser consistente con el plan de calidad del proyecto y el cronograma de testing debe ser acorde al del proyecto.
 - Identifica que niveles de testing se realizarán, qué unidades serán testeadas, etc.
 - Se puede realizar antes de comenzar con la tarea del testing conjuntamente con las actividades de diseño y codificación.
-
-Contiene:
+**Contiene:**
 1) Especificación de la unidad de test: que unidad necesita testearse separadamente
 	- Una unidad de test es un conjunto de uno o más modulos conjuntamente con datos asociados que son el objeto del testing.
 2) Características a testear: esto incluye funcionalidad, desempeño, usabilidad, etc.
@@ -182,7 +172,6 @@ La especifiación de casos de test se tiene que realizar separadamente para cada
 - condiciones en las que se testeará
 - resultado esperado. 
 Es una justifiación del caso de test.
-
 ###### Especificacion de casos de test
 La **efectividad** y **costo** del testing dependen del conjunto de casos de test seleccionados. Como no es posible detectar si un caso de test es bueno o malo , es por lo que se necesitan especificaciones de cada caso de test para que sean analizados.
 ![[Clase 9-Testing-20231029174341427.webp|610]]
@@ -198,7 +187,6 @@ Una vez ejecutados se realizan reportes con resúmenes del test:
 	- reporta un resumen de los casos de test ejecutados, el esfuerzo y defectos encontrados. 
 
 El seguimiento y el control del esfuerzo del testing es importante para asegurar que se invirtió el tiempo suficiente.
-
 ###### Registro de defectos y seguimiento
 En gral las personas que encuentran defectos no son las mismas que los corrigen. Es por esto que los defectos se registran en un **sistema seguidor de defectos** que permite rastrearlos hasta que se "cierren".
 ![[Clase 9-Testing-20231029175102014.webp|581]]

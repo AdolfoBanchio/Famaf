@@ -8,34 +8,60 @@
         "type": "tabs",
         "children": [
           {
-            "id": "7fb2776e66d5285b",
+            "id": "d2ad8c9a251940c3",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Temas para 2do parcial.md",
+                "file": "Clase 6-Codificación.md",
                 "mode": "source",
                 "source": false
               }
             }
           },
           {
-            "id": "6725ce10f8fdcebc",
+            "id": "9c72ddb4ee64bf01",
             "type": "leaf",
             "state": {
-              "type": "image",
+              "type": "markdown",
               "state": {
-                "file": "imgs/Clase 9-Testing-20231028132343498.webp"
+                "file": "Clase 7-Modelos de procesos de desarrollo.md",
+                "mode": "source",
+                "source": false
               }
             }
           },
           {
-            "id": "ea29cb0123e887e3",
+            "id": "7a3c8ee1fe9811d3",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Clase 8-Proceso de Software.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "212fbb56c1388bb5",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
                 "file": "Clase 9-Testing.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "af0d38edb57984de",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Clase 10-Planeamiento del proyecto de sw.md",
                 "mode": "source",
                 "source": false
               }
@@ -92,7 +118,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 277.5
+    "width": 277.5,
+    "collapsed": true
   },
   "right": {
     "id": "05c744833f60c6c2",
@@ -108,7 +135,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Clase 9-Testing.md",
+                "file": "Clase 8-Proceso de Software.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -125,7 +152,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Clase 9-Testing.md",
+                "file": "Clase 8-Proceso de Software.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -148,7 +175,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Clase 9-Testing.md"
+                "file": "Clase 8-Proceso de Software.md"
               }
             }
           }
@@ -169,18 +196,67 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "37102676694f184e",
+  "floating": {
+    "id": "e3d148336809684b",
+    "type": "floating",
+    "children": [
+      {
+        "id": "73b9778dabbe4f00",
+        "type": "window",
+        "children": [
+          {
+            "id": "4c07c407a4dd14fc",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "7fb2776e66d5285b",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "Temas para 2do parcial.md",
+                    "mode": "source",
+                    "source": false
+                  }
+                }
+              }
+            ]
+          }
+        ],
+        "direction": "vertical",
+        "x": 1920,
+        "y": 0,
+        "width": 960,
+        "height": 1080,
+        "maximize": false,
+        "zoom": 0
+      }
+    ]
+  },
+  "active": "7a3c8ee1fe9811d3",
   "lastOpenFiles": [
-    "imgs/Clase 9-Testing-20231028132343498.webp",
-    "imgs/Clase 9-Testing-20231028133744934.webp",
-    "Temas para 2do parcial.md",
-    "imgs",
+    "Clase 8-Proceso de Software-20231030182035940.webp",
+    "Clase 8-Proceso de Software-20231030182021434.webp",
+    "Clase 8-Proceso de Software-20231030181503655.webp",
+    "Clase 8-Proceso de Software-20231030180125141.webp",
+    "Clase 7-Modelos de procesos de desarrollo.md",
+    "Clase 8-Proceso de Software.md",
+    "Clase 10-Planeamiento del proyecto de sw.md",
     "Clase 9-Testing.md",
-    "imgs/Clase 9-Testing-20231029175102014.webp",
-    "imgs/Clase 9-Testing-20231029174341427.webp",
-    "imgs/Clase 9-Testing-20231029172913644.webp",
-    "imgs/Clase 9-Testing-20231029171101644.webp",
-    "imgs/Pasted image 20231028125221.png",
+    "Temas para 2do parcial.md",
+    "Clase 6-Codificación.md",
+    "Clase 7-Modelos de procesos de desarrollo-20231030154054726.webp",
+    "Clase 6-Codificación-20231030130942085.webp",
+    "Clase 6-Codificación-20231030125941087.webp",
+    "Untitled.md",
+    "pdfs/Clase 10-Planeamiento del proyecto de sw.pdf",
+    "imgs/Clase 10-Planeamiento del proyecto de sw-20231030113049397.webp",
+    "imgs/Clase 10-Planeamiento del proyecto de sw-20231030111501343.webp",
+    "imgs/Clase 10-Planeamiento del proyecto de sw-20231030104653632.webp",
+    "pdfs/Clase 9-Testing.pdf",
+    "pdfs",
+    "imgs/Clase 10-Planeamiento del proyecto de sw-20231030103519672.webp",
+    "imgs",
     "(Texts in Computer Science) Pankaj Jalote - An Integrated Approach to Software Engineering-Springer (2005).pdf"
   ]
 }
