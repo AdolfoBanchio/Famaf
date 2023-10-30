@@ -1,6 +1,5 @@
 **Objetivo**: construir un sistema de sq que cumpla con los costos tiempos y calidad.
 Una administracion del proyecto efectiva es clave para la ejecución exitosa del proyecto.
-
 El proceso de software tiene 6 componentes:
 
 0) Proceso de desarrollo
@@ -40,7 +39,6 @@ Primero determinamos el esfuerzo total y luego calculamos el esfuerzo por cada p
 5) Refinar los estimadores anteriores en base a factores específicos del proyecto.
 ##### El modelo COCOMO 
 COnstructive COst MOdel
-
 Es un enfoque top-down que utiliza el tamaño ajustado con algunos factores. Consta de
 1) Obtener el estimador inicial usando el tamaño
 	- $E_i = a * tamaño^b$ esto esta dado por la sig tabla
@@ -178,3 +176,6 @@ Existen diferentes niveles de seguimiento
 	- Se vuelven a revisar los riesgos.
 Para todos estos seguimientos necesitamos de los datos que las mediciones proveen.
 
+
+1) ￼￼Porceso de administracion del proyecto￼￼
+2) Proceso de insepccion

@@ -68,7 +68,7 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 4
       }
     ],
     "direction": "vertical"
@@ -135,7 +135,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Clase 8-Proceso de Software.md",
+                "file": "Clase 10-Planeamiento del proyecto de sw.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -152,7 +152,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Clase 8-Proceso de Software.md",
+                "file": "Clase 10-Planeamiento del proyecto de sw.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -175,7 +175,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Clase 8-Proceso de Software.md"
+                "file": "Clase 10-Planeamiento del proyecto de sw.md"
               }
             }
           }
@@ -215,7 +215,7 @@
                   "type": "markdown",
                   "state": {
                     "file": "Temas para 2do parcial.md",
-                    "mode": "source",
+                    "mode": "preview",
                     "source": false
                   }
                 }
@@ -224,27 +224,30 @@
           }
         ],
         "direction": "vertical",
-        "x": 1920,
-        "y": 0,
-        "width": 960,
-        "height": 1080,
+        "x": 683,
+        "y": 27,
+        "width": 683,
+        "height": 741,
         "maximize": false,
         "zoom": 0
       }
     ]
   },
-  "active": "7a3c8ee1fe9811d3",
+  "active": "af0d38edb57984de",
   "lastOpenFiles": [
+    "pdfs/Clase 8-Proceso de Software.pdf",
+    "pdfs/Clase 7-Modelos de procesos de desarrollo.pdf",
+    "Clase 9-Testing.md",
+    "Clase 8-Proceso de Software.md",
+    "Clase 7-Modelos de procesos de desarrollo.md",
+    "Clase 6-Codificación.md",
+    "pdfs/Clase 6-Codificación.pdf",
+    "Clase 10-Planeamiento del proyecto de sw.md",
+    "Temas para 2do parcial.md",
     "Clase 8-Proceso de Software-20231030182035940.webp",
     "Clase 8-Proceso de Software-20231030182021434.webp",
     "Clase 8-Proceso de Software-20231030181503655.webp",
     "Clase 8-Proceso de Software-20231030180125141.webp",
-    "Clase 7-Modelos de procesos de desarrollo.md",
-    "Clase 8-Proceso de Software.md",
-    "Clase 10-Planeamiento del proyecto de sw.md",
-    "Clase 9-Testing.md",
-    "Temas para 2do parcial.md",
-    "Clase 6-Codificación.md",
     "Clase 7-Modelos de procesos de desarrollo-20231030154054726.webp",
     "Clase 6-Codificación-20231030130942085.webp",
     "Clase 6-Codificación-20231030125941087.webp",
@@ -255,7 +258,6 @@
     "imgs/Clase 10-Planeamiento del proyecto de sw-20231030104653632.webp",
     "pdfs/Clase 9-Testing.pdf",
     "pdfs",
-    "imgs/Clase 10-Planeamiento del proyecto de sw-20231030103519672.webp",
     "imgs",
     "(Texts in Computer Science) Pankaj Jalote - An Integrated Approach to Software Engineering-Springer (2005).pdf"
   ]

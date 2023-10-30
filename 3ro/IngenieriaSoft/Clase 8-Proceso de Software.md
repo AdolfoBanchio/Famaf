@@ -1,5 +1,4 @@
 Un proceso adecuado ayuda a lograr los objetivos del proyecto con alta C&P.
-
 Un **proyecto exitoso** es el que satisface las expectativas en costo, tiempo y calidad. Al planear y ejecutar un proyecto de sw, las decisiones se toman con el fin de reducir costos y tiempos e incrementar la calidad. Es el proceso el que guía un proyecto, e influye significativamente el resultado esperado del proyecto.
 
 Las componentes del **proceso de software** son :
@@ -17,9 +16,7 @@ El proceso de desarrollo es el corazon del proceso de software, los otros giran 
 5) Proceso de administración del proceso
 ##### Especificación del proceso
 El proceso generalmente es un conjunto de fases donde cada fase realiza una tarea bien definida y produce una salida. Tal salida intermedia se llama **producto de trabajo**.
-
 Cada producto de trabajo es una entidad **formal** y **tangible**, capaz de ser **verificada**. Cada fase se puede llevar a cabo utilizando diferentes metodologias
-
 ### Enfoque "ETVX"
 Cada fase sigue el enfoque ETVX (Entry-Task-Verification-Exit) donde el criterio de entrada es consistente con la salida de la fase anterior.
 - Criterio de entrada: que condiciones deben cumplirse para iniciar la fase
@@ -41,7 +38,6 @@ Debe proveer alta C&P. El proceso debe:
 	- Para ello debe estar bajo control estadistico.
 - Soportar cambios y producir sw que se adapte a cambios
 	- Debe esperar los cambios en requerimientos y durante el desarrollo del sw.
-
 ___
 ### Proceso de desarrollo de software
 **Objetivo**: construir sistemas de sw dentro de los costos y el tiempo planeado, cronograma y que posea la calidad apropiada, satisfaciendo al cliente, alta C&P. -> se necesita un proceso adecuado para alcanzar los objetivos. Es especificado durante el pleaneamiento.
@@ -103,9 +99,8 @@ Tiene las siguientes etapas
 4) Corrección y seguimiento
 	- Una vez corregidos los defectos por el autor. Obtiene un visto bueno por el moderador o se somete a una nueva revisión.
 	- Cuando los defectos son satisfactoriamente procesados, la revisión finaliza.
-![[Clase 8-Proceso de Software-20231030182021434.webp]]
-![[Clase 8-Proceso de Software-20231030182035940.webp]]
-
+![[Clase 8-Proceso de Software-20231030182021434.webp|573]]
+![[Clase 8-Proceso de Software-20231030182035940.webp|578]]
 ___
 ### Proceso de administración de configuración
 Controla sistematicamente los cambios producidos. Se enfoca en los cambios durante la evolución: los cambios de requerimientos se manejan aparte.
@@ -131,7 +126,6 @@ El proceso en si consta de:
 - Planeamiento: identificar los items, definir la estructura del repositorio, definir control de acceso, puntos de referencia, definir procedimiento de publicación.
 - Ejecución: realizar los procedimientos según lo establecido en planeamiento
 - Auditoria: para verificar que no se cometieron errores.
-
 ___
 ### Proceso de administración de cambios de requisitos
 Los **requerimientos** pueden cambiar en cualquier momento durante el desarrollo y pueden producir impactos en los productos de trabajo y en los distintos items de configuración.
@@ -146,7 +140,6 @@ Consta de:
 - Analizar el impacto con las personas involucradas
 	- El impacto del cambio en el proyecto es analizado para decidir si hacerlo efecitvo o no
 - Reprocesar los productos de trabajo y los items
-
 ___
 ### Proceso de administración de procesos
 Se enfoca en la evaluación y mejora del proceso. Para eso la organizacion debe comprender el proceso actual:
