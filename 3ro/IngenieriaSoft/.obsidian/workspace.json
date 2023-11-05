@@ -4,71 +4,18 @@
     "type": "split",
     "children": [
       {
-        "id": "21d428ee5948d1c4",
+        "id": "29088537083eac66",
         "type": "tabs",
         "children": [
           {
-            "id": "d2ad8c9a251940c3",
+            "id": "60be8fdd36389be2",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Clase 6-Codificación.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "9c72ddb4ee64bf01",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Clase 7-Modelos de procesos de desarrollo.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "7a3c8ee1fe9811d3",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Clase 8-Proceso de Software.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "212fbb56c1388bb5",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Clase 9-Testing.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "af0d38edb57984de",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Clase 10-Planeamiento del proyecto de sw.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
-        ],
-        "currentTab": 4
+        ]
       }
     ],
     "direction": "vertical"
@@ -135,7 +82,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Clase 10-Planeamiento del proyecto de sw.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -152,7 +98,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Clase 10-Planeamiento del proyecto de sw.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -174,9 +119,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "Clase 10-Planeamiento del proyecto de sw.md"
-              }
+              "state": {}
             }
           }
         ]
@@ -233,16 +176,16 @@
       }
     ]
   },
-  "active": "af0d38edb57984de",
+  "active": "60be8fdd36389be2",
   "lastOpenFiles": [
+    "Clase 6-Codificación.md",
+    "Clase 7-Modelos de procesos de desarrollo.md",
+    "Clase 8-Proceso de Software.md",
+    "Clase 9-Testing.md",
+    "Clase 10-Planeamiento del proyecto de sw.md",
     "pdfs/Clase 8-Proceso de Software.pdf",
     "pdfs/Clase 7-Modelos de procesos de desarrollo.pdf",
-    "Clase 9-Testing.md",
-    "Clase 8-Proceso de Software.md",
-    "Clase 7-Modelos de procesos de desarrollo.md",
-    "Clase 6-Codificación.md",
     "pdfs/Clase 6-Codificación.pdf",
-    "Clase 10-Planeamiento del proyecto de sw.md",
     "Temas para 2do parcial.md",
     "Clase 8-Proceso de Software-20231030182035940.webp",
     "Clase 8-Proceso de Software-20231030182021434.webp",

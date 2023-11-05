@@ -28,7 +28,11 @@ ___ | ___ |___ |___ |___ |___ | ___
 5(i) | 3 | i<100 | 1110 | 0000 | Taken | 11 (hit)
 
 ###### b) 
-Para el predictor de 2 bits (sin diferenciar por valor de PC, es decir es gral para todo el sistema?) 
+Para el predictor de 2 bits. Por cada 4 bits de PC guardo un predictor de 2 bits.
+
+PC | Predictor
+:-- : | :--:
+
 
 
 ##### Ejercicio 6
