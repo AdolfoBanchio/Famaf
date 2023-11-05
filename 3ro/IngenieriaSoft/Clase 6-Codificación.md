@@ -28,10 +28,7 @@ El ocultamiento **reduce el acoplamiento**. Y es una practica fundamental en OO 
 - Evitar efectos secundarios
 - Fuentes de datos confiables.
 - Dar importancia a las excepciones. 
-
-
 ___
-
 ### Proceso de codificación
 La codificación comienza ni bien esta disponible la especificación del diseño de los módulos. Por lo gral los módulos se asignan a programadores individuales. 
 El desarrollo puede ser:
@@ -59,8 +56,10 @@ Una persona tipea el código mientras la otra revisa activamente el mismo(van ro
 
 Este código esta bajo constante revision por lo que deriva en mejor diseño de algoritmos/estructuras de datos/lógica. Ya que es más difícil que se escapen las condiciones particulares. 
 
-___
 
+
+
+___
 ### Refactorización
 	La refactorización es una tecnica que permite realizar cambios en un programa con el fin de simplificarlo y mejorar su comporesion y mejorar el diseño del codigo existente (hacerlo testeable y mantenible), sin cambiar el comportamiento observacional de este.
 

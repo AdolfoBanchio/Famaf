@@ -9,7 +9,6 @@ ___
 	- Durante el testing, el programa se lo ejecuta en un conjunto de casos de test. Buscando causar desperfectos para así detectar la presencia de defectos. Luego para identificar el defecto real, se debe debuggear.
 
 ___
-
 ## Oráculos de tests
 Un oraculo es una entidad que conoce el resultado esperado de los casos de test. Su funcion es poder verificar la ocurrencia de un desperfecto en la ejecucion de un caso de test.
 ![[Pasted image 20231028125221.png|331]]
@@ -23,9 +22,7 @@ A la hora de elegirlos se usa algun **criterio de seleccion de tests**
 	El criterio de seleccion especifica las condiciones que el conjunto de casos de test debe satisfacer con respecto al programa y/o a la especificacion.
 
 Se busca que los casos de test cumplan dos propiedades, **confiabilidad** y **validez**. 
-
 ___
-
 ## Testing de caja negra
 Se basa en que el software a testear se trata como una **caja negra**:
 - Donde la especificación esta dada
@@ -44,8 +41,7 @@ Se divide el espacio de entrada en clases de equivalencias
 - La especificacion requiere el mismo comportamiento en todos los elementos de una misma clase. Si falla para uno, falla para todos. 
 
 Cada condicion especificada como entrada es una clase de equivalencia. Por ello para lograr robustez, se deben armar clases de equivalencias para entradas inválidas.
-![[Clase 9-Testing-20231028132343498.webp|560]]
-
+![[Clase 9-Testing-20231028132343498.webp|475]]
 Ademas se deben considerar las clases de equivalencia de los datos de salida y generar los casos de test para estas clases eligiendo apropiadamente las entradas. Una vez elegidas las clases de equivalencia, se deben seleccionar los casos de test:
 1) Seleccionar cada caso de test cubriendo tantas clases como sea posible
 2) Dar un caso de tes que cubra a lo sumo una clase válida por cada entrada.
@@ -59,7 +55,7 @@ Un caso de test de valores límites es un conjunto de datos de entrada que se en
 - Si tenemos multiples entradas hay dos alternativas
 	1) ejecutar todas lass combinaciones posibles de las variables $7^n$ casos de test.
 	2) Seleccionar los casos limites para una varaible y mantener las demas en casos normales. mas el caso de todo normal. $6n +1$ casos de test.
-![[Clase 9-Testing-20231028133744934.webp]]
+![[Clase 9-Testing-20231028133744934.webp|499]]
 #### Grafo causa efecto
 Los analisis de clase de equivalencia y valores limites consideran cada entrada separadamente. Para manipular las entradas, distintas combinaciones de las clases de equivalencia deben ser ejecutadas. Si hay n condiciones en la entrada que puden ser validas o invalidas hay $2^n$ clases de eq.
 
@@ -90,9 +86,7 @@ Los casos de test que se generan para los sistemas que tienen modelos de estados
 - Cobertura de transiciones: el conjunto T de casos de test debe asegurar que todas transición sea ejecutada
 - Cobertura de par de transiciones: T debe ejecutar todo par de transiciones adyacentes que entran y salen de un estado.
 - Cobertura de árbol de transiciones: T debe ejecutar todos los caminos simples. (del estado inicial al final o a uno visitado)
-
 ___
-
 ## Testing de caja blanca
 - Se enfoca en el código. 
 - El objetivo es ejecutar las distintas estructuras del programa con el fin de descubrir errores.
@@ -101,7 +95,7 @@ ___
 Se considera al programa como un grado de flujo de control. 
 	- Los nodos representan bloques de código.
 	- Una arista i,j. Representa una posible transferencia de control del nodo i a j.
-##### Cobertura de sentencia
+###### Cobertura de sentencia
 Busca que cada sentencia se ejecute al menos una vez durante el testing. El conjunto de caminos ejecutados durante el testing debe incluir todos los nodos. 
 	- No es posible garantizar 100% de cobertura debido a que puede haber nodos inalcanzables
 ###### Cobertura de ramificaciones
@@ -120,14 +114,13 @@ Una sentencia en el grafo de flujo de control puede ser de tres tipos
 - Def: representa la definición de una variable
 - uso-c: cuando la variable se usa para cómputo
 - uso-p: cuando la variable se utiliza en un predicado para transferencia de control
-![[Clase 9-Testing-20231029171101644.webp|556]]
+![[Clase 9-Testing-20231029171101644.webp|488]]
 Algunos criterios son:
 - todas las definiciones: por cada cono i y cada x en def(i) hay un camino libre de definiciones con respecto a x hasta un uso-c o uso-p de x.
 - Todos los usos-p: todos los usos-p de todas las definiciones deben testearse
 - otros criterios: todos los usos-c, algunos usos-p, algunos usos-c.
 
 ___
-
 ## Proceso de testing
 
 Los objetivos del testing son:
@@ -150,8 +143,8 @@ Existen diferentes niveles de testing para revelar los distintos tipos de defect
 - Se enfoca en verificar que el software satisfaga las necesidades del usuario. 
 - Es realizado por un usuario en el entorno del cliente y con datos reales.
 - El plan de test de aceptacion se basa en el criterio del test de aceptacion y la SRS.
-
-![[Clase 9-Testing-20231029172913644.webp]]
+Otros tipos de test
+![[Clase 9-Testing-20231029172913644.webp|526]]
 #### El plan de test
 El testing usualmente comienza ocn la realizacion del plan de test y finaliza con el testing de aceptación. Es un documento que toma como entradas el plan del proyecto, la SRS y el diseño. Define el alcance y el enfoque del testing para el proyecto completo, debe ser consistente con el plan de calidad del proyecto y el cronograma de testing debe ser acorde al del proyecto.
 - Identifica que niveles de testing se realizarán, qué unidades serán testeadas, etc.
@@ -174,7 +167,7 @@ La especifiación de casos de test se tiene que realizar separadamente para cada
 Es una justifiación del caso de test.
 ###### Especificacion de casos de test
 La **efectividad** y **costo** del testing dependen del conjunto de casos de test seleccionados. Como no es posible detectar si un caso de test es bueno o malo , es por lo que se necesitan especificaciones de cada caso de test para que sean analizados.
-![[Clase 9-Testing-20231029174341427.webp|610]]
+![[Clase 9-Testing-20231029174341427.webp|416]]
 
 Para preparar la especificacion se puede:
 - utilizar cirterios para casos de test
@@ -189,7 +182,7 @@ Una vez ejecutados se realizan reportes con resúmenes del test:
 El seguimiento y el control del esfuerzo del testing es importante para asegurar que se invirtió el tiempo suficiente.
 ###### Registro de defectos y seguimiento
 En gral las personas que encuentran defectos no son las mismas que los corrigen. Es por esto que los defectos se registran en un **sistema seguidor de defectos** que permite rastrearlos hasta que se "cierren".
-![[Clase 9-Testing-20231029175102014.webp|581]]
+![[Clase 9-Testing-20231029175102014.webp|484]]
 Los defectos se suelen categorizar. Algunas categorías son: funcional, lógica, standard, asignación, interfaz de usuario, desempeño, documentación, etc.
 
 Ademas se los clasifica por gravedad:
