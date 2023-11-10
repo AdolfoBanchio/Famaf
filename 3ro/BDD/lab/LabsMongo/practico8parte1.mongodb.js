@@ -212,15 +212,116 @@ db.createView("generos_mas_comm","movies",
 
 db.generos_mas_comm.find();
 /*
-Listar los actores (cast) que trabajaron en 2 o más películas dirigidas por "Jules Bass". Devolver el nombre de estos actores junto con la lista de películas (solo título y año) dirigidas por “Jules Bass” en las que trabajaron. 
+Listar los actores (cast) que trabajaron en 2 o más películas dirigidas por "Jules Bass". 
+Devolver el nombre de estos actores junto con la lista de películas (solo título y año) dirigidas por “Jules Bass” en las que trabajaron. 
 Hint1: addToSet
 Hint2: {'name.2': {$exists: true}} permite filtrar arrays con al menos 2 elementos, entender por qué.
 Hint3: Puede que tu solución no use Hint1 ni Hint2 e igualmente sea correcta
 */
-
+use('mflix')
+db.movies.aggregate([
+{
+    $match:{
+            "directors":{$all:["Jules Bass"]}
+        }
+},
+{
+    $unwind:{path:"$cast"},
+},
+{
+    $group:{
+        _id:"$cast",
+        peliculas: {$addToSet:{peliculas:"$title"}}
+    }
+},
+{
+    $match:{
+         'peliculas.1':{$exists:true}
+    }
+}
+]);
 
 
 /*Listar los usuarios que realizaron comentarios durante el mismo mes de lanzamiento de la película comentada, 
 mostrando Nombre, Email, fecha del comentario, título de la película, fecha de lanzamiento. 
 HINT: usar $lookup con multiple condiciones */
+use('mflix')
+db.comments.aggregate([
+    {
+        $lookup: {
+          from:"movies",
+          localField:"movie_id",
+          foreignField:"_id",
+          as: "movie"
+        }
+    },
+    {
+        $unwind:{
+            path:"$movie"
+        }
+    },
+    {
+        $match:{
+                $expr:{
+                   $and:[ 
+                        {$eq:[
+                            {$month:"$movie.released"},
+                            {$month:"$date"}
+                        ]},
+                        {$eq:[
+                            {$year:"$movie.released"},
+                            {$year:"$date"}
+                        ]}
+                    ]
+                }
+            }
+    },
+    {
+        $group:{
+            _id:{email:"$email",nombre:"$name"},
+            comments:{
+                $addToSet:{
+                    comments:{        
+                        "commentDate":"$date",
+                        "MovieName":"$movie.title",
+                        "Release":"$movie.released"
+                    }
+                }
+            }
+        }
+    },
+    {
+        $match:{
+            "_id.email":"edward_barrett@fakegmail.com"
+        }
+    }
+]);
+
+db.comments.aggregate([
+{
+    $lookup:{
+        from:"movies",
+        localField:"movie_id",
+        foreignField:"_id",
+        as:"movie"
+    }
+},
+{
+    $unwind:{
+        path:"$movie"
+    }
+},
+{
+    $match:{
+        "email":"edward_barrett@fakegmail.com",
+        "movie.title":"Ice Age"
+    }    
+}
+]);
+
+
+
+
+
+
 
