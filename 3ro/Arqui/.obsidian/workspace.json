@@ -14,23 +14,12 @@
               "type": "markdown",
               "state": {
                 "file": "TP6_tecnicas_de_mejora/Practico 6.md",
-                "mode": "source",
+                "mode": "preview",
                 "source": false
               }
             }
-          },
-          {
-            "id": "f2046fb3ab2e534f",
-            "type": "leaf",
-            "state": {
-              "type": "pdf",
-              "state": {
-                "file": "TP6_tecnicas_de_mejora/Clase TP6.pdf"
-              }
-            }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -96,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "TP6_tecnicas_de_mejora/Clase TP6.pdf",
+                "file": "TP6_tecnicas_de_mejora/Practico 6.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -113,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "TP6_tecnicas_de_mejora/Clase TP6.pdf",
+                "file": "TP6_tecnicas_de_mejora/Practico 6.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -136,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "TP6_tecnicas_de_mejora/Clase TP6.pdf"
+                "file": "TP6_tecnicas_de_mejora/Practico 6.md"
               }
             }
           }
@@ -157,10 +146,10 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "f2046fb3ab2e534f",
+  "active": "d9a10080e2df4d79",
   "lastOpenFiles": [
-    "TP6_tecnicas_de_mejora/Practico 6.md",
     "TP6_tecnicas_de_mejora/Clase TP6.pdf",
+    "TP6_tecnicas_de_mejora/Practico 6.md",
     "TP6_tecnicas_de_mejora/tecnias_de_mejora.pdf",
     "TP6_tecnicas_de_mejora/TP6_Técnicas de mejora de rendimiento.pdf",
     "Computer Organization and Design ARM edition.pdf",
