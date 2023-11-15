@@ -1,8 +1,8 @@
 
-main.elf:     file format elf64-littleaarch64
+main.elf:     formato del fichero elf64-littleaarch64
 
 
-Disassembly of section .text:
+Desensamblado de la sección .text:
 
 0000000040080000 <random_array-0x2c>:
     40080000:	d5381049 	mrs	x9, cpacr_el1
@@ -41,13 +41,11 @@ Disassembly of section .text:
 0000000040080068 <inner_loop>:
     40080068:	a9402dca 	ldp	x10, x11, [x14]
     4008006c:	eb0b015f 	cmp	x10, x11
-    40080070:	5400004c 	b.gt	40080078 <swap>
-    40080074:	14000002 	b	4008007c <no_swap>
+    40080070:	9a8bc14c 	csel	x12, x10, x11, gt
+    40080074:	9a8ac16d 	csel	x13, x11, x10, gt
 
 0000000040080078 <swap>:
-    40080078:	a90029cb 	stp	x11, x10, [x14]
-
-000000004008007c <no_swap>:
+    40080078:	a90031cd 	stp	x13, x12, [x14]
     4008007c:	91000529 	add	x9, x9, #0x1
     40080080:	910021ce 	add	x14, x14, #0x8
     40080084:	eb04013f 	cmp	x9, x4
@@ -62,18 +60,18 @@ Disassembly of section .text:
     400800a0:	400800b0 	.inst	0x400800b0 ; undefined
     400800a4:	00000000 	udf	#0
 
-Disassembly of section .data:
+Desensamblado de la sección .data:
 
 00000000400800a8 <N>:
     400800a8:	00000009 	udf	#9
     400800ac:	00000000 	udf	#0
 
-Disassembly of section .bss:
+Desensamblado de la sección .bss:
 
 00000000400800b0 <Array>:
 	...
 
-Disassembly of section .debug_line:
+Desensamblado de la sección .debug_line:
 
 0000000000000000 <.debug_line>:
    0:	0000005a 	udf	#90
@@ -95,14 +93,14 @@ Disassembly of section .debug_line:
   40:	21212121 	.inst	0x21212121 ; undefined
   44:	21212221 	.inst	0x21212221 ; undefined
   48:	21212224 	.inst	0x21212224 ; undefined
-  4c:	22222122 	.inst	0x22222122 ; undefined
-  50:	21212323 	.inst	0x21212323 ; undefined
+  4c:	21212122 	.inst	0x21212122 ; undefined
+  50:	21212222 	.inst	0x21212222 ; undefined
   54:	21212221 	.inst	0x21212221 ; undefined
   58:	00040223 	.inst	0x00040223 ; undefined
-  5c:	Address 0x000000000000005c is out of bounds.
+  5c:	Address 0x5c is out of bounds.
 
 
-Disassembly of section .debug_info:
+Desensamblado de la sección .debug_info:
 
 0000000000000000 <.debug_info>:
    0:	0000002a 	udf	#42
@@ -114,11 +112,11 @@ Disassembly of section .debug_info:
   18:	400800a8 	.inst	0x400800a8 ; undefined
 	...
   24:	00000007 	udf	#7
-  28:	00000040 	udf	#64
-  2c:	Address 0x000000000000002c is out of bounds.
+  28:	00000041 	udf	#65
+  2c:	Address 0x2c is out of bounds.
 
 
-Disassembly of section .debug_abbrev:
+Desensamblado de la sección .debug_abbrev:
 
 0000000000000000 <.debug_abbrev>:
    0:	10001101 	adr	x1, 220 <random_array-0x4007fe0c>
@@ -127,7 +125,7 @@ Disassembly of section .debug_abbrev:
    c:	130e250e 	sbfiz	w14, w8, #18, #10
   10:	00000005 	udf	#5
 
-Disassembly of section .debug_aranges:
+Desensamblado de la sección .debug_aranges:
 
 0000000000000000 <.debug_aranges>:
    0:	0000002c 	udf	#44
@@ -139,7 +137,7 @@ Disassembly of section .debug_aranges:
   18:	000000a8 	udf	#168
 	...
 
-Disassembly of section .debug_str:
+Desensamblado de la sección .debug_str:
 
 0000000000000000 <.debug_str>:
    0:	6e69616d 	rsubhn2	v13.8h, v11.4s, v9.4s
@@ -149,15 +147,16 @@ Disassembly of section .debug_str:
   10:	2f6f666c 	.inst	0x2f6f666c ; undefined
   14:	75636f44 	.inst	0x75636f44 ; undefined
   18:	746e656d 	.inst	0x746e656d ; undefined
-  1c:	61462f73 	.inst	0x61462f73 ; undefined
-  20:	2f66616d 	umlsl	v13.4s, v11.4h, v6.h[2]
-  24:	2f6f7233 	fcmla	v19.4h, v17.4h, v15.h[1], #270
-  28:	75717241 	.inst	0x75717241 ; undefined
-  2c:	72612f69 	.inst	0x72612f69 ; undefined
-  30:	75712d6d 	.inst	0x75712d6d ; undefined
-  34:	2f756d65 	.inst	0x2f756d65 ; undefined
-  38:	6d656a45 	ldp	d5, d26, [x18, #-432]
-  3c:	006f6c70 	.inst	0x006f6c70 ; undefined
-  40:	20554e47 	.inst	0x20554e47 ; undefined
-  44:	32205341 	orr	w1, w26, #0x1fffff
-  48:	0038332e 	.inst	0x0038332e ; NYI
+  1c:	462f736f 	.inst	0x462f736f ; undefined
+  20:	66616d61 	.inst	0x66616d61 ; undefined
+  24:	6f72332f 	fcmla	v15.8h, v25.8h, v18.h[1], #90
+  28:	7172412f 	subs	w15, w9, #0xc90, lsl #12
+  2c:	612f6975 	.inst	0x612f6975 ; undefined
+  30:	712d6d72 	subs	w18, w11, #0xb5b
+  34:	756d6575 	.inst	0x756d6575 ; undefined
+  38:	656a452f 	fnmla	z15.h, p1/m, z9.h, z10.h
+  3c:	6f6c706d 	fcmla	v13.8h, v3.8h, v12.h[1], #270
+  40:	554e4700 	.inst	0x554e4700 ; undefined
+  44:	20534120 	.inst	0x20534120 ; undefined
+  48:	30342e32 	adr	x18, 6860d <random_array-0x40017a1f>
+	...

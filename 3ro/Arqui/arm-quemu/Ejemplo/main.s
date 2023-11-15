@@ -50,15 +50,11 @@ outer_loop:
 inner_loop:
 	ldp 	x10, x11, [x14]  // Load current element x[j] and next element x[j+1] 
     cmp     x10, x11           // Compare current and next elements
-	
-    b.gt    swap               // Branch if the current element is greater than the next
-
-    b       no_swap            // Branch to no_swap if no swap is needed
-
+	csel  	x12, x10, x11, gt  // if x10 > x11 then x12 = x10 else x12 = x11
+	csel	x13, x11, x10, gt  // if x10 > x11 then x13 = x11 else x13 = x10
 swap:
-	stp 	x11, x10, [x14]  // Swap current and next elements
+	stp 	x13, x12, [x14]  // Swap current and next elements
 
-no_swap:
     add     x9, x9, 1          // Move to the next pair of elements
 	add     x14, x14, 8        // Move to the next pair of elements
     cmp     x9, x4             // Compare inner loop counter with N-1-i
