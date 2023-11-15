@@ -11,7 +11,7 @@ Disassembly of section .text:
     4008000c:	d5181049 	msr	cpacr_el1, x9
     40080010:	58000480 	ldr	x0, 400800a0 <end+0x8>
     40080014:	580004a6 	ldr	x6, 400800a8 <N>
-    40080018:	d2804441 	mov	x1, #0x222                 	// #546
+    40080018:	d2809a41 	mov	x1, #0x4d2                 	// #1234
     4008001c:	d2800005 	mov	x5, #0x0                   	// #0
     40080020:	d28000a2 	mov	x2, #0x5                   	// #5
     40080024:	d2800023 	mov	x3, #0x1                   	// #1
@@ -95,8 +95,8 @@ Disassembly of section .debug_line:
   40:	21212121 	.inst	0x21212121 ; undefined
   44:	21212221 	.inst	0x21212221 ; undefined
   48:	21212224 	.inst	0x21212224 ; undefined
-  4c:	22212522 	.inst	0x22212522 ; undefined
-  50:	21212723 	.inst	0x21212723 ; undefined
+  4c:	22222122 	.inst	0x22222122 ; undefined
+  50:	21212323 	.inst	0x21212323 ; undefined
   54:	21212221 	.inst	0x21212221 ; undefined
   58:	00040223 	.inst	0x00040223 ; undefined
   5c:	Address 0x000000000000005c is out of bounds.

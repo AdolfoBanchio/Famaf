@@ -14,7 +14,7 @@
 	// Initilize randomply the array
 	ldr x0, =Array	       // Load array base address to x0
 	ldr x6, N             // Load the number of elements into x2
-    mov x1, 546         // Set the seed value
+    mov x1, 1234         // Set the seed value
 	mov x5, 0		    // Set array counter to 0
 
     // LCG parameters (adjust as needed)
