@@ -139,43 +139,6 @@
       "command-palette:Open command palette": false
     }
   },
-  "floating": {
-    "id": "e3d148336809684b",
-    "type": "floating",
-    "children": [
-      {
-        "id": "73b9778dabbe4f00",
-        "type": "window",
-        "children": [
-          {
-            "id": "4c07c407a4dd14fc",
-            "type": "tabs",
-            "children": [
-              {
-                "id": "7fb2776e66d5285b",
-                "type": "leaf",
-                "state": {
-                  "type": "markdown",
-                  "state": {
-                    "file": "Temas para 2do parcial.md",
-                    "mode": "preview",
-                    "source": false
-                  }
-                }
-              }
-            ]
-          }
-        ],
-        "direction": "vertical",
-        "x": 683,
-        "y": 27,
-        "width": 683,
-        "height": 741,
-        "maximize": false,
-        "zoom": 0
-      }
-    ]
-  },
   "active": "60be8fdd36389be2",
   "lastOpenFiles": [
     "Clase 6-Codificación.md",

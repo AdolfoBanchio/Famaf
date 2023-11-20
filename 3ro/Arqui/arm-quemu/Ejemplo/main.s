@@ -14,15 +14,15 @@
 	// Initilize randomply the array
 	ldr x0, =Array	       // Load array base address to x0
 	ldr x6, N             // Load the number of elements into x2
-    mov x1, 1234         // Set the seed value
+    mov x1, 1234       // Set the seed value
 	mov x5, 0		    // Set array counter to 0
 
     // LCG parameters (adjust as needed)
     movz x2, 0x5, lsl 0    //5         // Multiplier
-	//movk x2, 0x660D, lsl 0
+	movk x2, 0x660D, lsl 0
     movz x3, 0x1, lsl 0  // 1013904223      // Increment
-	//movk x3, 0xF35F, lsl 0
-    //movz x4, 0xFFFF, lsl 16  // Modulus (maximum value)
+	movk x3, 0xF35F, lsl 0
+    movz x4, 0xFFFF, lsl 16  // Modulus (maximum value)
     movk x4, 0xFFFF, lsl 0   // Modulus (maximum value)
 
 random_array:
@@ -64,5 +64,29 @@ swap:
     cmp     x8, x3             // Compare outer loop counter with N
     b.lt    outer_loop         // Branch to outer_loop if not finished
 
+/* bubble_sort:
+    mov     x8, 0             // Outer loop counter for(i=0; i<N-1, i++)
+outer_loop:
+	sub 	x4, x3, x8   	  // N-1-i
+	add 	x14, x1, 0		 // x14 = x1 = =Array
+    mov     x9, 0             // Inner loop counter for(j=0; j<N-1-i, j++)
+inner_loop:
+	ldp 	x10, x11, [x14]  // Load current element x[j] and next element x[j+1] 
+    cmp     x10, x11           // Compare current and next elements
+	
+	b.le    no_swap
+swap:
+	stp 	x11, x10, [x14]  // Swap current and next elements
+
+no_swap:
+    add     x9, x9, 1          // Move to the next pair of elements
+	add     x14, x14, 8        // Move to the next pair of elements
+    cmp     x9, x4             // Compare inner loop counter with N-1-i
+    b.lt    inner_loop         // Branch to inner_loop if not finished
+
+    add     x8, x8, 1          // Move to the next pair of elements in the outer loop
+    cmp     x8, x3             // Compare outer loop counter with N
+    b.lt    outer_loop         // Branch to outer_loop if not finished
+ */
 end:
 infloop: B infloop
