@@ -1,13 +1,13 @@
-Analysis & Synthesis Status : Successful - Mon Nov 20 11:07:46 2023
+Analysis & Synthesis Status : Successful - Tue Nov 21 18:14:21 2023
 Quartus Prime Version : 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 Revision Name : testQ
-Top-level Entity Name : Recuperatorio
+Top-level Entity Name : circuito
 Family : Cyclone IV E
-Total logic elements : 6
-    Total combinational functions : 2
-    Dedicated logic registers : 6
-Total registers : 6
-Total pins : 7
+Total logic elements : 8
+    Total combinational functions : 8
+    Dedicated logic registers : 8
+Total registers : 8
+Total pins : 32
 Total virtual pins : 0
 Total memory bits : 0
 Embedded Multiplier 9-bit elements : 0

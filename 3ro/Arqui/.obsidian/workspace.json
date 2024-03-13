@@ -4,19 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "1f2fc34f8487e684",
+        "id": "01ac20cd159927ac",
         "type": "tabs",
         "children": [
           {
-            "id": "163b998628622ba8",
+            "id": "43b848822c71527e",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "TP3_preguntas/practico3.md",
-                "mode": "preview",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -85,7 +81,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "TP3_preguntas/practico3.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +97,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "TP3_preguntas/practico3.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +119,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "TP3_preguntas/practico3.md"
+                "file": "2023-11-20.md"
               }
             }
           }
@@ -146,8 +140,11 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "163b998628622ba8",
+  "active": "a29ecae6cb881cb1",
   "lastOpenFiles": [
+    "2023-11-20.md",
+    "ADC_Clase_T_2023_02.pdf",
+    "TP3_preguntas/practico3.md",
     "TP6_tecnicas_de_mejora/Practico 6.md",
     "TP6_tecnicas_de_mejora/Clase TP6.pdf",
     "TP6_tecnicas_de_mejora/tecnias_de_mejora.pdf",
@@ -158,12 +155,10 @@
     "armv8 createAssembly-Template/memory_map.txt",
     "armv8 createAssembly-Template/main.o",
     "TP6_tecnicas_de_mejora/tecnias_de_mejora.xopp~",
-    "TP7_dynamic_scheduling",
     "TP6_tecnicas_de_mejora/Practico 6-20231025003957996.webp",
     "TP6_tecnicas_de_mejora/imgs/Practico 6-20231025003957996.webp",
     "TP6_tecnicas_de_mejora/Pasted image 20231024233102.png",
     "TP6_tecnicas_de_mejora/imgs/Pasted image 20231024233102.png",
-    "TP5_memoria_cache/Teorico Memoria.md",
-    "TP3_preguntas/practico3.md"
+    "TP5_memoria_cache/Teorico Memoria.md"
   ]
 }
