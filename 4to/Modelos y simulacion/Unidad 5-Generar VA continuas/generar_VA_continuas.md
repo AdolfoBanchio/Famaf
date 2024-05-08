@@ -26,15 +26,103 @@ Eso no siempre es posible ya que puede ser que $F^{-1}$ involucre funciones cost
 
 ### Simulacion de variable Exponencial
 
-TODO
+Si X es una variable aleatoria con distribucion exponencial de parametro $\lambda = 1$ entonces su funcion de densidad es:
+$$
+F(x) = \begin{cases}
+        1 - e^{-x} \quad \text{si  } x \gt 0 \\
+        0  \quad \text{si  } x \le 0
+        \end{cases}
+$$
+
+luego la inversa de F sobre (0,1) es:
+$$
+F^{-1}(u) = -\log(1-u) , u \in (0,1)
+$$
+
+Entonces el algoritmo de simulacion para una exponencial con $\lambda = 1$ es:
+
+```python
+def exponencial ():
+    u = 1 - random()
+    return -log(1-u)
+```
+
+Vemos que si Y es $\frac{1}{\lambda} X$ entonces Y distribuye exponencial con parametro $\lambda$ y el codigo es:
+
+```python
+def exponencial (lamda):
+    u = 1 - random()
+    return -log(1-u)/lamda
+```
 
 ### Simulacion de variable Poisson
 
-TODO
+Sabemos que en un proceso de Poisson de intensidad $\lambda$ entonces N(t), es una variable aleatoria Poisson con media $\lambda . t$. Y ademas sabemos que el tiempo entre llegadas de eventos son aleatorias exponenciales con media $\frac{1}{\lambda}$.
+
+N(1) es una variable Poisson con paramentro $\lambda$, y sabemos que los tiempos entre arribos en [0,1] son exponenciales. Entonces si simulamos _i_ variables aleatorias de modo que:
+$$
+X_1+X_2+..+X_n \leq 1 \text{ y } X_1+X_2+..+X_n+X_{n+1} \gt 1
+$$
+Entonces n es el número de arribos hasta t=1. Y tenemos
+
+![alt text](image-1.png)
+
+```python
+def poisson_con_exp(lamda):
+    X = 0
+    producto = 1 - random()
+    cota = exp(1-lamda)
+    while producto >= cota:
+        producto *= 1 - random
+        x += 1
+    return x
+```
 
 ### Simulacion de variable Gamma(n, $\lambda^{-1}$)
 
-TODO
+Sabemos que la suma de n variables aleatorias exponenciales, independientes, con parametro $\lambda$ es una variable aleatoria con distribucion Gamma(n, $\lambda^{-1}$). Esta propiedad nos permite dar un algoritmo que a partir de exponenciales generamos una Gamma.
+
+$$X = -\frac{1}{\lambda} \log(U_1 \cdot U_2 \cdots U_n)$$
+
+Y el algoritmo es:
+
+```python
+def Gamma(n, lamda):
+    # genera gamma con parametros n y 1/lamda
+    u = 1
+    for _ in range(n):
+        u *= 1 - random()
+    return -log(u)/lamda
+```
+
+utilizando este metodo de generacion de exponenciales para generar una gamma, entonces podemos diseñar un algoritmo para generar n variables independientes exponenciales de parametro $\lambda$
+
+```python
+def DosExp(lamda):
+    V1, V2 = 1-random(), 1-random()
+    t = -log(V1 * V2) / lamda
+    U = random()
+    X = t * U
+    Y = t - X
+    return X, Y
+```
+
+Para el caso general tenemos que calcular un unico logaritmo y n-1 uniformes adicioneles.
+
+```python
+def Nexponenciales(n,lamda):
+    t = 1
+    for _ in range(n): t *= random()
+    t = -log(t)/lamda
+    unif = random.uniform(0,1,n-1)
+    unif.sort()
+    exponenciales = [unif[0]*t]
+    for i in range(n-2):
+        exponenciales.append((unif[i+1]-unif[i])*t)
+    
+    exponenciales.append((1-unif[n-2])*t)
+    return exponenciales
+```
 
 ---
 
