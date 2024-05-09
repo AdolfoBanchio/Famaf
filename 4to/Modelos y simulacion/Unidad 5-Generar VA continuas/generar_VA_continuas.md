@@ -166,7 +166,21 @@ TODO
 
 ### Metodo polar
 
-TODO
+En el metodo polar lo que se busca es generar dos variables normales a partir de las coordenadas polares de un punto (X,Y) en el plano, donde ambas son normales estandar e independientes. Entonces tendremos a $R^2 = X^2 + Y^2$ y $\Theta = \arctan(\frac{Y}{X})$. Utilizando el determinante jacobiano de la transformacion de coordenadas polares a cartesianas tenemos que:
+
+$$
+f_{R^2, \Theta}(d, \theta) = \frac{1}{2}f_{X,Y}(x,y) = \frac{1}{4\pi}e^{-\frac{d}{2}} \\
+$$
+![alt text](image-3.png)
+
+```python
+def MetodoPolar():
+    Rcuadrado = -2 * log(1 - random())
+    theta = 2 * pi * random()
+    X = sqrt(Rcuadrado) * cos(theta)
+    Y = sqrt(Rcuadrado) * sin(theta)
+    return X*sigma + mu, Y*sigma + mu
+```
 
 ### Transformaciones de Box-Muller
 
@@ -174,7 +188,39 @@ TODO
 
 ### Método de razón entre uniformes
 
-TODO
+El metodo de razon entre uniformes busca generar una varaible X con funcion de densidad f tal que:
+$$
+C_f = \{ (u,v) | 0 \lt u \lt \sqrt{f(v/u)} \}
+$$
+Si U y V son variables aleatorias continuas tales que (U,V) esta uniformemente distribuido en el conjunto $C_f$ entonces la variable X = V/U tiene funcion de densidad f.
+
+Luego los pasos del algoritmo son los siguientes:
+
+1. Generar un vector aleatorio (U,V) uniformemente en el rectangulo (0, c) x (a, b) que contenga a $C_f$
+2. Si $U^2 \lt f(V/U)$ entonces devolver X = V/U, sino volver a 1.
+
+Para el caso de la normal estandar $C_f = \{ (u,v) | 0 \lt u \lt \frac{1}{\sqrt[4]{2\pi}}e^{-v^2/4u^2} \}$
+
+luego un par solo pertenece a $C_f$  si ($C = \sqrt[4]{2\pi}$):
+$$
+\ln(u \cdot C) \lt -\frac{v^2}{4u^2} \rightarrow 0 \leq v^2 \lt -4u^2 \ln(u \cdot C) \\
+\text{Esto requiere que } 0 \lt u \leq \frac{1}{C}. \text{ademas } -4u^2 \ln(u \cdot C) \text{Toma maximo en } u = \frac{e^{-0.5}}{C} \text{ y el valor maximo es } \frac{2}{eC^2}
+$$
+Esto nos dice que $|v| \lt \frac{2}{C\sqrt{2e} = b}$, y vimos antes que $0 \lt C \cdot u \lt 1$. Entonces $C_f$ esta comprendido en $R = [0,\frac{1}{C}] \times [-b,b]$
+
+```python
+from math import exp
+NV_MAGICCONST = 4 * exp(-0.5) / sqrt(2.0)
+def normalvariate(mu, sigma):
+    while 1:
+        u1 = random()
+        u2 = 1.0 - random()
+        z = NV_MAGICCONST * (u1 - 0.5) / u2
+        zz = z * z / 4.0
+        if zz <= -log(u2):
+            break
+    return mu + z * sigma
+```
 
 ## Generación de un proceso de Poisson
 
