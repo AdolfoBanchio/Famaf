@@ -8,7 +8,7 @@ $$ \int_{-\inf}^{x} f(t)dt $$
 Vamos trabajar sobre las variables X tal que su f.d.m sea monótona creciente sobre el conjunto
 $F^{-1}(0,1) ={x| 0 \lt F(X) \lt 1}$. De esta forma nos aseguramos que F(x) sea invertible en el (0,1).
 
-![proposicion](image.png)
+![proposicion](./imgs/image.png)
 
 Con esta proposicion podemos dar un algoritmo basico de como funciona el metodo de la transformada inversa:
 
@@ -65,7 +65,7 @@ X_1+X_2+..+X_n \leq 1 \text{ y } X_1+X_2+..+X_n+X_{n+1} \gt 1
 $$
 Entonces n es el número de arribos hasta t=1. Y tenemos
 
-![alt text](image-1.png)
+![alt text](./imgs/image-1.png)
 
 ```python
 def poisson_con_exp(lamda):
@@ -171,7 +171,7 @@ En el metodo polar lo que se busca es generar dos variables normales a partir de
 $$
 f_{R^2, \Theta}(d, \theta) = \frac{1}{2}f_{X,Y}(x,y) = \frac{1}{4\pi}e^{-\frac{d}{2}} \\
 $$
-![alt text](image-3.png)
+![alt text](./imgs/image-3.png)
 
 ```python
 def MetodoPolar():
@@ -224,4 +224,46 @@ def normalvariate(mu, sigma):
 
 ## Generación de un proceso de Poisson
 
-TODO
+Recordamos que en un proceso de Poisson de parametro $\lambda$ los tiempos de llegada entre eventos sucesivos son exponenciales con parametro $\lambda$. Entonces de esta forma si queremos generar los primeros n eventos tenemos que generar exponenciales $X_i ~ \Epsilon(\lambda), 1 \leq i \leq n$
+
+- Primer evento: $T_1 = X_1$
+- j-esesimo evento: $X_1 + X_2 + \cdots + X_j$
+
+Entonces para generar eventos hasta T, generamos evento hasta que lo generado en j+1 exceda a T. Recordamos que la forma de generar una exponencial con parametro $\lambda$ es $-\log{U} /\lambda$
+
+Entonces el codigo queda:
+
+```python
+def eventos_poisson(lamda, T):
+    t = 0
+    NT = 0
+    Eventos = []
+    while t < T:
+        U = 1 - random()
+        t += - log(U) / lamda
+        if t <= T:
+            NT += 1
+            Eventos.append(t)
+    return NT, Eventos
+```
+
+NT es la cantidad de eventos hasta el tiempo T, y en Eventos se devuelve el tiempo cuando ocurrio el i-esimo evento.
+
+## Generación de procesos de Poisson no homogéneos
+
+```python
+def Poisson_no_homogeneo_adelgazamiento(T):
+    'Devuelve el n ́umero de eventos NT y los tiempos en Eventos'
+    'lamda_t(t): intensidad, lamda_t(t)<=lamda'
+    NT = 0
+    Eventos = []
+    U = 1 - random()
+    t = -log(U) / lamda
+    while t <= T:
+        V = random()
+        if V < lamda_t(t) / lamda:
+            NT += 1
+            Eventos.append(t)
+        t += -log(1-random()) / lamda
+    return NT, Eventos
+```
