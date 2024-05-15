@@ -196,7 +196,9 @@ def normal_estandar_ej():
                 return y_1
             else:
                 return -y_1
+```
 
+```python
 def normal_ej(mu, sigma):
     while True:
         y_1 = gen_exponencial(1)
