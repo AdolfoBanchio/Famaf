@@ -1,3 +1,4 @@
+<!-- title: Generar_VA_continuas -->
 # Generación de variables aleatorias continuas
 
 ## Metodo de la transformada inversa
@@ -8,7 +9,7 @@ $$ \int_{-\inf}^{x} f(t)dt $$
 Vamos trabajar sobre las variables X tal que su f.d.m sea monótona creciente sobre el conjunto
 $F^{-1}(0,1) ={x| 0 \lt F(X) \lt 1}$. De esta forma nos aseguramos que F(x) sea invertible en el (0,1).
 
-![proposicion](./imgs/image.png)
+![alt text](./imgs/image-4.png)
 
 Con esta proposicion podemos dar un algoritmo basico de como funciona el metodo de la transformada inversa:
 
@@ -162,7 +163,51 @@ Para esto vamos a:
 
 ### Por composicion usando |Z|
 
-TODO
+Buscamos generar una variable que sea el valor absoluto de una distribucion normal estandar. A partir del metodo de aceptacion y rechazo contra una exponencial de media 1. Y tenemos:
+
+$$
+\text{ABS de normal estandar :  } f(x) = \frac{2}{\sqrt{2\pi}}e^{-x^2/2} \\
+\text{Exponencial de media 1 :  } g(x) = e^{-x} \\
+\text{entonces para encontrar la cota para el rechazo hacemos :}\\
+\frac{f(x)}{g(x)} = \sqrt(2\pi)e^{x-x^2/2} \text{ y el maximo de esto esta cuando x =1} \\
+c = \sqrt{2\pi e} \quad \text{y luego :} \\
+\frac{f(x)}{c g(x)} = \exp{-\frac{(x-1)^2}{2}}
+$$
+
+Entonces en nuestro algoritmo vamos a
+
+- generar Y exponencial con media 1
+- numero U aleatorio entre 0 y 1
+- si U $\leq exp{-(Y-1)^2/2}$  enotnces X = Y.
+
+notamos que en el 3er paso es lo mismo que hace $-\log(U) \leq (Y-1)^2/2$ y sabemos que $-\log(U)$ es una exponencial de media 1. Entonces el algoritmo se simplifica a
+
+- generar Y1, Y2 exponenciales con media 1
+- si $Y2 \geq (Y1-1)^2/2$ entonces X = Y1
+
+```python
+def normal_estandar_ej():
+    while True:
+        y_1 = gen_exponencial(1)
+        y_2 = gen_exponencial(1)
+        if y_2 >= (y_1-1)**2/2:
+            u = rd.random()
+            if u <= 0.5:
+                return y_1
+            else:
+                return -y_1
+
+def normal_ej(mu, sigma):
+    while True:
+        y_1 = gen_exponencial(1)
+        y_2 = gen_exponencial(1)
+        if y_2 >= (y_1-1)**2/2:
+            u = rd.random()
+            if u <= 0.5:
+                return y_1 * sigma + mu
+            else:
+                return -y_1 * sigma + mu
+```
 
 ### Metodo polar
 
@@ -249,7 +294,11 @@ def eventos_poisson(lamda, T):
 
 NT es la cantidad de eventos hasta el tiempo T, y en Eventos se devuelve el tiempo cuando ocurrio el i-esimo evento.
 
+![alt text](./imgs/image-5.png)
+
 ## Generación de procesos de Poisson no homogéneos
+
+Vimos que M(t) es un proceso homogéneo con intensidad $\lambda$ y consideramos N(t) el proceso de poisson que cuenta los eventos de M(t) con probabilidad $\frac{\lambda (t)}{\lambda}$. enotnces N(t) es un proceso de Poisson no homogéneo con intensidad $\lambda(t)$.
 
 ```python
 def Poisson_no_homogeneo_adelgazamiento(T):
@@ -267,3 +316,5 @@ def Poisson_no_homogeneo_adelgazamiento(T):
         t += -log(1-random()) / lamda
     return NT, Eventos
 ```
+
+Una alternativa para hacerlo mas eficiente, es particionar el intervalo [0,T] en subintervalos. Y acotar cada intervalo con un $\lambda$ diferente.
