@@ -126,7 +126,7 @@ P(\overline{X}(n) - z_{\alpha/2} \frac{\sigma}{\sqrt{n}} \lt \theta \lt \overlin
 $$
 Determina un intervalo aleatorio que contiene al parametro $\theta$ con una **confianza** de 1 - $\alpha$. Si queremos un intervalo de confianza del 95% entonces $\alpha = 0.05$ y $z_{\alpha/2} = 1.96$. Y el intervalo sera: $[\overline{X}(n) - 1.96 \frac{\sigma}{\sqrt{n}}, \overline{X}(n) + 1.96 \frac{\sigma}{\sqrt{n}}]$
 
-![alt text](image.png)
+![alt text](./imgs/image.png)
 
 Cuando $\sigma$ es desconocido se reemplaza utilizando el estimador $\hat{\sigma} = \sqrt{S^2(n)}$.
 
