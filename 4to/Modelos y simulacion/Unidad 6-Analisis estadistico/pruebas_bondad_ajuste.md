@@ -27,7 +27,7 @@ $$
 
 Una forma de ayudar a mejorar la precision del t-valor, es simular **nuevas** muestras de tamaño $n$ a partir de la muestra **inicial**. Y para cada una de estas nuevas muestras, calcular el estadistico T. Luego la proporción de valores de T que exceden al valor $T = t_0$ tomado en la muestra original es una buena estimación del p-valor.
 
-Teniendo los $p_i$ correspondientes se generan directamente los valores de las frecuencias $N_1, N_2, \cdots, N_k$ y se calcula el estaditico T.
+Teniendo los $p_i$ correspondientes se generan directamente los valores de las frecuencias $N_1, N_2, \cdots, N_k$ y se calcula el estadistico T.
 
 ### Parámetros no especificados
 
