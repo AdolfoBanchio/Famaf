@@ -1,3 +1,11 @@
+---
+header-includes:
+  - \usepackage{amsmath}
+  - \usepackage{amsfonts}
+  - \usepackage{amssymb}
+  - \usepackage[margin=1in]{geometry}
+---
+
 # Pruebas de bondad de ajuste
 
 ## Datos discretos - Test chi-cuadrado de Pearson
@@ -55,21 +63,23 @@ Luego el p-valor es la proporción de valores de $T(sim)$ que exceden a $t_0$.
 
 Consideramos al igual que antes una muestra $Y_1, Y_2, \cdots, Y_n$. Y tenemos una hipotesis nula que dice que los datos provienen de una distribucion F conocida. Luego consideramos una distribución empírica $F_e$ donde:
 $$
-F_e(x) =
-\begin{cases}
-0 & \text{si } x < Y_{(1)} \\
-\frac{j}{n} & \text{si } Y_{(j)} \leq x < Y_{(j+1)} \\
-1 & \text{si } x \geq Y_{(n)}
-\end{cases}
+\begin{aligned}
+    F_e(x) =
+    \begin{cases}
+    0 & \text{si } x < Y_{(1)} \\
+    \frac{j}{n} & \text{si } Y_{(j)} \leq x < Y_{(j+1)} \\
+    1 & \text{si } x \geq Y_{(n)}
+    \end{cases}
+\end{aligned}
 $$
 
 Esencialmente compararemos la distribución empirica con la teorica. estimando la distancia máxima entre los dos graficos. **Estadistico de Kolmogorov-Smirnov**:
 $$
-\begin{align*}
+\begin{aligned}
 D &= \sup_{x\in \mathbb{R}} |F_e(x) - F(x)| \\
 &= \sup\{\sup_{x\in \mathbb{R}} |F_e(x) - F(x)|, \sup_{x\in \mathbb{R}} |F(x) - F_e(x)|\} \\
 &= \max_{1 \leq j \leq n} \left\{ \frac{j}{n} - F(Y_{(j)}), F(Y_{(j)}) - \frac{j-1}{n} \right\}
-\end{align*}
+\end{aligned}
 $$
 
 Para estimar el $p-valor$ realizamos k simulaciones de muestras de tamaño n de una variable con distribución F, calculamos el correspondiente valor estadístico $D = d_i$ para cada muestra con $1 \leq i \leq k$. luego el p-valor es:
@@ -84,6 +94,8 @@ $$
 
 Para estimar el p-valor a través de simulaciones es suficiente con generar muestras de tamaño n de variables uniformes en (0,1) y calcular la proporcion de valores de $d_i$ que exceden a $d$.
 
+---
+
 ### Parametros no especificados
 
 Si queremos testear que las observaciones $Y_1, Y_2, \cdots, Y_n$ provienen de una distribución F con parametros desconocidos, entonces se procede de la siguiente forma:
@@ -91,9 +103,13 @@ Si queremos testear que las observaciones $Y_1, Y_2, \cdots, Y_n$ provienen de u
 Estimamos los parametros $\theta_1, \theta_2, \dots, \theta_n$ y calculamos el esadistico de Kolmogorov-Smirnov como:
 
 $$
-D = \sup_{x\in \mathbb{R}} |F_e(x) - F_{\hat{\theta}}(x)| \\
-= \max_{1 \leq j \leq n} \left\{ \frac{j}{n} - F(Y_{(j)}), F(Y_{(j)}) - \frac{j-1}{n} \right\}
+\begin{aligned}
+D &= \sup_{x\in \mathbb{R}} |F_e(x) - F_{\hat{\theta}}(x)| \\
+&= \max_{1 \leq j \leq n} \left\{ \frac{j}{n} - F(Y_{(j)}), F(Y_{(j)}) - \frac{j-1}{n} \right\}
+\end{aligned}
 $$
+
+\newpage
 
 Luego se puede seguir estimando el p-valor a través de simulaciones con las muestras generadas de variables uniformes como en el caso de los parametros especificados.
 

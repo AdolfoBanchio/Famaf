@@ -1,3 +1,11 @@
+---
+header-includes:
+  - \usepackage{amsmath}
+  - \usepackage{amsfonts}
+  - \usepackage{amssymb}
+  - \usepackage[margin=1in]{geometry}
+---
+
 # Análisis estadístico de datos simulados
 
 En general a la hora de realizar simulaciones, tenemos datos obtenidos del sistema real que luego de ser analizamos decidimos representar estos datos de acuerdo con cierta distribucion de probabilidad. Pero estas dependen de ciertos parametros que la determinan ($\lambda$ para la exponencial)y ademas existen ciertas medidas (Esperanza, Varianza, max, min, etc.). Y como por lo general se desconoce la distribucion exacta de X, se **estiman** estos parametros a partir de la muestra.
@@ -14,8 +22,10 @@ Un estimador es una funcion que depende de una muestra de valores. Y tiene la si
 El **error cuadrático medio** de un estimador $\hat{\theta}$ esta definido como:
 
 $$
-ECM(\hat{\theta}, \theta) = E[(\hat{\theta} - \theta)^2] \\
-= Var(\hat{\theta}) + (E(\hat{\theta}) - \theta)^2
+\begin{aligned}
+ECM(\hat{\theta}, \theta) &= E[(\hat{\theta} - \theta)^2] \\
+&= Var(\hat{\theta}) + (E(\hat{\theta}) - \theta)^2
+\end{aligned}
 $$
 
 Si el estimador es insesgado su ECM es igual a la varianza.
@@ -47,17 +57,21 @@ $$
 Si quisieramos dar un estimador para la esperanza, y que este tenga un ECM < 0.001, necesitariamos saber el valor de $\sigma$, pero la gran mayoria de las veces no lo conocemos. Por ello es necesario tener un estiamador para $\sigma^2$(Varianza).
 
 $$
+\begin{aligned}
 S^2(n) = \frac{1}{n-1} \sum_{i=1}^{n} (X_i - \overline{X}(n))^2 \\
 = \frac{1}{n-1} \sum_{i=1}^{n} X_i^2 - n\overline{X}^2
+\end{aligned}
 $$
 
 Veamos que es un **estimador insesgado**.
 
 $$
-E[X_i^2] = Var(X_i) + E[X_i]^2 = \sigma^2 + \theta^2 \\
-E[\overline{X}^2(n)] = Var(\overline{X}(n)) + E[\overline{X}(n)]^2 = \frac{\sigma^2}{n} + \theta^2 \\
-(n-1)E[S^2(n)] = nE[X_i^2] - nE[\overline{X}^2(n)] = n(\sigma^2 + \theta^2) - n(\frac{\sigma^2}{n} + \theta^2) = (n-1)\sigma^2 \\
-E[S^2(n)] = \sigma^2
+\begin{aligned}
+E[X_i^2] &= Var(X_i) + E[X_i]^2 = \sigma^2 + \theta^2 \\
+E[\overline{X}^2(n)] &= Var(\overline{X}(n)) + E[\overline{X}(n)]^2 = \frac{\sigma^2}{n} + \theta^2 \\
+(n-1)E[S^2(n)] &= nE[X_i^2] - nE[\overline{X}^2(n)] = n(\sigma^2 + \theta^2) - n\left(\frac{\sigma^2}{n} + \theta^2\right) = (n-1)\sigma^2 \\
+E[S^2(n)] &= \sigma^2
+\end{aligned}
 $$
 
 Usamos $S(n) = \sqrt{S^2(n)}$ para obtener la desviacion estandar muestral.
@@ -67,9 +81,12 @@ Usamos $S(n) = \sqrt{S^2(n)}$ para obtener la desviacion estandar muestral.
 Muchas veces queremos saber cuantas muestras de la poblacion necesitamos para poder obtener un estimador de la media con un ECM menor que cierto $d$. Que deberia satisfacer $\frac{\sigma^2}{n} < d$. Pero no siempre sabemos el valor de $\sigma$, por lo que lo reemplazamos con el estimador $S^2(n)$. Lo que implica qe ambos estimadores deberan ser calculados en cada iteracion con cada nuevo elemento de la muestra que se genera. Por lo que es util tener definiciones recursivas de cada estimador, para que el calculo sea mas eficiente.
 
 $$
-\overline{X}(n +1) = \overline{X}(n) + \frac{X_{n+1} - \overline{X}(n)}{n+1} \\
-S^2(n+1) = (1 - \frac{1}{n})S^2(n) + (n +1)(\overline{X}(n+1) - \overline{X}(n))^2
+\begin{aligned}
+\overline{X}(n +1) &= \overline{X}(n) + \frac{X_{n+1} - \overline{X}(n)}{n+1} \\
+S^2(n+1) &= (1 - \frac{1}{n})S^2(n) + (n +1)(\overline{X}(n+1) - \overline{X}(n))^2
+\end{aligned}
 $$
+
 De esta forma el estimador de **media muestral** se ira calculando iteradamente hasta que el ECM sea menor que $d$.
 
 ```python
@@ -117,13 +134,17 @@ Un estimador por intervalo de un parámetro es un intervalo para el que se predi
 ### Estimador por intervalo de E(X) = $\theta$
 
 Queremos determinar un intervalo que contenga al parámetro $\theta$ con un nivel de confianza de $1 - \alpha$. Recordamos que $z_{\alpha}$ indica el numero real tal que $P(Z > z_{\alpha}) = \alpha$. Ademas sabemos que:
+
 $$
 \frac{\overline{X}(n) - \theta}{\sigma/\sqrt{n}} \sim N(0,1)
 $$
+
 luego como tiene una distribución simétrica podemos decir que:
+
 $$
-P(\overline{X}(n) - z_{\alpha/2} \frac{\sigma}{\sqrt{n}} \lt \theta \lt \overline{X}(n) + z_{\alpha/2} \frac{\sigma}{\sqrt{n}}) = 1 - \alpha
+P(\overline{X}(n) - z_{\alpha/2} \frac{\sigma}{\sqrt{n}} < \theta < \overline{X}(n) + z_{\alpha/2} \frac{\sigma}{\sqrt{n}}) = 1 - \alpha
 $$
+
 Determina un intervalo aleatorio que contiene al parametro $\theta$ con una **confianza** de 1 - $\alpha$. Si queremos un intervalo de confianza del 95% entonces $\alpha = 0.05$ y $z_{\alpha/2} = 1.96$. Y el intervalo sera: $[\overline{X}(n) - 1.96 \frac{\sigma}{\sqrt{n}}, \overline{X}(n) + 1.96 \frac{\sigma}{\sqrt{n}}]$
 
 ![alt text](./imgs/image.png)
@@ -131,10 +152,13 @@ Determina un intervalo aleatorio que contiene al parametro $\theta$ con una **co
 Cuando $\sigma$ es desconocido se reemplaza utilizando el estimador $\hat{\sigma} = \sqrt{S^2(n)}$.
 
 La longitud del intervalo esta dada por: 
+
 $$
 l = 2\cdot z_{\alpha/2} \frac{\sigma}{\sqrt{n}} \quad \text{o} \quad l = 2z_{\alpha/2} \frac{S(n)}{\sqrt{n}}
 $$
+
 Por lo que si quiero generar un intervalo con menor longitud que L. Generare hasta un n tal que:
+
 $$
 2z_{\alpha/2} \frac{S(n)}{\sqrt{n}} < L
 $$
