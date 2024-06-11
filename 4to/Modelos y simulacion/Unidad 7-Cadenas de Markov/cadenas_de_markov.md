@@ -1,3 +1,11 @@
+---
+header-includes:
+  - \usepackage{amsmath}
+  - \usepackage{amsfonts}
+  - \usepackage{amssymb}
+  - \usepackage[margin=1in]{geometry}
+---
+
 # Cadenas de Markov
 
 Un proceso de Markov con un conjunto discreto de estados S es una **cadena de Markov**. Y la propiedad de Markov se escribe como:
@@ -66,7 +74,7 @@ Si la cadena es finita e irreducible, todos sus estados son recurrentes. Y a cad
 
 Si un estado $i$ es recurrente, entonces hay algun n positivo tal que la probabilidad de llegar a $i$ en el paso n partiendo desde $i$ es mayor que 0. En particular el **periodo** del estado $i$ es:
 $$
-k = MCD\{n \gt 0 : P(X_n = i | X_0 = i) > 0\}
+k = MCD\{n > 0 : P(X_n = i | X_0 = i) > 0\}
 $$
 Si $k=1$ el estado es **aperiódico**. Si $k>1$ el estado es **periódico** con periodo $k$.
 
@@ -80,18 +88,21 @@ H^A = \inf{\{n \geq 0 : X_n \in A\}}
 $$
 Donde la **probabilidad de alcance** a A desde el estado $i$ es:
 $$
-h_i^A = P(H^A \lt \infty | X_0 = i)
+h_i^A = P(H^A < \infty | X_0 = i)
 $$
 
 Luego si A = $\{j\}$, entonces es la suma de las probabilidades de que en el n-esimo paso alcance j.
+
 $$
-h_i^{\{j\}} = \sum_{n \geq 0} P(H^A = n | X_0 = i) \\
-
-\text{O tambien, la solucion mínima no negativa del sistema de ecuaciones:} \\
-
+\begin{aligned}
+    h_i^{\{j\}} &= \sum_{n \geq 0} P(H^A = n | X_0 = i) \\
+\end{aligned}
+$$
+O también, la solución mínima no negativa del sistema de ecuaciones:
+$$
 \begin{cases}
-h_i^{A} = 1 & \text{si } i \in A \\
-h_i^{A} = \sum_{j \in S} p_{ij} h_j^{A} & \text{si } i \notin A
+    h_i^{A} = 1 & \text{si } i \in A \\
+    h_i^{A} = \sum_{j \in S} p_{ij} h_j^{A} & \text{si } i \notin A
 \end{cases}
 $$
 
