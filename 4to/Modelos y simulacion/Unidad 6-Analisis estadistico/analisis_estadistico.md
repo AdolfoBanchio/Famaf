@@ -116,7 +116,7 @@ Un estimador por intervalo de un parámetro es un intervalo para el que se predi
 
 ### Estimador por intervalo de E(X) = $\theta$
 
-Queremos determinar un intervalo que contenga al parámetro $\theta$ con un nivel de confianza de $1 - \alpha$. Recoramos que $z_{\alpha}$ indica el numero real tal que $P(Z > z_{\alpha}) = \alpha$. Ademas sabemos que:
+Queremos determinar un intervalo que contenga al parámetro $\theta$ con un nivel de confianza de $1 - \alpha$. Recordamos que $z_{\alpha}$ indica el numero real tal que $P(Z > z_{\alpha}) = \alpha$. Ademas sabemos que:
 $$
 \frac{\overline{X}(n) - \theta}{\sigma/\sqrt{n}} \sim N(0,1)
 $$
@@ -132,7 +132,7 @@ Cuando $\sigma$ es desconocido se reemplaza utilizando el estimador $\hat{\sigma
 
 La longitud del intervalo esta dada por: 
 $$
-l = 2z_{\alpha/2} \frac{\sigma}{\sqrt{n}} \quad \text{o} \quad l = 2z_{\alpha/2} \frac{S(n)}{\sqrt{n}}
+l = 2\cdot z_{\alpha/2} \frac{\sigma}{\sqrt{n}} \quad \text{o} \quad l = 2z_{\alpha/2} \frac{S(n)}{\sqrt{n}}
 $$
 Por lo que si quiero generar un intervalo con menor longitud que L. Generare hasta un n tal que:
 $$

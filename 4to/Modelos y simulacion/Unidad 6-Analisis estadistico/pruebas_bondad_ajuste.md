@@ -25,7 +25,7 @@ $$
 
 #### Simulación del p-valor
 
-Una forma de ayudar a mejorar la precision del t-valor, es simular **nuevas** muestras de tamaño $n$ a partir de la muestra **inicial**. Y para cada una de estas nuevas muestras, calcular el estadistico T. Luego la proporción de valores de T que exceden al valor $T = t_0$ tomado en la muestra original es una buena estimación del p-valor.
+Una forma de ayudar a mejorar la precision del p-valor, es simular **nuevas** muestras de tamaño $n$ a partir de la muestra **inicial**. Y para cada una de estas nuevas muestras, calcular el estadistico T. Luego la proporción de valores de T que exceden al valor $T = t_0$ tomado en la muestra original es una buena estimación del p-valor.
 
 Teniendo los $p_i$ correspondientes se generan directamente los valores de las frecuencias $N_1, N_2, \cdots, N_k$ y se calcula el estadistico T.
 
@@ -45,7 +45,7 @@ Suponemos que los datos $Y_1, Y_2, \dots, Y_n$ provienen de una distribucion F y
 
 A partir de la muestra estimamos los parametros de F, y calculamos la probabilidad $\hat{p_i}$ para cada valor de i de la variable aleatoria (o agrupamiento). Y calculamos el estadistico y obtenemos $t_0$.
 
-En cada simulación, generamos $n$ datos nuevos a partir de la distribución $\hat{F}$. Luego con estos nuevos datos, **volvemos** a estimar los parametros y a **recalcular** las probabilidades $\hat{p_i}(sim)$ y el nuevo estadistico $T(sim)$.
+En cada simulación, generamos $n$ datos nuevos a partir de la distribución $\hat{F}$(Los datos seran generados siempre a partir de la misma distribución utilizando los parametros calculados a partir de la muestra). Luego con estos nuevos datos, **volvemos** a estimar los parametros y a **recalcular** las probabilidades $\hat{p_i}(sim)$ y el nuevo estadistico $T(sim)$.
 
 Luego el p-valor es la proporción de valores de $T(sim)$ que exceden a $t_0$.
 
@@ -85,3 +85,20 @@ $$
 Para estimar el p-valor a través de simulaciones es suficiente con generar muestras de tamaño n de variables uniformes en (0,1) y calcular la proporcion de valores de $d_i$ que exceden a $d$.
 
 ### Parametros no especificados
+
+Si queremos testear que las observaciones $Y_1, Y_2, \cdots, Y_n$ provienen de una distribución F con parametros desconocidos, entonces se procede de la siguiente forma:
+
+Estimamos los parametros $\theta_1, \theta_2, \dots, \theta_n$ y calculamos el esadistico de Kolmogorov-Smirnov como:
+
+$$
+D = \sup_{x\in \mathbb{R}} |F_e(x) - F_{\hat{\theta}}(x)| \\
+= \max_{1 \leq j \leq n} \left\{ \frac{j}{n} - F(Y_{(j)}), F(Y_{(j)}) - \frac{j-1}{n} \right\}
+$$
+
+Luego se puede seguir estimando el p-valor a través de simulaciones con las muestras generadas de variables uniformes como en el caso de los parametros especificados.
+
+En el caso de que el p-valor simulado resultara en el area de rechazo (< 0.05) por ejemplo.Es conveniente realizar una simulacion más certera.
+
+1. Se generan $N$ simulaciones de muestras de tamaño $n$, generadas a partir de $F_{\hat{\theta}}$
+2. Para cada muestra, volvemos a estimar los parametros y calculamos nuevamente el estadistico $d_sim$. Pero utilizando la distribución $F_{\hat{\theta}}$ (que utiliza y siempre utilizamos los parametros estimados a partir de la muestra original).
+3. La proporcion de valores $d_{sim}$ que superen el valor $d$ de la muestra original será la estimación del p-valor.
