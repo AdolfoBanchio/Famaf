@@ -1,0 +1,3082 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\begin_preamble
+\setcounter{MaxMatrixCols}{30}%
+\usepackage{amsfonts}\usepackage{graphicx}
+%TCIDATA{OutputFilter=latex2.dll}
+%TCIDATA{Version=5.50.0.2953}
+%TCIDATA{CSTFile=LaTeX article (bright).cst}
+%TCIDATA{Created=Thursday, March 08, 2007 06:44:18}
+%TCIDATA{LastRevised=Sunday, May 26, 2024 18:05:46}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
+%TCIDATA{BibliographyScheme=BibTeX}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="Standard LaTeX\Blank - Standard LaTeX Article">}
+%TCIDATA{Language=American English}
+%TCIDATA{ComputeDefs=
+%$\varepsilon$
+%$F_{V(\mathbf{A})}(x_{1},...,x_{n})=\{t_{1},...,t_{k}\}$
+%}
+%BeginMSIPreambleData
+\providecommand{\U}[1]{\protect\rule{.1in}{.1in}}
+%EndMSIPreambleData
+\newtheorem{theorem}{Theorem}\newtheorem{acknowledgement}[theorem]{Acknowledgement}\newtheorem{algorithm}[theorem]{Algorithm}\newtheorem{axiom}[theorem]{Axiom}\newtheorem{case}[theorem]{Case}\newtheorem{claim}[theorem]{Claim}\newtheorem{conclusion}[theorem]{Conclusion}\newtheorem{condition}[theorem]{Condition}\newtheorem{conjecture}[theorem]{Conjecture}\newtheorem{corollary}[theorem]{Corollary}\newtheorem{criterion}[theorem]{Criterion}\newtheorem{definition}[theorem]{Definition}\newtheorem{example}[theorem]{Example}\newtheorem{exercise}[theorem]{Exercise}\newtheorem{lemma}[theorem]{Lemma}\newtheorem{notation}[theorem]{Notation}\newtheorem{problem}[theorem]{Problem}\newtheorem{proposition}[theorem]{Proposition}\newtheorem{remark}[theorem]{Remark}\newtheorem{solution}[theorem]{Solution}\newtheorem{summary}[theorem]{Summary}\newenvironment{proof}[1][Proof]{\noindent\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+\end_preamble
+\use_default_options false
+\maintain_unincluded_children false
+\language english
+\language_package none
+\inputencoding auto
+\fontencoding default
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 2
+\use_package amssymb 2
+\use_package cancel 0
+\use_package esint 1
+\use_package mathdots 0
+\use_package mathtools 0
+\use_package mhchem 0
+\use_package stackrel 0
+\use_package stmaryrd 0
+\use_package undertilde 0
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+Nota: Los ejercicios que tienen (S) son para una 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+"
+\end_layout
+
+\end_inset
+
+Segunda vuelta
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+"
+\end_layout
+
+\end_inset
+
+ es decir conviene hacerlos una vez que ya se completó la guía haciendo
+ los otros y ya se tiene mas madurez e intuición basica sobre los conceptos.
+ Los que tienen (O) son opcionales por lo cual no se toman en los examenes.
+\end_layout
+
+\begin_layout Section*
+Algunos resultados basicos presentados en paradigma recursivo
+\end_layout
+
+\begin_layout Standard
+En esta guia presentaremos varios resultados basicos de computabilidad,
+ expresados en el paradigma recursivo, ya que es el mas habitual y comodo.
+ Varios de estos resultados pueden ser establecidos y probados en forma
+ natural dentro del paradigma de la computabilidad efectiva (ver apunte).
+ A ellos los enunciaremos dentro del paradigma de Godel y los probaremos
+ rigurosamente usando la teoria desarrollada hasta ahora.
+ Sin envargo, veremos que hay otros resultados que son dependientes del
+ desarrollo matematico hecho y aportan nueva informacion al paradigma filosofico
+ (la indecidibilidad del halting problem, por ejemplo).
+\end_layout
+
+\begin_layout Standard
+Como veremos muchas de las pruebas seran de naturaleza imperativa basadas
+ en la equivalencia del paradigma de Godel con el imperativo de Neumann.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+Lema de division por casos para funciones 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-recursivas
+\end_layout
+
+\begin_layout Standard
+Usando los resultados probados en las dos anteriores batallas entre los
+ paradigmas de Godel y Neumann podemos probar el siguiente resultado el
+ cual a priori no parese facil de probar si nos quedamos solo en el contexto
+ del paradigma Godeliano.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{lemma}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "dpc1"
+
+\end_inset
+
+Supongamos 
+\begin_inset Formula $f_{i}:D_{f_{i}}\subseteq\omega^{n}\times\Sigma^{\ast m}\rightarrow O$
+\end_inset
+
+, 
+\begin_inset Formula $i=1,...,k$
+\end_inset
+
+, son funciones 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-recursivas tales que 
+\begin_inset Formula $D_{f_{i}}\cap D_{f_{j}}=\emptyset$
+\end_inset
+
+ para 
+\begin_inset Formula $i\neq j$
+\end_inset
+
+.
+ Entonces la funcion 
+\begin_inset Formula $f_{1}\cup...\cup f_{k}$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-recursiva.
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{lemma}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{proof}
+\end_layout
+
+\end_inset
+
+ Probaremos el caso 
+\begin_inset Formula $k=2$
+\end_inset
+
+ y 
+\begin_inset Formula $O=\Sigma^{\ast}$
+\end_inset
+
+.
+ Ademas supondremos que 
+\begin_inset Formula $n=m=1$
+\end_inset
+
+.
+ Sean 
+\begin_inset Formula $\mathcal{P}_{1}$
+\end_inset
+
+ y 
+\begin_inset Formula $\mathcal{P}_{2}$
+\end_inset
+
+ programas que computen las funciones 
+\begin_inset Formula $f_{1}$
+\end_inset
+
+ y 
+\begin_inset Formula $f_{2}$
+\end_inset
+
+, respectivamente.
+ Para 
+\begin_inset Formula $i=1,2$
+\end_inset
+
+, definamos
+\begin_inset Formula 
+\[
+H_{i}=\lambda tx_{1}\alpha_{1}\left[Halt^{1,1}(t,x_{1},\alpha_{1},\mathcal{P}_{i})\right]
+\]
+
+\end_inset
+
+Notar que 
+\begin_inset Formula $D_{H_{i}}=\omega^{2}\times\Sigma^{\ast}$
+\end_inset
+
+ y que 
+\begin_inset Formula $H_{i}$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-mixta.
+ Ademas sabemos que la funcion 
+\begin_inset Formula $Halt^{1,1}$
+\end_inset
+
+ es 
+\begin_inset Formula $(\Sigma\cup\Sigma_{p})$
+\end_inset
+
+-p.r.
+ por lo cual resulta facilmente que 
+\begin_inset Formula $H_{i}$
+\end_inset
+
+ es 
+\begin_inset Formula $(\Sigma\cup\Sigma_{p})$
+\end_inset
+
+-p.r..
+ Por el Teorema de Independencia del Alfabeto tenemos que 
+\begin_inset Formula $H_{i}$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-p.r..
+ Entonces 
+\begin_inset Formula $H_{i}$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-computable por lo cual tenemos que hay un macro:
+\begin_inset Formula 
+\[
+\left[\mathrm{IF}\;H_{i}(\mathrm{V}1,\mathrm{V}2,\mathrm{W}1)\;\mathrm{GOTO}\;\mathrm{A}1\right]
+\]
+
+\end_inset
+
+Para hacer mas intuitivo el uso de este macro lo escribiremos de la siguiente
+ manera
+\begin_inset Formula 
+\[
+\left[\mathrm{IF}\;Halt^{1,1}(\mathrm{V}1,\mathrm{V}2,\mathrm{W}1,\mathcal{P}_{i})\;\mathrm{GOTO}\;\mathrm{A}1\right]
+\]
+
+\end_inset
+
+Ya que cada 
+\begin_inset Formula $f_{i}$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-recursiva, hay macros
+\begin_inset Formula 
+\begin{align*}
+ & \left[\mathrm{W}2\leftarrow f_{1}(\mathrm{V}1,\mathrm{W}1)\right]\\
+ & \left[\mathrm{W}2\leftarrow f_{2}(\mathrm{V}1,\mathrm{W}1)\right]
+\end{align*}
+
+\end_inset
+
+Sea 
+\begin_inset Formula $\mathcal{P}$
+\end_inset
+
+ el siguiente programa:
+\begin_inset Formula 
+\[
+\begin{array}{l}
+\mathrm{L}1\ \mathrm{N}20\leftarrow\mathrm{N}20+1\\
+\ \ \ \ \ \ \left[\mathrm{IF}\;Halt^{1,1}(\mathrm{N}20,\mathrm{N}1,\mathrm{P}1,\mathcal{P}_{1})\;\mathrm{GOTO}\;\mathrm{L}2\right]\\
+\ \ \ \ \ \ \left[\mathrm{IF}\;Halt^{1,1}(\mathrm{N}20,\mathrm{N}1,\mathrm{P}1,\mathcal{P}_{2})\;\mathrm{GOTO}\;\mathrm{L}3\right]\\
+\ \ \ \ \ \ \mathrm{GOTO}\;\mathrm{L}1\\
+\mathrm{L}2\ \left[\mathrm{P}1\leftarrow f_{1}(\mathrm{N}1,\mathrm{P}1)\right]\\
+\ \ \ \ \ \ \mathrm{GOTO}\;\mathrm{L}4\\
+\mathrm{L}3\ \left[\mathrm{P}1\leftarrow f_{2}(\mathrm{N}1,\mathrm{P}1)\right]\\
+\mathrm{L}4\ \mathrm{SKIP}
+\end{array}
+\]
+
+\end_inset
+
+Notese que 
+\begin_inset Formula $\mathcal{P}$
+\end_inset
+
+ computa la funcion 
+\begin_inset Formula $f_{1}\cup f_{2}$
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{proof}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+Ejercicio 1:
+\end_layout
+
+\end_inset
+
+Si 
+\begin_inset Formula $P:D_{P}\subseteq\omega\times\omega^{n}\times\Sigma^{\ast m}\rightarrow\omega$
+\end_inset
+
+ es un predicado 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-recursivo y 
+\begin_inset Formula $D_{P}$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-recursivo, entonces la funcion 
+\begin_inset Formula $M(P)$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-recursiva.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+Lema de restriccion de funciones 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-recursivas
+\end_layout
+
+\begin_layout Standard
+Nos sera util tambien el siguiente resultado.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{lemma}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "restriccion"
+
+\end_inset
+
+Supongamos 
+\begin_inset Formula $f:D_{f}\subseteq\omega^{n}\times\Sigma^{\ast m}\rightarrow O$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-recursiva y 
+\begin_inset Formula $S\subseteq D_{f}$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-r.e., entonces 
+\begin_inset Formula $f|_{S}$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-recursiva.
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{lemma}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{proof}
+\end_layout
+
+\end_inset
+
+ Si 
+\begin_inset Formula $S=\emptyset$
+\end_inset
+
+, entonces 
+\begin_inset Formula $f|_{S}=\emptyset$
+\end_inset
+
+ y por lo tanto 
+\begin_inset Formula $f|_{S}$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-recursiva.
+ Supongamos 
+\begin_inset Formula $S\neq\emptyset$
+\end_inset
+
+.
+ Haremos el caso 
+\begin_inset Formula $n=m=1$
+\end_inset
+
+ y 
+\begin_inset Formula $O=\Sigma^{\ast}$
+\end_inset
+
+.
+ Tenemos que hay una 
+\begin_inset Formula $F:\omega\rightarrow\omega\times\Sigma^{\ast}$
+\end_inset
+
+ tal que 
+\begin_inset Formula $\operatorname{Im}F=S$
+\end_inset
+
+ y 
+\begin_inset Formula $F_{(1)}$
+\end_inset
+
+, 
+\begin_inset Formula $F_{(2)}$
+\end_inset
+
+ son 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-recursivas.
+ Ya que 
+\begin_inset Formula $f$
+\end_inset
+
+, 
+\begin_inset Formula $F_{(1)}$
+\end_inset
+
+ y 
+\begin_inset Formula $F_{(2)}$
+\end_inset
+
+ son 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-computables, hay macros
+\begin_inset Formula 
+\begin{align*}
+ & \left[\mathrm{W}2\leftarrow f(\mathrm{V}1,\mathrm{W}1)\right]\\
+ & \left[\mathrm{V}2\leftarrow F_{(1)}(\mathrm{V}1)\right]\\
+ & \left[\mathrm{W}1\leftarrow F_{(2)}(\mathrm{V}1)\right]
+\end{align*}
+
+\end_inset
+
+Ya que los predicados 
+\begin_inset Formula $D=\lambda xy[x\neq y]$
+\end_inset
+
+ y 
+\begin_inset Formula $D^{\prime}=\lambda\alpha\beta\lbrack\alpha\neq\beta]$
+\end_inset
+
+ son 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-p.r., tenemos que son 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-computables, por lo cual hay macros
+\begin_inset Formula 
+\begin{align*}
+ & \left[\mathrm{IF}\;D(\mathrm{V}1,\mathrm{V}2)\;\mathrm{GOTO}\;\mathrm{A}1\right]\\
+ & \left[\mathrm{IF}\;D^{\prime}(\mathrm{W}1,\mathrm{W}2)\;\mathrm{GOTO}\;\mathrm{A}1\right]
+\end{align*}
+
+\end_inset
+
+Para para hacer mas amigable la lectura los escribieremos de la siguiente
+ manera
+\begin_inset Formula 
+\begin{align*}
+ & \left[\mathrm{IF}\;\mathrm{V}1\neq\mathrm{V}2\;\mathrm{GOTO}\;\mathrm{A}1\right]\\
+ & \left[\mathrm{IF}\;\mathrm{W}1\neq\mathrm{W}2\;\mathrm{GOTO}\;\mathrm{A}1\right]
+\end{align*}
+
+\end_inset
+
+Sea 
+\begin_inset Formula $\mathcal{P}$
+\end_inset
+
+ el siguiente programa
+\begin_inset Formula 
+\[
+\begin{array}{ll}
+\mathrm{L}2 & [\mathrm{N}2\leftarrow F_{(1)}(\mathrm{N}20)]\\
+ & [\mathrm{P}2\leftarrow F_{(2)}(\mathrm{N}20)]\\
+ & \left[\mathrm{IF}\;\mathrm{N}1\neq\mathrm{N}2\;\mathrm{GOTO}\;\mathrm{L}1\right]\\
+ & \left[\mathrm{IF}\;\mathrm{P}1\neq\mathrm{P}2\;\mathrm{GOTO}\;\mathrm{L}1\right]\\
+ & \left[\mathrm{P}1\leftarrow f(\mathrm{N}1,\mathrm{P}1)\right]\\
+ & \mathrm{GOTO}\;\mathrm{L}3\\
+\mathrm{L}1 & \mathrm{N}20\leftarrow\mathrm{N}20+1\\
+ & \mathrm{GOTO}\;\mathrm{L}2\\
+\mathrm{L}3 & \mathrm{SKIP}
+\end{array}
+\]
+
+\end_inset
+
+Es facil ver que 
+\begin_inset Formula $\mathcal{P}$
+\end_inset
+
+ computa a 
+\begin_inset Formula $f|_{S}$
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{proof}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+Conjuntos 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-r.e.
+ y 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-r.
+\end_layout
+
+\begin_layout Standard
+Daremos primero algunas propiedades basicas de los conjuntos 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-r.e.
+ y 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-r.
+ El siguiente resultado puede probarse facilmente dentro del paradigma Godeliano
+ y lo dejamos como ejercicio.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+
+\series bold
+Ejercicio 1,5:
+\end_layout
+
+\end_inset
+
+Sea 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+ un alfabeto finito.
+ Supongamos 
+\begin_inset Formula $S_{1},S_{2}\subseteq\omega^{n}\times\Sigma^{\ast m}$
+\end_inset
+
+ son conjuntos 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-recursivos.
+ Entonces 
+\begin_inset Formula $S_{1}\cup S_{2}$
+\end_inset
+
+, 
+\begin_inset Formula $S_{1}\cap S_{2}$
+\end_inset
+
+ y 
+\begin_inset Formula $S_{1}-S_{2}$
+\end_inset
+
+ son 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-recursivos 
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{lemma}
+\end_layout
+
+\end_inset
+
+ Sea 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+ un alfabeto finito.
+ Se tiene que
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+(1)
+\end_layout
+
+\end_inset
+
+Supongamos 
+\begin_inset Formula $S_{1},S_{2}\subseteq\omega^{n}\times\Sigma^{\ast m}$
+\end_inset
+
+ son conjuntos 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-r.e..
+ Entonces 
+\begin_inset Formula $S_{1}\cup S_{2}$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-r.e.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+(2)
+\end_layout
+
+\end_inset
+
+Supongamos 
+\begin_inset Formula $S_{1},S_{2}\subseteq\omega^{n}\times\Sigma^{\ast m}$
+\end_inset
+
+ son conjuntos 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-r.e..
+ Entonces 
+\begin_inset Formula $S_{1}\cap S_{2}$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-r.e.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+(3)
+\end_layout
+
+\end_inset
+
+Sea 
+\begin_inset Formula $S\subseteq\omega^{n}\times\Sigma^{\ast m}$
+\end_inset
+
+.
+ Si 
+\begin_inset Formula $S$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-recursivo, entonces 
+\begin_inset Formula $S$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-recursivamente enumerable 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{lemma}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{proof}
+\end_layout
+
+\end_inset
+
+ Los tres resultados en su version imperativa fueron probados o dejados
+ como ejercicio en la Guia 8, por lo que podemos aplicar los teoremas que
+ nos dicen que los paradigmas recursivo e imperativo son equivalentes.
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{proof}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Tal como veremos mas adelante hay conjuntos 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-recursivamente enumerables los cuales no son 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-recursivos.
+ Sin envargo tenemos el siguiente interesante resultado.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{lemma}
+\end_layout
+
+\end_inset
+
+ Sea 
+\begin_inset Formula $S\subseteq\omega^{n}\times\Sigma^{\ast m}$
+\end_inset
+
+.
+ Si 
+\begin_inset Formula $S$
+\end_inset
+
+ y 
+\begin_inset Formula $(\omega^{n}\times\Sigma^{\ast m})-S$
+\end_inset
+
+ son 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-recursivamente enumerables, entonces 
+\begin_inset Formula $S$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-recursivo 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{lemma}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{proof}
+\end_layout
+
+\end_inset
+
+ (Prueba cheta) Por definicion, para probar que 
+\begin_inset Formula $S$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-recursivo deberemos probar que 
+\begin_inset Formula $\chi_{S}^{\omega^{n}\times\Sigma^{\ast m}}$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-recursiva.
+ Notese que 
+\begin_inset Formula $\chi_{S}^{\omega^{n}\times\Sigma^{\ast m}}=C_{1}^{n,m}$
+\end_inset
+
+
+\family roman
+
+\begin_inset Formula $|$
+\end_inset
+
+
+\family default
+
+\begin_inset Formula $_{S}\cup C_{0}^{n,m}$
+\end_inset
+
+
+\family roman
+
+\begin_inset Formula $|$
+\end_inset
+
+
+\family default
+
+\begin_inset Formula $_{(\omega^{n}\times\Sigma^{\ast m})-S}$
+\end_inset
+
+.
+ O sea que por el lema de division por casos, solo nos resta probar que
+ 
+\begin_inset Formula $C_{1}^{n,m}$
+\end_inset
+
+
+\family roman
+
+\begin_inset Formula $|$
+\end_inset
+
+
+\family default
+
+\begin_inset Formula $_{S}$
+\end_inset
+
+ y 
+\begin_inset Formula $C_{0}^{n,m}$
+\end_inset
+
+
+\family roman
+
+\begin_inset Formula $|$
+\end_inset
+
+
+\family default
+
+\begin_inset Formula $_{(\omega^{n}\times\Sigma^{\ast m})-S}$
+\end_inset
+
+ son 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-recursivas.
+ Pero esto se desprende directamente del Lema 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "restriccion"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ ya que 
+\begin_inset Formula $C_{1}^{n,m}$
+\end_inset
+
+ y 
+\begin_inset Formula $C_{0}^{n,m}$
+\end_inset
+
+ son 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-recursivas y por hipotesis 
+\begin_inset Formula $S$
+\end_inset
+
+ y 
+\begin_inset Formula $(\omega^{n}\times\Sigma^{\ast m})-S$
+\end_inset
+
+ son 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-recursivamente enumerables.
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{proof}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+Ejercicio 2:
+\end_layout
+
+\end_inset
+
+(Prueba intuitiva) Dar una prueba imperativa del lema anterior.
+ Hint: inspirese en su analogo dentro del paradigma de la computabilidad
+ efectiva, dado al final de la Guia 3.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+El siguiente teorema es muy importante ya que caracteriza a los conjuntos
+ 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-r.e.
+ Solo se tomara la prueba de la implicacion (2)
+\begin_inset Formula $\Rightarrow$
+\end_inset
+
+(3) aunque dejamos su prueba completa para el lector interesado.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{theorem}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "equivalencias-r.e."
+
+\end_inset
+
+Dado 
+\begin_inset Formula $S\subseteq\omega^{n}\times\Sigma^{\ast m}$
+\end_inset
+
+, son equivalentes
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+(1)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $S$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-recursivamente enumerable
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+(2)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $S=I_{F}$
+\end_inset
+
+, para alguna 
+\begin_inset Formula $F:D_{F}\subseteq\omega^{k}\times\Sigma^{\ast l}\rightarrow\omega^{n}\times\Sigma^{\ast m}$
+\end_inset
+
+ tal que cada 
+\begin_inset Formula $F_{(i)}$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-recursiva.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+(3)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $S=D_{f}$
+\end_inset
+
+, para alguna funcion 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-recursiva 
+\begin_inset Formula $f$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+(4)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $S=\emptyset$
+\end_inset
+
+ o 
+\begin_inset Formula $S=I_{F}$
+\end_inset
+
+, para alguna 
+\begin_inset Formula $F:\omega\rightarrow\omega^{n}\times\Sigma^{\ast m}$
+\end_inset
+
+ tal que cada 
+\begin_inset Formula $F_{(i)}$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-p.r.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{theorem}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{proof}
+\end_layout
+
+\end_inset
+
+ El caso 
+\begin_inset Formula $n=m=0$
+\end_inset
+
+ es facil y es dejado al lector.
+ Supongamos entonces que 
+\begin_inset Formula $n+m\geq1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+(2)
+\begin_inset Formula $\Rightarrow$
+\end_inset
+
+(3).
+ Haremos el caso 
+\begin_inset Formula $k=l=1$
+\end_inset
+
+ y 
+\begin_inset Formula $n=m=2$
+\end_inset
+
+.
+ El caso general es completamente analogo.
+ Notese que entonces tenemos que 
+\begin_inset Formula $S\subseteq\omega^{2}\times\Sigma^{\ast2}$
+\end_inset
+
+ y 
+\begin_inset Formula $F:D_{F}\subseteq\omega\times\Sigma^{\ast}\rightarrow\omega^{2}\times\Sigma^{\ast2}$
+\end_inset
+
+ es tal que 
+\begin_inset Formula $\operatorname{Im}F=S$
+\end_inset
+
+ y 
+\begin_inset Formula $F_{(1)}$
+\end_inset
+
+, 
+\begin_inset Formula $F_{(2)}$
+\end_inset
+
+, 
+\begin_inset Formula $F_{(3)}$
+\end_inset
+
+, 
+\begin_inset Formula $F_{(4)}$
+\end_inset
+
+ son 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-recursivas.
+ Para cada 
+\begin_inset Formula $i\in\{1,2,3,4\}$
+\end_inset
+
+, sea 
+\begin_inset Formula $\mathcal{P}_{i}$
+\end_inset
+
+ un programa el cual computa a 
+\begin_inset Formula $F_{(i)}$
+\end_inset
+
+.
+ Sea 
+\begin_inset Formula $\leq$
+\end_inset
+
+ un orden total sobre 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+.
+ Definamos
+\begin_inset Formula 
+\[
+H_{i}=\lambda tx_{1}\alpha_{1}\left[\lnot Halt^{1,1}(t,x_{1},\alpha_{1},\mathcal{P}_{i})\right]
+\]
+
+\end_inset
+
+Notar que 
+\begin_inset Formula $D_{H_{i}}=\omega^{2}\times\Sigma^{\ast}$
+\end_inset
+
+ y que 
+\begin_inset Formula $H_{i}$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-mixta.
+ Ademas sabemos que la funcion 
+\begin_inset Formula $Halt^{1,1}$
+\end_inset
+
+ es 
+\begin_inset Formula $(\Sigma\cup\Sigma_{p})$
+\end_inset
+
+-p.r.
+ por lo cual resulta facilmente que 
+\begin_inset Formula $H_{i}$
+\end_inset
+
+ es 
+\begin_inset Formula $(\Sigma\cup\Sigma_{p})$
+\end_inset
+
+-p.r..
+ Por la Proposicion de Independencia del Alfabeto tenemos que 
+\begin_inset Formula $H_{i}$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-p.r..
+ Entonces 
+\begin_inset Formula $H_{i}$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-computable por lo cual tenemos que hay un macro:
+\begin_inset Formula 
+\[
+\left[\mathrm{IF}\;H_{i}(\mathrm{V}2,\mathrm{V}1,\mathrm{W}1)\;\mathrm{GOTO}\;\mathrm{A}1\right]
+\]
+
+\end_inset
+
+Para hacer mas intuitivo el uso de este macro lo escribiremos de la siguiente
+ manera
+\begin_inset Formula 
+\[
+\left[\mathrm{IF}\;\lnot Halt^{1,1}(\mathrm{V}2,\mathrm{V}1,\mathrm{W}1,\mathcal{P}_{i})\;\mathrm{GOTO}\;\mathrm{A}1\right]
+\]
+
+\end_inset
+
+Para 
+\begin_inset Formula $i=1,2$
+\end_inset
+
+, definamos
+\begin_inset Formula 
+\[
+E_{i}=\lambda xtx_{1}\alpha_{1}\left[x\neq E_{\#1}^{1,1}(t,x_{1},\alpha_{1},\mathcal{P}_{i})\right]
+\]
+
+\end_inset
+
+Para 
+\begin_inset Formula $i=3,4$
+\end_inset
+
+, definamos
+\begin_inset Formula 
+\[
+E_{i}=\lambda tx_{1}\alpha_{1}\alpha\left[\alpha\neq E_{\ast1}^{1,1}(t,x_{1},\alpha_{1},\mathcal{P}_{i})\right]
+\]
+
+\end_inset
+
+Dejamos al lector probar que las funciones 
+\begin_inset Formula $E_{i}$
+\end_inset
+
+ son 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-p.r..
+ O sea que son 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-computables por lo cual para cada 
+\begin_inset Formula $i\in\{1,2\}$
+\end_inset
+
+ hay un macro
+\begin_inset Formula 
+\[
+\left[\mathrm{IF}\;E_{i}(\mathrm{V}2,\mathrm{V}3,\mathrm{V}1,\mathrm{W}1)\;\mathrm{GOTO}\;\mathrm{A}1\right]
+\]
+
+\end_inset
+
+y para cada 
+\begin_inset Formula $i\in\{3,4\}$
+\end_inset
+
+ hay un macro
+\begin_inset Formula 
+\[
+\left[\mathrm{IF}\;E_{i}(\mathrm{V}2,\mathrm{V}1,\mathrm{W}1,\mathrm{W}2)\;\mathrm{GOTO}\;\mathrm{A}1\right]
+\]
+
+\end_inset
+
+Haremos mas intuitiva la forma de escribir estos macros, por ejemplo para
+ 
+\begin_inset Formula $i=1$
+\end_inset
+
+, lo escribiremos de la siguiente manera
+\begin_inset Formula 
+\[
+\left[\mathrm{IF}\;\mathrm{V}2\neq E_{\#1}^{1,1}(\mathrm{V}3,\mathrm{V}1,\mathrm{W}1,\mathcal{P}_{1})\;\mathrm{GOTO}\;\mathrm{A}1\right]
+\]
+
+\end_inset
+
+Ya que la funcion 
+\begin_inset Formula $f=\lambda x[(x)_{1}]$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-p.r., ella es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-computable por lo cual hay un macro
+\begin_inset Formula 
+\[
+\lbrack\mathrm{V}2\leftarrow f(\mathrm{V}1)]
+\]
+
+\end_inset
+
+el cual escribiremos de la siguiente manera:
+\begin_inset Formula 
+\[
+\lbrack\mathrm{V}2\leftarrow(\mathrm{V}1)_{1}]
+\]
+
+\end_inset
+
+Similarmente hay macros:
+\begin_inset Formula 
+\[
+\lbrack\mathrm{W}1\leftarrow\ast^{\leq}(\mathrm{V}1)_{3}]
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\lbrack\mathrm{V}2\leftarrow(\mathrm{V}1)_{2}]
+\]
+
+\end_inset
+
+(dejamos al lector entender bien el funcionamiento de estos macros).
+ Sea 
+\begin_inset Formula $\mathcal{P}$
+\end_inset
+
+ el siguiente programa de 
+\begin_inset Formula $\mathcal{S}^{\Sigma}$
+\end_inset
+
+:
+\begin_inset Formula 
+\[
+\begin{array}{l}
+\mathrm{L}1\ \mathrm{N}20\leftarrow\mathrm{N}20+1\\
+\lbrack\mathrm{N}10\leftarrow(\mathrm{N}20)_{1}]\\
+\lbrack\mathrm{N}3\leftarrow(\mathrm{N}20)_{2}]\\
+\lbrack\mathrm{P}3\leftarrow\ast^{\leq}(\mathrm{N}20)_{3}]\\
+\left[\mathrm{IF}\;\lnot Halt^{1,1}(\mathrm{N}10,\mathrm{N}3,\mathrm{P}3,\mathcal{P}_{1})\;\mathrm{GOTO}\;\mathrm{L}1\right]\\
+\left[\mathrm{IF}\;\lnot Halt^{1,1}(\mathrm{N}10,\mathrm{N}3,\mathrm{P}3,\mathcal{P}_{2})\;\mathrm{GOTO}\;\mathrm{L}1\right]\\
+\left[\mathrm{IF}\;\lnot Halt^{1,1}(\mathrm{N}10,\mathrm{N}3,\mathrm{P}3,\mathcal{P}_{3})\;\mathrm{GOTO}\;\mathrm{L}1\right]\\
+\left[\mathrm{IF}\;\lnot Halt^{1,1}(\mathrm{N}10,\mathrm{N}3,\mathrm{P}3,\mathcal{P}_{4})\;\mathrm{GOTO}\;\mathrm{L}1\right]\\
+\left[\mathrm{IF}\;\mathrm{N}1\neq E_{\#1}^{1,1}(\mathrm{N}10,\mathrm{N}3,\mathrm{P}3,\mathcal{P}_{1})\;\mathrm{GOTO}\;\mathrm{L}1\right]\\
+\left[\mathrm{IF}\;\mathrm{N}2\neq E_{\#1}^{1,1}(\mathrm{N}10,\mathrm{N}3,\mathrm{P}3,\mathcal{P}_{2})\;\mathrm{GOTO}\;\mathrm{L}1\right]\\
+\left[\mathrm{IF}\;\mathrm{P}1\neq E_{\ast1}^{1,1}(\mathrm{N}10,\mathrm{N}3,\mathrm{P}3,\mathcal{P}_{3})\;\mathrm{GOTO}\;\mathrm{L}1\right]\\
+\left[\mathrm{IF}\;\mathrm{P}2\neq E_{\ast1}^{1,1}(\mathrm{N}10,\mathrm{N}3,\mathrm{P}3,\mathcal{P}_{4})\;\mathrm{GOTO}\;\mathrm{L}1\right]
+\end{array}
+\]
+
+\end_inset
+
+Dejamos al lector la tarea de comprender el funcionamiento de este programa
+ y convenserse de que computa la funcion 
+\begin_inset Formula $p_{1}^{2,2}|_{S}$
+\end_inset
+
+.
+ Pero entonces 
+\begin_inset Formula $p_{1}^{2,2}|_{S}$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-computable por lo cual es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-recursiva, lo cual prueba (3) ya que 
+\begin_inset Formula $Dom(p_{1}^{2,2}|_{S})=S$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+(3)
+\begin_inset Formula $\Rightarrow$
+\end_inset
+
+(4).
+ Supongamos 
+\begin_inset Formula $S\neq\emptyset$
+\end_inset
+
+.
+ Sea 
+\begin_inset Formula $(z_{1},...,z_{n},\gamma_{1},...,\gamma_{m})\in S$
+\end_inset
+
+ fijo.
+ Sea 
+\begin_inset Formula $\mathcal{P}$
+\end_inset
+
+ un programa el cual compute a 
+\begin_inset Formula $f$
+\end_inset
+
+ y Sea 
+\begin_inset Formula $\leq$
+\end_inset
+
+ un orden total sobre 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+.
+ Sea 
+\begin_inset Formula $P:\mathbf{N}\rightarrow\omega$
+\end_inset
+
+ dado por 
+\begin_inset Formula $P(x)=1$
+\end_inset
+
+ sii
+\begin_inset Formula 
+\[
+Halt^{n,m}\left((x)_{n+m+1},(x)_{1},...,(x)_{n},\ast^{\leq}((x)_{n+1}),...,\ast^{\leq}((x)_{n+m})),\mathcal{P}\right)=1
+\]
+
+\end_inset
+
+Es facil ver que 
+\begin_inset Formula $P$
+\end_inset
+
+ es 
+\begin_inset Formula $(\Sigma\cup\Sigma_{p})$
+\end_inset
+
+-p.r.
+ por lo cual es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-p.r..
+ Sea 
+\begin_inset Formula $\bar{P}=P\cup C_{0}^{1,0}|_{\{0\}}$
+\end_inset
+
+.
+ Para 
+\begin_inset Formula $i=1,...,n$
+\end_inset
+
+, definamos 
+\begin_inset Formula $F_{i}:\omega\rightarrow\omega$
+\end_inset
+
+ de la siguiente manera
+\begin_inset Formula 
+\[
+F_{i}(x)=\left\{ \begin{array}{ccc}
+(x)_{i} & \text{si} & \bar{P}(x)=1\\
+z_{i} & \text{si} & \bar{P}(x)\neq1
+\end{array}\right.
+\]
+
+\end_inset
+
+Para 
+\begin_inset Formula $i=n+1,...,n+m$
+\end_inset
+
+, definamos 
+\begin_inset Formula $F_{i}:\omega\rightarrow\Sigma^{\ast}$
+\end_inset
+
+ de la siguiente manera
+\begin_inset Formula 
+\[
+F_{i}(x)=\left\{ \begin{array}{lll}
+\ast^{\leq}((x)_{i}) & \text{si} & \bar{P}(x)=1\\
+\gamma_{i-n} & \text{si} & \bar{P}(x)\neq1
+\end{array}\right.
+\]
+
+\end_inset
+
+Por el lema de division por casos (para funciones 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-p.r.), cada 
+\begin_inset Formula $F_{i}$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-p.r..
+ Es facil ver que 
+\begin_inset Formula $F=[F_{1},...,F_{n+m}]$
+\end_inset
+
+ cumple (4).
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{proof}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+El halting problem y los conjuntos 
+\begin_inset Formula $A$
+\end_inset
+
+ y 
+\begin_inset Formula $N$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Cuando 
+\begin_inset Formula $\Sigma\supseteq\Sigma_{p}$
+\end_inset
+
+, podemos definir
+\begin_inset Formula 
+\[
+AutoHalt^{\Sigma}=\lambda\mathcal{P}\left[(\exists t\in\omega)\;Halt^{0,1}(t,\mathcal{P},\mathcal{P})\right]\text{.}
+\]
+
+\end_inset
+
+Notar que el dominio de 
+\begin_inset Formula $AutoHalt^{\Sigma}$
+\end_inset
+
+ es 
+\begin_inset Formula $\mathrm{Pro}^{\Sigma}$
+\end_inset
+
+ y que para cada 
+\begin_inset Formula $\mathcal{P}\in\mathrm{Pro}^{\Sigma}$
+\end_inset
+
+ tenemos que
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+(*)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $AutoHalt(\mathcal{P})=1$
+\end_inset
+
+ sii 
+\begin_inset Formula $\mathcal{P}$
+\end_inset
+
+ se detiene partiendo del estado 
+\begin_inset Formula $\left\Vert \mathcal{P}\right\Vert $
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{lemma}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "autohalt"
+
+\end_inset
+
+Supongamos 
+\begin_inset Formula $\Sigma\supseteq\Sigma_{p}$
+\end_inset
+
+.
+ Entonces 
+\begin_inset Formula $AutoHalt^{\Sigma}$
+\end_inset
+
+ no es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-recursivo.
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{lemma}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{proof}
+\end_layout
+
+\end_inset
+
+ Supongamos 
+\begin_inset Formula $AutoHalt^{\Sigma}$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-recursivo y por lo tanto 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-computable.
+ Por la proposicion de existencia de macros tenemos que hay un macro
+\begin_inset Formula 
+\[
+\left[\mathrm{IF}\;AutoHalt^{\Sigma}(\mathrm{W}1)\;\mathrm{GOTO}\;\mathrm{A}1\right]
+\]
+
+\end_inset
+
+Sea 
+\begin_inset Formula $\mathcal{P}_{0}$
+\end_inset
+
+ el siguiente programa de 
+\begin_inset Formula $\mathcal{S}^{\Sigma}$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\mathrm{L}1\;\left[\mathrm{IF}\;AutoHalt^{\Sigma}(\mathrm{P}1)\;\mathrm{GOTO}\;\mathrm{L}1\right]
+\]
+
+\end_inset
+
+Note que
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\mathcal{P}_{0}$
+\end_inset
+
+ termina partiendo desde 
+\begin_inset Formula $\left\Vert \mathcal{P}_{0}\right\Vert $
+\end_inset
+
+ sii 
+\begin_inset Formula $AutoHalt^{\Sigma}(\mathcal{P}_{0})=0$
+\end_inset
+
+, 
+\end_layout
+
+\begin_layout Standard
+\noindent
+lo cual produce una contradiccion si tomamos en (*) 
+\begin_inset Formula $\mathcal{P}=\mathcal{P}_{0}$
+\end_inset
+
+.
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{proof}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Usando el lema anterior y la Tesis de Church podemos probar el siguiente
+ impactante resultado.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{theorem}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "autohalt es no EC"
+
+\end_inset
+
+Supongamos 
+\begin_inset Formula $\Sigma\supseteq\Sigma_{p}$
+\end_inset
+
+.
+ Entonces 
+\begin_inset Formula $AutoHalt^{\Sigma}$
+\end_inset
+
+ no es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-efectivamente computable.
+ Es decir no hay ningun procedimiento efectivo que decida si un programa
+ de 
+\begin_inset Formula $\mathcal{S}^{\Sigma}$
+\end_inset
+
+ termina partiendo de si mismo.
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{theorem}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{proof}
+\end_layout
+
+\end_inset
+
+ Si 
+\begin_inset Formula $AutoHalt^{\Sigma}$
+\end_inset
+
+ fuera 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-efectivamente computable, la Tesis de Church nos diria que es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-recursivo, contradiciendo el lema anterior.
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{proof}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Notese que 
+\begin_inset Formula $AutoHalt^{\Sigma}$
+\end_inset
+
+ provee de un ejemplo natural en el cual la cuantificacion (no acotada)
+ de un predicado 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-p.r.
+ con dominio rectangular no es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-efectivamente computable
+\end_layout
+
+\begin_layout Standard
+Ahora estamos en condiciones de dar un ejemplo natural de un conjunto 
+\begin_inset Formula $A$
+\end_inset
+
+ que es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-recursivamente enumerable pero el cual no es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-recursivo.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{lemma}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "A es RE y no R"
+
+\end_inset
+
+Supongamos que 
+\begin_inset Formula $\Sigma\supseteq\Sigma_{p}$
+\end_inset
+
+.
+ Entonces
+\begin_inset Formula 
+\[
+A=\left\{ \mathcal{P}\in\mathrm{Pro}^{\Sigma}:AutoHalt^{\Sigma}(\mathcal{P})=1\right\} 
+\]
+
+\end_inset
+
+es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-r.e.
+ y no es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-recursivo.
+ Mas aun el conjunto
+\begin_inset Formula 
+\[
+N=\left\{ \mathcal{P}\in\mathrm{Pro}^{\Sigma}:AutoHalt^{\Sigma}(\mathcal{P})=0\right\} 
+\]
+
+\end_inset
+
+no es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-r.e.
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{lemma}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{proof}
+\end_layout
+
+\end_inset
+
+ Para ver que 
+\begin_inset Formula $A$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-r.e.
+ se lo puede hacer imperativamente dando un programa (usando macros) que
+ enumere a 
+\begin_inset Formula $A$
+\end_inset
+
+.
+ De esta forma probariamos que 
+\begin_inset Formula $A$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-enumerable y por lo tanto es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-r.e..
+ Daremos ahora una prueba no imperativa de este hecho, es decir mas propia
+ del paradigma funcional.
+ Sea 
+\begin_inset Formula $P=\lambda t\mathcal{P}\left[Halt^{0,1}(t,\mathcal{P},\mathcal{P})\right]$
+\end_inset
+
+.
+ Note que 
+\begin_inset Formula $P$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-p.r.
+ por lo que 
+\begin_inset Formula $M(P)$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-r..
+ Ademas note que 
+\begin_inset Formula $D_{M(P)}=A$
+\end_inset
+
+, lo cual implica que 
+\begin_inset Formula $A$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-r.e..
+\end_layout
+
+\begin_layout Standard
+Supongamos ahora que 
+\begin_inset Formula $N$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-r.e..
+ Entonces la funcion 
+\begin_inset Formula $C_{0}^{0,1}|_{N}$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-recursiva ya que 
+\begin_inset Formula $C_{0}^{0,1}$
+\end_inset
+
+ lo es.
+ Ademas ya que 
+\begin_inset Formula $A$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-r.e.
+ tenemos que 
+\begin_inset Formula $C_{1}^{0,1}|_{A}$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-recursiva.
+ Ya que
+\begin_inset Formula 
+\[
+AutoHalt^{\Sigma}=C_{1}^{0,1}|_{A}\cup C_{0}^{0,1}|_{N}
+\]
+
+\end_inset
+
+el lema de division por casos nos dice que 
+\begin_inset Formula $AutoHalt^{\Sigma}$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-recursivo, contradiciendo el Lema 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "autohalt"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ Esto prueba que 
+\begin_inset Formula $N$
+\end_inset
+
+ no es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-r.e..
+\end_layout
+
+\begin_layout Standard
+Finalmente supongamos 
+\begin_inset Formula $A$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-recursivo.
+ Entonces el conjunto
+\begin_inset Formula 
+\[
+N=\left(\Sigma^{\ast}-A\right)\cap\mathrm{Pro}^{\Sigma}
+\]
+
+\end_inset
+
+deberia serlo, lo cual es absurdo.
+ Hemos probado entonces que 
+\begin_inset Formula $A$
+\end_inset
+
+ no es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-recursivo.
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{proof}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Usando la Tesis de Church obtenemos el siguiente resultado.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{proposition}
+\end_layout
+
+\end_inset
+
+ Supongamos que 
+\begin_inset Formula $\Sigma\supseteq\Sigma_{p}.$
+\end_inset
+
+ Entonces 
+\begin_inset Formula $A$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-efectivamente enumerable y no es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-efectivamente computable.
+ El conjunto 
+\begin_inset Formula $N$
+\end_inset
+
+ no es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-efectivamente enumerable.
+ Es decir, 
+\begin_inset Formula $A$
+\end_inset
+
+ puede ser enumerado por un procedimiento efectivo pero no hay ningun procedimie
+nto efectivo que decida la pertenencia a 
+\begin_inset Formula $A$
+\end_inset
+
+ y no hay ningun procedimiento efectivo que enumere a 
+\begin_inset Formula $N$
+\end_inset
+
+.
+ Mas aun, si un procedimiento efectivo da como salida siempre elementos
+ de 
+\begin_inset Formula $N$
+\end_inset
+
+, entonces hay una cantidad infinita de elementos de 
+\begin_inset Formula $N$
+\end_inset
+
+ los cuales nunca da como salida 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{proposition}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+
+\series bold
+Ejercicio 3:
+\end_layout
+
+\end_inset
+
+(S) Justifique la ultima aseveracion en la proposicion anterior 
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Cabe destacar aqui que el dominio de una funcion 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-recursiva no siempre sera un conjunto 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-recursivo.
+ Por ejemplo si tomamos 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+ tal que 
+\begin_inset Formula $\Sigma\supseteq\Sigma_{p}$
+\end_inset
+
+, entonces 
+\begin_inset Formula $C_{1}^{0,1}|_{A}$
+\end_inset
+
+ es una funcion 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-recursiva ya que es la restriccion de la funcion 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-recursiva 
+\begin_inset Formula $C_{1}^{0,1}$
+\end_inset
+
+ al conjunto 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-r.e.
+ 
+\begin_inset Formula $A$
+\end_inset
+
+, pero 
+\begin_inset Formula $\mathrm{Dom}(C_{1}^{0,1}|_{A})=A$
+\end_inset
+
+ no es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-recursivo.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+
+\series bold
+Ejercicio 4:
+\end_layout
+
+\end_inset
+
+Pruebe que no es cierta la siguiente (hermosa y tentadora) propiedad
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+
+Si 
+\begin_inset Formula $f:S\subseteq\omega^{n}\times\Sigma^{\ast m}\rightarrow\omega$
+\end_inset
+
+ es una funcion 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+
+\shape italic
+-
+\shape default
+computable, entonces hay un macro
+\begin_inset Formula 
+\[
+\left[\mathrm{IF\ }\chi_{S}^{\omega^{n}\times\Sigma^{\ast m}}(\mathrm{V}1,...,\mathrm{V}\bar{n},\mathrm{W}1,...,\mathrm{W}\bar{m})\ \mathrm{GOTO\ A}1\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+
+\series bold
+Ejercicio 5:
+\end_layout
+
+\end_inset
+
+V o F o I.
+ justifique.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Sea 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+ un alfabeto y sean 
+\begin_inset Formula $n,m\in\omega$
+\end_inset
+
+.
+ Entonces el dominio de 
+\begin_inset Formula $T^{n,m}$
+\end_inset
+
+ es rectangular
+\end_layout
+
+\begin_layout Enumerate
+Para cada 
+\begin_inset Formula $\mathcal{P}\in\mathrm{Pro}^{\Sigma}$
+\end_inset
+
+ hay un 
+\begin_inset Formula $\mathcal{P}^{\prime}\in\mathrm{Pro}^{\Sigma}$
+\end_inset
+
+ tal que 
+\begin_inset Formula $\mathrm{Dom}(\Psi_{\mathcal{P}^{\prime}}^{1,0,\#})=\omega-\mathrm{Dom}(\Psi_{\mathcal{P}}^{1,0,\#})$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Sea 
+\begin_inset Formula $\mathcal{P}\in\mathrm{Pro}^{\Sigma}$
+\end_inset
+
+ y supongamos que para cada 
+\begin_inset Formula $x\in\omega$
+\end_inset
+
+, 
+\begin_inset Formula $\mathcal{P}$
+\end_inset
+
+ termina partiendo de 
+\begin_inset Formula $\left((x,0,0...),(\varepsilon,\varepsilon,...)\right)$
+\end_inset
+
+ en a lo sumo 
+\begin_inset Formula $n(\mathcal{P})^{2}+x$
+\end_inset
+
+ pasos.
+ Entonces 
+\begin_inset Formula $\Psi_{\mathcal{P}}^{1,0,\ast}$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-p.r.
+\end_layout
+
+\begin_layout Enumerate
+Hay 
+\begin_inset Formula $\mathcal{P}\in\mathrm{Pro}^{\Sigma}$
+\end_inset
+
+ tal que 
+\begin_inset Formula $0\in D_{\Psi_{\mathcal{P}}^{1,0,\#}}$
+\end_inset
+
+ y
+\begin_inset Formula 
+\[
+\Psi_{\mathcal{P}}^{1,0,\#}(0)=1+\min_{t}(i^{1,0}(t,0,\mathcal{P})=n(\mathcal{P})+1)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+Ejercicio 6:
+\end_layout
+
+\end_inset
+
+(Opcional) (S) Pruebe que la reciproca del Ejercicio 1 no es cierta, es
+ decir de un predicado 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-recursivo 
+\begin_inset Formula $P:D_{P}\subseteq\omega\times\omega^{n}\times\Sigma^{\ast m}\rightarrow\omega$
+\end_inset
+
+ el cual cumpla que 
+\begin_inset Formula $M(P)$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-recursiva y que 
+\begin_inset Formula $D_{P}$
+\end_inset
+
+ no es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-recursivo (Hint: tome 
+\begin_inset Formula $P=C_{1}^{1,1}|_{\omega\times A}$
+\end_inset
+
+) 
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Con los resultados anteriores estamos en condiciones de dar un ejemplo de
+ un predicado 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-recursivo, cuya minimizacion no es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-efectivamente computable (y por lo tanto no es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-recursiva).
+ Aceptaremos el resultado sin demostracion.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{proposition}
+\end_layout
+
+\end_inset
+
+ Supongamos que 
+\begin_inset Formula $\Sigma\supseteq\Sigma_{p}$
+\end_inset
+
+.
+ Sea 
+\begin_inset Formula $P=C_{1}^{0,1}|_{A}\circ\lambda t\alpha\left[\alpha^{1\dot{-}t}\mathrm{SKIP}^{t}\right]|_{\omega\times\mathrm{Pro}^{\Sigma}}$
+\end_inset
+
+.
+ El predicado 
+\begin_inset Formula $P$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-recursivo pero la funcion 
+\begin_inset Formula $M(P)$
+\end_inset
+
+ no es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-efectivamente computable (y por lo tanto no es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-recursiva) 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{proposition}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+
+\series bold
+Ejercicio 7:
+\end_layout
+
+\end_inset
+
+(Opcional) (S) Daremos aqui una guia para probar la proposicion anterior.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Pruebe que 
+\begin_inset Formula $P$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-recursivo
+\end_layout
+
+\begin_layout Enumerate
+Pruebe que 
+\begin_inset Formula $D_{M(P)}=\mathrm{Pro}^{\Sigma}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Para cada 
+\begin_inset Formula $\mathcal{P}\in\mathrm{Pro}^{\Sigma}$
+\end_inset
+
+ se tiene que
+\begin_inset Formula 
+\[
+M(P)(\mathcal{P})=0\text{ sii }\mathcal{P}\in A
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Pruebe que 
+\begin_inset Formula $AutoHalt^{\Sigma}=\lambda x[x=0]\circ M(P)$
+\end_inset
+
+ por lo cual 
+\begin_inset Formula $M(P)$
+\end_inset
+
+ no es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-recursiva
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $M(P)$
+\end_inset
+
+ no es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-efectivamente computable 
+\end_layout
+
+\end_deeper
+\end_body
+\end_document

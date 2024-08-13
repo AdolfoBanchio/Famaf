@@ -1,0 +1,8056 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\begin_preamble
+\setcounter{MaxMatrixCols}{30}%
+\usepackage{amsfonts}\usepackage{graphicx}
+%TCIDATA{OutputFilter=latex2.dll}
+%TCIDATA{Version=5.50.0.2953}
+%TCIDATA{CSTFile=LaTeX article (bright).cst}
+%TCIDATA{Created=Thursday, March 08, 2007 06:44:18}
+%TCIDATA{LastRevised=Sunday, May 26, 2024 17:57:42}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
+%TCIDATA{BibliographyScheme=BibTeX}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="Standard LaTeX\Blank - Standard LaTeX Article">}
+%TCIDATA{Language=American English}
+%TCIDATA{ComputeDefs=
+%$\varepsilon$
+%$F_{V(\mathbf{A})}(x_{1},...,x_{n})=\{t_{1},...,t_{k}\}$
+%}
+%BeginMSIPreambleData
+\providecommand{\U}[1]{\protect\rule{.1in}{.1in}}
+%EndMSIPreambleData
+\newtheorem{theorem}{Theorem}\newtheorem{acknowledgement}[theorem]{Acknowledgement}\newtheorem{algorithm}[theorem]{Algorithm}\newtheorem{axiom}[theorem]{Axiom}\newtheorem{case}[theorem]{Case}\newtheorem{claim}[theorem]{Claim}\newtheorem{conclusion}[theorem]{Conclusion}\newtheorem{condition}[theorem]{Condition}\newtheorem{conjecture}[theorem]{Conjecture}\newtheorem{corollary}[theorem]{Corollary}\newtheorem{criterion}[theorem]{Criterion}\newtheorem{definition}[theorem]{Definition}\newtheorem{example}[theorem]{Example}\newtheorem{exercise}[theorem]{Exercise}\newtheorem{lemma}[theorem]{Lemma}\newtheorem{notation}[theorem]{Notation}\newtheorem{problem}[theorem]{Problem}\newtheorem{proposition}[theorem]{Proposition}\newtheorem{remark}[theorem]{Remark}\newtheorem{solution}[theorem]{Solution}\newtheorem{summary}[theorem]{Summary}\newenvironment{proof}[1][Proof]{\noindent\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+\end_preamble
+\use_default_options false
+\maintain_unincluded_children false
+\language english
+\language_package none
+\inputencoding auto
+\fontencoding default
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 2
+\use_package amssymb 2
+\use_package cancel 0
+\use_package esint 1
+\use_package mathdots 0
+\use_package mathtools 0
+\use_package mhchem 0
+\use_package stackrel 0
+\use_package stmaryrd 0
+\use_package undertilde 0
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+Nota: Los ejercicios que tienen (S) son para una 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+"
+\end_layout
+
+\end_inset
+
+Segunda vuelta
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+"
+\end_layout
+
+\end_inset
+
+ es decir conviene hacerlos una vez que ya se completó la guía haciendo
+ los otros y ya se tiene mas madurez e intuición basica sobre los conceptos.
+ Los que tienen (O) son opcionales por lo cual no se toman en los examenes.
+\end_layout
+
+\begin_layout Subsection*
+El paradigma imperativo de Neumann: El lenguaje 
+\begin_inset Formula $\mathcal{S}^{\Sigma}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+En esta seccion daremos una modelizacion matematica del concepto de funcion
+ 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-efectivamente computable utilizando un lenguaje de programacion teorico
+ el cual depende del alfabeto 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+.
+ Lo llamaremos 
+\begin_inset Formula $\mathcal{S}^{\Sigma}$
+\end_inset
+
+ a dicho lenguaje.
+ Dado que fue el matematico Von Neumann quien contribuyo al desarrollo de
+ la primera computadora de proposito general (es decir a la cual se le pueden
+ hacer correr programas tal como a las computadoras actuales), nos referiremos
+ a este paradigma de computabilidad efectiva como el paradigma de Von Neumann.
+\end_layout
+
+\begin_layout Subsubsection*
+Sintaxis de 
+\begin_inset Formula $\mathcal{S}^{\Sigma}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Necesitaremos algunas funciones basicas para poder describir la sintaxis
+ de 
+\begin_inset Formula $\mathcal{S}^{\Sigma}$
+\end_inset
+
+ en forma precisa.
+ Recordemos que llamabamos 
+\shape italic
+numerales
+\shape default
+ a los siguientes simbolos
+\begin_inset Formula 
+\[
+0\ 1\ 2\ 3\ 4\ 5\ 6\ 7\ 8\ 9
+\]
+
+\end_inset
+
+Tambien recordemos que 
+\begin_inset Formula $Num$
+\end_inset
+
+ denotaba el conjunto de los numerales.
+ Sea 
+\begin_inset Formula $Sig:Num^{\ast}\rightarrow Num^{\ast}$
+\end_inset
+
+ definida de la siguiente manera
+\begin_inset Formula 
+\begin{align*}
+Sig(\varepsilon) & =1\\
+Sig(\alpha0) & =\alpha1\\
+Sig(\alpha1) & =\alpha2\\
+Sig(\alpha2) & =\alpha3\\
+Sig(\alpha3) & =\alpha4\\
+Sig(\alpha4) & =\alpha5\\
+Sig(\alpha5) & =\alpha6\\
+Sig(\alpha6) & =\alpha7\\
+Sig(\alpha7) & =\alpha8\\
+Sig(\alpha8) & =\alpha9\\
+Sig(\alpha9) & =Sig(\alpha)0
+\end{align*}
+
+\end_inset
+
+Definamos 
+\begin_inset Formula $Dec:\omega\rightarrow Num^{\ast}$
+\end_inset
+
+ de la siguiente manera
+\begin_inset Formula 
+\begin{align*}
+Dec(0) & =\varepsilon\\
+Dec(n+1) & =Sig(Dec(n))
+\end{align*}
+
+\end_inset
+
+Notese que para 
+\begin_inset Formula $n\in\mathbf{N}$
+\end_inset
+
+, la palabra 
+\begin_inset Formula $Dec(n)$
+\end_inset
+
+ es la notacion usual decimal de 
+\begin_inset Formula $n$
+\end_inset
+
+.
+ Para hacer mas agil la notacion escribiremos 
+\begin_inset Formula $\bar{n}$
+\end_inset
+
+ en lugar de 
+\begin_inset Formula $Dec(n)$
+\end_inset
+
+.
+ Notese que, en virtud de esta convencion notacional se tiene que 
+\begin_inset Formula $Dec=\lambda n[\bar{n}]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+
+\series bold
+Ejercicio 1:
+\end_layout
+
+\end_inset
+
+Hacer
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Pruebe que 
+\begin_inset Formula $Sig$
+\end_inset
+
+ y 
+\begin_inset Formula $Dec$
+\end_inset
+
+ son 
+\begin_inset Formula $Num$
+\end_inset
+
+-p.r.
+\end_layout
+
+\begin_layout Enumerate
+Sea 
+\begin_inset Formula $\Gamma$
+\end_inset
+
+ un alfabeto que contiene a 
+\begin_inset Formula $Num$
+\end_inset
+
+.
+ Pruebe sin usar el teorema de independencia del alfabeto que 
+\begin_inset Formula $Sig$
+\end_inset
+
+ y 
+\begin_inset Formula $Dec$
+\end_inset
+
+ son 
+\begin_inset Formula $\Gamma$
+\end_inset
+
+-p.r..
+ Hint: extienda 
+\begin_inset Formula $Sig$
+\end_inset
+
+ a una 
+\begin_inset Formula $\widetilde{Sig}$
+\end_inset
+
+ que sea 
+\begin_inset Formula $\Gamma$
+\end_inset
+
+-total.
+ Use 
+\begin_inset Formula $\widetilde{Sig}$
+\end_inset
+
+ para definir una 
+\begin_inset Formula $g$
+\end_inset
+
+ que sea 
+\begin_inset Formula $\Gamma$
+\end_inset
+
+-p.r.
+ y tal que 
+\begin_inset Formula $Dec=R(C_{\varepsilon}^{0,0},g)$
+\end_inset
+
+ (respecto del alfabeto 
+\begin_inset Formula $\Gamma$
+\end_inset
+
+) 
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+La sintaxis de 
+\begin_inset Formula $\mathcal{S}^{\Sigma}$
+\end_inset
+
+ sera dada utilizando solo simbolos del alfabeto 
+\begin_inset Formula $\Sigma\cup\Sigma_{p}$
+\end_inset
+
+, donde
+\begin_inset Formula 
+\[
+\Sigma_{p}=Num\cup\left\{ \leftarrow,+,\dot{-},.,\neq,^{\curvearrowright},\varepsilon,\mathrm{N},\mathrm{K},\mathrm{P},\mathrm{L},\mathrm{I},\mathrm{F},\mathrm{G},\mathrm{O},\mathrm{T},\mathrm{B},\mathrm{E},\mathrm{S}\right\} .
+\]
+
+\end_inset
+
+Cabe aclarar que la palabra de longitud 
+\begin_inset Formula $0$
+\end_inset
+
+ no es un elemento de 
+\begin_inset Formula $\Sigma_{p}$
+\end_inset
+
+ sino que la letra griega 
+\begin_inset Formula $\varepsilon$
+\end_inset
+
+ que usualmente denota esta palabra, lo es.
+ Tambien notese que en 
+\begin_inset Formula $\Sigma_{p}$
+\end_inset
+
+ hay simbolos que a veces representan operaciones como por ejemplo 
+\begin_inset Formula $+$
+\end_inset
+
+ y 
+\begin_inset Formula $\dot{-}$
+\end_inset
+
+, pero deberia quedar claro que en 
+\begin_inset Formula $\Sigma_{p}$
+\end_inset
+
+ estan los simbolos 
+\begin_inset Formula $+$
+\end_inset
+
+ y 
+\begin_inset Formula $\dot{-}$
+\end_inset
+
+ y no las operaciones que ellos denotan.
+\end_layout
+
+\begin_layout Standard
+Las palabras de la forma 
+\begin_inset Formula $\mathrm{N}\bar{k}$
+\end_inset
+
+ con 
+\begin_inset Formula $k\in\mathbf{N}$
+\end_inset
+
+, son llamadas 
+\shape italic
+variables numericas de 
+\shape default
+
+\begin_inset Formula $\mathcal{S}^{\Sigma}$
+\end_inset
+
+.
+ Las palabras de la forma 
+\begin_inset Formula $\mathrm{P}\bar{k}$
+\end_inset
+
+ con 
+\begin_inset Formula $k\in\mathbf{N}$
+\end_inset
+
+, son llamadas 
+\shape italic
+variables alfabeticas de 
+\shape default
+
+\begin_inset Formula $\mathcal{S}^{\Sigma}$
+\end_inset
+
+.
+ Las palabras de la forma 
+\begin_inset Formula $\mathrm{L}\bar{k}$
+\end_inset
+
+ con 
+\begin_inset Formula $k\in\mathbf{N}$
+\end_inset
+
+, son llamadas 
+\shape italic
+labels de 
+\shape default
+
+\begin_inset Formula $\mathcal{S}^{\Sigma}$
+\end_inset
+
+.
+ Una 
+\shape italic
+instruccion basica de 
+\shape default
+
+\begin_inset Formula $\mathcal{S}^{\Sigma}$
+\end_inset
+
+ es una palabra de 
+\begin_inset Formula $(\Sigma\cup\Sigma_{p})^{\ast}$
+\end_inset
+
+ la cual es de alguna de las siguientes formas
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+ 
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\mathrm{N}\bar{k}\leftarrow\mathrm{N}\bar{k}+1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+ 
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\mathrm{N}\bar{k}\leftarrow\mathrm{N}\bar{k}\dot{-}1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+ 
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\mathrm{N}\bar{k}\leftarrow\mathrm{N}\bar{n}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+ 
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\mathrm{N}\bar{k}\leftarrow0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+ 
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\mathrm{P}\bar{k}\leftarrow\mathrm{P}\bar{k}.a$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+ 
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\mathrm{P}\bar{k}\leftarrow$
+\end_inset
+
+ 
+\begin_inset Formula $^{\curvearrowright}\mathrm{P}\bar{k}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+ 
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\mathrm{P}\bar{k}\leftarrow\mathrm{P}\bar{n}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+ 
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\mathrm{P}\bar{k}\leftarrow\varepsilon$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+ 
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\mathrm{IF}\;\mathrm{N}\bar{k}\neq0\;\mathrm{GOTO}\;\mathrm{L}\bar{n}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+ 
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\mathrm{IF}\;\mathrm{P}\bar{k}\;\mathrm{BEGINS}\;a\;\mathrm{GOTO}\;\mathrm{L}\bar{n}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+ 
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\mathrm{GOTO}\;\mathrm{L}\bar{n}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+ 
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\mathrm{SKIP}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\noindent
+donde 
+\begin_inset Formula $a\in\Sigma$
+\end_inset
+
+ y 
+\begin_inset Formula $k,n\in\mathbf{N}$
+\end_inset
+
+.
+ Como puede observarse para que las instrucciones basicas sean mas lejibles
+ usamos espacios entre ciertos simbolos.
+ Por ejemplo, hemos escrito 
+\begin_inset Formula $\mathrm{N}\bar{k}\leftarrow\mathrm{N}\bar{k}+1$
+\end_inset
+
+ pero en realidad nos referimos a la palabra
+\begin_inset Formula 
+\[
+\mathrm{N}\bar{k}\mathrm{\leftarrow}\text{\textrm{N}}\bar{k}\mathrm{+1}
+\]
+
+\end_inset
+
+cuya longitud es 
+\begin_inset Formula $2\left\vert \bar{k}\right\vert +5$
+\end_inset
+
+.
+ Otro ejemplo, hemos escrito 
+\begin_inset Formula $\mathrm{IF}\;\mathrm{P}\bar{k}\;\mathrm{BEGINS}\;a\;\mathrm{GOTO}\;\mathrm{L}\bar{n}$
+\end_inset
+
+ pero en realidad nos referiamos a la palabra 
+\begin_inset Formula $\mathrm{IFP}\bar{k}\mathrm{BEGINS}a\mathrm{GOTOL}\bar{n}$
+\end_inset
+
+ cuya longitud es 
+\begin_inset Formula $\left\vert \bar{k}\right\vert +\left\vert \bar{n}\right\vert +15$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Una 
+\shape italic
+instruccion de 
+\shape default
+
+\begin_inset Formula $\mathcal{S}^{\Sigma}$
+\end_inset
+
+ es ya sea una instruccion basica de 
+\begin_inset Formula $\mathcal{S}^{\Sigma}$
+\end_inset
+
+ o una palabra de la forma 
+\begin_inset Formula $\alpha I$
+\end_inset
+
+, donde 
+\begin_inset Formula $\alpha\in\{\mathrm{L}\bar{n}:n\in\mathbf{N}\}$
+\end_inset
+
+ y 
+\begin_inset Formula $I$
+\end_inset
+
+ es una instruccion basica de 
+\begin_inset Formula $\mathcal{S}^{\Sigma}$
+\end_inset
+
+.
+ Usaremos 
+\begin_inset Formula $\mathrm{Ins}^{\Sigma}$
+\end_inset
+
+ para denotar el conjunto de todas las instrucciones de 
+\begin_inset Formula $\mathcal{S}^{\Sigma}$
+\end_inset
+
+.
+ Cuando la instruccion 
+\begin_inset Formula $I$
+\end_inset
+
+ es de la forma 
+\begin_inset Formula $\mathrm{L}\bar{n}J$
+\end_inset
+
+ con 
+\begin_inset Formula $J$
+\end_inset
+
+ una instruccion basica, diremos que 
+\begin_inset Formula $\mathrm{L}\bar{n}$
+\end_inset
+
+ es el 
+\shape italic
+label
+\shape default
+ de 
+\begin_inset Formula $I$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+
+\series bold
+Ejercicio 1,3:
+\end_layout
+
+\end_inset
+
+V o F o I, justificar
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Para cada 
+\begin_inset Formula $n\in\mathbf{N}$
+\end_inset
+
+, se tiene que 
+\begin_inset Formula $\bar{n}\in\omega$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Si 
+\begin_inset Formula $k\in\mathbf{N}$
+\end_inset
+
+, entonces 
+\begin_inset Formula $\mathrm{P}\bar{k}\mathrm{\leftarrow}$
+\end_inset
+
+ es una instruccion de 
+\begin_inset Formula $\mathcal{S}^{\Sigma}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Sea 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+ un alfabeto.
+ Entonces 
+\begin_inset Formula $\mathrm{Ins}^{\Sigma}$
+\end_inset
+
+ es un conjunto 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-mixto
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $Ti(\mathrm{Ins}^{\Sigma})=\mathrm{PALABRA}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Si 
+\begin_inset Formula $I\in\mathrm{Ins}^{\Sigma}$
+\end_inset
+
+, entonces 
+\begin_inset Formula $Ti(I)=\mathrm{PALABRA}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Si 
+\begin_inset Formula $I$
+\end_inset
+
+ es una instruccion de 
+\begin_inset Formula $\mathcal{S}^{\Sigma}$
+\end_inset
+
+ y 
+\begin_inset Formula $n\in\mathbf{N}$
+\end_inset
+
+ es tal que 
+\begin_inset Formula $\mathrm{L}\bar{n}$
+\end_inset
+
+ es tramo inicial de 
+\begin_inset Formula $I$
+\end_inset
+
+, entonces 
+\begin_inset Formula $\mathrm{L}\bar{n}$
+\end_inset
+
+ es el label de 
+\begin_inset Formula $I$
+\end_inset
+
+.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Damos a continuacion, a modo de ejemplo, la interpretacion intuitiva asociada
+ a ciertas instrucciones basicas de 
+\begin_inset Formula $\mathcal{S}^{\Sigma}$
+\end_inset
+
+:
+\begin_inset Formula 
+\begin{align*}
+\text{INSTRUCCION} & :\mathrm{N}\bar{k}\leftarrow\mathrm{N}\bar{k}\dot{-}1\\
+\text{INTERPRETACION} & :\begin{array}[t]{c}
+\text{Si el contenido de }\mathrm{N}\bar{k}\text{ es }0\text{ dejarlo sin modificar; en}\\
+\text{caso contrario disminuya en 1 el contenido de }\mathrm{N}\bar{k}\;
+\end{array}\\
+\text{INSTRUCCION} & :\mathrm{N}\bar{k}\leftarrow\mathrm{N}\bar{n}\\
+\text{INTERPRETACION} & :\begin{array}[t]{c}
+\text{Copiar en }\mathrm{N}\bar{k}\text{ el contenido de }\mathrm{N}\bar{n}\text{ }\\
+\text{sin modificar el contenido de }\mathrm{N}\bar{n}
+\end{array}\\
+\text{INSTRUCCION} & :\mathrm{P}\bar{k}\leftarrow^{\curvearrowright}\mathrm{P}\bar{k}\\
+\text{INTERPRETACION} & :\begin{array}[t]{l}
+\text{Si el contenido de }\mathrm{P}\bar{k}\text{ es }\varepsilon\text{ dejarlo sin modificar;}\\
+\text{en caso contrario remueva el 1er simbolo del}\\
+\text{contenido de }\mathrm{P}\bar{k}
+\end{array}
+\end{align*}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{align*}
+\text{INSTRUCCION} & :\mathrm{P}\bar{k}\leftarrow\mathrm{P}\bar{k}.a\\
+\text{INTERPRETACION} & :\begin{array}[t]{l}
+\text{Modificar el contenido de }\mathrm{P}\bar{k}\text{ agregandole}\\
+\text{el simbolo }a\text{ a la derecha}
+\end{array}\\
+\text{INSTRUCCION} & :\mathrm{IF}\;\mathrm{P}\bar{k}\;\mathrm{BEGINS}\;a\;\mathrm{GOTO}\;\mathrm{L}\bar{m}\\
+\text{INTERPRETACION} & :\begin{array}[t]{l}
+\text{Si el contenido de }\mathrm{P}\bar{k}\text{ comiensa con }a\text{, ejecute}\\
+\text{la primer instruccion con label }\mathrm{L}\bar{m}\text{; en caso}\\
+\text{contrario ejecute la siguiente instruccion}
+\end{array}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+
+\series bold
+Ejercicio 1,6:
+\end_layout
+
+\end_inset
+
+Sea 
+\begin_inset Formula $\Sigma=\{@,\uparrow\}$
+\end_inset
+
+.
+ Sea 
+\begin_inset Formula $L=\{\mathrm{IFP}\bar{k}\mathrm{BEGINS}a\mathrm{GOTOL}\bar{n}:a\in\Sigma$
+\end_inset
+
+ y 
+\begin_inset Formula $k,n\in\mathbf{N}\}$
+\end_inset
+
+.
+ Note que 
+\begin_inset Formula $L\subseteq\mathrm{Ins}^{\Sigma}$
+\end_inset
+
+.
+ Pruebe que 
+\begin_inset Formula $L$
+\end_inset
+
+ es 
+\begin_inset Formula $(\Sigma\cup\Sigma_{p})$
+\end_inset
+
+-p.r..
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Un 
+\shape italic
+programa de 
+\shape default
+
+\begin_inset Formula $\mathcal{S}^{\Sigma}$
+\end_inset
+
+ es una palabra de la forma
+\begin_inset Formula 
+\[
+I_{1}I_{2}...I_{n}
+\]
+
+\end_inset
+
+donde 
+\begin_inset Formula $n\geq1$
+\end_inset
+
+, 
+\begin_inset Formula $I_{1},...,I_{n}\in\mathrm{Ins}^{\Sigma}$
+\end_inset
+
+ y ademas se cumple la siguiente propiedad, llamada 
+\shape italic
+la ley de los GOTO
+\shape default
+,
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+(G)
+\end_layout
+
+\end_inset
+
+Para cada 
+\begin_inset Formula $i\in\{1,...,n\}$
+\end_inset
+
+, si 
+\begin_inset Formula $\mathrm{GOTOL}\bar{m}$
+\end_inset
+
+ es un tramo final de 
+\begin_inset Formula $I_{i}$
+\end_inset
+
+, entonces existe 
+\begin_inset Formula $j\in\{1,...,n\}$
+\end_inset
+
+ tal que 
+\begin_inset Formula $I_{j}$
+\end_inset
+
+ tiene label 
+\begin_inset Formula $\mathrm{L}\bar{m}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\noindent
+Usaremos 
+\begin_inset Formula $\mathrm{Pro}^{\Sigma}$
+\end_inset
+
+ para denotar el conjunto de todos los programas de 
+\begin_inset Formula $\mathcal{S}^{\Sigma}$
+\end_inset
+
+.
+ Como es usual cuando escribamos un programa lo haremos linea por linea,
+ con la finalidad de que sea mas lejible.
+ Por ejemplo, escribiremos
+\begin_inset Formula 
+\[
+\begin{array}{ll}
+\mathrm{L}2 & \mathrm{N}12\leftarrow\mathrm{N}12\dot{-}1\\
+ & \mathrm{P}1\leftarrow\text{ }^{\curvearrowright}\mathrm{P}1\\
+ & \mathrm{IF\;N}12\neq0\;\mathrm{GOTO}\;\mathrm{L}2
+\end{array}
+\]
+
+\end_inset
+
+en lugar de
+\begin_inset Formula 
+\[
+\mathrm{L}2\mathrm{N}12\mathrm{\leftarrow}\text{N}12\mathrm{\dot{-}}1\mathrm{P}1\mathrm{\leftarrow}^{\curvearrowright}\mathrm{P}1\mathrm{IFN}12\mathrm{\neq}0\mathrm{GOTOL}2
+\]
+
+\end_inset
+
+Un importante resultado es el siguiente lema que garantiza que los programas
+ pueden ser parseados en forma unica como concatenacion de instrucciones.
+ Lo aceptaremos sin demostracion.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{lemma}
+\end_layout
+
+\end_inset
+
+ Sea 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+ un alfabeto finito.
+ Se tiene que:
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+(a)
+\end_layout
+
+\end_inset
+
+Si 
+\begin_inset Formula $I_{1}...I_{n}=J_{1}...J_{m}$
+\end_inset
+
+, con 
+\begin_inset Formula $I_{1},...,I_{n},J_{1},...,J_{m}\in\mathrm{Ins}^{\Sigma}$
+\end_inset
+
+, entonces 
+\begin_inset Formula $n=m$
+\end_inset
+
+ y 
+\begin_inset Formula $I_{j}=J_{j}$
+\end_inset
+
+ para cada 
+\begin_inset Formula $j\geq1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+(b)
+\end_layout
+
+\end_inset
+
+Si 
+\begin_inset Formula $\mathcal{P}\in\mathrm{Pro}^{\Sigma}$
+\end_inset
+
+, entonces existe una unica sucesion de instrucciones 
+\begin_inset Formula $I_{1},...,I_{n}$
+\end_inset
+
+ tal que 
+\begin_inset Formula $\mathcal{P}=I_{1}...I_{n}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{lemma}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+(b) del lema anterior nos dice que dado un programa 
+\begin_inset Formula $\mathcal{P}$
+\end_inset
+
+, tenemos univocamente determinados 
+\begin_inset Formula $n(\mathcal{P})\in\mathbf{N}$
+\end_inset
+
+ y 
+\begin_inset Formula $I_{1}^{\mathcal{P}},...,I_{n(\mathcal{P})}^{\mathcal{P}}\in\mathrm{Ins}^{\Sigma}$
+\end_inset
+
+ tales que 
+\begin_inset Formula $\mathcal{P}=I_{1}^{\mathcal{P}}...I_{n(\mathcal{P})}^{\mathcal{P}}$
+\end_inset
+
+.
+ Definamos tambien
+\begin_inset Formula 
+\[
+I_{i}^{\mathcal{P}}=\varepsilon
+\]
+
+\end_inset
+
+cuando 
+\begin_inset Formula $i=0$
+\end_inset
+
+ o 
+\begin_inset Formula $i>n(\mathcal{P})$
+\end_inset
+
+.
+ Notese que las expresiones 
+\begin_inset Formula $n(\alpha)$
+\end_inset
+
+ y 
+\begin_inset Formula $I_{i}^{\alpha}$
+\end_inset
+
+ estan definidas solo cuando 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ es un programa (y 
+\begin_inset Formula $i$
+\end_inset
+
+ es un elemento de 
+\begin_inset Formula $\omega$
+\end_inset
+
+), es decir, cierta palabra del alfabeto 
+\begin_inset Formula $\Sigma\cup\Sigma_{p}$
+\end_inset
+
+.
+ O sea que cuando usemos notacion lambda que involucre dichas expresiones,
+ el alfabeto respecto del cual usaremos dicha notacion sera 
+\begin_inset Formula $\Sigma\cup\Sigma_{p}$
+\end_inset
+
+.
+ Esto nos dice entonces que 
+\begin_inset Formula $\lambda\alpha\lbrack n(\alpha)]$
+\end_inset
+
+ tiene dominio igual a 
+\begin_inset Formula $\mathrm{Pro}^{\Sigma}\subseteq(\Sigma\cup\Sigma_{p})^{\ast}$
+\end_inset
+
+ y 
+\begin_inset Formula $\lambda i\alpha\lbrack I_{i}^{\alpha}]$
+\end_inset
+
+ tiene dominio igual a 
+\begin_inset Formula $\omega\times\mathrm{Pro}^{\Sigma}$
+\end_inset
+
+.
+ Para hacer mas sugestiva la notacion a veces escribiremos 
+\begin_inset Formula $\lambda\mathcal{P}[n(\mathcal{P})]$
+\end_inset
+
+ y 
+\begin_inset Formula $\lambda i\mathcal{P}[I_{i}^{\mathcal{P}}]$
+\end_inset
+
+ en lugar de 
+\begin_inset Formula $\lambda\alpha\lbrack n(\alpha)]$
+\end_inset
+
+ y 
+\begin_inset Formula $\lambda i\alpha\lbrack I_{i}^{\alpha}]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+
+\series bold
+Ejercicio 2:
+\end_layout
+
+\end_inset
+
+V o F o I, justificar
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $\mathrm{Ins}^{\Sigma}\subseteq\mathrm{Pro}^{\Sigma}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\mathrm{Ins}^{\Sigma}\cap\mathrm{Pro}^{\Sigma}=\emptyset$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\lambda i\mathcal{P}\left[I_{i}^{\mathcal{P}}\right]$
+\end_inset
+
+ tiene dominio igual a 
+\begin_inset Formula $\{(i,\mathcal{P})\in\mathbf{N}\times\mathrm{Pro}^{\Sigma}:i\leq n(\mathcal{P})\}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Sea 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+ un alfabeto.
+ Si 
+\begin_inset Formula $\mathcal{P}\in\mathrm{Pro}^{\Sigma}$
+\end_inset
+
+, entonces 
+\begin_inset Formula $\mathcal{P}\in\overset{n(\mathcal{P})\text{ veces}}{\ \overbrace{\mathrm{Ins}^{\Sigma}\times\cdots\times\mathrm{Ins}^{\Sigma}}}$
+\end_inset
+
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+
+\series bold
+Ejercicio 3:
+\end_layout
+
+\end_inset
+
+(S) Si 
+\begin_inset Formula $\mathcal{P}_{1},\mathcal{P}_{2}\in\mathrm{Pro}^{\Sigma}$
+\end_inset
+
+ y 
+\begin_inset Formula $\mathcal{P}_{1}\mathcal{P}_{1}=\mathcal{P}_{2}\mathcal{P}_{2}$
+\end_inset
+
+, entonces 
+\begin_inset Formula $\mathcal{P}_{1}=\mathcal{P}_{2}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
+Semantica de 
+\begin_inset Formula $\mathcal{S}^{\Sigma}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Para definir la semantica nos sera util la funcion 
+\begin_inset Formula $Bas:\mathrm{Ins}^{\Sigma}\rightarrow(\Sigma\cup\Sigma_{p})^{\ast}$
+\end_inset
+
+, dada por
+\begin_inset Formula 
+\[
+Bas(I)=\left\{ \begin{array}{ccl}
+J &  & \text{si }I\text{ es de la forma }\mathrm{L}\bar{k}J\text{ con }J\in\mathrm{Ins}^{\Sigma}\\
+I &  & \text{caso contrario}
+\end{array}\right.
+\]
+
+\end_inset
+
+Recordemos que para una palabra 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ definiamos
+\begin_inset Formula 
+\[
+^{\curvearrowright}\alpha=\left\{ \begin{array}{lll}
+\left[\alpha\right]_{2}...\left[\alpha\right]_{\left\vert \alpha\right\vert } & \text{si} & \left\vert \alpha\right\vert \geq2\\
+\varepsilon & \text{si} & \left\vert \alpha\right\vert \leq1
+\end{array}\right.
+\]
+
+\end_inset
+
+Definamos
+\begin_inset Formula 
+\begin{align*}
+\omega^{\left[\mathbf{N}\right]} & =\left\{ (s_{1},s_{2},...)\in\omega^{\mathbf{N}}:\text{ hay }n\in\mathbf{N}\text{ tal que }s_{i}=0\text{, para }i\geq n\right\} \\
+\Sigma^{\ast\left[\mathbf{N}\right]} & =\left\{ (\sigma_{1},\sigma_{2},...)\in\Sigma^{\ast\mathbf{N}}:\text{ hay }n\in\mathbf{N}\text{ tal que }\sigma_{i}=\varepsilon\text{, para }i\geq n\right\} .
+\end{align*}
+
+\end_inset
+
+Asumiremos siempre que en una computacion via un programa de 
+\begin_inset Formula $\mathcal{S}^{\Sigma}$
+\end_inset
+
+, todas exepto una cantidad finita de las variables numericas tienen el
+ valor 
+\begin_inset Formula $0$
+\end_inset
+
+ y todas exepto una cantiad finita de las variables alfabeticas tienen el
+ valor 
+\begin_inset Formula $\varepsilon$
+\end_inset
+
+.
+ Esto no quita generalidad a nuestra modelizacion del funcionamiento de
+ los programas ya que todo programa envuelve una cantidad finita de variables.
+\end_layout
+
+\begin_layout Standard
+Un 
+\shape italic
+estado
+\shape default
+ es un par
+\begin_inset Formula 
+\[
+(\vec{s},\vec{\sigma})=((s_{1},s_{2},...),(\sigma_{1},\sigma_{2},...))\in\omega^{\left[\mathbf{N}\right]}\times\Sigma^{\ast\left[\mathbf{N}\right]}.
+\]
+
+\end_inset
+
+Si 
+\begin_inset Formula $i\geq1$
+\end_inset
+
+, entonces diremos que 
+\begin_inset Formula $s_{i}$
+\end_inset
+
+ es el 
+\shape italic
+contenido 
+\shape default
+o
+\shape italic
+
+\begin_inset space \space{}
+\end_inset
+
+valor 
+\shape default
+de la variable 
+\begin_inset Formula $\mathrm{N}\bar{\imath}$
+\end_inset
+
+ en el estado 
+\begin_inset Formula $(\vec{s},\vec{\sigma})$
+\end_inset
+
+ y 
+\begin_inset Formula $\sigma_{i}$
+\end_inset
+
+ es el 
+\shape italic
+contenido 
+\shape default
+o
+\shape italic
+
+\begin_inset space \space{}
+\end_inset
+
+valor 
+\shape default
+de la variable 
+\begin_inset Formula $\mathrm{P}\bar{\imath}$
+\end_inset
+
+ en el estado 
+\begin_inset Formula $(\vec{s},\vec{\sigma})$
+\end_inset
+
+.
+ Es decir, intuitivamente hablando, un estado es un par de infinituplas
+ que contiene la informacion de que valores tienen alojados las distintas
+ variables.
+\end_layout
+
+\begin_layout Standard
+Imaginemos que corremos un programa 
+\begin_inset Formula $\mathcal{P}$
+\end_inset
+
+ partiendo de un estado inicial 
+\begin_inset Formula $(\vec{s},\vec{\sigma})$
+\end_inset
+
+.
+ Por supuesto la primera instruccion a realizar sera 
+\begin_inset Formula $I_{1}^{\mathcal{P}}$
+\end_inset
+
+ pero, dado que 
+\begin_inset Formula $I_{1}^{\mathcal{P}}$
+\end_inset
+
+ puede ser de tipo GOTO, la segunda instruccion que realizaremos puede no
+ ser 
+\begin_inset Formula $I_{2}^{\mathcal{P}}$
+\end_inset
+
+.
+ Es decir en cada paso iremos decidiendo en funcion de la instruccion ejecutada
+ cual es la siguiente instruccion a realizar.
+ O sea que mientras corremos 
+\begin_inset Formula $\mathcal{P}$
+\end_inset
+
+, en cada paso la informacion importante a tener en cuenta es, por una parte,
+ cuales son los valores que tienen cada una de las variables y, por otra
+ parte, cual es la instruccion que nos tocara realizar a continuacion.
+ Esto da lugar al concepto de descripcion instantanea, a saber, un objeto
+ matematico que describe en un instante dado de la computacion cuales son
+ los valores de las variables y cual es la instruccion que se debe realizar
+ en el instante siguiente.
+ Mas formalmente una 
+\shape italic
+descripcion instantanea
+\shape default
+ es una terna 
+\begin_inset Formula $(i,\vec{s},\vec{\sigma})$
+\end_inset
+
+ tal que 
+\begin_inset Formula $(\vec{s},\vec{\sigma})$
+\end_inset
+
+ es un estado e 
+\begin_inset Formula $i\in\omega$
+\end_inset
+
+.
+ Es decir que 
+\begin_inset Formula $\omega\times\omega^{\left[\mathbf{N}\right]}\times\Sigma^{\ast\left[\mathbf{N}\right]}$
+\end_inset
+
+ es el conjunto formado por todas las descripciones instantaneas.
+ Intuitivamente hablando, cuando 
+\begin_inset Formula $i\in\{1,...,n(\mathcal{P})\}$
+\end_inset
+
+, la descripcion instantanea 
+\begin_inset Formula $(i,\vec{s},\vec{\sigma})$
+\end_inset
+
+ nos dice que las variables estan en el estado 
+\begin_inset Formula $(\vec{s},\vec{\sigma})$
+\end_inset
+
+ y que la instruccion que 
+\shape italic
+debemos realizar
+\shape default
+ es 
+\begin_inset Formula $I_{i}^{\mathcal{P}}$
+\end_inset
+
+.
+ Dado que sera conveniente para simplificar el tratamiento formal, nos abstraere
+mos un poco y cuando 
+\begin_inset Formula $i=0$
+\end_inset
+
+ o 
+\begin_inset Formula $i>n(\mathcal{P})$
+\end_inset
+
+ pensaremos tambien que la descripcion instantanea 
+\begin_inset Formula $(i,\vec{s},\vec{\sigma})$
+\end_inset
+
+ nos dice que las variables estan en el estado 
+\begin_inset Formula $(\vec{s},\vec{\sigma})$
+\end_inset
+
+ y que debemos realizar 
+\begin_inset Formula $I_{i}^{\mathcal{P}}=\varepsilon$
+\end_inset
+
+ (aunque por supuesto no podremos realizarla ya que no es una instruccion).
+\end_layout
+
+\begin_layout Standard
+Dado un programa 
+\begin_inset Formula $\mathcal{P}$
+\end_inset
+
+ definiremos a continuacion una funcion
+\begin_inset Formula 
+\[
+S_{\mathcal{P}}:\omega\times\omega^{\left[\mathbf{N}\right]}\times\Sigma^{\ast\left[\mathbf{N}\right]}\rightarrow\omega\times\omega^{\left[\mathbf{N}\right]}\times\Sigma^{\ast\left[\mathbf{N}\right]}
+\]
+
+\end_inset
+
+la cual le asignara a una descripcion instantanea 
+\begin_inset Formula $(i,\vec{s},\vec{\sigma})$
+\end_inset
+
+ la 
+\shape italic
+descripcion instantanea sucesora de 
+\shape default
+
+\begin_inset Formula $(i,\vec{s},\vec{\sigma})$
+\end_inset
+
+ 
+\shape italic
+con respecto a 
+\shape default
+
+\begin_inset Formula $\mathcal{P}$
+\end_inset
+
+.
+ Cuando 
+\begin_inset Formula $i\in\{1,...,n(\mathcal{P})\}$
+\end_inset
+
+, intuitivamente hablando, 
+\begin_inset Formula $S_{\mathcal{P}}(i,\vec{s},\vec{\sigma})$
+\end_inset
+
+ sera la descripcion instantanea que resulta luego de realizar 
+\begin_inset Formula $I_{i}^{\mathcal{P}}$
+\end_inset
+
+ estando en el estado 
+\begin_inset Formula $(\vec{s},\vec{\sigma})$
+\end_inset
+
+.
+ Cuando 
+\begin_inset Formula $i=0$
+\end_inset
+
+ o 
+\begin_inset Formula $i>n(\mathcal{P})$
+\end_inset
+
+ definiremos 
+\begin_inset Formula $S_{\mathcal{P}}(i,\vec{s},\vec{\sigma})=(i,\vec{s},\vec{\sigma})$
+\end_inset
+
+, lo cual es bastante intuitivo ya que si estamos en estado 
+\begin_inset Formula $(\vec{s},\vec{\sigma})$
+\end_inset
+
+ y debemos realizar 
+\begin_inset Formula $I_{i}^{\mathcal{P}}=\varepsilon$
+\end_inset
+
+, dado que 
+\begin_inset Formula $\varepsilon$
+\end_inset
+
+ no es una instruccion y por lo tanto no la podremos realizar, seguiremos
+ en el mismo estado y teniendo que realizar 
+\begin_inset Formula $I_{i}^{\mathcal{P}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Para darle una semantica mas unificada al concepto de descripcion instantanea
+ sucesora debemos crear un nuevo verbo.
+ El verbo 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+"
+\end_layout
+
+\end_inset
+
+realizarp
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+"
+\end_layout
+
+\end_inset
+
+.
+ Dada una actividad A, diremos que un individuo P 
+\shape italic
+realizap
+\shape default
+ la actividad A, si P realiza A, en caso de que pueda hacerlo.
+ O sea realizarp una actividad es realizarla si se puede.
+\end_layout
+
+\begin_layout Standard
+Para dar otro ejemplo de este tipo de verbos, consideremos el verbo 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+"
+\end_layout
+
+\end_inset
+
+comprarp
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+"
+\end_layout
+
+\end_inset
+
+, es decir 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+"
+\end_layout
+
+\end_inset
+
+comprar si se puede
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+"
+\end_layout
+
+\end_inset
+
+.
+ Un hijo le pide a su padre que le compre un determinado juguete y el padre
+ le dice 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+"
+\end_layout
+
+\end_inset
+
+si, hijo mio, te lo voy a comprarp
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+"
+\end_layout
+
+\end_inset
+
+.
+ Luego el padre es despedido de su empleo y su cituacion economica hace
+ que no le sea posible comprar dicho juguete.
+ Sin envargo el padre no mintio ya que si bien no compro dicho juguete,
+ él si lo comprop.
+\end_layout
+
+\begin_layout Standard
+Con este verbo podemos describir intuitivamente 
+\begin_inset Formula $S_{\mathcal{P}}(i,\vec{s},\vec{\sigma})$
+\end_inset
+
+:
+\begin_inset Formula 
+\begin{align*}
+S_{\mathcal{P}}(i,\vec{s},\vec{\sigma}) & =\mathrm{descripcion\ insta}\text{n}\mathrm{ta}\text{n}\mathrm{ea\ que\ resulta}\\
+ & \mathrm{luego\ de\ rea}\text{l}\mathrm{izarp\ }I_{i}^{\mathcal{P}}\text{, estando en estado }(\vec{s},\vec{\sigma})
+\end{align*}
+
+\end_inset
+
+Ahora si, daremos la definicion matematica de 
+\begin_inset Formula $S_{\mathcal{P}}(i,\vec{s},\vec{\sigma})$
+\end_inset
+
+, segun se den distintos casos posibles.
+\end_layout
+
+\begin_layout Standard
+Caso 
+\begin_inset Formula $i\notin\{1,...,n(\mathcal{P})\}$
+\end_inset
+
+.
+ Entonces 
+\begin_inset Formula $S_{\mathcal{P}}(i,\vec{s},\vec{\sigma})=(i,\vec{s},\vec{\sigma})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Caso 
+\begin_inset Formula $Bas(I_{i}^{\mathcal{P}})=\mathrm{N}\bar{k}\leftarrow\mathrm{N}\bar{k}\dot{-}1.$
+\end_inset
+
+ Entonces
+\begin_inset Formula 
+\[
+S_{\mathcal{P}}(i,\vec{s},\vec{\sigma})=(i+1,(s_{1},...,s_{k-1},s_{k}\dot{-}1,s_{k+1},...),\vec{\sigma})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Caso 
+\begin_inset Formula $Bas(I_{i}^{\mathcal{P}})=\mathrm{N}\bar{k}\leftarrow\mathrm{N}\bar{k}+1.$
+\end_inset
+
+ Entonces
+\begin_inset Formula 
+\[
+S_{\mathcal{P}}(i,\vec{s},\vec{\sigma})=(i+1,(s_{1},...,s_{k-1},s_{k}+1,s_{k+1},...),\vec{\sigma})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Caso 
+\begin_inset Formula $Bas(I_{i}^{\mathcal{P}})=\mathrm{N}\bar{k}\leftarrow\mathrm{N}\bar{n}$
+\end_inset
+
+.
+ Entonces
+\begin_inset Formula 
+\[
+S_{\mathcal{P}}(i,\vec{s},\vec{\sigma})=(i+1,(s_{1},...,s_{k-1},s_{n},s_{k+1},...),\vec{\sigma})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Caso 
+\begin_inset Formula $Bas(I_{i}^{\mathcal{P}})=\mathrm{N}\bar{k}\leftarrow0.$
+\end_inset
+
+ Entonces
+\begin_inset Formula 
+\[
+S_{\mathcal{P}}(i,\vec{s},\vec{\sigma})=(i+1,(s_{1},...,s_{k-1},0,s_{k+1},...),\vec{\sigma})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Caso 
+\begin_inset Formula $Bas(I_{i}^{\mathcal{P}})=\mathrm{IF}$
+\end_inset
+
+ 
+\begin_inset Formula $\mathrm{N}\bar{k}$
+\end_inset
+
+ 
+\begin_inset Formula $\neq0$
+\end_inset
+
+ 
+\begin_inset Formula $\mathrm{GOTO}$
+\end_inset
+
+ 
+\begin_inset Formula $\mathrm{L}\bar{m}.$
+\end_inset
+
+ Entonces tenemos dos subcasos.
+\end_layout
+
+\begin_layout Standard
+Subcaso a.
+ El valor de 
+\begin_inset Formula $\mathrm{N}\bar{k}$
+\end_inset
+
+ en 
+\begin_inset Formula $(\vec{s},\vec{\sigma})$
+\end_inset
+
+ es 0.
+ Entonces
+\begin_inset Formula 
+\[
+S_{\mathcal{P}}(i,\vec{s},\vec{\sigma})=(i+1,\vec{s},\vec{\sigma})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Subcaso b.
+ El valor de 
+\begin_inset Formula $\mathrm{N}\bar{k}$
+\end_inset
+
+ en 
+\begin_inset Formula $(\vec{s},\vec{\sigma})$
+\end_inset
+
+ es no nulo.
+ Entonces
+\begin_inset Formula 
+\[
+S_{\mathcal{P}}(i,\vec{s},\vec{\sigma})=(\min\{l:I_{l}^{\mathcal{P}}\ \mathrm{tiene\ label\ L}\bar{m}\},\vec{s},\vec{\sigma})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Caso 
+\begin_inset Formula $Bas(I_{i}^{\mathcal{P}})=\mathrm{P}\bar{k}\leftarrow$
+\end_inset
+
+ 
+\begin_inset Formula $^{\curvearrowright}\mathrm{P}\bar{k}.$
+\end_inset
+
+ Entonces
+\begin_inset Formula 
+\[
+S_{\mathcal{P}}(i,\vec{s},\vec{\sigma})=(i+1,\vec{s},(\sigma_{1},...,\sigma_{k-1},^{\curvearrowright}\sigma_{k},\sigma_{k+1},...))
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Caso 
+\begin_inset Formula $Bas(I_{i}^{\mathcal{P}})=\mathrm{P}\bar{k}\leftarrow\mathrm{P}\bar{k}.a$
+\end_inset
+
+.
+ Entonces
+\begin_inset Formula 
+\[
+S_{\mathcal{P}}(i,\vec{s},\vec{\sigma})=(i+1,\vec{s},(\sigma_{1},...,\sigma_{k-1},\sigma_{k}a,\sigma_{k+1},...))
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Caso 
+\begin_inset Formula $Bas(I_{i}^{\mathcal{P}})=\mathrm{P}\bar{k}\leftarrow\mathrm{P}\bar{n}$
+\end_inset
+
+.
+ Entonces
+\begin_inset Formula 
+\[
+S_{\mathcal{P}}(i,\vec{s},\vec{\sigma})=(i+1,\vec{s},(\sigma_{1},...,\sigma_{k-1},\sigma_{n},\sigma_{k+1},...))
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Caso 
+\begin_inset Formula $Bas(I_{i}^{\mathcal{P}})=\mathrm{P}\bar{k}\leftarrow\varepsilon.$
+\end_inset
+
+ Entonces
+\begin_inset Formula 
+\[
+S_{\mathcal{P}}(i,\vec{s},\vec{\sigma})=(i+1,\vec{s},(\sigma_{1},...,\sigma_{k-1},\varepsilon,\sigma_{k+1},...))
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Caso 
+\begin_inset Formula $Bas(I_{i}^{\mathcal{P}})=\mathrm{IF}\;\mathrm{P}\bar{k}\;\mathrm{BEGINS}\;a\;\mathrm{GOTO}\;\mathrm{L}\bar{m}.$
+\end_inset
+
+ Entonces tenemos dos subcasos.
+\end_layout
+
+\begin_layout Standard
+Subcaso a.
+ El valor de 
+\begin_inset Formula $\mathrm{P}\bar{k}$
+\end_inset
+
+ en 
+\begin_inset Formula $(\vec{s},\vec{\sigma})$
+\end_inset
+
+ comiensa con 
+\begin_inset Formula $a$
+\end_inset
+
+.
+ Entonces
+\begin_inset Formula 
+\[
+S_{\mathcal{P}}(i,\vec{s},\vec{\sigma})=(\min\{l:I_{l}^{\mathcal{P}}\ \mathrm{tiene\ label\ L}\bar{m}\},\vec{s},\vec{\sigma})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Subcaso b.
+ El valor de 
+\begin_inset Formula $\mathrm{P}\bar{k}$
+\end_inset
+
+ en 
+\begin_inset Formula $(\vec{s},\vec{\sigma})$
+\end_inset
+
+ no comiensa con 
+\begin_inset Formula $a$
+\end_inset
+
+.
+ Entonces
+\begin_inset Formula 
+\[
+S_{\mathcal{P}}(i,\vec{s},\vec{\sigma})=(i+1,\vec{s},\vec{\sigma})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Caso 
+\begin_inset Formula $Bas(I_{i}^{\mathcal{P}})=\mathrm{GOTO}\;\mathrm{L}\bar{m}$
+\end_inset
+
+.
+ Entonces
+\begin_inset Formula 
+\[
+S_{\mathcal{P}}(i,\vec{s},\vec{\sigma})=(\min\{l:I_{l}^{\mathcal{P}}\ \mathrm{tiene\ label\ L}\bar{m}\},\vec{s},\vec{\sigma})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Caso 
+\begin_inset Formula $Bas(I_{i}^{\mathcal{P}})=\mathrm{SKIP}$
+\end_inset
+
+.
+ Entonces
+\begin_inset Formula 
+\[
+S_{\mathcal{P}}(i,\vec{s},\vec{\sigma})=(i+1,\vec{s},\vec{\sigma})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+La computacion partiendo de un estado
+\end_layout
+
+\begin_layout Standard
+Dado un programa 
+\begin_inset Formula $\mathcal{P}$
+\end_inset
+
+ y un estado 
+\begin_inset Formula $(\vec{s},\vec{\sigma})$
+\end_inset
+
+ a la infinitupla
+\begin_inset Formula 
+\[
+((1,\vec{s},\vec{\sigma}),S_{\mathcal{P}}(1,\vec{s},\vec{\sigma}),S_{\mathcal{P}}(S_{\mathcal{P}}(1,\vec{s},\vec{\sigma})),S_{\mathcal{P}}(S_{\mathcal{P}}(S_{\mathcal{P}}(1,\vec{s},\vec{\sigma}))),...)
+\]
+
+\end_inset
+
+la llamaremos la 
+\shape italic
+computacion de 
+\shape default
+
+\begin_inset Formula $\mathcal{P}$
+\end_inset
+
+
+\shape italic
+
+\begin_inset space \space{}
+\end_inset
+
+partiendo del estado 
+\shape default
+
+\begin_inset Formula $(\vec{s},\vec{\sigma})$
+\end_inset
+
+.
+ Diremos que
+\begin_inset Formula 
+\[
+\overset{t\text{ veces}}{\overbrace{S_{\mathcal{P}}(...S_{\mathcal{P}}(S_{\mathcal{P}}(}}1,\vec{s},\vec{\sigma}))...)
+\]
+
+\end_inset
+
+es la 
+\shape italic
+descripcion instantanea obtenida luego de 
+\shape default
+
+\begin_inset Formula $t$
+\end_inset
+
+ 
+\shape italic
+pasos, partiendo del estado 
+\shape default
+
+\begin_inset Formula $(\vec{s},\vec{\sigma})$
+\end_inset
+
+.
+ Si
+\begin_inset Formula 
+\[
+\overset{t\text{ veces}}{\overbrace{S_{\mathcal{P}}(...S_{\mathcal{P}}(S_{\mathcal{P}}(}}1,\vec{s},\vec{\sigma}))...)=(j,\vec{u},\vec{\eta})
+\]
+
+\end_inset
+
+diremos que 
+\begin_inset Formula $(\vec{u},\vec{\eta})$
+\end_inset
+
+ es el 
+\shape italic
+estado obtenido luego de 
+\shape default
+
+\begin_inset Formula $t$
+\end_inset
+
+ 
+\shape italic
+pasos, partiendo del estado 
+\shape default
+
+\begin_inset Formula $(\vec{s},\vec{\sigma})$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Es claro que en la infinitupla de mas arriba esta toda la informacion de
+ la 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+"
+\end_layout
+
+\end_inset
+
+corrida
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+"
+\end_layout
+
+\end_inset
+
+ del programa 
+\begin_inset Formula $\mathcal{P}$
+\end_inset
+
+ cuando partimos del estado 
+\begin_inset Formula $(\vec{s},\vec{\sigma})$
+\end_inset
+
+.
+ Veamos un ejemplo.
+ Sea 
+\begin_inset Formula $\Sigma=\{\blacktriangle,\#\}$
+\end_inset
+
+ y sea 
+\begin_inset Formula $\mathcal{P}$
+\end_inset
+
+ el siguiente programa
+\begin_inset Formula 
+\[
+\begin{array}{ll}
+\mathrm{L}3 & \mathrm{N}4\leftarrow\mathrm{N}4+1\\
+ & \mathrm{P}1\leftarrow\ ^{\curvearrowright}\mathrm{P}1\\
+ & \mathrm{IF\ P}1\ \mathrm{BEGINS\ }\blacktriangle\ \mathrm{GOTO}\;\mathrm{L}3\\
+ & \mathrm{P}3\leftarrow\mathrm{P}3.\#
+\end{array}
+\]
+
+\end_inset
+
+Supongamos que tomamos 
+\begin_inset Formula $(\vec{s},\vec{\sigma})$
+\end_inset
+
+ igual al estado
+\begin_inset Formula 
+\[
+\left((2,1,0,5,3,0,0,0,...),(\#\blacktriangle\#\#,\varepsilon,\blacktriangle\blacktriangle,\#\blacktriangle,\#,\varepsilon,\varepsilon,\varepsilon,...)\right)
+\]
+
+\end_inset
+
+Tendremos entonces que la computacion de 
+\begin_inset Formula $\mathcal{P}$
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+partiendo del estado 
+\begin_inset Formula $(\vec{s},\vec{\sigma})$
+\end_inset
+
+ es la siguiente sucesion (de arriba hacia abajo) de descripciones instantaneas:
+\begin_inset Formula 
+\begin{gather*}
+(1,(2,1,0,5,3,0,0,0,...),(\#\blacktriangle\#\#,\varepsilon,\blacktriangle\blacktriangle,\#\blacktriangle,\#,\varepsilon,\varepsilon,\varepsilon,...))\\
+\text{realizando }I_{1}^{\mathcal{P}}=\mathrm{N}4\leftarrow\mathrm{N}4+1\text{ obtenemos}\\
+(2,(2,1,0,6,3,0,0,0,...),(\#\blacktriangle\#\#,\varepsilon,\blacktriangle\blacktriangle,\#\blacktriangle,\#,\varepsilon,\varepsilon,\varepsilon,...))\\
+\text{realizando }I_{2}^{\mathcal{P}}=\mathrm{P}1\leftarrow\ ^{\curvearrowright}\mathrm{P}1\text{ obtenemos}\\
+(3,(2,1,0,6,3,0,0,0,...),(\blacktriangle\#\#,\varepsilon,\blacktriangle\blacktriangle,\#\blacktriangle,\#,\varepsilon,\varepsilon,\varepsilon,...))\\
+\text{realizando }I_{3}^{\mathcal{P}}=\mathrm{IF\ P}1\ \mathrm{BEGINS\ }\blacktriangle\ \mathrm{GOTO}\;\mathrm{L}3\text{ obtenemos}\\
+(1,(2,1,0,6,3,0,0,0,...),(\blacktriangle\#\#,\varepsilon,\blacktriangle\blacktriangle,\#\blacktriangle,\#,\varepsilon,\varepsilon,\varepsilon,...))\\
+\text{realizando }I_{1}^{\mathcal{P}}=\mathrm{N}4\leftarrow\mathrm{N}4+1\text{ obtenemos}\\
+(2,(2,1,0,7,3,0,0,0,...),(\blacktriangle\#\#,\varepsilon,\blacktriangle\blacktriangle,\#\blacktriangle,\#,\varepsilon,\varepsilon,\varepsilon,...))\\
+\text{realizando }I_{2}^{\mathcal{P}}=\mathrm{P}1\leftarrow\ ^{\curvearrowright}\mathrm{P}1\text{ obtenemos}\\
+(3,(2,1,0,7,3,0,0,0,...),(\#\#,\varepsilon,\blacktriangle\blacktriangle,\#\blacktriangle,\#,\varepsilon,\varepsilon,\varepsilon,...))\\
+\text{realizando }I_{3}^{\mathcal{P}}=\mathrm{IF\ P}1\ \mathrm{BEGINS\ }\blacktriangle\ \mathrm{GOTO}\;\mathrm{L}3\text{ obtenemos}\\
+(4,(2,1,0,7,3,0,0,0,...),(\#\#,\varepsilon,\blacktriangle\blacktriangle,\#\blacktriangle,\#,\varepsilon,\varepsilon,\varepsilon,...))\\
+\text{realizando }I_{4}^{\mathcal{P}}=\mathrm{P}3\leftarrow\mathrm{P}3.\#\text{ obtenemos}\\
+(5,(2,1,0,7,3,0,0,0,...),(\#\#,\varepsilon,\blacktriangle\blacktriangle\#,\#\blacktriangle,\#,\varepsilon,\varepsilon,\varepsilon,...))\\
+\text{intentando realizar }I_{5}^{\mathcal{P}}=\varepsilon\text{ obtenemos}\\
+(5,(2,1,0,7,3,0,0,0,...),(\#\#,\varepsilon,\blacktriangle\blacktriangle\#,\#\blacktriangle,\#,\varepsilon,\varepsilon,\varepsilon,...))\\
+\text{intentando realizar }I_{5}^{\mathcal{P}}=\varepsilon\text{ obtenemos}\\
+(5,(2,1,0,7,3,0,0,0,...),(\#\#,\varepsilon,\blacktriangle\blacktriangle\#,\#\blacktriangle,\#,\varepsilon,\varepsilon,\varepsilon,...))\\
+\text{intentando realizar }I_{5}^{\mathcal{P}}=\varepsilon\text{ obtenemos}\\
+(5,(2,1,0,7,3,0,0,0,...),(\#\#,\varepsilon,\blacktriangle\blacktriangle\#,\#\blacktriangle,\#,\varepsilon,\varepsilon,\varepsilon,...))\\
+\vdots
+\end{gather*}
+
+\end_inset
+
+Notese que en este caso es natural decir que el programa 
+\begin_inset Formula $\mathcal{P}$
+\end_inset
+
+ se detiene, partiendo del estado inicial dado ya que llega a un punto en
+ el que queda intentando realizar 
+\begin_inset Formula $I_{n(\mathcal{P})+1}^{\mathcal{P}}$
+\end_inset
+
+ lo cual no es una instruccion.
+ Veamos un ejemplo de no detencion.
+ Sea 
+\begin_inset Formula $\mathcal{Q}$
+\end_inset
+
+ el siguiente programa
+\begin_inset Formula 
+\[
+\begin{array}{ll}
+\mathrm{L}3 & \mathrm{N}4\leftarrow\mathrm{N}4+1\\
+ & \mathrm{IF\ P}1\ \mathrm{BEGINS\ }\blacktriangle\ \mathrm{GOTO}\;\mathrm{L}3
+\end{array}
+\]
+
+\end_inset
+
+Supongamos que tomamos 
+\begin_inset Formula $(\vec{s},\vec{\sigma})$
+\end_inset
+
+ igual al estado
+\begin_inset Formula 
+\[
+\left((2,1,0,5,3,0,0,0,...),(\blacktriangle\#\#,\varepsilon,\blacktriangle\blacktriangle,\#\blacktriangle,\#,\varepsilon,\varepsilon,\varepsilon,...)\right)
+\]
+
+\end_inset
+
+Tendremos entonces que la computacion de 
+\begin_inset Formula $\mathcal{Q}$
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+partiendo del estado 
+\begin_inset Formula $(\vec{s},\vec{\sigma})$
+\end_inset
+
+ es la siguiente sucesion (de arriba hacia abajo) de descripciones instantaneas:
+\begin_inset Formula 
+\begin{gather*}
+(1,(2,1,0,5,3,0,0,0,...),(\blacktriangle\#\#,\varepsilon,\blacktriangle\blacktriangle,\#\blacktriangle,\#,\varepsilon,\varepsilon,\varepsilon,...))\\
+\text{realizando }I_{1}^{\mathcal{P}}=\mathrm{N}4\leftarrow\mathrm{N}4+1\text{ obtenemos}\\
+(2,(2,1,0,6,3,0,0,0,...),(\blacktriangle\#\#,\varepsilon,\blacktriangle\blacktriangle,\#\blacktriangle,\#,\varepsilon,\varepsilon,\varepsilon,...))\\
+\text{realizando }I_{2}^{\mathcal{P}}=\mathrm{IF\ P}1\ \mathrm{BEGINS\ }\blacktriangle\ \mathrm{GOTO}\;\mathrm{L}3\text{ obtenemos}\\
+(1,(2,1,0,6,3,0,0,0,...),(\blacktriangle\#\#,\varepsilon,\blacktriangle\blacktriangle,\#\blacktriangle,\#,\varepsilon,\varepsilon,\varepsilon,...))\\
+\text{realizando }I_{1}^{\mathcal{P}}=\mathrm{N}4\leftarrow\mathrm{N}4+1\text{ obtenemos}\\
+(2,(2,1,0,7,3,0,0,0,...),(\blacktriangle\#\#,\varepsilon,\blacktriangle\blacktriangle,\#\blacktriangle,\#,\varepsilon,\varepsilon,\varepsilon,...))\\
+\text{realizando }I_{2}^{\mathcal{P}}=\mathrm{IF\ P}1\ \mathrm{BEGINS\ }\blacktriangle\ \mathrm{GOTO}\;\mathrm{L}3\text{ obtenemos}\\
+(1,(2,1,0,7,3,0,0,0,...),(\blacktriangle\#\#,\varepsilon,\blacktriangle\blacktriangle,\#\blacktriangle,\#,\varepsilon,\varepsilon,\varepsilon,...))\\
+\text{realizando }I_{1}^{\mathcal{P}}=\mathrm{N}4\leftarrow\mathrm{N}4+1\text{ obtenemos}\\
+(2,(2,1,0,8,3,0,0,0,...),(\blacktriangle\#\#,\varepsilon,\blacktriangle\blacktriangle,\#\blacktriangle,\#,\varepsilon,\varepsilon,\varepsilon,...))\\
+\text{realizando }I_{2}^{\mathcal{P}}=\mathrm{IF\ P}1\ \mathrm{BEGINS\ }\blacktriangle\ \mathrm{GOTO}\;\mathrm{L}3\text{ obtenemos}\\
+(1,(2,1,0,8,3,0,0,0,...),(\blacktriangle\#\#,\varepsilon,\blacktriangle\blacktriangle,\#\blacktriangle,\#,\varepsilon,\varepsilon,\varepsilon,...))\\
+\text{realizando }I_{1}^{\mathcal{P}}=\mathrm{N}4\leftarrow\mathrm{N}4+1\text{ obtenemos}\\
+(2,(2,1,0,9,3,0,0,0,...),(\blacktriangle\#\#,\varepsilon,\blacktriangle\blacktriangle,\#\blacktriangle,\#,\varepsilon,\varepsilon,\varepsilon,...))\\
+\text{realizando }I_{2}^{\mathcal{P}}=\mathrm{IF\ P}1\ \mathrm{BEGINS\ }\blacktriangle\ \mathrm{GOTO}\;\mathrm{L}3\text{ obtenemos}\\
+(1,(2,1,0,9,3,0,0,0,...),(\blacktriangle\#\#,\varepsilon,\blacktriangle\blacktriangle,\#\blacktriangle,\#,\varepsilon,\varepsilon,\varepsilon,...))\\
+\vdots
+\end{gather*}
+
+\end_inset
+
+Notese que en este caso, es claro que el programa 
+\begin_inset Formula $\mathcal{Q}$
+\end_inset
+
+ no se detiene partiendo del estado inicial dado ya que sigue indefinidamente
+ realizando instrucciones.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+
+\series bold
+Ejercicio 4:
+\end_layout
+
+\end_inset
+
+V o F o I, justificar
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Si 
+\begin_inset Formula $S_{\mathcal{P}}(i,\vec{s},\vec{\sigma})=(i,\vec{s},\vec{\sigma})$
+\end_inset
+
+, entonces 
+\begin_inset Formula $i\notin\{1,...,n(\mathcal{P})\}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Sea 
+\begin_inset Formula $\mathcal{P}\in\mathrm{Pro}^{\Sigma}$
+\end_inset
+
+ y sea 
+\begin_inset Formula $d$
+\end_inset
+
+ una descripcion instantanea cuya primer coordenada es 
+\begin_inset Formula $i$
+\end_inset
+
+.
+ Si 
+\begin_inset Formula $I_{i}^{\mathcal{P}}=\mathrm{N}2\leftarrow\mathrm{N}2+1$
+\end_inset
+
+, entonces 
+\begin_inset Formula $S_{\mathcal{P}}(d)=(i+1,(\mathrm{N}1,Suc(\mathrm{N}2),\mathrm{N}3,\mathrm{N}4,...),(\mathrm{P}1,\mathrm{P}2,\mathrm{P}3,\mathrm{P}4,...))$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Sea 
+\begin_inset Formula $\mathcal{P}\in\mathrm{Pro}^{\Sigma}$
+\end_inset
+
+ y sea 
+\begin_inset Formula $d$
+\end_inset
+
+ una descripcion instantanea cuya primer coordenada es 
+\begin_inset Formula $i$
+\end_inset
+
+.
+ Si 
+\begin_inset Formula $I_{i}^{\mathcal{P}}=\mathrm{N}2\leftarrow0$
+\end_inset
+
+, entonces 
+\begin_inset Formula $S_{\mathcal{P}}(d)=(i+1,(\mathrm{N}1,0,\mathrm{N}3,\mathrm{N}4,...),(\mathrm{P}1,\mathrm{P}2,\mathrm{P}3,\mathrm{P}4,...))$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Sea 
+\begin_inset Formula $\mathcal{P}\in\mathrm{Pro}^{\Sigma_{p}}$
+\end_inset
+
+ y sea 
+\begin_inset Formula $(i,\vec{s},\vec{\sigma})$
+\end_inset
+
+ una descripcion instantanea.
+ Supongamos 
+\begin_inset Formula $\sigma_{3}=\mathrm{GOTO}$
+\end_inset
+
+.
+ Si 
+\begin_inset Formula $I_{i}^{\mathcal{P}}=\mathrm{L}6\ \mathrm{IF}\;\mathrm{P}3\;\mathrm{BEGINS\ G}\;\mathrm{GOTO}\;\mathrm{L}6$
+\end_inset
+
+, entonces 
+\begin_inset Formula $S_{\mathcal{P}}(i,\vec{s},\vec{\sigma})=(i,\vec{s},\vec{\sigma})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Sea 
+\begin_inset Formula $\mathcal{P}\in\mathrm{Pro}^{\Sigma}$
+\end_inset
+
+, sea 
+\begin_inset Formula $a\in\Sigma$
+\end_inset
+
+ y sea 
+\begin_inset Formula $(i,\vec{s},\vec{\sigma})$
+\end_inset
+
+ una descripcion instantanea.
+ Si 
+\begin_inset Formula $Bas(I_{i}^{\mathcal{P}})=\mathrm{IF}\;\mathrm{P}3\;\mathrm{BEGINS\ }a\ \mathrm{GOTO}\;\mathrm{L}6$
+\end_inset
+
+ y 
+\begin_inset Formula $\left[\mathrm{P}3\right]_{1}=a$
+\end_inset
+
+, entonces 
+\begin_inset Formula $S_{\mathcal{P}}(i,\vec{s},\vec{\sigma})=(j,\vec{s},\vec{\sigma})$
+\end_inset
+
+, donde 
+\begin_inset Formula $j$
+\end_inset
+
+ es el menor numero 
+\begin_inset Formula $l$
+\end_inset
+
+ tal que 
+\begin_inset Formula $I_{l}^{\mathcal{P}}$
+\end_inset
+
+ tiene label 
+\begin_inset Formula $\mathrm{L}6$
+\end_inset
+
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+Definicion matematica de detencion
+\end_layout
+
+\begin_layout Standard
+Ahora definiremos matematicamente el concepto de detencion.
+ Cuando la primer coordenada de
+\begin_inset Formula 
+\[
+\overset{t\text{ veces}}{\overbrace{S_{\mathcal{P}}(...S_{\mathcal{P}}(S_{\mathcal{P}}(}}1,\vec{s},\vec{\sigma}))...)
+\]
+
+\end_inset
+
+sea igual a 
+\begin_inset Formula $n(\mathcal{P})+1$
+\end_inset
+
+, diremos que 
+\begin_inset Formula $\mathcal{P}$
+\end_inset
+
+ 
+\shape italic
+se detiene (luego de 
+\shape default
+
+\begin_inset Formula $t$
+\end_inset
+
+
+\shape italic
+
+\begin_inset space \space{}
+\end_inset
+
+pasos), partiendo desde el estado 
+\shape default
+
+\begin_inset Formula $(\vec{s},\vec{\sigma})$
+\end_inset
+
+.
+ Si ninguna de las primeras coordenadas en la computacion
+\begin_inset Formula 
+\[
+((1,\vec{s},\vec{\sigma}),S_{\mathcal{P}}(1,\vec{s},\vec{\sigma}),S_{\mathcal{P}}(S_{\mathcal{P}}(1,\vec{s},\vec{\sigma})),S_{\mathcal{P}}(S_{\mathcal{P}}(S_{\mathcal{P}}(1,\vec{s},\vec{\sigma}))),...)
+\]
+
+\end_inset
+
+es igual a 
+\begin_inset Formula $n(\mathcal{P})+1$
+\end_inset
+
+, diremos que 
+\begin_inset Formula $\mathcal{P}$
+\end_inset
+
+ 
+\shape italic
+no se detiene partiendo del estado 
+\shape default
+
+\begin_inset Formula $(\vec{s},\vec{\sigma})$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Cabe destacar que en los conceptos antes definidos por 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+"
+\end_layout
+
+\end_inset
+
+1 paso
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+"
+\end_layout
+
+\end_inset
+
+ entendemos 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+"
+\end_layout
+
+\end_inset
+
+realizarp una instrucion
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+"
+\end_layout
+
+\end_inset
+
+, donde tal como se lo explico antes 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+"
+\end_layout
+
+\end_inset
+
+realizarp
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+"
+\end_layout
+
+\end_inset
+
+ significa 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+"
+\end_layout
+
+\end_inset
+
+realizar si se puede
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+"
+\end_layout
+
+\end_inset
+
+.
+ Otra observacion importante es que los programas de 
+\begin_inset Formula $\mathcal{S}^{\Sigma}$
+\end_inset
+
+ tienen una sola manera de detenerse, i.e.
+ siempre que se detienen lo hacen habiendo realizado la ultima de sus instruccio
+nes e intentando realizar la instruccion siguiente a su ultima instruccion
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
+Funciones 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-computables
+\end_layout
+
+\begin_layout Standard
+Ahora que hemos definido matematicamente la semantica de 
+\begin_inset Formula $\mathcal{S}^{\Sigma}$
+\end_inset
+
+ estamos en condiciones de definir el concepto de funcion 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-computable, el cual sera una modelizacion matematica del concepto de funcion
+ 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-efectivamente computable.
+ Intuitivamente hablando una funcion sera 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-computable cuando haya un programa que la compute.
+ Para precisar este concepto nos sera util la siguiente notacion.
+ Dados 
+\begin_inset Formula $x_{1},...,x_{n}\in\omega$
+\end_inset
+
+ y 
+\begin_inset Formula $\alpha_{1},...,\alpha_{m}\in\Sigma^{\ast}$
+\end_inset
+
+, con 
+\begin_inset Formula $n,m\in\omega$
+\end_inset
+
+, usaremos
+\begin_inset Formula 
+\[
+\left\Vert x_{1},...,x_{n},\alpha_{1},...,\alpha_{m}\right\Vert 
+\]
+
+\end_inset
+
+para denotar el estado
+\begin_inset Formula 
+\[
+\left((x_{1},...,x_{n},0,...),(\alpha_{1},...,\alpha_{m},\varepsilon,...)\right)
+\]
+
+\end_inset
+
+Esta notacion requiere aclarar un poco como debe interpretarse en los casos
+ limite, es decir cuando alguno de los numeros 
+\begin_inset Formula $n,m$
+\end_inset
+
+ es igual a 
+\begin_inset Formula $0$
+\end_inset
+
+.
+ Notese que por ejemplo
+\begin_inset Formula 
+\[
+\left\Vert x\right\Vert =\left((x,0,...),(\varepsilon,...)\right)
+\]
+
+\end_inset
+
+(es el caso 
+\begin_inset Formula $n=1$
+\end_inset
+
+ y 
+\begin_inset Formula $m=0$
+\end_inset
+
+).
+ Tambien
+\begin_inset Formula 
+\[
+\left\Vert \alpha\right\Vert =\left((0,...),(\alpha,\varepsilon,...)\right)
+\]
+
+\end_inset
+
+(es el caso 
+\begin_inset Formula $n=0$
+\end_inset
+
+ y 
+\begin_inset Formula $m=1$
+\end_inset
+
+).
+ En el caso 
+\begin_inset Formula $n=m=0$
+\end_inset
+
+ pensaremos que 
+\begin_inset Formula $x_{1},...,x_{n},\alpha_{1},...,\alpha_{m}$
+\end_inset
+
+ se transforma en 
+\begin_inset Formula $\Diamond$
+\end_inset
+
+ por lo que se obtiene
+\begin_inset Formula 
+\[
+\left\Vert \Diamond\right\Vert =\left((0,...),(\varepsilon,...)\right)
+\]
+
+\end_inset
+
+Ademas es claro que
+\begin_inset Formula 
+\[
+\left\Vert x_{1},...,x_{n},\alpha_{1},...,\alpha_{m}\right\Vert =\left\Vert x_{1},...,x_{n},\overset{i}{\overbrace{0,...,0}},\alpha_{1},...,\alpha_{m},\overset{j}{\overbrace{\varepsilon,...,\varepsilon}}\right\Vert 
+\]
+
+\end_inset
+
+cualesquiera sean 
+\begin_inset Formula $i,j\in\omega$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Dado 
+\begin_inset Formula $\mathcal{P}\in\mathrm{Pro}^{\Sigma}$
+\end_inset
+
+, definamos para cada par 
+\begin_inset Formula $n,m\geq0$
+\end_inset
+
+, la funcion 
+\begin_inset Formula $\Psi_{\mathcal{P}}^{n,m,\#}$
+\end_inset
+
+ de la siguiente manera:
+\begin_inset Formula 
+\[
+\begin{array}{l}
+D_{\Psi_{\mathcal{P}}^{n,m,\#}}=\{(\vec{x},\vec{\alpha})\in\omega^{n}\times\Sigma^{\ast m}:\mathcal{P}\text{ termina, partiendo del}\\
+\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\text{estado }\left\Vert x_{1},...,x_{n},\alpha_{1},...,\alpha_{m}\right\Vert \}
+\end{array}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\begin{array}{l}
+\Psi_{\mathcal{P}}^{n,m,\#}(\vec{x},\vec{\alpha})=\text{valor de }\mathrm{N}1\text{ en el estado obtenido cuando }\mathcal{P}\text{ termina,}\\
+\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\text{partiendo de }\left\Vert x_{1},...,x_{n},\alpha_{1},...,\alpha_{m}\right\Vert 
+\end{array}
+\]
+
+\end_inset
+
+Analogamente definamos la funcion 
+\begin_inset Formula $\Psi_{\mathcal{P}}^{n,m,\ast}$
+\end_inset
+
+ de la siguiente manera:
+\begin_inset Formula 
+\[
+\begin{array}{l}
+D_{\Psi_{\mathcal{P}}^{n,m,\ast}}=\{(\vec{x},\vec{\alpha})\in\omega^{n}\times\Sigma^{\ast m}:\mathcal{P}\text{ termina, partiendo del}\\
+\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\text{estado }\left\Vert x_{1},...,x_{n},\alpha_{1},...,\alpha_{m}\right\Vert \}
+\end{array}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\begin{array}{l}
+\Psi_{\mathcal{P}}^{n,m,\ast}(\vec{x},\vec{\alpha})=\text{valor de }\mathrm{P}1\text{ en el estado obtenido cuando }\mathcal{P}\text{ termina,}\\
+\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\text{partiendo de }\left\Vert x_{1},...,x_{n},\alpha_{1},...,\alpha_{m}\right\Vert 
+\end{array}
+\]
+
+\end_inset
+
+Ahora si daremos la definicion precisa de funcion 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-computable.
+ Una funcion 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-mixta 
+\begin_inset Formula $f:S\subseteq\omega^{n}\times\Sigma^{\ast m}\rightarrow\omega$
+\end_inset
+
+ sera llamada 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+
+\shape italic
+-computable
+\shape default
+ si hay un programa 
+\begin_inset Formula $\mathcal{P}$
+\end_inset
+
+ de 
+\begin_inset Formula $\mathcal{S}^{\Sigma}$
+\end_inset
+
+ tal que 
+\begin_inset Formula $f=\Psi_{\mathcal{P}}^{n,m,\#}$
+\end_inset
+
+.
+ En tal caso diremos que la funcion 
+\begin_inset Formula $f$
+\end_inset
+
+ es 
+\shape italic
+computada
+\shape default
+ por 
+\begin_inset Formula $\mathcal{P}$
+\end_inset
+
+.
+ Analogamente una funcion 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-mixta 
+\begin_inset Formula $f:S\subseteq\omega^{n}\times\Sigma^{\ast m}\rightarrow\Sigma^{\ast}$
+\end_inset
+
+ sera llamada 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+
+\shape italic
+-computable
+\shape default
+ si hay un programa 
+\begin_inset Formula $\mathcal{P}$
+\end_inset
+
+ de 
+\begin_inset Formula $\mathcal{S}^{\Sigma}$
+\end_inset
+
+ tal que 
+\begin_inset Formula $f=\Psi_{\mathcal{P}}^{n,m,\ast}$
+\end_inset
+
+.
+ En tal caso diremos que la funcion 
+\begin_inset Formula $f$
+\end_inset
+
+ es 
+\shape italic
+computada
+\shape default
+ por 
+\begin_inset Formula $\mathcal{P}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Algunos ejemplos:
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+E
+\begin_inset Formula $_{1}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+El programa
+\begin_inset Formula 
+\[
+\begin{array}{ll}
+\mathrm{L}2 & \mathrm{IF}\;\mathrm{N}1\neq0\;\mathrm{GOTO}\;\mathrm{L}1\\
+ & \mathrm{GOTO}\;\mathrm{L}2\\
+\mathrm{L}1 & \mathrm{N}1\leftarrow\mathrm{N}1\dot{-}1
+\end{array}
+\]
+
+\end_inset
+
+computa la funcion 
+\begin_inset Formula $Pred$
+\end_inset
+
+.
+ Note que este programa tambien computa las funciones 
+\begin_inset Formula $Pred\circ p_{1}^{n,m}$
+\end_inset
+
+, para 
+\begin_inset Formula $n\geq1$
+\end_inset
+
+ y 
+\begin_inset Formula $m\geq0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+E
+\begin_inset Formula $_{2}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+Sea 
+\begin_inset Formula $\Sigma=\{\clubsuit,\triangle\}.$
+\end_inset
+
+ El programa
+\begin_inset Formula 
+\[
+\begin{array}{ll}
+\mathrm{L}3 & \mathrm{IF}\;\mathrm{P}2\;\mathrm{BEGINS}\;\clubsuit\;\mathrm{GOTO}\;\mathrm{L}1\\
+ & \mathrm{IF}\;\mathrm{P}2\;\mathrm{BEGINS}\;\triangle\;\mathrm{GOTO}\;\mathrm{L}2\\
+ & \mathrm{GOTO}\;\mathrm{L}4\\
+\mathrm{L}1 & \mathrm{P}2\leftarrow\text{ }^{\curvearrowright}\mathrm{P}2\\
+ & \mathrm{P}1\leftarrow\mathrm{P}1\clubsuit\\
+ & \mathrm{GOTO}\;\mathrm{L}3\\
+\mathrm{L}2 & \mathrm{P}2\leftarrow\text{ }^{\curvearrowright}\mathrm{P}2\\
+ & \mathrm{P}1\leftarrow\mathrm{P}1\triangle\\
+ & \mathrm{GOTO}\;\mathrm{L}3\\
+\mathrm{L}4 & \mathrm{SKIP}
+\end{array}
+\]
+
+\end_inset
+
+computa la funcion 
+\begin_inset Formula $\lambda\alpha\beta\left[\alpha\beta\right].$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Por supuesto para que el concepto de funcion 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-computable tenga chance de ser una modelizacion adecuada del concepto de
+ funcion 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-efectivamente computable, tiene que ser cierto el siguiente resultado.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{proposition}
+\end_layout
+
+\end_inset
+
+ Si 
+\begin_inset Formula $f$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-computable, entonces 
+\begin_inset Formula $f$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-efectivamente computable.
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{proposition}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+
+\series bold
+Ejercicio 5:
+\end_layout
+
+\end_inset
+
+Pruebe la proposicion anterior 
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Sin envargo nuestro modelo imperativo de funcion 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-efectivamente computable todavia podria no ser correcto ya que podria pasar
+ que haya una funcion 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-mixta que sea computada por un procedimiento efectivo pero que no exista
+ un programa de 
+\begin_inset Formula $\mathcal{S}^{\Sigma}$
+\end_inset
+
+ que la compute.
+ En otras palabras el modelo imperativo o Neumanniano podria ser incompleto.
+ Por supuesto este no es el caso y los desarrollos que veremos mas adelante
+ nos convenceran de que el paradigma imperativo es completo.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+
+\series bold
+Ejercicio 6:
+\end_layout
+
+\end_inset
+
+Sea 
+\begin_inset Formula $\Sigma=\{\#,@\}$
+\end_inset
+
+.
+ Para cada una de las siguientes funciones haga un programa que la compute
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $f:\{0,1,2\}\rightarrow\omega$
+\end_inset
+
+, dada por 
+\begin_inset Formula $f(0)=f(1)=0$
+\end_inset
+
+ y 
+\begin_inset Formula $f(2)=5$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\lambda xy[x+y]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $C_{0}^{1,1}\mathrm{\mid}_{\{0,1\}\times\Sigma^{\ast}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $p_{4}^{2,3}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\lambda i\alpha\left[\left[\alpha\right]_{i}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\lambda\alpha\lbrack\sqrt{\alpha}]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $f:\omega^{2}\times\{1,2,3\}\rightarrow\omega,$
+\end_inset
+
+ 
+\begin_inset Formula $f(x_{1},x_{2},x_{3})=x_{x_{3}}$
+\end_inset
+
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+
+\series bold
+Ejercicio 7:
+\end_layout
+
+\end_inset
+
+Sea 
+\begin_inset Formula $\Sigma=\{@,\&\}$
+\end_inset
+
+.
+ De un programa que compute la funcion 
+\begin_inset Formula $s^{\leq}$
+\end_inset
+
+, donde 
+\begin_inset Formula $\leq$
+\end_inset
+
+ esta dado por 
+\begin_inset Formula $@<\&$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+
+\series bold
+Ejercicio 8:
+\end_layout
+
+\end_inset
+
+V o F o I, justificar
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Dado 
+\begin_inset Formula $\mathcal{P}\in\mathrm{Pro}^{\Sigma}$
+\end_inset
+
+ y 
+\begin_inset Formula $n,m\geq0$
+\end_inset
+
+, se tiene que 
+\begin_inset Formula $\Psi_{\mathcal{P}}^{n,m,\#}:\omega^{\lbrack\mathbf{N}]}\times\Sigma^{\ast\lbrack\mathbf{N}]}\rightarrow\omega$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\Psi_{\mathrm{L}1\mathrm{IFN}1\neq0\mathrm{GOTOL}1}^{1,0,\#}=\{(0,0)\}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Sea 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+ un alfabeto y sean 
+\begin_inset Formula $n,m\in\omega$
+\end_inset
+
+.
+ Sea 
+\begin_inset Formula $\mathcal{P}\in\mathrm{Pro}^{\Sigma}$
+\end_inset
+
+.
+ Entonces el dominio de 
+\begin_inset Formula $\Psi_{\mathcal{P}}^{n,m,\#}$
+\end_inset
+
+ es el conjunto formado por todos los estados a partir de los cuales 
+\begin_inset Formula $\mathcal{P}$
+\end_inset
+
+ termina
+\end_layout
+
+\begin_layout Enumerate
+Sea 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+ un alfabeto y sean 
+\begin_inset Formula $n,m\in\omega$
+\end_inset
+
+.
+ Entonces cualesquiera sean 
+\begin_inset Formula $x_{1},...,x_{n}\in\omega$
+\end_inset
+
+ y 
+\begin_inset Formula $\alpha_{1},...,\alpha_{m}\in\Sigma^{\ast}$
+\end_inset
+
+ se tiene que
+\begin_inset Formula 
+\[
+\Psi_{\mathrm{SKIP}}^{n,m,\#}((x_{1},...,x_{n},0,0,...),(\alpha_{1},...,\alpha_{m},\varepsilon,\varepsilon,...))=x_{1}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+El programa
+\begin_inset Formula 
+\[
+\mathrm{N}1\leftarrow\mathrm{N}1\dot{-}1
+\]
+
+\end_inset
+
+computa la funcion 
+\begin_inset Formula $\lambda x_{2}x_{1}[x_{2}\dot{-}1]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $Suc$
+\end_inset
+
+ se detiene para todo 
+\begin_inset Formula $x\in\omega$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Si 
+\begin_inset Formula $\mathcal{P}$
+\end_inset
+
+ computa una función 
+\begin_inset Formula $f:D_{f}\subseteq\omega^{2}\rightarrow\omega$
+\end_inset
+
+, entonces 
+\begin_inset Formula $\mathcal{P}$
+\end_inset
+
+ computa la función 
+\begin_inset Formula $f\circ\left[p_{1}^{1,0},C_{0}^{1,0}\right].$
+\end_inset
+
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+
+\series bold
+Ejercicio 9:
+\end_layout
+
+\end_inset
+
+Sea 
+\begin_inset Formula $\Sigma=\Sigma_{p}\cup\{a,b,c,d,e,f,g,...,x,y,z\}$
+\end_inset
+
+.
+ De una funcion 
+\begin_inset Formula $f:\Sigma^{\ast}\rightarrow\Sigma^{\ast}$
+\end_inset
+
+ la cual sea 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-p.r.
+ y tal que 
+\begin_inset Formula $\Psi_{f(\mathcal{P})}^{1,1,\#}=\Psi_{\mathcal{P}}^{1,1,\#}\circ\left[\lambda x\alpha\lbrack x+2],C_{bb}^{1,1}\right]$
+\end_inset
+
+, cualesquiera sea 
+\begin_inset Formula $\mathcal{P}\in\mathrm{Pro}^{\Sigma}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
+Macros
+\end_layout
+
+\begin_layout Standard
+Supongamos que estamos escribiendo un programa 
+\begin_inset Formula $\mathcal{P}$
+\end_inset
+
+ de 
+\begin_inset Formula $\mathcal{S}^{\Sigma}$
+\end_inset
+
+ con el objeto de que realice cierta tarea.
+ Supongamos ademas que nos vendria muy bien para nuestros propositos poder
+ usar una instruccion
+\begin_inset Formula 
+\[
+\mathrm{N}5\leftarrow\mathrm{N}16+\mathrm{N}3
+\]
+
+\end_inset
+
+la cual por supuesto al correr el programa, deberia producir el efecto de
+ dejar en la variable 
+\begin_inset Formula $\mathrm{N}5$
+\end_inset
+
+ la suma de los contenidos de las variables 
+\begin_inset Formula $\mathrm{N}16$
+\end_inset
+
+ y 
+\begin_inset Formula $\mathrm{N}3$
+\end_inset
+
+, sin modificar el contenido de las variables distintas a 
+\begin_inset Formula $\mathrm{N}5$
+\end_inset
+
+.
+ Lamentablemente no tenemos en 
+\begin_inset Formula $\mathcal{S}^{\Sigma}$
+\end_inset
+
+ este tipo de instruccion pero podriamos reemplazarla por el siguiente programa
+\begin_inset Formula 
+\[
+\begin{array}{ll}
+ & \mathrm{N}1111\leftarrow\mathrm{N}16\\
+ & \mathrm{N}2222\leftarrow\mathrm{N}3\\
+ & \mathrm{N}5\leftarrow\mathrm{N}1111\\
+\mathrm{L}1000 & \mathrm{IF}\;\mathrm{N}2222\neq0\;\mathrm{GOTO}\;\mathrm{L}2000\\
+ & \mathrm{GOTO}\;\mathrm{L}3000\\
+\mathrm{L}2000 & \mathrm{N}2222\leftarrow\mathrm{N}2222\dot{-}1\\
+ & \mathrm{N}5\leftarrow\mathrm{N}5+1\\
+ & \mathrm{GOTO}\;\mathrm{L}1000\\
+\mathrm{L}3000 & \mathrm{SKIP}
+\end{array}
+\]
+
+\end_inset
+
+donde las variables 
+\begin_inset Formula $\mathrm{N}1111$
+\end_inset
+
+, 
+\begin_inset Formula $\mathrm{N}2222$
+\end_inset
+
+ y los labels 
+\begin_inset Formula $\mathrm{L}1000$
+\end_inset
+
+, 
+\begin_inset Formula $\mathrm{L}2000$
+\end_inset
+
+, 
+\begin_inset Formula $\mathrm{L}3000$
+\end_inset
+
+ solo seran usados aqui, es decir no apareceran en el resto de nuestro programa
+ 
+\begin_inset Formula $\mathcal{P}$
+\end_inset
+
+.
+ Notese que este programa cuando es corrido termina dejando en la variable
+ 
+\begin_inset Formula $\mathrm{N}5$
+\end_inset
+
+ la suma de los contenidos de las variables 
+\begin_inset Formula $\mathrm{N}16$
+\end_inset
+
+ y 
+\begin_inset Formula $\mathrm{N}3$
+\end_inset
+
+ y modifica el contenido de las variables 
+\begin_inset Formula $\mathrm{N}1111$
+\end_inset
+
+ y 
+\begin_inset Formula $\mathrm{N}2222$
+\end_inset
+
+, lo cual no traera problemas ya que 
+\begin_inset Formula $\mathrm{N}1111$
+\end_inset
+
+ y 
+\begin_inset Formula $\mathrm{N}2222$
+\end_inset
+
+ no se usan en el resto de 
+\begin_inset Formula $\mathcal{P}$
+\end_inset
+
+.
+ La variables 
+\begin_inset Formula $\mathrm{N}1111$
+\end_inset
+
+ y 
+\begin_inset Formula $\mathrm{N}2222$
+\end_inset
+
+ son auxiliares y se usan justamente para preservar el valor de las variables
+ 
+\begin_inset Formula $\mathrm{N}16$
+\end_inset
+
+ y 
+\begin_inset Formula $\mathrm{N}3$
+\end_inset
+
+ ya que ellas son variables protagonistas de nuestro programa 
+\begin_inset Formula $\mathcal{P}$
+\end_inset
+
+ y en esta instancia no queremos alterar su contenido sino solo realizar
+ la asignacion 
+\begin_inset Formula $\mathrm{N}5\leftarrow\mathrm{N}16+\mathrm{N}3$
+\end_inset
+
+.
+ Dejamos al lector explicar por que es necesario para que la simulacion
+ sea correcta que los labels 
+\begin_inset Formula $\mathrm{L}1000$
+\end_inset
+
+, 
+\begin_inset Formula $\mathrm{L}2000$
+\end_inset
+
+ y 
+\begin_inset Formula $\mathrm{L}3000$
+\end_inset
+
+ no sean usados en el resto de 
+\begin_inset Formula $\mathcal{P}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Es decir el programa anterior simula la instruccion 
+\begin_inset Formula $\mathrm{N}5\leftarrow\mathrm{N}16+\mathrm{N}3$
+\end_inset
+
+ que no podiamos usar por no ser una instruccion de 
+\begin_inset Formula $\mathcal{S}^{\Sigma}$
+\end_inset
+
+, con un costo bastante bajo, es decir el costo de convenir en no usar en
+ el resto de 
+\begin_inset Formula $\mathcal{P}$
+\end_inset
+
+ las variables 
+\begin_inset Formula $\mathrm{N}1111$
+\end_inset
+
+ y 
+\begin_inset Formula $\mathrm{N}2222$
+\end_inset
+
+ ni los labels 
+\begin_inset Formula $\mathrm{L}1000$
+\end_inset
+
+, 
+\begin_inset Formula $\mathrm{L}2000$
+\end_inset
+
+ y 
+\begin_inset Formula $\mathrm{L}3000$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Ahora supongamos que seguimos escribiendo el programa 
+\begin_inset Formula $\mathcal{P}$
+\end_inset
+
+ y nos hace falta simular la instruccion 
+\begin_inset Formula $\mathrm{N}20\leftarrow\mathrm{N}1+\mathrm{N}14$
+\end_inset
+
+.
+ Entonces es claro que podriamos modificar el programa que simulaba 
+\begin_inset Formula $\mathrm{N}5\leftarrow\mathrm{N}16+\mathrm{N}3$
+\end_inset
+
+ haciendole reemplazos adecuados a sus variables y labels.
+ Por ejemplo podriamos escribir
+\begin_inset Formula 
+\[
+\begin{array}{ll}
+ & \mathrm{N}9999\leftarrow\mathrm{N}1\\
+ & \mathrm{N}8888\leftarrow\mathrm{N}14\\
+ & \mathrm{N}20\leftarrow\mathrm{N}9999\\
+\mathrm{L}1001 & \mathrm{IF}\;\mathrm{N}8888\neq0\;\mathrm{GOTO}\;\mathrm{L}2002\\
+ & \mathrm{GOTO}\;\mathrm{L}3003\\
+\mathrm{L}2002 & \mathrm{N}8888\leftarrow\mathrm{N}8888\dot{-}1\\
+ & \mathrm{N}20\leftarrow\mathrm{N}20+1\\
+ & \mathrm{GOTO}\;\mathrm{L}1001\\
+\mathrm{L}3003 & \mathrm{SKIP}
+\end{array}
+\]
+
+\end_inset
+
+donde 
+\begin_inset Formula $\mathrm{N}9999$
+\end_inset
+
+, 
+\begin_inset Formula $\mathrm{N}8888$
+\end_inset
+
+, 
+\begin_inset Formula $\mathrm{L}1001$
+\end_inset
+
+, 
+\begin_inset Formula $\mathrm{L}2002$
+\end_inset
+
+ y 
+\begin_inset Formula $\mathrm{L}3003$
+\end_inset
+
+ solo seran usados aqui, es decir no apareceran en el resto de nuestro programa
+ 
+\begin_inset Formula $\mathcal{P}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Consideremos el siguiente 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+"
+\end_layout
+
+\end_inset
+
+molde
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+"
+\end_layout
+
+\end_inset
+
+ que llamaremos 
+\begin_inset Formula $M$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\begin{array}{ll}
+ & \mathrm{V}4\leftarrow\mathrm{V}2\\
+ & \mathrm{V}5\leftarrow\mathrm{V}3\\
+ & \mathrm{V}1\leftarrow\mathrm{V}4\\
+\mathrm{A}1 & \mathrm{IF}\;\mathrm{V}5\neq0\;\mathrm{GOTO}\;\mathrm{A}2\\
+ & \mathrm{GOTO}\;\mathrm{A}3\\
+\mathrm{A}2 & \mathrm{V}5\leftarrow\mathrm{V}5\dot{-}1\\
+ & \mathrm{V}1\leftarrow\mathrm{V}1+1\\
+ & \mathrm{GOTO}\;\mathrm{A}1\\
+\mathrm{A}3 & \mathrm{SKIP}
+\end{array}
+\]
+
+\end_inset
+
+Como puede notarse, cuando reemplazamos en 
+\begin_inset Formula $M$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+
+cada ocurrencia de 
+\begin_inset Formula $\mathrm{V}1$
+\end_inset
+
+ por 
+\begin_inset Formula $\mathrm{N}5$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+
+cada ocurrencia de 
+\begin_inset Formula $\mathrm{V}2$
+\end_inset
+
+ por 
+\begin_inset Formula $\mathrm{N}16$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+
+cada ocurrencia de 
+\begin_inset Formula $\mathrm{V}3$
+\end_inset
+
+ por 
+\begin_inset Formula $\mathrm{N}3$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+
+cada ocurrencia de 
+\begin_inset Formula $\mathrm{V}4$
+\end_inset
+
+ por 
+\begin_inset Formula $\mathrm{N}1111$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+
+cada ocurrencia de 
+\begin_inset Formula $\mathrm{V}5$
+\end_inset
+
+ por 
+\begin_inset Formula $\mathrm{N}2222$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+
+cada ocurrencia de 
+\begin_inset Formula $\mathrm{A}1$
+\end_inset
+
+ por 
+\begin_inset Formula $\mathrm{L}1000$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+
+cada ocurrencia de 
+\begin_inset Formula $\mathrm{A}2$
+\end_inset
+
+ por 
+\begin_inset Formula $\mathrm{L}2000$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+
+cada ocurrencia de 
+\begin_inset Formula $\mathrm{A}3$
+\end_inset
+
+ por 
+\begin_inset Formula $\mathrm{L}3000$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\noindent
+obtenemos el programa que simulaba la instruccion 
+\begin_inset Formula $\mathrm{N}5\leftarrow\mathrm{N}16+\mathrm{N}3$
+\end_inset
+
+ dentro de 
+\begin_inset Formula $\mathcal{P}$
+\end_inset
+
+.
+ Similarmente, cuando reemplazamos en 
+\begin_inset Formula $M$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+
+cada ocurrencia de 
+\begin_inset Formula $\mathrm{V}1$
+\end_inset
+
+ por 
+\begin_inset Formula $\mathrm{N}20$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+
+cada ocurrencia de 
+\begin_inset Formula $\mathrm{V}2$
+\end_inset
+
+ por 
+\begin_inset Formula $\mathrm{N}1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+
+cada ocurrencia de 
+\begin_inset Formula $\mathrm{V}3$
+\end_inset
+
+ por 
+\begin_inset Formula $\mathrm{N}14$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+
+cada ocurrencia de 
+\begin_inset Formula $\mathrm{V}4$
+\end_inset
+
+ por 
+\begin_inset Formula $\mathrm{N}9999$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+
+cada ocurrencia de 
+\begin_inset Formula $\mathrm{V}5$
+\end_inset
+
+ por 
+\begin_inset Formula $\mathrm{N}8888$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+
+cada ocurrencia de 
+\begin_inset Formula $\mathrm{A}1$
+\end_inset
+
+ por 
+\begin_inset Formula $\mathrm{L}1001$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+
+cada ocurrencia de 
+\begin_inset Formula $\mathrm{A}2$
+\end_inset
+
+ por 
+\begin_inset Formula $\mathrm{L}2002$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+
+cada ocurrencia de 
+\begin_inset Formula $\mathrm{A}3$
+\end_inset
+
+ por 
+\begin_inset Formula $\mathrm{L}3003$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\noindent
+obtenemos el programa que simulaba la instruccion 
+\begin_inset Formula $\mathrm{N}20\leftarrow\mathrm{N}1+\mathrm{N}14$
+\end_inset
+
+ dentro de 
+\begin_inset Formula $\mathcal{P}$
+\end_inset
+
+.
+ La practicidad de tener el molde 
+\begin_inset Formula $M$
+\end_inset
+
+ cae de maduro.
+ Ahora en caso de necesitar una instruccion del tipo 
+\begin_inset Formula $\mathrm{N}\bar{k}\leftarrow\mathrm{N}\bar{n}+\mathrm{N}\bar{m}$
+\end_inset
+
+ solo tenemos que reemplazar en 
+\begin_inset Formula $M$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+
+cada ocurrencia de 
+\begin_inset Formula $\mathrm{V}1$
+\end_inset
+
+ por 
+\begin_inset Formula $\mathrm{N}\bar{k}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+
+cada ocurrencia de 
+\begin_inset Formula $\mathrm{V}2$
+\end_inset
+
+ por 
+\begin_inset Formula $\mathrm{N}\bar{n}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+
+cada ocurrencia de 
+\begin_inset Formula $\mathrm{V}3$
+\end_inset
+
+ por 
+\begin_inset Formula $\mathrm{N}\bar{m}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\noindent
+y reemplazar las 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+"
+\end_layout
+
+\end_inset
+
+variables
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+"
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $\mathrm{V}4$
+\end_inset
+
+ y 
+\begin_inset Formula $\mathrm{V}5$
+\end_inset
+
+ y los 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+"
+\end_layout
+
+\end_inset
+
+labels
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+"
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $\mathrm{A}1$
+\end_inset
+
+, 
+\begin_inset Formula $\mathrm{A}2$
+\end_inset
+
+ y 
+\begin_inset Formula $\mathrm{A}3$
+\end_inset
+
+, por dos variables concretas y tres labels concretos que no se usen en
+ el programa que estamos realizando.
+ El programa asi obtenido simulara a la instruccion 
+\begin_inset Formula $\mathrm{N}\bar{k}\leftarrow\mathrm{N}\bar{n}+\mathrm{N}\bar{m}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+En la gerga computacional el molde 
+\begin_inset Formula $M$
+\end_inset
+
+ suele llamarse 
+\shape italic
+macro
+\shape default
+ y los programas obtenidos luego de realizar los reemplazos son llamados
+ 
+\shape italic
+expansiones de 
+\shape default
+
+\begin_inset Formula $M$
+\end_inset
+
+.
+ Notese que 
+\begin_inset Formula $Ti(M)=\mathrm{PALABRA}$
+\end_inset
+
+ ya que, como en el caso de los programas, escribimos a 
+\begin_inset Formula $M$
+\end_inset
+
+ linea por linea para facilitar su manejo pero en realidad es una sola palabra,
+ a saber:
+\begin_inset Formula 
+\[
+\mathrm{V}1\mathrm{\leftarrow}\text{V}2\mathrm{V}4\mathrm{\leftarrow}\text{V}3\mathrm{A}1\mathrm{IFV}4\mathrm{\neq}0\mathrm{GOTOA}2\mathrm{GOTOA}3\mathrm{A}2\mathrm{V}4\mathrm{\leftarrow}\text{V}4\mathrm{\dot{-}}1\mathrm{V}1\mathrm{\leftarrow}\text{V}1\mathrm{+}1\mathrm{GOTOA}1\mathrm{A}3\mathrm{SKIP}
+\]
+
+\end_inset
+
+Es decir, como objeto matematico, 
+\begin_inset Formula $M$
+\end_inset
+
+ es simplemente una palabra.
+ A las palabras de la forma 
+\begin_inset Formula $\mathrm{V}\bar{n}$
+\end_inset
+
+, con 
+\begin_inset Formula $n\in\mathbf{N}$
+\end_inset
+
+, las llamaremos 
+\shape italic
+variables numericas de macro
+\shape default
+.
+ A las palabras de la forma 
+\begin_inset Formula $\mathrm{W}\bar{n}$
+\end_inset
+
+, con 
+\begin_inset Formula $n\in\mathbf{N}$
+\end_inset
+
+, las llamaremos 
+\shape italic
+variables alfabeticas de macro
+\shape default
+ y a las palabras de la forma 
+\begin_inset Formula $\mathrm{A}\bar{n}$
+\end_inset
+
+, con 
+\begin_inset Formula $n\in\mathbf{N}$
+\end_inset
+
+, las llamaremos 
+\shape italic
+labels de macro
+\shape default
+.
+ Nuestro macro 
+\begin_inset Formula $M$
+\end_inset
+
+ no tiene variables alfabeticas de macro pero otros macros por supuesto
+ pueden tener este tipo de variables.
+\end_layout
+
+\begin_layout Standard
+Las variables 
+\begin_inset Formula $\mathrm{V}1$
+\end_inset
+
+, 
+\begin_inset Formula $\mathrm{V}2$
+\end_inset
+
+ y 
+\begin_inset Formula $\mathrm{V}3$
+\end_inset
+
+ son llamadas 
+\shape italic
+variables oficiales
+\shape default
+ de 
+\begin_inset Formula $M$
+\end_inset
+
+ ya que son las variables que seran reemplazadas por variables que son protagoni
+stas dentro del programa 
+\begin_inset Formula $\mathcal{P}$
+\end_inset
+
+ que usara la expansion de 
+\begin_inset Formula $M$
+\end_inset
+
+.
+ Las palabras 
+\begin_inset Formula $\mathrm{V}4$
+\end_inset
+
+ y 
+\begin_inset Formula $\mathrm{V}5$
+\end_inset
+
+ son llamadas 
+\shape italic
+variables auxiliares
+\shape default
+ de 
+\begin_inset Formula $M$
+\end_inset
+
+ ya que seran reemplazadas por variables que se usaran solo dentro de la
+ expansion y no intervienen en la 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+"
+\end_layout
+
+\end_inset
+
+trama
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+"
+\end_layout
+
+\end_inset
+
+ del programa 
+\begin_inset Formula $\mathcal{P}$
+\end_inset
+
+.
+ Tambien 
+\begin_inset Formula $\mathrm{A}1$
+\end_inset
+
+, 
+\begin_inset Formula $\mathrm{A}2$
+\end_inset
+
+ y 
+\begin_inset Formula $\mathrm{A}3$
+\end_inset
+
+ son llamados 
+\shape italic
+labels auxiliares
+\shape default
+ de 
+\begin_inset Formula $M$
+\end_inset
+
+ ya que son usados solo para su funcionamiento interno y no tienen vinculacion
+ con los labels del programa 
+\begin_inset Formula $\mathcal{P}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+En el siguiente ejemplo veremos un macro que tiene un label que no es auxiliar
+ sino oficial.
+ Sea 
+\begin_inset Formula $\Sigma=\{@,!\}$
+\end_inset
+
+.
+ Supongamos que estamos escribiendo un programa 
+\begin_inset Formula $\mathcal{P}^{\prime}$
+\end_inset
+
+ y nos hace falta simular instrucciones de la forma
+\begin_inset Formula 
+\[
+\mathrm{IF}\;\left\vert \mathrm{P}\bar{n}\right\vert \leq\mathrm{N}\bar{m}\ \mathrm{GOTO}\;\mathrm{L}\bar{k}
+\]
+
+\end_inset
+
+(por supuesto estas instrucciones no pertenecen al lenguaje 
+\begin_inset Formula $\mathcal{S}^{\Sigma}$
+\end_inset
+
+ pero deberia quedar claro como funcionan).
+ Entonces podemos tomar el macro 
+\begin_inset Formula $M^{\prime}$
+\end_inset
+
+:
+\begin_inset Formula 
+\[
+\begin{array}{ll}
+ & \mathrm{W}2\leftarrow\mathrm{W}1\\
+ & \mathrm{V}2\leftarrow\mathrm{V}1\\
+\mathrm{A}4 & \mathrm{IF}\;\mathrm{W}2\;\mathrm{BEGINS}\;@\;\mathrm{GOTO}\;\mathrm{A}2\\
+ & \mathrm{IF}\;\mathrm{W}2\;\mathrm{BEGINS}\;!\;\mathrm{GOTO}\;\mathrm{A}2\\
+ & \mathrm{GOTO}\;\mathrm{A}1\\
+\mathrm{A}2 & \mathrm{IF}\;\mathrm{V}2\neq0\;\mathrm{GOTO}\;\mathrm{A}3\\
+ & \mathrm{GOTO}\;\mathrm{A}5\\
+\mathrm{A}3 & \mathrm{W}2\leftarrow^{\curvearrowright}\mathrm{W}2\\
+ & \mathrm{V}2\leftarrow\mathrm{V}2\dot{-}1\\
+ & \mathrm{GOTO}\;\mathrm{A}4\\
+\mathrm{A}5 & \mathrm{SKIP}
+\end{array}
+\]
+
+\end_inset
+
+el cual tiene
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+
+variables oficiales 
+\begin_inset Formula $\mathrm{W}1$
+\end_inset
+
+ y 
+\begin_inset Formula $\mathrm{V}1$
+\end_inset
+
+ (correspondientes a 
+\begin_inset Formula $\mathrm{P}\bar{n}$
+\end_inset
+
+ y 
+\begin_inset Formula $\mathrm{N}\bar{m}$
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+
+variable auxiliares 
+\begin_inset Formula $\mathrm{W}2$
+\end_inset
+
+ y 
+\begin_inset Formula $\mathrm{V}2$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+
+labels auxiliares 
+\begin_inset Formula $\mathrm{A}2$
+\end_inset
+
+, 
+\begin_inset Formula $\mathrm{A}3$
+\end_inset
+
+, 
+\begin_inset Formula $\mathrm{A}4$
+\end_inset
+
+ y 
+\begin_inset Formula $\mathrm{A}5$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+
+un label oficial 
+\begin_inset Formula $\mathrm{A}1$
+\end_inset
+
+ (correspondiente a 
+\begin_inset Formula $\mathrm{L}\bar{k}$
+\end_inset
+
+) 
+\end_layout
+
+\begin_layout Standard
+\noindent
+Una descripcion intuitiva del macro 
+\begin_inset Formula $M^{\prime}$
+\end_inset
+
+ seria
+\begin_inset Formula 
+\[
+\mathrm{IF}\;\left\vert \mathrm{W}1\right\vert \leq\mathrm{V}1\ \mathrm{GOTO}\;\mathrm{A}1
+\]
+
+\end_inset
+
+Notese que en las primeras dos lineas el macro 
+\begin_inset Formula $M^{\prime}$
+\end_inset
+
+ guarda los valores de las variables oficiales 
+\begin_inset Formula $\mathrm{W}1$
+\end_inset
+
+ y 
+\begin_inset Formula $\mathrm{V}1$
+\end_inset
+
+ en las variables auxiliares 
+\begin_inset Formula $\mathrm{W}2$
+\end_inset
+
+ y 
+\begin_inset Formula $\mathrm{V}2$
+\end_inset
+
+, y sigue trabajando con las auxiliares.
+ Esto es para preservar el valor de las variables oficiales.
+ Dado que 
+\begin_inset Formula $\Sigma=\{@,!\}$
+\end_inset
+
+, las dos siguientes lineas sirven para decidir si el contenido de 
+\begin_inset Formula $\mathrm{W}2$
+\end_inset
+
+ es 
+\begin_inset Formula $\varepsilon$
+\end_inset
+
+ o no.
+ Dejamos al lector entender el resto del funcionamiento de 
+\begin_inset Formula $M^{\prime}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Para dar un ejemplo de como usariamos a 
+\begin_inset Formula $M^{\prime}$
+\end_inset
+
+, supongamos que para seguir escribiendo nuestro programa 
+\begin_inset Formula $\mathcal{P}^{\prime}$
+\end_inset
+
+ nos hace falta simular la instruccion
+\begin_inset Formula 
+\[
+\mathrm{IF}\;\left\vert \mathrm{P}5\right\vert \leq\mathrm{N}14\ \mathrm{GOTO}\;\mathrm{L}1
+\]
+
+\end_inset
+
+y supongamos que las variables 
+\begin_inset Formula $\mathrm{P}1000$
+\end_inset
+
+ y 
+\begin_inset Formula $\mathrm{N}1000$
+\end_inset
+
+ y los labels 
+\begin_inset Formula $\mathrm{L}6666$
+\end_inset
+
+, 
+\begin_inset Formula $\mathrm{L}7777$
+\end_inset
+
+, 
+\begin_inset Formula $\mathrm{L}8888$
+\end_inset
+
+ y 
+\begin_inset Formula $\mathrm{L}9999$
+\end_inset
+
+ no se usaron hasta el momento en 
+\begin_inset Formula $\mathcal{P}^{\prime}$
+\end_inset
+
+.
+ Entonces podemos reemplazar en 
+\begin_inset Formula $M^{\prime}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+
+cada ocurrencia de 
+\begin_inset Formula $\mathrm{W}1$
+\end_inset
+
+ por 
+\begin_inset Formula $\mathrm{P}5$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+
+cada ocurrencia de 
+\begin_inset Formula $\mathrm{V}1$
+\end_inset
+
+ por 
+\begin_inset Formula $\mathrm{N}14$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+
+cada ocurrencia de 
+\begin_inset Formula $\mathrm{W}2$
+\end_inset
+
+ por 
+\begin_inset Formula $\mathrm{P}1000$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+
+cada ocurrencia de 
+\begin_inset Formula $\mathrm{V}2$
+\end_inset
+
+ por 
+\begin_inset Formula $\mathrm{N}1000$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+
+cada ocurrencia de 
+\begin_inset Formula $\mathrm{A}1$
+\end_inset
+
+ por 
+\begin_inset Formula $\mathrm{L}1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+
+cada ocurrencia de 
+\begin_inset Formula $\mathrm{A}2$
+\end_inset
+
+ por 
+\begin_inset Formula $\mathrm{L}6666$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+
+cada ocurrencia de 
+\begin_inset Formula $\mathrm{A}3$
+\end_inset
+
+ por 
+\begin_inset Formula $\mathrm{L}7777$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+
+cada ocurrencia de 
+\begin_inset Formula $\mathrm{A}4$
+\end_inset
+
+ por 
+\begin_inset Formula $\mathrm{L}8888$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+
+cada ocurrencia de 
+\begin_inset Formula $\mathrm{A}5$
+\end_inset
+
+ por 
+\begin_inset Formula $\mathrm{L}9999$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\noindent
+y la expansion de 
+\begin_inset Formula $M^{\prime}$
+\end_inset
+
+ asi obtenida simulara la instruccion 
+\begin_inset Formula $\mathrm{IF}\;\left\vert \mathrm{P}5\right\vert \leq\mathrm{N}14\ \mathrm{GOTO}\;\mathrm{L}1$
+\end_inset
+
+.
+ Cabe destacar que para asegurarnos que la simulacion funcione, tambien
+ deberemos no usar en el resto de 
+\begin_inset Formula $\mathcal{P}^{\prime}$
+\end_inset
+
+ las variables 
+\begin_inset Formula $\mathrm{P}1000$
+\end_inset
+
+ y 
+\begin_inset Formula $\mathrm{N}1000$
+\end_inset
+
+ y los labels 
+\begin_inset Formula $\mathrm{L}6666$
+\end_inset
+
+, 
+\begin_inset Formula $\mathrm{L}7777$
+\end_inset
+
+, 
+\begin_inset Formula $\mathrm{L}8888$
+\end_inset
+
+ y 
+\begin_inset Formula $\mathrm{L}9999$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Es decir 
+\begin_inset Formula $M^{\prime}$
+\end_inset
+
+ funciona como un molde con el cual haciendo reemplazos adecuados podemos
+ simular cualquier instruccion del tipo 
+\begin_inset Formula $\mathrm{IF}\;\left\vert \mathrm{P}\bar{n}\right\vert \leq\mathrm{N}\bar{m}\ \mathrm{GOTO}\;\mathrm{L}\bar{k}$
+\end_inset
+
+, con 
+\begin_inset Formula $n,m,k\in\mathbf{N}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Deberia quedar claro el caracter oficial del label 
+\begin_inset Formula $\mathrm{A}1$
+\end_inset
+
+ en 
+\begin_inset Formula $M^{\prime}$
+\end_inset
+
+ ya que el label por el que se lo reemplaza para hacer la expansion es uno
+ de los labels protagonistas del programa que se esta escribiendo.
+\end_layout
+
+\begin_layout Standard
+Cabe destacar que las expansiones de 
+\begin_inset Formula $M^{\prime}$
+\end_inset
+
+ no son programas ya que si bien son concatenaciones de instrucciones, no
+ cumplen la ley de los GOTO (llamada (G) en la definicion de programa) respecto
+ del label que reemplazo a 
+\begin_inset Formula $\mathrm{A}1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Nota:
+\series default
+ Siempre supondremos que la primera instruccion de los macros no es labelada.
+ Esto es porque muchas veces cuando expandamos un macro nos interesara labelar
+ la primera instruccion de dicha expansion.
+ Por supuesto, esto es facil de conseguir ya que si 
+\begin_inset Formula $M$
+\end_inset
+
+ es un macro, entonces 
+\begin_inset Formula $\mathrm{SKIP}M$
+\end_inset
+
+ es tambien un macro que posee las mismas propiedades.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+
+\series bold
+Ejercicio 10:
+\end_layout
+
+\end_inset
+
+Sea 
+\begin_inset Formula $\Sigma=\{\#,\$\}$
+\end_inset
+
+.
+ De explicitamente macros que simulen las instrucciones de cada uno de los
+ siguientes formatos
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $\mathrm{N}\bar{n}\leftarrow\mathrm{N}\bar{n}+20$
+\end_inset
+
+, con 
+\begin_inset Formula $n\in\mathbf{N}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\mathrm{P}\bar{n}\leftarrow\#\#\$\#\$$
+\end_inset
+
+, con 
+\begin_inset Formula $n\in\mathbf{N}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\mathrm{IF\ P}\bar{n}\neq\varepsilon\ \mathrm{GOTO\ L}\bar{k}$
+\end_inset
+
+, con 
+\begin_inset Formula $n,k\in\mathbf{N}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\mathrm{N}\bar{n}\leftarrow\left\vert \mathrm{P}\bar{m}\right\vert $
+\end_inset
+
+, con 
+\begin_inset Formula $n,m\in\mathbf{N}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\mathrm{IF\ P}\bar{n}=\mathrm{P}\bar{m}\ \mathrm{GOTO\ L}\bar{k}$
+\end_inset
+
+, con 
+\begin_inset Formula $n,m,k\in\mathbf{N}$
+\end_inset
+
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Como hemos visto recien hay dos tipos de macros:
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+
+los de asignacion que cuando son expandidos nos dan un programa que simula
+ la asignacion a una variable dada del resultado de aplicar una funcion
+ a los contenidos de ciertas otras variables; y
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+
+los de tipo IF que cuando son expandidos nos dan un programa salvo por la
+ ley (G), el cual direcciona al label que fue a reemplazar a 
+\begin_inset Formula $\mathrm{A}1$
+\end_inset
+
+ cuando se cumple cierta propiedad (predicado) relativa a los contenidos
+ de las variables que fueron a reemplazar a las variables oficiales.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+Ejemplo concreto de uso de macros
+\end_layout
+
+\begin_layout Standard
+Ya vimos recien que la palabra
+\begin_inset Formula 
+\[
+\begin{array}{ll}
+ & \mathrm{V}4\leftarrow\mathrm{V}2\\
+ & \mathrm{V}5\leftarrow\mathrm{V}3\\
+ & \mathrm{V}1\leftarrow\mathrm{V}4\\
+\mathrm{A}1 & \mathrm{IF}\;\mathrm{V}5\neq0\;\mathrm{GOTO}\;\mathrm{A}2\\
+ & \mathrm{GOTO}\;\mathrm{A}3\\
+\mathrm{A}2 & \mathrm{V}5\leftarrow\mathrm{V}5\dot{-}1\\
+ & \mathrm{V}1\leftarrow\mathrm{V}1+1\\
+ & \mathrm{GOTO}\;\mathrm{A}1\\
+\mathrm{A}3 & \mathrm{SKIP}
+\end{array}
+\]
+
+\end_inset
+
+es un macro que sirve para simular instrucciones de la forma 
+\begin_inset Formula $\mathrm{N}\bar{k}\leftarrow\mathrm{N}\bar{n}+\mathrm{N}\bar{m}$
+\end_inset
+
+.
+ Notemos que este macro es de asignacion ya que cuando es expandido nos
+ da un programa que simula la asignacion a una variable dada del resultado
+ de aplicar una funcion a los contenidos de ciertas otras variables.
+ En este caso la funcion es 
+\begin_inset Formula $SUMA=\lambda xy[x+y]$
+\end_inset
+
+ por lo cual usaremos 
+\begin_inset Formula $\left[\mathrm{V}1\leftarrow SUMA(\mathrm{V}2,\mathrm{V}3)\right]$
+\end_inset
+
+ para denotar a dicho macro.
+ Usaremos este macro para dar un programa 
+\begin_inset Formula $\mathcal{P}$
+\end_inset
+
+ que compute a la funcion 
+\begin_inset Formula $\lambda xy[x.y]$
+\end_inset
+
+.
+ Notese que podemos tomar 
+\begin_inset Formula $\mathcal{P}$
+\end_inset
+
+ igual al siguiente programa
+\begin_inset Formula 
+\[
+\begin{array}{ll}
+\mathrm{L}1 & \mathrm{IF}\;\mathrm{N}2\neq0\;\mathrm{GOTO}\;\mathrm{L}2\\
+ & \mathrm{GOTO}\;\mathrm{L}3\\
+\mathrm{L}2 & \left[\mathrm{N}3\leftarrow SUMA(\mathrm{N}3,\mathrm{N}1)\right]\\
+ & \mathrm{N}2\leftarrow\mathrm{N}2\dot{-}1\\
+ & \mathrm{GOTO}\;\mathrm{L}1\\
+\mathrm{L}3 & \mathrm{N}1\leftarrow\mathrm{N}3
+\end{array}
+\]
+
+\end_inset
+
+donde 
+\begin_inset Formula $\left[\mathrm{N}3\leftarrow SUMA(\mathrm{N}3,\mathrm{N}1)\right]$
+\end_inset
+
+ es una expansion del macro 
+\begin_inset Formula $\left[\mathrm{V}1\leftarrow SUMA(\mathrm{V}2,\mathrm{V}3)\right]$
+\end_inset
+
+ hecha haciendo el reemplazo de las variables oficiales 
+\begin_inset Formula $\mathrm{V}1,\mathrm{V}2$
+\end_inset
+
+ y 
+\begin_inset Formula $\mathrm{V}3$
+\end_inset
+
+ por 
+\begin_inset Formula $\mathrm{N}3,\mathrm{N}3$
+\end_inset
+
+ y 
+\begin_inset Formula $\mathrm{N}1$
+\end_inset
+
+, respectivamente, y haciendo reemplazos adecuados de sus variables y labels
+ auxiliares.
+ Hay muchas formas de hacer los reemplazos de variables y labels auxiliares
+ pero en general no lo especificaremos explicitamente cuando expandamos
+ un macro ya que es facil imaginar como hacerlo en funcion del programa
+ que estemos realizando.
+ Por ejemplo en el caso de 
+\begin_inset Formula $\mathcal{P}$
+\end_inset
+
+ podriamos hacer los siguientes reemplazos:
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+
+cada ocurrencia de 
+\begin_inset Formula $\mathrm{V}4$
+\end_inset
+
+ por 
+\begin_inset Formula $\mathrm{N}1111$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+
+cada ocurrencia de 
+\begin_inset Formula $\mathrm{V}5$
+\end_inset
+
+ por 
+\begin_inset Formula $\mathrm{N}2222$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+
+cada ocurrencia de 
+\begin_inset Formula $\mathrm{A}1$
+\end_inset
+
+ por 
+\begin_inset Formula $\mathrm{L}1000$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+
+cada ocurrencia de 
+\begin_inset Formula $\mathrm{A}2$
+\end_inset
+
+ por 
+\begin_inset Formula $\mathrm{L}2000$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+
+cada ocurrencia de 
+\begin_inset Formula $\mathrm{A}3$
+\end_inset
+
+ por 
+\begin_inset Formula $\mathrm{L}3000$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\noindent
+y claramente esto no afectara la 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+"
+\end_layout
+
+\end_inset
+
+logica
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+"
+\end_layout
+
+\end_inset
+
+ o 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+"
+\end_layout
+
+\end_inset
+
+idea
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+"
+\end_layout
+
+\end_inset
+
+ de nuestro programa 
+\begin_inset Formula $\mathcal{P}$
+\end_inset
+
+.
+ De esta forma la expansion 
+\begin_inset Formula $\left[\mathrm{N}3\leftarrow SUMA(\mathrm{N}3,\mathrm{N}1)\right]$
+\end_inset
+
+ es el siguiente programa:
+\begin_inset Formula 
+\[
+\begin{array}{ll}
+ & \mathrm{N}1111\leftarrow\mathrm{N}3\\
+ & \mathrm{N}2222\leftarrow\mathrm{N}1\\
+ & \mathrm{N}3\leftarrow\mathrm{N}1111\\
+\mathrm{L}1000 & \mathrm{IF}\;\mathrm{N}2222\neq0\;\mathrm{GOTO}\;\mathrm{L}2000\\
+ & \mathrm{GOTO}\;\mathrm{L}3000\\
+\mathrm{L}2000 & \mathrm{N}2222\leftarrow\mathrm{N}2222\dot{-}1\\
+ & \mathrm{N}3\leftarrow\mathrm{N}3+1\\
+ & \mathrm{GOTO}\;\mathrm{L}1000\\
+\mathrm{L}3000 & \mathrm{SKIP}
+\end{array}
+\]
+
+\end_inset
+
+el cual por supuesto esta escrito con espacios y en forma vertical pero
+ es una mera palabra.
+ Tenemos entonces que 
+\begin_inset Formula $\mathcal{P}$
+\end_inset
+
+ es el programa:
+\begin_inset Formula 
+\[
+\begin{array}{ll}
+\mathrm{L}1 & \mathrm{IF}\;\mathrm{N}2\neq0\;\mathrm{GOTO}\;\mathrm{L}2\\
+ & \mathrm{GOTO}\;\mathrm{L}3\\
+\mathrm{L}2 & \mathrm{N}1111\leftarrow\mathrm{N}1\\
+ & \mathrm{N}2222\leftarrow\mathrm{N}3\\
+ & \mathrm{N}3\leftarrow\mathrm{N}1111\\
+\mathrm{L}1000 & \mathrm{IF}\;\mathrm{N}2222\neq0\;\mathrm{GOTO}\;\mathrm{L}2000\\
+ & \mathrm{GOTO}\;\mathrm{L}3000\\
+\mathrm{L}2000 & \mathrm{N}2222\leftarrow\mathrm{N}2222\dot{-}1\\
+ & \mathrm{N}3\leftarrow\mathrm{N}3+1\\
+ & \mathrm{GOTO}\;\mathrm{L}1000\\
+\mathrm{L}3000 & \mathrm{SKIP}\\
+ & \mathrm{N}2\leftarrow\mathrm{N}2\dot{-}1\\
+ & \mathrm{GOTO}\;\mathrm{L}1\\
+\mathrm{L}3 & \mathrm{N}1\leftarrow\mathrm{N}3
+\end{array}
+\]
+
+\end_inset
+
+el cual por supuesto esta escrito con espacios y en forma vertical pero
+ es una mera palabra.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
+Macros asociados a funciones 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-computables
+\end_layout
+
+\begin_layout Standard
+Dada una funcion 
+\begin_inset Formula $f:D_{f}\subseteq\omega^{n}\times\Sigma^{\ast m}\rightarrow\omega$
+\end_inset
+
+, usaremos
+\begin_inset Formula 
+\[
+\left[\mathrm{V}\overline{n+1}\leftarrow f(\mathrm{V}1,...,\mathrm{V}\bar{n},\mathrm{W}1,...,\mathrm{W}\bar{m})\right]
+\]
+
+\end_inset
+
+para denotar un macro 
+\begin_inset Formula $M$
+\end_inset
+
+ el cual cumpla las siguientes propiedades.
+ Cabe destacar que no siempre existira dicho macro, es decir solo para ciertas
+ funciones 
+\begin_inset Formula $f:D_{f}\subseteq\omega^{n}\times\Sigma^{\ast m}\rightarrow\omega$
+\end_inset
+
+ habra un tal macro.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+(1)
+\end_layout
+
+\end_inset
+
+Las variables oficiales de 
+\begin_inset Formula $M$
+\end_inset
+
+ son 
+\begin_inset Formula $\mathrm{V}1,...,\mathrm{V}\bar{n},\mathrm{V}\overline{n+1},\mathrm{W}1,...,\mathrm{W}\bar{m}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+(2)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $M$
+\end_inset
+
+ no tiene labels oficiales
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+(3)
+\end_layout
+
+\end_inset
+
+Si reemplazamos:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+las variables oficiales de 
+\begin_inset Formula $M$
+\end_inset
+
+ (i.e.
+ 
+\begin_inset Formula $\mathrm{V}1,...,\mathrm{V}\bar{n},\mathrm{V}\overline{n+1},\mathrm{W}1,...,\mathrm{W}\bar{m}$
+\end_inset
+
+) por variables concretas
+\begin_inset Formula 
+\[
+\mathrm{N}\overline{k_{1}},...,\mathrm{N}\overline{k_{n}},\mathrm{N}\overline{k_{n+1}},\mathrm{P}\overline{j_{1}},...,\mathrm{P}\overline{j_{m}}
+\]
+
+\end_inset
+
+(elejidas libremente, es decir los numeros 
+\begin_inset Formula $k_{1},...,k_{n+1},j_{1},...,j_{m}$
+\end_inset
+
+ son cualesquiera)
+\end_layout
+
+\begin_layout Enumerate
+las variables auxiliares de 
+\begin_inset Formula $M$
+\end_inset
+
+ por variables concretas (distintas de a dos) y NO pertenecientes a la lista
+ 
+\begin_inset Formula $\mathrm{N}\overline{k_{1}},...,\mathrm{N}\overline{k_{n}},\mathrm{N}\overline{k_{n+1}},\mathrm{P}\overline{j_{1}},...,\mathrm{P}\overline{j_{m}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+los labels auxiliares de 
+\begin_inset Formula $M$
+\end_inset
+
+ por labels concretos (distintos de a dos) 
+\end_layout
+
+\begin_layout Standard
+\noindent
+Entonces la palabra asi obtenida es un programa de 
+\begin_inset Formula $\mathcal{S}^{\Sigma}$
+\end_inset
+
+ que denotaremos con
+\begin_inset Formula 
+\[
+\left[\mathrm{N}\overline{k_{n+1}}\leftarrow f(\mathrm{N}\overline{k_{1}},...,\mathrm{N}\overline{k_{n}},\mathrm{P}\overline{j_{1}},...,\mathrm{P}\overline{j_{m}})\right]
+\]
+
+\end_inset
+
+el cual debe tener la siguiente propiedad:
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+
+Si hacemos correr 
+\begin_inset Formula $\left[\mathrm{N}\overline{k_{n+1}}\leftarrow f(\mathrm{N}\overline{k_{1}},...,\mathrm{N}\overline{k_{n}},\mathrm{P}\overline{j_{1}},...,\mathrm{P}\overline{j_{m}})\right]$
+\end_inset
+
+ partiendo de un estado 
+\begin_inset Formula $e$
+\end_inset
+
+ que le asigne a las variables 
+\begin_inset Formula $\mathrm{N}\overline{k_{1}},...,\mathrm{N}\overline{k_{n}},\mathrm{P}\overline{j_{1}},...,\mathrm{P}\overline{j_{m}}$
+\end_inset
+
+ valores 
+\begin_inset Formula $x_{1},...,x_{n},\alpha_{1},...,\alpha_{m}$
+\end_inset
+
+, entonces independientemente de los valores que les asigne 
+\begin_inset Formula $e$
+\end_inset
+
+ al resto de las variables (incluidas las que fueron a reemplazar a las
+ variables auxiliares de 
+\begin_inset Formula $M$
+\end_inset
+
+) se dara que
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+si 
+\begin_inset Formula $(x_{1},...,x_{n},\alpha_{1},...,\alpha_{m})\notin D_{f}$
+\end_inset
+
+, entonces 
+\begin_inset Formula $\left[\mathrm{N}\overline{k_{n+1}}\leftarrow f(\mathrm{N}\overline{k_{1}},...,\mathrm{N}\overline{k_{n}},\mathrm{P}\overline{j_{1}},...,\mathrm{P}\overline{j_{m}})\right]$
+\end_inset
+
+ no se detiene
+\end_layout
+
+\begin_layout Enumerate
+si 
+\begin_inset Formula $(x_{1},...,x_{n},\alpha_{1},...,\alpha_{m})\in D_{f}$
+\end_inset
+
+, entonces 
+\begin_inset Formula $\left[\mathrm{N}\overline{k_{n+1}}\leftarrow f(\mathrm{N}\overline{k_{1}},...,\mathrm{N}\overline{k_{n}},\mathrm{P}\overline{j_{1}},...,\mathrm{P}\overline{j_{m}})\right]$
+\end_inset
+
+ se detiene (i.e.
+ intenta realizar la siguiente a su ultima instrucion) y llega a un estado
+ 
+\begin_inset Formula $e^{\prime}$
+\end_inset
+
+ el cual cumple:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $e^{\prime}$
+\end_inset
+
+ le asigna a 
+\begin_inset Formula $\mathrm{N}\overline{k_{n+1}}$
+\end_inset
+
+ el valor 
+\begin_inset Formula $f(x_{1},...,x_{n},\alpha_{1},...,\alpha_{m})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $e^{\prime}$
+\end_inset
+
+ solo puede diferir de 
+\begin_inset Formula $e$
+\end_inset
+
+ en los valores que le asigna a 
+\begin_inset Formula $\mathrm{N}\overline{k_{n+1}}$
+\end_inset
+
+ o a las variables que fueron a reemplazar a las variables auxiliares de
+ 
+\begin_inset Formula $M$
+\end_inset
+
+.
+ Al resto de las variables, incluidas 
+\begin_inset Formula $\mathrm{N}\overline{k_{1}},...,\mathrm{N}\overline{k_{n}},\mathrm{P}\overline{j_{1}},...,\mathrm{P}\overline{j_{m}}$
+\end_inset
+
+ no las modifica (salvo en el caso de que alguna 
+\begin_inset Formula $\mathrm{N}\overline{k_{i}}$
+\end_inset
+
+ sea la variable 
+\begin_inset Formula $\mathrm{N}\overline{k_{n+1}}$
+\end_inset
+
+, situacion en la cual el valor final de la variable 
+\begin_inset Formula $\mathrm{N}\overline{k_{i}}$
+\end_inset
+
+ sera 
+\begin_inset Formula $f(x_{1},...,x_{n},\alpha_{1},...,\alpha_{m})$
+\end_inset
+
+) 
+\end_layout
+
+\end_deeper
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\noindent
+El programa 
+\begin_inset Formula $\left[\mathrm{N}\overline{k_{n+1}}\leftarrow f(\mathrm{N}\overline{k_{1}},...,\mathrm{N}\overline{k_{n}},\mathrm{P}\overline{j_{1}},...,\mathrm{P}\overline{j_{m}})\right]$
+\end_inset
+
+ es comunmente llamado la expansion del macro 
+\begin_inset Formula $\left[\mathrm{V}\overline{n+1}\leftarrow f(\mathrm{V}1,...,\mathrm{V}\bar{n},\mathrm{W}1,...,\mathrm{W}\bar{m})\right]$
+\end_inset
+
+ con respecto a la eleccion de variables y labels realizada.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Tambien, dada una funcion 
+\begin_inset Formula $f:D_{f}\subseteq\omega^{n}\times\Sigma^{\ast m}\rightarrow\Sigma^{\ast}$
+\end_inset
+
+, con
+\begin_inset Formula 
+\[
+\left[\mathrm{W}\overline{m+1}\leftarrow f(\mathrm{V}1,...,\mathrm{V}\bar{n},\mathrm{W}1,...,\mathrm{W}\bar{m})\right]
+\]
+
+\end_inset
+
+denotaremos un macro el cual cumpla condiciones analogas a las descriptas
+ recien.
+ Dejamos al lector escribirlas en detalle para este caso.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Aceptaremos sin demostracion el siguiente resultado fundamental.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{proposition}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "macro funciones"
+
+\end_inset
+
+Sea 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+ un alfabeto finito.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+(a)
+\end_layout
+
+\end_inset
+
+Sea 
+\begin_inset Formula $f:D_{f}\subseteq\omega^{n}\times\Sigma^{\ast m}\rightarrow\omega$
+\end_inset
+
+ una funcion 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+
+\shape italic
+-
+\shape default
+computable.
+ Entonces en 
+\begin_inset Formula $\mathcal{S}^{\Sigma}$
+\end_inset
+
+ hay un macro
+\begin_inset Formula 
+\[
+\left[\mathrm{V}\overline{n+1}\leftarrow f(\mathrm{V}1,...,\mathrm{V}\bar{n},\mathrm{W}1,...,\mathrm{W}\bar{m})\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+(b)
+\end_layout
+
+\end_inset
+
+Sea 
+\begin_inset Formula $f:D_{f}\subseteq\omega^{n}\times\Sigma^{\ast m}\rightarrow\Sigma^{\ast}$
+\end_inset
+
+ una funcion 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-computable.
+ Entonces en 
+\begin_inset Formula $\mathcal{S}^{\Sigma}$
+\end_inset
+
+ hay un macro
+\begin_inset Formula 
+\[
+\left[\mathrm{W}\overline{m+1}\leftarrow f(\mathrm{V}1,...,\mathrm{V}\bar{n},\mathrm{W}1,...,\mathrm{W}\bar{m})\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{proposition}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+
+\series bold
+Ejercicio 11:
+\end_layout
+
+\end_inset
+
+Sea 
+\begin_inset Formula $SUMA=\lambda xy[x+y]$
+\end_inset
+
+.
+ Explique por que la palabra
+\begin_inset Formula 
+\[
+\begin{array}{ll}
+ & \mathrm{V}1\leftarrow\mathrm{V}2\\
+ & \mathrm{V}4\leftarrow\mathrm{V}3\\
+\mathrm{A}1 & \mathrm{IF}\;\mathrm{V}4\neq0\;\mathrm{GOTO}\;\mathrm{A}2\\
+ & \mathrm{GOTO}\;\mathrm{A}3\\
+\mathrm{A}2 & \mathrm{V}4\leftarrow\mathrm{V}4\dot{-}1\\
+ & \mathrm{V}1\leftarrow\mathrm{V}1+1\\
+ & \mathrm{GOTO}\;\mathrm{A}1\\
+\mathrm{A}3 & \mathrm{SKIP}
+\end{array}
+\]
+
+\end_inset
+
+no puede ser tomada como el macro 
+\begin_inset Formula $\left[\mathrm{V}3\leftarrow SUMA(\mathrm{V}1,\mathrm{V}2)\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+
+\series bold
+Ejercicio 12:
+\end_layout
+
+\end_inset
+
+Sea 
+\begin_inset Formula $\Sigma=\{\#,\$\}$
+\end_inset
+
+ y sea 
+\begin_inset Formula $f:D_{f}\subseteq\Sigma^{\ast}\rightarrow\omega$
+\end_inset
+
+ una funcion 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-computable.
+ Sea 
+\begin_inset Formula $L=\{\alpha\in D_{f}:f(\alpha)=1\}$
+\end_inset
+
+.
+ De (usando el macro 
+\begin_inset Formula $\left[\mathrm{V}1\leftarrow f(\mathrm{W}1)\right]$
+\end_inset
+
+) un programa 
+\begin_inset Formula $\mathcal{P}\in\mathrm{Pro}^{\Sigma}$
+\end_inset
+
+ tal que 
+\family roman
+Dom
+\family default
+
+\begin_inset Formula $(\Psi_{\mathcal{P}}^{0,1,\#})=L$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+
+\series bold
+Ejercicio 13:
+\end_layout
+
+\end_inset
+
+Sea 
+\begin_inset Formula $\Sigma=\{\#,\$\}$
+\end_inset
+
+ y sea 
+\begin_inset Formula $f:\omega\rightarrow\Sigma^{\ast}$
+\end_inset
+
+ una funcion 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-computable.
+ De (usando el macro 
+\begin_inset Formula $\left[\mathrm{W}1\leftarrow f(\mathrm{V}1)\right]$
+\end_inset
+
+) un programa 
+\begin_inset Formula $\mathcal{P}\in\mathrm{Pro}^{\Sigma}$
+\end_inset
+
+ tal que 
+\family roman
+Dom
+\family default
+
+\begin_inset Formula $(\Psi_{\mathcal{P}}^{0,1,\#})=\operatorname{Im}f$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+
+\series bold
+Ejercicio 14:
+\end_layout
+
+\end_inset
+
+Pruebe la resiproca de la proposicion anterior, es decir pruebe que si 
+\begin_inset Formula $f:D_{f}\subseteq\omega^{n}\times\Sigma^{\ast m}\rightarrow\omega$
+\end_inset
+
+ es tal que en 
+\begin_inset Formula $\mathcal{S}^{\Sigma}$
+\end_inset
+
+ hay un macro
+\begin_inset Formula 
+\[
+\left[\mathrm{V}\overline{n+1}\leftarrow f(\mathrm{V}1,...,\mathrm{V}\bar{n},\mathrm{W}1,...,\mathrm{W}\bar{m})\right]
+\]
+
+\end_inset
+
+entonces 
+\begin_inset Formula $f$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-computable.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
+Macros asociados a predicados 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-computables
+\end_layout
+
+\begin_layout Standard
+Dado un predicado 
+\begin_inset Formula $P:D_{P}\subseteq\omega^{n}\times\Sigma^{\ast m}\rightarrow\omega$
+\end_inset
+
+, usaremos
+\begin_inset Formula 
+\[
+\left[\mathrm{IF}\;P(\mathrm{V}1,...,\mathrm{V}\bar{n},\mathrm{W}1,...,\mathrm{W}\bar{m})\;\mathrm{GOTO}\;\mathrm{A}1\right]
+\]
+
+\end_inset
+
+para denotar un macro 
+\begin_inset Formula $M$
+\end_inset
+
+ el cual cumpla las siguientes propiedades.
+ Cabe destacar que no siempre existira dicho macro, es decir solo para ciertos
+ predicados 
+\begin_inset Formula $P:D_{P}\subseteq\omega^{n}\times\Sigma^{\ast m}\rightarrow\omega$
+\end_inset
+
+ habra un tal macro.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+(1)
+\end_layout
+
+\end_inset
+
+Las variables oficiales de 
+\begin_inset Formula $M$
+\end_inset
+
+ son 
+\begin_inset Formula $\mathrm{V}1,...,\mathrm{V}\bar{n},\mathrm{W}1,...,\mathrm{W}\bar{m}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+(2)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\mathrm{A}1$
+\end_inset
+
+ es el unico label oficial de 
+\begin_inset Formula $M$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+(3)
+\end_layout
+
+\end_inset
+
+Si reemplazamos:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+las variables oficiales de 
+\begin_inset Formula $M$
+\end_inset
+
+ (i.e.
+ 
+\begin_inset Formula $\mathrm{V}1,...,\mathrm{V}\bar{n},\mathrm{W}1,...,\mathrm{W}\bar{m}$
+\end_inset
+
+) por variables concretas
+\begin_inset Formula 
+\[
+\mathrm{N}\overline{k_{1}},...,\mathrm{N}\overline{k_{n}},\mathrm{P}\overline{j_{1}},...,\mathrm{P}\overline{j_{m}}
+\]
+
+\end_inset
+
+(elejidas libremente, es decir los numeros 
+\begin_inset Formula $k_{1},...,k_{n},j_{1},...,j_{m}$
+\end_inset
+
+ son cualesquiera)
+\end_layout
+
+\begin_layout Enumerate
+el label oficial 
+\begin_inset Formula $\mathrm{A}1$
+\end_inset
+
+ por el label concreto 
+\begin_inset Formula $\mathrm{L}\bar{k}$
+\end_inset
+
+ (elejido libremente, es decir 
+\begin_inset Formula $k$
+\end_inset
+
+ es cualquier elemento de 
+\begin_inset Formula $\mathbf{N}$
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Enumerate
+las variables auxiliares de 
+\begin_inset Formula $M$
+\end_inset
+
+ por variables concretas (distintas de a dos) y NO pertenecientes a la lista
+ 
+\begin_inset Formula $\mathrm{N}\overline{k_{1}},...,\mathrm{N}\overline{k_{n}},\mathrm{P}\overline{j_{1}},...,\mathrm{P}\overline{j_{m}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+los labels auxiliares de 
+\begin_inset Formula $M$
+\end_inset
+
+ por labels concretos (distintos de a dos) y ninguno igual a 
+\begin_inset Formula $\mathrm{L}\bar{k}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\noindent
+Entonces la palabra asi obtenida es un programa de 
+\begin_inset Formula $\mathcal{S}^{\Sigma}$
+\end_inset
+
+, salvo por la ley de los GOTO respecto de 
+\begin_inset Formula $\mathrm{L}\bar{k}$
+\end_inset
+
+, que denotaremos con
+\begin_inset Formula 
+\[
+\left[\mathrm{IF\ }P(\mathrm{N}\overline{k_{1}},...,\mathrm{N}\overline{k_{n}},\mathrm{P}\overline{j_{1}},...,\mathrm{P}\overline{j_{m}})\ \mathrm{GOTO\ L}\bar{k}\right]
+\]
+
+\end_inset
+
+el cual debe tener la siguiente propiedad:
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+
+Si hacemos correr 
+\begin_inset Formula $\left[\mathrm{IF\ }P(\mathrm{N}\overline{k_{1}},...,\mathrm{N}\overline{k_{n}},\mathrm{P}\overline{j_{1}},...,\mathrm{P}\overline{j_{m}})\ \mathrm{GOTO\ L}\bar{k}\right]$
+\end_inset
+
+ partiendo de un estado 
+\begin_inset Formula $e$
+\end_inset
+
+ que le asigne a las variables 
+\begin_inset Formula $\mathrm{N}\overline{k_{1}},...,\mathrm{N}\overline{k_{n}},\mathrm{P}\overline{j_{1}},...,\mathrm{P}\overline{j_{m}}$
+\end_inset
+
+ valores 
+\begin_inset Formula $x_{1},...,x_{n},\alpha_{1},...,\alpha_{m}$
+\end_inset
+
+, entonces independientemente de los valores que les asigne 
+\begin_inset Formula $e$
+\end_inset
+
+ al resto de las variables (incluidas las que fueron a reemplazar a las
+ variables auxiliares de 
+\begin_inset Formula $M$
+\end_inset
+
+) se dara que
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+si 
+\begin_inset Formula $(x_{1},...,x_{n},\alpha_{1},...,\alpha_{m})\notin D_{P}$
+\end_inset
+
+, entonces 
+\begin_inset Formula $\left[\mathrm{IF\ }P(\mathrm{N}\overline{k_{1}},...,\mathrm{N}\overline{k_{n}},\mathrm{P}\overline{j_{1}},...,\mathrm{P}\overline{j_{m}})\ \mathrm{GOTO\ L}\bar{k}\right]$
+\end_inset
+
+ no se detiene
+\end_layout
+
+\begin_layout Enumerate
+si 
+\begin_inset Formula $(x_{1},...,x_{n},\alpha_{1},...,\alpha_{m})\in D_{P}$
+\end_inset
+
+ y 
+\begin_inset Formula $P(x_{1},...,x_{n},\alpha_{1},...,\alpha_{m})=1$
+\end_inset
+
+, entonces luego de una cantidad finita de pasos, 
+\begin_inset Formula $\left[\mathrm{IF\ }P(\mathrm{N}\overline{k_{1}},...,\mathrm{N}\overline{k_{n}},\mathrm{P}\overline{j_{1}},...,\mathrm{P}\overline{j_{m}})\ \mathrm{GOTO\ L}\bar{k}\right]$
+\end_inset
+
+ direcciona al label 
+\begin_inset Formula $\mathrm{L}\bar{k}$
+\end_inset
+
+ quedando en un estado 
+\begin_inset Formula $e^{\prime}$
+\end_inset
+
+ el cual solo puede diferir de 
+\begin_inset Formula $e$
+\end_inset
+
+ en los valores que le asigna a las variables que fueron a reemplazar a
+ las variables auxiliares de 
+\begin_inset Formula $M$
+\end_inset
+
+.
+ Al resto de las variables, incluidas 
+\begin_inset Formula $\mathrm{N}\overline{k_{1}},...,\mathrm{N}\overline{k_{n}},\mathrm{P}\overline{j_{1}},...,\mathrm{P}\overline{j_{m}}$
+\end_inset
+
+ no las modifica
+\end_layout
+
+\begin_layout Enumerate
+si 
+\begin_inset Formula $(x_{1},...,x_{n},\alpha_{1},...,\alpha_{m})\in D_{P}$
+\end_inset
+
+ y 
+\begin_inset Formula $P(x_{1},...,x_{n},\alpha_{1},...,\alpha_{m})=0$
+\end_inset
+
+, entonces luego de una cantidad finita de pasos, 
+\begin_inset Formula $\left[\mathrm{IF\ }P(\mathrm{N}\overline{k_{1}},...,\mathrm{N}\overline{k_{n}},\mathrm{P}\overline{j_{1}},...,\mathrm{P}\overline{j_{m}})\ \mathrm{GOTO\ L}\bar{k}\right]$
+\end_inset
+
+ se detiene (i.e.
+ intenta realizar la siguiente a su ultima instruccion) quedando en un estado
+ 
+\begin_inset Formula $e^{\prime}$
+\end_inset
+
+ el cual solo puede diferir de 
+\begin_inset Formula $e$
+\end_inset
+
+ en los valores que le asigna a las variables que fueron a reemplazar a
+ las variables auxiliares de 
+\begin_inset Formula $M$
+\end_inset
+
+.
+ Al resto de las variables, incluidas 
+\begin_inset Formula $\mathrm{N}\overline{k_{1}},...,\mathrm{N}\overline{k_{n}},\mathrm{P}\overline{j_{1}},...,\mathrm{P}\overline{j_{m}}$
+\end_inset
+
+ no las modifica 
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\noindent
+La palabra 
+\begin_inset Formula $\left[\mathrm{IF\ }P(\mathrm{N}\overline{k_{1}},...,\mathrm{N}\overline{k_{n}},\mathrm{P}\overline{j_{1}},...,\mathrm{P}\overline{j_{m}})\ \mathrm{GOTO\ L}\bar{k}\right]$
+\end_inset
+
+ es llamada la expansion del macro con respecto a la eleccion de variables
+ y labels realizada
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{proposition}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "macro predicados"
+
+\end_inset
+
+Sea 
+\begin_inset Formula $P:D_{P}\subseteq\omega^{n}\times\Sigma^{\ast m}\rightarrow\omega$
+\end_inset
+
+ un predicado 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+
+\shape italic
+-
+\shape default
+computable.
+ Entonces en 
+\begin_inset Formula $\mathcal{S}^{\Sigma}$
+\end_inset
+
+ hay un macro
+\begin_inset Formula 
+\[
+\left[\mathrm{IF}\;P(\mathrm{V}1,...,\mathrm{V}\bar{n},\mathrm{W}1,...,\mathrm{W}\bar{m})\;\mathrm{GOTO}\;\mathrm{A}1\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{proposition}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{proof}
+\end_layout
+
+\end_inset
+
+ Por (a) de la proposicion anterior tenemos un macro 
+\begin_inset Formula $\left[\mathrm{V}\overline{n+1}\leftarrow P(\mathrm{V}1,...,\mathrm{V}\bar{n},\mathrm{W}1,...,\mathrm{W}\bar{m})\right]$
+\end_inset
+
+.
+ Notese que la palabra
+\begin_inset Formula 
+\[
+\left[\mathrm{V}\overline{n+1}\leftarrow P(\mathrm{V}1,...,\mathrm{V}\bar{n},\mathrm{W}1,...,\mathrm{W}\bar{m})\right]\mathrm{IFV}\overline{n+1}\mathrm{\neq}0\mathrm{GOTOA}1
+\]
+
+\end_inset
+
+es el macro buscado.
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{proof}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+
+\series bold
+Ejercicio 15:
+\end_layout
+
+\end_inset
+
+Pruebe la resiproca de la proposicion anterior, es decir pruebe que si 
+\begin_inset Formula $P:D_{P}\subseteq\omega^{n}\times\Sigma^{\ast m}\rightarrow\omega$
+\end_inset
+
+ es tal que en 
+\begin_inset Formula $\mathcal{S}^{\Sigma}$
+\end_inset
+
+ hay un macro
+\begin_inset Formula 
+\[
+\left[\mathrm{IF}\;P(\mathrm{V}1,...,\mathrm{V}\bar{n},\mathrm{W}1,...,\mathrm{W}\bar{m})\;\mathrm{GOTO}\;\mathrm{A}1\right]
+\]
+
+\end_inset
+
+entonces 
+\begin_inset Formula $P$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-computable.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+
+\series bold
+Ejercicio 16:
+\end_layout
+
+\end_inset
+
+Sea 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+ un alfabeto finito.
+ Pruebe usando macros (de tipo IF) que si 
+\begin_inset Formula $P:S\subseteq\omega^{n}\times\Sigma^{\ast m}\rightarrow\omega$
+\end_inset
+
+ y 
+\begin_inset Formula $Q:S\subseteq\omega^{n}\times\Sigma^{\ast m}\rightarrow\omega$
+\end_inset
+
+ son predicados 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-computables, entonces 
+\begin_inset Formula $(P\vee Q)$
+\end_inset
+
+, 
+\begin_inset Formula $(P\wedge Q)$
+\end_inset
+
+ y 
+\begin_inset Formula $\lnot P$
+\end_inset
+
+ lo son tambien.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
+Conjuntos 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-enumerables
+\end_layout
+
+\begin_layout Standard
+Ya que la nocion de funcion 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-computable es el modelo matematico Neumanniano o imperativo del concepto
+ de funcion 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-efectivamente computable, nos podriamos preguntar entonces cual es el modelo
+ matematico Neumanniano del concepto de conjunto 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-efectivamente enumerable.
+ Si prestamos atencion a la definicion de conjunto 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-efectivamente enumerable, notaremos que depende de la existencia de ciertas
+ funciones 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-efectivamente computables por lo cual la siguiente definicion cae de maduro:
+\end_layout
+
+\begin_layout Standard
+Un conjunto 
+\begin_inset Formula $S\subseteq\omega^{n}\times\Sigma^{\ast m}$
+\end_inset
+
+ sera llamado 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+
+\shape italic
+-enumerable
+\shape default
+ cuando sea vacio o haya una funcion 
+\begin_inset Formula $F:\omega\rightarrow\omega^{n}\times\Sigma^{\ast m}$
+\end_inset
+
+ tal que 
+\begin_inset Formula $I_{F}=S$
+\end_inset
+
+ y 
+\begin_inset Formula $F_{(i)}$
+\end_inset
+
+ sea 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-computable, para cada 
+\begin_inset Formula $i\in\{1,...,n+m\}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Deberia entonces quedar claro que si el concepto de funcion 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-computable modeliza correctamente al concepto de funcion 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-efectivamente computable, entonces el concepto de conjunto 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-enumerable recien definido modeliza correctamente al concepto de conjunto
+ 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-efectivamente enumerable.
+\end_layout
+
+\begin_layout Standard
+Notese que segun la definicion que acabamos de escribir, un conjunto no
+ vacio 
+\begin_inset Formula $S\subseteq\omega^{n}\times\Sigma^{\ast m}$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-enumerable si y solo si hay programas 
+\begin_inset Formula $\mathcal{P}_{1},...,\mathcal{P}_{n+m}$
+\end_inset
+
+ tales que
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $Dom(\Psi_{\mathcal{P}_{1}}^{1,0,\#})=...=Dom(\Psi_{\mathcal{P}_{n}}^{1,0,\#})=\omega$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $Dom(\Psi_{\mathcal{P}_{n+1}}^{1,0,\ast})=...=Dom(\Psi_{\mathcal{P}_{n}+m}^{1,0,\ast})=\omega$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $S=\operatorname{Im}[\Psi_{\mathcal{P}_{1}}^{1,0,\#},...,\Psi_{\mathcal{P}_{n}}^{1,0,\#},\Psi_{\mathcal{P}_{n+1}}^{1,0,\ast},...,\Psi_{\mathcal{P}_{n}+m}^{1,0,\ast}]$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\noindent
+Como puede notarse los programas 
+\begin_inset Formula $\mathcal{P}_{1},...,\mathcal{P}_{n+m}$
+\end_inset
+
+ puestos en paralelo a funcionar desde el estado 
+\begin_inset Formula $\left\Vert x\right\Vert $
+\end_inset
+
+ producen en forma natural un procedimiento efectivo (con dato de entrada
+ 
+\begin_inset Formula $x\in\omega$
+\end_inset
+
+) que enumera a 
+\begin_inset Formula $S$
+\end_inset
+
+.
+ Por supuesto podemos decir que en tal caso los programas 
+\begin_inset Formula $\mathcal{P}_{1},...,\mathcal{P}_{n+m}$
+\end_inset
+
+ enumeran a 
+\begin_inset Formula $S$
+\end_inset
+
+.
+ La siguiente proposicion muestra que tambien las cosas se pueden hacer
+ con un solo programa
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{proposition}
+\end_layout
+
+\end_inset
+
+ Sea 
+\begin_inset Formula $S\subseteq\omega^{n}\times\Sigma^{\ast m}$
+\end_inset
+
+ un conjunto no vacio.
+ Entonces son equivalentes:
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+(1)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $S$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-enumerable
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+(2)
+\end_layout
+
+\end_inset
+
+Hay un programa 
+\begin_inset Formula $\mathcal{P}\in\mathrm{Pro}^{\Sigma}$
+\end_inset
+
+ tal que:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Para cada 
+\begin_inset Formula $x\in\omega$
+\end_inset
+
+, tenemos que 
+\begin_inset Formula $\mathcal{P}$
+\end_inset
+
+ se detiene partiendo desde el estado 
+\begin_inset Formula $\left\Vert x\right\Vert $
+\end_inset
+
+ y llega a un estado de la forma 
+\begin_inset Formula $((x_{1},...,x_{n},y_{1},...),(\alpha_{1},...,\alpha_{m},\beta_{1},...))$
+\end_inset
+
+, donde 
+\begin_inset Formula $(x_{1},...,x_{n},\alpha_{1},...,\alpha_{m})\in S$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Para cada 
+\begin_inset Formula $(x_{1},...x_{n},\alpha_{1},...,\alpha_{m})\in S$
+\end_inset
+
+ hay un 
+\begin_inset Formula $x\in\omega$
+\end_inset
+
+ tal que 
+\begin_inset Formula $\mathcal{P}$
+\end_inset
+
+ se detiene partiendo desde el estado 
+\begin_inset Formula $\left\Vert x\right\Vert $
+\end_inset
+
+ y llega a un estado de la forma 
+\begin_inset Formula $((x_{1},...,x_{n},y_{1},...),(\alpha_{1},...,\alpha_{m},\beta_{1},...))$
+\end_inset
+
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{proposition}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{proof}
+\end_layout
+
+\end_inset
+
+ (1)
+\begin_inset Formula $\Rightarrow$
+\end_inset
+
+(2).
+ Ya que 
+\begin_inset Formula $S$
+\end_inset
+
+ es no vacio, por definicion tenemos que hay una 
+\begin_inset Formula $F:\omega\rightarrow\omega^{n}\times\Sigma^{\ast m}$
+\end_inset
+
+ tal que 
+\begin_inset Formula $I_{F}=S$
+\end_inset
+
+ y 
+\begin_inset Formula $F_{(i)}$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-computable, para cada 
+\begin_inset Formula $i\in\{1,...,n+m\}$
+\end_inset
+
+.
+ Por la Proposicion 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "macro funciones"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ tenemos que existen macros:
+\begin_inset Formula 
+\begin{align*}
+ & \left[\mathrm{V}2\leftarrow F_{(1)}(\mathrm{V}1)\right]\\
+ & \ \ \ \ \ \ \ \ \ \ \ \ \vdots\\
+ & \left[\mathrm{V}2\leftarrow F_{(n)}(\mathrm{V}1)\right]\\
+ & \left[\mathrm{W}1\leftarrow F_{(n+1)}(\mathrm{V}1)\right]\\
+ & \ \ \ \ \ \ \ \ \ \ \ \ \vdots\\
+ & \left[\mathrm{W}1\leftarrow F_{(n+m)}(\mathrm{V}1)\right]
+\end{align*}
+
+\end_inset
+
+Sea 
+\begin_inset Formula $\mathcal{P}$
+\end_inset
+
+ el siguiente programa:
+\begin_inset Formula 
+\begin{align*}
+ & \left[\mathrm{P}\overline{m}\leftarrow F_{(n+m)}(\mathrm{N}1)\right]\\
+ & \ \ \ \ \ \ \ \ \ \ \ \ \vdots\\
+ & \left[\mathrm{P}1\leftarrow F_{(n+1)}(\mathrm{N}1)\right]\\
+ & \left[\mathrm{N}\overline{n}\leftarrow F_{(n)}(\mathrm{N}1)\right]\\
+ & \ \ \ \ \ \ \ \ \ \ \ \ \vdots\\
+ & \left[\mathrm{N}1\leftarrow F_{(1)}(\mathrm{N}1)\right]
+\end{align*}
+
+\end_inset
+
+donde se supone que las expansiones de los macros usados son hechas usando
+ variables auxiliares no pertenecientes a la lista 
+\begin_inset Formula $\mathrm{N}1,...,\mathrm{N}\overline{n},\mathrm{P}1,...,\mathrm{P}\overline{m}$
+\end_inset
+
+ (por supuesto, dada la fortaleza de nuestros macros se puede usar una misma
+ variable auxiliar para dos distintas expansiones), y tambien se supone
+ que los labels auxiliares usados en dichas expansiones son todos distintos,
+ es decir no usamos el mismo label auxiliar en dos expansiones distintas
+ (por que?).
+\end_layout
+
+\begin_layout Standard
+Dejamos al lector corroborar que el programa 
+\begin_inset Formula $\mathcal{P}$
+\end_inset
+
+ cumple las propiedades a y b
+\end_layout
+
+\begin_layout Standard
+(2)
+\begin_inset Formula $\Rightarrow$
+\end_inset
+
+(1).
+ Supongamos 
+\begin_inset Formula $\mathcal{P}\in\mathrm{Pro}^{\Sigma}$
+\end_inset
+
+ cumple a y b de (2).
+ Sean
+\begin_inset Formula 
+\begin{align*}
+\mathcal{P}_{1} & =\mathcal{P}\mathrm{N}1\leftarrow\mathrm{N}1\\
+\mathcal{P}_{2} & =\mathcal{P}\mathrm{N}1\leftarrow\mathrm{N}2\\
+ & \vdots\\
+\mathcal{P}_{n} & =\mathcal{P}\mathrm{N}1\leftarrow\mathrm{N}\overline{n}\\
+\mathcal{P}_{n+1} & =\mathcal{P}\mathrm{P}1\leftarrow\mathrm{P}1\\
+\mathcal{P}_{n+2} & =\mathcal{P}\mathrm{P}1\leftarrow\mathrm{P}2\\
+ & \vdots\\
+\mathcal{P}_{n+m} & =\mathcal{P}\mathrm{P}1\leftarrow\mathrm{P}\overline{m}
+\end{align*}
+
+\end_inset
+
+Definamos
+\begin_inset Formula 
+\begin{align*}
+F_{1} & =\Psi_{\mathcal{P}_{1}}^{1,0,\#}\\
+F_{2} & =\Psi_{\mathcal{P}_{2}}^{1,0,\#}\\
+ & \vdots\\
+F_{n} & =\Psi_{\mathcal{P}_{n}}^{1,0,\#}\\
+F_{n+1} & =\Psi_{\mathcal{P}_{n+1}}^{1,0,\ast}\\
+F_{n+2} & =\Psi_{\mathcal{P}_{n+2}}^{1,0,\ast}\\
+ & \vdots\\
+F_{n+m} & =\Psi_{\mathcal{P}_{n+m}}^{1,0,\ast}
+\end{align*}
+
+\end_inset
+
+Notese que cada 
+\begin_inset Formula $F_{i}$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-computable y tiene dominio igual a 
+\begin_inset Formula $\omega$
+\end_inset
+
+.
+ Sea 
+\begin_inset Formula $F=[F_{1},...,F_{n+m}]$
+\end_inset
+
+.
+ Tenemos por definicion que 
+\begin_inset Formula $D_{F}=\omega$
+\end_inset
+
+ y ya que 
+\begin_inset Formula $F_{(i)}=F_{i}$
+\end_inset
+
+, para cada 
+\begin_inset Formula $i=1,...,n+m$
+\end_inset
+
+ tenemos que cada 
+\begin_inset Formula $F_{(i)}$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-computable.
+ Dejamos al lector verificar que 
+\begin_inset Formula $I_{F}=S$
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{proof}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Cuando un programa 
+\begin_inset Formula $\mathcal{P}$
+\end_inset
+
+ cumpla las propiedades dadas en (2) de la proposicion anterior respecto
+ de un conjunto 
+\begin_inset Formula $S$
+\end_inset
+
+, diremos que 
+\begin_inset Formula $\mathcal{P}$
+\end_inset
+
+ 
+\shape italic
+enumera 
+\shape default
+a 
+\begin_inset Formula $S$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Cabe destacar que (2)
+\begin_inset Formula $\Rightarrow$
+\end_inset
+
+(1) de la proposicion anterior es muy util a la hora de probar que un conjunto
+ dado es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-enumerable ya que nos permite trabajar dentro de un solo programa.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+
+\series bold
+Ejercicio 17:
+\end_layout
+
+\end_inset
+
+Sea 
+\begin_inset Formula $\Sigma=\{\%,!\}$
+\end_inset
+
+.
+ Pruebe sin usar macros ni la proposicion anterior que 
+\begin_inset Formula $S=\{(2,\%\%),(3,!!!),(0,\varepsilon)\}$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-enumerable
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+
+\series bold
+Ejercicio 18:
+\end_layout
+
+\end_inset
+
+Sea 
+\begin_inset Formula $\Sigma=\{\%,!\}$
+\end_inset
+
+.
+ Pruebe sin usar macros ni la proposicion anterior que 
+\begin_inset Formula $S=\{(i,5,\%^{i}):i\in\omega\}$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-enumerable
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+
+\series bold
+Ejercicio 19:
+\end_layout
+
+\end_inset
+
+Sea 
+\begin_inset Formula $\Sigma=\{\%,!\}$
+\end_inset
+
+.
+ Sea 
+\begin_inset Formula $L\subseteq\Sigma^{\ast}$
+\end_inset
+
+ un conjunto no vacio y 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-enumerable.
+ De (usando macros) un programa 
+\begin_inset Formula $\mathcal{P}\in\mathrm{Pro}^{\Sigma}$
+\end_inset
+
+ tal que 
+\begin_inset Formula $\Psi_{\mathcal{P}}^{1,0,\ast}$
+\end_inset
+
+ enumera al conjunto
+\begin_inset Formula 
+\[
+\{\alpha\%!:\alpha\in L\}
+\]
+
+\end_inset
+
+es decir 
+\family roman
+Dom
+\family default
+
+\begin_inset Formula $\Psi_{\mathcal{P}}^{1,0,\ast}=\omega$
+\end_inset
+
+ y 
+\begin_inset Formula $\operatorname{Im}\Psi_{\mathcal{P}}^{1,0,\ast}=\{\alpha\%!:\alpha\in L\}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+
+\series bold
+Ejercicio 20:
+\end_layout
+
+\end_inset
+
+Sea 
+\begin_inset Formula $\Sigma=\{\%,!\}$
+\end_inset
+
+.
+ Sea
+\begin_inset Formula 
+\[
+S=\{(x,x+1,x+2,\%\%!!):x\in\omega\}
+\]
+
+\end_inset
+
+De sin usar macros un programa 
+\begin_inset Formula $\mathcal{P}\in\mathrm{Pro}^{\Sigma}$
+\end_inset
+
+ el cual enumere a 
+\begin_inset Formula $S$
+\end_inset
+
+ (i.e.
+ que cumpla (2) de la proposicion anterior).
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
+Conjuntos 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-computables
+\end_layout
+
+\begin_layout Standard
+La version imperativa o Neumanniana del concepto de conjunto 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-efectivamente computable es facil de dar: un conjunto 
+\begin_inset Formula $S\subseteq\omega^{n}\times\Sigma^{\ast m}$
+\end_inset
+
+ sera llamado 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+
+\shape italic
+-computable
+\shape default
+ cuando la funcion 
+\begin_inset Formula $\chi_{S}^{\omega^{n}\times\Sigma^{\ast m}}$
+\end_inset
+
+ sea 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-computable.
+ O sea que 
+\begin_inset Formula $S\subseteq\omega^{n}\times\Sigma^{\ast m}$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-computable sii hay un programa 
+\begin_inset Formula $\mathcal{P}\in\mathrm{Pro}^{\Sigma}$
+\end_inset
+
+ el cual computa a 
+\begin_inset Formula $\chi_{S}^{\omega^{n}\times\Sigma^{\ast m}}$
+\end_inset
+
+, es decir:
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+
+Si 
+\begin_inset Formula $(\vec{x},\vec{\alpha})\in S$
+\end_inset
+
+, entonces 
+\begin_inset Formula $\mathcal{P}$
+\end_inset
+
+ se detiene partiendo desde 
+\begin_inset Formula $\left\Vert x_{1},...x_{n},\alpha_{1},...,\alpha_{m}\right\Vert $
+\end_inset
+
+ y la variable 
+\begin_inset Formula $\mathrm{N}1$
+\end_inset
+
+ queda con contenido igual a 
+\begin_inset Formula $1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+
+Si 
+\begin_inset Formula $(\vec{x},\vec{\alpha})\in(\omega^{n}\times\Sigma^{\ast m})-S$
+\end_inset
+
+, entonces 
+\begin_inset Formula $\mathcal{P}$
+\end_inset
+
+ se detiene partiendo desde 
+\begin_inset Formula $\left\Vert x_{1},...x_{n},\alpha_{1},...,\alpha_{m}\right\Vert $
+\end_inset
+
+ y la variable 
+\begin_inset Formula $\mathrm{N}1$
+\end_inset
+
+ queda con contenido igual a 
+\begin_inset Formula $0$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+Si 
+\begin_inset Formula $\mathcal{P}$
+\end_inset
+
+ es un programa el cual computa a 
+\begin_inset Formula $\chi_{S}^{\omega^{n}\times\Sigma^{\ast m}}$
+\end_inset
+
+, diremos que 
+\begin_inset Formula $\mathcal{P}$
+\end_inset
+
+ 
+\shape italic
+decide la pertenecia a 
+\shape default
+
+\begin_inset Formula $S$
+\end_inset
+
+, con respecto al conjunto 
+\begin_inset Formula $\omega^{n}\times\Sigma^{\ast m}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+
+\series bold
+Ejercicio 21:
+\end_layout
+
+\end_inset
+
+Sea 
+\begin_inset Formula $\Sigma=\{\%,!\}$
+\end_inset
+
+.
+ Pruebe sin usar macros que 
+\begin_inset Formula $S=\{(2,\%\%),(3,!)\}$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-computable
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+
+\series bold
+Ejercicio 22:
+\end_layout
+
+\end_inset
+
+Sea 
+\begin_inset Formula $\Sigma=\{\%,!\}$
+\end_inset
+
+.
+ Pruebe sin usar macros que 
+\begin_inset Formula $S=\{(i,\%^{i}):i\in\omega\}$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-computable
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+
+\series bold
+Ejercicio 23:
+\end_layout
+
+\end_inset
+
+Sea 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+ un alfabeto finito.
+ Pruebe usando macros que
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Si 
+\begin_inset Formula $P:S\subseteq\omega^{n}\times\Sigma^{\ast m}\rightarrow\omega$
+\end_inset
+
+ y 
+\begin_inset Formula $Q:S\subseteq\omega^{n}\times\Sigma^{\ast m}\rightarrow\omega$
+\end_inset
+
+ son predicados 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-computables, entonces 
+\begin_inset Formula $(P\vee Q)$
+\end_inset
+
+, 
+\begin_inset Formula $(P\wedge Q)$
+\end_inset
+
+ y 
+\begin_inset Formula $\lnot P$
+\end_inset
+
+ lo son tambien.
+\end_layout
+
+\begin_layout Enumerate
+Si 
+\begin_inset Formula $S_{1},S_{2}\subseteq\omega^{n}\times\Sigma^{\ast m}$
+\end_inset
+
+ son conjuntos 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-computables, entonces 
+\begin_inset Formula $S_{1}\cup S_{2}$
+\end_inset
+
+, 
+\begin_inset Formula $S_{1}\cap S_{2}$
+\end_inset
+
+ y 
+\begin_inset Formula $S_{1}-S_{2}$
+\end_inset
+
+ son 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-computables 
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+Macros asociados a conjuntos 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-computables
+\end_layout
+
+\begin_layout Standard
+La Proposicion 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "macro predicados"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ nos dice que si 
+\begin_inset Formula $S\subseteq\omega^{n}\times\Sigma^{\ast m}$
+\end_inset
+
+ es un conjunto 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-computable, entonces, ya que 
+\begin_inset Formula $\chi_{S}^{\omega^{n}\times\Sigma^{\ast m}}$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-computable, hay un macro
+\begin_inset Formula 
+\[
+\left[\mathrm{IF}\;\chi_{S}^{\omega^{n}\times\Sigma^{\ast m}}(\mathrm{V}1,...,\mathrm{V}\bar{n},\mathrm{W}1,...,\mathrm{W}\bar{m})\;\mathrm{GOTO}\;\mathrm{A}1\right]
+\]
+
+\end_inset
+
+Escribiremos el nombre de este macro de la siguiente manera mas intuitiva:
+\begin_inset Formula 
+\[
+\left[\mathrm{IF}\;(\mathrm{V}1,...,\mathrm{V}\bar{n},\mathrm{W}1,...,\mathrm{W}\bar{m})\in S\;\mathrm{GOTO}\;\mathrm{A}1\right]
+\]
+
+\end_inset
+
+Notese que las expanciones de este macro, dado que 
+\begin_inset Formula $\chi_{S}^{\omega^{n}\times\Sigma^{\ast m}}$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-total, ya sea terminan por la ultima instruccion de la expansion o direccionan
+ a la primera instruccion que tenga label igual al label que reemplazo a
+ 
+\begin_inset Formula $\mathrm{A}1$
+\end_inset
+
+ en la expansion.
+ Es importante notar que para asegurar la existencia de este macro utilizamos
+ que 
+\begin_inset Formula $S$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-computable lo cual no siempre sucedera para un conjunto 
+\begin_inset Formula $S$
+\end_inset
+
+.
+ Por ejemplo, puede pasar que 
+\begin_inset Formula $S$
+\end_inset
+
+ sea el dominio de una funcion 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+
+\shape italic
+-
+\shape default
+computable pero que 
+\begin_inset Formula $S$
+\end_inset
+
+ no sea 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-computable (esto se vera mas adelante) y en tal caso no existira un macro
+\begin_inset Formula 
+\[
+\left[\mathrm{IF}\;(\mathrm{V}1,...,\mathrm{V}\bar{n},\mathrm{W}1,...,\mathrm{W}\bar{m})\in S\;\mathrm{GOTO}\;\mathrm{A}1\right]
+\]
+
+\end_inset
+
+ya que si tal macro existiera seria facil hacer un programa que compute
+ a 
+\begin_inset Formula $\chi_{S}^{\omega^{n}\times\Sigma^{\ast m}}$
+\end_inset
+
+ lo cual nos diria que 
+\begin_inset Formula $S$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-computable (ver el ejercicio posterior a la Proposicion 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "macro predicados"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+).
+ Es muy comun el error de suponer que existe un macro 
+\begin_inset Formula $\left[\mathrm{IF}\;(\mathrm{V}1,...,\mathrm{V}\bar{n},\mathrm{W}1,...,\mathrm{W}\bar{m})\in S\;\mathrm{GOTO}\;\mathrm{A}1\right]$
+\end_inset
+
+ cuando 
+\begin_inset Formula $S$
+\end_inset
+
+ es el dominio de una funcion 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-computable.
+\end_layout
+
+\end_body
+\end_document

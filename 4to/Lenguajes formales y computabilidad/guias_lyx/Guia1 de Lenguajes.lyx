@@ -1,0 +1,6524 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\begin_preamble
+\setcounter{MaxMatrixCols}{30}%
+\usepackage{amsfonts}\usepackage{graphicx}
+%TCIDATA{OutputFilter=latex2.dll}
+%TCIDATA{Version=5.50.0.2953}
+%TCIDATA{CSTFile=LaTeX article (bright).cst}
+%TCIDATA{Created=Thursday, March 08, 2007 06:44:18}
+%TCIDATA{LastRevised=Sunday, April 28, 2024 18:57:59}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
+%TCIDATA{BibliographyScheme=BibTeX}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="Standard LaTeX\Blank - Standard LaTeX Article">}
+%TCIDATA{Language=American English}
+%TCIDATA{ComputeDefs=
+%$\varepsilon$
+%$F_{V(\mathbf{A})}(x_{1},...,x_{n})=\{t_{1},...,t_{k}\}$
+%}
+%BeginMSIPreambleData
+\providecommand{\U}[1]{\protect\rule{.1in}{.1in}}
+%EndMSIPreambleData
+\newtheorem{theorem}{Theorem}\newtheorem{acknowledgement}[theorem]{Acknowledgement}\newtheorem{algorithm}[theorem]{Algorithm}\newtheorem{axiom}[theorem]{Axiom}\newtheorem{case}[theorem]{Case}\newtheorem{claim}[theorem]{Claim}\newtheorem{conclusion}[theorem]{Conclusion}\newtheorem{condition}[theorem]{Condition}\newtheorem{conjecture}[theorem]{Conjecture}\newtheorem{corollary}[theorem]{Corollary}\newtheorem{criterion}[theorem]{Criterion}\newtheorem{definition}[theorem]{Definition}\newtheorem{example}[theorem]{Example}\newtheorem{exercise}[theorem]{Exercise}\newtheorem{lemma}[theorem]{Lemma}\newtheorem{notation}[theorem]{Notation}\newtheorem{problem}[theorem]{Problem}\newtheorem{proposition}[theorem]{Proposition}\newtheorem{remark}[theorem]{Remark}\newtheorem{solution}[theorem]{Solution}\newtheorem{summary}[theorem]{Summary}\newenvironment{proof}[1][Proof]{\noindent\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+\end_preamble
+\use_default_options false
+\maintain_unincluded_children false
+\language english
+\language_package none
+\inputencoding auto
+\fontencoding default
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 2
+\use_package amssymb 2
+\use_package cancel 0
+\use_package esint 1
+\use_package mathdots 0
+\use_package mathtools 0
+\use_package mhchem 0
+\use_package stackrel 0
+\use_package stmaryrd 0
+\use_package undertilde 0
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+Nota: Los ejercicios que tienen (S) son para una 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+"
+\end_layout
+
+\end_inset
+
+Segunda vuelta
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+"
+\end_layout
+
+\end_inset
+
+ es decir conviene hacerlos una vez que ya se completó la guía haciendo
+ los otros y ya se tiene mas madurez e intuición basica sobre los conceptos.
+ Los que tienen (O) son opcionales por lo cual no se toman en los examenes.
+\end_layout
+
+\begin_layout Section*
+Notacion y conceptos basicos
+\end_layout
+
+\begin_layout Standard
+Usaremos 
+\begin_inset Formula $\mathbf{R}$
+\end_inset
+
+ para denotar el conjunto de los numeros reales, 
+\begin_inset Formula $\mathbf{Z}$
+\end_inset
+
+ para denotar el conjunto de los numeros enteros, 
+\begin_inset Formula $\mathbf{N}$
+\end_inset
+
+ para denotar el conjunto de los numeros naturales y 
+\begin_inset Formula $\omega$
+\end_inset
+
+ para denotar al conjunto 
+\begin_inset Formula $\mathbf{N}\cup\{0\}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Dado un conjunto 
+\begin_inset Formula $A$
+\end_inset
+
+, usaremos 
+\begin_inset Formula $\mathcal{P}(A)$
+\end_inset
+
+ para denotar el conjunto formado por todos los subconjuntos de 
+\begin_inset Formula $A$
+\end_inset
+
+, es decir:
+\begin_inset Formula 
+\[
+\mathcal{P}(A)=\{S:S\subseteq A\}
+\]
+
+\end_inset
+
+Si 
+\begin_inset Formula $A$
+\end_inset
+
+ es un conjunto finito, entonces 
+\begin_inset Formula $\left\vert A\right\vert $
+\end_inset
+
+ denotara la cantidad de elementos de 
+\begin_inset Formula $A$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Para 
+\begin_inset Formula $x,y\in\omega$
+\end_inset
+
+, definamos
+\begin_inset Formula 
+\[
+x\dot{-}y=\left\{ \begin{array}{lll}
+x-y &  & \text{si }x\geq y\\
+0 &  & \text{caso contrario}
+\end{array}\right.
+\]
+
+\end_inset
+
+Dados 
+\begin_inset Formula $x,y\in\omega$
+\end_inset
+
+ diremos que 
+\begin_inset Formula $x$
+\end_inset
+
+ 
+\shape italic
+divide a 
+\shape default
+
+\begin_inset Formula $y$
+\end_inset
+
+ cuando haya un 
+\begin_inset Formula $z\in\omega$
+\end_inset
+
+ tal que 
+\begin_inset Formula $y=z.x$
+\end_inset
+
+.
+ Notar que 
+\begin_inset Formula $0$
+\end_inset
+
+ divide a 
+\begin_inset Formula $0$
+\end_inset
+
+, 
+\begin_inset Formula $3$
+\end_inset
+
+ divide a 
+\begin_inset Formula $0$
+\end_inset
+
+ y 
+\begin_inset Formula $0$
+\end_inset
+
+ no divide a 
+\begin_inset Formula $23$
+\end_inset
+
+.
+ Escribiremos 
+\begin_inset Formula $x\mid y$
+\end_inset
+
+ para expresar que 
+\begin_inset Formula $x$
+\end_inset
+
+ divide a 
+\begin_inset Formula $y$
+\end_inset
+
+.
+ Si bien no hay una definicion natural en matematica de cuanto vale 
+\begin_inset Formula $0^{0}$
+\end_inset
+
+ (
+\begin_inset Formula $0$
+\end_inset
+
+ elevado a la 
+\begin_inset Formula $0$
+\end_inset
+
+), por convencion para nosotros 
+\begin_inset Formula $0^{0}=1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+Producto carteciano
+\end_layout
+
+\begin_layout Standard
+Dados conjuntos 
+\begin_inset Formula $A_{1},...,A_{n}$
+\end_inset
+
+, con 
+\begin_inset Formula $n\geq2$
+\end_inset
+
+, usaremos 
+\begin_inset Formula $A_{1}\times...\times A_{n}$
+\end_inset
+
+ para denotar el 
+\shape italic
+producto Cartesiano
+\shape default
+ de 
+\begin_inset Formula $A_{1},...,A_{n}$
+\end_inset
+
+, es decir el conjunto formado por todas las 
+\begin_inset Formula $n$
+\end_inset
+
+-uplas 
+\begin_inset Formula $(a_{1},...,a_{n})$
+\end_inset
+
+ tales que 
+\begin_inset Formula $a_{1}\in A_{1},...,a_{n}\in A_{n}$
+\end_inset
+
+.
+ Si 
+\begin_inset Formula $A_{1}=...=A_{n}=A$
+\end_inset
+
+, con 
+\begin_inset Formula $n\geq2$
+\end_inset
+
+, entonces escribiremos 
+\begin_inset Formula $A^{n}$
+\end_inset
+
+ en lugar de 
+\begin_inset Formula $A_{1}\times...\times A_{n}$
+\end_inset
+
+.
+ Para 
+\begin_inset Formula $n=1$
+\end_inset
+
+, definimos 
+\begin_inset Formula $A^{n}=A$
+\end_inset
+
+, es decir 
+\begin_inset Formula $A^{1}=A$
+\end_inset
+
+.
+ Usaremos 
+\begin_inset Formula $\Diamond$
+\end_inset
+
+ para denotar la unica 
+\begin_inset Formula $0$
+\end_inset
+
+-upla.
+ Definimos entonces 
+\begin_inset Formula $A^{0}=\{\Diamond\}$
+\end_inset
+
+.
+ Si 
+\begin_inset Formula $A$
+\end_inset
+
+ es un conjunto denotaremos con 
+\begin_inset Formula $A^{\mathbf{N}}$
+\end_inset
+
+ al conjunto formado por todas las infinituplas 
+\begin_inset Formula $(a_{1},a_{2},...)$
+\end_inset
+
+ tales que 
+\begin_inset Formula $a_{i}\in A$
+\end_inset
+
+ para cada 
+\begin_inset Formula $i\in\mathbf{N}$
+\end_inset
+
+.
+ Por ejemplo
+\begin_inset Formula 
+\[
+(1,2,3,4,...)\in\omega^{\mathbf{N}}
+\]
+
+\end_inset
+
+donde 
+\begin_inset Formula $(1,2,3,4,...)$
+\end_inset
+
+ es una forma intuitiva de denotar la infinitupla cuyo 
+\begin_inset Formula $i$
+\end_inset
+
+-esimo elemento es el numero natural 
+\begin_inset Formula $i$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Si 
+\begin_inset Formula $(A_{1},A_{2},...)$
+\end_inset
+
+ es una infinitupla de conjuntos, entonces usaremos 
+\begin_inset Formula $\bigcup\nolimits _{i=1}^{\infty}A_{i}$
+\end_inset
+
+ o 
+\begin_inset Formula $\bigcup\nolimits _{i\geq1}A_{i}$
+\end_inset
+
+ para denotar al conjunto
+\begin_inset Formula 
+\[
+\{a:a\in A_{i},\ \mathrm{para\ algun\ }i\in\mathbf{N}\}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+Conjuntos
+\end_layout
+
+\begin_layout Standard
+Supondremos que el lector sabe las nociones basicas sobre conjuntos, aunque
+ resaltaremos algunas de las mas importantes para que el lector las repase.
+\end_layout
+
+\begin_layout Standard
+La propiedad de 
+\shape italic
+extensionalidad
+\shape default
+ nos dice que, dados conjuntos 
+\begin_inset Formula $A,B$
+\end_inset
+
+, se tiene que 
+\begin_inset Formula $A=B$
+\end_inset
+
+ si y solo si para cada objeto 
+\begin_inset Formula $x$
+\end_inset
+
+ se da que
+\begin_inset Formula 
+\[
+x\in A\text{ si y solo si }x\in B
+\]
+
+\end_inset
+
+Esta propiedad es importante metodologicamente ya que a la hora de probar
+ que dos conjuntos 
+\begin_inset Formula $A,B$
+\end_inset
+
+ son iguales, extensionalidad nos asegura que basta con ver que se dan las
+ dos inclusiones 
+\begin_inset Formula $A\subseteq B$
+\end_inset
+
+ y 
+\begin_inset Formula $B\subseteq A$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Otro tema importante es manejar correctamente la notacion cuando definimos
+ un conjunto usando llaves y mediante propiedades que caracterizan la pertenenci
+a al mismo.
+ Algunos ejercicios para entrenar esta notacion:
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+
+\series bold
+Ejercicio 1:
+\end_layout
+
+\end_inset
+
+Entender en forma precisa que conjunto se esta denotando en cada uno de
+ los siguientes casos
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $\{x\in\mathbf{N}:x=1$
+\end_inset
+
+ o 
+\begin_inset Formula $x\geq5\}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\{x:x\in\mathbf{R}$
+\end_inset
+
+ y 
+\begin_inset Formula $x^{2}\geq100\}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\{x:x=100\}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\{x^{2}+1:x\in\omega\}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\{x+y+z:x,y,z\in\{1,2\}\}$
+\end_inset
+
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+
+\series bold
+Ejercicio 2:
+\end_layout
+
+\end_inset
+
+V o F o I, justifique.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $\{x.y:x,y\in\omega\}=\omega$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left\vert \{x.y:x,y\in\omega\text{ y }1\leq x,y\leq5\}\right\vert =25$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Dados 
+\begin_inset Formula $A,B\subseteq\omega$
+\end_inset
+
+, se tiene que 
+\begin_inset Formula $\{a\in A$
+\end_inset
+
+ y 
+\begin_inset Formula $b\in B:a+b=1000\}\subseteq A\times B$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\{a\in\mathbf{N},a\geq3\}\subseteq\omega$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\{x+1:x\in\{1,2,3\}\}=\{1,2,3,4\}$
+\end_inset
+
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+Alfabetos
+\end_layout
+
+\begin_layout Standard
+Un 
+\shape italic
+alfabeto
+\shape default
+ es un conjunto finito de simbolos.
+ Notese que 
+\begin_inset Formula $\emptyset$
+\end_inset
+
+ es un alfabeto.
+ Si 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+ es un alfabeto, entonces 
+\begin_inset Formula $\Sigma^{\ast}$
+\end_inset
+
+ denotara el conjunto de todas las palabras formadas con simbolos de 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+.
+ Las palabras de longitud 
+\begin_inset Formula $1$
+\end_inset
+
+ son exactamente los elementos de 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+, en particular esto nos dice que 
+\begin_inset Formula $\Sigma\subseteq\Sigma^{\ast}$
+\end_inset
+
+.
+ La unica palabra de longitud 
+\begin_inset Formula $0$
+\end_inset
+
+ es denotada con 
+\begin_inset Formula $\varepsilon$
+\end_inset
+
+.
+ Ya que en 
+\begin_inset Formula $\varepsilon$
+\end_inset
+
+ no ocurren simbolos, tenemos que 
+\begin_inset Formula $\varepsilon\in\Sigma^{\ast}$
+\end_inset
+
+, para cualquier alfabeto, mas aun notese que 
+\begin_inset Formula $\emptyset^{\ast}=\{\varepsilon\}$
+\end_inset
+
+.
+ Usaremos 
+\begin_inset Formula $\left\vert \alpha\right\vert $
+\end_inset
+
+ para denotar la longitud de la palabra 
+\begin_inset Formula $\alpha$
+\end_inset
+
+.
+ Si 
+\begin_inset Formula $\alpha\in\Sigma^{\ast}$
+\end_inset
+
+ y 
+\begin_inset Formula $\sigma\in\Sigma$
+\end_inset
+
+, usaremos 
+\begin_inset Formula $\left\vert \alpha\right\vert _{\sigma}$
+\end_inset
+
+ para denotar la cantidad de ocurrencias del simbolo 
+\begin_inset Formula $\sigma$
+\end_inset
+
+ en 
+\begin_inset Formula $\alpha$
+\end_inset
+
+.
+ Usaremos 
+\begin_inset Formula $\Sigma^{+}$
+\end_inset
+
+ para denotar al conjunto 
+\begin_inset Formula $\Sigma^{\ast}-\{\varepsilon\}$
+\end_inset
+
+.
+ Notese que funciones, 
+\begin_inset Formula $n$
+\end_inset
+
+-uplas y palabras son objetos de distinto tipo, por lo cual 
+\begin_inset Formula $\emptyset$
+\end_inset
+
+, 
+\begin_inset Formula $\Diamond$
+\end_inset
+
+ y 
+\begin_inset Formula $\varepsilon$
+\end_inset
+
+ son tres objetos matematicos diferentes.
+\end_layout
+
+\begin_layout Standard
+Si 
+\begin_inset Formula $\alpha_{1},...,\alpha_{n}\in\Sigma^{\ast}$
+\end_inset
+
+, con 
+\begin_inset Formula $n\geq0$
+\end_inset
+
+, usaremos 
+\begin_inset Formula $\alpha_{1}...\alpha_{n}$
+\end_inset
+
+ para denotar la 
+\shape italic
+concatenacion
+\shape default
+ de las palabras 
+\begin_inset Formula $\alpha_{1},...,\alpha_{n}$
+\end_inset
+
+ (notese que cuando 
+\begin_inset Formula $n=0$
+\end_inset
+
+, resulta que 
+\begin_inset Formula $\alpha_{1}...\alpha_{n}=\varepsilon$
+\end_inset
+
+).
+ Si 
+\begin_inset Formula $\alpha_{1}=...=\alpha_{n}=\alpha$
+\end_inset
+
+, entonces escribiremos 
+\begin_inset Formula $\alpha^{n}$
+\end_inset
+
+ en lugar de 
+\begin_inset Formula $\alpha_{1}...\alpha_{n}$
+\end_inset
+
+.
+ O sea que 
+\begin_inset Formula $\alpha^{0}=\varepsilon$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Diremos que 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ 
+\shape italic
+es subpalabra (propia) de 
+\shape default
+
+\begin_inset Formula $\beta$
+\end_inset
+
+ cuando (
+\begin_inset Formula $\alpha\notin\{\varepsilon,\beta\}$
+\end_inset
+
+ y) existan palabras 
+\begin_inset Formula $\delta,\gamma$
+\end_inset
+
+ tales que 
+\begin_inset Formula $\beta=\delta\alpha\gamma$
+\end_inset
+
+.
+ Diremos que 
+\begin_inset Formula $\beta$
+\end_inset
+
+ es un 
+\shape italic
+tramo inicial (propio) 
+\shape default
+de 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ si hay una palabra 
+\begin_inset Formula $\gamma$
+\end_inset
+
+ tal que 
+\begin_inset Formula $\alpha=\beta\gamma$
+\end_inset
+
+ (y 
+\begin_inset Formula $\beta\notin\{\varepsilon,\alpha\}$
+\end_inset
+
+).
+ En forma similar se define 
+\shape italic
+tramo final (propio).
+\end_layout
+
+\begin_layout Standard
+Dados 
+\begin_inset Formula $i\in\omega$
+\end_inset
+
+ y 
+\begin_inset Formula $\alpha\in\Sigma^{\ast}$
+\end_inset
+
+ definamos
+\begin_inset Formula 
+\[
+\left[\alpha\right]_{i}=\left\{ \begin{array}{lll}
+i\text{-esimo elemento de }\alpha &  & \text{si }1\leq i\leq\left\vert \alpha\right\vert \\
+\varepsilon &  & \text{caso contrario}
+\end{array}\right.
+\]
+
+\end_inset
+
+Dada 
+\begin_inset Formula $\gamma\in\Sigma^{\ast}$
+\end_inset
+
+, definamos
+\begin_inset Formula 
+\[
+\gamma^{R}=\left\{ \begin{array}{lll}
+[\gamma]_{\left\vert \gamma\right\vert }[\gamma]_{\left\vert \gamma\right\vert -1}...[\gamma]_{1} &  & \text{si }\left\vert \gamma\right\vert \geq1\\
+\varepsilon &  & \text{caso contrario}
+\end{array}\right.
+\]
+
+\end_inset
+
+La palabra 
+\begin_inset Formula $\gamma^{R}$
+\end_inset
+
+ es llamada la 
+\shape italic
+resiproca
+\shape default
+ de 
+\begin_inset Formula $\gamma$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection*
+Ocurrencias
+\end_layout
+
+\begin_layout Standard
+Dadas palabras 
+\begin_inset Formula $\alpha,\beta\in\Sigma^{\ast}$
+\end_inset
+
+, con 
+\begin_inset Formula $\left\vert \alpha\right\vert ,\left\vert \beta\right\vert \geq1$
+\end_inset
+
+, y un natural 
+\begin_inset Formula $i\in\{1,...,\left\vert \beta\right\vert \}$
+\end_inset
+
+, se dice que 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ 
+\shape italic
+ocurre a partir de 
+\shape default
+
+\begin_inset Formula $i$
+\end_inset
+
+ 
+\shape italic
+en 
+\shape default
+
+\begin_inset Formula $\beta$
+\end_inset
+
+ cuando se de que existan palabras 
+\begin_inset Formula $\delta,\gamma$
+\end_inset
+
+ tales que 
+\begin_inset Formula $\beta=\delta\alpha\gamma$
+\end_inset
+
+ y 
+\begin_inset Formula $\left\vert \delta\right\vert =i-1$
+\end_inset
+
+.
+ Intuitivamente hablando 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ ocurre a partir de 
+\begin_inset Formula $i$
+\end_inset
+
+ en 
+\begin_inset Formula $\beta$
+\end_inset
+
+ cuando se de que si comensamos a leer desde el lugar 
+\begin_inset Formula $i$
+\end_inset
+
+-esimo de 
+\begin_inset Formula $\beta$
+\end_inset
+
+ en adelante, leeremos la palabra 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ completa y luego posiblemente seguiran otros simbolos.
+\end_layout
+
+\begin_layout Standard
+Notese que una palabra 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ puede ocurrir en 
+\begin_inset Formula $\beta$
+\end_inset
+
+, a partir de 
+\begin_inset Formula $i$
+\end_inset
+
+, y tambien a partir de 
+\begin_inset Formula $j$
+\end_inset
+
+, con 
+\begin_inset Formula $i\neq j$
+\end_inset
+
+.
+ En virtud de esto, hablaremos de las distintas ocurrencias de 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ en 
+\begin_inset Formula $\beta$
+\end_inset
+
+.
+ Por ejemplo hay dos ocurrencias de la palabra 
+\begin_inset Formula $aba$
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+en la palabra
+\begin_inset Formula 
+\[
+cccccccabaccccabaccccc
+\]
+
+\end_inset
+
+y tambien hay dos ocurrencias de la palabra 
+\begin_inset Formula $aba$
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+en la palabra
+\begin_inset Formula 
+\[
+cccccccababacccccccccc
+\]
+
+\end_inset
+
+En el primer caso diremos que dichas ocurrencias de 
+\begin_inset Formula $aba$
+\end_inset
+
+ son 
+\shape italic
+disjuntas
+\shape default
+ ya que ocupan espacios disjuntos dentro de la palabra.
+ En cambio en el segundo caso puede apreciarse que las dos ocurrencias se
+ superponen en una posicion.
+ A veces diremos que una ocurrencia esta 
+\shape italic
+contenida
+\shape default
+ o 
+\shape italic
+sucede
+\shape default
+ dentro de otra.
+ Por ejemplo la segunda ocurrencia de 
+\begin_inset Formula $ab$
+\end_inset
+
+ en 
+\begin_inset Formula $babbbfabcccfabccc$
+\end_inset
+
+ esta contenida en la primer ocurrencia de 
+\begin_inset Formula $fabc$
+\end_inset
+
+ en 
+\begin_inset Formula $babbbfabcccfabccc$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+No definiremos en forma matematica precisa el concepto de ocurrencia pero
+ el lector no tendra problemas en comprenderlo y manejarlo en forma correcta.
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+Reemplazos de ocurrencias
+\end_layout
+
+\begin_layout Standard
+Tambien haremos 
+\shape italic
+reemplazos
+\shape default
+ de ocurrencias por palabras.
+ Por ejemplo el resultado de reemplazar la primer ocurrencia de 
+\begin_inset Formula $abb$
+\end_inset
+
+ en 
+\begin_inset Formula $ccabbgfgabbgg$
+\end_inset
+
+ por 
+\begin_inset Formula $oolala$
+\end_inset
+
+ es la palabra 
+\begin_inset Formula $ccoolalagfgabbgg$
+\end_inset
+
+.
+ Cuando todas las ocurrencias de una palabra 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ en una palabra 
+\begin_inset Formula $\beta$
+\end_inset
+
+ sean disjuntas entre si, podemos hablar del resultado de 
+\shape italic
+reeplazar simultaneamente cada ocurrencia de 
+\shape default
+
+\begin_inset Formula $\alpha$
+\end_inset
+
+ 
+\shape italic
+en
+\shape default
+ 
+\begin_inset Formula $\beta$
+\end_inset
+
+ 
+\shape italic
+por
+\shape default
+ 
+\begin_inset Formula $\gamma$
+\end_inset
+
+.
+ Por ejemplo si tenemos
+\begin_inset Formula 
+\begin{align*}
+\alpha & =yet\\
+\beta & =ghsyetcjjjyetbcpyeteabc\\
+\gamma & =\%\%
+\end{align*}
+
+\end_inset
+
+entonces 
+\begin_inset Formula $ghs\%\%cjjj\%\%bcp\%\%eabc$
+\end_inset
+
+ es el resultado de reemplazar simultaneamente cada ocurrencia de 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ en 
+\begin_inset Formula $\beta$
+\end_inset
+
+ por 
+\begin_inset Formula $\gamma$
+\end_inset
+
+.
+ Es importante notar que los reemplazos se hacen simultaneamente y no secuencial
+mente (i.e.
+ reemplazando la primer ocurrencia de 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ por 
+\begin_inset Formula $\gamma$
+\end_inset
+
+ y luego al resultado reemplazarle la primer ocurrencia de 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ por 
+\begin_inset Formula $\gamma$
+\end_inset
+
+ y asi sucesivamente).
+ Obviamente el reemplazo secuencial puede dar un resultado distinto al simultane
+o (que es el que usaremos en general) e incluso puede suceder que en el
+ reemplazo secuencial el proceso se pueda iterar indefinidamente.
+ Dejamos al lector armar ejemplos de estas cituaciones.
+\end_layout
+
+\begin_layout Standard
+Tambien se pueden hacer reemplazos simultaneos de distintas palabras en
+ una palabra dada.
+ Supongamos tenemos palabras 
+\begin_inset Formula $\alpha_{1},...,\alpha_{n}$
+\end_inset
+
+ (con 
+\begin_inset Formula $\alpha_{i}\neq\alpha_{j}$
+\end_inset
+
+, para 
+\begin_inset Formula $i\neq j$
+\end_inset
+
+) las cuales tienen la propiedad de que las distintas ocurrencias de ellas
+ en la palabra 
+\begin_inset Formula $\beta$
+\end_inset
+
+ son siempre disjuntas de a pares, y tenemos ademas palabras 
+\begin_inset Formula $\gamma_{1},...,\gamma_{n}$
+\end_inset
+
+.
+ Entonces hablaremos del resultado de reemplazar simultaneamente:
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+
+cada ocurrencia de 
+\begin_inset Formula $\alpha_{1}$
+\end_inset
+
+ en 
+\begin_inset Formula $\beta$
+\end_inset
+
+, por 
+\begin_inset Formula $\gamma_{1}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+
+cada ocurrencia de 
+\begin_inset Formula $\alpha_{2}$
+\end_inset
+
+ en 
+\begin_inset Formula $\beta$
+\end_inset
+
+, por 
+\begin_inset Formula $\gamma_{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+ 
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \vdots$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+
+cada ocurrencia de 
+\begin_inset Formula $\alpha_{n}$
+\end_inset
+
+ en 
+\begin_inset Formula $\beta$
+\end_inset
+
+, por 
+\begin_inset Formula $\gamma_{n}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+Por ejemplo si tomamos
+\begin_inset Formula 
+\begin{align*}
+\alpha_{1} & =gh\\
+\alpha_{2} & =yet\\
+\alpha_{3} & =ana\\
+\beta & =ghbbbyetbbgh\%\%ana\#\#ana!!!ana\\
+\gamma_{1} & =AA\\
+\gamma_{2} & =BBBB\\
+\gamma_{3} & =CCC
+\end{align*}
+
+\end_inset
+
+entonces 
+\begin_inset Formula $AAbbbBBBBbbAA\%\%CCC\#\#CCC!!!CCC$
+\end_inset
+
+ es el resultado de reemplazar simultaneamente:
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+
+cada ocurrencia de 
+\begin_inset Formula $\alpha_{1}$
+\end_inset
+
+ en 
+\begin_inset Formula $\beta$
+\end_inset
+
+, por 
+\begin_inset Formula $\gamma_{1}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+
+cada ocurrencia de 
+\begin_inset Formula $\alpha_{2}$
+\end_inset
+
+ en 
+\begin_inset Formula $\beta$
+\end_inset
+
+, por 
+\begin_inset Formula $\gamma_{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+- 
+\end_layout
+
+\end_inset
+
+cada ocurrencia de 
+\begin_inset Formula $\alpha_{3}$
+\end_inset
+
+ en 
+\begin_inset Formula $\beta$
+\end_inset
+
+, por 
+\begin_inset Formula $\gamma_{3}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Subsection*
+Matematica orientada a objetos
+\end_layout
+
+\begin_layout Standard
+Nuestro estilo o enfoque matematico pondra enfasis en los objetos, es decir
+ haremos matematica prestando atencion a los distintos objetos matematicos
+ involucrados, los cuales siempre seran definidos en forma precisa en terminos
+ de objetos mas primitivos.
+ Hay ciertos objetos matematicos los cuales no definiremos y supondremos
+ que el lector tiene una idea clara y precisa de los mismos.
+ Por ejemplo un tipo de objeto matematico, quizas el mas famoso, son los
+ 
+\shape italic
+numeros
+\shape default
+.
+ No diremos que es un numero pero supondremos que el lector tiene una intuicion
+ clara acerca de este tipo de objetos y de sus propiedades basicas.
+ Otro tipo de objeto que no definiremos y que sera clave para nuestro enfoque
+ son los 
+\shape italic
+conjuntos
+\shape default
+.
+ Nuevamente, no diremos que es un conjunto pero supondremos que el lector
+ tiene una intuicion clara acerca de estos objetos y sus propiedades basicas.
+ Es importante que en nuestro enfoque, numeros y conjuntos son objetos de
+ distinta naturaleza por lo cual nunca un numero es un conjunto ni un conjunto
+ es un numero.
+ En particular esto nos dice que el numero 
+\begin_inset Formula $0$
+\end_inset
+
+ y el conjunto 
+\begin_inset Formula $\emptyset$
+\end_inset
+
+ son objetos distintos.
+ Otro tipo de objeto matematico muy importante para la matematica discreta
+ son los 
+\shape italic
+simbolos
+\shape default
+.
+ No discutiremos que es un simbolo sino que aceptaremos este concepto en
+ forma primitiva.
+ Tambien constituyen un tipo de objeto matematico las 
+\shape italic
+palabras
+\shape default
+, las cuales intuitivamente hablando son juxtaposiciones de simbolos.
+ Otro tipo de objeto matematico muy importante son los 
+\shape italic
+pares ordenados
+\shape default
+ o 2-
+\shape italic
+uplas
+\shape default
+, es decir los objetos de la forma 
+\begin_inset Formula $(a,b)$
+\end_inset
+
+, donde 
+\begin_inset Formula $a$
+\end_inset
+
+ y 
+\begin_inset Formula $b$
+\end_inset
+
+ son objetos matematicos cualesquiera.
+ Tambien son objetos matematicos y de distinta naturaleza las 3-
+\shape italic
+uplas
+\shape default
+, las 4-
+\shape italic
+uplas
+\shape default
+ y en general las 
+\begin_inset Formula $n$
+\end_inset
+
+-
+\shape italic
+uplas
+\shape default
+ para 
+\begin_inset Formula $n$
+\end_inset
+
+ un numero natural mayor o igual a 
+\begin_inset Formula $2$
+\end_inset
+
+.
+ Cabe destacar que en nuestro enfoque no habra 1-uplas.
+ Sin envargo, si bien hay una sola 0-
+\shape italic
+upla
+\shape default
+, ella constituye un tipo de objeto matematico distinto a los antes mencionados.
+ El ultimo tipo de objeto matematico que consideraremos es aquel de las
+ 
+\shape italic
+infinituplas
+\shape default
+.
+\end_layout
+
+\begin_layout Standard
+Tenemos entonces dividido nuestro universo matematico en las distintas categoria
+s de objetos:
+\begin_inset Formula 
+\begin{align*}
+ & \mathrm{NUMERO}\\
+ & \mathrm{CONJUNTO}\\
+ & \mathrm{PALABRA}\\
+ & 0\mathrm{-UPLA}\\
+ & 2\mathrm{-UPLA}\\
+ & 3\mathrm{-UPLA}\\
+ & \ \ \ \ \ \ \ \ \vdots\\
+ & \mathrm{INFINITUPLA}
+\end{align*}
+
+\end_inset
+
+(Notar que los simbolos quedan contenidos en la categoria de las palabras).
+ Es importante entender que las anteriores categorias o tipos de objetos
+ son disjuntas entre si, es decir nunca un numero sera una palabra o una
+ palabra sera una 3-upla etc.
+ Esto nos permite definir una funcion 
+\begin_inset Formula $Ti$
+\end_inset
+
+ la cual a un objeto matematico le asigna su tipo de objeto matematico segun
+ la lista anterior.
+ Por ejemplo:
+\begin_inset Formula 
+\begin{align*}
+Ti(\pi) & =\mathrm{NUMERO}\\
+Ti(\mathbf{N}) & =\mathrm{CONJUNTO}\\
+Ti(\mathcal{P}(\mathbf{N})) & =\mathrm{CONJUNTO}\\
+Ti((1,2,3)) & =3\mathrm{-UPLA}\\
+Ti(\mathbf{\emptyset}) & =\mathrm{CONJUNTO}\\
+Ti(\varepsilon) & =\mathrm{PALABRA}\\
+Ti(\Diamond) & =0\mathrm{-UPLA}\\
+Ti(\alpha) & =\mathrm{PALABRA}\text{, si }\alpha\text{ es un simbolo}\\
+Ti(f) & =\mathrm{CONJUNTO}\text{, si }f\text{ es una funcion}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+El concepto de funcion
+\end_layout
+
+\begin_layout Standard
+Asumiremos que el lector tiene una idea intuitiva del concepto de funcion.
+ Daremos aqui una definicion matematica de dicho concepto.
+ Una 
+\shape italic
+funcion
+\shape default
+ es un conjunto 
+\begin_inset Formula $f$
+\end_inset
+
+ de pares ordenados con la siguiente propiedad
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+(F)
+\end_layout
+
+\end_inset
+
+Si 
+\begin_inset Formula $(x,y)\in f$
+\end_inset
+
+ y 
+\begin_inset Formula $(x,z)\in f$
+\end_inset
+
+, entonces 
+\begin_inset Formula $y=z$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+Por ejemplo, si tomamos 
+\begin_inset Formula $f=\{(x,x^{2}):x\in\omega\}$
+\end_inset
+
+ se puede ver facilmente que 
+\begin_inset Formula $f$
+\end_inset
+
+ cumple la propiedad (F).
+ Dada una funcion 
+\begin_inset Formula $f$
+\end_inset
+
+, definamos
+\begin_inset Formula 
+\begin{align*}
+D_{f} & =\text{ dominio de }f=\{x:(x,y)\in f\text{ para algun }y\}\\
+I_{f} & =\text{ imagen de }f=\{y:(x,y)\in f\text{ para algun }x\}
+\end{align*}
+
+\end_inset
+
+A veces escribiremos 
+\begin_inset Formula $\mathrm{Dom}(f)$
+\end_inset
+
+ y 
+\begin_inset Formula $\operatorname{Im}(f)$
+\end_inset
+
+ para denotar, respectivamente, el dominio y la imagen de una funcion 
+\begin_inset Formula $f$
+\end_inset
+
+.
+ Como es usual dado 
+\begin_inset Formula $x\in D_{f}$
+\end_inset
+
+, usaremos 
+\begin_inset Formula $f(x)$
+\end_inset
+
+ para denotar al unico 
+\begin_inset Formula $y\in I_{f}$
+\end_inset
+
+ tal que 
+\begin_inset Formula $(x,y)\in f$
+\end_inset
+
+.
+ Notese que 
+\begin_inset Formula $\emptyset$
+\end_inset
+
+ es una funcion y que 
+\begin_inset Formula $D_{\emptyset}=I_{\emptyset}=\emptyset$
+\end_inset
+
+.
+ Por ejemplo para 
+\begin_inset Formula $f=\{(x,x^{2}):x\in\omega\}$
+\end_inset
+
+ se tiene que 
+\begin_inset Formula $D_{f}=\omega$
+\end_inset
+
+ y 
+\begin_inset Formula $I_{f}=\{y:y=x^{2}$
+\end_inset
+
+ para algun 
+\begin_inset Formula $x\in\omega\}$
+\end_inset
+
+.
+ Ademas notese que 
+\begin_inset Formula $f(x)=x^{2}$
+\end_inset
+
+, para cada 
+\begin_inset Formula $x\in D_{f}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Escribiremos 
+\begin_inset Formula $f:S\subseteq A\rightarrow B$
+\end_inset
+
+ para expresar que 
+\begin_inset Formula $f$
+\end_inset
+
+ es una funcion tal que 
+\begin_inset Formula $D_{f}=S\subseteq A$
+\end_inset
+
+ y 
+\begin_inset Formula $I_{f}\subseteq B$
+\end_inset
+
+.
+ Tambien escribiremos 
+\begin_inset Formula $f:A\rightarrow B$
+\end_inset
+
+ para expresar que 
+\begin_inset Formula $f$
+\end_inset
+
+ es una funcion tal que 
+\begin_inset Formula $D_{f}=A$
+\end_inset
+
+ y 
+\begin_inset Formula $I_{f}\subseteq B$
+\end_inset
+
+.
+ En tal contexto llamaremos a 
+\begin_inset Formula $B$
+\end_inset
+
+ 
+\shape italic
+conjunto de llegada
+\shape default
+.
+ Por supuesto 
+\begin_inset Formula $B$
+\end_inset
+
+ no esta determinado por 
+\begin_inset Formula $f$
+\end_inset
+
+ ya que solo debe cumplir 
+\begin_inset Formula $I_{f}\subseteq B$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Muchas veces para definir una funcion 
+\begin_inset Formula $f$
+\end_inset
+
+, lo haremos dando su dominio y su regla de asignacion, es decir especificaremos
+ en forma precisa que conjunto es el dominio de 
+\begin_inset Formula $f$
+\end_inset
+
+ y ademas especificaremos en forma presisa quien es 
+\begin_inset Formula $f(x)$
+\end_inset
+
+ para cada 
+\begin_inset Formula $x$
+\end_inset
+
+ de dicho dominio.
+ Obviamente esto determina por completo a la funcion 
+\begin_inset Formula $f$
+\end_inset
+
+ ya que 
+\begin_inset Formula $f=\{(x,f(x)):x\in D_{f}\}$
+\end_inset
+
+.
+ Por ejemplo si decimos que 
+\begin_inset Formula $f$
+\end_inset
+
+ es la funcion dada por:
+\begin_inset Formula 
+\begin{align*}
+D_{f} & =\omega\\
+f(x) & =23x^{2}
+\end{align*}
+
+\end_inset
+
+nos estaremos refiriendo a la funcion 
+\begin_inset Formula $\{(x,23x^{2}):x\in\omega\}$
+\end_inset
+
+.
+ Tambien escribiremos
+\begin_inset Formula 
+\[
+\begin{array}{rll}
+f:\omega & \rightarrow & \omega\\
+x & \rightarrow & 23x^{2}
+\end{array}
+\]
+
+\end_inset
+
+para describir a 
+\begin_inset Formula $f$
+\end_inset
+
+.
+ Es decir, a veces para hacer mas intuitiva aun la descripcion de la funcion,
+ tambien incluiremos un conjunto de llegada de dicha funcion y a la regla
+ de asignacion la escribiremos usando una flecha.
+ Para dar otro ejemplo, si escribimos sea 
+\begin_inset Formula $f$
+\end_inset
+
+ dada por:
+\begin_inset Formula 
+\[
+\begin{array}{rll}
+f:\mathbf{N} & \rightarrow & \omega\\
+x & \rightarrow & \left\{ \begin{array}{ccc}
+x+1 &  & \text{si }x\text{ es par}\\
+x^{2} &  & \text{si }x\text{ es impar}
+\end{array}\right.
+\end{array}
+\]
+
+\end_inset
+
+estaremos diciendo que 
+\begin_inset Formula $f$
+\end_inset
+
+ es la funcion
+\begin_inset Formula 
+\[
+\{(x,x+1):x\text{ es par y }x\in\mathbf{N}\}\cup\{(x,x^{2}):x\text{ es impar y }x\in\mathbf{N}\}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
+Funcion identidad
+\end_layout
+
+\begin_layout Standard
+Dado un conjunto 
+\begin_inset Formula $A$
+\end_inset
+
+, a la funcion
+\begin_inset Formula 
+\[
+\begin{array}{rll}
+A & \rightarrow & A\\
+a & \rightarrow & a
+\end{array}
+\]
+
+\end_inset
+
+La denotaremos con 
+\begin_inset Formula $Id_{A}$
+\end_inset
+
+ y la llamaremos la funcion 
+\shape italic
+identidad sobre 
+\shape default
+
+\begin_inset Formula $A$
+\end_inset
+
+.
+ Notese que 
+\begin_inset Formula $Id_{A}=\{(a,a):a\in A\}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection*
+Igualdad de funciones
+\end_layout
+
+\begin_layout Standard
+Sean 
+\begin_inset Formula $f$
+\end_inset
+
+ y 
+\begin_inset Formula $g$
+\end_inset
+
+ dos funciones.
+ Ya que las mismas son conjuntos, tendremos que 
+\begin_inset Formula $f$
+\end_inset
+
+ sera igual a 
+\begin_inset Formula $g$
+\end_inset
+
+ si y solo si para cada par 
+\begin_inset Formula $(a,b)$
+\end_inset
+
+, se tiene que 
+\begin_inset Formula $(a,b)\in f$
+\end_inset
+
+ sii 
+\begin_inset Formula $(a,b)\in g$
+\end_inset
+
+.
+ Muchas veces sera util el siguiente criterio de igualdad de funciones:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{lemma}
+\end_layout
+
+\end_inset
+
+ Sean 
+\begin_inset Formula $f$
+\end_inset
+
+ y 
+\begin_inset Formula $g$
+\end_inset
+
+ funciones.
+ Entonces 
+\begin_inset Formula $f=g$
+\end_inset
+
+ sii 
+\begin_inset Formula $D_{f}=D_{g}$
+\end_inset
+
+ y para cada 
+\begin_inset Formula $x\in D_{f}$
+\end_inset
+
+ se tiene que 
+\begin_inset Formula $f(x)=g(x)$
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{lemma}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+
+\series bold
+Ejercicio 3:
+\end_layout
+
+\end_inset
+
+(S) Pruebe el lema anterior
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+
+\series bold
+Ejercicio 4:
+\end_layout
+
+\end_inset
+
+V o F o I, justifique.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Si
+\begin_inset Formula 
+\[
+\begin{array}{rll}
+f:\mathbf{N} & \rightarrow & \omega\\
+x & \rightarrow & x^{3}
+\end{array}\ \ \ \ \ \ \ \ \ \ \ \ \ \begin{array}{rll}
+g:\mathbf{N} & \rightarrow & \mathbf{R}\\
+x & \rightarrow & x^{3}
+\end{array}
+\]
+
+\end_inset
+
+entonces 
+\begin_inset Formula $f=g$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Si
+\begin_inset Formula 
+\[
+\begin{array}{rll}
+f:\mathbf{N} & \rightarrow & \omega\\
+x & \rightarrow & x^{3}
+\end{array}\ \ \ \ \ \ \ \ \ \ \ \ \ \begin{array}{rll}
+g:\mathbf{N} & \rightarrow & \omega\\
+x & \rightarrow & x^{4}/x
+\end{array}
+\]
+
+\end_inset
+
+entonces 
+\begin_inset Formula $f=g$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Si 
+\begin_inset Formula $f$
+\end_inset
+
+ es una funcion y 
+\begin_inset Formula $z\in D_{f}$
+\end_inset
+
+, entonces 
+\begin_inset Formula $Ti(z)=\mathrm{CONJUNTO}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\mathrm{Dom}((1,2))=\{1\}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\mathrm{Dom}(\{(1,2)\})+1=2$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Si 
+\begin_inset Formula $f$
+\end_inset
+
+ es una funcion, entonces 
+\begin_inset Formula $D_{f}=\{a:(a,b)\in f\}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Si 
+\begin_inset Formula $f:A\rightarrow B$
+\end_inset
+
+, entonces 
+\begin_inset Formula $D_{f}\subseteq A$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Si 
+\begin_inset Formula $f:A\rightarrow B$
+\end_inset
+
+, entonces 
+\begin_inset Formula $I_{f}=B$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Si 
+\begin_inset Formula $f$
+\end_inset
+
+ es una función y 
+\begin_inset Formula $g\subseteq f$
+\end_inset
+
+, entonces 
+\begin_inset Formula $g$
+\end_inset
+
+ es una función 
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
+Funciones 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-mixtas
+\end_layout
+
+\begin_layout Standard
+Sea 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+ un alfabeto finito.
+ Dados 
+\begin_inset Formula $n,m\in\omega$
+\end_inset
+
+, usaremos 
+\begin_inset Formula $\omega^{n}\times\Sigma^{\ast m}$
+\end_inset
+
+ para abreviar la expresion
+\begin_inset Formula 
+\[
+\overset{n\text{ veces}}{\overbrace{\omega\times...\times\omega}}\times\overset{m\text{ veces}}{\overbrace{\Sigma^{\ast}\times...\times\Sigma^{\ast}}}
+\]
+
+\end_inset
+
+Por ejemplo, 
+\begin_inset Formula $\omega^{3}\times\Sigma^{\ast4}$
+\end_inset
+
+ sera una forma abreviada de escribir 
+\begin_inset Formula $\omega\times\omega\times\omega\times\Sigma^{\ast}\times\Sigma^{\ast}\times\Sigma^{\ast}\times\Sigma^{\ast}$
+\end_inset
+
+.
+ Debe quedar claro que estamos haciendo cierto abuso notacional ya que en
+ principio si no hacemos esta convencion notacional, 
+\begin_inset Formula $\omega^{3}\times\Sigma^{\ast4}$
+\end_inset
+
+ denota un conjunto de pares y 
+\begin_inset Formula $\omega\times\omega\times\omega\times\Sigma^{\ast}\times\Sigma^{\ast}\times\Sigma^{\ast}\times\Sigma^{\ast}$
+\end_inset
+
+ es un conjunto de 
+\begin_inset Formula $7$
+\end_inset
+
+-uplas.
+\end_layout
+
+\begin_layout Standard
+Notese que:
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+
+Cuando 
+\begin_inset Formula $n=m=0$
+\end_inset
+
+, tenemos que 
+\begin_inset Formula $\omega^{n}\times\Sigma^{\ast m}$
+\end_inset
+
+ denota el conjunto 
+\begin_inset Formula $\{\Diamond\}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+
+Si 
+\begin_inset Formula $m=0$
+\end_inset
+
+, entonces 
+\begin_inset Formula $\omega^{n}\times\Sigma^{\ast m}$
+\end_inset
+
+ denota el conjunto 
+\begin_inset Formula $\omega^{n}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+
+Si 
+\begin_inset Formula $n=0$
+\end_inset
+
+, entonces 
+\begin_inset Formula $\omega^{n}\times\Sigma^{\ast m}$
+\end_inset
+
+ denota el conjunto
+\begin_inset Formula $\ \Sigma^{\ast m}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+Es decir que tenemos que tener cuidado cuando leemos esta notacion y no
+ caer en la confucion de interpretarla mal.
+ A manera de ultimo ejemplo, si vemos 
+\begin_inset Formula $\omega^{1}\times\Sigma^{\ast0}$
+\end_inset
+
+, segun esta nueva convencion debemos pensar en 
+\begin_inset Formula $\omega$
+\end_inset
+
+ y no leer en forma convencional lo cual nos haria pensar que 
+\begin_inset Formula $\omega^{1}\times\Sigma^{\ast0}$
+\end_inset
+
+ denota el conjunto de pares 
+\begin_inset Formula $\omega\times\{\Diamond\}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Con esta convencion notacional, un elemento generico de 
+\begin_inset Formula $\omega^{n}\times\Sigma^{\ast m}$
+\end_inset
+
+ es una 
+\begin_inset Formula $(n+m)$
+\end_inset
+
+-upla de la forma 
+\begin_inset Formula $(x_{1},...,x_{n},\alpha_{1},...,\alpha_{m})$
+\end_inset
+
+.
+ Para abreviar, escribiremos 
+\begin_inset Formula $(\vec{x},\vec{\alpha})$
+\end_inset
+
+ en lugar de 
+\begin_inset Formula $(x_{1},...,x_{n},\alpha_{1},...,\alpha_{m})$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subparagraph*
+Definicion de funcion 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-mixta
+\end_layout
+
+\begin_layout Standard
+Sea 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+ un alfabeto finito.
+ Dada una funcion 
+\begin_inset Formula $f$
+\end_inset
+
+, diremos que 
+\begin_inset Formula $f$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-
+\shape italic
+mixta
+\shape default
+ si cumple las siguientes propiedades
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+(M1)
+\end_layout
+
+\end_inset
+
+Existen 
+\begin_inset Formula $n,m\geq0$
+\end_inset
+
+, tales que 
+\begin_inset Formula $D_{f}\subseteq\omega^{n}\times\Sigma^{\ast m}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+(M2)
+\end_layout
+
+\end_inset
+
+Ya sea 
+\begin_inset Formula $I_{f}\subseteq\omega$
+\end_inset
+
+ o 
+\begin_inset Formula $I_{f}\subseteq\Sigma^{\ast}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Algunos ejemplos:
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+E
+\begin_inset Formula $_{1}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+Sea 
+\begin_inset Formula $\Sigma=\{\square,\%,\blacktriangle\}$
+\end_inset
+
+.
+ La funcion
+\begin_inset Formula 
+\[
+\begin{array}{rll}
+f:\omega\times\{\square,\%,\blacktriangle\}^{\ast} & \rightarrow & \omega\\
+(x,\alpha) & \rightarrow & x+\left\vert \alpha\right\vert 
+\end{array}
+\]
+
+\end_inset
+
+es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-mixta ya que se cumple (M1) con 
+\begin_inset Formula $n=m=1$
+\end_inset
+
+ y (M2).
+ Notese que 
+\begin_inset Formula $f$
+\end_inset
+
+ no es 
+\begin_inset Formula $\{\square,\%\}$
+\end_inset
+
+-mixta ya que no cumple (M1) respecto del alfabeto 
+\begin_inset Formula $\{\square,\%\}$
+\end_inset
+
+.
+ Sin envargo note que 
+\begin_inset Formula $f$
+\end_inset
+
+ es 
+\begin_inset Formula $\{\square,\%,\blacktriangle,@\}$
+\end_inset
+
+-mixta
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+E
+\begin_inset Formula $_{2}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+La funcion
+\begin_inset Formula 
+\[
+\begin{array}{rll}
+\omega^{4} & \rightarrow & \omega\\
+(x,y,z,w) & \rightarrow & x+y
+\end{array}
+\]
+
+\end_inset
+
+es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-mixta cualesquiera sea el alfabeto 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+E
+\begin_inset Formula $_{3}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+Sea 
+\begin_inset Formula $\Sigma=\{\square,@\}$
+\end_inset
+
+.
+ La funcion
+\begin_inset Formula 
+\[
+\begin{array}{rll}
+\{\square\square\square,@@\} & \rightarrow & \omega\\
+\alpha & \rightarrow & \left\vert \alpha\right\vert 
+\end{array}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-mixta ya que se cumple (M1) (con 
+\begin_inset Formula $n=0$
+\end_inset
+
+ y 
+\begin_inset Formula $m=1$
+\end_inset
+
+) y (M2)
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+E
+\begin_inset Formula $_{4}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+Supongamos 
+\begin_inset Formula $\Sigma=\emptyset$
+\end_inset
+
+.
+ Tenemos entonces que 
+\begin_inset Formula $\Sigma^{\ast}=\{\varepsilon\}$
+\end_inset
+
+.
+ Por ejemplo
+\begin_inset Formula 
+\[
+\begin{array}{rll}
+D & \rightarrow & \omega\\
+(x,\varepsilon,\varepsilon,\varepsilon) & \rightarrow & x^{2}
+\end{array}
+\]
+
+\end_inset
+
+donde 
+\begin_inset Formula $D=\{(x,\varepsilon,\varepsilon,\varepsilon):x$
+\end_inset
+
+ es impar
+\begin_inset Formula $\}$
+\end_inset
+
+, es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-mixta (con 
+\begin_inset Formula $n=1$
+\end_inset
+
+ y 
+\begin_inset Formula $m=3$
+\end_inset
+
+ en (M1)).
+ Tambien notese que
+\begin_inset Formula 
+\[
+\begin{array}{rll}
+\{(\varepsilon,\varepsilon)\} & \rightarrow & \{\varepsilon\}\\
+(\varepsilon,\varepsilon) & \rightarrow & \varepsilon
+\end{array}
+\]
+
+\end_inset
+
+es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-mixta (con 
+\begin_inset Formula $n=0$
+\end_inset
+
+ y 
+\begin_inset Formula $m=2$
+\end_inset
+
+ en (M1)).
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Dejamos al lector la facil prueba del siguiente resultado basico.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{lemma}
+\end_layout
+
+\end_inset
+
+ Supongamos 
+\begin_inset Formula $\Sigma\subseteq\Gamma$
+\end_inset
+
+ son alfabetos finitos.
+ Entonces si 
+\begin_inset Formula $f$
+\end_inset
+
+ es una funcion 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-mixta, 
+\begin_inset Formula $f$
+\end_inset
+
+ es 
+\begin_inset Formula $\Gamma$
+\end_inset
+
+-mixta 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{lemma}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Una funcion 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-mixta 
+\begin_inset Formula $f$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-
+\shape italic
+total
+\shape default
+ cuando haya 
+\begin_inset Formula $n,m\in\omega$
+\end_inset
+
+ tales que 
+\begin_inset Formula $D_{f}=\omega^{n}\times\Sigma^{\ast m}$
+\end_inset
+
+.
+ El lema anterior nos dice que si 
+\begin_inset Formula $\Sigma\subseteq\Gamma$
+\end_inset
+
+, entonces toda funcion 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-mixta es 
+\begin_inset Formula $\Gamma$
+\end_inset
+
+-mixta.
+ Sin envargo una funcion puede ser 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-total y no ser 
+\begin_inset Formula $\Gamma$
+\end_inset
+
+-total, cuando 
+\begin_inset Formula $\Sigma\subseteq\Gamma$
+\end_inset
+
+.
+ Por ejemplo tomemos 
+\begin_inset Formula $\Sigma=\{\square,\%,\blacktriangle\}$
+\end_inset
+
+ y 
+\begin_inset Formula $\Gamma=\{\square,\%,\blacktriangle,!\}$
+\end_inset
+
+, y consideremos la funcion
+\begin_inset Formula 
+\[
+\begin{array}{rll}
+f:\omega\times\Sigma^{\ast} & \rightarrow & \omega\\
+(x,\alpha) & \rightarrow & x+\left\vert \alpha\right\vert 
+\end{array}
+\]
+
+\end_inset
+
+Es claro que 
+\begin_inset Formula $f$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-mixta y 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-total.
+ Tambien es 
+\begin_inset Formula $\Gamma$
+\end_inset
+
+-mixta ya que 
+\begin_inset Formula $D_{f}\subseteq\omega\times\Gamma^{\ast}$
+\end_inset
+
+ y 
+\begin_inset Formula $I_{f}\subseteq\omega$
+\end_inset
+
+, por lo cual cumple (M1) y (M2).
+ Sin envargo 
+\begin_inset Formula $f$
+\end_inset
+
+ no es 
+\begin_inset Formula $\Gamma$
+\end_inset
+
+-total ya que 
+\begin_inset Formula $D_{f}$
+\end_inset
+
+ no es igual a 
+\begin_inset Formula $\omega^{n}\times\Gamma^{\ast m}$
+\end_inset
+
+, cualesquiera sean 
+\begin_inset Formula $n$
+\end_inset
+
+ y 
+\begin_inset Formula $m$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Como hemos visto recien, una funcion 
+\begin_inset Formula $f$
+\end_inset
+
+ puede ser 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-mixta y 
+\begin_inset Formula $\Gamma$
+\end_inset
+
+-mixta para dos alfabetos distintos 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+ y 
+\begin_inset Formula $\Gamma$
+\end_inset
+
+ e incluso es facil construir un ejemplo en el cual 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+ y 
+\begin_inset Formula $\Gamma$
+\end_inset
+
+ sean incomparables como conjuntos, es decir que ninguno incluya al otro.
+ Dejamos al lector convencerse de que si 
+\begin_inset Formula $f$
+\end_inset
+
+ es una funcion que es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-mixta para algun alfabeto 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+, entonces hay un alfabeto 
+\begin_inset Formula $\Sigma_{0}$
+\end_inset
+
+ el cual es el menor de todos los alfabetos respecto de los cuales 
+\begin_inset Formula $f$
+\end_inset
+
+ es mixta, es decir 
+\begin_inset Formula $\Sigma_{0}$
+\end_inset
+
+ cumple que 
+\begin_inset Formula $f$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma_{0}$
+\end_inset
+
+-mixta y si 
+\begin_inset Formula $\Gamma$
+\end_inset
+
+ es tal que 
+\begin_inset Formula $f$
+\end_inset
+
+ es 
+\begin_inset Formula $\Gamma$
+\end_inset
+
+-mixta, entonces 
+\begin_inset Formula $\Sigma_{0}\subseteq\Gamma$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+A continuacion daremos algunas funciones 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-mixtas basicas las cuales seran frecuentemente usadas.
+\end_layout
+
+\begin_layout Paragraph*
+Funciones 
+\begin_inset Formula $Suc$
+\end_inset
+
+ y 
+\begin_inset Formula $Pred$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+La 
+\shape italic
+funcion sucesor
+\shape default
+ es definida por
+\begin_inset Formula 
+\[
+\begin{array}{rll}
+Suc:\omega & \rightarrow & \omega\\
+n & \rightarrow & n+1
+\end{array}
+\]
+
+\end_inset
+
+La 
+\shape italic
+funcion predecesor
+\shape default
+ es definida por
+\begin_inset Formula 
+\[
+\begin{array}{rll}
+Pred:\mathbf{N} & \rightarrow & \omega\\
+n & \rightarrow & n-1
+\end{array}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+Las funciones 
+\begin_inset Formula $d_{a}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Sea 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+ un alfabeto no vacio.
+ Para cada 
+\begin_inset Formula $a\in\Sigma$
+\end_inset
+
+, definamos
+\begin_inset Formula 
+\[
+\begin{array}{rll}
+d_{a}:\Sigma^{\ast} & \rightarrow & \Sigma^{\ast}\\
+\alpha & \rightarrow & \alpha a
+\end{array}
+\]
+
+\end_inset
+
+La funcion 
+\begin_inset Formula $d_{a}$
+\end_inset
+
+ es llamada la funcion 
+\shape italic
+derecha sub 
+\shape default
+
+\begin_inset Formula $a$
+\end_inset
+
+, respecto del alfabeto 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph*
+Las funciones 
+\begin_inset Formula $p_{i}^{n,m}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Sea 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+ un alfabeto.
+ Para 
+\begin_inset Formula $n,m\in\omega$
+\end_inset
+
+ e 
+\begin_inset Formula $i$
+\end_inset
+
+ tal que 
+\begin_inset Formula $1\leq i\leq n$
+\end_inset
+
+, definamos
+\begin_inset Formula 
+\[
+\begin{array}{rll}
+p_{i}^{n,m}:\omega^{n}\times\Sigma^{\ast m} & \rightarrow & \omega\\
+(\vec{x},\vec{\alpha}) & \rightarrow & x_{i}
+\end{array}
+\]
+
+\end_inset
+
+Para 
+\begin_inset Formula $n,m\in\omega$
+\end_inset
+
+ e 
+\begin_inset Formula $i$
+\end_inset
+
+ tal que 
+\begin_inset Formula $n+1\leq i\leq n+m$
+\end_inset
+
+, definamos
+\begin_inset Formula 
+\[
+\begin{array}{rll}
+p_{i}^{n,m}:\omega^{n}\times\Sigma^{\ast m} & \rightarrow & \Sigma^{\ast}\\
+(\vec{x},\vec{\alpha}) & \rightarrow & \alpha_{i-n}
+\end{array}
+\]
+
+\end_inset
+
+Las funciones 
+\begin_inset Formula $p_{i}^{n,m}$
+\end_inset
+
+ son llamadas 
+\shape italic
+proyecciones
+\shape default
+.
+ La funcion 
+\begin_inset Formula $p_{i}^{n,m}$
+\end_inset
+
+ es llamada la 
+\shape italic
+proyeccion 
+\shape default
+
+\begin_inset Formula $n,m,i$
+\end_inset
+
+, respecto del alfabeto 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+.
+ Notese que esta definicion requiere que 
+\begin_inset Formula $n+m\geq1$
+\end_inset
+
+ ya que 
+\begin_inset Formula $i$
+\end_inset
+
+ debe cumplir 
+\begin_inset Formula $1\leq i\leq n+m$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph*
+Las funciones 
+\begin_inset Formula $C_{k}^{n,m}$
+\end_inset
+
+ y 
+\begin_inset Formula $C_{\alpha}^{n,m}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Sea 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+ un alfabeto.
+ Para 
+\begin_inset Formula $n,m,k\in\omega$
+\end_inset
+
+, y 
+\begin_inset Formula $\alpha\in\Sigma^{\ast}$
+\end_inset
+
+, definamos
+\begin_inset Formula 
+\[
+\begin{array}{rll}
+C_{k}^{n,m}:\omega^{n}\times\Sigma^{\ast m} & \rightarrow & \omega\\
+(\vec{x},\vec{\alpha}) & \rightarrow & k
+\end{array}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \begin{array}{rll}
+C_{\alpha}^{n,m}:\omega^{n}\times\Sigma^{\ast m} & \rightarrow & \Sigma^{\ast}\\
+(\vec{x},\vec{\alpha}) & \rightarrow & \alpha
+\end{array}
+\]
+
+\end_inset
+
+Notese que 
+\begin_inset Formula $C_{k}^{0,0}:\{\Diamond\}\rightarrow\{k\}$
+\end_inset
+
+ y que 
+\begin_inset Formula $C_{\alpha}^{0,0}:\{\Diamond\}\rightarrow\{\alpha\}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+
+\series bold
+Ejercicio 5:
+\end_layout
+
+\end_inset
+
+V o F o I, justifique.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+La funcion 
+\begin_inset Formula $x+1$
+\end_inset
+
+ es 
+\begin_inset Formula $\emptyset$
+\end_inset
+
+-mixta
+\end_layout
+
+\begin_layout Enumerate
+La función
+\begin_inset Formula 
+\[
+\begin{array}{rll}
+\left\{ (x,\alpha)\in\omega\times\{\#,\&,@\}^{\ast}:\left\vert \alpha\right\vert _{\#}=0\right\}  & \rightarrow & \omega\\
+(x,\alpha) & \rightarrow & \left\vert \alpha\right\vert .x
+\end{array}
+\]
+
+\end_inset
+
+es 
+\begin_inset Formula $\{\&,@\}$
+\end_inset
+
+-mixta
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $f$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-mixta si existen 
+\begin_inset Formula $n,m\geq0$
+\end_inset
+
+, tales que 
+\begin_inset Formula $D_{f}\subseteq\omega^{n}\times\Sigma^{\ast m}$
+\end_inset
+
+ y 
+\begin_inset Formula $I_{f}\subseteq\omega\cup\Sigma^{\ast}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Sea 
+\begin_inset Formula $\begin{array}[t]{rcl}
+f:\omega & \rightarrow & \omega\\
+x & \rightarrow & C_{2}^{1,0}
+\end{array}$
+\end_inset
+
+.
+ Entonces 
+\begin_inset Formula $f(5)=2$
+\end_inset
+
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+El tipo de una funcion mixta
+\end_layout
+
+\begin_layout Standard
+Dada una funcion 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-mixta 
+\begin_inset Formula $f$
+\end_inset
+
+, si 
+\begin_inset Formula $n,m\in\omega$
+\end_inset
+
+ son tales que 
+\begin_inset Formula $D_{f}\subseteq\omega^{n}\times\Sigma^{\ast m}$
+\end_inset
+
+ y ademas 
+\begin_inset Formula $I_{f}\subseteq\omega$
+\end_inset
+
+, entonces diremos que 
+\begin_inset Formula $f$
+\end_inset
+
+ 
+\shape italic
+es una funcion de tipo 
+\shape default
+
+\begin_inset Formula $(n,m,\#)$
+\end_inset
+
+.
+ Similarmente si 
+\begin_inset Formula $n,m\in\omega$
+\end_inset
+
+ son tales que 
+\begin_inset Formula $D_{f}\subseteq\omega^{n}\times\Sigma^{\ast m}$
+\end_inset
+
+ y ademas 
+\begin_inset Formula $I_{f}\subseteq\Sigma^{\ast}$
+\end_inset
+
+, entonces diremos que 
+\begin_inset Formula $f$
+\end_inset
+
+ 
+\shape italic
+es una funcion de tipo 
+\shape default
+
+\begin_inset Formula $(n,m,\ast)$
+\end_inset
+
+.
+ Notese que si 
+\begin_inset Formula $f\neq\emptyset$
+\end_inset
+
+, entonces hay unicos 
+\begin_inset Formula $n,m\in\omega$
+\end_inset
+
+ y 
+\begin_inset Formula $s\in\{\#,\ast\}$
+\end_inset
+
+ tales que 
+\begin_inset Formula $f$
+\end_inset
+
+ es una funcion de tipo 
+\begin_inset Formula $(n,m,s)$
+\end_inset
+
+.
+ Sin envargo 
+\begin_inset Formula $\emptyset$
+\end_inset
+
+ es una funcion de tipo 
+\begin_inset Formula $(n,m,s)$
+\end_inset
+
+ cualesquiera sean 
+\begin_inset Formula $n,m\in\omega$
+\end_inset
+
+ y 
+\begin_inset Formula $s\in\{\#,\ast\}$
+\end_inset
+
+.
+ De esta forma, cuando 
+\begin_inset Formula $f\neq\emptyset$
+\end_inset
+
+ hablaremos de 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+"
+\end_layout
+
+\end_inset
+
+el tipo de 
+\begin_inset Formula $f$
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+"
+\end_layout
+
+\end_inset
+
+ para refererirnos a esta unica terna 
+\begin_inset Formula $(n,m,s)$
+\end_inset
+
+.
+ Notese que 
+\begin_inset Formula $Suc$
+\end_inset
+
+ es de tipo 
+\begin_inset Formula $(1,0,\#)$
+\end_inset
+
+ y 
+\begin_inset Formula $d_{a}$
+\end_inset
+
+ es de tipo 
+\begin_inset Formula $(0,1,\ast)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+
+\series bold
+Ejercicio 6:
+\end_layout
+
+\end_inset
+
+Hacer
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+De que tipo es cada una de las siguientes funciones
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $C_{\varepsilon}^{1,2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\begin{array}[t]{rll}
+\left\{ (x,\alpha)\in\omega\times\{\#,\&,@\}^{\ast}:\left\vert \alpha\right\vert _{\#}=0\right\}  & \rightarrow & \omega\\
+(x,\alpha) & \rightarrow & \left\vert \alpha\right\vert .x
+\end{array}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $Id_{\omega}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $Id_{\Sigma^{\ast}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\begin{array}[t]{rll}
+\Sigma^{\ast} & \rightarrow & \omega\\
+\alpha & \rightarrow & \left\vert \alpha\right\vert 
+\end{array}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\begin{array}[t]{rll}
+\{(\varepsilon,\varepsilon)\} & \rightarrow & \{\varepsilon\}\\
+(\varepsilon,\varepsilon) & \rightarrow & \varepsilon
+\end{array}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\begin{array}[t]{rll}
+\{\Diamond\} & \rightarrow & \omega\\
+\Diamond & \rightarrow & 0
+\end{array}$
+\end_inset
+
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+(S) Que significa la frase
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+
+la relacion 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+"
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $f$
+\end_inset
+
+ es una funcion de tipo 
+\begin_inset Formula $(n,m,s)$
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+"
+\end_layout
+
+\end_inset
+
+ no depende del alfabeto 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+Intente expresar esto en forma matematica 
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+Predicados 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-mixtos
+\end_layout
+
+\begin_layout Standard
+Un 
+\shape italic
+predicado 
+\shape default
+
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-
+\shape italic
+mixto 
+\shape default
+es una funcion 
+\begin_inset Formula $f$
+\end_inset
+
+ la cual es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-mixta y ademas cumple que 
+\begin_inset Formula $I_{f}\subseteq\{0,1\}$
+\end_inset
+
+.
+ Por ejemplo
+\begin_inset Formula 
+\[
+\begin{array}{rll}
+\omega\times\omega & \rightarrow & \omega\\
+(x,y) & \rightarrow & \left\{ \begin{array}{l}
+1\text{ si }x=y\\
+0\text{ si }x\neq y
+\end{array}\right.
+\end{array}\ \ \ \ \ \ \ \ \ \ \ \begin{array}{rll}
+\{1,2,3,4,5\}\times\Sigma^{\ast} & \rightarrow & \omega\\
+(x,\alpha) & \rightarrow & \left\{ \begin{array}{l}
+1\text{ si }x=\left\vert \alpha\right\vert \\
+0\text{ si }x\neq\left\vert \alpha\right\vert 
+\end{array}\right.
+\end{array}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subparagraph
+Operaciones logicas entre predicados
+\end_layout
+
+\begin_layout Standard
+Dados predicados 
+\begin_inset Formula $P:S\subseteq\omega^{n}\times\Sigma^{\ast m}\rightarrow\{0,1\}$
+\end_inset
+
+ y 
+\begin_inset Formula $Q:S\subseteq\omega^{n}\times\Sigma^{\ast m}\rightarrow\{0,1\}$
+\end_inset
+
+, con el mismo dominio, definamos nuevos predicados 
+\begin_inset Formula $(P\vee Q)$
+\end_inset
+
+, 
+\begin_inset Formula $(P\wedge Q)$
+\end_inset
+
+ y 
+\begin_inset Formula $\lnot P$
+\end_inset
+
+ de la siguiente manera
+\begin_inset Formula 
+\[
+\begin{array}{rll}
+(P\vee Q):S & \rightarrow & \omega\\
+(\vec{x},\vec{\alpha}) & \rightarrow & \left\{ \begin{array}{lll}
+1 &  & \text{si }P(\vec{x},\vec{\alpha})=1\text{ o }Q(\vec{x},\vec{\alpha})=1\\
+0 &  & \text{caso contrario}
+\end{array}\right.
+\end{array}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\begin{array}{rll}
+(P\wedge Q):S & \rightarrow & \omega\\
+(\vec{x},\vec{\alpha}) & \rightarrow & \left\{ \begin{array}{lll}
+1 &  & \text{si }P(\vec{x},\vec{\alpha})=1\text{ y }Q(\vec{x},\vec{\alpha})=1\\
+0 &  & \text{caso contrario}
+\end{array}\right.
+\end{array}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\begin{array}{rll}
+\lnot P:S & \rightarrow & \omega\\
+(\vec{x},\vec{\alpha}) & \rightarrow & \left\{ \begin{array}{lll}
+1 &  & \text{si }P(\vec{x},\vec{\alpha})=0\\
+0 &  & \text{si }P(\vec{x},\vec{\alpha})=1
+\end{array}\right.
+\end{array}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
+Composicion de funciones
+\end_layout
+
+\begin_layout Standard
+Dadas funciones 
+\begin_inset Formula $f$
+\end_inset
+
+ y 
+\begin_inset Formula $g$
+\end_inset
+
+ definamos la funcion 
+\begin_inset Formula $f\circ g$
+\end_inset
+
+ de la siguiente manera:
+\begin_inset Formula 
+\begin{align*}
+D_{f\circ g} & =\{e\in D_{g}:g(e)\in D_{f}\}\\
+f\circ g(e) & =f(g(e))
+\end{align*}
+
+\end_inset
+
+Notar que 
+\begin_inset Formula $f\circ g=\{(u,v):$
+\end_inset
+
+ existe 
+\begin_inset Formula $z$
+\end_inset
+
+ tal que 
+\begin_inset Formula $(u,z)\in g$
+\end_inset
+
+ y 
+\begin_inset Formula $(z,v)\in f\}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+
+\series bold
+Ejercicio 7:
+\end_layout
+
+\end_inset
+
+V o F o I, justifique
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $Pred=Pred\circ(Pred\circ Suc)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $Pred\circ(Suc\circ Pred)=Pred$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $Pred\circ(Suc\circ\{(x,x):x\in\mathbf{N}\})=Pred\circ Suc$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\emptyset\circ f=f\circ\emptyset=\emptyset$
+\end_inset
+
+ cualquiera sea la funcion 
+\begin_inset Formula $f$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Sea 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+ un alfabeto finito.
+ Si 
+\begin_inset Formula $x_{1},x_{2},x_{3},x_{4},x_{5}\in\omega$
+\end_inset
+
+ se tiene que 
+\begin_inset Formula $(Suc\circ p_{2}^{5,0})(x_{1},x_{2},x_{3},x_{4},x_{5})=x_{3}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Sea 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+ un alfabeto finito.
+ Entonces 
+\begin_inset Formula $Suc\circ Pred=p_{1}^{1,0}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $Suc\circ x=Suc$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $Suc\circ4=5$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Sea 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+ un alfabeto finito.
+ Entonces 
+\begin_inset Formula $\emptyset=Pred\circ C_{0}^{0,0}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Si 
+\begin_inset Formula $f:D_{f}\subseteq\omega\rightarrow\omega$
+\end_inset
+
+ y 
+\begin_inset Formula $g:D_{g}\subseteq\omega\rightarrow\omega$
+\end_inset
+
+, entonces 
+\begin_inset Formula $D_{f\circ g}=\{x\in\omega:x\in D_{g}$
+\end_inset
+
+ y 
+\begin_inset Formula $I_{g}\subseteq D_{f}\}$
+\end_inset
+
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+A la hora de probar enunciados acerca de funciones hay una regla o idea
+ basica que si la tenemos en cuenta nos facilitara la construccion de la
+ prueba.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Regla Pertenecer a la Imagen:
+\series default
+ Si 
+\begin_inset Formula $f$
+\end_inset
+
+ es una funcion y ud sabe que 
+\begin_inset Formula $z\in I_{f}$
+\end_inset
+
+, entonces escriba a 
+\begin_inset Formula $z$
+\end_inset
+
+ en la forma 
+\begin_inset Formula $f(x)$
+\end_inset
+
+ donde 
+\begin_inset Formula $x$
+\end_inset
+
+ denotara un elemento de 
+\begin_inset Formula $D_{f}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Muchas veces tener esta regla en mente es de suma utilidad al hacer pruebas.
+ Por ejemplo el lector puede usarla para hacer una prueba rigurosa del enunciado
+ del siguiente ejercicio.
+ Esa regla aqui es simplemente un consejo o sugerencia pero gana su existencia
+ material en un entorno de inteligencia artificial al transformarse en parte
+ de la estructura de un probador automatico de teoremas!
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+
+\series bold
+Ejercicio 8:
+\end_layout
+
+\end_inset
+
+Pruebe que 
+\begin_inset Formula $f\circ g\neq\emptyset$
+\end_inset
+
+ si y solo si 
+\begin_inset Formula $I_{g}\cap D_{f}\neq\emptyset$
+\end_inset
+
+ (esto nos dice que que muchas veces sucedera que 
+\begin_inset Formula $f\circ g=\emptyset$
+\end_inset
+
+) 
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
+Funciones de la forma 
+\begin_inset Formula $[f_{1},...,f_{n}]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Dadas funciones 
+\begin_inset Formula $f_{1},...,f_{n}$
+\end_inset
+
+, con 
+\begin_inset Formula $n\geq2$
+\end_inset
+
+, definamos la funcion 
+\begin_inset Formula $[f_{1},...,f_{n}]$
+\end_inset
+
+ de la siguiente manera:
+\begin_inset Formula 
+\begin{align*}
+D_{[f_{1},...,f_{n}]} & =D_{f_{1}}\cap...\cap D_{f_{n}}\\{}
+[f_{1},...,f_{n}](e) & =(f_{1}(e),...,f_{n}(e))
+\end{align*}
+
+\end_inset
+
+Notese que 
+\begin_inset Formula $I_{[f_{1},...,f_{n}]}\subseteq I_{f_{1}}\times\cdots\times I_{f_{n}}$
+\end_inset
+
+.
+ Por conveniencia notacional (que el lector entendera mas adelante) definiremos
+ 
+\begin_inset Formula $[f_{1}]=f_{1}$
+\end_inset
+
+.
+ Es decir que hemos definido para cada sucecion de funciones 
+\begin_inset Formula $f_{1},...,f_{n}$
+\end_inset
+
+, con 
+\begin_inset Formula $n\geq1$
+\end_inset
+
+, una nueva funcion la cual denotamos con 
+\begin_inset Formula $[f_{1},...,f_{n}]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+
+\series bold
+Ejercicio 9:
+\end_layout
+
+\end_inset
+
+V o F o I, justifique
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Sea 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+ un alfabeto y supongamos 
+\begin_inset Formula $\#\in\Sigma$
+\end_inset
+
+.
+ Entonces
+\begin_inset Formula 
+\[
+p_{4}^{2,3}\circ[p_{1}^{1,1},p_{1}^{1,1},p_{2}^{1,1},C_{\#\#}^{1,1},p_{2}^{1,1}]=C_{\#\#}^{1,1}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Si 
+\begin_inset Formula $f:\omega^{2}\rightarrow\omega$
+\end_inset
+
+, entonces 
+\begin_inset Formula $f=f\circ[x,y]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $[p_{2}^{2,3},Suc]=\emptyset$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Supongamos 
+\begin_inset Formula $f_{i}:\omega\rightarrow\omega$
+\end_inset
+
+, para 
+\begin_inset Formula $i\in\{1,...,n\}$
+\end_inset
+
+, con 
+\begin_inset Formula $n\geq2$
+\end_inset
+
+.
+ Entonces 
+\begin_inset Formula $I_{[f_{1},...,f_{n}]}=I_{f_{1}}\times\cdots\times I_{f_{n}}$
+\end_inset
+
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
+Funciones inyectivas, suryectivas y biyectivas
+\end_layout
+
+\begin_layout Standard
+Una funcion 
+\begin_inset Formula $f$
+\end_inset
+
+ es 
+\shape italic
+inyectiva
+\shape default
+ cuando no se da que 
+\begin_inset Formula $f(a)=f(b)$
+\end_inset
+
+ para algun par de elementos distintos 
+\begin_inset Formula $a,b\in D_{f}$
+\end_inset
+
+.
+ Dada una funcion 
+\begin_inset Formula $f:A\rightarrow B$
+\end_inset
+
+ diremos que 
+\begin_inset Formula $f$
+\end_inset
+
+ es 
+\shape italic
+suryectiva
+\shape default
+ cuando 
+\begin_inset Formula $I_{f}=B$
+\end_inset
+
+.
+ Debe notarse que el concepto de suryectividad depende de un conjunto de
+ llegada previamente fijado, es decir que no tiene sentido hablar de la
+ suryectividad de una funcion 
+\begin_inset Formula $f$
+\end_inset
+
+ si no decimos respecto de que conjunto de llegada lo es.
+ Muchas veces diremos que una funcion 
+\begin_inset Formula $f$
+\end_inset
+
+ es 
+\shape italic
+sobre
+\shape default
+ para expresar que es suryectiva.
+\end_layout
+
+\begin_layout Standard
+Dada una funcion 
+\begin_inset Formula $f:A\rightarrow B$
+\end_inset
+
+ diremos que 
+\begin_inset Formula $f$
+\end_inset
+
+ es 
+\shape italic
+biyectiva
+\shape default
+ cuando 
+\begin_inset Formula $f$
+\end_inset
+
+ sea inyectiva y suryectiva.
+ Notese que si 
+\begin_inset Formula $f:A\rightarrow B$
+\end_inset
+
+ es biyectiva, entonces podemos definir una nueva funcion 
+\begin_inset Formula $f^{-1}:B\rightarrow A$
+\end_inset
+
+, de la siguiente manera:
+\begin_inset Formula 
+\[
+f^{-1}(b)=\text{ unico }a\in A\text{ tal que }f(a)=b
+\]
+
+\end_inset
+
+La funcion 
+\begin_inset Formula $f^{-1}$
+\end_inset
+
+ sera llamada la 
+\shape italic
+inversa de 
+\shape default
+
+\begin_inset Formula $f$
+\end_inset
+
+.
+ Notese que 
+\begin_inset Formula $f\circ f^{-1}=Id_{B}$
+\end_inset
+
+ y 
+\begin_inset Formula $f^{-1}\circ f=Id_{A}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+
+\series bold
+Ejercicio 10:
+\end_layout
+
+\end_inset
+
+V o F o I, justifique.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Una función 
+\begin_inset Formula $f$
+\end_inset
+
+ es inyectiva si 
+\begin_inset Formula $f(x)=f(y)$
+\end_inset
+
+ cada vez que 
+\begin_inset Formula $x=y$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $F:A\rightarrow B$
+\end_inset
+
+ es suryectiva sii para cada 
+\begin_inset Formula $a\in A$
+\end_inset
+
+ existe un 
+\begin_inset Formula $b\in B$
+\end_inset
+
+ tal que 
+\begin_inset Formula $b=F(a)$
+\end_inset
+
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+
+\series bold
+Ejercicio 11:
+\end_layout
+
+\end_inset
+
+Hacer:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Dar una biyeccion entre 
+\begin_inset Formula $\mathbf{N}$
+\end_inset
+
+ y 
+\begin_inset Formula $\omega$
+\end_inset
+
+.
+ Idem entre 
+\begin_inset Formula $\omega$
+\end_inset
+
+ y 
+\begin_inset Formula $\{x\in\omega:x$
+\end_inset
+
+ es par
+\begin_inset Formula $\}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Dar una funcion inyectiva de 
+\begin_inset Formula $\omega^{2}$
+\end_inset
+
+ en 
+\begin_inset Formula $\omega$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Dar una funcion sobreyectiva de 
+\begin_inset Formula $\omega$
+\end_inset
+
+ en 
+\begin_inset Formula $\omega^{5}$
+\end_inset
+
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{lemma}
+\end_layout
+
+\end_inset
+
+ Supongamos 
+\begin_inset Formula $f:A\rightarrow B$
+\end_inset
+
+ y 
+\begin_inset Formula $g:B\rightarrow A$
+\end_inset
+
+ son tales que 
+\begin_inset Formula $f\circ g=Id_{B}$
+\end_inset
+
+ y 
+\begin_inset Formula $g\circ f=Id_{A}$
+\end_inset
+
+.
+ Entonces 
+\begin_inset Formula $f$
+\end_inset
+
+ y 
+\begin_inset Formula $g$
+\end_inset
+
+ son biyectivas, 
+\begin_inset Formula $f^{-1}=g$
+\end_inset
+
+ y 
+\begin_inset Formula $g^{-1}=f$
+\end_inset
+
+.
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{lemma}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+
+\series bold
+Ejercicio 12:
+\end_layout
+
+\end_inset
+
+(S) Haga una prueba del lema anterior 
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+Conjuntos 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-mixtos
+\end_layout
+
+\begin_layout Standard
+Un conjunto 
+\begin_inset Formula $S$
+\end_inset
+
+ es llamado 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+
+\shape italic
+-mixto
+\shape default
+ si existen 
+\begin_inset Formula $n,m\in\omega$
+\end_inset
+
+ tales que 
+\begin_inset Formula $S\subseteq\omega^{n}\times\Sigma^{\ast m}$
+\end_inset
+
+.
+ Por ejemplo,
+\begin_inset Formula 
+\[
+\{(x,\alpha)\in\omega\times\{\blacktriangle,!\}^{\ast}:\left\vert \alpha\right\vert =x\}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\{(0,\blacktriangle\blacktriangle\blacktriangle,\varepsilon),(1,\%\blacktriangle\%,\blacktriangle\blacktriangle)\}
+\]
+
+\end_inset
+
+son conjuntos 
+\begin_inset Formula $\{\blacktriangle,\%,!\}$
+\end_inset
+
+-mixtos.
+ Tambien notese que 
+\begin_inset Formula $\emptyset$
+\end_inset
+
+ y 
+\begin_inset Formula $\{\Diamond\}$
+\end_inset
+
+ son conjuntos 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-mixtos, cualesquiera sea el alfabeto 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+.
+ Por ultimo el conjunto
+\begin_inset Formula 
+\[
+\{(x,\varepsilon,\varepsilon,\varepsilon):x\in\omega\text{ y }x\text{ es impar}\}
+\]
+
+\end_inset
+
+es 
+\begin_inset Formula $\emptyset$
+\end_inset
+
+-mixto (con 
+\begin_inset Formula $n=1$
+\end_inset
+
+ y 
+\begin_inset Formula $m=3$
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+
+\series bold
+Ejercicio 13:
+\end_layout
+
+\end_inset
+
+V o F o I, justifique.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Un conjunto 
+\begin_inset Formula $S$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-mixto sii 
+\begin_inset Formula $S=D_{f}$
+\end_inset
+
+ para alguna función 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-mixta 
+\begin_inset Formula $f$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\{(1,2,\varepsilon),(1,2)\}$
+\end_inset
+
+ es un conjunto 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-mixto, cualesquiera sea el alfabeto finito 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
+El tipo de un conjunto mixto
+\end_layout
+
+\begin_layout Standard
+Dado un conjunto 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-mixto 
+\begin_inset Formula $S$
+\end_inset
+
+, si 
+\begin_inset Formula $n,m\in\omega$
+\end_inset
+
+ son tales que 
+\begin_inset Formula $S\subseteq\omega^{n}\times\Sigma^{\ast m}$
+\end_inset
+
+, entonces diremos que 
+\begin_inset Formula $S$
+\end_inset
+
+ 
+\shape italic
+es un conjunto de tipo 
+\shape default
+
+\begin_inset Formula $(n,m)$
+\end_inset
+
+.
+ Notese que si 
+\begin_inset Formula $S\neq\emptyset$
+\end_inset
+
+, entonces hay unicos 
+\begin_inset Formula $n,m\in\omega$
+\end_inset
+
+ tales que 
+\begin_inset Formula $S$
+\end_inset
+
+ es un conjunto de tipo 
+\begin_inset Formula $(n,m)$
+\end_inset
+
+.
+ De esta forma, cuando 
+\begin_inset Formula $S\neq\emptyset$
+\end_inset
+
+ hablaremos de 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+"
+\end_layout
+
+\end_inset
+
+el tipo de 
+\begin_inset Formula $S$
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+"
+\end_layout
+
+\end_inset
+
+ para refererirnos a este unico par 
+\begin_inset Formula $(n,m)$
+\end_inset
+
+.
+ Tambien es importante notar que de la definicion anterior sale inmediatemante
+ que 
+\begin_inset Formula $\emptyset$
+\end_inset
+
+ es un conjunto de tipo 
+\begin_inset Formula $(n,m)$
+\end_inset
+
+ cualesquiera sean 
+\begin_inset Formula $n,m\in\omega$
+\end_inset
+
+, por lo cual cuando hablemos de EL tipo de un comjunto deberemos estar
+ seguros de que dicho conjunto es no vacio.
+\end_layout
+
+\begin_layout Standard
+Notese que 
+\begin_inset Formula $\omega$
+\end_inset
+
+ es de tipo 
+\begin_inset Formula $(1,0)$
+\end_inset
+
+ y 
+\begin_inset Formula $\Sigma^{\ast}$
+\end_inset
+
+ es de tipo 
+\begin_inset Formula $(0,1)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+
+\series bold
+Ejercicio 14:
+\end_layout
+
+\end_inset
+
+Hacer
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+De que tipo es cada uno de los siguientes conjuntos
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $\left\{ (x,\alpha)\in\omega\times\{\#,\&,@\}^{\ast}:\left\vert \alpha\right\vert _{\#}=0\right\} $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\{1,2,3\}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\{\varepsilon\}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\{\Diamond\}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\{(1,\varepsilon)\}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\{(\varepsilon,\varepsilon)\}$
+\end_inset
+
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Para el caso 
+\begin_inset Formula $\Sigma=\emptyset$
+\end_inset
+
+, describa para un 
+\begin_inset Formula $m\in\omega$
+\end_inset
+
+ dado, como son los conjuntos no vacios de tipo 
+\begin_inset Formula $(0,m)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+(S) Que significa la frase
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+
+la relacion 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+"
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $S$
+\end_inset
+
+ es un conjunto de tipo 
+\begin_inset Formula $(n,m)$
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+"
+\end_layout
+
+\end_inset
+
+ no depende del alfabeto 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+Intente expresar esto en forma matematica 
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+Notacion lambda
+\end_layout
+
+\begin_layout Standard
+Usaremos la notacion lambda de Church en la forma que se explica a continuacion.
+ Esta notacion siempre depende de un alfabeto finito previamente fijado.
+ En general en nuestro lenguaje matematico utilizamos diversas expresiones
+ las cuales involucran variables que una vez fijadas en sus valores hacen
+ que la expresion tambien represente un determinado valor
+\end_layout
+
+\begin_layout Standard
+En el contexto de la notacion lambda solo se podran utilizar expresiones
+ con caracteristicas muy especiales por lo cual a continuacion iremos describien
+do que condiciones tienen que cumplir las expresiones para que puedan ser
+ usadas en la notacion lambda
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+(1)
+\end_layout
+
+\end_inset
+
+Solo utilizaremos expresiones que involucran variables numericas, las cuales
+ se valuaran en numeros de 
+\begin_inset Formula $\omega$
+\end_inset
+
+, y variables alfabeticas, las cuales se valuaran en palabras del alfabeto
+ previamente fijado.
+ Las variables numericas seran seleccionadas de la lista
+\begin_inset Formula 
+\begin{align*}
+ & x,y,z,w,n,m,k,...\\
+ & x_{1},x_{2},...\\
+ & y_{1},y_{2},...\\
+ & etc
+\end{align*}
+
+\end_inset
+
+Las variables alfabeticas seran seleccionadas de la lista
+\begin_inset Formula 
+\begin{align*}
+ & \alpha,\beta,\gamma,\eta,...\\
+ & \alpha_{1},\alpha_{2},...\\
+ & \beta_{1},\beta_{2},...\\
+ & etc
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+(2)
+\end_layout
+
+\end_inset
+
+Por ejemplo la expresion:
+\begin_inset Formula 
+\[
+x+y+1
+\]
+
+\end_inset
+
+tiene dos variables numericas 
+\begin_inset Formula $x$
+\end_inset
+
+ e 
+\begin_inset Formula $y$
+\end_inset
+
+ (y ninguna alfabetica).
+ Si le asignamos a 
+\begin_inset Formula $x$
+\end_inset
+
+ el valor 2 y a 
+\begin_inset Formula $y$
+\end_inset
+
+ el valor 45, entonces la expresion 
+\begin_inset Formula $x+y+1$
+\end_inset
+
+ produce o representa el valor 
+\begin_inset Formula $48=2+45+1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+(3)
+\end_layout
+
+\end_inset
+
+Otro ejemplo, consideremos la expresion
+\begin_inset Formula 
+\[
+\left\vert \alpha\beta\right\vert +\left\vert \alpha\right\vert ^{x}
+\]
+
+\end_inset
+
+la cual tiene una variable numerica 
+\begin_inset Formula $x$
+\end_inset
+
+ y dos variables alfabeticas 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ y 
+\begin_inset Formula $\beta$
+\end_inset
+
+.
+ Supongamos ademas que el alfabeto previamente fijado es 
+\begin_inset Formula $\{@,\%\}$
+\end_inset
+
+.
+ Si le asignamos a 
+\begin_inset Formula $x$
+\end_inset
+
+ el valor 2, a 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ el valor 
+\begin_inset Formula $@@$
+\end_inset
+
+ y a 
+\begin_inset Formula $\beta$
+\end_inset
+
+ el valor 
+\begin_inset Formula $\%\%\%$
+\end_inset
+
+, entonces la expresion 
+\begin_inset Formula $\left\vert \alpha\beta\right\vert +\left\vert \alpha\right\vert ^{x}$
+\end_inset
+
+ produce o representa el valor 
+\begin_inset Formula $\left\vert @@\%\%\%\right\vert +\left\vert @@\right\vert ^{2}=9$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+(4)
+\end_layout
+
+\end_inset
+
+Para ciertas valuaciones de sus variables la expresion puede no estar definida.
+ Por ejemplo la expresion
+\begin_inset Formula 
+\[
+Pred(\left\vert \alpha\right\vert )
+\]
+
+\end_inset
+
+no asume valor o no esta definida cuando el valor asignado a 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ es 
+\begin_inset Formula $\varepsilon$
+\end_inset
+
+.
+ Otro ejemplo, consideremos la expresion
+\begin_inset Formula 
+\[
+x/(y-\left\vert \alpha\right\vert )^{2}
+\]
+
+\end_inset
+
+Esta expresion no esta definida o no asume valor para aquellas asignaciones
+ de valores a sus variables en las cuales el valor asignado a 
+\begin_inset Formula $y$
+\end_inset
+
+ sea igual a la longitud del valor asignado a 
+\begin_inset Formula $\alpha$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+(5)
+\end_layout
+
+\end_inset
+
+En los ejemplos anteriores las expresiones producen valores numericos pero
+ tambien trabajaremos con expresiones que producen valores alfabeticos.
+ Por ejemplo la expresion
+\begin_inset Formula 
+\[
+\beta^{y}
+\]
+
+\end_inset
+
+tiene una variable numerica, 
+\begin_inset Formula $y$
+\end_inset
+
+, una variable alfabetica, 
+\begin_inset Formula $\beta$
+\end_inset
+
+, y una vez valuadas estas variables produce un valor alfabetico, a saber
+ el resultado de elevar el valor asignado a la variable 
+\begin_inset Formula $\beta$
+\end_inset
+
+, a el valor asignado a 
+\begin_inset Formula $y$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+(6)
+\end_layout
+
+\end_inset
+
+Una expresion 
+\begin_inset Formula $E$
+\end_inset
+
+ para poder ser utilizada en la notacion lambda relativa a un alfabeto 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+ debera cumplir alguna de las dos siguientes propiedades
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+los valores que asuma 
+\begin_inset Formula $E$
+\end_inset
+
+ cuando hayan sido asignados valores de 
+\begin_inset Formula $\omega$
+\end_inset
+
+ a sus variables numericas y valores de 
+\begin_inset Formula $\Sigma^{\ast}$
+\end_inset
+
+ a sus variables alfabeticas de manera que 
+\begin_inset Formula $E$
+\end_inset
+
+ este definida para esos valores, deberan ser siempre elementos de 
+\begin_inset Formula $\omega$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+los valores que asuma 
+\begin_inset Formula $E$
+\end_inset
+
+ cuando hayan sido asignados valores de 
+\begin_inset Formula $\omega$
+\end_inset
+
+ a sus variables numericas y valores de 
+\begin_inset Formula $\Sigma^{\ast}$
+\end_inset
+
+ a sus variables alfabeticas de manera que 
+\begin_inset Formula $E$
+\end_inset
+
+ este definida para esos valores, deberan ser siempre elementos de 
+\begin_inset Formula $\Sigma^{\ast}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+(7)
+\end_layout
+
+\end_inset
+
+Por ejemplo la expresion
+\begin_inset Formula 
+\[
+x/2
+\]
+
+\end_inset
+
+no cumple la propiedad dada en (6) ya que para ciertos valores de 
+\begin_inset Formula $\omega$
+\end_inset
+
+ asignados a la variable 
+\begin_inset Formula $x$
+\end_inset
+
+, la expresion da valores numericos que se salen de 
+\begin_inset Formula $\omega$
+\end_inset
+
+ por lo cual no cumple ni (a) ni (b).
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+(8)
+\end_layout
+
+\end_inset
+
+Otro ejemplo, si el alfabeto fijado es 
+\begin_inset Formula $\Sigma=\{@,\%\}$
+\end_inset
+
+, entonces la expresion
+\begin_inset Formula 
+\[
+@^{x}\$^{y}
+\]
+
+\end_inset
+
+no cumple la propiedad dada en (6) ya que por ejemplo cuando le asignamos
+ a 
+\begin_inset Formula $x$
+\end_inset
+
+ el valor 2 y a 
+\begin_inset Formula $y$
+\end_inset
+
+ el valor 6, la expresion nos da la palabra 
+\begin_inset Formula $@@\$\$\$\$\$\$$
+\end_inset
+
+ la cual no pertenece a 
+\begin_inset Formula $\Sigma^{\ast}$
+\end_inset
+
+ por lo cual no cumple ni (a) ni (b).
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+(9)
+\end_layout
+
+\end_inset
+
+No necesariamente las expresiones que usaremos en la notacion lambda deben
+ ser hechas como combinacion de operaciones matematicas conocidas.
+ Muchas veces usaremos expresiones que involucran incluso lenguaje coloquial
+ castellano.
+ Por ejemplo la expresion
+\begin_inset Formula 
+\[
+\mathrm{el\ menor\ numero\ primo\ que\ es\ mayor\ que\ }x
+\]
+
+\end_inset
+
+Es claro que esta expresion para cada valor de 
+\begin_inset Formula $\omega$
+\end_inset
+
+ asignado a la variable 
+\begin_inset Formula $x$
+\end_inset
+
+ produce o representa un valor concreto de 
+\begin_inset Formula $\omega$
+\end_inset
+
+.
+ Otro ejemplo:
+\begin_inset Formula 
+\[
+\mathrm{el\ tercer\ simbolo\ de\ }\alpha
+\]
+
+\end_inset
+
+notese que esta expresion, una ves fijado un alfabeto 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+, estara definida o producira un valor solo cuando le asignamos a 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ una palabra de 
+\begin_inset Formula $\Sigma^{\ast}$
+\end_inset
+
+ de longitud mayor o igual a 
+\begin_inset Formula $3$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+(10)
+\end_layout
+
+\end_inset
+
+
+\series bold
+Expresiones Booleanas.
+
+\series default
+ A las expresiones Booleanas tales como la expresion
+\begin_inset Formula 
+\[
+x=y+1\text{ y }\left\vert \alpha\right\vert \leq22
+\]
+
+\end_inset
+
+las pensaremos que asumen valores del conjunto 
+\begin_inset Formula $\{0,1\}\subseteq\omega$
+\end_inset
+
+.
+ Por ejemplo la expresion anterior asume o produce el valor 
+\begin_inset Formula $1$
+\end_inset
+
+ cuando le asignamos a 
+\begin_inset Formula $x$
+\end_inset
+
+ el valor 11, a 
+\begin_inset Formula $y$
+\end_inset
+
+ el valor 10 y a 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ la palabra 
+\begin_inset Formula $\varepsilon$
+\end_inset
+
+.
+ Las expresiones Booleanas pensadas de esta forma podran ser utilizadas
+ en la notacion lambda si es que tambien cumplen con las anteriores condiciones.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+(11)
+\end_layout
+
+\end_inset
+
+La expresion
+\begin_inset Formula 
+\[
+5
+\]
+
+\end_inset
+
+no tiene variables por lo cual pensaremos que siempre produce el valor 
+\begin_inset Formula $5$
+\end_inset
+
+ cualesquiera sean los valores asignados a las variables.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
+Expresiones lambdificables con respecto a 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Dado un alfabeto 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+ a las expresiones que cumplan las caracteristicas dadas anteriormente las
+ llamaremos 
+\shape italic
+lambdificables con respecto a 
+\shape default
+
+\begin_inset Formula $\Sigma$
+\end_inset
+
+.
+ Notese que este concepto es intuitivo y no un concepto matematicamente
+ definido en forma precisa.
+ Mas aun el concepto de expresion tampoco ha sido definido matematicamente
+ (aunque obviamente si sabemos que una expresion es una palabra de cierto
+ alfabeto).
+ Esto no nos traera problemas para el uso notacional que las utilizaremos.
+ Recien en la materia logica veremos la matematizacion de ciertas expresiones
+ (no las lambdificables) y nos servira de ejemplo para imaginar como podriamos
+ matematizar el concepto de expresion lambdificable.
+\end_layout
+
+\begin_layout Standard
+Algunos ejemplos:
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+(E1)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $x/2$
+\end_inset
+
+ no es lambdificable con respecto a 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+ cualesquiera sea 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+(E2)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $@^{x}\$^{y}$
+\end_inset
+
+ es lambdificable con respecto a 
+\begin_inset Formula $\{@,\$\}$
+\end_inset
+
+ y no es lambdificable con respecto a 
+\begin_inset Formula $\{@,\#,\%\}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+(E3)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $x=y+1$
+\end_inset
+
+ es lambdificable con respecto a 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+ cualesquiera sea 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+(E4)
+\end_layout
+
+\end_inset
+
+la expresion
+\begin_inset Formula 
+\[
+\mathrm{el\ menor\ numero\ primo\ que\ es\ mayor\ que\ }x^{\left\vert \beta\right\vert }
+\]
+
+\end_inset
+
+es lambdificable con respecto a 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+ cualesquiera sea 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+(E5)
+\end_layout
+
+\end_inset
+
+la expresion
+\begin_inset Formula 
+\[
+5
+\]
+
+\end_inset
+
+es lambdificable con respecto a 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+ cualesquiera sea 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
+Definicion de 
+\begin_inset Formula $\lambda x_{1}...x_{n}\alpha_{1}...\alpha_{m}\left[E\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Supongamos ya hemos fijado un alfabeto finito 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+ y supongamos 
+\begin_inset Formula $E$
+\end_inset
+
+ es una expresion la cual es lambdificable con respecto a 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+.
+ Sea 
+\begin_inset Formula $x_{1},...,x_{n},\alpha_{1},...,\alpha_{m}$
+\end_inset
+
+ una lista de variables todas distintas tal que las variables numericas
+ que ocurren en 
+\begin_inset Formula $E$
+\end_inset
+
+ estan todas contenidas en la lista 
+\begin_inset Formula $x_{1},...,x_{n}$
+\end_inset
+
+ y las variables alfabeticas que ocurren en 
+\begin_inset Formula $E$
+\end_inset
+
+ estan en la lista 
+\begin_inset Formula $\alpha_{1},...,\alpha_{m}$
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+(puede suceder que haya variables de la lista 
+\begin_inset Formula $x_{1},...,x_{n},\alpha_{1},...,\alpha_{m}$
+\end_inset
+
+ las cuales no ocurran en 
+\begin_inset Formula $E$
+\end_inset
+
+).
+ Entonces
+\begin_inset Formula 
+\[
+\lambda x_{1}...x_{n}\alpha_{1}...\alpha_{m}\left[E\right]
+\]
+
+\end_inset
+
+denotara la funcion definida por:
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+(L1)
+\end_layout
+
+\end_inset
+
+El dominio de 
+\begin_inset Formula $\lambda x_{1}...x_{n}\alpha_{1}...\alpha_{m}\left[E\right]$
+\end_inset
+
+ es el conjunto de las 
+\begin_inset Formula $(n+m)$
+\end_inset
+
+-uplas 
+\begin_inset Formula $(k_{1},...,k_{n},\beta_{1},...,\beta_{m})\in\omega^{n}\times\Sigma^{\ast m}$
+\end_inset
+
+ tales que 
+\begin_inset Formula $E$
+\end_inset
+
+ esta definida cuando le asignamos a cada 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ el valor 
+\begin_inset Formula $k_{i}$
+\end_inset
+
+ y a cada 
+\begin_inset Formula $\alpha_{i}$
+\end_inset
+
+ el valor 
+\begin_inset Formula $\beta_{i}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+(L2)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\lambda x_{1}...x_{n}\alpha_{1}...\alpha_{m}\left[E\right](k_{1},...,k_{n},\beta_{1},...,\beta_{m})=$
+\end_inset
+
+ valor que asume o representa 
+\begin_inset Formula $E$
+\end_inset
+
+ cuando le asignamos a cada 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ el valor 
+\begin_inset Formula $k_{i}$
+\end_inset
+
+ y a cada 
+\begin_inset Formula $\alpha_{i}$
+\end_inset
+
+ el valor 
+\begin_inset Formula $\beta_{i}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Notese que por tener 
+\begin_inset Formula $E$
+\end_inset
+
+ la propiedad (6) de mas arriba, la funcion 
+\begin_inset Formula $\lambda x_{1}...x_{n}\alpha_{1}...\alpha_{m}\left[E\right]$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-mixta de tipo 
+\begin_inset Formula $(n,m,s)$
+\end_inset
+
+ para algun 
+\begin_inset Formula $s\in\{\#,\ast\}$
+\end_inset
+
+.
+ Algunos ejemplos:
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+(a)
+\end_layout
+
+\end_inset
+
+Supongamos fijamos el alfabeto 
+\begin_inset Formula $\Sigma=\{@,?,$
+\end_inset
+
+¡
+\begin_inset Formula $\}$
+\end_inset
+
+.
+ Entonces 
+\begin_inset Formula $\lambda x\alpha\left[\alpha^{2x}\right]$
+\end_inset
+
+ es la funcion
+\begin_inset Formula 
+\[
+\begin{array}{rll}
+\omega\times\{@,?,\text{¡}\}^{\ast} & \rightarrow & \{@,?,\text{¡}\}^{\ast}\\
+(x,\alpha) & \rightarrow & \alpha^{2x}
+\end{array}
+\]
+
+\end_inset
+
+Aqui el lector puede notar la dependencia de la notacion lambda respecto
+ del alfabeto fijado.
+ Si en lugar de fijar 
+\begin_inset Formula $\Sigma=\{@,?,$
+\end_inset
+
+¡
+\begin_inset Formula $\}$
+\end_inset
+
+ hubieramos fijado 
+\begin_inset Formula $\Sigma=\{\%\}$
+\end_inset
+
+, entonces 
+\begin_inset Formula $\lambda x\alpha\left[\alpha^{2x}\right]$
+\end_inset
+
+ denotaria otra funcion, a saber
+\begin_inset Formula 
+\[
+\begin{array}{rll}
+\omega\times\{\%\}^{\ast} & \rightarrow & \{\%\}^{\ast}\\
+(x,\alpha) & \rightarrow & \alpha^{2x}
+\end{array}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+(b)
+\end_layout
+
+\end_inset
+
+Supongamos fijamos el alfabeto 
+\begin_inset Formula $\Sigma=\{@,?,$
+\end_inset
+
+¡
+\begin_inset Formula $\}$
+\end_inset
+
+.
+ Entonces 
+\begin_inset Formula $\lambda x\alpha\left[5\right]$
+\end_inset
+
+ es la funcion
+\begin_inset Formula 
+\[
+\begin{array}{rll}
+\omega\times\{@,?,\text{¡}\}^{\ast} & \rightarrow & \omega\\
+(x,y,z,\alpha) & \rightarrow & 5
+\end{array}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+(c)
+\end_layout
+
+\end_inset
+
+Supongamos fijamos el alfabeto 
+\begin_inset Formula $\Sigma=\{\%,!\}$
+\end_inset
+
+.
+ Entonces 
+\begin_inset Formula $\lambda\alpha\beta\left[\alpha\beta\right]$
+\end_inset
+
+ es la funcion
+\begin_inset Formula 
+\[
+\begin{array}{rll}
+\{\%,!\}^{\ast}\times\{\%,!\}^{\ast} & \rightarrow & \{\%,!\}^{\ast}\\
+(\alpha,\beta) & \rightarrow & \alpha\beta
+\end{array}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Tambien tenemos que 
+\begin_inset Formula $\lambda\beta\alpha\left[\alpha\beta\right]$
+\end_inset
+
+ es la funcion
+\begin_inset Formula 
+\[
+\begin{array}{rll}
+\{\%,!\}^{\ast}\times\{\%,!\}^{\ast} & \rightarrow & \{\%,!\}^{\ast}\\
+(\beta,\alpha) & \rightarrow & \alpha\beta
+\end{array}
+\]
+
+\end_inset
+
+Notese que estas funciones son distintas.
+ Por ejemplo 
+\begin_inset Formula $\lambda\alpha\beta\left[\alpha\beta\right](\%,!)=\%!$
+\end_inset
+
+ y 
+\begin_inset Formula $\lambda\beta\alpha\left[\alpha\beta\right](\%,!)=!\%$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+(d)
+\end_layout
+
+\end_inset
+
+Independientemente de quien sea 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+ el alfabeto previamente fijado, tenemos que 
+\begin_inset Formula $\lambda xy[x+y]$
+\end_inset
+
+ es la funcion
+\begin_inset Formula 
+\[
+\begin{array}{rll}
+\omega^{2} & \rightarrow & \omega\\
+(x,y) & \rightarrow & x+y
+\end{array}
+\]
+
+\end_inset
+
+Tambien 
+\begin_inset Formula $\lambda xyzw[x+w]$
+\end_inset
+
+ es la funcion
+\begin_inset Formula 
+\[
+\begin{array}{rll}
+\omega^{4} & \rightarrow & \omega\\
+(x,y,z,w) & \rightarrow & x+w
+\end{array}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+(e)
+\end_layout
+
+\end_inset
+
+Supongamos fijamos el alfabeto 
+\begin_inset Formula $\Sigma=\{@,?,$
+\end_inset
+
+¡
+\begin_inset Formula $\}$
+\end_inset
+
+.
+ Entonces por la clausula (L1) tenemos que el dominio de la funcion 
+\begin_inset Formula $\lambda xy\alpha\beta\left[Pred(\left\vert \alpha\right\vert )+Pred(y)\right]$
+\end_inset
+
+ es
+\begin_inset Formula 
+\[
+D=\left\{ (x,y,\alpha,\beta)\in\omega^{2}\times\Sigma^{\ast2}:\left\vert \alpha\right\vert \geq1\text{ y }y\geq1\right\} 
+\]
+
+\end_inset
+
+Es decir que 
+\begin_inset Formula $\lambda xy\alpha\beta\left[Pred(\left\vert \alpha\right\vert )+Pred(y)\right]$
+\end_inset
+
+ es la funcion
+\begin_inset Formula 
+\[
+\begin{array}{rll}
+D & \rightarrow & \omega\\
+(x,y,\alpha,\beta) & \rightarrow & Pred(\left\vert \alpha\right\vert )+Pred(y)
+\end{array}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+(f)
+\end_layout
+
+\end_inset
+
+Atentos a (10) de mas arriba, la funcion 
+\begin_inset Formula $\lambda xy\left[x=y\right]$
+\end_inset
+
+ es el predicado
+\begin_inset Formula 
+\[
+\begin{array}{rll}
+\omega\times\omega & \rightarrow & \omega\\
+(x,y) & \rightarrow & \left\{ \begin{array}{l}
+1\text{ si }x=y\\
+0\text{ si }x\neq y
+\end{array}\right.
+\end{array}
+\]
+
+\end_inset
+
+y 
+\begin_inset Formula $\lambda x\alpha\left[Pred(x)=\left\vert \alpha\right\vert \right]$
+\end_inset
+
+ es el predicado
+\begin_inset Formula 
+\[
+\begin{array}{rll}
+\mathbf{N}\times\Sigma^{\ast} & \rightarrow & \omega\\
+(x,\alpha) & \rightarrow & \left\{ \begin{array}{l}
+1\text{ si }Pred(x)=\left\vert \alpha\right\vert \\
+0\text{ si }Pred(x)\neq\left\vert \alpha\right\vert 
+\end{array}\right.
+\end{array}
+\]
+
+\end_inset
+
+Tambien 
+\begin_inset Formula $\lambda\alpha\beta\left[\alpha=\beta\right]$
+\end_inset
+
+ es el predicado
+\begin_inset Formula 
+\[
+\begin{array}{rll}
+\Sigma^{\ast}\times\Sigma^{\ast} & \rightarrow & \omega\\
+(\alpha,\beta) & \rightarrow & \left\{ \begin{array}{l}
+1\text{ si }\alpha=\beta\\
+0\text{ si }\alpha\neq\beta
+\end{array}\right.
+\end{array}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+(g)
+\end_layout
+
+\end_inset
+
+Notar que para 
+\begin_inset Formula $S\subseteq\omega^{n}\times\Sigma^{\ast m}$
+\end_inset
+
+ se tiene que 
+\begin_inset Formula $\chi_{S}^{\omega^{n}\times\Sigma^{\ast m}}=\lambda x_{1}...x_{n}\alpha_{1}...\alpha_{m}\left[(\vec{x},\vec{\alpha})\in S\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+(h)
+\end_layout
+
+\end_inset
+
+Como dijimos, la notacion lambda depende del alfabeto previamente fijado,
+ aunque para el caso en que la lista de variables que sigue a la letra 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ no tenga variables alfabeticas, la funcion representada no depende del
+ alfabeto 
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Un par de ejemplos sutiles
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+(a)
+\end_layout
+
+\end_inset
+
+La expresion
+\begin_inset Formula 
+\[
+Suc
+\]
+
+\end_inset
+
+no es lambdificable respecto de cualquier alfabeto 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+.
+ Esto es porque si bien cualesquiera sea el valor asignado a las variables,
+ ella asume el valor 
+\begin_inset Formula $Suc$
+\end_inset
+
+, no cumple (6) de mas arriba ya que 
+\begin_inset Formula $Suc$
+\end_inset
+
+ no es un elemento de 
+\begin_inset Formula $\omega$
+\end_inset
+
+ ni tampoco una palabra (es una funcion!)
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+(b)
+\end_layout
+
+\end_inset
+
+La expresion
+\begin_inset Formula 
+\[
+Suc+(\left\vert \beta\right\vert +1)
+\]
+
+\end_inset
+
+es lambdificable con respecto a 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+ cualesquiera sea 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+.
+ Por ejemplo 
+\begin_inset Formula $\lambda x\beta[Suc+(\left\vert \beta\right\vert +1)]$
+\end_inset
+
+ es la funcion 
+\begin_inset Formula $\emptyset$
+\end_inset
+
+, ya que la expresion 
+\begin_inset Formula $Suc+(\left\vert \beta\right\vert +1)$
+\end_inset
+
+ cualesquiera sean los valores de 
+\begin_inset Formula $x$
+\end_inset
+
+ y 
+\begin_inset Formula $\beta$
+\end_inset
+
+ no esta definida.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+Ejercicio 15:
+\end_layout
+
+\end_inset
+
+V o F o I, justifique
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+La expresion
+\begin_inset Formula 
+\[
+\left\vert \alpha\#@@\right\vert +x
+\]
+
+\end_inset
+
+no es lambdificable con respecto a 
+\begin_inset Formula $\{\#,\%\}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+La expresion
+\begin_inset Formula 
+\[
+x+1=1/3
+\]
+
+\end_inset
+
+es lambdificable con respecto a 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+ cualesquiera sea 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+La expresion
+\begin_inset Formula 
+\[
+\lambda x[x^{2}]+(\left\vert \beta\right\vert +1)
+\]
+
+\end_inset
+
+es lambdificable con respecto a 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+ cualesquiera sea 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+
+\series bold
+Ejercicio 16:
+\end_layout
+
+\end_inset
+
+V o F o I, justifique
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $\lambda xy[x+y]=\lambda yx[x+y]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Si 
+\begin_inset Formula $f:\Sigma^{\ast2}\rightarrow\omega$
+\end_inset
+
+, entonces 
+\begin_inset Formula $\lambda\alpha\beta[f(\alpha,\beta)]=\lambda\beta\alpha[f(\beta,\alpha)]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\lambda xy\alpha\beta\left[Pred(\left\vert \alpha\right\vert )+Pred(y)\right]$
+\end_inset
+
+ es la función
+\begin_inset Formula 
+\[
+\begin{array}{rll}
+\left\{ (x,y,\alpha,\beta)\in\omega^{2}\times\Sigma^{\ast2}:\left\vert \alpha\right\vert .y\neq0\right\}  & \rightarrow & \omega\\
+(x,y,\alpha,\beta) & \rightarrow & (\left\vert \alpha\right\vert +y)-2
+\end{array}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $D_{\lambda xy[x^{2}]}=\omega$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\lambda x[Pred(x).0]=C_{0}^{1,0}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $Suc=\lambda x[Suc]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\lambda xy[x.y]\circ[\lambda xy[x.y],C_{1}^{2,0}]=\lambda xy[x.y]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Sea 
+\begin_inset Formula $\Sigma=\{\bigtriangledown,\square\}$
+\end_inset
+
+.
+ Entonces 
+\begin_inset Formula $\lambda\alpha\beta[\alpha=\square\beta]=\lambda\alpha\beta[\alpha=\beta]\circ\left[p_{1}^{0,2},\lambda\alpha\beta[\alpha\beta]\circ\left[d_{\square}\circ C_{\varepsilon}^{0,0},p_{2}^{0,2}\right]\right]$
+\end_inset
+
+ 
+\end_layout
+
+\end_deeper
+\end_body
+\end_document

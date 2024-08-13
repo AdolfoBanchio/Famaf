@@ -1,0 +1,5466 @@
+#LyX file created by tex2lyx 2.3
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin C:/diego/materia lenguajes/guias/
+\textclass article
+\begin_preamble
+\setcounter{MaxMatrixCols}{30}%
+\usepackage{amsfonts}\usepackage{graphicx}
+%TCIDATA{OutputFilter=latex2.dll}
+%TCIDATA{Version=5.50.0.2953}
+%TCIDATA{CSTFile=LaTeX article (bright).cst}
+%TCIDATA{Created=Thursday, March 08, 2007 06:44:18}
+%TCIDATA{LastRevised=Sunday, April 28, 2024 18:58:39}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
+%TCIDATA{BibliographyScheme=BibTeX}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="Standard LaTeX\Blank - Standard LaTeX Article">}
+%TCIDATA{Language=American English}
+%TCIDATA{ComputeDefs=
+%$\varepsilon$
+%$F_{V(\mathbf{A})}(x_{1},...,x_{n})=\{t_{1},...,t_{k}\}$
+%}
+%BeginMSIPreambleData
+\providecommand{\U}[1]{\protect\rule{.1in}{.1in}}
+%EndMSIPreambleData
+\newtheorem{theorem}{Theorem}\newtheorem{acknowledgement}[theorem]{Acknowledgement}\newtheorem{algorithm}[theorem]{Algorithm}\newtheorem{axiom}[theorem]{Axiom}\newtheorem{case}[theorem]{Case}\newtheorem{claim}[theorem]{Claim}\newtheorem{conclusion}[theorem]{Conclusion}\newtheorem{condition}[theorem]{Condition}\newtheorem{conjecture}[theorem]{Conjecture}\newtheorem{corollary}[theorem]{Corollary}\newtheorem{criterion}[theorem]{Criterion}\newtheorem{definition}[theorem]{Definition}\newtheorem{example}[theorem]{Example}\newtheorem{exercise}[theorem]{Exercise}\newtheorem{lemma}[theorem]{Lemma}\newtheorem{notation}[theorem]{Notation}\newtheorem{problem}[theorem]{Problem}\newtheorem{proposition}[theorem]{Proposition}\newtheorem{remark}[theorem]{Remark}\newtheorem{solution}[theorem]{Solution}\newtheorem{summary}[theorem]{Summary}\newenvironment{proof}[1][Proof]{\noindent\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+
+\end_preamble
+\use_default_options false
+\maintain_unincluded_children false
+\language english
+\language_package none
+\inputencoding auto
+\fontencoding default
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 2
+\use_package amssymb 2
+\use_package cancel 0
+\use_package esint 1
+\use_package mathdots 0
+\use_package mathtools 0
+\use_package mhchem 0
+\use_package stackrel 0
+\use_package stmaryrd 0
+\use_package undertilde 0
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+Nota: Los ejercicios que tienen (S) son para una 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+"
+\end_layout
+
+\end_inset
+
+Segunda vuelta
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+"
+\end_layout
+
+\end_inset
+
+ es decir conviene hacerlos una vez que ya se completó la guía haciendo los otros y ya se tiene mas madurez e intuición basica sobre los conceptos. Los que tienen (O) son opcionales por lo cual no se toman en los examenes.
+\end_layout
+
+\begin_layout Section*
+Codificacion de infinituplas de numeros
+\end_layout
+
+\begin_layout Standard
+Usaremos 
+\begin_inset Formula $\omega^{\mathbf{N}}$
+\end_inset
+
+ para denotar el conjunto de todas las infinituplas con coordenadas en 
+\begin_inset Formula $\omega$
+\end_inset
+
+. Es decir
+\begin_inset Formula \[
+\omega^{\mathbf{N}}=\left\{  (s_{1},s_{2},...):s_{i}\in\omega\text{, para cada
+}i\geq1\right\}  \text{.}\]
+\end_inset
+
+Definamos el siguiente subconjunto de 
+\begin_inset Formula $\omega^{\mathbf{N}}$
+\end_inset
+
+
+\begin_inset Formula \[
+\omega^{\left[  \mathbf{N}\right]  }=\left\{  (s_{1},s_{2},...)\in
+\omega^{\mathbf{N}}:\text{ hay un }n\in\mathbf{N}\text{ tal que }s_{i}=0\text{, para }i\geq n\right\}  \text{.}\]
+\end_inset
+
+Notese que 
+\begin_inset Formula $\omega^{\mathbf{N}}\neq\omega^{\left[  \mathbf{N}\right]  }$
+\end_inset
+
+, por ejemplo las infinituplas
+\begin_inset Formula \begin{align*}
+& (10,20,30,40,50,...)\\
+& (1,0,1,0,1,0,1,0,...)
+\end{align*}
+\end_inset
+
+no pertenecen a 
+\begin_inset Formula $\omega^{\left[  \mathbf{N}\right]  }$
+\end_inset
+
+. Notese que 
+\begin_inset Formula $(s_{1},s_{2},...)\in\omega^{\left[  \mathbf{N}\right]  }$
+\end_inset
+
+ si y solo si solo una cantidad finita de coordenadas de 
+\begin_inset Formula $(s_{1},s_{2},...)$
+\end_inset
+
+ son no nulas (i.e. 
+\begin_inset Formula $\{i:s_{i}\neq0\}$
+\end_inset
+
+ es finito).
+\end_layout
+
+\begin_layout Standard
+Definamos
+\begin_inset Formula \[\begin{array}
+[c]{rll}pr:\mathbf{N} & \rightarrow & \omega\\
+n & \rightarrow & n\text{-esimo numero primo}\end{array}
+\]
+\end_inset
+
+Nótese que 
+\begin_inset Formula $pr(1)=2$
+\end_inset
+
+, 
+\begin_inset Formula $pr(2)=3$
+\end_inset
+
+, 
+\begin_inset Formula $pr(3)=5$
+\end_inset
+
+, etc.
+\end_layout
+
+\begin_layout Standard
+Es bien conocido que todo numero natural es expresable como producto de primos. Por ejemplo si tomamos 
+\begin_inset Formula $x=57596$
+\end_inset
+
+ tenemos que 
+\begin_inset Formula $x=2.2.7.11.11.17$
+\end_inset
+
+. Tambien es un hecho conocido que dicha representacion en producto de primos es unica, si escribimos a los factores primos de menor a mayor, tal como lo hicimos recien con el numero 
+\begin_inset Formula $57596$
+\end_inset
+
+. El Teorema Fundamental de la Aritmetica justamente acevera esta propiedad de factorisacion unica de todo numero natural. Trataremos de escribir este teorema de una forma un poco mas 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+"
+\end_layout
+
+\end_inset
+
+cheta
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+"
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Ya que 
+\begin_inset Formula $57596=2.2.7.11.11.17$
+\end_inset
+
+, podemos escribir
+\begin_inset Formula \[
+57596=pr(1)^{2}.pr(4)^{1}.pr(5)^{2}.pr(7)^{1}\]
+\end_inset
+
+Notese que ahora cada primo que interviene en la factorizacion de 
+\begin_inset Formula $57596$
+\end_inset
+
+ figura con un exponente que nos dice cuantas veces ocurre en dicha factorizacion. Hay muchos primos que no ocurren en esta factorizacion, es decir ocurren 
+\begin_inset Formula $0$
+\end_inset
+
+ veces en la misma. Pero podemos escribir
+\begin_inset Formula \[
+57596=pr(1)^{2}.pr(2)^{0}.pr(3)^{0}.pr(4)^{1}.pr(5)^{2}.pr(6)^{0}.pr(7)^{1}.pr(8)^{0}.pr(9)^{0}.pr(10)^{0}....
+\]
+\end_inset
+
+y la igualdad no se altera ya que agregamos factores iguales a 
+\begin_inset Formula $1$
+\end_inset
+
+ (una cantidad infinita!). De esta manera hemos logrado que cada primo intervenga en la factorizacion. Ademas si vemos la infinitupla de exponentes de esta nueva factorizacion, es decir
+\begin_inset Formula \[
+(2,0,0,1,2,0,1,0,0,0,...)
+\]
+\end_inset
+
+obtenemos un elemento de 
+\begin_inset Formula $\omega^{\lbrack\mathbf{N}]}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Por supuesto esto lo podemos hacer con cualquier numero natural y siempre la infinitupla de exponentes sera un elemento de 
+\begin_inset Formula $\omega^{\lbrack\mathbf{N}]}$
+\end_inset
+
+. Ademas es facil notar (basandose en el Teorema Fundamental de la Aritmética) que estas representaciones 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+"
+\end_layout
+
+\end_inset
+
+chetas
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+"
+\end_layout
+
+\end_inset
+
+ tambien resultan unicas. Mas concretamente tenemos la siguiente version del Teorema Fundamental de la Aritmetica.
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+begin{theorem}
+\end_layout
+
+\end_inset
+
+ Para cada 
+\begin_inset Formula $x\in\mathbf{N}$
+\end_inset
+
+, hay una unica infinitupla 
+\begin_inset Formula $(s_{1},s_{2},...)\in\omega^{\left[  \mathbf{N}\right]  }$
+\end_inset
+
+ tal que
+\begin_inset Formula \[
+x=\underset{i=1}{\overset{\infty}{\Pi}}pr(i)^{s_{i}}\]
+\end_inset
+
+(Tiene sentido escribir 
+\begin_inset Formula $\underset{i=1}{\overset{\infty}{\Pi}}pr(i)^{s_{i}} $
+\end_inset
+
+, ya que en esta productoria solo una cantidad finita de factores son no iguales a 
+\begin_inset Formula $1$
+\end_inset
+
+.) 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+end{theorem}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+
+\begin_inset Argument item:1
+status collapsed
+
+
+\begin_layout Standard
+
+\series bold
+Ejercicio 1:
+\series default
+
+\end_layout
+
+\end_inset
+
+Pruebe la existencia en el teorema anterior. (Hint: Induccion completa.) 
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Como podra notarse despues de hacer el ejercicio anterior, la existencia de dicha infinitupla para un numero 
+\begin_inset Formula $x$
+\end_inset
+
+ en general, no es un hecho dificil de probar. En realidad la potencia del Teorema Fundamental de la Aritmética radica en el hecho de que dicha infinitupla es unica.
+\end_layout
+
+\begin_layout Standard
+Para probar la unicidad es clave el siguiente resultado el cual aceptamos sin demostracion.
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+begin{lemma}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "primos"
+
+\end_inset
+
+Si 
+\begin_inset Formula $p,p_{1},...,p_{n}$
+\end_inset
+
+ son numeros primos (con 
+\begin_inset Formula $n\geq1$
+\end_inset
+
+) y 
+\begin_inset Formula $p$
+\end_inset
+
+ divide a 
+\begin_inset Formula $p_{1}.....p_{n}$
+\end_inset
+
+, entonces 
+\begin_inset Formula $p=p_{i}$
+\end_inset
+
+, para algun 
+\begin_inset Formula $i$
+\end_inset
+
+. 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+end{lemma}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+
+\begin_inset Argument item:1
+status collapsed
+
+
+\begin_layout Standard
+
+\series bold
+Ejercicio 2:
+\series default
+
+\end_layout
+
+\end_inset
+
+Use el lema anterior para probar que
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+
+\begin_inset Formula $17^{1045}\neq13^{2000}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+
+\begin_inset Formula $5^{55}.13^{90}.17^{1045}\neq5^{55}.3^{122}.31^{400}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+
+\begin_inset Formula $2^{90}.3^{20}.17^{1045}\neq2^{100}.3^{12}.17^{1044}$
+\end_inset
+
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+
+\begin_inset Argument item:1
+status collapsed
+
+
+\begin_layout Standard
+
+\series bold
+Ejercicio 3:
+\series default
+
+\end_layout
+
+\end_inset
+
+Enuncie en forma precisa que significa la 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+"
+\end_layout
+
+\end_inset
+
+unicidad
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+"
+\end_layout
+
+\end_inset
+
+ en el teorema anterior
+\end_layout
+
+\begin_layout Enumerate
+
+\begin_inset Argument item:1
+status collapsed
+
+
+\begin_layout Standard
+
+\series bold
+Ejercicio 4:
+\series default
+
+\end_layout
+
+\end_inset
+
+(O) Diga con palabras como se puede probar dicha unicidad usando el Lema 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "primos"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+. 
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+A continuacion un poco de notacion. Dada una infinitupla 
+\begin_inset Formula $(s_{1},s_{2},...)\in\omega^{\left[  \mathbf{N}\right]  }$
+\end_inset
+
+ usaremos 
+\begin_inset Formula $\left\langle
+s_{1},s_{2},...\right\rangle $
+\end_inset
+
+ para denotar al numero 
+\begin_inset Formula $\underset{i=1}{\overset{\infty}{\Pi}}pr(i)^{s_{i}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Dado 
+\begin_inset Formula $x\in\mathbf{N}$
+\end_inset
+
+, usaremos 
+\begin_inset Formula $(x)$
+\end_inset
+
+ para denotar a la unica infinitupla 
+\begin_inset Formula $(s_{1},s_{2},...)\in\omega^{\left[  \mathbf{N}\right]  }$
+\end_inset
+
+ tal que
+\begin_inset Formula \[
+x=\left\langle s_{1},s_{2},...\right\rangle =\underset{i=1}{\overset{\infty
+}{\Pi}}pr(i)^{s_{i}}\]
+\end_inset
+
+Ademas para 
+\begin_inset Formula $i\in\mathbf{N}$
+\end_inset
+
+, usaremos 
+\begin_inset Formula $(x)_{i}$
+\end_inset
+
+ para denotar a 
+\begin_inset Formula $s_{i}$
+\end_inset
+
+ de dicha infinitupla. Es decir que
+\end_layout
+
+\begin_layout Enumerate
+
+\begin_inset Argument item:1
+status collapsed
+
+
+\begin_layout Standard
+(1)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $(x)=((x)_{1},(x)_{2},...)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+
+\begin_inset Argument item:1
+status collapsed
+
+
+\begin_layout Standard
+(2)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $(x)_{i}$
+\end_inset
+
+ es el exponente de 
+\begin_inset Formula $pr(i)$
+\end_inset
+
+ en la (unica posible) factorizacion de 
+\begin_inset Formula $x$
+\end_inset
+
+ como producto de primos 
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Se le suele llamar la 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+"
+\end_layout
+
+\end_inset
+
+bajada 
+\begin_inset Formula $i$
+\end_inset
+
+
+\shape italic
+-esima de 
+\shape default
+
+\begin_inset Formula $x$
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+"
+\end_layout
+
+\end_inset
+
+ al numero 
+\begin_inset Formula $(x)_{i}$
+\end_inset
+
+. La idea de este nombre es que para obtener 
+\begin_inset Formula $(x)_{i}$
+\end_inset
+
+ debemos bajar el exponente de 
+\begin_inset Formula $pr(i)$
+\end_inset
+
+ en la factorizacion de 
+\begin_inset Formula $x$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Claramente entonces
+\end_layout
+
+\begin_layout Enumerate
+
+\begin_inset Argument item:1
+status collapsed
+
+
+\begin_layout Standard
+(3)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\left\langle (x)_{1},(x)_{2},...\right\rangle =x$
+\end_inset
+
+, para cada 
+\begin_inset Formula $x\in\mathbf{N}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+
+\begin_inset Argument item:1
+status collapsed
+
+
+\begin_layout Standard
+(4)
+\end_layout
+
+\end_inset
+
+Para cada 
+\begin_inset Formula $(s_{1},s_{2},...)\in\omega^{\left[  \mathbf{N}\right]
+}$
+\end_inset
+
+, se tiene que
+\begin_inset Formula \[
+(\left\langle s_{1},s_{2},...\right\rangle )_{i}=s_{i}\text{, para }i\in\mathbf{N}\]
+\end_inset
+
+Es decir que
+\begin_inset Formula \[
+(\left\langle s_{1},s_{2},...\right\rangle )=(s_{1},s_{2},...)
+\]
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+
+\begin_inset Argument item:1
+status collapsed
+
+
+\begin_layout Standard
+
+\series bold
+Ejercicio 5:
+\series default
+
+\end_layout
+
+\end_inset
+
+Justifique con palabras las propiedades (3) y (4)
+\end_layout
+
+\begin_layout Enumerate
+
+\begin_inset Argument item:1
+status collapsed
+
+
+\begin_layout Standard
+
+\series bold
+Ejercicio 6:
+\series default
+
+\end_layout
+
+\end_inset
+
+Pruebe que si 
+\begin_inset Formula $x,y\in\mathbf{N}$
+\end_inset
+
+, entonces
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+
+\begin_inset Formula $(x)_{i}\leq x$
+\end_inset
+
+, para cada 
+\begin_inset Formula $i\in\mathbf{N}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+
+\begin_inset Formula $(x.y)_{i}=(x)_{i}+(y)_{i}$
+\end_inset
+
+, para cada 
+\begin_inset Formula $i\in\mathbf{N}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+
+\begin_inset Formula $x|y$
+\end_inset
+
+ si y solo si 
+\begin_inset Formula $(x)_{i}\leq(y)_{i}$
+\end_inset
+
+, para cada 
+\begin_inset Formula $i\in\mathbf{N}$
+\end_inset
+
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Tenemos entonces el siguiente resultado fundamental
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+begin{theorem}
+\end_layout
+
+\end_inset
+
+ Las funciones
+\begin_inset Formula \[\begin{array}
+[c]{lll}\mathbf{N} & \rightarrow & \omega^{\left[  \mathbf{N}\right]  }\\
+x & \rightarrow & (x)
+\end{array}
+\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \
+\begin{array}
+[c]{rll}\omega^{\left[  \mathbf{N}\right]  } & \rightarrow & \mathbf{N}\\
+(s_{1},s_{2},...) & \rightarrow & \left\langle s_{1},s_{2},...\right\rangle
+\end{array}
+\]
+\end_inset
+
+son biyecciones una inversa de la otra. 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+end{theorem}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+begin{proof}
+\end_layout
+
+\end_inset
+
+ Llamemos 
+\begin_inset Formula $f$
+\end_inset
+
+ a la funcion de la izquierda y 
+\begin_inset Formula $g$
+\end_inset
+
+ a la de la derecha. Notese que el Lema 3 de la Guia 1 nos dice que basta con probar que 
+\begin_inset Formula $f\circ
+g=Id_{\omega^{\left[  \mathbf{N}\right]  }}$
+\end_inset
+
+ y 
+\begin_inset Formula $g\circ f=Id_{\mathbf{N}}$
+\end_inset
+
+. Pero (3) justamente nos dice que 
+\begin_inset Formula $g\circ f=Id_{\mathbf{N}}$
+\end_inset
+
+ y (4) nos dice que 
+\begin_inset Formula $f\circ g=Id_{\omega^{\left[  \mathbf{N}\right]  }}$
+\end_inset
+
+. 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+end{proof}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Tal como se hace en la escuela primaria, el siguiente lema nos permite calcular 
+\begin_inset Formula $(x)_{i}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+begin{lemma}
+\end_layout
+
+\end_inset
+
+ Dados 
+\begin_inset Formula $x,i\in\mathbf{N}$
+\end_inset
+
+, se tiene que
+\begin_inset Formula \[
+(x)_{i}=\max_{t}\left(  pr(i)^{t}\text{ divide a }x\right)
+\]
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+end{lemma}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+
+\begin_inset Argument item:1
+status collapsed
+
+
+\begin_layout Standard
+
+\series bold
+Ejercicio 7:
+\series default
+
+\end_layout
+
+\end_inset
+
+(O) Explique con palabras como se aplica el Lema 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "primos"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ para probar el lema anterior 
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Definamos la funcion 
+\begin_inset Formula $Lt:\mathbf{N}\rightarrow\omega$
+\end_inset
+
+ de la siguiente manera:
+\begin_inset Formula \[
+Lt(x)=\left\{
+\begin{array}
+[c]{lll}\max_{i}\;(x)_{i}\neq0 &  & \text{si }x\neq1\\
+0 &  & \text{si }x=1
+\end{array}
+\right.
+\]
+\end_inset
+
+Se tienen las siguientes propiedades basicas
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+begin{lemma}
+\end_layout
+
+\end_inset
+
+ Para cada 
+\begin_inset Formula $x\in\mathbf{N}$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Enumerate
+
+\begin_inset Formula $Lt(x)=0$
+\end_inset
+
+ sii 
+\begin_inset Formula $x=1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+
+\begin_inset Formula $x=\prod\nolimits_{i=1}^{Lt(x)}pr(i)^{(x)_{i}}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+end{lemma}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+
+\begin_inset Argument item:1
+status collapsed
+
+
+\begin_layout Standard
+
+\series bold
+Ejercicio 8:
+\series default
+
+\end_layout
+
+\end_inset
+
+(S) Dar una prueba del lema anterior.
+\end_layout
+
+\begin_layout Enumerate
+
+\begin_inset Argument item:1
+status collapsed
+
+
+\begin_layout Standard
+
+\series bold
+Ejercicio 9:
+\series default
+
+\end_layout
+
+\end_inset
+
+Encuentre el dominio de las siguientes funciones:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+
+\begin_inset Formula $\lambda ix[(x)_{i}]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+
+\begin_inset Formula $\lambda x[Lt(x)]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+
+\begin_inset Formula $\lambda x[\left\langle (x)_{1},(x)_{2},(x)_{3},0,0,\dots\right\rangle
+]$
+\end_inset
+
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+Ordenes totales
+\end_layout
+
+\begin_layout Standard
+Antes de introducir los órdenes totales, rapasaremos algunos conceptos básicos requeridos.
+\end_layout
+
+\begin_layout Standard
+Sea 
+\begin_inset Formula $A$
+\end_inset
+
+ un conjunto. Recordemos que una 
+\shape italic
+relacion binaria sobre 
+\shape default
+
+\begin_inset Formula $A$
+\end_inset
+
+ es un subconjunto de 
+\begin_inset Formula $A^{2}$
+\end_inset
+
+. Algunos ejemplos:
+\end_layout
+
+\begin_layout Enumerate
+
+\begin_inset Argument item:1
+status collapsed
+
+
+\begin_layout Standard
+(E1)
+\end_layout
+
+\end_inset
+
+Sea 
+\begin_inset Formula $R=\{(1,2),(2,3)\}$
+\end_inset
+
+. Entonces 
+\begin_inset Formula $R$
+\end_inset
+
+ es una relacion binaria sobre 
+\begin_inset Formula $\mathbf{N}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+
+\begin_inset Argument item:1
+status collapsed
+
+
+\begin_layout Standard
+(E2)
+\end_layout
+
+\end_inset
+
+Sea 
+\begin_inset Formula $R=\{(x,y)\in\omega^{2}:$
+\end_inset
+
+ 
+\begin_inset Formula $x$
+\end_inset
+
+ divide a 
+\begin_inset Formula $y\}$
+\end_inset
+
+. Entonces 
+\begin_inset Formula $R$
+\end_inset
+
+ es una relacion binaria sobre 
+\begin_inset Formula $\omega$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+
+\begin_inset Argument item:1
+status collapsed
+
+
+\begin_layout Standard
+(E3)
+\end_layout
+
+\end_inset
+
+Sea 
+\begin_inset Formula $R=\{(r,t)\in\mathbf{R}^{2}:r\leq t\}$
+\end_inset
+
+. Entonces 
+\begin_inset Formula $R$
+\end_inset
+
+ es una relacion binaria sobre 
+\begin_inset Formula $\mathbf{R}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+
+\begin_inset Argument item:1
+status collapsed
+
+
+\begin_layout Standard
+(E4)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\emptyset$
+\end_inset
+
+ es una relacion binaria sobre 
+\begin_inset Formula $A$
+\end_inset
+
+, cualesquiera sea el conjunto 
+\begin_inset Formula $A$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+
+\begin_inset Argument item:1
+status collapsed
+
+
+\begin_layout Standard
+(E5)
+\end_layout
+
+\end_inset
+
+Sea 
+\begin_inset Formula $R=\{(x,y)\in\omega^{2}:x<y$
+\end_inset
+
+ o 
+\begin_inset Formula $y=0\}$
+\end_inset
+
+. Entonces 
+\begin_inset Formula $R$
+\end_inset
+
+ es una relacion binaria sobre 
+\begin_inset Formula $\omega$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+Notese que si 
+\begin_inset Formula $R$
+\end_inset
+
+ es una relacion binaria sobre 
+\begin_inset Formula $A$
+\end_inset
+
+ y 
+\begin_inset Formula $A\subseteq B$
+\end_inset
+
+ entonces 
+\begin_inset Formula $R$
+\end_inset
+
+ es una relacion binaria sobre 
+\begin_inset Formula $B$
+\end_inset
+
+. Por ejemplo las relaciones dadas en los ejemplos (E1), (E2), (E4) y (E5) tambien son relaciones binarias sobre 
+\begin_inset Formula $\mathbf{R}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Como es usual, cuando 
+\begin_inset Formula $R$
+\end_inset
+
+ sea una relacion binaria sobre un conjunto 
+\begin_inset Formula $A$
+\end_inset
+
+, algunas veces escribiremos 
+\begin_inset Formula $aRb$
+\end_inset
+
+ en lugar de 
+\begin_inset Formula $(a,b)\in R$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Recordemos que una relacion binaria 
+\begin_inset Formula $R$
+\end_inset
+
+ sobre un conjunto 
+\begin_inset Formula $A$
+\end_inset
+
+ es llamada un 
+\shape italic
+orden parcial sobre 
+\shape default
+
+\begin_inset Formula $A$
+\end_inset
+
+
+\shape italic
+
+\begin_inset space \space{}
+
+\end_inset
+
+
+\shape default
+si cumple las siguientes tres propiedades:
+\end_layout
+
+\begin_layout Enumerate
+
+\begin_inset Argument item:1
+status collapsed
+
+
+\begin_layout Standard
+Reflexividad
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $xRx$
+\end_inset
+
+, cualesquiera sea 
+\begin_inset Formula $x\in A$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+
+\begin_inset Argument item:1
+status collapsed
+
+
+\begin_layout Standard
+Transitividad
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $xRy$
+\end_inset
+
+ y 
+\begin_inset Formula $yRz$
+\end_inset
+
+ implica 
+\begin_inset Formula $xRz$
+\end_inset
+
+, cualesquiera sean 
+\begin_inset Formula $x,y,z\in
+A$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+
+\begin_inset Argument item:1
+status collapsed
+
+
+\begin_layout Standard
+Antisimetria
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $xRy$
+\end_inset
+
+ y 
+\begin_inset Formula $yRx$
+\end_inset
+
+ implica 
+\begin_inset Formula $x=y$
+\end_inset
+
+, cualesquiera sean 
+\begin_inset Formula $x,y\in A$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+Algunos ejemplos:
+\end_layout
+
+\begin_layout Enumerate
+
+\begin_inset Argument item:1
+status collapsed
+
+
+\begin_layout Standard
+(E1)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\{(r,t)\in\mathbf{R}^{2}:r\leq t\}$
+\end_inset
+
+ es un orden parcial sobre 
+\begin_inset Formula $\mathbf{R}$
+\end_inset
+
+, llamado el orden usual de 
+\begin_inset Formula $\mathbf{R}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+
+\begin_inset Argument item:1
+status collapsed
+
+
+\begin_layout Standard
+(E2)
+\end_layout
+
+\end_inset
+
+Sea 
+\begin_inset Formula $R=\{(1,2),(1,3),(1,1),(2,2),(3,3)\}$
+\end_inset
+
+. Entonces 
+\begin_inset Formula $R$
+\end_inset
+
+ es un orden parcial sobre 
+\begin_inset Formula $\{1,2,3\}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+
+\begin_inset Argument item:1
+status collapsed
+
+
+\begin_layout Standard
+(E3)
+\end_layout
+
+\end_inset
+
+Sea 
+\begin_inset Formula $R=\{(S,T)\in\mathcal{P}(\omega)^{2}:S\subseteq T\}$
+\end_inset
+
+. Entonces 
+\begin_inset Formula $R$
+\end_inset
+
+ es un orden parcial sobre 
+\begin_inset Formula $\mathcal{P}(\omega)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+
+\begin_inset Argument item:1
+status collapsed
+
+
+\begin_layout Standard
+(E4)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\{(x,y)\in\omega^{2}:$
+\end_inset
+
+ 
+\begin_inset Formula $x\leq y\}$
+\end_inset
+
+ es un orden parcial sobre 
+\begin_inset Formula $\omega$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+
+\begin_inset Argument item:1
+status collapsed
+
+
+\begin_layout Standard
+(E5)
+\end_layout
+
+\end_inset
+
+Sea 
+\begin_inset Formula $R=\{(1,1)\}$
+\end_inset
+
+. Entonces 
+\begin_inset Formula $R$
+\end_inset
+
+ es un orden parcial sobre 
+\begin_inset Formula $\{1\}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+
+\begin_inset Argument item:1
+status collapsed
+
+
+\begin_layout Standard
+(E6)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\{(a,b)\in A^{2}:a=b\}$
+\end_inset
+
+ es un orden parcial sobre 
+\begin_inset Formula $A$
+\end_inset
+
+, cualesquira sea el conjunto 
+\begin_inset Formula $A$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+
+\begin_inset Argument item:1
+status collapsed
+
+
+\begin_layout Standard
+(E7)
+\end_layout
+
+\end_inset
+
+Sea 
+\begin_inset Formula $\mathrm{\leq}=\{(n,m)\in\mathbf{N}^{2}:n\mid m\}$
+\end_inset
+
+. Es facil ver que 
+\begin_inset Formula $\leq$
+\end_inset
+
+ es un orden parcial sobre 
+\begin_inset Formula $\mathbf{N}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+Notese que las relaciones dadas en (E1) y (E4) son distintas, ademas
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+
+\begin_inset Argument item:1
+status collapsed
+
+
+\begin_layout Standard
+
+\series bold
+Ejercicio 10:
+\series default
+
+\end_layout
+
+\end_inset
+
+Es la relacion dada en (E4) un orden parcial sobre 
+\begin_inset Formula $\mathbf{R}$
+\end_inset
+
+? 
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Muchas veces denotaremos con 
+\begin_inset Formula $\leq$
+\end_inset
+
+ a una relacion binaria que sea un orden parcial. Esto hace mas intuitiva nuestra escritura pero siempre hay que tener en cuenta que 
+\begin_inset Formula $\leq$
+\end_inset
+
+ en estos casos esta denotando cierto conjunto de pares ordenados previamente definido.
+\end_layout
+
+\begin_layout Standard
+Usaremos la siguiente
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+
+\begin_inset Argument item:1
+status collapsed
+
+
+\begin_layout Standard
+Convencion notacional
+\end_layout
+
+\end_inset
+
+Si hemos denotado con 
+\begin_inset Formula $\leq$
+\end_inset
+
+ a cierto orden parcial sobre un conjunto 
+\begin_inset Formula $A$
+\end_inset
+
+, entonces
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+
+\begin_inset Argument item:1
+status collapsed
+
+
+\begin_layout Standard
+-
+\end_layout
+
+\end_inset
+
+Denotaremos con 
+\begin_inset Formula $<$
+\end_inset
+
+ a la relacion binaria 
+\begin_inset Formula $\{(a,b)\in A^{2}:a\leq b$
+\end_inset
+
+ y 
+\begin_inset Formula $a\neq b\}$
+\end_inset
+
+. Es decir que 
+\begin_inset Formula $\mathrm{<}=\{(a,b)\in A^{2}:a\leq b$
+\end_inset
+
+ y 
+\begin_inset Formula $a\neq
+b\}$
+\end_inset
+
+. Cuando se de 
+\begin_inset Formula $a<b$
+\end_inset
+
+ diremos que 
+\begin_inset Formula $a$
+\end_inset
+
+ 
+\shape italic
+es menor que 
+\shape default
+
+\begin_inset Formula $b$
+\end_inset
+
+ o que 
+\begin_inset Formula $b$
+\end_inset
+
+ 
+\shape italic
+es mayor que 
+\shape default
+
+\begin_inset Formula $a$
+\end_inset
+
+ (
+\shape italic
+respecto de 
+\shape default
+
+\begin_inset Formula $\leq$
+\end_inset
+
+) 
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Por ejemplo, si 
+\begin_inset Formula $A=\{1,2,3,4\}$
+\end_inset
+
+ y 
+\begin_inset Formula $\mathrm{\leq}=\{(1,2),(2,3),(1,3),(1,1),(2,2),(3,3),(4,4)\}$
+\end_inset
+
+, entonces 
+\begin_inset Formula $\mathrm{<}=\{(1,2),(2,3),(1,3)\}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Ahora sí estamos en condiciones de definir orden total. Sea 
+\begin_inset Formula $A$
+\end_inset
+
+ un conjunto cualquiera. Por un 
+\shape italic
+orden total sobre
+\shape default
+ 
+\begin_inset Formula $A$
+\end_inset
+
+ entenderemos un orden parcial 
+\begin_inset Formula $\leq$
+\end_inset
+
+ sobre 
+\begin_inset Formula $A$
+\end_inset
+
+ el cual cumple:
+\end_layout
+
+\begin_layout Enumerate
+
+\begin_inset Argument item:1
+status collapsed
+
+
+\begin_layout Standard
+(C)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $a\leq b$
+\end_inset
+
+ o 
+\begin_inset Formula $b\leq a$
+\end_inset
+
+, cualesquiera sean 
+\begin_inset Formula $a,b\in A$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+
+\begin_inset Argument item:1
+status collapsed
+
+
+\begin_layout Standard
+
+\series bold
+Ejercicio 11:
+\series default
+
+\end_layout
+
+\end_inset
+
+Decida cuáles ordenes parciales de la lista de ejemplos (E1)-(E7) son ordenes totales. 
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Supongamos 
+\begin_inset Formula $A$
+\end_inset
+
+ es finito, no vacio, y que 
+\begin_inset Formula $\leq$
+\end_inset
+
+ es un orden total sobre 
+\begin_inset Formula $A$
+\end_inset
+
+. La propiedad (C) nos permite probar que para cada conjunto no vacio 
+\begin_inset Formula $S\subseteq A$
+\end_inset
+
+, hay un elemento 
+\begin_inset Formula $s\in S$
+\end_inset
+
+ el cual cumple 
+\begin_inset Formula $s\leq s^{\prime}$
+\end_inset
+
+ para cada 
+\begin_inset Formula $s^{\prime}\in S$
+\end_inset
+
+. Por supuesto, 
+\begin_inset Formula $s$
+\end_inset
+
+ es unico (por que?) y habitualmente es llamado el 
+\shape italic
+menor elemento de 
+\shape default
+
+\begin_inset Formula $S$
+\end_inset
+
+, ya que es menor que todo otro elemento de 
+\begin_inset Formula $S$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Si 
+\begin_inset Formula $A$
+\end_inset
+
+ es finito, no vacio, y 
+\begin_inset Formula $\leq$
+\end_inset
+
+ es un orden total sobre 
+\begin_inset Formula $A$
+\end_inset
+
+, podemos definir recursivamente una funcion 
+\begin_inset Formula $f:\{1,...,\left\vert A\right\vert
+\}\rightarrow A$
+\end_inset
+
+ de la siguiente manera:
+\end_layout
+
+\begin_layout Enumerate
+
+\begin_inset Argument item:1
+status collapsed
+
+
+\begin_layout Standard
+-
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $f(1)=$
+\end_inset
+
+ menor elemento de 
+\begin_inset Formula $A$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+
+\begin_inset Argument item:1
+status collapsed
+
+
+\begin_layout Standard
+-
+\end_layout
+
+\end_inset
+
+Si 
+\begin_inset Formula $i\in\{1,...,\left\vert A\right\vert -1\}$
+\end_inset
+
+, entonces
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+
+\begin_inset Argument item:1
+status collapsed
+
+
+\begin_layout Standard
+-
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $f(i+1)=$
+\end_inset
+
+ menor elemento de 
+\begin_inset Formula $A-\{f(1),...,f(i)\}$
+\end_inset
+
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+Como es habitual, 
+\begin_inset Formula $f(i)$
+\end_inset
+
+ es llamado el 
+\begin_inset Formula $i$
+\end_inset
+
+
+\shape italic
+-esimo elemento de 
+\shape default
+
+\begin_inset Formula $A$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Muchas veces para dar un orden total sobre un conjunto finito 
+\begin_inset Formula $A$
+\end_inset
+
+, daremos simplemente sus elementos en forma creciente ya que esto determina el orden por completo. Por ejemplo si 
+\begin_inset Formula $A=\{1,2,3\}$
+\end_inset
+
+, el orden total dado por 
+\begin_inset Formula $2<1<3$
+\end_inset
+
+ es la relacion 
+\begin_inset Formula $\mathrm{\leq}=\{(2,1),(1,3),(2,3),(1,1),(2,2),(3,3)\}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+
+\begin_inset Argument item:1
+status collapsed
+
+
+\begin_layout Standard
+
+\series bold
+Ejercicio 12:
+\series default
+
+\end_layout
+
+\end_inset
+
+(S) (O) Sea 
+\begin_inset Formula $A$
+\end_inset
+
+ un conjunto finito de 
+\begin_inset Formula $n>0$
+\end_inset
+
+ elementos. Encuentre una biyección entre 
+\begin_inset Formula $\{R:R$
+\end_inset
+
+ es un orden total sobre 
+\begin_inset Formula $A\}$
+\end_inset
+
+ y 
+\begin_inset Formula $\{(a_{1},\dots,a_{n})\in A^{n}:a_{i}\neq a_{j}$
+\end_inset
+
+ para 
+\begin_inset Formula $i\neq j\}$
+\end_inset
+
+. (¿Por qué este resultado se puede considerar informático?) 
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+Ordenes naturales sobre 
+\begin_inset Formula $\Sigma^{\ast}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Llamaremos 
+\shape italic
+numerales
+\shape default
+ a los siguientes simbolos
+\begin_inset Formula \[
+0\ 1\ 2\ 3\ 4\ 5\ 6\ 7\ 8\ 9
+\]
+\end_inset
+
+Usaremos 
+\begin_inset Formula $Num$
+\end_inset
+
+ para denotar el conjunto de numerales. Notese que 
+\begin_inset Formula $Num\cap\omega=\emptyset$
+\end_inset
+
+. Es decir, no debemos confundir los simbolos que usualmente denotan los primeros diez numeros enteros con los numeros que ellos denotan. De hecho en china o japon los primeros diez numeros enteros se denotan con otros simbolos. Similarmente las palabras pertenecientes a 
+\begin_inset Formula $Num^{\ast}$
+\end_inset
+
+ denotan (notacion decimal) a los numeros de 
+\begin_inset Formula $\omega$
+\end_inset
+
+ pero debemos tener en cuenta que 
+\begin_inset Formula $Num^{\ast}\cap\omega=\emptyset$
+\end_inset
+
+. Cuando tratamos con palabras de 
+\begin_inset Formula $Num^{\ast}$
+\end_inset
+
+, debemos ser cuidadosos ya que muchas veces en nuestro discurso matematico (es decir las guias, el apunte, lo que escriben los profesores en el pizarron, etc) representamos dos objetos diferentes de la misma forma. Por ejemplo 
+\begin_inset Formula $45$
+\end_inset
+
+ puede estar denotando al numero entero cuarenta y cinco o tambien 
+\begin_inset Formula $45$
+\end_inset
+
+ puede estar denotando la palabra de longitud 
+\begin_inset Formula $2$
+\end_inset
+
+ cuyo primer simbolo es el numeral 
+\begin_inset Formula $4$
+\end_inset
+
+ y cuyo segundo simbolo es el numeral 
+\begin_inset Formula $5$
+\end_inset
+
+, es decir en este caso la palabra 
+\begin_inset Formula $45$
+\end_inset
+
+ se denota a ella misma. Por dar otro ejemplo, el simbolo 
+\begin_inset Formula $1$
+\end_inset
+
+ en nuestro discurso algunas veces se denotara a si mismo y otras veces denotara al numero uno.
+\end_layout
+
+\begin_layout Standard
+Es bien conocido que, en notacion decimal, las siguientes palabras del alfabeto 
+\begin_inset Formula $Num$
+\end_inset
+
+, denotan, de menor a mayor, a los numeros de 
+\begin_inset Formula $\omega$
+\end_inset
+
+
+\begin_inset Formula \[
+0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,...
+\]
+\end_inset
+
+Por supuesto esta lista de palabras es infinita pero asumimos que el lector sabe como obtener la palabra siguiente a cada miembro de la lista (i.e. sumar 1 en notacion decimal), lo cual determina por completo la lista conociendo que la misma comienza con la palabra 
+\begin_inset Formula $0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Cabe destacar que debido a la presencia del numeral 
+\begin_inset Formula $0$
+\end_inset
+
+ en la lista, la 
+\begin_inset Formula $n$
+\end_inset
+
+-esima palabra representa o denota al numero 
+\begin_inset Formula $n-1$
+\end_inset
+
+ o, dicho de otra forma, el numero 
+\begin_inset Formula $n\in\omega$
+\end_inset
+
+ es representado por la 
+\begin_inset Formula $(n+1)$
+\end_inset
+
+-esima palabra de la lista.
+\end_layout
+
+\begin_layout Standard
+Un detalle de la representacion decimal de numeros de 
+\begin_inset Formula $\omega$
+\end_inset
+
+ mediante palabras de 
+\begin_inset Formula $Num^{\ast}$
+\end_inset
+
+ es que la misma no nos da una biyeccion entre 
+\begin_inset Formula $Num^{\ast}$
+\end_inset
+
+ y 
+\begin_inset Formula $\omega$
+\end_inset
+
+ ya que por ejemplo las palabras 
+\begin_inset Formula $00016$
+\end_inset
+
+ y 
+\begin_inset Formula $16$
+\end_inset
+
+ representan el mismo numero. Dicho de otra forma en la lista anterior no figuran todas las palabras de 
+\begin_inset Formula $Num^{\ast}$
+\end_inset
+
+, a saber estan omitidas todas las palabras que comienzan con el simbolo 
+\begin_inset Formula $0$
+\end_inset
+
+ y tienen longitud mayor que uno. A continuacion daremos una representacion de los numeros de 
+\begin_inset Formula $\omega$
+\end_inset
+
+ mediante palabras, la cual no tendra este problema. El alfabeto que usaremos tendra todos los numerales menos el 
+\begin_inset Formula $0$
+\end_inset
+
+ y ademas tendra un simbolo para denotar al numero diez, a saber el simbolo 
+\begin_inset Formula $d$
+\end_inset
+
+. Es decir
+\begin_inset Formula \[
+\widetilde{Num}=\{1,2,3,4,5,6,7,8,9,d\}
+\]
+\end_inset
+
+Representaremos a los numeros de 
+\begin_inset Formula $\omega$
+\end_inset
+
+ con la siguiente lista infinita de palabras de 
+\begin_inset Formula $\widetilde{Num}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset Formula $\bigskip$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset Formula $\varepsilon,1,2,3,4,5,6,7,8,9,d,$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset Formula $11,12,...,1d,21,22,...,2d,...,91,92,...,9d,d1,d2,...,dd,$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset Formula $111,112,...,11d,121,122,...,12d,...$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+El lector ya se habra dado cuenta de que el siguiente a una palabra 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ de la lista anterior se obtiene aplicando las siguientes clausulas
+\end_layout
+
+\begin_layout Enumerate
+
+\begin_inset Argument item:1
+status collapsed
+
+
+\begin_layout Standard
+C
+\begin_inset Formula $_{1}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+si 
+\begin_inset Formula $\alpha=d^{n}$
+\end_inset
+
+, con 
+\begin_inset Formula $n\geq0$
+\end_inset
+
+ entonces el siguiente de 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ es 
+\begin_inset Formula $1^{n+1}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+
+\begin_inset Argument item:1
+status collapsed
+
+
+\begin_layout Standard
+C
+\begin_inset Formula $_{2}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+si 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ no es de la forma 
+\begin_inset Formula $d^{n}$
+\end_inset
+
+, con 
+\begin_inset Formula $n\geq0$
+\end_inset
+
+, entonces el siguiente de 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ se obtiene de la siguiente manera:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+buscar de derecha a izquierda el primer simbolo no igual a 
+\begin_inset Formula $d$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+reemplazar dicho simbolo por su siguiente en la lista 
+\begin_inset Formula $1,2,3,4,5,6,7,8,9,d$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+reemplazar por el simbolo 
+\begin_inset Formula $1$
+\end_inset
+
+ a todos los simbolos iguales a 
+\begin_inset Formula $d$
+\end_inset
+
+ que ocurrian a la derecha del simbolo reemplazado 
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\noindent
+Notese que
+\end_layout
+
+\begin_layout Enumerate
+
+\begin_inset Argument item:1
+status collapsed
+
+
+\begin_layout Standard
+-
+\end_layout
+
+\end_inset
+
+El numero 
+\begin_inset Formula $0$
+\end_inset
+
+ es representado en la lista anterior con la palabra 
+\begin_inset Formula $\varepsilon$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+
+\begin_inset Argument item:1
+status collapsed
+
+
+\begin_layout Standard
+-
+\end_layout
+
+\end_inset
+
+El numero 
+\begin_inset Formula $1$
+\end_inset
+
+ es representado en la lista anterior con la palabra 
+\begin_inset Formula $1
+$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+\begin_inset Formula $\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \vdots$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+
+\begin_inset Argument item:1
+status collapsed
+
+
+\begin_layout Standard
+-
+\end_layout
+
+\end_inset
+
+El numero 
+\begin_inset Formula $9$
+\end_inset
+
+ es representado en la lista anterior con la palabra 
+\begin_inset Formula $9
+$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+
+\begin_inset Argument item:1
+status collapsed
+
+
+\begin_layout Standard
+-
+\end_layout
+
+\end_inset
+
+El numero 
+\begin_inset Formula $10$
+\end_inset
+
+ es representado en la lista anterior con la palabra 
+\begin_inset Formula $d$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+
+\begin_inset Argument item:1
+status collapsed
+
+
+\begin_layout Standard
+-
+\end_layout
+
+\end_inset
+
+El numero 
+\begin_inset Formula $11$
+\end_inset
+
+ es representado en la lista anterior con la palabra 
+\begin_inset Formula $11$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+\begin_inset Formula $\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \vdots$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+
+\begin_inset Argument item:1
+status collapsed
+
+
+\begin_layout Standard
+-
+\end_layout
+
+\end_inset
+
+El numero 
+\begin_inset Formula $19$
+\end_inset
+
+ es representado en la lista anterior con la palabra 
+\begin_inset Formula $19$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+
+\begin_inset Argument item:1
+status collapsed
+
+
+\begin_layout Standard
+-
+\end_layout
+
+\end_inset
+
+El numero 
+\begin_inset Formula $20$
+\end_inset
+
+ es representado en la lista anterior con la palabra 
+\begin_inset Formula $1d$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+
+\begin_inset Argument item:1
+status collapsed
+
+
+\begin_layout Standard
+-
+\end_layout
+
+\end_inset
+
+El numero 
+\begin_inset Formula $21$
+\end_inset
+
+ es representado en la lista anterior con la palabra 
+\begin_inset Formula $21$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+
+\begin_inset Argument item:1
+status collapsed
+
+
+\begin_layout Standard
+-
+\end_layout
+
+\end_inset
+
+El numero 
+\begin_inset Formula $22$
+\end_inset
+
+ es representado en la lista anterior con la palabra 
+\begin_inset Formula $22$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+\begin_inset Formula $\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \vdots$
+\end_inset
+
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\noindent
+Como puede notarse en estos primeros veinte y pico numeros solo dos (el 
+\begin_inset Formula $0$
+\end_inset
+
+ y el 
+\begin_inset Formula $20$
+\end_inset
+
+) se representan en forma distinta a la reprentacion decimal clasica. Es natural que 
+\begin_inset Formula $\varepsilon$
+\end_inset
+
+ denote al numero 
+\begin_inset Formula $0$
+\end_inset
+
+ y ademas notese que la palabra 
+\begin_inset Formula $1d$
+\end_inset
+
+ (que en la lista representa el 
+\begin_inset Formula $20$
+\end_inset
+
+) puede leerse como 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+"
+\end_layout
+
+\end_inset
+
+diecidiez
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+"
+\end_layout
+
+\end_inset
+
+ (es decir la palabra que sigue a 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+"
+\end_layout
+
+\end_inset
+
+diecinueve
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+"
+\end_layout
+
+\end_inset
+
+) que justamente es 
+\begin_inset Formula $20$
+\end_inset
+
+. Por supuesto con esta manera de pensar la palabra 
+\begin_inset Formula $2d$
+\end_inset
+
+ deberiamos leerla como 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+"
+\end_layout
+
+\end_inset
+
+ventidiez
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+"
+\end_layout
+
+\end_inset
+
+ y si nos fijamos en la lista ella representa al numero treinta lo cual nuevamente es muy natural. Otro ejemplo: a 
+\begin_inset Formula $6d$
+\end_inset
+
+ deberiamos leerla como 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+"
+\end_layout
+
+\end_inset
+
+sesentidiez
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+"
+\end_layout
+
+\end_inset
+
+ y es natural ya que en la lista representa al setenta. Tambien, la palabra 
+\begin_inset Formula $9d$
+\end_inset
+
+ puede leerse noventidiez ya que representa en la lista al numero 
+\begin_inset Formula $100$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+La lista anterior va representando los numeros de 
+\begin_inset Formula $\omega$
+\end_inset
+
+ en forma muy natural pero, aunque nuestra intuicion nos diga que no, en principio podria pasar que una misma palabra del alfabeto 
+\begin_inset Formula $\widetilde{Num}$
+\end_inset
+
+ ocurra dos veces en la lista y esto nos diria que una misma palabra estaria representando a dos numeros distintos. Tambien, en principio podria suceder que haya una palabra del alfabeto 
+\begin_inset Formula $\widetilde{Num}$
+\end_inset
+
+ la cual nunca figure en la lista. Mas abajo daremos una serie de ejercicios que muestran que estas dos posibilidades no suceden, es decir muestran que
+\end_layout
+
+\begin_layout Enumerate
+
+\begin_inset Argument item:1
+status collapsed
+
+
+\begin_layout Standard
+(S)
+\end_layout
+
+\end_inset
+
+Toda palabra de 
+\begin_inset Formula $\widetilde{Num}^{\ast}$
+\end_inset
+
+ aparece en la lista
+\end_layout
+
+\begin_layout Enumerate
+
+\begin_inset Argument item:1
+status collapsed
+
+
+\begin_layout Standard
+(I)
+\end_layout
+
+\end_inset
+
+Ninguna palabra de 
+\begin_inset Formula $\widetilde{Num}^{\ast}$
+\end_inset
+
+ aparece mas de una ves 
+\end_layout
+
+\begin_layout Standard
+\noindent
+Notese que la propiedad (S) nos dice que la funcion
+\begin_inset Formula \[\begin{array}
+[t]{rll}\ast:\omega & \rightarrow & \widetilde{Num}^{\ast}\\
+n & \rightarrow & (n+1)\text{-esimo elemento de la lista}\end{array}
+\]
+\end_inset
+
+es sobreyectiva y la propiedad (I) nos garantiza que dicha funcion es inyectiva, por lo cual entre las dos nos garantizan que dicha representacion establece una biyeccion entre 
+\begin_inset Formula $\omega$
+\end_inset
+
+ y 
+\begin_inset Formula $\widetilde{Num}^{\ast}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Por supuesto, la pregunta que inmediatamente surge es como calcular la inversa de 
+\begin_inset Formula $\ast$
+\end_inset
+
+. Llamemos 
+\begin_inset Formula $\#$
+\end_inset
+
+ a la inversa de 
+\begin_inset Formula $\ast$
+\end_inset
+
+. Notese que dada una palabra 
+\begin_inset Formula $\alpha\in\widetilde{Num}^{\ast}$
+\end_inset
+
+, el numero 
+\begin_inset Formula $\#(\alpha)$
+\end_inset
+
+ es justamente el numero representado por la palabra 
+\begin_inset Formula $\alpha$
+\end_inset
+
+, o dicho de otra forma 
+\begin_inset Formula $\#(\alpha)$
+\end_inset
+
+ es la posicion que ocupa 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ en la lista, contando desde el 
+\begin_inset Formula $0$
+\end_inset
+
+ (es decir 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ es la 
+\begin_inset Formula $(\#(\alpha)+1)$
+\end_inset
+
+-esima palabra de la lista). Por ejemplo:
+\begin_inset Formula \begin{gather*}
+\#(\varepsilon)=0\\
+\#(1)=1\\
+\vdots\\
+\#(9)=9\\
+\#(d)=10\\
+\#(11)=11\\
+\#(12)=12\\
+\vdots\\
+\#(19)=19\\
+\#(1d)=20
+\end{gather*}
+\end_inset
+
+Aqui hay que tener cuidado como leemos las igualdades anteriores. Por ejemplo en la igualdad
+\begin_inset Formula \[
+\#(1)=1
+\]
+\end_inset
+
+la primera ocurrencia del simbolo 
+\begin_inset Formula $1$
+\end_inset
+
+ se refiere al numeral uno, es decir denota una palabra y la segunda ocurrencia se esta refiriendo al numero uno, es decir denota un numero.
+\end_layout
+
+\begin_layout Standard
+Dejamos al lector el ejercicio de ganar intuicion con ejemplos hasta que se convensa de que tal como en el caso de la notacion decimal, el numero 
+\begin_inset Formula $\#(\alpha)$
+\end_inset
+
+ se expresa como una suma de potencias de 
+\begin_inset Formula $10$
+\end_inset
+
+, con los coeficientes dados en funcion de los simbolos de 
+\begin_inset Formula $\alpha$
+\end_inset
+
+. Mas concretamente si 
+\begin_inset Formula $\alpha=s_{1}s_{2}...s_{k}$
+\end_inset
+
+ con 
+\begin_inset Formula $k\geq1$
+\end_inset
+
+ y 
+\begin_inset Formula $s_{1},s_{2},...,s_{k}\in\widetilde{Num}$
+\end_inset
+
+, entonces
+\begin_inset Formula \[
+\#(\alpha)=\#(s_{1}).10^{k-1}+\#(s_{2}).10^{k-2}+...+\#(s_{k}).10^{0}\]
+\end_inset
+
+No daremos ahora una prueba formal de este hecho pero para ganar intuicion sobre el mismo el lector puede hacer los Ejercicios 13, 14, 15 y 16. Algunos ejemplos
+\begin_inset Formula \begin{align*}
+\#(1d)  & =1.10^{1}+10.10^{0}=10+10=20\\
+\#(dd)  & =10.10^{1}+10.10^{0}=100+10=110\\
+\#(111)  & =1.10^{2}+1.10^{1}+1.10^{0}=100+10+1=111\\
+\#(1d3d)  & =1.10^{3}+10.10^{2}+3.10^{1}+10.10^{0}\end{align*}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Ahora que sabemos que las palabras de 
+\begin_inset Formula $\widetilde{Num}$
+\end_inset
+
+ representan los numeros como suma de potencias de diez, en forma analoga a la notacion decimal clasica, podemos refozar aun mas la analogia poniendo nombres adecuados que, tal como en el caso clasico, nos permitan leer las palabras de 
+\begin_inset Formula $\widetilde
+{Num}$
+\end_inset
+
+ describiendo su suma de potencias asociada. Por ejemplo podriamos llamar 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+"
+\end_layout
+
+\end_inset
+
+decenta
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+"
+\end_layout
+
+\end_inset
+
+ al numero 
+\begin_inset Formula $100$
+\end_inset
+
+, por analogia a 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+"
+\end_layout
+
+\end_inset
+
+treinta
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+"
+\end_layout
+
+\end_inset
+
+, 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+"
+\end_layout
+
+\end_inset
+
+cuarenta
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+"
+\end_layout
+
+\end_inset
+
+,...,
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+"
+\end_layout
+
+\end_inset
+
+noventa
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+"
+\end_layout
+
+\end_inset
+
+. O sea una decenta es diez veces diez. De esta forma la palabra 
+\begin_inset Formula $d1$
+\end_inset
+
+ se leera 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+"
+\end_layout
+
+\end_inset
+
+decenta y uno
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+"
+\end_layout
+
+\end_inset
+
+ y esto es natural ya que en la lista representa al 
+\begin_inset Formula $101$
+\end_inset
+
+. La palabra 
+\begin_inset Formula $dd$
+\end_inset
+
+ se leera 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+"
+\end_layout
+
+\end_inset
+
+decenta y diez
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+"
+\end_layout
+
+\end_inset
+
+ y esto describe a la perfeccion el numero que representa, i.e. el 
+\begin_inset Formula $10.10+10=110 $
+\end_inset
+
+. La palabra que sigue en la lista a 
+\begin_inset Formula $dd$
+\end_inset
+
+ es 
+\begin_inset Formula $111$
+\end_inset
+
+ la cual representa al 
+\begin_inset Formula $111$
+\end_inset
+
+, es decir aqui como en los otros casos vistos en los cuales no hay ocurrencias del simbolo 
+\begin_inset Formula $d$
+\end_inset
+
+ la palabra representa al mismo numero que representa en la notacion decimal clasica. Por dar otro ejemplo, la palabra 
+\begin_inset Formula $59d3$
+\end_inset
+
+ se leera 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+"
+\end_layout
+
+\end_inset
+
+cinco mil novecientos decenta y tres
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+"
+\end_layout
+
+\end_inset
+
+ y representara al numero 
+\begin_inset Formula $6003$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Para seguir debemos ponerle nombre a 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+"
+\end_layout
+
+\end_inset
+
+diez veces cien
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+"
+\end_layout
+
+\end_inset
+
+, es decir, 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+"
+\end_layout
+
+\end_inset
+
+decientos
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+"
+\end_layout
+
+\end_inset
+
+ (por analogia con 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+"
+\end_layout
+
+\end_inset
+
+novecientos = nueve veces cien
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+"
+\end_layout
+
+\end_inset
+
+) denotara al numero 
+\begin_inset Formula $1000=10.100$
+\end_inset
+
+. De esta forma la palabra 
+\begin_inset Formula $d51$
+\end_inset
+
+ se leera 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+"
+\end_layout
+
+\end_inset
+
+decientos cincuenta y uno
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+"
+\end_layout
+
+\end_inset
+
+ y esto es natural ya que pensando un rato se puede ver que ella representa al 
+\begin_inset Formula $1051$
+\end_inset
+
+. Tambien, la palabra 
+\begin_inset Formula $ddd$
+\end_inset
+
+ se leera 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+"
+\end_layout
+
+\end_inset
+
+decientos decenta y diez
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+"
+\end_layout
+
+\end_inset
+
+ y representara al numero 
+\begin_inset Formula $1110$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+Prueba de las propiedades (S) e (I)
+\end_layout
+
+\begin_layout Standard
+Dado que el siguiente a un elemento 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ de la lista es de la misma longitud que 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ o tiene longitud igual a 
+\begin_inset Formula $\left\vert \alpha\right\vert
++1$
+\end_inset
+
+, podemos representar la lista anterior de la siguiente manera:
+\begin_inset Formula \[
+B_{0};B_{1};B_{2};B_{3};B_{4};...
+\]
+\end_inset
+
+donde cada 
+\begin_inset Formula $B_{n}$
+\end_inset
+
+ es, por definicion, la parte de la lista en la cual las palabras tienen longitud exactamente 
+\begin_inset Formula $n$
+\end_inset
+
+. Por ejemplo:
+\end_layout
+
+\begin_layout Enumerate
+
+\begin_inset Argument item:1
+status collapsed
+
+
+\begin_layout Standard
+-
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $B_{0}$
+\end_inset
+
+ es 
+\begin_inset Formula $\varepsilon$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+
+\begin_inset Argument item:1
+status collapsed
+
+
+\begin_layout Standard
+-
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $B_{1}$
+\end_inset
+
+ es 
+\begin_inset Formula $1,2,3,4,5,6,7,8,9,d$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+
+\begin_inset Argument item:1
+status collapsed
+
+
+\begin_layout Standard
+-
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $B_{2}$
+\end_inset
+
+ es 
+\begin_inset Formula $11,12,...,1d,21,22,...,2d,...,91,92,...,9d,d1,d2,...,dd$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+Notese que hasta el momento nada nos asegura que no suceda que para algun 
+\begin_inset Formula $n$
+\end_inset
+
+ se de que 
+\begin_inset Formula $B_{n}$
+\end_inset
+
+ sea una lista infinita, lo cual ademas nos diria que los bloques 
+\begin_inset Formula $B_{n+1},B_{n+2},...$
+\end_inset
+
+ son todos vacios. Es decir podria pasar que la lista se estanque en una longitud 
+\begin_inset Formula $n$
+\end_inset
+
+ y nunca aparezca una palabra de longitud mayor que 
+\begin_inset Formula $n$
+\end_inset
+
+. Esto por supuesto obligaria a que se repitan muchas veces palabras de dicha longitud 
+\begin_inset Formula $n$
+\end_inset
+
+ ya que hay una cantidad finita de las mismas (
+\begin_inset Formula $10^{n}$
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Standard
+Por supuesto nuestra intuicion nos dice que en el bloque 
+\begin_inset Formula $B_{n}$
+\end_inset
+
+ estan listadas sin repeticion todas las palabras de 
+\begin_inset Formula $\widetilde{Num}^{\ast}$
+\end_inset
+
+ de longitud 
+\begin_inset Formula $n$
+\end_inset
+
+, pero debemos justificar esto con argumentos solidos. Algunas propiedades basicas que se pueden probar facilmente son:
+\end_layout
+
+\begin_layout Enumerate
+
+\begin_inset Argument item:1
+status collapsed
+
+
+\begin_layout Standard
+(1)
+\end_layout
+
+\end_inset
+
+Si 
+\begin_inset Formula $B_{n}=\alpha_{1},...,\alpha_{k}$
+\end_inset
+
+, entonces 
+\begin_inset Formula $\alpha_{1}=1^{n}$
+\end_inset
+
+ y 
+\begin_inset Formula $\alpha_{k}=d^{n}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+
+\begin_inset Argument item:1
+status collapsed
+
+
+\begin_layout Standard
+(2)
+\end_layout
+
+\end_inset
+
+Si 
+\begin_inset Formula $d^{n}$
+\end_inset
+
+ ocurre en 
+\begin_inset Formula $B_{n}$
+\end_inset
+
+ lo hace en la ultima posicion 
+\end_layout
+
+\begin_layout Standard
+\noindent
+estas propiedades son consecuencias inmediatas de como se calcula el elemento siguiente a uno dado en la lista.
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+
+\begin_inset Argument item:1
+status collapsed
+
+
+\begin_layout Standard
+
+\series bold
+Ejercicio 13:
+\series default
+
+\end_layout
+
+\end_inset
+
+(O) Justifique con palabras la propiedad (1)
+\end_layout
+
+\begin_layout Enumerate
+
+\begin_inset Argument item:1
+status collapsed
+
+
+\begin_layout Standard
+
+\series bold
+Ejercicio 14:
+\series default
+
+\end_layout
+
+\end_inset
+
+(O) Justifique con palabras la propiedad (2) 
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Otra propiedad importante es la siguiente
+\end_layout
+
+\begin_layout Enumerate
+
+\begin_inset Argument item:1
+status collapsed
+
+
+\begin_layout Standard
+(3)
+\end_layout
+
+\end_inset
+
+Si 
+\begin_inset Formula $B_{n}=\alpha_{1},...,\alpha_{k}$
+\end_inset
+
+, entonces 
+\begin_inset Formula $B_{n+1}=1\alpha
+_{1},...,1\alpha_{k},2\alpha_{1},...,2\alpha_{k},...,d\alpha_{1},...,d\alpha_{k}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+Para probar (3) es muy util el siguiente resultado obvio
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+begin{lemma}
+\end_layout
+
+\end_inset
+
+ Sea 
+\begin_inset Formula $\sigma\in\widetilde{Num}$
+\end_inset
+
+ y supongamos 
+\begin_inset Formula $\alpha\in\widetilde{Num}^{\ast}$
+\end_inset
+
+ no es de la forma 
+\begin_inset Formula $d^{n}$
+\end_inset
+
+. Entonces el siguiente a 
+\begin_inset Formula $\sigma\alpha$
+\end_inset
+
+ es 
+\begin_inset Formula $\sigma\beta$
+\end_inset
+
+ donde 
+\begin_inset Formula $\beta$
+\end_inset
+
+ es el siguiente a 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+end{lemma}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+
+\begin_inset Argument item:1
+status collapsed
+
+
+\begin_layout Standard
+
+\series bold
+Ejercicio 15:
+\series default
+
+\end_layout
+
+\end_inset
+
+(O) Use (1), (2) y el lema anterior para dar una explicacion solida con palabras de por que es cierta la propiedad (3) 
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Ahora es facil usando (3) probar inductivamente que
+\end_layout
+
+\begin_layout Enumerate
+
+\begin_inset Argument item:1
+status collapsed
+
+
+\begin_layout Standard
+(4)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $B_{n}$
+\end_inset
+
+ es una lista sin repeticiones de todas las palabras de longitud 
+\begin_inset Formula $n$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+
+\begin_inset Argument item:1
+status collapsed
+
+
+\begin_layout Standard
+
+\series bold
+Ejercicio 16:
+\series default
+
+\end_layout
+
+\end_inset
+
+(O) Pruebe (4) 
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Pero claramente de (4) se desprenden en forma obvia las propiedades (S) y (I).
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+El caso general
+\end_layout
+
+\begin_layout Standard
+Sea 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+ un alfabeto no vacio y supongamos 
+\begin_inset Formula $\leq$
+\end_inset
+
+ es un orden total sobre 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+. Supongamos que 
+\begin_inset Formula $\Sigma=\{a_{1},...,a_{n}\}$
+\end_inset
+
+, con 
+\begin_inset Formula $a_{1}<a_{2}<...<a_{n}$
+\end_inset
+
+. Inspirados en la lista dada anteriormente de las palabras de 
+\begin_inset Formula $\widetilde{Num}^{\ast}$
+\end_inset
+
+, podemos dar la siguiente lista de palabras de 
+\begin_inset Formula $\Sigma^{\ast}$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset Formula ${\small \varepsilon,a}_{1}{\small ,a}_{2}{\small ,...,a}_{n}{\small ,}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset Formula ${\small a}_{1}{\small a}_{1}{\small ,a}_{1}{\small a}_{2}{\small ,...,a}_{1}{\small a}_{n}{\small ,a}_{2}{\small a}_{1}{\small ,a}_{2}{\small a}_{2}{\small ,...,a}_{2}{\small a}_{n}{\small ,...,a}_{n}{\small a}_{1}{\small ,a}_{n}{\small a}_{2}{\small ,...,a}_{n}{\small a}_{n}{\small ,}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset Formula ${\small a}_{1}{\small a}_{1}{\small a}_{1}{\small ,a}_{1}{\small a}_{1}{\small a}_{2}{\small ,...,a}_{1}{\small a}_{1}{\small a}_{n}{\small ,a}_{1}{\small a}_{2}{\small a}_{1}{\small ,a}_{1}{\small a}_{2}{\small a}_{2}{\small ,...,a}_{1}{\small a}_{2}{\small a}_{n}{\small ,...,a}_{1}{\small a}_{n}{\small a}_{1}{\small ,a}_{1}{\small a}_{n}{\small a}_{2}{\small ,a}_{1}{\small a}_{n}{\small a}_{n}{\small ,}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset Formula ${\small a}_{2}{\small a}_{1}{\small a}_{1}{\small ,a}_{2}{\small a}_{1}{\small a}_{2}{\small ,...,a}_{2}{\small a}_{1}{\small a}_{n}{\small ,a}_{2}{\small a}_{2}{\small a}_{1}{\small ,a}_{2}{\small a}_{2}{\small a}_{2}{\small ,...,a}_{2}{\small a}_{2}{\small a}_{n}{\small ,...,a}_{2}{\small a}_{n}{\small a}_{1}{\small ,a}_{2}{\small a}_{n}{\small a}_{2}{\small ,a}_{2}{\small a}_{n}{\small a}_{n}{\small ,}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset Formula ${\small \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }\vdots$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset Formula ${\small a}_{n}{\small a}_{1}{\small a}_{1}{\small ,a}_{n}{\small a}_{1}{\small a}_{2}{\small ,...,a}_{n}{\small a}_{1}{\small a}_{n}{\small ,a}_{n}{\small a}_{2}{\small a}_{1}{\small ,a}_{n}{\small a}_{2}{\small a}_{2}{\small ,...,a}_{n}{\small a}_{2}{\small a}_{n}{\small ,...,a}_{n}{\small a}_{n}{\small a}_{1}{\small ,a}_{n}{\small a}_{n}{\small a}_{2}{\small ,a}_{n}{\small a}_{n}{\small a}_{n}{\small ,}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset Formula ${\small a}_{1}{\small a}_{1}{\small a}_{1}{\small a}_{1}{\small ,a}_{1}{\small a}_{1}{\small a}_{1}{\small a}_{2}{\small ,...}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+El objetivo es probar que la lista anterior enumera sin repeticiones todas las palabras de 
+\begin_inset Formula $\Sigma^{\ast}$
+\end_inset
+
+, i.e. produce naturalmente una biyeccion entre 
+\begin_inset Formula $\omega$
+\end_inset
+
+ y 
+\begin_inset Formula $\Sigma^{\ast}$
+\end_inset
+
+. Pero antes debemos definir mas formalmente la lista. Para esto definamos 
+\begin_inset Formula $s^{\leq}:\Sigma^{\ast}\rightarrow\Sigma^{\ast}$
+\end_inset
+
+ de la siguiente manera
+\end_layout
+
+\begin_layout Enumerate
+
+\begin_inset Argument item:1
+status collapsed
+
+
+\begin_layout Standard
+-
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $s^{\leq}((a_{n})^{m})=(a_{1})^{m+1}$
+\end_inset
+
+, para cada 
+\begin_inset Formula $m\geq0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+
+\begin_inset Argument item:1
+status collapsed
+
+
+\begin_layout Standard
+-
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $s^{\leq}(\alpha a_{i}(a_{n})^{m})=\alpha a_{i+1}(a_{1})^{m}$
+\end_inset
+
+, cada vez que 
+\begin_inset Formula $\alpha\in\Sigma^{\ast}$
+\end_inset
+
+, 
+\begin_inset Formula $1\leq i<n$
+\end_inset
+
+ y 
+\begin_inset Formula $m\geq0$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+Notese que la definicion de 
+\begin_inset Formula $s^{\leq}$
+\end_inset
+
+ es correcta ya que toda palabra de 
+\begin_inset Formula $\Sigma^{\ast}$
+\end_inset
+
+ es de la forma 
+\begin_inset Formula $(a_{n})^{m}$
+\end_inset
+
+, con 
+\begin_inset Formula $m\geq0$
+\end_inset
+
+, o es de la forma 
+\begin_inset Formula $\alpha a_{i}(a_{n})^{m}$
+\end_inset
+
+, con 
+\begin_inset Formula $\alpha\in\Sigma^{\ast}$
+\end_inset
+
+, 
+\begin_inset Formula $1\leq i<n $
+\end_inset
+
+ y 
+\begin_inset Formula $m\geq0$
+\end_inset
+
+; y estos dos casos posibles son mutuamente excluyentes (convencerse fuertemente de que esto es asi).
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+
+\begin_inset Argument item:1
+status collapsed
+
+
+\begin_layout Standard
+
+\series bold
+Ejercicio 17:
+\series default
+
+\end_layout
+
+\end_inset
+
+Sea 
+\begin_inset Formula $\Sigma=\{\%,!,@\}$
+\end_inset
+
+ y sea 
+\begin_inset Formula $\leq$
+\end_inset
+
+ el orden total sobre 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+ dado por 
+\begin_inset Formula $\%<!<@$
+\end_inset
+
+ (es decir que aqui 
+\begin_inset Formula $a_{1}=\%$
+\end_inset
+
+, 
+\begin_inset Formula $a_{2}=!$
+\end_inset
+
+ y 
+\begin_inset Formula $a_{3}=@$
+\end_inset
+
+). Escriba los primeros elementos de la lista y describa para este caso particular la funcion 
+\begin_inset Formula $s^{\leq}$
+\end_inset
+
+, sin hablar de 
+\begin_inset Formula $a_{i}%TCIMACRO{\U{b4}}%
+%BeginExpansion
+\acute{}%EndExpansion
+s$
+\end_inset
+
+, i.e. solo haciendo referencia a los simbolos 
+\begin_inset Formula $\%,!,@$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+
+\begin_inset Argument item:1
+status collapsed
+
+
+\begin_layout Standard
+
+\series bold
+Ejercicio 18:
+\series default
+
+\end_layout
+
+\end_inset
+
+Pruebe para el caso general que
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+
+\begin_inset Formula $\varepsilon\neq s^{\leq}(\alpha)$
+\end_inset
+
+, para cada 
+\begin_inset Formula $\alpha\in\Sigma^{\ast}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Si 
+\begin_inset Formula $\alpha\neq\varepsilon$
+\end_inset
+
+, entonces 
+\begin_inset Formula $\alpha=s^{\leq}(\beta)$
+\end_inset
+
+ para algun 
+\begin_inset Formula $\beta$
+\end_inset
+
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+
+\begin_inset Argument item:1
+status collapsed
+
+
+\begin_layout Standard
+
+\series bold
+Ejercicio 19:
+\series default
+
+\end_layout
+
+\end_inset
+
+(a) Convensace de que valen las siguientes ecuaciones
+\begin_inset Formula \begin{align*}
+s^{\leq}(\varepsilon)  & =a_{1}\\
+s^{\leq}(\alpha a_{i})  & =\alpha a_{i+1}\text{, }i<n\\
+s^{\leq}(\alpha a_{n})  & =s^{\leq}(\alpha)a_{1}\end{align*}
+\end_inset
+
+(b) (S) Pruebe formalmente que valen las ecuaciones de (a)
+\end_layout
+
+\begin_layout Enumerate
+
+\begin_inset Argument item:1
+status collapsed
+
+
+\begin_layout Standard
+
+\series bold
+Ejercicio 20:
+\series default
+
+\end_layout
+
+\end_inset
+
+(S) Note que sucesivas aplicaciones de las ecuaciones anteriores determinan por completo el valor de 
+\begin_inset Formula $s^{\leq}$
+\end_inset
+
+ en una palabra 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ previamente fijada. Explique esto con palabras.
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Por supuesto, la lista anterior puede ser escrita de la siguiente manera
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset Formula $\bigskip$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset Formula $\varepsilon,s^{\leq}(\varepsilon),s^{\leq}(s^{\leq}(\varepsilon)),s^{\leq
+}(s^{\leq}(s^{\leq}(\varepsilon))),s^{\leq}(s^{\leq}(s^{\leq}(s^{\leq
+}(\varepsilon)))),...$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+Con esta definicion formal de la lista, podemos probar de la misma forma en la que lo hicimos arriba que:
+\end_layout
+
+\begin_layout Enumerate
+
+\begin_inset Argument item:1
+status collapsed
+
+
+\begin_layout Standard
+(S)
+\end_layout
+
+\end_inset
+
+Toda palabra de 
+\begin_inset Formula $\Sigma^{\ast}$
+\end_inset
+
+ aparece en la lista
+\end_layout
+
+\begin_layout Enumerate
+
+\begin_inset Argument item:1
+status collapsed
+
+
+\begin_layout Standard
+(I)
+\end_layout
+
+\end_inset
+
+Ninguna palabra de 
+\begin_inset Formula $\Sigma^{\ast}$
+\end_inset
+
+ aparese mas de una ves en la lista 
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+
+\begin_inset Argument item:1
+status collapsed
+
+
+\begin_layout Standard
+
+\series bold
+Ejercicio 21:
+\series default
+
+\end_layout
+
+\end_inset
+
+(S) (O) Pruebe (S) e (I). Hint: use las mismas ideas que se usaron para probar (S) e (I) para el caso de 
+\begin_inset Formula $\Sigma
+=\widetilde{Num}$
+\end_inset
+
+ y 
+\begin_inset Formula $\leq$
+\end_inset
+
+ dado por 
+\begin_inset Formula $1<2<3<4<5<6<7<8<9<d$
+\end_inset
+
+. 
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Definamos 
+\begin_inset Formula $\ast^{\leq}:\omega\rightarrow\Sigma^{\ast}$
+\end_inset
+
+ recursivamente de la siguiente manera:
+\end_layout
+
+\begin_layout Enumerate
+
+\begin_inset Argument item:1
+status collapsed
+
+
+\begin_layout Standard
+-
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\ast^{\leq}(0)=\varepsilon$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+
+\begin_inset Argument item:1
+status collapsed
+
+
+\begin_layout Standard
+-
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\ast^{\leq}(i+1)=s^{\leq}(\ast^{\leq}(i))$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\noindent
+Es claro que entonces 
+\begin_inset Formula $\ast^{\leq}(i)$
+\end_inset
+
+ nos da el 
+\begin_inset Formula $(i+1)$
+\end_inset
+
+-esimo elemento de la lista, o lo que es lo mismo, el 
+\begin_inset Formula $i$
+\end_inset
+
+-esimo elemento de la lista contando desde el 
+\begin_inset Formula $0$
+\end_inset
+
+. O sea que las propiedades (S) y (I) nos garantizan que la funcion 
+\begin_inset Formula $\ast^{\leq}$
+\end_inset
+
+ es biyectiva. A continuacion describiremos su inversa. Primero un lema facil pero muy importante.
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+begin{lemma}
+\end_layout
+
+\end_inset
+
+ Sea 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+ un alfabeto no vacio y supongamos 
+\begin_inset Formula $\leq$
+\end_inset
+
+ es un orden total sobre 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+. Supongamos que 
+\begin_inset Formula $\Sigma=\{a_{1},...,a_{n}\}$
+\end_inset
+
+, con 
+\begin_inset Formula $a_{1}<a_{2}<...<a_{n}$
+\end_inset
+
+. Entonces para cada 
+\begin_inset Formula $\alpha\in\Sigma^{\ast}-\{\varepsilon\}$
+\end_inset
+
+ hay unicos 
+\begin_inset Formula $k\in\omega$
+\end_inset
+
+ y 
+\begin_inset Formula $i_{0},i_{1},...,i_{k}\in\{1,...,n\}$
+\end_inset
+
+ tales que
+\begin_inset Formula \[
+\alpha=a_{i_{k}}...a_{i_{0}}\]
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+end{lemma}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Notar que 
+\begin_inset Formula $k$
+\end_inset
+
+ del lema anterior es 
+\begin_inset Formula $\left\vert \alpha\right\vert -1$
+\end_inset
+
+ y los numeros 
+\begin_inset Formula $i_{k},...,i_{0}$
+\end_inset
+
+ van dando el numero de orden de cada simbolo de 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ yendo de izquierda a derecha. Por ejemplo si 
+\begin_inset Formula $\Sigma=\{\%,!,@\}$
+\end_inset
+
+ y 
+\begin_inset Formula $\leq$
+\end_inset
+
+ es el orden total sobre 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+ dado por 
+\begin_inset Formula $\%<!<@$
+\end_inset
+
+ (es decir que aqui 
+\begin_inset Formula $a_{1}=\%$
+\end_inset
+
+, 
+\begin_inset Formula $a_{2}=!$
+\end_inset
+
+ y 
+\begin_inset Formula $a_{3}=@$
+\end_inset
+
+) entonces para la palabra 
+\begin_inset Formula $!\%@\%@$
+\end_inset
+
+ tenemos 
+\begin_inset Formula $k=4$
+\end_inset
+
+ y 
+\begin_inset Formula $i_{4}=2$
+\end_inset
+
+, 
+\begin_inset Formula $i_{3}=1$
+\end_inset
+
+, 
+\begin_inset Formula $i_{2}=3$
+\end_inset
+
+, 
+\begin_inset Formula $i_{1}=1$
+\end_inset
+
+ y 
+\begin_inset Formula $i_{0}=3$
+\end_inset
+
+. Sin envargo si hubieramos tomado el orden dado por 
+\begin_inset Formula $@<\%<!$
+\end_inset
+
+, para la misma palabra hubieramos tenido 
+\begin_inset Formula $i_{4}=3$
+\end_inset
+
+, 
+\begin_inset Formula $i_{3}=2$
+\end_inset
+
+, 
+\begin_inset Formula $i_{2}=1$
+\end_inset
+
+, 
+\begin_inset Formula $i_{1}=2$
+\end_inset
+
+ y 
+\begin_inset Formula $i_{0}=1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Ahora podemos definir la funcion 
+\begin_inset Formula $\#^{\leq}$
+\end_inset
+
+ de la siguiente manera
+\begin_inset Formula \[\begin{array}
+[t]{rll}\#^{\leq}:\Sigma^{\ast} & \rightarrow & \omega\\
+\varepsilon & \rightarrow & 0\\
+a_{i_{k}}...a_{i_{0}} & \rightarrow & i_{k}n^{k}+...+i_{0}n^{0}\end{array}
+\]
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+
+\begin_inset Argument item:1
+status collapsed
+
+
+\begin_layout Standard
+
+\series bold
+Ejercicio 22:
+\series default
+
+\end_layout
+
+\end_inset
+
+Si 
+\begin_inset Formula $\leq$
+\end_inset
+
+ es el orden de 
+\begin_inset Formula $\{@,\&\}$
+\end_inset
+
+ dado por 
+\begin_inset Formula $@<\&$
+\end_inset
+
+, entonces 
+\begin_inset Formula $\#^{\leq}(@\&@\&@)=2^{4}+2^{4}+2^{2}+2^{2}+1$
+\end_inset
+
+ y 
+\begin_inset Formula $\#^{\leq
+}(@\&@\&@)=2^{5}+2^{3}+1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+
+\begin_inset Argument item:1
+status collapsed
+
+
+\begin_layout Standard
+
+\series bold
+Ejercicio 23:
+\series default
+
+\end_layout
+
+\end_inset
+
+Si 
+\begin_inset Formula $\leq$
+\end_inset
+
+ es el orden de 
+\begin_inset Formula $\{@,\&\}$
+\end_inset
+
+ dado por 
+\begin_inset Formula $@<\&$
+\end_inset
+
+, entonces 
+\begin_inset Formula $\#^{\leq}(\alpha@)=\#^{\leq}(\alpha).2+1$
+\end_inset
+
+, para todo 
+\begin_inset Formula $\alpha\in\{@,\&\}^{\ast}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+
+\begin_inset Argument item:1
+status collapsed
+
+
+\begin_layout Standard
+
+\series bold
+Ejercicio 24:
+\series default
+
+\end_layout
+
+\end_inset
+
+Sea 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+ un alfabeto finito no vacio y sea 
+\begin_inset Formula $\leq$
+\end_inset
+
+ un orden total sobre 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+. Inspirese en el ejercicio anterior para dar una 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+"
+\end_layout
+
+\end_inset
+
+definicion recursiva
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+"
+\end_layout
+
+\end_inset
+
+ de la funcion 
+\begin_inset Formula $\#^{\leq}$
+\end_inset
+
+. 
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Aceptaremos sin prueba el siguiente resultado fundamental
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+begin{lemma}
+\end_layout
+
+\end_inset
+
+ La funcion 
+\begin_inset Formula $\#^{\leq}$
+\end_inset
+
+ es la inversa de 
+\begin_inset Formula $\ast^{\leq}$
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+end{lemma}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Cabe destacar que dada una palabra 
+\begin_inset Formula $\alpha$
+\end_inset
+
+, el numero 
+\begin_inset Formula $\#^{\leq}(\alpha)$
+\end_inset
+
+ nos dice en que posicion se hubica 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ en la lista, es decir 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ es la (
+\begin_inset Formula $\#^{\leq}(\alpha)+1$
+\end_inset
+
+)-esima palabra de la lista.
+\end_layout
+
+\begin_layout Standard
+De los desarrollos hechos se desprende el siguiente interesante resultado
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+begin{lemma}
+\end_layout
+
+\end_inset
+
+ Sea 
+\begin_inset Formula $n\geq1$
+\end_inset
+
+ fijo. Entonces cada 
+\begin_inset Formula $x\geq1$
+\end_inset
+
+ se escribe en forma unica de la siguiente manera:
+\begin_inset Formula \[
+x=i_{k}n^{k}+i_{k-1}n^{k-1}+...+i_{0}n^{0},
+\]
+\end_inset
+
+con 
+\begin_inset Formula $k\geq0$
+\end_inset
+
+ y 
+\begin_inset Formula $1\leq i_{k},i_{k-1},...,i_{0}\leq n$
+\end_inset
+
+. 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+end{lemma}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+
+\begin_inset Argument item:1
+status collapsed
+
+
+\begin_layout Standard
+
+\series bold
+Ejercicio 25:
+\series default
+
+\end_layout
+
+\end_inset
+
+(S) Pruebe el lema anterior
+\end_layout
+
+\begin_layout Enumerate
+
+\begin_inset Argument item:1
+status collapsed
+
+
+\begin_layout Standard
+
+\series bold
+Ejercicio 26:
+\series default
+
+\end_layout
+
+\end_inset
+
+(S) Si 
+\begin_inset Formula $\leq$
+\end_inset
+
+ es un orden total sobre un alfabeto no vacio 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+, entonces 
+\begin_inset Formula $s^{\leq}=\ast^{\leq}\circ Suc\circ
+\#^{\leq}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Como hemos visto las biyecciones dadas producen una 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+"
+\end_layout
+
+\end_inset
+
+identificacion
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+"
+\end_layout
+
+\end_inset
+
+ entre numeros de 
+\begin_inset Formula $\omega$
+\end_inset
+
+ y palabras del alfabeto 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+. Es decir, en algun sentido identificamos palabras y numeros ya que se corresponden biunivocamente. Supongamos que 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ es una palabra de 
+\begin_inset Formula $\Sigma^{\ast
+}-\{\varepsilon\}$
+\end_inset
+
+ y queremos 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+"
+\end_layout
+
+\end_inset
+
+verla como un numero
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+"
+\end_layout
+
+\end_inset
+
+. Entonces en ves de ver sus simbolos vemos los ordenes de aparicion en 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+ de los mismos y miramos la suma de potencias asociada.
+\end_layout
+
+\begin_layout Standard
+Supongamos ahora que 
+\begin_inset Formula $x$
+\end_inset
+
+ es un numero de 
+\begin_inset Formula $\omega-\{0\}$
+\end_inset
+
+ y ademas supongamos que somos super inteligentes y que cuando vemos a 
+\begin_inset Formula $x$
+\end_inset
+
+ vemos la secuencia unica de numeros 
+\begin_inset Formula $i_{k},i_{k-1},...,i_{0}$
+\end_inset
+
+ que nos permite expresarlo como suma de potencias segun el lema anterior. Entonces si queremos ver a 
+\begin_inset Formula $x$
+\end_inset
+
+ como una palabra simplemente miramos la secuencia 
+\begin_inset Formula $i_{k},i_{k-1},...,i_{0}$
+\end_inset
+
+ como palabra, reemplazando cada 
+\begin_inset Formula $i_{j}$
+\end_inset
+
+ por el simbolo 
+\begin_inset Formula $i_{j}$
+\end_inset
+
+-esimo de 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+
+\begin_inset Argument item:1
+status collapsed
+
+
+\begin_layout Standard
+Ejercicio 27:
+\end_layout
+
+\end_inset
+
+Mastique mastique e imagine hasta que entienda con claridad el ultimo parrafo. Luego sera mas mariposa. 
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
+Extension del orden total de 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+ a 
+\begin_inset Formula $\Sigma^{\ast}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Podemos extender el orden de 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+ a 
+\begin_inset Formula $\Sigma^{\ast}$
+\end_inset
+
+ de la siguiente manera.
+\end_layout
+
+\begin_layout Enumerate
+
+\begin_inset Argument item:1
+status collapsed
+
+
+\begin_layout Standard
+-
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\alpha\leq\beta$
+\end_inset
+
+ sii 
+\begin_inset Formula $\#^{\leq}(\alpha)\leq\#^{\leq}(\beta) $
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+Es decir 
+\begin_inset Formula $\alpha\leq\beta$
+\end_inset
+
+ sii 
+\begin_inset Formula $\alpha=\beta$
+\end_inset
+
+ o 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ ocurre antes que 
+\begin_inset Formula $\beta$
+\end_inset
+
+ en la lista.
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+
+\begin_inset Argument item:1
+status collapsed
+
+
+\begin_layout Standard
+
+\series bold
+Ejercicio 28:
+\series default
+
+\end_layout
+
+\end_inset
+
+Probar que 
+\begin_inset Formula $\leq$
+\end_inset
+
+ es un orden total sobre 
+\begin_inset Formula $\Sigma^{\ast}$
+\end_inset
+
+. 
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Una propiedad importante e intuitivamente clara es que el orden recien definido sobre 
+\begin_inset Formula $\Sigma^{\ast}$
+\end_inset
+
+ posee las mismas caracteristicas que el orden usual de 
+\begin_inset Formula $\omega$
+\end_inset
+
+. Por ejemplo:
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+begin{lemma}
+\end_layout
+
+\end_inset
+
+ Si 
+\begin_inset Formula $S\subseteq\Sigma^{\ast}$
+\end_inset
+
+ es no vacio, entonces existe 
+\begin_inset Formula $\alpha\in S$
+\end_inset
+
+ tal que 
+\begin_inset Formula $\alpha\leq\beta$
+\end_inset
+
+, para cada 
+\begin_inset Formula $\beta\in S$
+\end_inset
+
+. 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+end{lemma}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+
+\begin_inset Argument item:1
+status collapsed
+
+
+\begin_layout Standard
+
+\series bold
+Ejercicio 29:
+\series default
+
+\end_layout
+
+\end_inset
+
+(S) Pruebe el lema anterior 
+\end_layout
+
+\end_body
+\end_document

@@ -1,0 +1,518 @@
+#LyX 2.4 created this file. For more info see https://www.lyx.org/
+\lyxformat 620
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\use_default_options true
+\maintain_unincluded_children no
+\language american
+\language_package default
+\inputencoding utf8
+\fontencoding auto
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_roman_osf false
+\font_sans_osf false
+\font_typewriter_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\float_placement class
+\float_alignment class
+\paperfontsize default
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_formatted_ref 0
+\use_minted 0
+\use_lineno 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tablestyle default
+\tracking_changes false
+\output_changes false
+\change_bars false
+\postpone_fragile_content true
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\docbook_table_output 0
+\docbook_mathml_prefix 1
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+
+\series bold
+\size large
+COMBO 4 (Definiciones)
+\end_layout
+
+\begin_layout Standard
+Defina cuando una funcion f :
+ Df ⊆ ω n × Σ∗m → ω es llamada Σ-efectivamente computable y defina ”el procedimiento P computa a la funcion f ”
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Una funcion 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-mixta 
+\begin_inset Formula $f:D_{f}\subseteq\omega^{n}\times\Sigma^{\ast m}\rightarrow\omega$
+\end_inset
+
+ sera llamada 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+
+\shape italic
+-efectivamente computable
+\shape default
+ si hay un procedimiento efectivo 
+\begin_inset Formula $\mathbb{P}$
+\end_inset
+
+ tal que
+\end_layout
+
+\begin_layout Enumerate
+
+\lang english
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+
+\lang english
+(1)
+\end_layout
+
+\end_inset
+
+El conjunto de datos de entrada de 
+\begin_inset Formula $\mathbb{P}$
+\end_inset
+
+ es 
+\begin_inset Formula $\omega^{n}\times\Sigma^{\ast m}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+
+\lang english
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+
+\lang english
+(2)
+\end_layout
+
+\end_inset
+
+El conjunto de datos de salida esta contenido en 
+\begin_inset Formula $\omega$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+
+\lang english
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+
+\lang english
+(3)
+\end_layout
+
+\end_inset
+
+Si 
+\begin_inset Formula $(\vec{x},\vec{\alpha})\in D_{f}$
+\end_inset
+
+,
+ entonces 
+\begin_inset Formula $\mathbb{P}$
+\end_inset
+
+ se detiene partiendo de 
+\begin_inset Formula $(\vec{x},\vec{\alpha})$
+\end_inset
+
+,
+ dando como dato de salida 
+\begin_inset Formula $f(\vec{x},\vec{\alpha})$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+
+\lang english
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+
+\lang english
+(4)
+\end_layout
+
+\end_inset
+
+Si 
+\begin_inset Formula $(\vec{x},\vec{\alpha})\in(\omega^{n}\times\Sigma^{\ast m})-D_{f}$
+\end_inset
+
+,
+ entonces 
+\begin_inset Formula $\mathbb{P}$
+\end_inset
+
+ no se detiene partiendo desde 
+\begin_inset Formula $(\vec{x},\vec{\alpha})$
+\end_inset
+
+ 
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\size large
+COMBO 4 (Demos)
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Proposition(Caracterizacion basica de conjuntos enumerables):
+\end_layout
+
+\begin_layout Standard
+Sea 
+\begin_inset Formula $S\in\omega^{n}\times\Sigma^{*m}$
+\end_inset
+
+un conjunto no vacio.
+ Entonces son equivalentes:
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+(1)
+\end_layout
+
+\end_inset
+
+S es Σ-enumerable
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+(2)
+\end_layout
+
+\end_inset
+
+ Hay un programa P ∈ ProΣ tal que:
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Para cada x ∈ ω,
+ tenemos que P se detiene partiendo desde el estado ∥x∥ y llega a un estado de la forma ((x1 ,
+ ...,
+ xn ,
+ y1 ,
+ ...),
+ (α1 ,
+ ...,
+ αm ,
+ β1 ,
+ ...)),
+ donde (x1 ,
+ ...,
+ xn ,
+ α1 ,
+ ...,
+ αm ) ∈ S.
+\end_layout
+
+\begin_layout Enumerate
+Para cada (x1 ,
+ ...xn ,
+ α1 ,
+ ...,
+ αm ) ∈ S hay un x ∈ ω tal que P se detiene partiendo desde el estado ∥x∥ y llega a un estado de la forma ((x1 ,
+ ...,
+ xn ,
+ y1 ,
+ ...),
+ (α1 ,
+ ...,
+ αm ,
+ β1 ,
+ ...))
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+(hacer el caso n = 2 y m = 1)
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{proof}
+\end_layout
+
+\end_inset
+
+ (1)
+\begin_inset Formula $\Rightarrow$
+\end_inset
+
+(2).
+ Ya que 
+\begin_inset Formula $S$
+\end_inset
+
+ es no vacio,
+ por definicion tenemos que hay una 
+\begin_inset Formula $F:\omega\rightarrow\omega^{2}\times\Sigma^{\ast1}$
+\end_inset
+
+ tal que 
+\begin_inset Formula $I_{F}=S$
+\end_inset
+
+ y 
+\begin_inset Formula $F_{(i)}$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-computable,
+ para cada 
+\begin_inset Formula $i\in\{1,...,3\}$
+\end_inset
+
+.
+ Por la Proposicion de existencia de macros,
+ tenemos que existen macros:
+\begin_inset Formula 
+\begin{align*}
+ & \left[\mathrm{V}2\leftarrow F_{(1)}(\mathrm{V}1)\right]\\
+ & \left[\mathrm{V}2\leftarrow F_{(2)}(\mathrm{V}1)\right]\\
+ & \left[\mathrm{W}1\leftarrow F_{(3)}(\mathrm{V}1)\right]
+\end{align*}
+
+\end_inset
+
+Sea 
+\begin_inset Formula $\mathcal{P}$
+\end_inset
+
+ el siguiente programa:
+\begin_inset Formula 
+\begin{align*}
+ & \left[\mathrm{P}1\leftarrow F_{(3)}(\mathrm{N}1)\right]\\
+ & \left[\mathrm{N}2\leftarrow F_{(2)}(\mathrm{N}1)\right]\\
+ & \left[\mathrm{N}1\leftarrow F_{(1)}(\mathrm{N}1)\right]
+\end{align*}
+
+\end_inset
+
+donde se supone que las expansiones de los macros usados son hechas usando variables auxiliares no pertenecientes a la lista 
+\begin_inset Formula $\mathrm{N}1,...,\mathrm{N}\overline{n},\mathrm{P}1,...,\mathrm{P}\overline{m}$
+\end_inset
+
+.
+ Es facil ver que el programa
+\begin_inset Formula $\mathcal{P}$
+\end_inset
+
+satisface a y b,
+ pues al utilizar la funcion F para computar los resultados,
+ por propiedad de F,
+ siempre devuelve elementos de F.
+ Y como este programa puede partir de cualquier elemento de 
+\begin_inset Formula $\omega$
+\end_inset
+
+,
+ entonces puede devolver todos los elementos de S.
+ 
+\end_layout
+
+\begin_layout Standard
+(2)
+\begin_inset Formula $\Rightarrow$
+\end_inset
+
+(1).
+ Supongamos 
+\begin_inset Formula $\mathcal{P}\in\mathrm{Pro}^{\Sigma}$
+\end_inset
+
+ cumple a y b de (2).
+ Sean
+\begin_inset Formula 
+\begin{align*}
+\mathcal{P}_{1} & =\mathcal{P}\mathrm{N}1\leftarrow\mathrm{N}1\\
+\mathcal{P}_{2} & =\mathcal{P}\mathrm{N}1\leftarrow\mathrm{N}2\\
+\mathcal{P}_{3} & =\mathcal{P}\mathrm{P}1\leftarrow\mathrm{P}1
+\end{align*}
+
+\end_inset
+
+Definamos
+\begin_inset Formula 
+\begin{align*}
+F_{1} & =\Psi_{\mathcal{P}_{1}}^{1,0,\#}\\
+F_{2} & =\Psi_{\mathcal{P}_{2}}^{1,0,\#}\\
+F_{3} & =\Psi_{\mathcal{P}_{3}}^{1,0,*}
+\end{align*}
+
+\end_inset
+
+Notese que cada 
+\begin_inset Formula $F_{i}$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-computable y tiene dominio igual a 
+\begin_inset Formula $\omega$
+\end_inset
+
+.
+ Sea 
+\begin_inset Formula $F=[F_{1},...,F_{n+m}]$
+\end_inset
+
+.
+ Tenemos por definicion que 
+\begin_inset Formula $D_{F}=\omega$
+\end_inset
+
+ y ya que 
+\begin_inset Formula $F_{(i)}=F_{i}$
+\end_inset
+
+,
+ para cada 
+\begin_inset Formula $i=1,...,n+m$
+\end_inset
+
+ tenemos que cada 
+\begin_inset Formula $F_{(i)}$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-computable.
+ Dejamos al lector verificar que 
+\begin_inset Formula $I_{F}=S$
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{proof}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

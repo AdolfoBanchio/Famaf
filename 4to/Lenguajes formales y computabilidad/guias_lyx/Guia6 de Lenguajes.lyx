@@ -1,0 +1,5676 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\begin_preamble
+\setcounter{MaxMatrixCols}{30}%
+\usepackage{amsfonts}\usepackage{graphicx}
+%TCIDATA{OutputFilter=latex2.dll}
+%TCIDATA{Version=5.50.0.2953}
+%TCIDATA{CSTFile=LaTeX article (bright).cst}
+%TCIDATA{Created=Thursday, March 08, 2007 06:44:18}
+%TCIDATA{LastRevised=Friday, May 10, 2024 21:34:44}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
+%TCIDATA{BibliographyScheme=BibTeX}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="Standard LaTeX\Blank - Standard LaTeX Article">}
+%TCIDATA{Language=American English}
+%TCIDATA{ComputeDefs=
+%$\varepsilon$
+%$F_{V(\mathbf{A})}(x_{1},...,x_{n})=\{t_{1},...,t_{k}\}$
+%}
+%BeginMSIPreambleData
+\providecommand{\U}[1]{\protect\rule{.1in}{.1in}}
+%EndMSIPreambleData
+\newtheorem{theorem}{Theorem}\newtheorem{acknowledgement}[theorem]{Acknowledgement}\newtheorem{algorithm}[theorem]{Algorithm}\newtheorem{axiom}[theorem]{Axiom}\newtheorem{case}[theorem]{Case}\newtheorem{claim}[theorem]{Claim}\newtheorem{conclusion}[theorem]{Conclusion}\newtheorem{condition}[theorem]{Condition}\newtheorem{conjecture}[theorem]{Conjecture}\newtheorem{corollary}[theorem]{Corollary}\newtheorem{criterion}[theorem]{Criterion}\newtheorem{definition}[theorem]{Definition}\newtheorem{example}[theorem]{Example}\newtheorem{exercise}[theorem]{Exercise}\newtheorem{lemma}[theorem]{Lemma}\newtheorem{notation}[theorem]{Notation}\newtheorem{problem}[theorem]{Problem}\newtheorem{proposition}[theorem]{Proposition}\newtheorem{remark}[theorem]{Remark}\newtheorem{solution}[theorem]{Solution}\newtheorem{summary}[theorem]{Summary}\newenvironment{proof}[1][Proof]{\noindent\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+\end_preamble
+\use_default_options false
+\maintain_unincluded_children false
+\language english
+\language_package none
+\inputencoding auto
+\fontencoding default
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 2
+\use_package amssymb 2
+\use_package cancel 0
+\use_package esint 1
+\use_package mathdots 0
+\use_package mathtools 0
+\use_package mhchem 0
+\use_package stackrel 0
+\use_package stmaryrd 0
+\use_package undertilde 0
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+Nota: Los ejercicios que tienen (S) son para una 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+"
+\end_layout
+
+\end_inset
+
+Segunda vuelta
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+"
+\end_layout
+
+\end_inset
+
+ es decir conviene hacerlos una vez que ya se completó la guía haciendo
+ los otros y ya se tiene mas madurez e intuición basica sobre los conceptos.
+ Los que tienen (O) son opcionales por lo cual no se toman en los examenes.
+\end_layout
+
+\begin_layout Subsubsection*
+Sumatoria, productoria y concatenatoria de funciones 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-p.r.
+\end_layout
+
+\begin_layout Standard
+Sea 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+ un alfabeto finito.
+ Sea 
+\begin_inset Formula $f:\omega\times S_{1}\times...\times S_{n}\times L_{1}\times...\times L_{m}\rightarrow\omega$
+\end_inset
+
+, con 
+\begin_inset Formula $S_{1},...,S_{n}\subseteq\omega$
+\end_inset
+
+ y 
+\begin_inset Formula $L_{1},...,L_{m}\subseteq\Sigma^{\ast}$
+\end_inset
+
+ no vacios.
+ Para 
+\begin_inset Formula $x,y\in\omega$
+\end_inset
+
+ y 
+\begin_inset Formula $(\vec{x},\vec{\alpha})\in S_{1}\times...\times S_{n}\times L_{1}\times...\times L_{m}$
+\end_inset
+
+, definamos
+\begin_inset Formula 
+\begin{align*}
+\sum\limits _{t=x}^{t=y}f(t,\vec{x},\vec{\alpha}) & =\left\{ \begin{array}{lll}
+0 &  & \text{si }x>y\\
+f(x,\vec{x},\vec{\alpha})+f(x+1,\vec{x},\vec{\alpha})+...+f(y,\vec{x},\vec{\alpha}) &  & \text{si }x\leq y
+\end{array}\right.\\
+\prod\limits _{t=x}^{t=y}f(t,\vec{x},\vec{\alpha}) & =\left\{ \begin{array}{lll}
+1 &  & \text{si }x>y\\
+f(x,\vec{x},\vec{\alpha}).f(x+1,\vec{x},\vec{\alpha})....f(y,\vec{x},\vec{\alpha}) &  & \text{si }x\leq y
+\end{array}\right.
+\end{align*}
+
+\end_inset
+
+En forma similar, cuando 
+\begin_inset Formula $I_{f}\subseteq\Sigma^{\ast}$
+\end_inset
+
+, definamos
+\begin_inset Formula 
+\[
+\overset{t=y}{\underset{t=x}{\subset}}f(t,\vec{x},\vec{\alpha})=\left\{ \begin{array}{lll}
+\varepsilon &  & \text{si }x>y\\
+f(x,\vec{x},\vec{\alpha})f(x+1,\vec{x},\vec{\alpha})....f(y,\vec{x},\vec{\alpha}) &  & \text{si }x\leq y
+\end{array}\right.
+\]
+
+\end_inset
+
+Note que, en virtud de la definicion anterior, el dominio de las funciones
+\begin_inset Formula 
+\[
+\lambda xy\vec{x}\vec{\alpha}\left[\sum_{t=x}^{t=y}f(t,\vec{x},\vec{\alpha})\right]\ \ \ \ \ \ \ \lambda xy\vec{x}\vec{\alpha}\left[\prod_{t=x}^{t=y}f(t,\vec{x},\vec{\alpha})\right]\ \ \ \ \ \ \ \lambda xy\vec{x}\vec{\alpha}\left[\subset_{t=x}^{t=y}f(t,\vec{x},\vec{\alpha})\right]
+\]
+
+\end_inset
+
+es 
+\begin_inset Formula $\omega\times\omega\times S_{1}\times...\times S_{n}\times L_{1}\times...\times L_{m}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{lemma}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "iteracion"
+
+\end_inset
+
+Sea 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+ un alfabeto finito.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+(a)
+\end_layout
+
+\end_inset
+
+Si 
+\begin_inset Formula $f:\omega\times S_{1}\times...\times S_{n}\times L_{1}\times...\times L_{m}\rightarrow\omega$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-p.r., con 
+\begin_inset Formula $S_{1},...,S_{n}\subseteq\omega$
+\end_inset
+
+ y 
+\begin_inset Formula $L_{1},...,L_{m}\subseteq\Sigma^{\ast}$
+\end_inset
+
+ no vacios, entonces las funciones 
+\begin_inset Formula $\lambda xy\vec{x}\vec{\alpha}\left[\sum_{t=x}^{t=y}f(t,\vec{x},\vec{\alpha})\right]$
+\end_inset
+
+ y 
+\begin_inset Formula $\lambda xy\vec{x}\vec{\alpha}\left[\prod_{t=x}^{t=y}f(t,\vec{x},\vec{\alpha})\right]$
+\end_inset
+
+ son 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-p.r.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+(b)
+\end_layout
+
+\end_inset
+
+Si 
+\begin_inset Formula $f:\omega\times S_{1}\times...\times S_{n}\times L_{1}\times...\times L_{m}\rightarrow\Sigma^{\ast}$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-p.r., con 
+\begin_inset Formula $S_{1},...,S_{n}\subseteq\omega$
+\end_inset
+
+ y 
+\begin_inset Formula $L_{1},...,L_{m}\subseteq\Sigma^{\ast}$
+\end_inset
+
+ no vacios, entonces la funcion 
+\begin_inset Formula $\lambda xy\vec{x}\vec{\alpha}\left[\subset_{t=x}^{t=y}f(t,\vec{x},\vec{\alpha})\right]$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-p.r.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{lemma}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{proof}
+\end_layout
+
+\end_inset
+
+ (a) Sea 
+\begin_inset Formula $G=\lambda tx\vec{x}\vec{\alpha}\left[\sum_{i=x}^{i=t}f(i,\vec{x},\vec{\alpha})\right]$
+\end_inset
+
+.
+ Ya que
+\begin_inset Formula 
+\[
+\lambda xy\vec{x}\vec{\alpha}\left[\sum_{i=x}^{i=y}f(i,\vec{x},\vec{\alpha})\right]=G\circ\left[p_{2}^{n+2,m},p_{1}^{n+2,m},p_{3}^{n+2,m},...,p_{n+m+2}^{n+2,m}\right]
+\]
+
+\end_inset
+
+basta con probar que 
+\begin_inset Formula $G$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-p.r..
+ Primero note que
+\begin_inset Formula 
+\begin{align*}
+G(0,x,\vec{x},\vec{\alpha}) & =\left\{ \begin{array}{lll}
+0 &  & \text{si }x>0\\
+f(0,\vec{x},\vec{\alpha}) &  & \text{si }x=0
+\end{array}\right.\\
+G(t+1,x,\vec{x},\vec{\alpha}) & =\left\{ \begin{array}{lll}
+0 &  & \text{si }x>t+1\\
+G(t,x,\vec{x},\vec{\alpha})+f(t+1,\vec{x},\vec{\alpha}) &  & \text{si }x\leq t+1
+\end{array}\right.
+\end{align*}
+
+\end_inset
+
+O sea que si definimos
+\begin_inset Formula 
+\[
+\begin{array}{rll}
+h:\omega\times S_{1}\times...\times S_{n}\times L_{1}\times...\times L_{m} & \rightarrow & \omega\\
+(x,\vec{x},\vec{\alpha}) & \rightarrow & \left\{ \begin{array}{lll}
+0 &  & \text{si }x>0\\
+f(0,\vec{x},\vec{\alpha}) &  & \text{si }x=0
+\end{array}\right.
+\end{array}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\begin{array}{rll}
+g:\omega^{3}\times S_{1}\times...\times S_{n}\times L_{1}\times...\times L_{m} & \rightarrow & \omega\\
+(A,t,x,\vec{x},\vec{\alpha}) & \rightarrow & \left\{ \begin{array}{lll}
+0 &  & \text{si }x>t+1\\
+A+f(t+1,\vec{x},\vec{\alpha}) &  & \text{si }x\leq t+1
+\end{array}\right.
+\end{array}
+\]
+
+\end_inset
+
+tenemos que 
+\begin_inset Formula $G=R(h,g)$
+\end_inset
+
+.
+ Es decir que solo nos falta probar que 
+\begin_inset Formula $h$
+\end_inset
+
+ y 
+\begin_inset Formula $g$
+\end_inset
+
+ son 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-p.r..
+ Sean
+\begin_inset Formula 
+\begin{align*}
+D_{1} & =\left\{ (x,\vec{x},\vec{\alpha})\in\omega\times S_{1}\times...\times S_{n}\times L_{1}\times...\times L_{m}:x>0\right\} \\
+D_{2} & =\left\{ (x,\vec{x},\vec{\alpha})\in\omega\times S_{1}\times...\times S_{n}\times L_{1}\times...\times L_{m}:x=0\right\} \\
+H_{1} & =\left\{ (z,t,x,\vec{x},\vec{\alpha})\in\omega^{3}\times S_{1}\times...\times S_{n}\times L_{1}\times...\times L_{m}:x>t+1\right\} \\
+H_{2} & =\left\{ (z,t,x,\vec{x},\vec{\alpha})\in\omega^{3}\times S_{1}\times...\times S_{n}\times L_{1}\times...\times L_{m}:x\leq t+1\right\} .
+\end{align*}
+
+\end_inset
+
+Notese que
+\begin_inset Formula 
+\begin{align*}
+h & =C_{0}^{n+1,m}|_{D_{1}}\cup\lambda x\vec{x}\vec{\alpha}\left[f(0,\vec{x},\vec{\alpha})\right]|_{D_{2}}\\
+g & =C_{0}^{n+3,m}|_{H_{1}}\cup\lambda Atx\vec{x}\vec{\alpha}\left[A+f(t+1,\vec{x},\vec{\alpha})\right])|_{H_{2}}
+\end{align*}
+
+\end_inset
+
+Ya que 
+\begin_inset Formula $f$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-p.r.
+ y
+\begin_inset Formula 
+\begin{align*}
+\lambda x\vec{x}\vec{\alpha}\left[f(0,\vec{x},\vec{\alpha})\right] & =f\circ\left[C_{0}^{n+1,m},p_{2}^{n+1,m},p_{3}^{n+1,m},...,p_{n+1+m}^{n+1,m}\right]\\
+\lambda Atx\vec{x}\vec{\alpha}\left[A+f(t+1,\vec{x},\vec{\alpha})\right]) & =\lambda xy[x+y]\circ\left[p_{1}^{n+3,m},f\circ\left[Suc\circ p_{2}^{n+3,m},p_{4}^{n+3,m},...,p_{n+3+m}^{n+3,m}\right]\right]
+\end{align*}
+
+\end_inset
+
+tenemos que 
+\begin_inset Formula $\lambda x\vec{x}\vec{\alpha}\left[f(0,\vec{x},\vec{\alpha})\right]$
+\end_inset
+
+ y 
+\begin_inset Formula $\lambda Atx\vec{x}\vec{\alpha}\left[A+f(t+1,\vec{x},\vec{\alpha})\right])$
+\end_inset
+
+ son 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-p.r..O sea que solo nos falta ver que los conjuntos 
+\begin_inset Formula $D_{1},D_{2},H_{1},H_{2}$
+\end_inset
+
+ son 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-p.r..
+ Veamos que por ejemplo 
+\begin_inset Formula $H_{1}$
+\end_inset
+
+ lo es.
+ Es decir debemos ver que 
+\begin_inset Formula $\chi_{H_{1}}^{\omega^{3+n}\times\Sigma^{\ast m}}$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-p.r..
+ Ya que 
+\begin_inset Formula $f$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-p.r.
+ tenemos que 
+\begin_inset Formula $D_{f}=\omega\times S_{1}\times...\times S_{n}\times L_{1}\times...\times L_{m}$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-p.r., lo cual nos dice que los conjuntos 
+\begin_inset Formula $S_{1},...,S_{n}$
+\end_inset
+
+, 
+\begin_inset Formula $L_{1},...,L_{m}$
+\end_inset
+
+ son 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-p.r.
+ y por lo tanto 
+\begin_inset Formula $R=\omega^{3}\times S_{1}\times...\times S_{n}\times L_{1}\times...\times L_{m}$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-p.r..
+ Notese que 
+\begin_inset Formula $\chi_{H_{1}}^{\omega^{3+n}\times\Sigma^{\ast m}}=(\chi_{R}^{\omega^{3+n}\times\Sigma^{\ast m}}\wedge\lambda ztx\vec{x}\vec{\alpha}\left[x>t+1\right])$
+\end_inset
+
+ por lo cual 
+\begin_inset Formula $\chi_{H_{1}}^{\omega^{3+n}\times\Sigma^{\ast m}}$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-p.r.
+ ya que es la conjuncion de dos predicados 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-p.r.
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{proof}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Nota:
+\series default
+ Aceptaremos sin prueba (b) y el caso de la productoria en (a).
+ Las pruebas son muy similares a la dada para la sumatoria
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Veamos un ejemplo de como se puede aplicar el lema anterior.
+ Sea 
+\begin_inset Formula $F=\lambda yx_{1}\left[\sum_{t=0}^{t=y}(x_{1})^{t}\right]$
+\end_inset
+
+.
+ Es claro que 
+\begin_inset Formula $D_{F}=\omega^{2}$
+\end_inset
+
+.
+ Para ver que 
+\begin_inset Formula $F$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-p.r.
+ aplicaremos el lema anterior por lo cual es importante encontrar la 
+\begin_inset Formula $f$
+\end_inset
+
+ adecuada a la cual se le aplicara el lema.
+ Tomemos 
+\begin_inset Formula $f=\lambda tx_{1}[(x_{1})^{t}]$
+\end_inset
+
+.
+ Claramente 
+\begin_inset Formula $f$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-p.r.
+ por lo cual el lema anterior nos dice que
+\begin_inset Formula 
+\[
+G=\lambda xyx_{1}\left[\sum_{t=x}^{t=y}f(t,x_{1})\right]=\lambda xyx_{1}\left[\sum_{t=x}^{t=y}(x_{1})^{t}\right]
+\]
+
+\end_inset
+
+es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-p.r..
+ Notar que 
+\begin_inset Formula $G$
+\end_inset
+
+ no es la funcion 
+\begin_inset Formula $F$
+\end_inset
+
+ pero es en algun sentido 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+"
+\end_layout
+
+\end_inset
+
+mas amplia
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+"
+\end_layout
+
+\end_inset
+
+ que 
+\begin_inset Formula $F$
+\end_inset
+
+ ya que tiene una variable mas y se tiene que 
+\begin_inset Formula $F(y,x_{1})=G(0,y,x_{1})$
+\end_inset
+
+, para cada 
+\begin_inset Formula $y,x_{1}\in\omega$
+\end_inset
+
+.
+ Es facil ver que
+\begin_inset Formula 
+\[
+F=G\circ\left[C_{0}^{2,0},p_{1}^{2,0},p_{2}^{2,0}\right]
+\]
+
+\end_inset
+
+por lo cual 
+\begin_inset Formula $F$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-p.r..
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Haga los siguientes ejercicios aplicando el lema anterior.
+ No caiga en la tentacion de hacerlos aplicando recursion primitiva ya que
+ no se ejercitara en la habilidad de aplicar el lema en forma madura.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+
+\series bold
+Ejercicio 1:
+\end_layout
+
+\end_inset
+
+Pruebe que la función
+\begin_inset Formula 
+\[
+\lambda xy\alpha\left[\prod\limits _{t=y+1}^{t=\left\vert \alpha\right\vert }(t+\left\vert \alpha\right\vert )\right]
+\]
+
+\end_inset
+
+es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-p.r..
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+
+\series bold
+Ejercicio 1,5:
+\end_layout
+
+\end_inset
+
+Pruebe que la función 
+\begin_inset Formula $\lambda x\left[\prod\limits _{t=10}^{t=x}t^{t}\right]$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-p.r..
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+
+\series bold
+Ejercicio 2:
+\end_layout
+
+\end_inset
+
+Pruebe que son 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-p.r.:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $\lambda xx_{1}\left[\sum\limits _{t=1}^{t=x}Pred(x_{1})^{t}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\lambda xyz\alpha\beta[\subset_{t=3}^{t=z+5}\alpha^{Pred(z).t^{x}}\beta^{Pred(Pred(\left\vert \alpha\right\vert ^{y}))}]$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+(Ojo que en estos casos el dominio de la 
+\begin_inset Formula $f$
+\end_inset
+
+ a la cual le debe aplicar el lema es un rectangulo pero 
+\begin_inset Formula $f$
+\end_inset
+
+ no es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-total)
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+Ejercicio 2,5:
+\end_layout
+
+\end_inset
+
+Pruebe que 
+\begin_inset Formula $\lambda xzyx_{2}\left[\sum\limits _{t=Pred(y)}^{t=x}Pred(z)^{t}\right]$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-p.r.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+
+\series bold
+Ejercicio 3:
+\end_layout
+
+\end_inset
+
+Pruebe que las siguientes funciones son 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-p.r.:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $\lambda xyz\alpha\beta[\subset_{t=3}^{t=z+5}\alpha^{t}]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\lambda xzyx_{2}\left[\sum\limits _{t=Pred(x_{2})}^{t=x_{2}}x.y.z.t\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\lambda x_{2}xyz\alpha\beta[\subset_{t=x_{2}}^{t=z+5}\alpha^{y.x.t}\beta^{z}]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\lambda x_{2}xyz\alpha\beta[\subset_{t=x_{2}}^{t=z+5}\alpha^{t}\beta^{z}]$
+\end_inset
+
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
+Cuantificacion acotada de predicados 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-p.r.
+ con dominio rectangular
+\end_layout
+
+\begin_layout Standard
+Sea 
+\begin_inset Formula $P:S\times S_{1}\times...\times S_{n}\times L_{1}\times...\times L_{m}\rightarrow\omega$
+\end_inset
+
+ un predicado, con 
+\begin_inset Formula $S,S_{1},...,S_{n}\subseteq\omega$
+\end_inset
+
+ y 
+\begin_inset Formula $L_{1},...,L_{m}\subseteq\Sigma^{\ast}$
+\end_inset
+
+ no vacios.
+ Supongamos 
+\begin_inset Formula $\bar{S}\subseteq S$
+\end_inset
+
+.
+ Entonces la expresion Booleana
+\begin_inset Formula 
+\[
+(\forall t\in\bar{S})_{t\leq x}\;P(t,\vec{x},\vec{\alpha})
+\]
+
+\end_inset
+
+depende de las variables 
+\begin_inset Formula $x,\vec{x},\vec{\alpha}$
+\end_inset
+
+ y valdra 
+\begin_inset Formula $1$
+\end_inset
+
+ en una 
+\begin_inset Formula $(1+n+m)$
+\end_inset
+
+-upla 
+\begin_inset Formula $(x,\vec{x},\vec{\alpha})$
+\end_inset
+
+ cuando 
+\begin_inset Formula $P(t,\vec{x},\vec{\alpha})$
+\end_inset
+
+ sea igual a 
+\begin_inset Formula $1$
+\end_inset
+
+ para cada 
+\begin_inset Formula $t\in\{u\in\bar{S}:u\leq x\}$
+\end_inset
+
+; y 
+\begin_inset Formula $0$
+\end_inset
+
+ en caso contrario.
+ Tenemos entonces que el dominio del predicado
+\begin_inset Formula 
+\[
+\lambda x\vec{x}\vec{\alpha}\left[(\forall t\in\bar{S})_{t\leq x}\;P(t,\vec{x},\vec{\alpha})\right]
+\]
+
+\end_inset
+
+es 
+\begin_inset Formula $\omega\times S_{1}\times...\times S_{n}\times L_{1}\times...\times L_{m}$
+\end_inset
+
+.
+ En forma analoga se define la forma de interpretar la expresion Booleana
+\begin_inset Formula 
+\[
+(\exists t\in\bar{S})_{t\leq x}\;P(t,\vec{x},\vec{\alpha})
+\]
+
+\end_inset
+
+Cabe destacar que
+\begin_inset Formula 
+\[
+\lambda x\vec{x}\vec{\alpha}\left[(\exists t\in\bar{S})_{t\leq x}\;P(t,\vec{x},\vec{\alpha})\right]=\lnot\lambda x\vec{x}\vec{\alpha}\left[(\forall t\in\bar{S})_{t\leq x}\;\lnot P(t,\vec{x},\vec{\alpha})\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Tambien podemos cuantificar sobre variable alfabetica.
+ Sea 
+\begin_inset Formula $P:S_{1}\times...\times S_{n}\times L_{1}\times...\times L_{m}\times L\rightarrow\omega$
+\end_inset
+
+ un predicado, con 
+\begin_inset Formula $S_{1},...,S_{n}\subseteq\omega$
+\end_inset
+
+ y 
+\begin_inset Formula $L,L_{1},...,L_{m}\subseteq\Sigma^{\ast}$
+\end_inset
+
+ no vacios.
+ Supongamos 
+\begin_inset Formula $\bar{L}\subseteq L$
+\end_inset
+
+.
+ Entonces la expresion Booleana
+\begin_inset Formula 
+\[
+(\forall\alpha\in\bar{L})_{\left\vert \alpha\right\vert \leq x}\;P(\vec{x},\vec{\alpha},\alpha)
+\]
+
+\end_inset
+
+depende de las variables 
+\begin_inset Formula $x,\vec{x},\vec{\alpha}$
+\end_inset
+
+ y valdra 
+\begin_inset Formula $1$
+\end_inset
+
+ en una 
+\begin_inset Formula $(1+n+m)$
+\end_inset
+
+-upla 
+\begin_inset Formula $(x,\vec{x},\vec{\alpha})$
+\end_inset
+
+ cuando 
+\begin_inset Formula $P(\vec{x},\vec{\alpha},\alpha)$
+\end_inset
+
+ sea igual a 
+\begin_inset Formula $1$
+\end_inset
+
+ para cada 
+\begin_inset Formula $\alpha\in\{\beta\in\bar{L}:\left\vert \beta\right\vert \leq x\}$
+\end_inset
+
+; y 
+\begin_inset Formula $0$
+\end_inset
+
+ en caso contrario.
+ Tenemos entonces que el dominio del predicado
+\begin_inset Formula 
+\[
+\lambda x\vec{x}\vec{\alpha}\left[(\forall\alpha\in\bar{L})_{\left\vert \alpha\right\vert \leq x}\;P(\vec{x},\vec{\alpha},\alpha)\right]
+\]
+
+\end_inset
+
+es 
+\begin_inset Formula $\omega\times S_{1}\times...\times S_{n}\times L_{1}\times...\times L_{m}$
+\end_inset
+
+.
+ En forma analoga se define la forma de interpretar la expresion Booleana
+\begin_inset Formula 
+\[
+(\exists\alpha\in\bar{L})_{\left\vert \alpha\right\vert \leq x}\;P(\vec{x},\vec{\alpha},\alpha)
+\]
+
+\end_inset
+
+Cabe destacar que
+\begin_inset Formula 
+\[
+\lambda x\vec{x}\vec{\alpha}\left[(\exists\alpha\in\bar{L})_{\left\vert \alpha\right\vert \leq x}P(\vec{x},\vec{\alpha},\alpha)\right]=\lnot\lambda x\vec{x}\vec{\alpha}\left[(\forall\alpha\in\bar{L})_{\left\vert \alpha\right\vert \leq x}\lnot P(\vec{x},\vec{\alpha},\alpha)\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{lemma}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "cuantificacion"
+
+\end_inset
+
+Sea 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+ un alfabeto finito.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+(a)
+\end_layout
+
+\end_inset
+
+Sea 
+\begin_inset Formula $P:S\times S_{1}\times...\times S_{n}\times L_{1}\times...\times L_{m}\rightarrow\omega$
+\end_inset
+
+ un predicado 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-p.r., con 
+\begin_inset Formula $S,S_{1},...,S_{n}\subseteq\omega$
+\end_inset
+
+ y 
+\begin_inset Formula $L_{1},...,L_{m}\subseteq\Sigma^{\ast}$
+\end_inset
+
+ no vacios.
+ Supongamos 
+\begin_inset Formula $\bar{S}\subseteq S$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-p.r..
+ Entonces 
+\begin_inset Formula $\lambda x\vec{x}\vec{\alpha}\left[(\forall t\in\bar{S})_{t\leq x}\;P(t,\vec{x},\vec{\alpha})\right]$
+\end_inset
+
+ y 
+\begin_inset Formula $\lambda x\vec{x}\vec{\alpha}\left[(\exists t\in\bar{S})_{t\leq x}\;P(t,\vec{x},\vec{\alpha})\right]$
+\end_inset
+
+ son predicados 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-p.r..
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+(b)
+\end_layout
+
+\end_inset
+
+Sea 
+\begin_inset Formula $P:S_{1}\times...\times S_{n}\times L_{1}\times...\times L_{m}\times L\rightarrow\omega$
+\end_inset
+
+ un predicado 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-p.r., con 
+\begin_inset Formula $S_{1},...,S_{n}\subseteq\omega$
+\end_inset
+
+ y 
+\begin_inset Formula $L,L_{1},...,L_{m}\subseteq\Sigma^{\ast}$
+\end_inset
+
+ no vacios.
+ Supongamos 
+\begin_inset Formula $\bar{L}\subseteq L$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-p.r..
+ Entonces 
+\begin_inset Formula $\lambda x\vec{x}\vec{\alpha}\left[(\forall\alpha\in\bar{L})_{\left\vert \alpha\right\vert \leq x}\;P(\vec{x},\vec{\alpha},\alpha)\right]$
+\end_inset
+
+ y 
+\begin_inset Formula $\lambda x\vec{x}\vec{\alpha}\left[(\exists\alpha\in\bar{L})_{\left\vert \alpha\right\vert \leq x}\;P(\vec{x},\vec{\alpha},\alpha)\right]$
+\end_inset
+
+ son predicados 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-p.r..
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{lemma}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{proof}
+\end_layout
+
+\end_inset
+
+ (a) Sea
+\begin_inset Formula 
+\[
+\bar{P}=P|_{\bar{S}\times S_{1}\times...\times S_{n}\times L_{1}\times...\times L_{m}}\cup C_{1}^{1+n,m}|_{(\omega-\bar{S})\times S_{1}\times...\times S_{n}\times L_{1}\times...\times L_{m}}
+\]
+
+\end_inset
+
+Notese que 
+\begin_inset Formula $\bar{P}$
+\end_inset
+
+ tiene dominio 
+\begin_inset Formula $\omega\times S_{1}\times...\times S_{n}\times L_{1}\times...\times L_{m}$
+\end_inset
+
+ y es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-p.r..
+ Ya que
+\begin_inset Formula 
+\begin{align*}
+\lambda x\vec{x}\vec{\alpha}\left[(\forall t\in\bar{S})_{t\leq x}P(t,\vec{x},\vec{\alpha})\right] & =\lambda x\vec{x}\vec{\alpha}\left[\prod\limits _{t=0}^{t=x}\bar{P}(t,\vec{x},\vec{\alpha})\right]\\
+ & =\lambda xy\vec{x}\vec{\alpha}\left[\prod\limits _{t=x}^{t=y}\bar{P}(t,\vec{x},\vec{\alpha})\right]\circ\left[C_{0}^{1+n,m},p_{1}^{1+n,m},...,p_{1+n+m}^{1+n,m}\right]
+\end{align*}
+
+\end_inset
+
+el Lema 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "iteracion"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ implica que 
+\begin_inset Formula $\lambda x\vec{x}\vec{\alpha}\left[(\forall t\in\bar{S})_{t\leq x}\;P(t,\vec{x},\vec{\alpha})\right]$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-p.r..
+\end_layout
+
+\begin_layout Standard
+Ya que
+\begin_inset Formula 
+\[
+\lambda x\vec{x}\vec{\alpha}\left[(\exists t\in\bar{S})_{t\leq x}\;P(t,\vec{x},\vec{\alpha})\right]=\lnot\lambda x\vec{x}\vec{\alpha}\left[(\forall t\in\bar{S})_{t\leq x}\;\lnot P(t,\vec{x},\vec{\alpha})\right]
+\]
+
+\end_inset
+
+tenemos que 
+\begin_inset Formula $\lambda x\vec{x}\vec{\alpha}\left[(\exists t\in\bar{S})_{t\leq x}\;P(t,\vec{x},\vec{\alpha})\right]$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-p.r.
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{proof}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Nota:
+\series default
+ Aceptaremos (b) sin prueba.
+ Su prueba se basa en (a) y el lector puede verla en el apunte.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+OBSERVACION: La cuantificacion no acotada no preserva la propiedad de ser
+ 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-p.r..
+ Como veremos mas adelante hay un predicado 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-p.r., 
+\begin_inset Formula $P:\omega\times L_{1}\rightarrow\omega$
+\end_inset
+
+, tal que el predicado 
+\begin_inset Formula $\lambda\alpha\left[(\exists t\in\omega)\;P(t,\alpha)\right]$
+\end_inset
+
+ no es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-efectivamente computable, por lo cual tampoco es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-p.r.
+ (ni siquiera podra ser 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-recursivo).
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Veamos por ejemplo que el predicado 
+\begin_inset Formula $\lambda xy\left[x\text{ divide }y\right]$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-p.r..
+ Sea 
+\begin_inset Formula $P=\lambda tx_{1}x_{2}\left[x_{2}=t.x_{1}\right]$
+\end_inset
+
+.
+ Es claro que 
+\begin_inset Formula $P$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-p.r..
+ El lema anterior nos dice que 
+\begin_inset Formula $\lambda xx_{1}x_{2}\left[(\exists t\in\omega)_{t\leq x}\;P(t,x_{1},x_{2})\right]$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-p.r..
+ Notese que 
+\begin_inset Formula $x_{1}$
+\end_inset
+
+ divide 
+\begin_inset Formula $x_{2}$
+\end_inset
+
+ si y solo si hay un 
+\begin_inset Formula $t\leq x_{2}$
+\end_inset
+
+ tal que 
+\begin_inset Formula $x_{2}=t.x_{1}$
+\end_inset
+
+.
+ Esto nos dice que
+\begin_inset Formula 
+\[
+\lambda x_{1}x_{2}\left[x_{1}\text{ divide }x_{2}\right]=\lambda x_{1}x_{2}\left[(\exists t\in\omega)_{t\leq x_{2}}\;P(t,x_{1},x_{2})\right]
+\]
+
+\end_inset
+
+Pero
+\begin_inset Formula 
+\[
+\lambda x_{1}x_{2}\left[(\exists t\in\omega)_{t\leq x_{2}}\;P(t,x_{1},x_{2})\right]=\lambda xx_{1}x_{2}\left[(\exists t\in\omega)_{t\leq x}\;P(t,x_{1},x_{2})\right]\circ\left[p_{2}^{2,0},p_{1}^{2,0},p_{2}^{2,0}\right]
+\]
+
+\end_inset
+
+por lo cual 
+\begin_inset Formula $\lambda x_{1}x_{2}\left[x_{1}\text{ divide }x_{2}\right]$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-p.r.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+La idea fundamental subyacente en la aplicacion anterior es que en muchos
+ casos de predicados obtenidos por cuantificacion a partir de otros predicados,
+ la variable cuantificada tiene una cota natural en terminos de las otras
+ variables y entonces componiendo adecuadamente se lo puede presentar como
+ un caso de cuantificacion acotada
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+
+\series bold
+Ejercicio 4:
+\end_layout
+
+\end_inset
+
+Use que
+\begin_inset Formula 
+\[
+x\text{ es primo sii }x>1\wedge\left((\forall t\in\omega)_{t\leq x}\;t=1\vee t=x\vee\lnot(t\text{ divide }x)\right)
+\]
+
+\end_inset
+
+para probar que 
+\begin_inset Formula $\lambda x\left[x\text{ es primo}\right]$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-p.r.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+
+\series bold
+Ejercicio 5:
+\end_layout
+
+\end_inset
+
+Pruebe que 
+\begin_inset Formula $\lambda\alpha\beta\left[\alpha\text{\ }\mathrm{inicial}\ \beta\right]$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-p.r..
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+
+\series bold
+Ejercicio 6:
+\end_layout
+
+\end_inset
+
+Pruebe que 
+\begin_inset Formula $\{\alpha^{2}:\alpha\in\Sigma^{\ast}\}$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-p.r..
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+
+\series bold
+Ejercicio 7:
+\end_layout
+
+\end_inset
+
+Pruebe que 
+\begin_inset Formula $\{(x,\alpha,\beta)\in\omega\times\Sigma^{\ast}\times\Sigma^{\ast}:(\exists t\in\omega)\;\alpha^{x}=\beta^{t}\}$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-p.r..
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+
+\series bold
+Ejercicio 8:
+\end_layout
+
+\end_inset
+
+Dados 
+\begin_inset Formula $x,y\in\omega$
+\end_inset
+
+, diremos que 
+\begin_inset Formula $x$
+\end_inset
+
+ e 
+\begin_inset Formula $y$
+\end_inset
+
+ son 
+\shape italic
+coprimos
+\shape default
+ cuando 
+\begin_inset Formula $1$
+\end_inset
+
+ sea el unico elemento de 
+\begin_inset Formula $\omega$
+\end_inset
+
+ que divide a ambos.
+ Sea 
+\begin_inset Formula $P=\lambda xy[x$
+\end_inset
+
+ e 
+\begin_inset Formula $y$
+\end_inset
+
+ son coprimos
+\begin_inset Formula $]$
+\end_inset
+
+.
+ Pruebe que 
+\begin_inset Formula $P$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-p.r.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+
+\series bold
+Ejercicio 9:
+\end_layout
+
+\end_inset
+
+Sea 
+\begin_inset Formula $\Sigma=\{\boxplus,\boxminus\}$
+\end_inset
+
+.
+ Pruebe que el conjunto
+\begin_inset Formula 
+\[
+\{\left(x,y,\alpha,\beta\right)\in\omega\times\mathbf{N}\times\Sigma^{\ast}\times\Sigma^{+}:\mathrm{\boxplus}\beta\mathrm{\boxplus}=\gamma\mathrm{\boxminus}\alpha\mathrm{\boxminus}\gamma^{R}\text{, para algun }\gamma\}
+\]
+
+\end_inset
+
+es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-p.r..
+ (Por definicion: 
+\begin_inset Formula $\gamma^{R}=[\gamma]_{\left\vert \gamma\right\vert }[\gamma]_{\left\vert \gamma\right\vert -1}...[\gamma]_{1}$
+\end_inset
+
+ si 
+\begin_inset Formula $\left\vert \gamma\right\vert \geq1$
+\end_inset
+
+ y 
+\begin_inset Formula $\gamma^{R}=\varepsilon$
+\end_inset
+
+ si 
+\begin_inset Formula $\gamma=\varepsilon$
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+
+\series bold
+Ejercicio 10:
+\end_layout
+
+\end_inset
+
+Pruebe que 
+\begin_inset Formula $\{2^{x}:x\in\omega$
+\end_inset
+
+ y 
+\begin_inset Formula $x$
+\end_inset
+
+ es impar
+\begin_inset Formula $\}$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-p.r.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+
+\series bold
+Ejercicio 11:
+\end_layout
+
+\end_inset
+
+Sea 
+\begin_inset Formula $\Sigma=\{@,\$\}$
+\end_inset
+
+.
+ Pruebe que 
+\begin_inset Formula $\{(2^{x},@^{x},\$):x\in\omega$
+\end_inset
+
+ y 
+\begin_inset Formula $x$
+\end_inset
+
+ es impar
+\begin_inset Formula $\}$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-p.r.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+
+\series bold
+Ejercicio 12:
+\end_layout
+
+\end_inset
+
+Pruebe que 
+\begin_inset Formula $\{(x,\alpha,\beta)\in\omega\times\Sigma^{\ast}\times\Sigma^{\ast}:(\exists t\in\operatorname{Im}(pr))\;\alpha^{Pred(Pred(x)).Pred(\left\vert \alpha\right\vert )}=\beta^{t}\}$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-p.r..
+ (ojo que aqui el predicado al cual debera aplicarle el lema de cuantificacion
+ acotada no es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-total)
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+Ejercicio 12,5:
+\end_layout
+
+\end_inset
+
+Pruebe que 
+\begin_inset Formula $\{(x,\alpha)\in\omega\times\Sigma^{\ast}:(\exists\beta\in\Sigma^{+})\;\alpha\beta^{Pred(x)}=\beta^{Pred(x)}\alpha\}$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-p.r..
+ (ojo que aqui el predicado al cual debera aplicarle el lema de cuantificacion
+ acotada no es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-total)
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+Ejercicio 12,6:
+\end_layout
+
+\end_inset
+
+Sea 
+\begin_inset Formula $\Sigma=\{\boxplus,\boxminus\}$
+\end_inset
+
+.
+ Sea 
+\begin_inset Formula $L=\{\boxminus^{n}\mathrm{\boxplus}:n\in\omega$
+\end_inset
+
+ y 
+\begin_inset Formula $n$
+\end_inset
+
+ es impar
+\begin_inset Formula $\}$
+\end_inset
+
+.
+ Pruebe que 
+\begin_inset Formula $\{(x,\alpha)\in\operatorname{Im}(pr)\times L:(\exists t\in\omega)\;t^{2}=\left\vert \alpha\right\vert .Pred(x)\}$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-p.r..
+ (ojo que aqui el predicado al cual debera aplicarle el lema de cuantificacion
+ acotada no es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-total) 
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Como puede notarse, en los ejercicios anteriores se aplica una sola ves
+ el lema de cuantificacion acotada.
+ En los ejercicios que siguen veremos algunos casos en los cuales es necesario
+ anidar cuantificaciones acotadas.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+
+\series bold
+Ejercicio 13:
+\end_layout
+
+\end_inset
+
+(S) Pruebe que 
+\begin_inset Formula $\lambda\alpha\beta\left[\alpha\text{\ }\mathrm{ocurre\ en}\ \beta\right]$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-p.r..
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+
+\series bold
+Ejercicio 14:
+\end_layout
+
+\end_inset
+
+(S) Sea 
+\begin_inset Formula $\Sigma=\{@,!\}$
+\end_inset
+
+.
+ Pruebe que 
+\begin_inset Formula $\{@^{t}!^{l}:t\in\mathbf{N}$
+\end_inset
+
+ y 
+\begin_inset Formula $l$
+\end_inset
+
+ es impar
+\begin_inset Formula $\}$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-p.r..
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+
+\series bold
+Ejercicio 15:
+\end_layout
+
+\end_inset
+
+(S) Pruebe que 
+\begin_inset Formula $\{x\in\mathbf{N}:\exists p,q$
+\end_inset
+
+ tales que 
+\begin_inset Formula $x=p.q$
+\end_inset
+
+ y 
+\begin_inset Formula $p,q$
+\end_inset
+
+ son primos
+\begin_inset Formula $\}$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-p.r..
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+
+\series bold
+Ejercicio 16:
+\end_layout
+
+\end_inset
+
+(S) Sea 
+\begin_inset Formula $M=\left(Q,\Sigma,\Gamma,\delta,q_{0},B,F\right)$
+\end_inset
+
+ una maquina de Turing y supongamos 
+\begin_inset Formula $Q$
+\end_inset
+
+ es un alfabeto disjunto con 
+\begin_inset Formula $\Gamma$
+\end_inset
+
+.
+ Notese que para cada 
+\begin_inset Formula $\zeta\in(\Gamma\cup Q)^{\ast}$
+\end_inset
+
+ se tiene que
+\begin_inset Formula 
+\[
+\zeta\in Des\text{ si y solo si }(\exists\alpha\in\Gamma^{\ast})(\exists\beta\in Q)(\exists\gamma\in\Gamma^{\ast})\ ([\gamma]_{\left\vert \gamma\right\vert }\neq B\wedge\zeta=\alpha\beta\gamma)
+\]
+
+\end_inset
+
+Usaremos notacion lambda respecto del alfabeto 
+\begin_inset Formula $\Gamma\cup Q$
+\end_inset
+
+.
+ Notese que
+\begin_inset Formula 
+\[
+\chi_{Des}^{(\Gamma\cup Q)^{\ast}}=\lambda\zeta[(\exists\alpha\in\Gamma^{\ast})(\exists\beta\in Q)(\exists\gamma\in\Gamma^{\ast})\ ([\gamma]_{\left\vert \gamma\right\vert }\neq B\wedge\zeta=\alpha\beta\gamma)]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Sea 
+\begin_inset Formula $P_{1}=\lambda\zeta\alpha\beta\gamma[[\gamma]_{\left\vert \gamma\right\vert }\neq B\wedge\zeta=\alpha\beta\gamma]$
+\end_inset
+
+.
+ Encuentre 
+\begin_inset Formula $D_{P_{1}}$
+\end_inset
+
+ y pruebe que 
+\begin_inset Formula $P_{1}$
+\end_inset
+
+ es 
+\begin_inset Formula $(\Gamma\cup Q)$
+\end_inset
+
+-p.r.
+\end_layout
+
+\begin_layout Enumerate
+Sea 
+\begin_inset Formula $P_{2}=\lambda\zeta\alpha\beta[(\exists\gamma\in\Gamma^{\ast})\ ([\gamma]_{\left\vert \gamma\right\vert }\neq B\wedge\zeta=\alpha\beta\gamma)]$
+\end_inset
+
+.
+ Encuentre 
+\begin_inset Formula $D_{P_{2}}$
+\end_inset
+
+ y pruebe que 
+\begin_inset Formula $P_{2}$
+\end_inset
+
+ es 
+\begin_inset Formula $(\Gamma\cup Q)$
+\end_inset
+
+-p.r.
+\end_layout
+
+\begin_layout Enumerate
+Sea 
+\begin_inset Formula $P_{3}=\lambda\zeta\alpha[(\exists\beta\in Q)(\exists\gamma\in\Gamma^{\ast})\ ([\gamma]_{\left\vert \gamma\right\vert }\neq B\wedge\zeta=\alpha\beta\gamma)]$
+\end_inset
+
+.
+ Encuentre 
+\begin_inset Formula $D_{P_{3}}$
+\end_inset
+
+ y pruebe que 
+\begin_inset Formula $P_{3}$
+\end_inset
+
+ es 
+\begin_inset Formula $(\Gamma\cup Q)$
+\end_inset
+
+-p.r.
+\end_layout
+
+\begin_layout Enumerate
+Pruebe que 
+\begin_inset Formula $\chi_{Des}^{(\Gamma\cup Q)^{\ast}}$
+\end_inset
+
+ es 
+\begin_inset Formula $(\Gamma\cup Q)$
+\end_inset
+
+-p.r.
+ Concluya que 
+\begin_inset Formula $Des$
+\end_inset
+
+ es un conjunto 
+\begin_inset Formula $(\Gamma\cup Q)$
+\end_inset
+
+-p.r.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+Minimizacion y funciones 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-recursivas
+\end_layout
+
+\begin_layout Standard
+Tal como fue explicado en el comienzo de la Guia 5, para obtener la clase
+ de las funciones 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-recursivas debemos agregar un nuevo constructor a los ya definidos de composici
+on y recursion primitiva, a saber el constructor de 
+\shape italic
+minimizacion
+\shape default
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
+Minimizacion de variable numerica
+\end_layout
+
+\begin_layout Standard
+\noindent
+Sea 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+ un alfabeto finito y sea 
+\begin_inset Formula $P:D_{P}\subseteq\omega\times\omega^{n}\times\Sigma^{\ast m}\rightarrow\omega$
+\end_inset
+
+ un predicado.
+ Dado 
+\begin_inset Formula $(\vec{x},\vec{\alpha})\in\omega^{n}\times\Sigma^{\ast m}$
+\end_inset
+
+, cuando exista al menos un 
+\begin_inset Formula $t\in\omega$
+\end_inset
+
+ tal que 
+\begin_inset Formula $P(t,\vec{x},\vec{\alpha})=1$
+\end_inset
+
+, usaremos 
+\begin_inset Formula $\min_{t}P(t,\vec{x},\vec{\alpha})$
+\end_inset
+
+ para denotar al menor de tales 
+\begin_inset Formula $t^{\prime}s$
+\end_inset
+
+.
+ Notese que la expresion 
+\begin_inset Formula $\min_{t}P(t,\vec{x},\vec{\alpha})$
+\end_inset
+
+ esta definida solo para aquellas 
+\begin_inset Formula $(n+m)$
+\end_inset
+
+-uplas 
+\begin_inset Formula $(\vec{x},\vec{\alpha})$
+\end_inset
+
+ para las cuales hay al menos un 
+\begin_inset Formula $t$
+\end_inset
+
+ tal que se da 
+\begin_inset Formula $P(t,\vec{x},\vec{\alpha})=1$
+\end_inset
+
+.
+ Dicho de otra forma, 
+\begin_inset Formula $\min_{t}P(t,\vec{x},\vec{\alpha})$
+\end_inset
+
+ no estara definida cuando para cada 
+\begin_inset Formula $t\in\omega$
+\end_inset
+
+ se de que 
+\begin_inset Formula $(t,\vec{x},\vec{\alpha})$
+\end_inset
+
+ no pertenece a 
+\begin_inset Formula $D_{P}$
+\end_inset
+
+ o 
+\begin_inset Formula $P(t,\vec{x},\vec{\alpha})=0$
+\end_inset
+
+.
+ Otro detalle importante a tener en cuenta es que la expresion 
+\begin_inset Formula $\min_{t}P(t,\vec{x},\vec{\alpha})$
+\end_inset
+
+ no depende de la variable 
+\begin_inset Formula $t$
+\end_inset
+
+.
+ Por ejemplo, las expresiones 
+\begin_inset Formula $\min_{t}P(t,\vec{x},\vec{\alpha})$
+\end_inset
+
+ y 
+\begin_inset Formula $\min_{i}P(i,\vec{x},\vec{\alpha})$
+\end_inset
+
+ son equivalentes en el sentido que estan definidas en las mismas 
+\begin_inset Formula $(n+m)$
+\end_inset
+
+-uplas y cuando estan definidas asumen el mismo valor.
+\end_layout
+
+\begin_layout Standard
+Definamos
+\begin_inset Formula 
+\[
+M(P)=\lambda\vec{x}\vec{\alpha}\left[\min\nolimits _{t}P(t,\vec{x},\vec{\alpha})\right]
+\]
+
+\end_inset
+
+Notese que
+\begin_inset Formula 
+\begin{align*}
+D_{M(P)} & =\left\{ (\vec{x},\vec{\alpha})\in\omega^{n}\times\Sigma^{\ast m}:(\exists t\in\omega)\ P(t,\vec{x},\vec{\alpha})\right\} \\
+M(P)(\vec{x},\vec{\alpha}) & =\min\nolimits _{t}P(t,\vec{x},\vec{\alpha})\text{, para cada }(\vec{x},\vec{\alpha})\in D_{M(P)}
+\end{align*}
+
+\end_inset
+
+Diremos que 
+\begin_inset Formula $M(P)$
+\end_inset
+
+ se obtiene por 
+\shape italic
+minimizacion de variable numerica 
+\shape default
+a partir de 
+\begin_inset Formula $P$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Veamos un par de ejemplos:
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+(E1)
+\end_layout
+
+\end_inset
+
+Tomemos 
+\begin_inset Formula $P=\lambda tx_{1}[t^{2}=x_{1}]$
+\end_inset
+
+.
+ Tenemos que:
+\begin_inset Formula 
+\begin{align*}
+D_{M(P)} & =\left\{ x_{1}\in\omega:(\exists t\in\omega)\ P(t,x_{1})\right\} \\
+ & =\left\{ x_{1}\in\omega:(\exists t\in\omega)\ t^{2}=x_{1}\right\} 
+\end{align*}
+
+\end_inset
+
+Es decir el dominio de 
+\begin_inset Formula $M(P)$
+\end_inset
+
+ es el conjunto de los cuadrados.
+ Ademas para cada 
+\begin_inset Formula $x_{1}\in D_{M(P)}$
+\end_inset
+
+ tenemos que
+\begin_inset Formula 
+\[
+M(P)(x_{1})=\min\nolimits _{t}P(t,x_{1})=\min\nolimits _{t}(t^{2}=x_{1})
+\]
+
+\end_inset
+
+por lo cual 
+\begin_inset Formula $M(P)(x)=\sqrt{x}$
+\end_inset
+
+, para cada 
+\begin_inset Formula $x\in D_{M(P)}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+(E2)
+\end_layout
+
+\end_inset
+
+Recordemos que dados 
+\begin_inset Formula $x_{1},x_{2}\in\omega$
+\end_inset
+
+, con 
+\begin_inset Formula $x_{2}$
+\end_inset
+
+ no nulo, el 
+\shape italic
+cociente de dividir 
+\shape default
+
+\begin_inset Formula $x_{1}$
+\end_inset
+
+
+\shape italic
+
+\begin_inset space \space{}
+\end_inset
+
+por 
+\shape default
+
+\begin_inset Formula $x_{2}$
+\end_inset
+
+ se define como el maximo elemento del conjunto 
+\begin_inset Formula $\{t\in\omega:t.x_{2}\leq x_{1}\}$
+\end_inset
+
+.
+ Sea
+\begin_inset Formula 
+\[
+\begin{array}[t]{rll}
+Q:\omega\times\mathbf{N} & \rightarrow & \omega\\
+(x_{1},x_{2}) & \rightarrow & \text{cociente de dividir }x_{1}\text{ por }x_{2}
+\end{array}
+\]
+
+\end_inset
+
+Sea 
+\begin_inset Formula $P=\lambda tx_{1}x_{2}\left[x_{1}<t.x_{2}\right]$
+\end_inset
+
+.
+ Notar que
+\begin_inset Formula 
+\begin{align*}
+D_{M(P)} & =\{(x_{1},x_{2})\in\omega^{2}:(\exists t\in\omega)\;P(t,x_{1},x_{2})=1\}\\
+ & =\{(x_{1},x_{2}):(\exists t\in\omega)\;x_{1}<t.x_{2}\}\\
+ & =\omega\times\mathbf{N}
+\end{align*}
+
+\end_inset
+
+Ademas si 
+\begin_inset Formula $(x_{1},x_{2})\in\omega\times\mathbf{N}$
+\end_inset
+
+, es facil de probar que
+\begin_inset Formula 
+\[
+\min\nolimits _{t}\ x_{1}<t.x_{2}=Q(x_{1},x_{2})+1
+\]
+
+\end_inset
+
+por lo que 
+\begin_inset Formula $M(P)=Suc\circ Q$
+\end_inset
+
+.
+ Si quisieramos encontrar un predicado 
+\begin_inset Formula $P^{\prime}$
+\end_inset
+
+ tal que 
+\begin_inset Formula $M(P^{\prime})=Q$
+\end_inset
+
+, entonces podemos tomar 
+\begin_inset Formula $P^{\prime}=\lambda tx_{1}x_{2}\left[x_{1}<(t+1).x_{2}\right]$
+\end_inset
+
+ y con un poco de concentracion nos daremos cuenta que 
+\begin_inset Formula $M(P^{\prime})=Q$
+\end_inset
+
+.
+ De todas maneras hay una forma mas facil de hacerlo y es tomando 
+\begin_inset Formula $P^{\prime}$
+\end_inset
+
+ de tal forma que para cada 
+\begin_inset Formula $(x_{1},x_{2})\in D_{Q}$
+\end_inset
+
+ se de que
+\begin_inset Formula 
+\[
+Q(x_{1},x_{2})=\mathrm{\ unico\ }t\in\omega\mathrm{\ tal\ que\ }P^{\prime}(t,x_{1},x_{2})
+\]
+
+\end_inset
+
+Por ejemplo se puede tomar 
+\begin_inset Formula $P^{\prime}=\lambda tx_{1}x_{2}\left[x_{1}\geq t.x_{2}\text{ y }x_{1}<(t+1).x_{2}\right]$
+\end_inset
+
+ que dicho sea de paso es justo la definicion de cociente dada en la escuela
+ primaria.
+ Dejamos al lector corroborar que 
+\begin_inset Formula $M(P^{\prime})=Q$
+\end_inset
+
+, para este ultimo 
+\begin_inset Formula $P^{\prime}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+REGLA U:
+\series default
+ Si tenemos una funcion 
+\begin_inset Formula $f:D_{f}\subseteq\omega^{n}\times\Sigma^{\ast m}\rightarrow\omega$
+\end_inset
+
+ y buscamos un predicado 
+\begin_inset Formula $P$
+\end_inset
+
+ tal que 
+\begin_inset Formula $f=M(P)$
+\end_inset
+
+ muchas veces es util tratar de diseñar 
+\begin_inset Formula $P$
+\end_inset
+
+ de manera que para cada 
+\begin_inset Formula $(\vec{x},\vec{\alpha})\in D_{f}$
+\end_inset
+
+ se de que
+\begin_inset Formula 
+\[
+f(\vec{x},\vec{\alpha})=\mathrm{\ unico\ }t\in\omega\mathrm{\ tal\ que\ }P(t,\vec{x},\vec{\alpha})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+
+\series bold
+Ejercicio 17:
+\end_layout
+
+\end_inset
+
+Sea 
+\begin_inset Formula $P=\lambda tx_{1}[x_{1}<t]$
+\end_inset
+
+.
+ Describa la funcion 
+\begin_inset Formula $M(P)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+
+\series bold
+Ejercicio 17,3:
+\end_layout
+
+\end_inset
+
+Sea 
+\begin_inset Formula $P=\lambda tx_{1}x_{2}[x_{2}+t=x_{1}]$
+\end_inset
+
+.
+ Describa la funcion 
+\begin_inset Formula $M(P)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+
+\series bold
+Ejercicio 17,6:
+\end_layout
+
+\end_inset
+
+Sea 
+\begin_inset Formula $\Sigma=\{@,!,\blacksquare\}$
+\end_inset
+
+.
+ Sea 
+\begin_inset Formula $P=\lambda t\alpha_{1}[[\alpha_{1}]_{t}=\blacksquare]$
+\end_inset
+
+.
+ Describa la funcion 
+\begin_inset Formula $M(P)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+Ejercicio 17,9:
+\end_layout
+
+\end_inset
+
+Aplique la REGLA U para encontrar un predicado 
+\begin_inset Formula $P$
+\end_inset
+
+ tal que 
+\begin_inset Formula $M(P)=\lambda x_{1}[\mathrm{parte\ entera\ de\ }\sqrt{x_{1}}]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+
+\series bold
+Ejercicio 18:
+\end_layout
+
+\end_inset
+
+Encuentre un predicado 
+\begin_inset Formula $P$
+\end_inset
+
+ tal que 
+\begin_inset Formula $M(P)=\lambda x_{1}x_{2}[x_{1}\dot{-}x_{2}]$
+\end_inset
+
+.
+ (Aqui es natural hacerlo sin la idea de la REGLA U.)
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+
+\series bold
+Ejercicio 19:
+\end_layout
+
+\end_inset
+
+Elija V o F para el siguiente enunciado.
+ Justifique.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+
+Si 
+\begin_inset Formula $P:D_{P}\subseteq\omega\times\omega^{2}\rightarrow\omega$
+\end_inset
+
+ es un predicado 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-recursivo, entonces el siguiente procedimiento (con dato de entrada 
+\begin_inset Formula $(x,y)\in\omega^{2}$
+\end_inset
+
+) computa la funcion 
+\begin_inset Formula $M(P)$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Etapa 1: Hacer 
+\begin_inset Formula $T=0$
+\end_inset
+
+ e ir a Etapa 2
+\end_layout
+
+\begin_layout Standard
+Etapa 2: Si 
+\begin_inset Formula $(T,x,y)\in D_{P}$
+\end_inset
+
+ y 
+\begin_inset Formula $P(T,x,y)=1$
+\end_inset
+
+, entonces ir a Etapa 4, en caso contrario ir a Etapa 3.
+\end_layout
+
+\begin_layout Standard
+Etapa 3: Hacer 
+\begin_inset Formula $T=T+1$
+\end_inset
+
+ e ir a Etapa 2.
+\end_layout
+
+\begin_layout Standard
+Etapa 4: Dar 
+\begin_inset Formula $T$
+\end_inset
+
+ como salida y terminar 
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{lemma}
+\end_layout
+
+\end_inset
+
+ Si 
+\begin_inset Formula $P:D_{P}\subseteq\omega\times\omega^{n}\times\Sigma^{\ast m}\rightarrow\omega$
+\end_inset
+
+ es un predicado 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-efectivamente computable y 
+\begin_inset Formula $D_{P}$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-efectivamente computable, entonces la funcion 
+\begin_inset Formula $M(P)$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-efectivamente computable.
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{lemma}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+
+\series bold
+Ejercicio 20:
+\end_layout
+
+\end_inset
+
+Pruebe el lema anterior 
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Lamentablemente si quitamos la hipotesis en el lema anterior de que 
+\begin_inset Formula $D_{P}$
+\end_inset
+
+ sea 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-efectivamente computable, el lema resulta falso.
+ Mas adelante veremos un ejemplo.
+ Por el momento el lector puede ejercitar su comprencion del tema convenciendose
+ de que aun teniendo un procedimiento efectivo que compute a un predicado
+ 
+\begin_inset Formula $P:D_{P}\subseteq\omega\times\omega^{n}\times\Sigma^{\ast m}\rightarrow\omega$
+\end_inset
+
+, no es claro como construir un procedimiento efectivo que compute a 
+\begin_inset Formula $M(P)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+
+\series bold
+Ejercicio 21:
+\end_layout
+
+\end_inset
+
+V o F o I.
+ Justifique.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Sea 
+\begin_inset Formula $P:D_{P}\subseteq\omega\times\omega^{n}\rightarrow\omega$
+\end_inset
+
+ un predicado.
+ Si 
+\begin_inset Formula $\vec{x}\in\omega^{n}$
+\end_inset
+
+ es tal que existe 
+\begin_inset Formula $t$
+\end_inset
+
+ en 
+\begin_inset Formula $\omega$
+\end_inset
+
+ que cumple 
+\begin_inset Formula $(t,\vec{x})\in D_{P}$
+\end_inset
+
+, entonces 
+\begin_inset Formula $\vec{x}\in D_{M(P)}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Sea 
+\begin_inset Formula $P:D_{P}\subseteq\omega\times\omega^{n}\rightarrow\omega$
+\end_inset
+
+ un predicado.
+ Entonces 
+\begin_inset Formula $M(P)(\vec{x})\leq t$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Sea 
+\begin_inset Formula $P:\omega^{n}\rightarrow\omega$
+\end_inset
+
+ un predicado, con 
+\begin_inset Formula $n\geq1$
+\end_inset
+
+.
+ Entonces 
+\begin_inset Formula $D_{M(P)}\subseteq\omega^{n-1}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Sea 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+ un alfabeto finito.
+ Entonces 
+\begin_inset Formula $M(p_{1}^{1,2})=C_{0}^{0,2}$
+\end_inset
+
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
+Definicion de funcion 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-recursiva
+\end_layout
+
+\begin_layout Standard
+Con este nuevo constructor de funciones estamos en condiciones de definir
+ la clase de las funciones 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-recursivas.
+ Definamos los conjuntos 
+\begin_inset Formula $\mathrm{R}_{0}^{\Sigma}\subseteq\mathrm{R}_{1}^{\Sigma}\subseteq\mathrm{R}_{2}^{\Sigma}\subseteq...\subseteq\mathrm{R}^{\Sigma}$
+\end_inset
+
+ de la siguiente manera
+\begin_inset Formula 
+\[
+\begin{array}{lll}
+\mathrm{R}_{0}^{\Sigma} & = & \mathrm{PR}_{0}^{\Sigma}\\
+\mathrm{R}_{k+1}^{\Sigma} & = & \mathrm{R}_{k}^{\Sigma}\cup\left\{ f\circ[f_{1},...,f_{r}]:f,f_{1},...,f_{r}\in\mathrm{R}_{k}^{\Sigma}\text{, }r\geq1\right\} \cup\\
+ &  & \;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\left\{ R(f,\mathcal{G}):f\text{ y cada }\mathcal{G}_{a}\text{ pertenecen a }\mathrm{R}_{k}^{\Sigma}\right\} \cup\\
+ &  & \;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\left\{ R(f,g):f,g\in\mathrm{R}_{k}^{\Sigma}\right\} \cup\\
+ &  & \;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\left\{ M(P):P\text{ es }\Sigma\text{-total y }P\in\mathrm{R}_{k}^{\Sigma}\right\} \\
+\mathrm{R}^{\Sigma} & = & \bigcup_{k\geq0}\mathrm{R}_{k}^{\Sigma}
+\end{array}
+\]
+
+\end_inset
+
+Una funcion 
+\begin_inset Formula $f$
+\end_inset
+
+ es llamada 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-
+\shape italic
+recursiva
+\shape default
+ si pertenece a 
+\begin_inset Formula $\mathrm{R}^{\Sigma}$
+\end_inset
+
+.
+ Cabe destacar que aunque 
+\begin_inset Formula $M(P)$
+\end_inset
+
+ fue definido para predicados no necesariamente 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-totales, en la definicion de los conjuntos 
+\begin_inset Formula $\mathrm{R}_{k}^{\Sigma}$
+\end_inset
+
+, nos restringimos al caso en que 
+\begin_inset Formula $P$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-total.
+\end_layout
+
+\begin_layout Standard
+Notese que 
+\begin_inset Formula $\mathrm{PR}_{k}^{\Sigma}\subseteq\mathrm{R}_{k}^{\Sigma}$
+\end_inset
+
+, para cada 
+\begin_inset Formula $k\in\omega$
+\end_inset
+
+, por lo cual 
+\begin_inset Formula $\mathrm{PR}^{\Sigma}\subseteq\mathrm{R}^{\Sigma}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{proposition}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "f recursiva implica f efectivamente computable"
+
+\end_inset
+
+Si 
+\begin_inset Formula $f\in\mathrm{R}^{\Sigma}$
+\end_inset
+
+, entonces 
+\begin_inset Formula $f$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-efectivamente computable.
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{proposition}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+
+\series bold
+Ejercicio 22:
+\end_layout
+
+\end_inset
+
+Pruebe la proposicion anterior 
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Daremos sin prueba el siguiente conceptualmente importante resultado.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{proposition}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "recursivo no implica PR"
+
+\end_inset
+
+Sea 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+ un alfabeto finito.
+ Entonces no toda funcion 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-recursiva es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-p.r..
+ Es decir que 
+\begin_inset Formula $\mathrm{PR}^{\Sigma}\subseteq\mathrm{R}^{\Sigma}$
+\end_inset
+
+ y 
+\begin_inset Formula $\mathrm{PR}^{\Sigma}\neq\mathrm{R}^{\Sigma}$
+\end_inset
+
+.
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{proposition}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Este resultado no es facil de probar.
+ Mas adelante veremos ejemplos naturales de funciones 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-recursivas que no son 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-p.r..
+ Otro ejemplo natural es la famosa funcion de Ackermann.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
+Lema de minimizacion acotada de variable numerica de predicados 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-p.r.
+\end_layout
+
+\begin_layout Standard
+Como veremos mas adelante, no siempre que 
+\begin_inset Formula $P\in\mathrm{R}^{\Sigma}$
+\end_inset
+
+, tendremos que 
+\begin_inset Formula $M(P)\in\mathrm{R}^{\Sigma}$
+\end_inset
+
+.
+ Sin envargo, el siguiente lema nos garantiza que cuando 
+\begin_inset Formula $P\in\mathrm{PR}^{\Sigma}$
+\end_inset
+
+, se da que 
+\begin_inset Formula $M(P)\in\mathrm{R}^{\Sigma}$
+\end_inset
+
+ y ademas da condiciones para que 
+\begin_inset Formula $M(P)$
+\end_inset
+
+ sea 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-p.r..
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{lemma}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "minimizacion"
+
+\end_inset
+
+Sean 
+\begin_inset Formula $n,m\geq0$
+\end_inset
+
+.
+ Sea 
+\begin_inset Formula $P:D_{P}\subseteq\omega\times\omega^{n}\times\Sigma^{\ast m}\rightarrow\omega$
+\end_inset
+
+ un predicado 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-p.r..
+ Entonces
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+(a)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $M(P)$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-recursiva.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+(b)
+\end_layout
+
+\end_inset
+
+Si hay una funcion 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-p.r.
+ 
+\begin_inset Formula $f:\omega^{n}\times\Sigma^{\ast m}\rightarrow\omega$
+\end_inset
+
+ tal que
+\begin_inset Formula 
+\[
+M(P)(\vec{x},\vec{\alpha})=\min\nolimits _{t}P(t,\vec{x},\vec{\alpha})\leq f(\vec{x},\vec{\alpha})\text{, para cada }(\vec{x},\vec{\alpha})\in D_{M(P)}\text{,}
+\]
+
+\end_inset
+
+entonces 
+\begin_inset Formula $M(P)$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-p.r..
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{lemma}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{proof}
+\end_layout
+
+\end_inset
+
+ (a) Sea 
+\begin_inset Formula $\bar{P}=P\cup C_{0}^{n+1,m}|_{(\omega^{n+1}\times\Sigma^{\ast m})-D_{P}}$
+\end_inset
+
+.
+ Note que 
+\begin_inset Formula $\bar{P}$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-p.r.
+ (por que?).
+ Veremos a continuacion que 
+\begin_inset Formula $M(P)=M(\bar{P})$
+\end_inset
+
+.
+ Notese que
+\begin_inset Formula 
+\[
+\{t\in\omega:P(t,\vec{x},\vec{\alpha})=1\}=\{t\in\omega:\bar{P}(t,\vec{x},\vec{\alpha})=1\}
+\]
+
+\end_inset
+
+Esto claramente dice que 
+\begin_inset Formula $D_{M(P)}=D_{M(\bar{P})}$
+\end_inset
+
+ y que 
+\begin_inset Formula $M(P)(\vec{x},\vec{\alpha})=M(\bar{P})(\vec{x},\vec{\alpha})$
+\end_inset
+
+, para cada 
+\begin_inset Formula $(\vec{x},\vec{\alpha})\in D_{M(P)}$
+\end_inset
+
+., por lo cual 
+\begin_inset Formula $M(P)=M(\bar{P})$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Veremos entonces que 
+\begin_inset Formula $M(\bar{P})$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-recursiva.
+ Sea 
+\begin_inset Formula $k$
+\end_inset
+
+ tal que 
+\begin_inset Formula $\bar{P}\in\mathrm{PR}_{k}^{\Sigma}$
+\end_inset
+
+.
+ Ya que 
+\begin_inset Formula $\bar{P}$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-total y 
+\begin_inset Formula $\bar{P}\in\mathrm{PR}_{k}^{\Sigma}\subseteq\mathrm{R}_{k}^{\Sigma}$
+\end_inset
+
+, tenemos que 
+\begin_inset Formula $M(\bar{P})\in\mathrm{R}_{k+1}^{\Sigma}$
+\end_inset
+
+ y por lo tanto 
+\begin_inset Formula $M(\bar{P})\in\mathrm{R}^{\Sigma}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+(b) Ya que 
+\begin_inset Formula $M(P)=M(\bar{P})$
+\end_inset
+
+, basta con probar que 
+\begin_inset Formula $M(\bar{P})$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-p.r.
+ Primero veremos que 
+\begin_inset Formula $D_{M(\bar{P})}$
+\end_inset
+
+ es un conjunto 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-p.r..
+ Notese que
+\begin_inset Formula 
+\[
+\chi_{D_{M(\bar{P})}}^{\omega^{n}\times\Sigma^{\ast m}}=\lambda\vec{x}\vec{\alpha}\left[(\exists t\in\omega)_{t\leq f(\vec{x},\vec{\alpha})}\;\bar{P}(t,\vec{x},\vec{\alpha})\right]
+\]
+
+\end_inset
+
+lo cual nos dice que
+\begin_inset Formula 
+\[
+\chi_{D_{M(\bar{P})}}^{\omega^{n}\times\Sigma^{\ast m}}=\lambda x\vec{x}\vec{\alpha}\left[(\exists t\in\omega)_{t\leq x}\;\bar{P}(t,\vec{x},\vec{\alpha})\right]\circ\left[f,p_{1}^{n,m},...,p_{n+m}^{n,m}\right]
+\]
+
+\end_inset
+
+Pero el Lema 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "cuantificacion"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ nos dice que 
+\begin_inset Formula $\lambda x\vec{x}\vec{\alpha}\left[(\exists t\in\omega)_{t\leq x}\;\bar{P}(t,\vec{x},\vec{\alpha})\right]$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-p.r.
+ por lo cual tenemos que 
+\begin_inset Formula $\chi_{D_{M(\bar{P})}}^{\omega^{n}\times\Sigma^{\ast m}}$
+\end_inset
+
+ lo es.
+\end_layout
+
+\begin_layout Standard
+Sea
+\begin_inset Formula 
+\[
+P_{1}=\lambda t\vec{x}\vec{\alpha}\left[\bar{P}(t,\vec{x},\vec{\alpha})\wedge(\forall j\in\omega)_{j\leq t}\;j=t\vee\lnot\bar{P}(j,\vec{x},\vec{\alpha})\right]
+\]
+
+\end_inset
+
+Note que 
+\begin_inset Formula $P_{1}$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-total.
+ Dejamos al lector usando lemas anteriores probar que 
+\begin_inset Formula $P_{1}$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-p.r.
+ Ademas notese que para 
+\begin_inset Formula $(\vec{x},\vec{\alpha})\in\omega^{n}\times\Sigma^{\ast m}$
+\end_inset
+
+ se tiene que
+\begin_inset Formula 
+\[
+P_{1}(t,\vec{x},\vec{\alpha})=1\text{ si y solo si }(\vec{x},\vec{\alpha})\in D_{M(\bar{P})}\text{ y }t=M(\bar{P})(\vec{x},\vec{\alpha})
+\]
+
+\end_inset
+
+Esto nos dice que
+\begin_inset Formula 
+\[
+M(\bar{P})=\left(\lambda\vec{x}\vec{\alpha}\left[\prod_{t=0}^{f(\vec{x},\vec{\alpha})}t^{P_{1}(t,\vec{x},\vec{\alpha})}\right]\right)|_{D_{M(\bar{P})}}
+\]
+
+\end_inset
+
+por lo cual para probar que 
+\begin_inset Formula $M(\bar{P})$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-p.r.
+ solo nos resta probar que
+\begin_inset Formula 
+\[
+F=\lambda\vec{x}\vec{\alpha}\left[\prod_{t=0}^{f(\vec{x},\vec{\alpha})}t^{P_{1}(t,\vec{x},\vec{\alpha})}\right]
+\]
+
+\end_inset
+
+lo es.
+ Pero
+\begin_inset Formula 
+\[
+F=\lambda xy\vec{x}\vec{\alpha}\left[\prod_{t=x}^{y}t^{P_{1}(t,\vec{x},\vec{\alpha})}\right]\circ\left[C_{0}^{n,m},f,p_{1}^{n,m},...,p_{n+m}^{n,m}\right]
+\]
+
+\end_inset
+
+y por lo tanto el Lema 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "iteracion"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ nos dice que 
+\begin_inset Formula $F$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-p.r..
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{proof}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+OBSERVACION: No siempre que 
+\begin_inset Formula $P$
+\end_inset
+
+ sea 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-p.r.
+ tendremos que 
+\begin_inset Formula $M(P)$
+\end_inset
+
+ lo sera.
+ Notese que si 
+\begin_inset Formula $M(P)$
+\end_inset
+
+ fuera 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-p.r., cada ves que 
+\begin_inset Formula $P$
+\end_inset
+
+ lo sea, entonces tendriamos que 
+\begin_inset Formula $\mathrm{PR}^{\Sigma}=\mathrm{R}^{\Sigma}$
+\end_inset
+
+ (justifique) lo cual contradiria la Proposicion 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "recursivo no implica PR"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ Mas adelante veremos un ejemplo natural de un predicado 
+\begin_inset Formula $P$
+\end_inset
+
+ el cual es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-p.r.
+ pero 
+\begin_inset Formula $M(P)$
+\end_inset
+
+ no es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-p.r.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+El lema de minimizacion recien probado es muy util como lo veremos en los
+ siguientes dos lemas.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{lemma}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "cociente y resto"
+
+\end_inset
+
+Sea 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+ un alfabeto finito.
+ Las siguientes funciones son 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-p.r.:
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+(a)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\begin{array}[t]{rll}
+Q:\omega\times\mathbf{N} & \rightarrow & \omega\\
+(x,y) & \rightarrow & \text{cociente de la division de }x\text{ por }y
+\end{array}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+(b)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\begin{array}[t]{rll}
+R:\omega\times\mathbf{N} & \rightarrow & \omega\\
+(x,y) & \rightarrow & \text{resto de la division de }x\text{ por }y
+\end{array}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{lemma}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{proof}
+\end_layout
+
+\end_inset
+
+ (a) Ya vimos anteriormente que 
+\begin_inset Formula $Q=M(P)$
+\end_inset
+
+, donde 
+\begin_inset Formula $P^{\prime}=\lambda tx_{1}x_{2}\left[x_{1}\geq t.x_{2}\text{ y }x_{1}<(t+1).x_{2}\right]$
+\end_inset
+
+.
+ Ya que 
+\begin_inset Formula $P^{\prime}$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-p.r.
+ y
+\begin_inset Formula 
+\[
+Q(x_{1},x_{2})\leq p_{1}^{2,0}(x_{1},x_{2}),\text{ para cada }(x_{1},x_{2})\in\omega\times\mathbf{N}
+\]
+
+\end_inset
+
+(b) del Lema 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "minimizacion"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ implica que 
+\begin_inset Formula $Q\in\mathrm{PR}^{\Sigma}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+(b) Notese que
+\begin_inset Formula 
+\[
+R=\lambda xy\left[x\dot{-}Q(x,y).y\right]
+\]
+
+\end_inset
+
+y por lo tanto 
+\begin_inset Formula $R\in\mathrm{PR}^{\Sigma}$
+\end_inset
+
+.
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{proof}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+
+\series bold
+Ejercicio 23:
+\end_layout
+
+\end_inset
+
+Dados 
+\begin_inset Formula $x,y\in\omega$
+\end_inset
+
+ tales que 
+\begin_inset Formula $x\neq0$
+\end_inset
+
+ o 
+\begin_inset Formula $y\neq0$
+\end_inset
+
+, usaremos 
+\begin_inset Formula $mcd(x,y)$
+\end_inset
+
+ para denotar el maximo comun divisor de 
+\begin_inset Formula $x$
+\end_inset
+
+ e 
+\begin_inset Formula $y$
+\end_inset
+
+, es decir el mayor numero que divide a 
+\begin_inset Formula $x$
+\end_inset
+
+ y divide a 
+\begin_inset Formula $y$
+\end_inset
+
+.
+ Note que 
+\begin_inset Formula $M=\lambda xy[mcd(x,y)]$
+\end_inset
+
+ tiene dominio igual a 
+\begin_inset Formula $\omega^{2}-\{(0,0)\}$
+\end_inset
+
+.
+ Pruebe que 
+\begin_inset Formula $M$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-p.r..
+ (Hint: use la REGLA U)
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+
+\series bold
+Ejercicio 23,5:
+\end_layout
+
+\end_inset
+
+Dados 
+\begin_inset Formula $x,y\in\mathbf{N}$
+\end_inset
+
+, usaremos 
+\begin_inset Formula $mcm(x,y)$
+\end_inset
+
+ para denotar el minimo comun multiplo de 
+\begin_inset Formula $x$
+\end_inset
+
+ e 
+\begin_inset Formula $y$
+\end_inset
+
+, es decir el menor numero no nulo que es multiplo de 
+\begin_inset Formula $x$
+\end_inset
+
+ y de 
+\begin_inset Formula $y$
+\end_inset
+
+.
+ Note que 
+\begin_inset Formula $G=\lambda xy[mcm(x,y)]$
+\end_inset
+
+ tiene dominio igual a 
+\begin_inset Formula $\mathbf{N}^{2}$
+\end_inset
+
+.
+ Pruebe que 
+\begin_inset Formula $G$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-p.r..
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{lemma}
+\end_layout
+
+\end_inset
+
+ Sea 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+ un alfabeto finito.
+ Entonces la funcion
+\begin_inset Formula 
+\[
+\begin{array}[t]{rll}
+pr:\mathbf{N} & \rightarrow & \omega\\
+n & \rightarrow & n\text{-esimo numero primo}
+\end{array}
+\]
+
+\end_inset
+
+es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-p.r.
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{lemma}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{proof}
+\end_layout
+
+\end_inset
+
+ Para ver que 
+\begin_inset Formula $pr$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-p.r., veremos que la extension 
+\begin_inset Formula $h:\omega\rightarrow\omega$
+\end_inset
+
+, dada por 
+\begin_inset Formula $h(0)=0$
+\end_inset
+
+ y 
+\begin_inset Formula $h(n)=pr(n)$
+\end_inset
+
+, 
+\begin_inset Formula $n\geq1$
+\end_inset
+
+, es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-p.r..
+ Luego 
+\begin_inset Formula $pr=h|_{\mathbf{N}}$
+\end_inset
+
+ resultara 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-p.r.
+ por ser la restriccion de una funcion 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-p.r.
+ a un conjunto 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-p.r..
+ Primero note que
+\begin_inset Formula 
+\begin{align*}
+h(0) & =0\\
+h(t+1) & =\min\nolimits _{i}\left(i\text{ es primo}\wedge i>h(t)\right)
+\end{align*}
+
+\end_inset
+
+O sea que 
+\begin_inset Formula $h=R\left(C_{0}^{0,0},g\right)$
+\end_inset
+
+, donde
+\begin_inset Formula 
+\[
+\begin{array}[t]{rll}
+g:\omega\times\omega & \rightarrow & \omega\\
+(A,t) & \rightarrow & \min\nolimits _{i}\left(i\text{ es primo}\wedge i>A\right)
+\end{array}
+\]
+
+\end_inset
+
+Es decir que solo nos resta ver que 
+\begin_inset Formula $g$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-p.r..
+ Pero notese que 
+\begin_inset Formula $g=M(P)$
+\end_inset
+
+, donde 
+\begin_inset Formula $P=\lambda iAt\left[i\text{ es primo}\wedge i>A\right]$
+\end_inset
+
+.
+ Claramente 
+\begin_inset Formula $P$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-p.r.
+ por lo cual para poder aplicar (b) del lema anterior debemos encontrar
+ una funcion 
+\begin_inset Formula $f:\omega\times\omega\rightarrow\omega$
+\end_inset
+
+ tal que
+\begin_inset Formula 
+\[
+M(P)(A,t)\leq f(A,t)\text{, para cada }(A,t)\in\omega^{2}
+\]
+
+\end_inset
+
+Aceptaremos sin prueba que
+\begin_inset Formula 
+\[
+\min\nolimits _{i}\left(i\text{ es primo}\wedge i>A\right)\leq A!+1\text{, para cada }A\in\omega
+\]
+
+\end_inset
+
+Es decir que 
+\begin_inset Formula $f=\lambda At[A!+1]$
+\end_inset
+
+ cumple lo deseado, lo cual implica que 
+\begin_inset Formula $g=M(P)$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-p.r.
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{proof}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+
+\series bold
+Ejercicio 24:
+\end_layout
+
+\end_inset
+
+(O) Si tiene ganas y recuerda las propiedades basicas de divisibilidad,
+ intente un rato probar que
+\begin_inset Formula 
+\[
+\min\nolimits _{i}\left(i\text{ es primo}\wedge i>A\right)\leq A!+1\text{, para cada }A\in\omega
+\]
+
+\end_inset
+
+(Hint: factorice 
+\begin_inset Formula $A!+1$
+\end_inset
+
+ en producto de primos y vea que alguno debe ser mayor que 
+\begin_inset Formula $A$
+\end_inset
+
+.)
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+
+\series bold
+Ejercicio 25:
+\end_layout
+
+\end_inset
+
+Pruebe que 
+\begin_inset Formula $\lambda xi\left[(x)_{i}\right]$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-p.r.
+ (Hint: repase el significado de la expresion 
+\begin_inset Formula $(x)_{i}$
+\end_inset
+
+ y encuentre entonces el dominio de 
+\begin_inset Formula $\lambda xi\left[(x)_{i}\right]$
+\end_inset
+
+ antes de hacer el ejercicio)
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+
+\series bold
+Ejercicio 26:
+\end_layout
+
+\end_inset
+
+Pruebe que la funcion 
+\begin_inset Formula $Lt$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-p.r.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+
+\series bold
+Ejercicio 27:
+\end_layout
+
+\end_inset
+
+Sea 
+\begin_inset Formula $C=\{z^{2}:z\in\omega\}$
+\end_inset
+
+.
+ Sea 
+\begin_inset Formula $f:C\rightarrow\omega$
+\end_inset
+
+ dada por 
+\begin_inset Formula $f(x)=\sqrt{x}$
+\end_inset
+
+, para cada 
+\begin_inset Formula $x\in C$
+\end_inset
+
+.
+ Pruebe que 
+\begin_inset Formula $f$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-p.r.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+Ejercicio 27,3:
+\end_layout
+
+\end_inset
+
+Sea 
+\begin_inset Formula $\Sigma=\{@,!\}$
+\end_inset
+
+.
+ Sea 
+\begin_inset Formula $f:\Sigma^{\ast}\rightarrow\omega$
+\end_inset
+
+ dada por:
+\begin_inset Formula 
+\[
+f(\alpha)=\max\{\left\vert \beta\right\vert :\beta\text{ ocurre en }\alpha\text{ y }\beta\text{ es capicua}\}
+\]
+
+\end_inset
+
+Pruebe que 
+\begin_inset Formula $f$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-p.r.
+ (Hint: use la Regla U) 
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
+Minimizacion de variable alfabetica
+\end_layout
+
+\begin_layout Standard
+Supongamos que 
+\begin_inset Formula $\Sigma\neq\emptyset$
+\end_inset
+
+.
+ Sea 
+\begin_inset Formula $\leq$
+\end_inset
+
+ un orden total sobre 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+.
+ Recordemos que 
+\begin_inset Formula $\leq$
+\end_inset
+
+ puede ser naturalmente extendido a un orden total sobre 
+\begin_inset Formula $\Sigma^{\ast}$
+\end_inset
+
+.
+ Sea 
+\begin_inset Formula $P:D_{P}\subseteq\omega^{n}\times\Sigma^{\ast m}\times\Sigma^{\ast}\rightarrow\omega$
+\end_inset
+
+ un predicado.
+ Cuando 
+\begin_inset Formula $(\vec{x},\vec{\alpha})\in\omega^{n}\times\Sigma^{\ast m}$
+\end_inset
+
+ es tal que existe al menos un 
+\begin_inset Formula $\alpha\in\Sigma^{\ast}$
+\end_inset
+
+ tal que 
+\begin_inset Formula $P(\vec{x},\vec{\alpha},\alpha)=1$
+\end_inset
+
+, usaremos 
+\begin_inset Formula $\min_{\alpha}^{\leq}P(\vec{x},\vec{\alpha},\alpha)$
+\end_inset
+
+ para denotar al menor 
+\begin_inset Formula $\alpha\in\Sigma^{\ast}$
+\end_inset
+
+ tal que 
+\begin_inset Formula $P(\vec{x},\vec{\alpha},\alpha)=1$
+\end_inset
+
+.
+ Notese que la expresion 
+\begin_inset Formula $\min_{\alpha}^{\leq}P(\vec{x},\vec{\alpha},\alpha)$
+\end_inset
+
+ esta definida solo para aquellas 
+\begin_inset Formula $(n+m)$
+\end_inset
+
+-uplas 
+\begin_inset Formula $(\vec{x},\vec{\alpha})$
+\end_inset
+
+ para las cuales hay al menos un 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ tal que se da 
+\begin_inset Formula $P(\vec{x},\vec{\alpha},\alpha)=1$
+\end_inset
+
+.
+ Dicho de otra forma, 
+\begin_inset Formula $\min_{\alpha}^{\leq}P(\vec{x},\vec{\alpha},\alpha)$
+\end_inset
+
+ no estara definida cuando para cada 
+\begin_inset Formula $\alpha\in\Sigma^{\ast}$
+\end_inset
+
+ se de que 
+\begin_inset Formula $(\vec{x},\vec{\alpha},\alpha)$
+\end_inset
+
+ no pertenece a 
+\begin_inset Formula $D_{P}$
+\end_inset
+
+ o 
+\begin_inset Formula $P(\vec{x},\vec{\alpha},\alpha)=0$
+\end_inset
+
+.
+ Otro detalle importante a tener en cuenta es que la expresion 
+\begin_inset Formula $\min_{\alpha}^{\leq}P(\vec{x},\vec{\alpha},\alpha)$
+\end_inset
+
+ no depende de la variable 
+\begin_inset Formula $\alpha$
+\end_inset
+
+.
+ Por ejemplo, las expresiones 
+\begin_inset Formula $\min_{\alpha}^{\leq}P(\vec{x},\vec{\alpha},\alpha)$
+\end_inset
+
+ y 
+\begin_inset Formula $\min_{\beta}^{\leq}P(\vec{x},\vec{\alpha},\beta)$
+\end_inset
+
+ son equivalentes en el sentido que estan definidas en las mismas 
+\begin_inset Formula $(n+m)$
+\end_inset
+
+-uplas y cuando estan definidas asumen el mismo valor.
+\end_layout
+
+\begin_layout Standard
+Definamos
+\begin_inset Formula 
+\[
+\begin{array}{c}
+M^{\leq}(P)=\lambda\vec{x}\vec{\alpha}\left[\min_{\alpha}^{\leq}P(\vec{x},\vec{\alpha},\alpha)\right]\end{array}
+\]
+
+\end_inset
+
+Notese que
+\begin_inset Formula 
+\begin{align*}
+D_{M^{\leq}(P)} & =\left\{ (\vec{x},\vec{\alpha})\in\omega^{n}\times\Sigma^{\ast m}:(\exists\alpha\in\Sigma^{\ast})\ P(\vec{x},\vec{\alpha},\alpha)\right\} \\
+M^{\leq}(P)(\vec{x},\vec{\alpha}) & =\min\nolimits _{\alpha}^{\leq}P(\vec{x},\vec{\alpha},\alpha)\text{, para cada }(\vec{x},\vec{\alpha})\in D_{M^{\leq}(P)}
+\end{align*}
+
+\end_inset
+
+
+\begin_inset VSpace bigskip
+\end_inset
+
+Diremos que 
+\begin_inset Formula $M^{\leq}(P)$
+\end_inset
+
+ es obtenida por 
+\shape italic
+minimizacion de variable alfabetica 
+\shape default
+a partir de 
+\begin_inset Formula $P$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Vemos un ejemplo.
+ Sea 
+\begin_inset Formula $\Sigma=\{@,a,b,c,d,e\}$
+\end_inset
+
+ y sea 
+\begin_inset Formula $\leq$
+\end_inset
+
+ un orden total sobre 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+.
+ Sea 
+\begin_inset Formula $Dir=\{\alpha_{1}\in\Sigma^{\ast}:\left\vert \alpha_{1}\right\vert _{@}=1\}$
+\end_inset
+
+ y definamos 
+\begin_inset Formula $U:Dir\rightarrow\Sigma^{\ast}$
+\end_inset
+
+ de la siguiente manera
+\begin_inset Formula 
+\[
+U(\alpha_{1})=\text{unico }\alpha\text{ tal que }\alpha@\text{ es tramo inicial de }\alpha_{1}
+\]
+
+\end_inset
+
+Sea
+\begin_inset Formula 
+\[
+P=\lambda\alpha_{1}\alpha[\alpha_{1}\in Dir\text{ y }\alpha@\text{ es tramo inicial de }\alpha_{1}]
+\]
+
+\end_inset
+
+Tenemos que
+\begin_inset Formula 
+\begin{align*}
+D_{M^{\leq}(P)} & =\left\{ \alpha_{1}\in\Sigma^{\ast}:(\exists\alpha\in\Sigma^{\ast})\ P(\alpha_{1},\alpha)\right\} \\
+ & =\left\{ \alpha_{1}\in\Sigma^{\ast}:\alpha_{1}\in Dir\text{ y }(\exists\alpha\in\Sigma^{\ast})\ \alpha@\text{ es tramo inicial de }\alpha_{1}\right\} \\
+ & =Dir
+\end{align*}
+
+\end_inset
+
+y ademas es claro que 
+\begin_inset Formula $M^{\leq}(P)(\alpha_{1})=U(\alpha_{1})$
+\end_inset
+
+, para cada 
+\begin_inset Formula $\alpha_{1}\in Dir$
+\end_inset
+
+, por lo cual 
+\begin_inset Formula $M^{\leq}(P)=U$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
+Lema de minimizacion acotada de variable alfabetica de predicados 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-p.r.
+\end_layout
+
+\begin_layout Standard
+Aceptaremos sin prueba el siguiente resultado.
+ Su prueba es rutinaria y se basa en el Lema 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "minimizacion"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{lemma}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "minimizacion1"
+
+\end_inset
+
+Supongamos que 
+\begin_inset Formula $\Sigma\neq\emptyset$
+\end_inset
+
+.
+ Sea 
+\begin_inset Formula $\leq$
+\end_inset
+
+ un orden total sobre 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+, sean 
+\begin_inset Formula $n,m\geq0$
+\end_inset
+
+ y sea 
+\begin_inset Formula $P:D_{P}\subseteq\omega^{n}\times\Sigma^{\ast m}\times\Sigma^{\ast}\rightarrow\omega$
+\end_inset
+
+ un predicado 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-p.r..
+ Entonces
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+(a)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $M^{\leq}(P)$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-recursiva.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+(b)
+\end_layout
+
+\end_inset
+
+Si existe una funcion 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-p.r.
+ 
+\begin_inset Formula $f:\omega^{n}\times\Sigma^{\ast m}\rightarrow\omega$
+\end_inset
+
+ tal que
+\begin_inset Formula 
+\[
+\left\vert M^{\leq}(P)(\vec{x},\vec{\alpha})\right\vert =\left\vert \min\nolimits _{\alpha}^{\leq}P(\vec{x},\vec{\alpha},\alpha)\right\vert \leq f(\vec{x},\vec{\alpha})\text{, para cada }(\vec{x},\vec{\alpha})\in D_{M^{\leq}(P)}\text{,}
+\]
+
+\end_inset
+
+entonces 
+\begin_inset Formula $M^{\leq}(P)$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-p.r..
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{lemma}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+
+\series bold
+Ejercicio 28:
+\end_layout
+
+\end_inset
+
+Pruebe que la funcion 
+\begin_inset Formula $U$
+\end_inset
+
+ del ejemplo anterior es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-p.r..
+ Por que se elijieron los nombres 
+\begin_inset Formula $Dir$
+\end_inset
+
+ y 
+\begin_inset Formula $U$
+\end_inset
+
+?
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+
+\series bold
+Ejercicio 29:
+\end_layout
+
+\end_inset
+
+Dada una palabra 
+\begin_inset Formula $\alpha\in\Sigma^{\ast}$
+\end_inset
+
+, si hay una palabra 
+\begin_inset Formula $\rho$
+\end_inset
+
+ tal que 
+\begin_inset Formula $\rho^{2}=\alpha$
+\end_inset
+
+, usaremos 
+\begin_inset Formula $\sqrt{\alpha}$
+\end_inset
+
+ para denotar a 
+\begin_inset Formula $\rho$
+\end_inset
+
+.
+ Notese que la expresion 
+\begin_inset Formula $\sqrt{\alpha}$
+\end_inset
+
+ tiene sentido o esta definida solo para ciertas palabras.
+ Pruebe que 
+\begin_inset Formula $\lambda\alpha[\sqrt{\alpha}]$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-p.r..
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+
+\series bold
+Ejercicio 30:
+\end_layout
+
+\end_inset
+
+Sea 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+ un alfabeto no vacio y sea 
+\begin_inset Formula $\leq$
+\end_inset
+
+ un orden total sobre 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Diga que funcion es 
+\begin_inset Formula $M^{\leq}(\lambda\alpha_{1}\alpha_{2}\alpha\left[\alpha_{1}=\varepsilon\right])$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Diga que funcion es 
+\begin_inset Formula $M^{\leq}(\lambda\alpha_{1}\alpha\left[\alpha^{2}=\alpha_{1}\vee\alpha=\alpha_{1}\right])$
+\end_inset
+
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+
+\series bold
+Ejercicio 31:
+\end_layout
+
+\end_inset
+
+V o F o I, justifique.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Sea 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+ un alfabeto no vacio y sea 
+\begin_inset Formula $\leq$
+\end_inset
+
+ un orden total sobre 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+.
+ Entonces 
+\begin_inset Formula $p_{1}^{0,2}=M^{\leq}(\lambda\alpha_{1}\alpha\left[\alpha=\alpha_{1}\right])$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Sea 
+\begin_inset Formula $\leq$
+\end_inset
+
+ un orden total sobre 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+ y sea 
+\begin_inset Formula $P:D_{P}\subseteq\omega^{n}\times\Sigma^{\ast m}\times\Sigma^{\ast}\rightarrow\omega$
+\end_inset
+
+ un predicado, entonces
+\begin_inset Formula 
+\[
+D_{M^{\leq}(P)}=\left\{ (\vec{x},\vec{\alpha})\in\omega^{n}\times\Sigma^{\ast m}:(\exists\alpha\in\Sigma^{\ast})\ (\vec{x},\vec{\alpha},\alpha)\in D_{P}\right\} 
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Sea 
+\begin_inset Formula $\leq$
+\end_inset
+
+ un orden total sobre 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+ y sea 
+\begin_inset Formula $P:D_{P}\subseteq\omega^{n}\times\Sigma^{\ast m}\times\Sigma^{\ast}\rightarrow\omega$
+\end_inset
+
+ un predicado, entonces
+\begin_inset Formula 
+\begin{align*}
+D_{M^{\leq}(P)} & =\left\{ (\vec{x},\vec{\alpha})\in\omega^{n}\times\Sigma^{\ast m}:P(\vec{x},\vec{\alpha},\alpha)\wedge(\forall\beta\in\Sigma^{\ast})_{\beta<\alpha}\lnot P(\vec{x},\vec{\alpha},\beta)\right\} \\
+M^{\leq}(P)(\vec{x},\vec{\alpha}) & =\alpha
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+
+\series bold
+Ejercicio 32:
+\end_layout
+
+\end_inset
+
+Sea 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+ un alfabeto no vacio y sea 
+\begin_inset Formula $\leq$
+\end_inset
+
+ un orden total sobre 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+.
+ Sea 
+\begin_inset Formula $P=\lambda\alpha_{1}\alpha_{2}\alpha\left[\alpha_{1}\alpha=\alpha_{2}\right]$
+\end_inset
+
+.
+ Describa la funcion 
+\begin_inset Formula $M^{\leq}(P)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+Ejercicio 32,3:
+\end_layout
+
+\end_inset
+
+(S) Sea 
+\begin_inset Formula $M=\left(Q,\Sigma,\Gamma,\delta,q_{0},B,F\right)$
+\end_inset
+
+ una maquina de Turing y supongamos 
+\begin_inset Formula $Q$
+\end_inset
+
+ es un alfabeto disjunto con 
+\begin_inset Formula $\Gamma$
+\end_inset
+
+.
+ Usaremos la notacion lambda respecto del alfabeto 
+\begin_inset Formula $\Gamma\cup Q$
+\end_inset
+
+.
+ Sea 
+\begin_inset Formula $\leq$
+\end_inset
+
+ un orden total sobre 
+\begin_inset Formula $\Gamma\cup Q$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Sea 
+\begin_inset Formula $P=\lambda\alpha_{1}\alpha[\alpha\in Q$
+\end_inset
+
+ y 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ ocurre en 
+\begin_inset Formula $\alpha_{1}]$
+\end_inset
+
+.
+ Encuentre 
+\begin_inset Formula $D_{M^{\leq}(P)}$
+\end_inset
+
+.
+ Que relacion hay entre la funcion 
+\begin_inset Formula $St:Des\rightarrow Q$
+\end_inset
+
+ y 
+\begin_inset Formula $M^{\leq}(P)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Encuentre un predicado 
+\begin_inset Formula $R$
+\end_inset
+
+ (modificando 
+\begin_inset Formula $P$
+\end_inset
+
+) tal que 
+\begin_inset Formula $M^{\leq}(R)=St$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Pruebe que 
+\begin_inset Formula $St$
+\end_inset
+
+ es 
+\begin_inset Formula $(\Gamma\cup Q)$
+\end_inset
+
+-p.r.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+Conjuntos 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-recursivamente enumerables
+\end_layout
+
+\begin_layout Standard
+Ya que la nocion de funcion 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-recursiva es el modelo matematico Godeliano del concepto de funcion 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-efectivamente computable, nos podriamos preguntar entonces cual es el modelo
+ matematico Godeliano del concepto de conjunto 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-efectivamente enumerable.
+ Si prestamos atencion a la definicion de conjunto 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-efectivamente enumerable, notaremos que depende de la existencia de ciertas
+ funciones 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-efectivamente computables por lo cual la siguiente definicion cae de maduro:
+\end_layout
+
+\begin_layout Standard
+Diremos que un conjunto 
+\begin_inset Formula $S\subseteq\omega^{n}\times\Sigma^{\ast m}$
+\end_inset
+
+ sera llamado 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+
+\shape italic
+-recursivamente enumerable
+\shape default
+ cuando sea vacio o haya una funcion 
+\begin_inset Formula $F:\omega\rightarrow\omega^{n}\times\Sigma^{\ast m}$
+\end_inset
+
+ tal que 
+\begin_inset Formula $I_{F}=S$
+\end_inset
+
+ y 
+\begin_inset Formula $F_{(i)}$
+\end_inset
+
+ sea 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-recursiva, para cada 
+\begin_inset Formula $i\in\{1,...,n+m\}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Deberia entonces quedar claro que si el concepto de funcion 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-recursiva modeliza correctamente al concepto de funcion 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-efectivamente computable, entonces el concepto de conjunto 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-recursivamente enumerable recien definido modeliza correctamente al concepto
+ de conjunto 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-efectivamente enumerable.
+ Sin envargo para probar algunos de los resultados basicos acerca de los
+ conjuntos 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-recursivamente enumerables, deberemos esperar a tener probada la equivalencia
+ del paradigma Godeliano con el imperativo.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+Conjuntos 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-recursivos
+\end_layout
+
+\begin_layout Standard
+La version Godeliana del concepto de conjunto 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-efectivamente computable es facil de dar: un conjunto 
+\begin_inset Formula $S\subseteq\omega^{n}\times\Sigma^{\ast m}$
+\end_inset
+
+ sera llamado 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+
+\shape italic
+-recursivo
+\shape default
+ cuando la funcion 
+\begin_inset Formula $\chi_{S}^{\omega^{n}\times\Sigma^{\ast m}}$
+\end_inset
+
+ sea 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-recursiva.
+ Todo conjunto 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-recursivo es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-recursivamente enumerable pero esto lo probaremos mas adelante junto con
+ otros resultados basicos sobre conjuntos 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-r.e., los cuales se prueban usando el modelo imperativo.
+ Mas adelante daremos un ejemplo natural de un conjunto que es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-r.e.
+ pero el cual no es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-recursivo.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+
+\series bold
+Ejercicio 33:
+\end_layout
+
+\end_inset
+
+Sea 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+ un alfabeto finito.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Si 
+\begin_inset Formula $P:S\subseteq\omega^{n}\times\Sigma^{\ast m}\rightarrow\omega$
+\end_inset
+
+ y 
+\begin_inset Formula $Q:S\subseteq\omega^{n}\times\Sigma^{\ast m}\rightarrow\omega$
+\end_inset
+
+ son predicados 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-r., entonces 
+\begin_inset Formula $(P\vee Q)$
+\end_inset
+
+, 
+\begin_inset Formula $(P\wedge Q)$
+\end_inset
+
+ y 
+\begin_inset Formula $\lnot P$
+\end_inset
+
+ lo son tambien.
+\end_layout
+
+\begin_layout Enumerate
+Supongamos 
+\begin_inset Formula $S_{1},S_{2}\subseteq\omega^{n}\times\Sigma^{\ast m}$
+\end_inset
+
+ son conjuntos 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-recursivos.
+ Entonces 
+\begin_inset Formula $S_{1}\cup S_{2}$
+\end_inset
+
+, 
+\begin_inset Formula $S_{1}\cap S_{2}$
+\end_inset
+
+ y 
+\begin_inset Formula $S_{1}-S_{2}$
+\end_inset
+
+ son 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-recursivos 
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+Independencia del alfabeto
+\end_layout
+
+\begin_layout Standard
+El siguiente resultado es conceptualmente muy importante.
+ Su prueba tiene cierta dificultad tecnica por lo cual la omitiremos.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{theorem}
+\end_layout
+
+\end_inset
+
+ Sean 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+ y 
+\begin_inset Formula $\Gamma$
+\end_inset
+
+ alfabetos finitos cualesquiera.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+(a)
+\end_layout
+
+\end_inset
+
+Supongamos una funcion 
+\begin_inset Formula $f$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-mixta y 
+\begin_inset Formula $\Gamma$
+\end_inset
+
+-mixta, entonces 
+\begin_inset Formula $f$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-recursiva (resp.
+ 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-p.r.) sii 
+\begin_inset Formula $f$
+\end_inset
+
+ es 
+\begin_inset Formula $\Gamma$
+\end_inset
+
+-recursiva (resp.
+ 
+\begin_inset Formula $\Gamma$
+\end_inset
+
+-p.r.)
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+(b)
+\end_layout
+
+\end_inset
+
+Supongamos un conjunto 
+\begin_inset Formula $S$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-mixto y 
+\begin_inset Formula $\Gamma$
+\end_inset
+
+-mixto, entonces 
+\begin_inset Formula $S$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-recursivo (resp.
+ 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-r.e., 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-p.r.) sii 
+\begin_inset Formula $S$
+\end_inset
+
+ es 
+\begin_inset Formula $\Gamma$
+\end_inset
+
+-recursivo (resp.
+ 
+\begin_inset Formula $\Gamma$
+\end_inset
+
+-r.e., 
+\begin_inset Formula $\Gamma$
+\end_inset
+
+-p.r.) 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{theorem}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+
+\series bold
+Ejercicio 34:
+\end_layout
+
+\end_inset
+
+(S) Explique con palabras por que no es obvio el resultado anterior
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+
+\series bold
+Ejercicio 35:
+\end_layout
+
+\end_inset
+
+(S) Que hubiera implicado acerca de la completitud del modelo Godeliano
+ el hecho de que no fuera cierto (a) del teorema anterior? 
+\end_layout
+
+\end_body
+\end_document

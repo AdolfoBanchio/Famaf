@@ -1,0 +1,4295 @@
+#LyX file created by tex2lyx 2.3
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin C:/diego/materia lenguajes/guias/
+\textclass article
+\begin_preamble
+\setcounter{MaxMatrixCols}{30}%
+\usepackage{amsfonts}\usepackage{graphicx}
+%TCIDATA{OutputFilter=latex2.dll}
+%TCIDATA{Version=5.50.0.2953}
+%TCIDATA{CSTFile=LaTeX article (bright).cst}
+%TCIDATA{Created=Thursday, March 08, 2007 06:44:18}
+%TCIDATA{LastRevised=Sunday, May 26, 2024 18:05:09}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
+%TCIDATA{BibliographyScheme=BibTeX}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="Standard LaTeX\Blank - Standard LaTeX Article">}
+%TCIDATA{Language=American English}
+%TCIDATA{ComputeDefs=
+%$\varepsilon$
+%$F_{V(\mathbf{A})}(x_{1},...,x_{n})=\{t_{1},...,t_{k}\}$
+%}
+%BeginMSIPreambleData
+\providecommand{\U}[1]{\protect\rule{.1in}{.1in}}
+%EndMSIPreambleData
+\newtheorem{theorem}{Theorem}\newtheorem{acknowledgement}[theorem]{Acknowledgement}\newtheorem{algorithm}[theorem]{Algorithm}\newtheorem{axiom}[theorem]{Axiom}\newtheorem{case}[theorem]{Case}\newtheorem{claim}[theorem]{Claim}\newtheorem{conclusion}[theorem]{Conclusion}\newtheorem{condition}[theorem]{Condition}\newtheorem{conjecture}[theorem]{Conjecture}\newtheorem{corollary}[theorem]{Corollary}\newtheorem{criterion}[theorem]{Criterion}\newtheorem{definition}[theorem]{Definition}\newtheorem{example}[theorem]{Example}\newtheorem{exercise}[theorem]{Exercise}\newtheorem{lemma}[theorem]{Lemma}\newtheorem{notation}[theorem]{Notation}\newtheorem{problem}[theorem]{Problem}\newtheorem{proposition}[theorem]{Proposition}\newtheorem{remark}[theorem]{Remark}\newtheorem{solution}[theorem]{Solution}\newtheorem{summary}[theorem]{Summary}\newenvironment{proof}[1][Proof]{\noindent\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+
+\end_preamble
+\use_default_options false
+\maintain_unincluded_children false
+\language english
+\language_package none
+\inputencoding auto
+\fontencoding default
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 2
+\use_package amssymb 2
+\use_package cancel 0
+\use_package esint 1
+\use_package mathdots 0
+\use_package mathtools 0
+\use_package mhchem 0
+\use_package stackrel 0
+\use_package stmaryrd 0
+\use_package undertilde 0
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+Nota: Los ejercicios que tienen (S) son para una 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+"
+\end_layout
+
+\end_inset
+
+Segunda vuelta
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+"
+\end_layout
+
+\end_inset
+
+ es decir conviene hacerlos una vez que ya se completó la guía haciendo los otros y ya se tiene mas madurez e intuición basica sobre los conceptos. Los que tienen (O) son opcionales por lo cual no se toman en los examenes.
+\end_layout
+
+\begin_layout Section*
+Batallas entre paradigmas
+\end_layout
+
+\begin_layout Standard
+En esta guia compararemos los tres paradigmas de computabilidad efectiva que hemos desarrollado anteriormente. Para esto probaremos que cada uno de dichos paradigmas 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+"
+\end_layout
+
+\end_inset
+
+vence
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+"
+\end_layout
+
+\end_inset
+
+ al otro en el sentido que incluye por lo menos todas las funciones que incluye el otro en su modelizacion del concepto de funcion 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-efectivamente computable. Por supuesto, esto dice que los tres son equivalentes.
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+Neumann vence a Godel
+\end_layout
+
+\begin_layout Standard
+Usando macros podemos ahora probar que el paradigma imperativo de Neumann es por lo menos tan abarcativo como el funcional de Godel. Mas concretamente:
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+begin{theorem}
+\end_layout
+
+\end_inset
+
+ Si 
+\begin_inset Formula $h$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-recursiva, entonces 
+\begin_inset Formula $h$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+
+\shape italic
+-
+\shape default
+computable. 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+end{theorem}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+begin{proof}
+\end_layout
+
+\end_inset
+
+ Probaremos por induccion en 
+\begin_inset Formula $k$
+\end_inset
+
+ que
+\end_layout
+
+\begin_layout Enumerate
+
+\begin_inset Argument item:1
+status collapsed
+
+
+\begin_layout Standard
+(*)
+\end_layout
+
+\end_inset
+
+Si 
+\begin_inset Formula $h\in\mathrm{R}_{k}^{\Sigma}$
+\end_inset
+
+, entonces 
+\begin_inset Formula $h$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma
+$
+\end_inset
+
+
+\shape italic
+-
+\shape default
+computable. 
+\end_layout
+
+\begin_layout Standard
+\noindent
+El caso 
+\begin_inset Formula $k=0$
+\end_inset
+
+ es dejado al lector. Supongamos (*) vale para 
+\begin_inset Formula $k$
+\end_inset
+
+, veremos que vale para 
+\begin_inset Formula $k+1$
+\end_inset
+
+. Sea 
+\begin_inset Formula $h\in\mathrm{R}_{k+1}^{\Sigma}-\mathrm{R}_{k}^{\Sigma}$
+\end_inset
+
+. Hay varios casos
+\end_layout
+
+\begin_layout Standard
+Caso 1. Supongamos 
+\begin_inset Formula $h=M(P)$
+\end_inset
+
+, con 
+\begin_inset Formula $P:\omega\times\omega^{n}\times\Sigma^{\ast
+m}\rightarrow\omega$
+\end_inset
+
+, un predicado perteneciente a 
+\begin_inset Formula $\mathrm{R}_{k}^{\Sigma}$
+\end_inset
+
+. Por hipotesis inductiva, 
+\begin_inset Formula $P$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+
+\shape italic
+-
+\shape default
+computable y por lo tanto tenemos un macro
+\begin_inset Formula \[
+\left[  \mathrm{IF}\;P(\mathrm{V}1,...,\mathrm{V}\overline{n+1},\mathrm{W}1,...,\mathrm{W}\bar{m})\;\mathrm{GOTO}\;\mathrm{A}1\right]
+\]
+\end_inset
+
+lo cual nos permite realizar el siguiente programa
+\begin_inset Formula \[\begin{array}
+[c]{ll}\mathrm{L}2 & \left[  \mathrm{IF}\;P(\mathrm{N}\overline{n+1},\mathrm{N}1,...,\mathrm{N}\bar{n},\mathrm{P}1,...,\mathrm{P}\bar{m})\;\mathrm{GOTO}\;\mathrm{L}1\right] \\
+& \mathrm{N}\overline{n+1}\leftarrow\mathrm{N}\overline{n+1}+1\\
+& \mathrm{GOTO}\;\mathrm{L}2\\
+\mathrm{L}1 & \mathrm{N}1\leftarrow\mathrm{N}\overline{n+1}\end{array}
+\]
+\end_inset
+
+Es facil chequear que este programa computa 
+\begin_inset Formula $h.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Caso 2. Supongamos 
+\begin_inset Formula $h=R(f,\mathcal{G})$
+\end_inset
+
+, con
+\begin_inset Formula \begin{align*}
+f  & :S_{1}\times...\times S_{n}\times L_{1}\times...\times L_{m}\rightarrow\Sigma^{\ast}\\
+\mathcal{G}_{a}  & :S_{1}\times...\times S_{n}\times L_{1}\times...\times
+L_{m}\times\Sigma^{\ast}\times\Sigma^{\ast}\rightarrow\Sigma^{\ast}\text{,
+}a\in\Sigma
+\end{align*}
+\end_inset
+
+elementos de 
+\begin_inset Formula $\mathrm{R}_{k}^{\Sigma}$
+\end_inset
+
+. Sea 
+\begin_inset Formula $\Sigma=\{a_{1},...,a_{r}\}.$
+\end_inset
+
+ Por hipotesis inductiva, las funciones 
+\begin_inset Formula $f$
+\end_inset
+
+, 
+\begin_inset Formula $\mathcal{G}_{a}$
+\end_inset
+
+, 
+\begin_inset Formula $a\in\Sigma$
+\end_inset
+
+, son 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+
+\shape italic
+-
+\shape default
+computables y por lo tanto podemos hacer el siguiente programa via el uso de macros
+\begin_inset Formula \[\begin{array}
+[c]{rl}
+& \left[  \mathrm{P}\overline{m+3}\leftarrow f(\mathrm{N}1,...,\mathrm{N}\bar{n},\mathrm{P}1,...,\mathrm{P}\bar{m})\right] \\
+\mathrm{L}\overline{r+1} & \mathrm{IF}\;\mathrm{P}\overline{m+1}\ \mathrm{BEGINS\ }a_{1}\text{ }\mathrm{GOTO}\;\mathrm{L}1\\
+& \ \ \ \ \ \ \ \ \ \ \ \ \vdots\\
+& \mathrm{IF}\;\mathrm{P}\overline{m+1}\ \mathrm{BEGINS\ }a_{r}\text{
+}\mathrm{GOTO}\;\mathrm{L}\bar{r}\\
+& \mathrm{GOTO}\;\mathrm{L}\overline{r+2}\\
+\mathrm{L}1 & \mathrm{P}\overline{m+1}\leftarrow\text{ }^{\curvearrowright
+}\mathrm{P}\overline{m+1}\\
+& \left[  \mathrm{P}\overline{m+3}\leftarrow\mathcal{G}_{a_{1}}(\mathrm{N}1,...,\mathrm{N}\bar{n},\mathrm{P}1,...,\mathrm{P}\bar{m},\mathrm{P}\overline{m+2},\mathrm{P}\overline{m+3})\right] \\
+& \mathrm{P}\overline{m+2}\leftarrow\mathrm{P}\overline{m+2}.a_{1}\\
+& \mathrm{GOTO}\;\mathrm{L}\overline{r+1}\\
+& \ \ \ \ \ \ \ \ \ \ \ \ \vdots\\
+\mathrm{L}\bar{r} & \mathrm{P}\overline{m+1}\leftarrow\text{ }^{\curvearrowright}\mathrm{P}\overline{m+1}\\
+& \left[  \mathrm{P}\overline{m+3}\leftarrow\mathcal{G}_{a_{r}}(\mathrm{N}1,...,\mathrm{N}\bar{n},\mathrm{P}1,...,\mathrm{P}\bar{m},\mathrm{P}\overline{m+2},\mathrm{P}\overline{m+3})\right] \\
+& \mathrm{P}\overline{m+2}\leftarrow\mathrm{P}\overline{m+2}.a_{r}\\
+& \mathrm{GOTO}\;\mathrm{L}\overline{r+1}\\
+\mathrm{L}\overline{r+2} & \mathrm{P}1\leftarrow\mathrm{P}\overline{m+3}\end{array}
+\]
+\end_inset
+
+Es facil chequear que este programa computa 
+\begin_inset Formula $h.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+El resto de los casos son dejados al lector. 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+end{proof}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+begin{corollary}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "recursivo implica macro"
+
+\end_inset
+
+Si
+\begin_inset Formula \begin{align*}
+f  & :D_{f}\subseteq\omega^{n}\times\Sigma^{\ast}{}^{m}\rightarrow\omega\\
+g  & :D_{g}\subseteq\omega^{n}\times\Sigma^{\ast}{}^{m}\rightarrow\Sigma
+^{\ast}\\
+P  & :D_{P}\subseteq\omega^{n}\times\Sigma^{\ast}{}^{m}\rightarrow\{0,1\}
+\end{align*}
+\end_inset
+
+son 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-recursivas, entonces hay macros
+\begin_inset Formula \begin{align*}
+& \left[  \mathrm{V}\overline{n+1}\leftarrow f(\mathrm{V}1,...,\mathrm{V}\bar{n},\mathrm{W}1,...,\mathrm{W}\bar{m})\right] \\
+& \left[  \mathrm{W}\overline{m+1}\leftarrow g(\mathrm{V}1,...,\mathrm{V}\bar{n},\mathrm{W}1,...,\mathrm{W}\bar{m})\right] \\
+& \left[  \mathrm{IF}\;P(\mathrm{V}1,...,\mathrm{V}\bar{n},\mathrm{W}1,...,\mathrm{W}\bar{m})\;\mathrm{GOTO}\;\mathrm{A}1\right]
+\end{align*}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+end{corollary}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+
+\begin_inset Argument item:1
+status collapsed
+
+
+\begin_layout Standard
+
+\series bold
+Ejercicio 1:
+\series default
+
+\end_layout
+
+\end_inset
+
+Pruebe el corolario anterior. 
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
+Se lleno de macros
+\end_layout
+
+\begin_layout Standard
+Cabe destacar que el corolario anterior nos dice que hay macros
+\begin_inset Formula \begin{align*}
+& \left[  \mathrm{V}\overline{n+1}\leftarrow f(\mathrm{V}1,...,\mathrm{V}\bar{n},\mathrm{W}1,...,\mathrm{W}\bar{m})\right] \\
+& \left[  \mathrm{W}\overline{m+1}\leftarrow g(\mathrm{V}1,...,\mathrm{V}\bar{n},\mathrm{W}1,...,\mathrm{W}\bar{m})\right] \\
+& \left[  \mathrm{IF}\;P(\mathrm{V}1,...,\mathrm{V}\bar{n},\mathrm{W}1,...,\mathrm{W}\bar{m})\;\mathrm{GOTO}\;\mathrm{A}1\right]
+\end{align*}
+\end_inset
+
+para todas las funciones 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-mixtas y predicados 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-mixtos que hemos trabajado hasta el momento en la materia ya que todas eran 
+\begin_inset Formula $\Sigma
+$
+\end_inset
+
+-p.r.. Esto transforma al lenguaje 
+\begin_inset Formula $\mathcal{S}^{\Sigma}$
+\end_inset
+
+ en un potente y relativamente comodo lenguaje de programacion ya que ahora tenemos macros para todas las funciones y predicados cotidianos en la matematica. Por ejemplo a continuacion usaremos la existencia de los macros 
+\begin_inset Formula $[\mathrm{IF\ V}1 $
+\end_inset
+
+ es par
+\begin_inset Formula $\ \mathrm{GOTO\ A}1]$
+\end_inset
+
+ y 
+\begin_inset Formula $[\mathrm{V}2\leftarrow\lfloor\mathrm{V}1/2\rfloor]$
+\end_inset
+
+ para probar el siguiente resultado cuya prueba esta inspirada en su analoga del paradigma de computabilidad efectiva.
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+begin{lemma}
+\end_layout
+
+\end_inset
+
+ Supongamos 
+\begin_inset Formula $S_{1},S_{2}\subseteq\omega^{n}\times\Sigma^{\ast m}$
+\end_inset
+
+ son conjuntos 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-enumerables. Entonces 
+\begin_inset Formula $S_{1}\cup S_{2}$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-enumerable. 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+end{lemma}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+begin{proof}
+\end_layout
+
+\end_inset
+
+ Podemos suponer que ni 
+\begin_inset Formula $S_{1}$
+\end_inset
+
+ ni 
+\begin_inset Formula $S_{2}$
+\end_inset
+
+ son vacios ya que de lo contrario los resultados son triviales. Ademas supondremos que 
+\begin_inset Formula $n=2$
+\end_inset
+
+ y 
+\begin_inset Formula $m=1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+La idea de la prueba es la misma que la que usamos para probar que la union de conjuntos 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-efectivamente enumerables es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-efectivamente enumerable. Daremos usando macros un programa que enumera a 
+\begin_inset Formula $S_{1}\cup S_{2}$
+\end_inset
+
+ y luego aplicaremos la proposicion del final de la Guia 7. Por hipotesis hay funciones 
+\begin_inset Formula $F:\omega\rightarrow\omega\times\omega\times\Sigma^{\ast}$
+\end_inset
+
+ y 
+\begin_inset Formula $G:\omega\rightarrow\omega\times\omega\times\Sigma^{\ast}$
+\end_inset
+
+ tales que 
+\begin_inset Formula $F_{(1)}$
+\end_inset
+
+, 
+\begin_inset Formula $F_{(2)}$
+\end_inset
+
+, 
+\begin_inset Formula $F_{(3)}$
+\end_inset
+
+, 
+\begin_inset Formula $G_{(1)}$
+\end_inset
+
+, 
+\begin_inset Formula $G_{(2)}$
+\end_inset
+
+ y 
+\begin_inset Formula $G_{(3)}$
+\end_inset
+
+ son 
+\begin_inset Formula $\Sigma
+$
+\end_inset
+
+-computables, 
+\begin_inset Formula $\operatorname{Im}(F)=S_{1}$
+\end_inset
+
+ y 
+\begin_inset Formula $\operatorname{Im}(G)=S_{2}$
+\end_inset
+
+. O sea que hay macros
+\begin_inset Formula \begin{align*}
+& \left[  \mathrm{V}2\leftarrow F_{(1)}(\mathrm{V}1)\right] \\
+& \left[  \mathrm{V}2\leftarrow F_{(2)}(\mathrm{V}1)\right] \\
+& \left[  \mathrm{W}1\leftarrow F_{(3)}(\mathrm{V}1)\right] \\
+& \left[  \mathrm{V}2\leftarrow G_{(1)}(\mathrm{V}1)\right] \\
+& \left[  \mathrm{V}2\leftarrow G_{(2)}(\mathrm{V}1)\right] \\
+& \left[  \mathrm{W}1\leftarrow G_{(3)}(\mathrm{V}1)\right]
+\end{align*}
+\end_inset
+
+Ya que el predicado 
+\begin_inset Formula $Par=\lambda x[x$
+\end_inset
+
+ es par
+\begin_inset Formula $]$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-p.r., el Corolario 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "recursivo implica macro"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ nos dice que hay un macro:
+\begin_inset Formula \[
+\lbrack\mathrm{IF\ }Par(\mathrm{V}1)\ \mathrm{GOTO\ A}1]
+\]
+\end_inset
+
+el cual escribiremos de la siguiente manera mas intuitiva
+\begin_inset Formula \[
+\lbrack\mathrm{IF\ V}1\text{ es par }\mathrm{GOTO\ A}1]
+\]
+\end_inset
+
+Ya que la funcion 
+\begin_inset Formula $D=\lambda x[\lfloor x/2\rfloor]$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-p.r., el Corolario 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "recursivo implica macro"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ nos dice que hay un macro:
+\begin_inset Formula \[
+\lbrack\mathrm{V}2\leftarrow D(\mathrm{V}1)]
+\]
+\end_inset
+
+el cual escribiremos de la siguiente manera mas intuitiva
+\begin_inset Formula \[
+\lbrack\mathrm{V}2\leftarrow\lfloor\mathrm{V}1/2\rfloor]
+\]
+\end_inset
+
+Sea 
+\begin_inset Formula $\mathcal{P}$
+\end_inset
+
+ el siguiente programa:
+\begin_inset Formula \[\begin{array}
+[c]{ll}
+& [\mathrm{IF\ N}1\text{ es par }\mathrm{GOTO\ L}1\\
+& \mathrm{N}1\leftarrow\mathrm{N}1\dot{-}1\\
+& [\mathrm{N}1111\leftarrow\lfloor\mathrm{N}1/2\rfloor]\\
+& \left[  \mathrm{N}1\leftarrow G_{(1)}(\mathrm{N}1111)\right] \\
+& \left[  \mathrm{N}2\leftarrow G_{(2)}(\mathrm{N}1111)\right] \\
+& \left[  \mathrm{P}1\leftarrow G_{(3)}(\mathrm{N}1111)\right] \\
+& \mathrm{GOTO\ L}2\\
+\mathrm{L}1 & [\mathrm{N}1111\leftarrow\lfloor\mathrm{N}1/2\rfloor]\\
+& \left[  \mathrm{N}1\leftarrow F_{(1)}(\mathrm{N}1111)\right] \\
+& \left[  \mathrm{N}2\leftarrow F_{(2)}(\mathrm{N}1111)\right] \\
+& \left[  \mathrm{P}1\leftarrow F_{(3)}(\mathrm{N}1111)\right] \\
+\mathrm{L}2 & \mathrm{SKIP}\end{array}
+\]
+\end_inset
+
+Es facil ver que 
+\begin_inset Formula $\mathcal{P}$
+\end_inset
+
+ cumple a y b de (2) de la proposicion del final de la Guia 7 por lo cual 
+\begin_inset Formula $S_{1}\cup S_{2}$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-enumerable. 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+end{proof}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Tal como se vio en este ejemplo, el Corolario 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "recursivo implica macro"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ junto con nuestra gran coleccion de funciones ya probadamente 
+\begin_inset Formula $\Sigma
+$
+\end_inset
+
+-recursivas, nos permite simular con programas muchos de los procedimientos efectivos realizados anteriormente. A continuacion algunos ejercicios para afianzar mas esta idea.
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+
+\begin_inset Argument item:1
+status collapsed
+
+
+\begin_layout Standard
+
+\series bold
+Ejercicio 2:
+\series default
+
+\end_layout
+
+\end_inset
+
+Pruebe que 
+\begin_inset Formula $\omega\times\omega\times\Sigma^{\ast
+}$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-enumerable (Hint: usando macros (asociados a las 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+"
+\end_layout
+
+\end_inset
+
+bajadas
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+"
+\end_layout
+
+\end_inset
+
+ y a 
+\begin_inset Formula $\ast^{\leq}$
+\end_inset
+
+) haga un programa que enumere a 
+\begin_inset Formula $\omega\times\omega\times
+\Sigma^{\ast}$
+\end_inset
+
+, es decir que cumpla a y b de (2) de la proposicion del final de la Guia 7)
+\end_layout
+
+\begin_layout Enumerate
+
+\begin_inset Argument item:1
+status collapsed
+
+
+\begin_layout Standard
+
+\series bold
+Ejercicio 3:
+\series default
+
+\end_layout
+
+\end_inset
+
+Supongamos 
+\begin_inset Formula $S_{1},S_{2}\subseteq\omega^{n}\times\Sigma^{\ast m}$
+\end_inset
+
+ son conjuntos 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-enumerables. Entonces 
+\begin_inset Formula $S_{1}\cap
+S_{2}$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-enumerable. (Hacer el caso 
+\begin_inset Formula $n=2$
+\end_inset
+
+, 
+\begin_inset Formula $m=1$
+\end_inset
+
+ e inspirese en el paradigma efectivo) 
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+En la Guia 3 probamos que si 
+\begin_inset Formula $S\subseteq\omega^{n}\times\Sigma^{\ast m}$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-efectivamente computable entonces 
+\begin_inset Formula $S$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-efectivamente enumerable. Via el uso de macros adecuados podemos copiar la idea de la prueba de dicho resultado para probar el siguiente
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+begin{lemma}
+\end_layout
+
+\end_inset
+
+ Sea 
+\begin_inset Formula $S\subseteq\omega^{n}\times\Sigma^{\ast m}$
+\end_inset
+
+. Si 
+\begin_inset Formula $S$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma
+$
+\end_inset
+
+-computable, entonces 
+\begin_inset Formula $S$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-enumerable 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+end{lemma}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+
+\begin_inset Argument item:1
+status collapsed
+
+
+\begin_layout Standard
+
+\series bold
+Ejercicio 4:
+\series default
+
+\end_layout
+
+\end_inset
+
+Pruebe el lema anterior (haga el caso 
+\begin_inset Formula $n=2$
+\end_inset
+
+, 
+\begin_inset Formula $m=1$
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Enumerate
+
+\begin_inset Argument item:1
+status collapsed
+
+
+\begin_layout Standard
+
+\series bold
+Ejercicio 5:
+\series default
+
+\end_layout
+
+\end_inset
+
+Si 
+\begin_inset Formula $S\subseteq\Sigma^{\ast}$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma
+$
+\end_inset
+
+-enumerable, entonces
+\begin_inset Formula \[
+T=\{\alpha\in\Sigma^{\ast}:\mathrm{existe}\ \beta\in S\ \mathrm{tal\ que\ }\alpha\ \mathrm{es\ subpalabra\ de\ }\beta\}
+\]
+\end_inset
+
+también es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-enumerable. 
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Mas capacidad de simulacion obtendremos luego de ver que Godel vence a Neumann ya que la equivalencia de estos dos paradigmas nos asegura la existencia de macros que permitiran dentro de un programa hablar acerca del funcionamiento de otro programa. Esto sera clave a la hora de simular con programas a procedimientos efectivos que en su funcionamiento involucran el funcionamiento de otros procedimientos.
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+Godel vence a Neumann
+\end_layout
+
+\begin_layout Standard
+Primero definiremos tres funciones las cuales contienen toda la informacion acerca del funcionamiento del lenguaje 
+\begin_inset Formula $\mathcal{S}^{\Sigma}$
+\end_inset
+
+. Sean 
+\begin_inset Formula $n,m\in\omega$
+\end_inset
+
+, fijos. Definamos
+\begin_inset Formula \begin{align*}
+i^{n,m}  & :\omega\times\omega^{n}\times\Sigma^{\ast m}\times\mathrm{Pro}^{\Sigma}\rightarrow\omega\\
+E_{\#}^{n,m}  & :\omega\times\omega^{n}\times\Sigma^{\ast m}\times
+\mathrm{Pro}^{\Sigma}\rightarrow\omega^{\lbrack\mathbf{N}]}\\
+E_{\ast}^{n,m}  & :\omega\times\omega^{n}\times\Sigma^{\ast m}\times
+\mathrm{Pro}^{\Sigma}\rightarrow\Sigma^{\ast\lbrack\mathbf{N}]}\end{align*}
+\end_inset
+
+de la siguiente manera
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+
+\begin_inset Argument item:1
+status collapsed
+
+
+\begin_layout Standard
+ 
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $(i^{n,m}(0,\vec{x},\vec{\alpha},\mathcal{P}),E_{\#}^{n,m}(0,\vec
+{x},\vec{\alpha},\mathcal{P}),E_{\ast}^{n,m}(0,\vec{x},\vec{\alpha
+},\mathcal{P}))=(1,(x_{1},...,x_{n},0,...),(\alpha_{1},...,\alpha
+_{m},\varepsilon,...)) $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+
+\begin_inset Argument item:1
+status collapsed
+
+
+\begin_layout Standard
+ 
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $(i^{n,m}(t+1,\vec{x},\vec{\alpha},\mathcal{P}),E_{\#}^{n,m}(t+1,\vec{x},\vec{\alpha},\mathcal{P}),E_{\ast}^{n,m}(t+1,\vec{x},\vec{\alpha
+},\mathcal{P}))=$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+\begin_inset Formula $\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =S_{\mathcal{P}}(i^{n,m}(t,\vec{x},\vec{\alpha},\mathcal{P}),E_{\#}^{n,m}(t,\vec{x},\vec{\alpha},\mathcal{P}),E_{\ast}^{n,m}(t,\vec{x},\vec{\alpha},\mathcal{P}))$
+\end_inset
+
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\noindent
+Notese que
+\begin_inset Formula \[
+(i^{n,m}(t,\vec{x},\vec{\alpha},\mathcal{P}),E_{\#}^{n,m}(t,\vec{x},\vec{\alpha},\mathcal{P}),E_{\ast}^{n,m}(t,\vec{x},\vec{\alpha},\mathcal{P}))
+\]
+\end_inset
+
+es la descripcion instantanea que se obtiene luego de correr 
+\begin_inset Formula $\mathcal{P}$
+\end_inset
+
+ una cantidad 
+\begin_inset Formula $t$
+\end_inset
+
+ de pasos partiendo del estado
+\begin_inset Formula \[
+((x_{1},...,x_{n},0,...),(\alpha_{1},...,\alpha_{m},\varepsilon,...))
+\]
+\end_inset
+
+Es importante notar que si bien 
+\begin_inset Formula $i^{n,m}$
+\end_inset
+
+ es una funcion 
+\begin_inset Formula $(\Sigma\cup
+\Sigma_{p})$
+\end_inset
+
+-mixta, ni 
+\begin_inset Formula $E_{\#}^{n,m}$
+\end_inset
+
+ ni 
+\begin_inset Formula $E_{\ast}^{n,m}$
+\end_inset
+
+ lo son.
+\end_layout
+
+\begin_layout Standard
+Definamos para cada 
+\begin_inset Formula $j\in\mathbf{N}$
+\end_inset
+
+, funciones
+\begin_inset Formula \begin{align*}
+E_{\#j}^{n,m}  & :\omega\times\omega^{n}\times\Sigma^{\ast m}\times
+\mathrm{Pro}^{\Sigma}\rightarrow\omega\\
+E_{\ast j}^{n,m}  & :\omega\times\omega^{n}\times\Sigma^{\ast m}\times\mathrm{Pro}^{\Sigma}\rightarrow\Sigma^{\ast}\end{align*}
+\end_inset
+
+de la siguiente manera
+\begin_inset Formula \begin{align*}
+E_{\#j}^{n,m}(t,\vec{x},\vec{\alpha},\mathcal{P})  & =j\text{-esima coordenada
+de }E_{\#}^{n,m}(t,\vec{x},\vec{\alpha},\mathcal{P})\\
+E_{\ast j}^{n,m}(t,\vec{x},\vec{\alpha},\mathcal{P})  & =j\text{-esima
+coordenada de }E_{\ast}^{n,m}(t,\vec{x},\vec{\alpha},\mathcal{P})
+\end{align*}
+\end_inset
+
+(es claro que estas funciones son 
+\begin_inset Formula $(\Sigma\cup\Sigma_{p})$
+\end_inset
+
+-mixtas). Notese que
+\begin_inset Formula \begin{align*}
+E_{\#}^{n,m}(t,\vec{x},\vec{\alpha},\mathcal{P})  & =(E_{\#1}^{n,m}(t,\vec
+{x},\vec{\alpha},\mathcal{P}),E_{\#2}^{n,m}(t,\vec{x},\vec{\alpha},\mathcal{P}),...)\\
+E_{\ast}^{n,m}(t,\vec{x},\vec{\alpha},\mathcal{P})  & =(E_{\ast1}^{n,m}(t,\vec{x},\vec{\alpha},\mathcal{P}),E_{\ast2}^{n,m}(t,\vec{x},\vec{\alpha
+},\mathcal{P}),...)
+\end{align*}
+\end_inset
+
+Aceptaremos sin prueba la siguiente proposicion.
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+begin{proposition}
+\end_layout
+
+\end_inset
+
+ Sean 
+\begin_inset Formula $n,m\geq0$
+\end_inset
+
+. Las funciones 
+\begin_inset Formula $i^{n,m}$
+\end_inset
+
+, 
+\begin_inset Formula $E_{\#j}^{n,m}$
+\end_inset
+
+, 
+\begin_inset Formula $E_{\ast j}^{n,m}
+$
+\end_inset
+
+, 
+\begin_inset Formula $j=1,2,...$
+\end_inset
+
+, son 
+\begin_inset Formula $(\Sigma\cup\Sigma_{p})$
+\end_inset
+
+-p.r. 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+end{proposition}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+Las funciones 
+\begin_inset Formula $Halt^{n,m}$
+\end_inset
+
+ y 
+\begin_inset Formula $T^{n,m}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Dados 
+\begin_inset Formula $n,m\in\omega$
+\end_inset
+
+, definamos:
+\begin_inset Formula \[
+Halt^{n,m}=\lambda t\vec{x}\vec{\alpha}\mathcal{P}\left[  i^{n,m}(t,\vec
+{x},\vec{\alpha},\mathcal{P})=n(\mathcal{P})+1\right]
+\]
+\end_inset
+
+Notese que 
+\begin_inset Formula $D_{Halt^{n,m}}=\omega\times\omega^{n}\times\Sigma^{\ast m}\times\mathrm{Pro}^{\Sigma}$
+\end_inset
+
+ (ojo que aqui la notacion lambda es respecto del alfabeto 
+\begin_inset Formula $\Sigma\cup\Sigma_{p}$
+\end_inset
+
+). Ademas notese que usamos la variable 
+\begin_inset Formula $\mathcal{P}$
+\end_inset
+
+ en la notacion lambda por un tema de comodidad psicologica dado que 
+\begin_inset Formula $i^{n,m}$
+\end_inset
+
+ esta definida solo cuando la ultima coordenada es un programa pero podriamos haber escrito 
+\begin_inset Formula $\lambda t\vec{x}\vec{\alpha}\alpha\left[
+i^{n,m}(t,\vec{x},\vec{\alpha},\alpha)=n(\alpha)+1\right]  $
+\end_inset
+
+ y sigue siendo la misma funcion.
+\end_layout
+
+\begin_layout Standard
+Cabe destacar que 
+\begin_inset Formula $Halt^{n,m}$
+\end_inset
+
+ tiene una descripcion muy intuitiva, ya que dado 
+\begin_inset Formula $(t,\vec{x},\vec{\alpha},\mathcal{P})\in\omega\times\omega^{n}\times\Sigma^{\ast m}\times\mathrm{Pro}^{\Sigma}$
+\end_inset
+
+, tenemos que 
+\begin_inset Formula $Halt^{n,m}(t,\vec{x},\vec{\alpha},\mathcal{P})=1$
+\end_inset
+
+ si y solo si el programa 
+\begin_inset Formula $\mathcal{P}$
+\end_inset
+
+ se detiene luego de 
+\begin_inset Formula $t$
+\end_inset
+
+ pasos partiendo desde el estado 
+\begin_inset Formula $\left\Vert
+x_{1},...,x_{n},\alpha_{1},...,\alpha_{m}\right\Vert $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Aceptaremos sin demostracion el siguiente lema (ver el apunte por una prueba).
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+begin{lemma}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "Pro-es-pr"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+
+\begin_inset Argument item:1
+status collapsed
+
+
+\begin_layout Standard
+(a)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\mathrm{Pro}^{\Sigma}$
+\end_inset
+
+ es un conjunto 
+\begin_inset Formula $(\Sigma\cup\Sigma_{p}) $
+\end_inset
+
+-p.r.
+\end_layout
+
+\begin_layout Enumerate
+
+\begin_inset Argument item:1
+status collapsed
+
+
+\begin_layout Standard
+(b)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\lambda\mathcal{P}\left[  n(\mathcal{P})\right]  $
+\end_inset
+
+ y 
+\begin_inset Formula $\lambda
+i\mathcal{P}\left[  I_{i}^{\mathcal{P}}\right]  $
+\end_inset
+
+ son funciones 
+\begin_inset Formula $(\Sigma
+\cup\Sigma_{p})$
+\end_inset
+
+-p.r.. 
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+end{lemma}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+
+\begin_inset Argument item:1
+status collapsed
+
+
+\begin_layout Standard
+Ejercicio 5,5:
+\end_layout
+
+\end_inset
+
+De una funcion 
+\begin_inset Formula $f:\omega\times\mathrm{Pro}^{\Sigma
+}\rightarrow\mathrm{Pro}^{\Sigma}$
+\end_inset
+
+ la cual sea 
+\begin_inset Formula $(\Sigma\cup\Sigma_{p})$
+\end_inset
+
+-p.r. y cumpla que
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+
+\begin_inset Formula $D_{\Psi_{f(x,\mathcal{P})}^{0,1,\#}}=D_{\Psi_{\mathcal{P}}^{0,1,\#}} $
+\end_inset
+
+, para cada 
+\begin_inset Formula $x\in\omega$
+\end_inset
+
+ y 
+\begin_inset Formula $\mathcal{P}\in\mathrm{Pro}^{\Sigma}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+
+\begin_inset Formula $\Psi_{f(x,\mathcal{P})}^{0,1,\#}(\alpha)=\Psi_{\mathcal{P}}^{0,1,\#}(\alpha)+x$
+\end_inset
+
+, para cada 
+\begin_inset Formula $x\in\omega$
+\end_inset
+
+, 
+\begin_inset Formula $\mathcal{P}\in\mathrm{Pro}^{\Sigma}$
+\end_inset
+
+ y 
+\begin_inset Formula $\alpha\in D_{\Psi_{\mathcal{P}}^{0,1,\#}}$
+\end_inset
+
+ 
+\end_layout
+
+\end_deeper
+\begin_deeper
+\begin_layout Standard
+Pruebe que 
+\begin_inset Formula $f$
+\end_inset
+
+ es 
+\begin_inset Formula $(\Sigma\cup\Sigma_{p})$
+\end_inset
+
+-p.r. 
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Ahora podemos probar el siguiente importante resultado.
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+begin{lemma}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $Halt^{n,m}$
+\end_inset
+
+ es 
+\begin_inset Formula $(\Sigma\cup\Sigma_{p})$
+\end_inset
+
+-p.r. 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+end{lemma}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+begin{proof}
+\end_layout
+
+\end_inset
+
+ Notar que 
+\begin_inset Formula $Halt^{n,m}=\lambda xy[x=y]\circ\left[  i^{n,m},\lambda
+\mathcal{P}[n(\mathcal{P})+1]\circ p_{1+n+m+1}^{1+n,m+1}\right]  $
+\end_inset
+
+. 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+end{proof}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Ahora definamos 
+\begin_inset Formula $T^{n,m}=M(Halt^{n,m})$
+\end_inset
+
+. Notese que
+\begin_inset Formula \[
+D_{T^{n,m}}=\{(\vec{x},\vec{\alpha},\mathcal{P}):\mathcal{P}\text{ se detiene
+partiendo de }\left\Vert x_{1},...,x_{n},\alpha_{1},...,\alpha_{m}\right\Vert
+\}
+\]
+\end_inset
+
+y para 
+\begin_inset Formula $(\vec{x},\vec{\alpha},\mathcal{P})\in D_{T^{n,m}}$
+\end_inset
+
+ tenemos que 
+\begin_inset Formula $T^{n,m}(\vec{x},\vec{\alpha},\mathcal{P})=$
+\end_inset
+
+ cantidad de pasos necesarios para que 
+\begin_inset Formula $\mathcal{P}$
+\end_inset
+
+ se detenga partiendo de 
+\begin_inset Formula $\left\Vert x_{1},...,x_{n},\alpha_{1},...,\alpha_{m}\right\Vert $
+\end_inset
+
+. En algun sentido, la funcion 
+\begin_inset Formula $T^{n,m}$
+\end_inset
+
+ mide el 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+"
+\end_layout
+
+\end_inset
+
+tiempo
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+"
+\end_layout
+
+\end_inset
+
+ que tarda en detenerse 
+\begin_inset Formula $\mathcal{P}$
+\end_inset
+
+ y de ahi su nombre
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+begin{proposition}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $T^{n,m}$
+\end_inset
+
+ es 
+\begin_inset Formula $(\Sigma\cup\Sigma_{p})$
+\end_inset
+
+-recursiva 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+end{proposition}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+begin{proof}
+\end_layout
+
+\end_inset
+
+ Es directo del lema de minimizacion ya que 
+\begin_inset Formula $Halt^{n,m}$
+\end_inset
+
+ es 
+\begin_inset Formula $(\Sigma\cup
+\Sigma_{p})$
+\end_inset
+
+-p.r. 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+end{proof}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Ahora nos sera facil probar que el paradigma de Godel es por lo menos tan abarcativo como el imperativo de Von Neumann. Mas concretamente:
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+begin{theorem}
+\end_layout
+
+\end_inset
+
+ Si 
+\begin_inset Formula $f:D_{f}\subseteq\omega^{n}\times\Sigma^{\ast m}\rightarrow O$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma
+$
+\end_inset
+
+-computable, entonces 
+\begin_inset Formula $f$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-recursiva. 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+end{theorem}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+begin{proof}
+\end_layout
+
+\end_inset
+
+ Haremos el caso 
+\begin_inset Formula $O=\Sigma^{\ast}$
+\end_inset
+
+. Sea 
+\begin_inset Formula $\mathcal{P}_{0}$
+\end_inset
+
+ un programa que compute a 
+\begin_inset Formula $f$
+\end_inset
+
+. Primero veremos que 
+\begin_inset Formula $f$
+\end_inset
+
+ es 
+\begin_inset Formula $(\Sigma\cup\Sigma_{p})$
+\end_inset
+
+-recursiva. Note que
+\begin_inset Formula \[
+f=E_{\ast1}^{n,m}\circ\left[  T^{n,m}\circ\left[  p_{1}^{n,m},...,p_{n+m}^{n,m},C_{\mathcal{P}_{0}}^{n,m}\right]  ,p_{1}^{n,m},...,p_{n+m}^{n,m},C_{\mathcal{P}_{0}}^{n,m}\right]
+\]
+\end_inset
+
+donde cabe destacar que 
+\begin_inset Formula $p_{1}^{n,m},...,p_{n+m}^{n,m}$
+\end_inset
+
+ son las proyecciones respecto del alfabeto 
+\begin_inset Formula $\Sigma\cup\Sigma_{p}$
+\end_inset
+
+, es decir que tienen dominio 
+\begin_inset Formula $\omega^{n}\times(\Sigma\cup\Sigma_{p})^{\ast m}$
+\end_inset
+
+. Esto nos dice que 
+\begin_inset Formula $f$
+\end_inset
+
+ es 
+\begin_inset Formula $(\Sigma\cup\Sigma_{p})$
+\end_inset
+
+-recursiva. O sea que el Teorema de Independencia del Alfabeto nos dice que 
+\begin_inset Formula $f$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-recursiva. 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+end{proof}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Aceptaremos sin prueba la siguiente proposicion.
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+begin{proposition}
+\end_layout
+
+\end_inset
+
+ La funcion 
+\begin_inset Formula $T^{n,m}$
+\end_inset
+
+ no es 
+\begin_inset Formula $(\Sigma\cup\Sigma_{p})$
+\end_inset
+
+-p.r. 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+end{proposition}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+begin{corollary}
+\end_layout
+
+\end_inset
+
+ La minimizacion de un predicado 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-p.r. no necesariamente es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-p.r. 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+end{corollary}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+begin{proof}
+\end_layout
+
+\end_inset
+
+ Por definicion 
+\begin_inset Formula $T^{n,m}=M(Halt^{n,m})$
+\end_inset
+
+. 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+end{proof}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
+Uso de macros asociados a las funciones 
+\begin_inset Formula $Halt^{n,m}$
+\end_inset
+
+, 
+\begin_inset Formula $E_{\#}^{n,m}$
+\end_inset
+
+ y 
+\begin_inset Formula $E_{\ast}^{n,m}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Aqui veremos, con ejemplos, como ciertos macros nos permitiran dentro de un programa hablar acerca del funcionamiento de otro programa. Esto junto con el hecho que cada funcion 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-recursiva y cada predicado 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-recursivo tienen su macro asociado (Corolario 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "recursivo implica macro"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+), sera muy util a la hora del diseño de programas y nos permitira simular dentro del paradigma imperativo muchas ideas usadas para el diseño de procedimientos efectivos. En este sentido la convinacion de los dos paradigmas (recursivo e imperativo) nos permite fortalecer notablemente al paradigma imperativo en su roll modelizador (o simulador) de los procedimientos efectivos. Esto es importante ya que el paradigma mas comodo, amplio e intuitivo, a la hora de decidir si algo es o no computable, es sin duda el filosofico o efectivo.
+\end_layout
+
+\begin_layout Standard
+Sea 
+\begin_inset Formula $\Sigma=\{@,!\}$
+\end_inset
+
+ y sea 
+\begin_inset Formula $\mathcal{P}_{0}\in\mathrm{Pro}^{\Sigma}$
+\end_inset
+
+ tal que 
+\begin_inset Formula $0\in\mathrm{Dom}\Psi_{\mathcal{P}_{0}}^{1,0,\#}$
+\end_inset
+
+ y 
+\begin_inset Formula $\Psi_{\mathcal{P}_{0}}^{1,0,\#}(0)=2$
+\end_inset
+
+. Probaremos que
+\begin_inset Formula \[
+S=\{x\in\mathrm{Dom}\Psi_{\mathcal{P}_{0}}^{1,0,\#}:\Psi_{\mathcal{P}_{0}}^{1,0,\#}(x)\neq0\}
+\]
+\end_inset
+
+es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-enumerable. Notese que 
+\begin_inset Formula $0\in S$
+\end_inset
+
+. Por definicion de conjunto 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-enumerable, deberemos encontrar un programa 
+\begin_inset Formula $\mathcal{P}\in\mathrm{Pro}^{\Sigma}$
+\end_inset
+
+ tal que 
+\begin_inset Formula $\mathrm{Dom}\Psi_{\mathcal{P}}^{1,0,\#}=\omega$
+\end_inset
+
+ y 
+\begin_inset Formula $\operatorname{Im}\Psi_{\mathcal{P}}^{1,0,\#}=S$
+\end_inset
+
+. Dicho en palabras, el programa 
+\begin_inset Formula $\mathcal{P}$
+\end_inset
+
+ debera cumplir:
+\end_layout
+
+\begin_layout Enumerate
+
+\begin_inset Argument item:1
+status collapsed
+
+
+\begin_layout Standard
+-
+\end_layout
+
+\end_inset
+
+siempre que lo corramos desde un estado de la forma 
+\begin_inset Formula $\left\Vert
+x\right\Vert $
+\end_inset
+
+, con 
+\begin_inset Formula $x\in\omega$
+\end_inset
+
+, debe detenerse y el contenido de la variable 
+\begin_inset Formula $\mathrm{N}1$
+\end_inset
+
+ bajo detencion debera ser un elemento de 
+\begin_inset Formula $S$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+
+\begin_inset Argument item:1
+status collapsed
+
+
+\begin_layout Standard
+-
+\end_layout
+
+\end_inset
+
+para cada 
+\begin_inset Formula $s\in S$
+\end_inset
+
+ debera haber un 
+\begin_inset Formula $x\in\omega$
+\end_inset
+
+ tal que 
+\begin_inset Formula $s$
+\end_inset
+
+ es el valor de la variable 
+\begin_inset Formula $\mathrm{N}1$
+\end_inset
+
+ bajo detencion cuando corremos 
+\begin_inset Formula $\mathcal{P}$
+\end_inset
+
+ desde 
+\begin_inset Formula $\left\Vert x\right\Vert $
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+A continuacion daremos una descripcion intuitiva del funcionamiento de 
+\begin_inset Formula $\mathcal{P}$
+\end_inset
+
+ (pseudocodigo) para luego escribirlo correctamente usando macros. El programa 
+\begin_inset Formula $\mathcal{P}$
+\end_inset
+
+ comenzara del estado 
+\begin_inset Formula $\left\Vert
+x\right\Vert $
+\end_inset
+
+ y hara las siguientes tareas
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+
+\begin_inset Argument item:1
+status collapsed
+
+
+\begin_layout Standard
+ 
+\end_layout
+
+\end_inset
+
+Etapa 1: si 
+\begin_inset Formula $x=0$
+\end_inset
+
+ ir a Etapa 6, en caso contrario ir a Etapa 2.
+\end_layout
+
+\begin_layout Enumerate
+
+\begin_inset Argument item:1
+status collapsed
+
+
+\begin_layout Standard
+ 
+\end_layout
+
+\end_inset
+
+Etapa 2: calcular 
+\begin_inset Formula $(x)_{1}$
+\end_inset
+
+ y 
+\begin_inset Formula $(x)_{2}$
+\end_inset
+
+ e ir a Etapa 3.
+\end_layout
+
+\begin_layout Enumerate
+
+\begin_inset Argument item:1
+status collapsed
+
+
+\begin_layout Standard
+ 
+\end_layout
+
+\end_inset
+
+Etapa 3: si 
+\begin_inset Formula $\mathcal{P}_{0}$
+\end_inset
+
+ termina desde 
+\begin_inset Formula $\left\Vert
+(x)_{1}\right\Vert $
+\end_inset
+
+ en 
+\begin_inset Formula $(x)_{2}$
+\end_inset
+
+ pasos ir a Etapa 4, en caso contrario ir a Etapa 6
+\end_layout
+
+\begin_layout Enumerate
+
+\begin_inset Argument item:1
+status collapsed
+
+
+\begin_layout Standard
+ 
+\end_layout
+
+\end_inset
+
+Etapa 4: si el valor que queda en 
+\begin_inset Formula $\mathrm{N}1$
+\end_inset
+
+ luego de correr 
+\begin_inset Formula $\mathcal{P}_{0}$
+\end_inset
+
+ una cantidad 
+\begin_inset Formula $(x)_{2}$
+\end_inset
+
+ de pasos, partiendo de 
+\begin_inset Formula $\left\Vert
+(x)_{1}\right\Vert $
+\end_inset
+
+, es distinto de 0, entonces ir a Etapa 5. En caso contrario ir a Etapa 6.
+\end_layout
+
+\begin_layout Enumerate
+
+\begin_inset Argument item:1
+status collapsed
+
+
+\begin_layout Standard
+ 
+\end_layout
+
+\end_inset
+
+Etapa 5: asignar a 
+\begin_inset Formula $\mathrm{N}1$
+\end_inset
+
+ el valor 
+\begin_inset Formula $(x)_{1}$
+\end_inset
+
+ y terminar
+\end_layout
+
+\begin_layout Enumerate
+
+\begin_inset Argument item:1
+status collapsed
+
+
+\begin_layout Standard
+ 
+\end_layout
+
+\end_inset
+
+Etapa 6: asignar a 
+\begin_inset Formula $\mathrm{N}1$
+\end_inset
+
+ el valor 
+\begin_inset Formula $0$
+\end_inset
+
+ y terminar 
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Notese que la descripcion anterior no es ni mas ni menos que un procedimiento efectivo que enumera a 
+\begin_inset Formula $S$
+\end_inset
+
+, y nuestra mision es simularlo dentro del lenguaje 
+\begin_inset Formula $\mathcal{S}^{\Sigma}$
+\end_inset
+
+. Para esto usaremos varios macros. Ya que la funcion 
+\begin_inset Formula $f=\lambda x[(x)_{1}]$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-p.r., el Corolario 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "recursivo implica macro"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ nos dice que hay un macro:
+\begin_inset Formula \[
+\lbrack\mathrm{V}2\leftarrow f(\mathrm{V}1)]
+\]
+\end_inset
+
+el cual escribiremos de la siguiente manera mas intuitiva:
+\begin_inset Formula \[
+\lbrack\mathrm{V}2\leftarrow(\mathrm{V}1)_{1}]
+\]
+\end_inset
+
+Similarmente hay un macro:
+\begin_inset Formula \[
+\lbrack\mathrm{V}2\leftarrow(\mathrm{V}1)_{2}]
+\]
+\end_inset
+
+Tambien, ya que el predicado 
+\begin_inset Formula $P=\lambda x[x=0]$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-recursivo, hay un macro:
+\begin_inset Formula \[
+\left[  \mathrm{IF}\;P(\mathrm{V}1)\;\mathrm{GOTO}\;\mathrm{A}1\right]
+\]
+\end_inset
+
+el cual escribiremos de la siguiente manera:
+\begin_inset Formula \[
+\left[  \mathrm{IF}\;\mathrm{V}1=0\;\mathrm{GOTO}\;\mathrm{A}1\right]
+\]
+\end_inset
+
+Definamos
+\begin_inset Formula \[
+H=\lambda tx\left[  Halt^{1,0}(t,x,\mathcal{P}_{0})\right]
+\]
+\end_inset
+
+Notar que 
+\begin_inset Formula $D_{H}=\omega^{2}$
+\end_inset
+
+ y que 
+\begin_inset Formula $H$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-mixta. Ademas sabemos que la funcion 
+\begin_inset Formula $Halt^{1,0}$
+\end_inset
+
+ es 
+\begin_inset Formula $(\Sigma\cup\Sigma_{p})$
+\end_inset
+
+-p.r. por lo cual resulta facilmente que 
+\begin_inset Formula $H$
+\end_inset
+
+ es 
+\begin_inset Formula $(\Sigma\cup\Sigma_{p})$
+\end_inset
+
+-p.r.. Por la Proposicion de Independencia del Alfabeto tenemos que 
+\begin_inset Formula $H$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-p.r.. O sea que el Corolario 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "recursivo implica macro"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ nos dice que hay un macro:
+\begin_inset Formula \[
+\left[  \mathrm{IF}\;H(\mathrm{V}1,\mathrm{V}2)\;\mathrm{GOTO}\;\mathrm{A}1\right]
+\]
+\end_inset
+
+Para hacer mas intuitivo el uso de este macro lo escribiremos de la siguiente manera
+\begin_inset Formula \[
+\left[  \mathrm{IF}\;Halt^{1,0}(\mathrm{V}1,\mathrm{V}2,\mathcal{P}_{0})\;\mathrm{GOTO}\;\mathrm{A}1\right]
+\]
+\end_inset
+
+Sea
+\begin_inset Formula \[
+g=\lambda tx\left[  E_{\#1}^{1,0}(t,x,\mathcal{P}_{0})\right]
+\]
+\end_inset
+
+Ya que 
+\begin_inset Formula $g$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-recursiva (por que?), hay un macro:
+\begin_inset Formula \[
+\left[  \mathrm{V}3\leftarrow g(\mathrm{V}1,\mathrm{V}2)\right]
+\]
+\end_inset
+
+Para hacer mas intuitivo el uso de este macro lo escribiremos de la siguiente manera
+\begin_inset Formula \[
+\left[  \mathrm{V}3\leftarrow E_{\#1}^{1,0}(\mathrm{V}1,\mathrm{V}2,\mathcal{P}_{0})\right]
+\]
+\end_inset
+
+Ahora si podemos dar nuestro progama 
+\begin_inset Formula $\mathcal{P}$
+\end_inset
+
+ que enumera a 
+\begin_inset Formula $S$
+\end_inset
+
+:
+\begin_inset Formula \[\begin{array}
+[c]{ll}
+& \mathrm{IF}\;\mathrm{N}1\neq0\;\mathrm{GOTO}\;\mathrm{L}1\\
+& \mathrm{GOTO}\;\mathrm{L}2\\
+\mathrm{L}1 & [\mathrm{N}3\leftarrow(\mathrm{N}1)_{1}]\\
+& [\mathrm{N}4\leftarrow(\mathrm{N}1)_{2}]\\
+& \left[  \mathrm{IF}\;Halt^{1,0}(\mathrm{N}4,\mathrm{N}3,\mathcal{P}_{0})\;\mathrm{GOTO}\;\mathrm{L}3\right] \\
+& \mathrm{GOTO}\;\mathrm{L}2\\
+\mathrm{L}3 & \left[  \mathrm{N}5\leftarrow E_{\#1}^{1,0}(\mathrm{N}4,\mathrm{N}3,\mathcal{P}_{0})\right] \\
+& [\mathrm{IF}\;\mathrm{N}5=0\;\mathrm{GOTO}\;\mathrm{L}2]\\
+& \mathrm{N}1\leftarrow\mathrm{N}3\\
+& \mathrm{GOTO}\;\mathrm{L}4\\
+\mathrm{L}2 & \mathrm{N}1\leftarrow0\\
+\mathrm{L}4 & \mathrm{SKIP}\end{array}
+\]
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+
+\begin_inset Argument item:1
+status collapsed
+
+
+\begin_layout Standard
+
+\series bold
+Ejercicio 6:
+\series default
+
+\end_layout
+
+\end_inset
+
+Sea 
+\begin_inset Formula $\Sigma=\{\#,\$\}$
+\end_inset
+
+ y sea 
+\begin_inset Formula $f:D_{f}\subseteq\Sigma^{\ast}\rightarrow\omega$
+\end_inset
+
+ una funcion 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-computable tal que 
+\begin_inset Formula $f(\varepsilon)=1$
+\end_inset
+
+. Sea 
+\begin_inset Formula $L=\{\alpha\in D_{f}:f(\alpha)=1\}$
+\end_inset
+
+. De un programa 
+\begin_inset Formula $\mathcal{Q}\in\mathrm{Pro}^{\Sigma}$
+\end_inset
+
+ tal que 
+\family roman
+Dom
+\family default
+
+\begin_inset Formula $(\Psi_{\mathcal{Q}}^{1,0,\ast})=\omega$
+\end_inset
+
+ y 
+\begin_inset Formula $\operatorname{Im}(\Psi
+_{\mathcal{Q}}^{1,0,\ast})=L$
+\end_inset
+
+ (explicado en video en granlogico.com).
+\end_layout
+
+\begin_layout Enumerate
+
+\begin_inset Argument item:1
+status collapsed
+
+
+\begin_layout Standard
+
+\series bold
+Ejercicio 7:
+\series default
+
+\end_layout
+
+\end_inset
+
+Sea 
+\begin_inset Formula $\Sigma=\{\#,\$\}$
+\end_inset
+
+ y sea 
+\begin_inset Formula $\mathcal{P}_{0}\in\mathrm{Pro}^{\Sigma}$
+\end_inset
+
+. Pruebe que
+\begin_inset Formula \[
+S=\{(x,\alpha):\Psi_{\mathcal{P}_{0}}^{1,0,\#}(x)=\Psi_{\mathcal{P}_{0}}^{0,1,\#}(\alpha)\}
+\]
+\end_inset
+
+es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-enumerable.
+\end_layout
+
+\begin_layout Enumerate
+
+\begin_inset Argument item:1
+status collapsed
+
+
+\begin_layout Standard
+
+\series bold
+Ejercicio 8:
+\series default
+
+\end_layout
+
+\end_inset
+
+Si 
+\begin_inset Formula $S\subseteq\omega$
+\end_inset
+
+ y 
+\begin_inset Formula $f:S\rightarrow\omega$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-computable, entonces el conjunto
+\begin_inset Formula \[
+\{x\in S:x\text{ es par }x/2\in S\text{ y }f(x)=f(x/2)\}
+\]
+\end_inset
+
+es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-enumerable
+\end_layout
+
+\begin_layout Enumerate
+
+\begin_inset Argument item:1
+status collapsed
+
+
+\begin_layout Standard
+
+\series bold
+Ejercicio 9:
+\series default
+
+\end_layout
+
+\end_inset
+
+Sea 
+\begin_inset Formula $\Sigma=\{\#,\$\}$
+\end_inset
+
+ y sea 
+\begin_inset Formula $\mathcal{P}_{0}\in\mathrm{Pro}^{\Sigma}$
+\end_inset
+
+. Pruebe que 
+\begin_inset Formula $\{(x,\alpha,\beta)\in\omega\times
+\Sigma^{\ast}\times\Sigma^{\ast}:\mathcal{P}_{0}$
+\end_inset
+
+ termina partiendo de 
+\begin_inset Formula $\left\Vert x,\alpha,\beta\right\Vert \}$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-enumerable.
+\end_layout
+
+\begin_layout Enumerate
+
+\begin_inset Argument item:1
+status collapsed
+
+
+\begin_layout Standard
+
+\series bold
+Ejercicio 10:
+\series default
+
+\end_layout
+
+\end_inset
+
+Sea 
+\begin_inset Formula $\Sigma=\{@,!\}$
+\end_inset
+
+ y sea 
+\begin_inset Formula $\mathcal{P}_{0}\in\mathrm{Pro}^{\Sigma}$
+\end_inset
+
+. Sea
+\begin_inset Formula \[
+L=\{\alpha\in\Sigma^{\ast}:(\exists x\in\mathbf{N})\ \Psi_{\mathcal{P}_{0}}^{1,1,\#}(x^{2},\alpha)=\Psi_{\mathcal{P}_{0}}^{0,2,\#}(\alpha,\alpha)\}
+\]
+\end_inset
+
+De un programa 
+\begin_inset Formula $\mathcal{P}$
+\end_inset
+
+ tal que 
+\family roman
+Dom
+\family default
+
+\begin_inset Formula $(\Psi_{\mathcal{P}}^{1,0,\ast})=\omega$
+\end_inset
+
+ y 
+\begin_inset Formula $\operatorname{Im}(\Psi_{\mathcal{P}}^{1,0,\ast})=L$
+\end_inset
+
+. 
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+Enumeracion de conjuntos de programas
+\end_layout
+
+\begin_layout Standard
+Ya que los programas de 
+\begin_inset Formula $\mathcal{S}^{\Sigma}$
+\end_inset
+
+ son palabras del alfabeto 
+\begin_inset Formula $\Sigma\cup\Sigma_{p}$
+\end_inset
+
+, nos podemos preguntar cuando un conjunto 
+\begin_inset Formula $L$
+\end_inset
+
+ de programas es 
+\begin_inset Formula $(\Sigma\cup\Sigma_{p})$
+\end_inset
+
+-enumerable. Daremos un ejemplo. Sea 
+\begin_inset Formula $\Sigma=\{@,!\}$
+\end_inset
+
+ y sea
+\begin_inset Formula \[
+L=\{\mathcal{P}\in\mathrm{Pro}^{\Sigma}:\Psi_{\mathcal{P}}^{1,0,\#}(10)=10\}
+\]
+\end_inset
+
+Veremos que 
+\begin_inset Formula $L$
+\end_inset
+
+ es 
+\begin_inset Formula $(\Sigma\cup\Sigma_{p})$
+\end_inset
+
+-enumerable, dando un programa 
+\begin_inset Formula $\mathcal{Q}\in\mathrm{Pro}^{\Sigma\cup\Sigma_{p}}$
+\end_inset
+
+ que enumere a 
+\begin_inset Formula $L$
+\end_inset
+
+, es decir tal que 
+\family roman
+Dom
+\family default
+
+\begin_inset Formula $(\Psi_{\mathcal{Q}}^{1,0,\ast})=\omega$
+\end_inset
+
+ y 
+\begin_inset Formula $\operatorname{Im}(\Psi_{\mathcal{Q}}^{1,0,\ast})=L$
+\end_inset
+
+. Cabe destacar que aqui hay en juego dos versiones de nuestro lenguaje imperativo, es decir enumeraremos un conjunto de programas de 
+\begin_inset Formula $\mathcal{S}^{\Sigma}$
+\end_inset
+
+ usando un programa de 
+\begin_inset Formula $\mathcal{S}^{\Sigma\cup\Sigma_{p}}$
+\end_inset
+
+. Sea 
+\begin_inset Formula $\leq$
+\end_inset
+
+ un orden total sobre el conjunto 
+\begin_inset Formula $\Sigma\cup\Sigma_{p}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+A continuacion daremos una descripcion intuitiva del funcionamiento de 
+\begin_inset Formula $\mathcal{Q}$
+\end_inset
+
+ (pseudocodigo) para luego escribirlo correctamente usando macros. Notese que 
+\begin_inset Formula $\mathrm{SKIP}\in L$
+\end_inset
+
+. El programa 
+\begin_inset Formula $\mathcal{Q}$
+\end_inset
+
+ comenzara del estado 
+\begin_inset Formula $\left\Vert x\right\Vert $
+\end_inset
+
+ y hara las siguientes tareas
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+
+\begin_inset Argument item:1
+status collapsed
+
+
+\begin_layout Standard
+ 
+\end_layout
+
+\end_inset
+
+Etapa 1: si 
+\begin_inset Formula $x=0$
+\end_inset
+
+ ir a Etapa 6, en caso contrario ir a Etapa 2.
+\end_layout
+
+\begin_layout Enumerate
+
+\begin_inset Argument item:1
+status collapsed
+
+
+\begin_layout Standard
+ 
+\end_layout
+
+\end_inset
+
+Etapa 2: calcular 
+\begin_inset Formula $(x)_{1}$
+\end_inset
+
+, 
+\begin_inset Formula $(x)_{2}$
+\end_inset
+
+ y 
+\begin_inset Formula $\ast^{\leq}((x)_{1})$
+\end_inset
+
+ e ir a Etapa 3.
+\end_layout
+
+\begin_layout Enumerate
+
+\begin_inset Argument item:1
+status collapsed
+
+
+\begin_layout Standard
+ 
+\end_layout
+
+\end_inset
+
+Etapa 3: si 
+\begin_inset Formula $\ast^{\leq}((x)_{1})\in\mathrm{Pro}^{\Sigma}$
+\end_inset
+
+ y termina partiendo desde 
+\begin_inset Formula $\left\Vert 10\right\Vert $
+\end_inset
+
+ en 
+\begin_inset Formula $(x)_{2}$
+\end_inset
+
+ pasos ir a Etapa 4, en caso contrario ir a Etapa 6
+\end_layout
+
+\begin_layout Enumerate
+
+\begin_inset Argument item:1
+status collapsed
+
+
+\begin_layout Standard
+ 
+\end_layout
+
+\end_inset
+
+Etapa 4: si el valor que queda en 
+\begin_inset Formula $\mathrm{N}1$
+\end_inset
+
+ luego de correr 
+\begin_inset Formula $\ast^{\leq}((x)_{1})$
+\end_inset
+
+ una cantidad 
+\begin_inset Formula $(x)_{2}$
+\end_inset
+
+ de pasos, partiendo de 
+\begin_inset Formula $\left\Vert 10\right\Vert $
+\end_inset
+
+ es igual a 10, entonces ir a Etapa 5. En caso contrario ir a Etapa 6.
+\end_layout
+
+\begin_layout Enumerate
+
+\begin_inset Argument item:1
+status collapsed
+
+
+\begin_layout Standard
+ 
+\end_layout
+
+\end_inset
+
+Etapa 5: asignar a 
+\begin_inset Formula $\mathrm{P}1$
+\end_inset
+
+ la palabra 
+\begin_inset Formula $\ast^{\leq}((x)_{1})$
+\end_inset
+
+ y terminar
+\end_layout
+
+\begin_layout Enumerate
+
+\begin_inset Argument item:1
+status collapsed
+
+
+\begin_layout Standard
+ 
+\end_layout
+
+\end_inset
+
+Etapa 6: asignar a 
+\begin_inset Formula $\mathrm{P}1$
+\end_inset
+
+ la palabra 
+\begin_inset Formula $\mathrm{SKIP}$
+\end_inset
+
+ y terminar 
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Notese que la descripcion anterior no es ni mas ni menos que un procedimiento efectivo que enumera a 
+\begin_inset Formula $L$
+\end_inset
+
+, y nuestra mision es simularlo dentro del lenguaje 
+\begin_inset Formula $\mathcal{S}^{\Sigma\cup\Sigma_{p}}$
+\end_inset
+
+. Para esto usaremos varios macros. Es importante notar que los macros que usaremos corresponden al lenguaje 
+\begin_inset Formula $\mathcal{S}^{\Sigma\cup\Sigma_{p}}$
+\end_inset
+
+ ya que los usaremos en 
+\begin_inset Formula $\mathcal{Q}$
+\end_inset
+
+ el cual sera un programa de 
+\begin_inset Formula $\mathcal{S}^{\Sigma\cup\Sigma_{p}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Ya que las funciones 
+\begin_inset Formula $\lambda x[(x)_{1}]$
+\end_inset
+
+ y 
+\begin_inset Formula $\lambda x[(x)_{2}]$
+\end_inset
+
+ son 
+\begin_inset Formula $(\Sigma\cup\Sigma_{p})$
+\end_inset
+
+-recursivas el Corolario 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "recursivo implica macro"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ nos dice que hay macros asociados a estas funciones los cuales escribiremos de la siguiente manera mas intuitiva:
+\begin_inset Formula \begin{align*}
+\lbrack\mathrm{V}2  & \leftarrow(\mathrm{V}1)_{1}]\\
+\lbrack\mathrm{V}2  & \leftarrow(\mathrm{V}1)_{2}]
+\end{align*}
+\end_inset
+
+Ya que el predicado 
+\begin_inset Formula $P=\lambda x[x=10]$
+\end_inset
+
+ es 
+\begin_inset Formula $(\Sigma\cup\Sigma_{p})$
+\end_inset
+
+-recursivo tenemos su macro asociado el cual escribiremos de la siguiente manera:
+\begin_inset Formula \[
+\left[  \mathrm{IF}\;\mathrm{V}1=10\;\mathrm{GOTO}\;\mathrm{A}1\right]
+\]
+\end_inset
+
+Por un lema anterior sabemos que 
+\begin_inset Formula $\mathrm{Pro}^{\Sigma}$
+\end_inset
+
+ es un conjunto 
+\begin_inset Formula $(\Sigma\cup\Sigma_{p})$
+\end_inset
+
+-p.r.
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+%TCIMACRO{
+\backslash
+U{b4}}%
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+%BeginExpansion
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+˖́
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+%EndExpansion
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+por lo cual 
+\begin_inset Formula $\chi_{\mathrm{Pro}^{\Sigma}}^{(\Sigma\cup\Sigma_{p})^{\ast}}$
+\end_inset
+
+ es 
+\begin_inset Formula $(\Sigma\cup\Sigma_{p})$
+\end_inset
+
+-p.r., por lo cual hay un macro
+\begin_inset Formula \[
+\left[  \mathrm{IF}\;\chi_{\mathrm{Pro}^{\Sigma}}^{(\Sigma\cup\Sigma
+_{p})^{\ast}}(\mathrm{W}1)\;\mathrm{GOTO}\;\mathrm{A}1\right]
+\]
+\end_inset
+
+el cual escribiremos de la siguiente manera
+\begin_inset Formula \[
+\left[  \mathrm{IF}\;\mathrm{W}1\in\mathrm{Pro}^{\Sigma}\;\mathrm{GOTO}\;\mathrm{A}1\right]
+\]
+\end_inset
+
+Ya que el predicado 
+\begin_inset Formula $Halt^{1,0}$
+\end_inset
+
+ es 
+\begin_inset Formula $(\Sigma\cup\Sigma_{p})$
+\end_inset
+
+-recursivo tenemos un macro asociado a el, el cual escribiremos de la siguiente forma
+\begin_inset Formula \[
+\left[  \mathrm{IF}\;Halt^{1,0}(\mathrm{V}1,\mathrm{V}2,\mathrm{W}1)\;\mathrm{GOTO}\;\mathrm{A}1\right]
+\]
+\end_inset
+
+Ya que 
+\begin_inset Formula $E_{\#1}^{1,0}$
+\end_inset
+
+ es 
+\begin_inset Formula $(\Sigma\cup\Sigma_{p})$
+\end_inset
+
+-recursivo tenemos un macro asociado a ella, el cual escribiremos de la siguiente forma
+\begin_inset Formula \[
+\left[  \mathrm{V}3\leftarrow E_{\#1}^{1,0}(\mathrm{V}1,\mathrm{V}2,\mathrm{W}1)\right]
+\]
+\end_inset
+
+Tambien usaremos macros
+\begin_inset Formula \begin{gather*}
+\lbrack\mathrm{V}1\leftarrow10]\\
+\left[  \mathrm{W}1\leftarrow\mathrm{SKIP}\right]
+\end{gather*}
+\end_inset
+
+(dejamos al lector hacerlos a mano o tambien se puede justificar su existencia via la proposicion de existencia de macros aplicada a las funciones 
+\begin_inset Formula $C_{10}^{0,0}$
+\end_inset
+
+ y 
+\begin_inset Formula $C_{\mathrm{SKIP}}^{0,0}$
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Standard
+Ahora si podemos hacer el programa 
+\begin_inset Formula $\mathcal{Q}$
+\end_inset
+
+ que enumera a 
+\begin_inset Formula $L$
+\end_inset
+
+:
+\begin_inset Formula \[\begin{array}
+[c]{ll}
+& \mathrm{IF}\;\mathrm{N}1\neq0\;\mathrm{GOTO}\;\mathrm{L}1\\
+& \mathrm{GOTO}\;\mathrm{L}2\\
+\mathrm{L}1 & [\mathrm{N}2\leftarrow(\mathrm{N}1)_{1}]\\
+& [\mathrm{N}3\leftarrow(\mathrm{N}1)_{2}]\\
+& [\mathrm{P}1\leftarrow\ast^{\leq}(\mathrm{N}2)]\\
+& \left[  \mathrm{IF}\;\mathrm{P}1\in\mathrm{Pro}^{\Sigma}\;\mathrm{GOTO}\;\mathrm{L}3\right] \\
+& \mathrm{GOTO}\;\mathrm{L}2\\
+\mathrm{L}3 & [\mathrm{N}4\leftarrow10]\\
+& \left[  \mathrm{IF}\;Halt^{1,0}(\mathrm{N}3,\mathrm{N}4,\mathrm{P}1)\;\mathrm{GOTO}\;\mathrm{L}4\right] \\
+& \mathrm{GOTO}\;\mathrm{L}2\\
+\mathrm{L}4 & \left[  \mathrm{N}5\leftarrow E_{\#1}^{1,0}(\mathrm{N}3,\mathrm{N}4,\mathrm{P}1)\right] \\
+& [\mathrm{IF}\;\mathrm{N}5=10\;\mathrm{GOTO}\;\mathrm{L}4]\\
+\mathrm{L}2 & \left[  \mathrm{P}1\leftarrow\mathrm{SKIP}\right] \\
+\mathrm{L}4 & \mathrm{SKIP}\end{array}
+\]
+\end_inset
+
+
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+
+\begin_inset Argument item:1
+status collapsed
+
+
+\begin_layout Standard
+
+\series bold
+Ejercicio 11:
+\series default
+
+\end_layout
+
+\end_inset
+
+Sea 
+\begin_inset Formula $\Sigma=\{@,!\}$
+\end_inset
+
+ y sea
+\begin_inset Formula \[
+L=\{\mathcal{P}\in\mathrm{Pro}^{\Sigma}:\exists\alpha\text{ tal que }\Psi_{\mathcal{P}}^{1,1,\ast}(11,\alpha)=\alpha!@\}
+\]
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Dar un programa 
+\begin_inset Formula $\mathcal{Q}\in\mathrm{Pro}^{\Sigma\cup\Sigma_{p}}$
+\end_inset
+
+ tal que 
+\family roman
+Dom
+\family default
+
+\begin_inset Formula $(\Psi_{\mathcal{Q}}^{0,1,\#})=L$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Dar un programa 
+\begin_inset Formula $\mathcal{Q}^{\prime}\in\mathrm{Pro}^{\Sigma\cup
+\Sigma_{p}}$
+\end_inset
+
+ tal que 
+\family roman
+Dom
+\family default
+
+\begin_inset Formula $(\Psi_{\mathcal{Q}^{\prime}}^{1,0,\ast
+})=\omega$
+\end_inset
+
+ y 
+\begin_inset Formula $\operatorname{Im}(\Psi_{\mathcal{Q}^{\prime}}^{1,0,\ast})=L$
+\end_inset
+
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+
+\begin_inset Argument item:1
+status collapsed
+
+
+\begin_layout Standard
+
+\series bold
+Ejercicio 12:
+\series default
+
+\end_layout
+
+\end_inset
+
+(Explicado en video en granlogico.com.) Sea 
+\begin_inset Formula $\Sigma=\{\#,\$\}$
+\end_inset
+
+ y sea
+\begin_inset Formula \[
+L=\{\mathcal{P}\in\mathrm{Pro}^{\Sigma}:\exists n,\alpha\text{ tales que }\Psi_{\mathcal{P}}^{2,1,\ast}(\left\vert \mathcal{P}\right\vert ,n,\alpha
+)=\$\}
+\]
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Dar un programa 
+\begin_inset Formula $\mathcal{Q}\in\mathrm{Pro}^{\Sigma\cup\Sigma_{p}}$
+\end_inset
+
+ tal que 
+\family roman
+Dom
+\family default
+
+\begin_inset Formula $(\Psi_{\mathcal{Q}}^{0,1,\#})=L$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Dar un programa 
+\begin_inset Formula $\mathcal{Q}^{\prime}\in\mathrm{Pro}^{\Sigma\cup
+\Sigma_{p}}$
+\end_inset
+
+ tal que 
+\family roman
+Dom
+\family default
+
+\begin_inset Formula $(\Psi_{\mathcal{Q}^{\prime}}^{1,0,\ast
+})=\omega$
+\end_inset
+
+ y 
+\begin_inset Formula $\operatorname{Im}(\Psi_{\mathcal{Q}^{\prime}}^{1,0,\ast})=L$
+\end_inset
+
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Cuando 
+\begin_inset Formula $\Sigma\supseteq\Sigma_{p}$
+\end_inset
+
+ podemos correr un programa 
+\begin_inset Formula $\mathcal{P}\in\mathrm{Pro}^{\Sigma}$
+\end_inset
+
+ partiendo de un estado que asigne a sus variables alfabeticas programas (ya que los programas son meras palabras de 
+\begin_inset Formula $\Sigma^{\ast}$
+\end_inset
+
+). En particular podriamos correr un programa 
+\begin_inset Formula $\mathcal{P}$
+\end_inset
+
+ desde el estado 
+\begin_inset Formula $\left\Vert \mathcal{P}\right\Vert $
+\end_inset
+
+. Llamaremos 
+\begin_inset Formula $A$
+\end_inset
+
+ al conjunto formado por aquellos programas 
+\begin_inset Formula $\mathcal{P}$
+\end_inset
+
+ tales que 
+\begin_inset Formula $\mathcal{P}$
+\end_inset
+
+ se detiene partiendo del estado 
+\begin_inset Formula $\left\Vert \mathcal{P}\right\Vert $
+\end_inset
+
+. Es decir
+\begin_inset Formula \[
+A=\{\mathcal{P}\in\mathrm{Pro}^{\Sigma}:\exists t\in\omega\text{ tal que
+}Halt^{0,1}(t,\mathcal{P},\mathcal{P})=1\}
+\]
+\end_inset
+
+Por ejemplo 
+\begin_inset Formula $\mathrm{SKIP}\in A$
+\end_inset
+
+. Dicho rapida y sugestivamente 
+\begin_inset Formula $A$
+\end_inset
+
+ es el conjunto formado por aquellos programas que se detienen partiendo de si mismos.
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+
+\begin_inset Argument item:1
+status collapsed
+
+
+\begin_layout Standard
+
+\series bold
+Ejercicio 13:
+\series default
+
+\end_layout
+
+\end_inset
+
+Supongamos que 
+\begin_inset Formula $\Sigma\supseteq\Sigma_{p}$
+\end_inset
+
+. De un programa de 
+\begin_inset Formula $\mathcal{S}^{\Sigma}$
+\end_inset
+
+ que enumere a 
+\begin_inset Formula $A$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+
+\begin_inset Argument item:1
+status collapsed
+
+
+\begin_layout Standard
+
+\series bold
+Ejercicio 14:
+\series default
+
+\end_layout
+
+\end_inset
+
+Supongamos que 
+\begin_inset Formula $\Sigma\supseteq\Sigma_{p}$
+\end_inset
+
+. Sea
+\begin_inset Formula \[
+L=\{\mathcal{P}\in\mathrm{Pro}^{\Sigma}:\Psi_{\mathcal{P}}^{2,1,\ast
+}(1,1,\mathcal{P})=\mathcal{PP}\}
+\]
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Encuentre un elemento concreto de 
+\begin_inset Formula $L$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+De un programa de 
+\begin_inset Formula $\mathcal{S}^{\Sigma}$
+\end_inset
+
+ que enumere a 
+\begin_inset Formula $L$
+\end_inset
+
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+Dos batallas mas
+\end_layout
+
+\begin_layout Standard
+Aceptaremos sin prueba el siguiente teorema.
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+begin{theorem}[Godel vence a Turing]
+\end_layout
+
+\end_inset
+
+Supongamos 
+\begin_inset Formula $f:S\subseteq\omega^{n}\times\Sigma^{\ast}{}^{m}\rightarrow O $
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-Turing computable. Entonces 
+\begin_inset Formula $f$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-recursiva. 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+end{theorem}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+
+\begin_inset Argument item:1
+status collapsed
+
+
+\begin_layout Standard
+
+\series bold
+Ejercicio 15:
+\series default
+
+\end_layout
+
+\end_inset
+
+(S) Haga un esquema a nivel de ideas (sin demostraciones y sin demaciada precision) de la prueba del teorema anterior (la prueba completa esta en el apunte) 
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Aceptaremos sin prueba el siguiente teorema.
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+begin{theorem}[Turing vence a Neumann]
+\end_layout
+
+\end_inset
+
+Si 
+\begin_inset Formula $f:D_{f}\subseteq\omega^{n}\times\Sigma^{\ast
+m}\rightarrow O$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-computable, entonces 
+\begin_inset Formula $f$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-Turing computable
+\shape italic
+.
+\shape default
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+end{theorem}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+
+\begin_inset Argument item:1
+status collapsed
+
+
+\begin_layout Standard
+
+\series bold
+Ejercicio 16:
+\series default
+
+\end_layout
+
+\end_inset
+
+(S) Haga un esquema a nivel de ideas (sin demostraciones y sin demaciada precision) de la prueba del teorema anterior (la prueba completa esta en el apunte y en granlogico.com hay un video con la prueba del teorema) 
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+La tesis de Church
+\end_layout
+
+\begin_layout Standard
+En virtud de los teoremas ya probados tenemos el siguiente teorema que asegura que los tres paradigmas son equivalentes.
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+begin{theorem}
+\end_layout
+
+\end_inset
+
+ Sea 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+ un alfabeto finito. Dada una funcion 
+\begin_inset Formula $f$
+\end_inset
+
+, las siguientes son equivalentes:
+\end_layout
+
+\begin_layout Enumerate
+
+\begin_inset Argument item:1
+status collapsed
+
+
+\begin_layout Standard
+(1)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $f$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-Turing computable
+\end_layout
+
+\begin_layout Enumerate
+
+\begin_inset Argument item:1
+status collapsed
+
+
+\begin_layout Standard
+(2)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $f$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-recursiva
+\end_layout
+
+\begin_layout Enumerate
+
+\begin_inset Argument item:1
+status collapsed
+
+
+\begin_layout Standard
+(3)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $f$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-computable. 
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+end{theorem}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Tambien los tres paradigmas son equivalentes con respecto a los dos tipos de conjuntos estudiados, es decir:
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+begin{theorem}
+\end_layout
+
+\end_inset
+
+ Sea 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+ un alfabeto finito y sea 
+\begin_inset Formula $S\subseteq\omega^{n}\times\Sigma^{\ast
+m}$
+\end_inset
+
+. Las siguientes son equivalentes:
+\end_layout
+
+\begin_layout Enumerate
+
+\begin_inset Argument item:1
+status collapsed
+
+
+\begin_layout Standard
+(1)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $S$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-Turing enumerable
+\end_layout
+
+\begin_layout Enumerate
+
+\begin_inset Argument item:1
+status collapsed
+
+
+\begin_layout Standard
+(2)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $S$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-recursivamente enumerable
+\end_layout
+
+\begin_layout Enumerate
+
+\begin_inset Argument item:1
+status collapsed
+
+
+\begin_layout Standard
+(3)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $S$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-enumerable 
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+end{theorem}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+begin{theorem}
+\end_layout
+
+\end_inset
+
+ Sea 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+ un alfabeto finito y sea 
+\begin_inset Formula $S\subseteq\omega^{n}\times\Sigma^{\ast
+m}$
+\end_inset
+
+. Las siguientes son equivalentes:
+\end_layout
+
+\begin_layout Enumerate
+
+\begin_inset Argument item:1
+status collapsed
+
+
+\begin_layout Standard
+(1)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $S$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-Turing computable
+\end_layout
+
+\begin_layout Enumerate
+
+\begin_inset Argument item:1
+status collapsed
+
+
+\begin_layout Standard
+(2)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $S$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-recursivo
+\end_layout
+
+\begin_layout Enumerate
+
+\begin_inset Argument item:1
+status collapsed
+
+
+\begin_layout Standard
+(3)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $S$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-computable 
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+end{theorem}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+
+\begin_inset Argument item:1
+status collapsed
+
+
+\begin_layout Standard
+
+\series bold
+Ejercicio 17:
+\series default
+
+\end_layout
+
+\end_inset
+
+Pruebe los dos teoremas anteriores 
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Otro modelo matematico de computabilidad efectiva es el llamado lambda calculus, introducido por Church, el cual tambien resulta equivalente a los estudiados por nosotros. El hecho de que tan distintos paradigmas computacionales hayan resultado equivalentes hace pensar que en realidad los mismos han tenido exito en capturar la totalidad de las funciones 
+\begin_inset Formula $\Sigma
+$
+\end_inset
+
+-efectivamente computables. Esta aceveracion es conocida como la
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Tesis de Church:
+\size default
+ 
+\shape italic
+Toda funcion 
+\shape default
+
+\begin_inset Formula $\Sigma$
+\end_inset
+
+
+\shape italic
+-efectivamente computable es 
+\shape default
+
+\begin_inset Formula $\Sigma$
+\end_inset
+
+
+\shape italic
+-recursiva.
+\shape default
+
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+Si bien no se ha podido dar una prueba estrictamente matematica de la Tesis de Church, es un sentimiento comun de los investigadores del area que la misma es verdadera. 
+\end_layout
+
+\end_body
+\end_document

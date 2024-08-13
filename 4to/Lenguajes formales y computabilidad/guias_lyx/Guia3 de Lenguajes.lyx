@@ -1,0 +1,4052 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\begin_preamble
+\setcounter{MaxMatrixCols}{30}%
+\usepackage{amsfonts}\usepackage{graphicx}
+%TCIDATA{OutputFilter=latex2.dll}
+%TCIDATA{Version=5.50.0.2953}
+%TCIDATA{CSTFile=LaTeX article (bright).cst}
+%TCIDATA{Created=Thursday, March 08, 2007 06:44:18}
+%TCIDATA{LastRevised=Friday, April 05, 2024 22:15:09}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
+%TCIDATA{BibliographyScheme=BibTeX}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="Standard LaTeX\Blank - Standard LaTeX Article">}
+%TCIDATA{Language=American English}
+%TCIDATA{ComputeDefs=
+%$\varepsilon$
+%$F_{V(\mathbf{A})}(x_{1},...,x_{n})=\{t_{1},...,t_{k}\}$
+%}
+%BeginMSIPreambleData
+\providecommand{\U}[1]{\protect\rule{.1in}{.1in}}
+%EndMSIPreambleData
+\newtheorem{theorem}{Theorem}\newtheorem{acknowledgement}[theorem]{Acknowledgement}\newtheorem{algorithm}[theorem]{Algorithm}\newtheorem{axiom}[theorem]{Axiom}\newtheorem{case}[theorem]{Case}\newtheorem{claim}[theorem]{Claim}\newtheorem{conclusion}[theorem]{Conclusion}\newtheorem{condition}[theorem]{Condition}\newtheorem{conjecture}[theorem]{Conjecture}\newtheorem{corollary}[theorem]{Corollary}\newtheorem{criterion}[theorem]{Criterion}\newtheorem{definition}[theorem]{Definition}\newtheorem{example}[theorem]{Example}\newtheorem{exercise}[theorem]{Exercise}\newtheorem{lemma}[theorem]{Lemma}\newtheorem{notation}[theorem]{Notation}\newtheorem{problem}[theorem]{Problem}\newtheorem{proposition}[theorem]{Proposition}\newtheorem{remark}[theorem]{Remark}\newtheorem{solution}[theorem]{Solution}\newtheorem{summary}[theorem]{Summary}\newenvironment{proof}[1][Proof]{\noindent\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+\end_preamble
+\use_default_options false
+\maintain_unincluded_children false
+\language english
+\language_package none
+\inputencoding auto
+\fontencoding default
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 2
+\use_package amssymb 2
+\use_package cancel 0
+\use_package esint 1
+\use_package mathdots 0
+\use_package mathtools 0
+\use_package mhchem 0
+\use_package stackrel 0
+\use_package stmaryrd 0
+\use_package undertilde 0
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+Nota: Los ejercicios que tienen (S) son para una 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+"
+\end_layout
+
+\end_inset
+
+Segunda vuelta
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+"
+\end_layout
+
+\end_inset
+
+ es decir conviene hacerlos una vez que ya se completó la guía haciendo
+ los otros y ya se tiene mas madurez e intuición basica sobre los conceptos.
+ Los que tienen (O) son opcionales por lo cual no se toman en los examenes.
+\end_layout
+
+\begin_layout Section*
+Procedimientos efectivos
+\end_layout
+
+\begin_layout Standard
+Un concepto importante en ciencias de la computacion es el de 
+\shape italic
+procedimiento
+\shape default
+ o 
+\shape italic
+metodo
+\shape default
+ para realizar alguna tarea determinada.
+ Nos interesan los procedimientos que estan definidos en forma precisa e
+ inambigua, es decir aquellos en los cuales en cada paso a seguir, la tarea
+ a realizar esta objetivamente descripta.
+ Tambien deben ser repetibles, en el sentido de que si realizamos un procedimien
+to dos veces con el mismo dato de entrada, entonces ambas ejecuciones deben
+ ser identicas, es decir se realizaran las mismas tareas y en el mismo orden.
+\end_layout
+
+\begin_layout Standard
+Nos interesan los procedimientos 
+\begin_inset Formula $\mathbb{P}$
+\end_inset
+
+ que posean las siguientes caracteristicas:
+\end_layout
+
+\begin_layout Enumerate
+Siempre supondremos que el interprete o ejecutante de 
+\begin_inset Formula $\mathbb{P}$
+\end_inset
+
+ es una persona que trabajara con papel y lapiz (ambos recursos disponibles
+ en forma ilimitada).
+\end_layout
+
+\begin_layout Enumerate
+Cada paso o tarea que 
+\begin_inset Formula $\mathbb{P}$
+\end_inset
+
+ encomiende a realizar debe ser simple y facil de realizar en forma 
+\shape italic
+efectiva
+\shape default
+ por cualquier persona.
+\end_layout
+
+\begin_layout Enumerate
+El procedimiento 
+\begin_inset Formula $\mathbb{P}$
+\end_inset
+
+ comienza a funcionar siempre a partir de cierto dato de entrada y una ves
+ que haya comensado, siempre sucedera una de las dos siguientes posibilidades
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $\mathbb{P}$
+\end_inset
+
+ se detiene y da cierto dato de salida
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\mathbb{P}$
+\end_inset
+
+ nunca se detiene, es decir a medida que se van realizando las instrucciones
+ o tareas, 
+\begin_inset Formula $\mathbb{P}$
+\end_inset
+
+ siempre direcciona a realizar nuevas tareas y lo hace sucesiva e indefinidament
+e.
+ 
+\end_layout
+
+\begin_layout Standard
+En el caso (a) diremos que 
+\begin_inset Formula $\mathbb{P}$
+\end_inset
+
+ se detiene partiendo del dato de entrada en cuestion y en el caso (b) diremos
+ que 
+\begin_inset Formula $\mathbb{P}$
+\end_inset
+
+ no se detiene partiendo de dicho dato.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Hay 
+\begin_inset Formula $n,m\in\omega$
+\end_inset
+
+ y un alfabeto 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+ tales que el conjunto de datos de entrada de 
+\begin_inset Formula $\mathbb{P}$
+\end_inset
+
+ es 
+\begin_inset Formula $\omega^{n}\times\Sigma^{\ast m}$
+\end_inset
+
+.
+ Cabe aclarar que para ciertas 
+\begin_inset Formula $(n+m)$
+\end_inset
+
+-uplas de 
+\begin_inset Formula $\omega^{n}\times\Sigma^{\ast m}$
+\end_inset
+
+ el procedimiento 
+\begin_inset Formula $\mathbb{P}$
+\end_inset
+
+ se detendra y para ciertas otras no lo hara.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Llamaremos 
+\shape italic
+procedimientos efectivos
+\shape default
+ a aquellos procedimientos que posean las caracteristicas arriba mencionadas.
+\end_layout
+
+\begin_layout Standard
+El 
+\shape italic
+conjunto de datos de salida de 
+\shape default
+
+\begin_inset Formula $\mathbb{P}$
+\end_inset
+
+ es el conjunto de todos los datos que el procedimiento 
+\begin_inset Formula $\mathbb{P}$
+\end_inset
+
+ dara como salida en alguna de las posibles ejecuciones al variar todos
+ los datos de entrada posibles.
+ Si bien siempre el conjunto de datos de entrada sera de la forma 
+\begin_inset Formula $\omega^{n}\times\Sigma^{\ast m}$
+\end_inset
+
+, puede ser muy dificil o imposible, en general, conocer con precision el
+ conjunto de datos de salida de un procedimiento (esto lo justificaremos
+ mas adelante).
+\end_layout
+
+\begin_layout Standard
+Ya que el interprete de 
+\begin_inset Formula $\mathbb{P}$
+\end_inset
+
+ es una persona dotada de lapiz y papel, supondremos que los elementos de
+ 
+\begin_inset Formula $\omega$
+\end_inset
+
+ que intervienen en los datos de entrada y de salida estaran representados
+ por palabras de 
+\begin_inset Formula $Num$
+\end_inset
+
+ usando la notacion decimal.
+\end_layout
+
+\begin_layout Standard
+Quisas el procedimiento efectivo mas famoso de la matematica es aquel que
+ se enseña en los colegios para sumar dos numeros naturales expresados en
+ notacion decimal.
+ Notar que el conjunto de datos de entrada de dicho procedimiento es 
+\begin_inset Formula $\omega^{2}$
+\end_inset
+
+ y el conjunto de datos de salida es el conjunto formado por todas las sumas
+ posibles de pares de elementos de 
+\begin_inset Formula $\omega$
+\end_inset
+
+, es decir 
+\begin_inset Formula $\omega$
+\end_inset
+
+.
+ Por supuesto este procedimiento solo usa lapiz, papel y pasos extremadamente
+ simples a seguir en cada momento de la computacion, es decir, en algun
+ sentido, no es necesario 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+"
+\end_layout
+
+\end_inset
+
+entender que es lo que se esta haciendo
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+"
+\end_layout
+
+\end_inset
+
+ para llegar al final y obtener la palabra que representa en notacion decimal
+ a la suma de los numeros iniciales.
+ Dejamos al lector repasar este procedimiento asi como el que calcula dado
+ un numero 
+\begin_inset Formula $x$
+\end_inset
+
+ no nulo de 
+\begin_inset Formula $\omega$
+\end_inset
+
+, al numero 
+\begin_inset Formula $x-1$
+\end_inset
+
+, los cuales nos haran falta mas adelante en los ejemplos.
+\end_layout
+
+\begin_layout Subsection*
+Funciones 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-efectivamente computables
+\end_layout
+
+\begin_layout Standard
+Una funcion 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-mixta 
+\begin_inset Formula $f:D_{f}\subseteq\omega^{n}\times\Sigma^{\ast m}\rightarrow\omega$
+\end_inset
+
+ sera llamada 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+
+\shape italic
+-efectivamente computable
+\shape default
+ si hay un procedimiento efectivo 
+\begin_inset Formula $\mathbb{P}$
+\end_inset
+
+ tal que
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+(1)
+\end_layout
+
+\end_inset
+
+El conjunto de datos de entrada de 
+\begin_inset Formula $\mathbb{P}$
+\end_inset
+
+ es 
+\begin_inset Formula $\omega^{n}\times\Sigma^{\ast m}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+(2)
+\end_layout
+
+\end_inset
+
+El conjunto de datos de salida esta contenido en 
+\begin_inset Formula $\omega$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+(3)
+\end_layout
+
+\end_inset
+
+Si 
+\begin_inset Formula $(\vec{x},\vec{\alpha})\in D_{f}$
+\end_inset
+
+, entonces 
+\begin_inset Formula $\mathbb{P}$
+\end_inset
+
+ se detiene partiendo de 
+\begin_inset Formula $(\vec{x},\vec{\alpha})$
+\end_inset
+
+, dando como dato de salida 
+\begin_inset Formula $f(\vec{x},\vec{\alpha})$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+(4)
+\end_layout
+
+\end_inset
+
+Si 
+\begin_inset Formula $(\vec{x},\vec{\alpha})\in(\omega^{n}\times\Sigma^{\ast m})-D_{f}$
+\end_inset
+
+, entonces 
+\begin_inset Formula $\mathbb{P}$
+\end_inset
+
+ no se detiene partiendo desde 
+\begin_inset Formula $(\vec{x},\vec{\alpha})$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+Analogamente una funcion 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-mixta 
+\begin_inset Formula $f:D_{f}\subseteq\omega^{n}\times\Sigma^{\ast m}\rightarrow\Sigma^{\ast}$
+\end_inset
+
+ sera llamada 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+
+\shape italic
+-efectivamente computable
+\shape default
+ si hay un procedimiento efectivo 
+\begin_inset Formula $\mathbb{P}$
+\end_inset
+
+ tal que
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+(1)
+\end_layout
+
+\end_inset
+
+El conjunto de datos de entrada de 
+\begin_inset Formula $\mathbb{P}$
+\end_inset
+
+ es 
+\begin_inset Formula $\omega^{n}\times\Sigma^{\ast m}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+(2)
+\end_layout
+
+\end_inset
+
+El conjunto de datos de salida esta contenido en 
+\begin_inset Formula $\Sigma^{\ast}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+(3)
+\end_layout
+
+\end_inset
+
+Si 
+\begin_inset Formula $(\vec{x},\vec{\alpha})\in D_{f}$
+\end_inset
+
+, entonces 
+\begin_inset Formula $\mathbb{P}$
+\end_inset
+
+ se detiene partiendo de 
+\begin_inset Formula $(\vec{x},\vec{\alpha})$
+\end_inset
+
+, dando como dato de salida 
+\begin_inset Formula $f(\vec{x},\vec{\alpha})$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+(4)
+\end_layout
+
+\end_inset
+
+Si 
+\begin_inset Formula $(\vec{x},\vec{\alpha})\in(\omega^{n}\times\Sigma^{\ast m})-D_{f}$
+\end_inset
+
+, entonces 
+\begin_inset Formula $\mathbb{P}$
+\end_inset
+
+ no se detiene partiendo desde 
+\begin_inset Formula $(\vec{x},\vec{\alpha})$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+En ambos casos diremos que 
+\begin_inset Formula $\mathbb{P}$
+\end_inset
+
+ 
+\shape italic
+computa
+\shape default
+ a la funcion 
+\begin_inset Formula $f$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Veamos algunos ejemplos:
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Formula $($
+\end_inset
+
+E
+\begin_inset Formula $1)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+La funcion 
+\begin_inset Formula $\lambda xy\left[x+y\right]$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-efectivamente computable, cualquiera sea el alfabeto 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+ ya que el procedimiento enseñado en la escuela primaria para sumar numeros
+ en notacion decimal es efectivo y computa esta funcion.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Formula $($
+\end_inset
+
+E
+\begin_inset Formula $2)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+La funcion 
+\begin_inset Formula $C_{3}^{1,2}$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-efectivamente computable ya que el siguiente procedimiento 
+\begin_inset Formula $\mathbb{P}$
+\end_inset
+
+ con conjunto de datos de entrada 
+\begin_inset Formula $\omega\times\Sigma^{\ast2}$
+\end_inset
+
+ la computa:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+
+Independientemente de quien sea el dato de entrada 
+\begin_inset Formula $(x_{1},\alpha_{1},\alpha_{2})$
+\end_inset
+
+, detenerse dando como salida el numero 
+\begin_inset Formula $3$
+\end_inset
+
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Formula $($
+\end_inset
+
+E
+\begin_inset Formula $3)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+La funcion 
+\begin_inset Formula $p_{3}^{2,3}$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-efectivamente computable ya que el siguiente procedimiento con conjunto
+ de datos de entrada 
+\begin_inset Formula $\omega^{2}\times\Sigma^{\ast3}$
+\end_inset
+
+ la computa:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+
+Dado el dato de entrada 
+\begin_inset Formula $(x_{1},x_{2},\alpha_{1},\alpha_{2},\alpha_{3})$
+\end_inset
+
+, detenerse y dar como salida la palabra 
+\begin_inset Formula $\alpha_{1}$
+\end_inset
+
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Formula $($
+\end_inset
+
+E
+\begin_inset Formula $4)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $Pred$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-efectivamente computable.
+ Para realizar el procedimiento efectivo que compute a 
+\begin_inset Formula $Pred$
+\end_inset
+
+ necesitaremos el procedimiento de la escuela primaria que dado un numero
+ no nulo 
+\begin_inset Formula $x$
+\end_inset
+
+, expresado en notacion decimal, calcula el numero 
+\begin_inset Formula $x-1$
+\end_inset
+
+, en notacion decimal.
+ Llamemos 
+\begin_inset Formula $\mathbb{P}_{-1}$
+\end_inset
+
+ a dicho procedimiento.
+ El siguiente procedimiento (con conjunto de datos de entrada igual a 
+\begin_inset Formula $\omega$
+\end_inset
+
+) computa a 
+\begin_inset Formula $Pred$
+\end_inset
+
+:
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Dado como dato de entrada un elemento 
+\begin_inset Formula $x\in\omega$
+\end_inset
+
+, realizar lo siguiente:
+\end_layout
+
+\begin_layout Standard
+Etapa 1
+\end_layout
+
+\begin_layout Standard
+\noindent
+Si 
+\begin_inset Formula $x=0$
+\end_inset
+
+, entonces ir a Etapa 3, en caso contrario ir a Etapa 2.
+\end_layout
+
+\begin_layout Standard
+Etapa 2
+\end_layout
+
+\begin_layout Standard
+\noindent
+Correr 
+\begin_inset Formula $\mathbb{P}_{-1}$
+\end_inset
+
+ con dato de entrada 
+\begin_inset Formula $x$
+\end_inset
+
+ obteniendo 
+\begin_inset Formula $y$
+\end_inset
+
+ como dato de salida.
+ Detenerse y dar 
+\begin_inset Formula $y$
+\end_inset
+
+ como dato de salida.
+\end_layout
+
+\begin_layout Standard
+Etapa 3
+\end_layout
+
+\begin_layout Standard
+\noindent
+Si 
+\begin_inset Formula $x=0$
+\end_inset
+
+, entonces ir a Etapa 1.
+\end_layout
+
+\begin_layout Standard
+Como puede notarse el procedimiento anterior es efectivo ya que como todos
+ sabemos, los sucesivos pasos efectuados al correr 
+\begin_inset Formula $\mathbb{P}_{-1}$
+\end_inset
+
+ en la Etapa 2 son todos simples y efectivamente realizables.
+ Por supuesto si uno quisiera ser mas prolijo, deberia reemplazar la Etapa
+ 2 por las distintas instrucciones de 
+\begin_inset Formula $\mathbb{P}_{-1}$
+\end_inset
+
+, referidas a 
+\begin_inset Formula $x$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+(E
+\begin_inset Formula $5$
+\end_inset
+
+)
+\end_layout
+
+\end_inset
+
+El predicado 
+\begin_inset Formula $\lambda xy[x<y]$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-efectivamente computable cualquiera sea el alfabeto 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+.
+ Describiremos con palabras un procedimiento 
+\begin_inset Formula $\mathbb{P}_{<}$
+\end_inset
+
+ que computa a 
+\begin_inset Formula $\lambda xy[x<y]$
+\end_inset
+
+.
+ Su conjunto de datos de entrada es 
+\begin_inset Formula $\omega^{2}$
+\end_inset
+
+.
+ Dado un par 
+\begin_inset Formula $(x,y)\in\omega^{2}$
+\end_inset
+
+, el procedimiento primero compara las longitudes de las palabras que en
+ notacion decimal representan a 
+\begin_inset Formula $x$
+\end_inset
+
+ y 
+\begin_inset Formula $y$
+\end_inset
+
+.
+ Por supuesto esto lo hace borrando de a un simbolo y viendo si alguna se
+ termina primero.
+ Si resultan de distinta longitud, es facil darse cuenta como sigue.
+ En caso de que las palabras resulten de igual longitud, entonces se hace
+ el procedimiento clasico de ir comparando digitos de izquierda a derecha.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+(E
+\begin_inset Formula $6$
+\end_inset
+
+)
+\end_layout
+
+\end_inset
+
+Veamos que la funcion 
+\begin_inset Formula $\lambda\alpha[\left\vert \alpha\right\vert ]$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-efectivamente computable.
+ Como en los lenguajes de programacion, usaremos variables y asignaciones
+ para diseñar el procedimiento.
+ Ademas llamemos 
+\begin_inset Formula $\mathbb{P}_{+1}$
+\end_inset
+
+ a el procedimiento de la escuela primaria que dado un numero no nulo 
+\begin_inset Formula $x$
+\end_inset
+
+, expresado en notacion decimal, calcula el numero 
+\begin_inset Formula $x+1$
+\end_inset
+
+, en notacion decimal.
+ Sea 
+\begin_inset Formula $\mathbb{P}_{\left\vert \ \right\vert }$
+\end_inset
+
+ el siguiente procedimiento.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Dado como dato de entrada un elemento 
+\begin_inset Formula $\alpha\in\Sigma^{\ast}$
+\end_inset
+
+, realizar lo siguiente:
+\end_layout
+
+\begin_layout Standard
+Etapa 1: Hacer las siguientes asignaciones
+\begin_inset Formula 
+\begin{align*}
+A & \leftarrow\alpha\\
+B & \leftarrow0
+\end{align*}
+
+\end_inset
+
+e ir a Etapa 2.
+\end_layout
+
+\begin_layout Standard
+Etapa 2: Si 
+\begin_inset Formula $A$
+\end_inset
+
+ no es 
+\begin_inset Formula $\varepsilon$
+\end_inset
+
+, ir a Etapa 3.
+ En caso contrario detenerse y dar como salida 
+\begin_inset Formula $B$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Etapa 3: Correr 
+\begin_inset Formula $\mathbb{P}_{+1}$
+\end_inset
+
+ con dato de entrada igual al contenido de 
+\begin_inset Formula $B$
+\end_inset
+
+, obteniendo 
+\begin_inset Formula $y$
+\end_inset
+
+ como salida.
+ Hacer las siguientes asignaciones
+\begin_inset Formula 
+\begin{align*}
+A & \leftarrow\text{resultado de remover el 1er simbolo de }A\\
+B & \leftarrow y
+\end{align*}
+
+\end_inset
+
+e ir a Etapa 2.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+
+\series bold
+Ejercicio 1:
+\end_layout
+
+\end_inset
+
+Convensase que el uso de asignaciones puede realizarse usando solo lapiz
+ y papel.
+ Imagine como lo haria en el caso anterior y corrobore que dicho procedimiento
+ es efectivo y ademas computa a 
+\begin_inset Formula $\lambda\alpha[\left\vert \alpha\right\vert ]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+
+\series bold
+Ejercicio 2:
+\end_layout
+
+\end_inset
+
+Use los procedimientos 
+\begin_inset Formula $\mathbb{P}_{<}$
+\end_inset
+
+ y 
+\begin_inset Formula $\mathbb{P}_{\left\vert \ \right\vert }$
+\end_inset
+
+ de los dos ejemplos anteriores para diseñar usando asignaciones un procedimient
+o que compute a la funcion 
+\begin_inset Formula $\lambda i\alpha[[\alpha]_{i}]$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Un ultimo ejemplo:
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Formula $($
+\end_inset
+
+E
+\begin_inset Formula $7)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+Si 
+\begin_inset Formula $\leq$
+\end_inset
+
+ es el orden total sobre 
+\begin_inset Formula $\Sigma=\{\blacktriangle,\%\}$
+\end_inset
+
+ dado por 
+\begin_inset Formula $\blacktriangle<\%$
+\end_inset
+
+, entonces veremos que la funcion 
+\begin_inset Formula $s^{\leq}$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-efectivamente computable.
+ En un par de ejercicios de la Guia2 vimos que cualquiera sea 
+\begin_inset Formula $\alpha\in\Sigma^{\ast}$
+\end_inset
+
+, se cumple
+\begin_inset Formula 
+\begin{align*}
+s^{\leq}(\varepsilon) & =\blacktriangle\\
+s^{\leq}(\alpha\blacktriangle) & =\alpha\%\\
+s^{\leq}(\alpha\%) & =s^{\leq}(\alpha)\blacktriangle
+\end{align*}
+
+\end_inset
+
+y que estas ecuaciones permiten calcular el valor de 
+\begin_inset Formula $s^{\leq}$
+\end_inset
+
+.
+ Usaremos esta idea para dar un procedimiento efectivo (con conjunto de
+ datos de entrada igual a 
+\begin_inset Formula $\Sigma^{\ast}$
+\end_inset
+
+) que compute a 
+\begin_inset Formula $s^{\leq}$
+\end_inset
+
+.
+ Como en los lenguajes de programacion, usaremos variables y asignaciones
+ para diseñar el procedimiento.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Etapa 1: Dado el dato de entrada 
+\begin_inset Formula $\alpha\in\Sigma^{\ast}$
+\end_inset
+
+, hacer las siguientes asignaciones
+\begin_inset Formula 
+\begin{align*}
+A & \leftarrow\alpha\\
+B & \leftarrow\varepsilon\\
+F & \leftarrow\blacktriangle
+\end{align*}
+
+\end_inset
+
+e ir a Etapa 2.
+\end_layout
+
+\begin_layout Standard
+Etapa 2: Si 
+\begin_inset Formula $A$
+\end_inset
+
+ comiensa con 
+\begin_inset Formula $\blacktriangle$
+\end_inset
+
+, entonces hacer las siguientes asignaciones
+\begin_inset Formula 
+\begin{align*}
+A & \leftarrow\text{resultado de remover el 1er simbolo de }A\\
+F & \leftarrow B\%\\
+B & \leftarrow B\blacktriangle
+\end{align*}
+
+\end_inset
+
+e ir a la Etapa 2.
+ En caso contrario ir a la Etapa 3.
+\end_layout
+
+\begin_layout Standard
+Etapa 3: Si 
+\begin_inset Formula $A$
+\end_inset
+
+ comiensa con 
+\begin_inset Formula $\%$
+\end_inset
+
+, entonces hacer las siguientes asignaciones
+\begin_inset Formula 
+\begin{align*}
+A & \leftarrow\text{resultado de remover el 1er simbolo de }A\\
+F & \leftarrow F\blacktriangle\\
+B & \leftarrow B\%
+\end{align*}
+
+\end_inset
+
+e ir a la Etapa 2.
+ En caso contrario ir a la Etapa 4.
+\end_layout
+
+\begin_layout Standard
+Etapa 4: Dar como salida 
+\begin_inset Formula $F$
+\end_inset
+
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Observacion:
+\series default
+ Notese que la definicion de funcion 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-efectivamente computable para el caso 
+\begin_inset Formula $f=\emptyset$
+\end_inset
+
+ tiene a priori cierta ambiguedad ya que cualesquiera sean 
+\begin_inset Formula $n,m\in\omega$
+\end_inset
+
+ y 
+\begin_inset Formula $O\in\{\omega,\Sigma^{\ast}\}$
+\end_inset
+
+ tenemos que 
+\begin_inset Formula $\emptyset:\emptyset\subseteq\omega^{n}\times\Sigma^{\ast m}\rightarrow O$
+\end_inset
+
+ ya que 
+\begin_inset Formula $D_{\emptyset}=\emptyset$
+\end_inset
+
+ y 
+\begin_inset Formula $I_{\emptyset}=\emptyset$
+\end_inset
+
+.
+ De todas maneras, cualesquiera sean los 
+\begin_inset Formula $n,m$
+\end_inset
+
+ y 
+\begin_inset Formula $O$
+\end_inset
+
+ elejidos, siempre hay un procedimiento efectivo que computa a 
+\begin_inset Formula $f=\emptyset$
+\end_inset
+
+, i.e.
+ un procedimiento que nunca se detiene, cualesquiera sea el dato de entrada
+ de 
+\begin_inset Formula $\omega^{n}\times\Sigma^{\ast m}$
+\end_inset
+
+.
+ Es decir que la funcion 
+\begin_inset Formula $\emptyset$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-efectivamente computable cualesquiera sea el alfabeto 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+.
+ Cabe destacar que para el caso de una funcion 
+\begin_inset Formula $f\neq\emptyset$
+\end_inset
+
+, nuestra definicion es inambigua ya que hay unicos 
+\begin_inset Formula $n,m\in\omega$
+\end_inset
+
+ y 
+\begin_inset Formula $O\in\{\omega,\Sigma^{\ast}\}$
+\end_inset
+
+ tales que 
+\begin_inset Formula $f:D_{f}\subseteq\omega^{n}\times\Sigma^{\ast m}\rightarrow O$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+
+\series bold
+Ejercicio 3:
+\end_layout
+
+\end_inset
+
+Sea 
+\begin_inset Formula $\mathbb{P}_{+}$
+\end_inset
+
+ un procedimiento efectivo que compute a la funcion 
+\begin_inset Formula $\lambda xy\left[x+y\right]$
+\end_inset
+
+.
+ Basado en 
+\begin_inset Formula $\mathbb{P}_{+}$
+\end_inset
+
+ diseñe un procedimiento efectivo que compute a 
+\begin_inset Formula $\lambda xy\left[x.y\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+
+\series bold
+Ejercicio 4:
+\end_layout
+
+\end_inset
+
+Sea 
+\begin_inset Formula $\leq$
+\end_inset
+
+ es el orden total sobre 
+\begin_inset Formula $\Sigma=\{\blacktriangle,\%\}$
+\end_inset
+
+ dado por 
+\begin_inset Formula $\blacktriangle<\%$
+\end_inset
+
+.
+ Usando que 
+\begin_inset Formula $s^{\leq}$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-efectivamente computable diseñe un procedimiento efectivo que compute a
+ 
+\begin_inset Formula $\ast^{\leq}:\omega\rightarrow\Sigma^{\ast}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+
+\series bold
+Ejercicio 5:
+\end_layout
+
+\end_inset
+
+Sea 
+\begin_inset Formula $\Sigma=\{\blacktriangle,\%\}$
+\end_inset
+
+ y sea 
+\begin_inset Formula $f:D_{f}\subseteq\omega\times\omega\times\Sigma^{\ast}\rightarrow\omega$
+\end_inset
+
+ dada por:
+\begin_inset Formula 
+\begin{align*}
+D_{f} & =\{(0,1,\varepsilon),(55,54,\blacktriangle\%\blacktriangle\%\blacktriangle),(1,1,\blacktriangle\blacktriangle)\}\\
+f(0,1,\varepsilon) & =1\\
+f(55,54,\blacktriangle\%\blacktriangle\%\blacktriangle) & =2\\
+f(1,1,\blacktriangle\blacktriangle) & =3
+\end{align*}
+
+\end_inset
+
+Pruebe que 
+\begin_inset Formula $f$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-efectivamente computable.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+
+\series bold
+Ejercicio 6:
+\end_layout
+
+\end_inset
+
+Diga con palabras como diseñaria un procedimiento efectivo que compute la
+ funcion 
+\begin_inset Formula $\lambda ix[(x)_{i}]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+
+\series bold
+Ejercicio 7:
+\end_layout
+
+\end_inset
+
+Sean
+\begin_inset Formula 
+\begin{align*}
+f & :D_{f}\subseteq\omega\times\omega\times\Sigma^{\ast}\rightarrow\omega\\
+f_{1} & :D_{f_{1}}\subseteq\omega\times\Sigma^{\ast}\rightarrow\omega\\
+f_{2} & :D_{f_{2}}\subseteq\omega\times\Sigma^{\ast}\rightarrow\omega\\
+f_{3} & :D_{f_{3}}\subseteq\omega\times\Sigma^{\ast}\rightarrow\Sigma^{\ast}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Es verdad que 
+\begin_inset Formula $D_{f\circ[f_{1},f_{2},f_{3}]}=D_{f_{1}}\cap D_{f_{2}}\cap D_{f_{3}}$
+\end_inset
+
+?
+\end_layout
+
+\begin_layout Enumerate
+De una descripcion del dominio de 
+\begin_inset Formula $f\circ[f_{1},f_{2},f_{3}]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Si 
+\begin_inset Formula $f,f_{1},f_{2},f_{3}$
+\end_inset
+
+ son 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-efectivamente computables, entonces 
+\begin_inset Formula $f\circ[f_{1},f_{2},f_{3}]$
+\end_inset
+
+ lo es.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+
+\series bold
+Ejercicio 8:
+\end_layout
+
+\end_inset
+
+V o F o I.
+ Justifique
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Si 
+\begin_inset Formula $\mathbb{P}$
+\end_inset
+
+ es un procedimiento efectivo que computa una funcion no vacia 
+\begin_inset Formula $f:D_{f}\subseteq\omega\rightarrow\omega$
+\end_inset
+
+ entonces el conjunto de datos de salida de 
+\begin_inset Formula $\mathbb{P}$
+\end_inset
+
+ es 
+\begin_inset Formula $\omega$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Si 
+\begin_inset Formula $\mathbb{P}$
+\end_inset
+
+ y 
+\begin_inset Formula $\mathbb{Q}$
+\end_inset
+
+ son procedimientos efectivos, entonces 
+\begin_inset Formula $\mathbb{PQ}$
+\end_inset
+
+ lo es.
+\end_layout
+
+\begin_layout Enumerate
+Denotemos con 
+\begin_inset Formula $e$
+\end_inset
+
+ a la cantidad de veces que estornudó Alan Turing a lo largo de su vida.
+ Sea 
+\begin_inset Formula $f:\omega\rightarrow\omega$
+\end_inset
+
+, dada por 
+\begin_inset Formula $f(x)=x^{e}$
+\end_inset
+
+.
+ Entonces 
+\begin_inset Formula $f$
+\end_inset
+
+ es 
+\begin_inset Formula $\emptyset$
+\end_inset
+
+-efectivamente computable.
+\end_layout
+
+\begin_layout Enumerate
+Si 
+\begin_inset Formula $f$
+\end_inset
+
+ y 
+\begin_inset Formula $g$
+\end_inset
+
+ son 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-efectivamente computables entonces 
+\begin_inset Formula $f.g$
+\end_inset
+
+ lo es 
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+Ejercicio 8,3:
+\end_layout
+
+\end_inset
+
+Si 
+\begin_inset Formula $f:D_{f}\subseteq\omega\times\omega\times\{@,\uparrow\}^{\ast}\rightarrow\omega$
+\end_inset
+
+ es tal que 
+\begin_inset Formula $D_{f}$
+\end_inset
+
+ es finito, entonces 
+\begin_inset Formula $f$
+\end_inset
+
+ es 
+\begin_inset Formula $\{@,\uparrow\}$
+\end_inset
+
+-efectivamente computable 
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+Conjuntos 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-efectivamente computables
+\end_layout
+
+\begin_layout Standard
+Sea 
+\begin_inset Formula $X$
+\end_inset
+
+ un conjunto cualquiera y sea 
+\begin_inset Formula $S\subseteq X$
+\end_inset
+
+.
+ Usaremos 
+\begin_inset Formula $\chi_{S}^{X}$
+\end_inset
+
+ para denotar la funcion
+\begin_inset Formula 
+\[
+\begin{array}{rcl}
+\chi_{S}^{X}:X & \rightarrow & \omega\\
+x & \rightarrow & \left\{ \begin{array}{c}
+1\text{ si }x\in S\\
+0\text{ si }x\notin S
+\end{array}\right.
+\end{array}
+\]
+
+\end_inset
+
+Llamaremos a 
+\begin_inset Formula $\chi_{S}^{X}$
+\end_inset
+
+ la 
+\shape italic
+funcion caracteristica de 
+\shape default
+
+\begin_inset Formula $S$
+\end_inset
+
+
+\shape italic
+
+\begin_inset space \space{}
+\end_inset
+
+con respecto a 
+\shape default
+
+\begin_inset Formula $X$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Un conjunto 
+\begin_inset Formula $S\subseteq\omega^{n}\times\Sigma^{\ast m}$
+\end_inset
+
+ sera llamado 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+
+\shape italic
+-efectivamente computable
+\shape default
+ cuando la funcion 
+\begin_inset Formula $\chi_{S}^{\omega^{n}\times\Sigma^{\ast m}}$
+\end_inset
+
+ sea 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-efectivamente computable.
+ Notese que 
+\begin_inset Formula $S$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-efectivamente computable sii hay un procedimiento efectivo 
+\begin_inset Formula $\mathbb{P}$
+\end_inset
+
+, el cual computa 
+\begin_inset Formula $\chi_{S}^{\omega^{n}\times\Sigma^{\ast m}}$
+\end_inset
+
+, es decir:
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+
+El conjunto de datos de entrada de 
+\begin_inset Formula $\mathbb{P}$
+\end_inset
+
+ es 
+\begin_inset Formula $\omega^{n}\times\Sigma^{\ast m}$
+\end_inset
+
+, siempre termina y da como dato de salida un elemento de 
+\begin_inset Formula $\{0,1\}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+
+Dado 
+\begin_inset Formula $(\vec{x},\vec{\alpha})\in\omega^{n}\times\Sigma^{\ast m}$
+\end_inset
+
+, 
+\begin_inset Formula $\mathbb{P}$
+\end_inset
+
+ da como salida al numero 
+\begin_inset Formula $1$
+\end_inset
+
+ si 
+\begin_inset Formula $(\vec{x},\vec{\alpha})\in S$
+\end_inset
+
+ y al numero 
+\begin_inset Formula $0$
+\end_inset
+
+ si 
+\begin_inset Formula $(\vec{x},\vec{\alpha})\notin S$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+Si 
+\begin_inset Formula $\mathbb{P}$
+\end_inset
+
+ es un procedimiento efectivo el cual computa a 
+\begin_inset Formula $\chi_{S}^{\omega^{n}\times\Sigma^{\ast m}}$
+\end_inset
+
+, diremos que 
+\begin_inset Formula $\mathbb{P}$
+\end_inset
+
+ 
+\shape italic
+decide la pertenecia a 
+\shape default
+
+\begin_inset Formula $S$
+\end_inset
+
+, con respecto al conjunto 
+\begin_inset Formula $\omega^{n}\times\Sigma^{\ast m}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Observacion:
+\series default
+ Notese que la definicion de conjunto 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-efectivamente computable, para el caso 
+\begin_inset Formula $S=\emptyset$
+\end_inset
+
+, tiene a priori cierta ambiguedad ya que cualesquiera sean 
+\begin_inset Formula $n,m\in\omega$
+\end_inset
+
+ tenemos que 
+\begin_inset Formula $\emptyset\subseteq\omega^{n}\times\Sigma^{\ast m}$
+\end_inset
+
+.
+ De todas maneras, cualesquiera sean los 
+\begin_inset Formula $n,m$
+\end_inset
+
+ elejidos, siempre hay un procedimiento efectivo que computa a 
+\begin_inset Formula $\chi_{\emptyset}^{\omega^{n}\times\Sigma^{\ast m}}$
+\end_inset
+
+, i.e.
+ un procedimiento que siempre da como salida 
+\begin_inset Formula $0$
+\end_inset
+
+, cualesquiera sea el dato de entrada de 
+\begin_inset Formula $\omega^{n}\times\Sigma^{\ast m}$
+\end_inset
+
+.
+ Es decir que el conjunto 
+\begin_inset Formula $\emptyset$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-efectivamente computable cualesquiera sea el alfabeto 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+.
+ Cabe destacar que para el caso de un conjunto 
+\begin_inset Formula $S\neq\emptyset$
+\end_inset
+
+, nuestra definicion es inambigua ya que hay unicos 
+\begin_inset Formula $n,m\in\omega$
+\end_inset
+
+ tales que 
+\begin_inset Formula $S\subseteq\omega^{n}\times\Sigma^{\ast m}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+
+\series bold
+Ejercicio 9:
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\omega^{3}\times\Sigma^{\ast2}$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-efectivamente computable
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+Ejercicio 9,3:
+\end_layout
+
+\end_inset
+
+Si 
+\begin_inset Formula $S\subseteq\omega^{2}\times\{@,\uparrow\}^{\ast3}$
+\end_inset
+
+ es finito, entonces es 
+\begin_inset Formula $\{@,\uparrow\}$
+\end_inset
+
+-efectivamente computable
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+
+\series bold
+Ejercicio 10:
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\{(x,\alpha)\in\omega\times\Sigma^{\ast}:\left\vert \alpha\right\vert ^{x}$
+\end_inset
+
+ es par
+\begin_inset Formula $\}$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-efectivamente computable
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+
+\series bold
+Ejercicio 11:
+\end_layout
+
+\end_inset
+
+Sea 
+\begin_inset Formula $\Sigma=\{\blacktriangle,\%\}$
+\end_inset
+
+ y sea
+\begin_inset Formula 
+\[
+S=\{(0,1,\varepsilon),(55,54,\blacktriangle\%\blacktriangle\%\blacktriangle),(1,1,\blacktriangle\blacktriangle)\}
+\]
+
+\end_inset
+
+Pruebe que 
+\begin_inset Formula $S$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-efectivamente computable.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+
+\series bold
+Ejercicio 12:
+\end_layout
+
+\end_inset
+
+Sean 
+\begin_inset Formula $S_{1},S_{2}\subseteq\omega^{n}\times\Sigma^{\ast m}$
+\end_inset
+
+ conjuntos 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-efectivamente computables.
+ Entonces 
+\begin_inset Formula $S_{1}\cup S_{2},S_{1}\cap S_{2}$
+\end_inset
+
+ y 
+\begin_inset Formula $(\omega^{n}\times\Sigma^{\ast m})-S_{1}$
+\end_inset
+
+ son 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-efectivamente computables.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+
+\series bold
+Ejercicio 13:
+\end_layout
+
+\end_inset
+
+(S) Sean 
+\begin_inset Formula $S\subseteq\omega$
+\end_inset
+
+ y 
+\begin_inset Formula $L\subseteq\{@,\uparrow\}^{\ast}$
+\end_inset
+
+ tales que 
+\begin_inset Formula $(0,\varepsilon)\in S\times L$
+\end_inset
+
+.
+ Entonces 
+\begin_inset Formula $S$
+\end_inset
+
+ y 
+\begin_inset Formula $L$
+\end_inset
+
+ son ambos 
+\begin_inset Formula $\{@,\uparrow\}$
+\end_inset
+
+-efectivamente computables sii 
+\begin_inset Formula $S\times L$
+\end_inset
+
+ es 
+\begin_inset Formula $\{@,\uparrow\}$
+\end_inset
+
+-efectivamente computable 
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+Conjuntos 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-efectivamente enumerables
+\end_layout
+
+\begin_layout Standard
+Supongamos que 
+\begin_inset Formula $k,l,n,m\in\omega$
+\end_inset
+
+ y que 
+\begin_inset Formula $F:D_{F}\subseteq\omega^{k}\times\Sigma^{\ast l}\rightarrow\omega^{n}\times\Sigma^{\ast m}$
+\end_inset
+
+.
+ Supongamos ademas que 
+\begin_inset Formula $n+m\geq1$
+\end_inset
+
+.
+ Entonces denotaremos con 
+\begin_inset Formula $F_{(i)}$
+\end_inset
+
+ a la funcion 
+\begin_inset Formula $p_{i}^{n,m}\circ F$
+\end_inset
+
+.
+ Notar que
+\begin_inset Formula 
+\begin{align*}
+F_{(i)} & :D_{F}\subseteq\omega^{k}\times\Sigma^{\ast l}\rightarrow\omega\text{, para cada }i=1,...,n\\
+F_{(i)} & :D_{F}\subseteq\omega^{k}\times\Sigma^{\ast l}\rightarrow\Sigma^{\ast}\text{, para cada }i=n+1,...,n+m
+\end{align*}
+
+\end_inset
+
+Por lo cual cada una de las funciones 
+\begin_inset Formula $F_{(i)}$
+\end_inset
+
+ son 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-mixtas.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+
+\series bold
+Ejercicio 14:
+\end_layout
+
+\end_inset
+
+Sea 
+\begin_inset Formula $F:\{(x,\alpha)\in\omega\times\Sigma^{\ast}:\left\vert \alpha\right\vert ^{x}$
+\end_inset
+
+ es par
+\begin_inset Formula $\}\subseteq\omega\times\Sigma^{\ast}\rightarrow\omega^{2}\times\Sigma^{\ast}$
+\end_inset
+
+ dada por 
+\begin_inset Formula $F(x,\alpha)=(x,x^{2}+\left\vert \alpha\right\vert ,\varepsilon)$
+\end_inset
+
+.
+ Diga quienes son 
+\begin_inset Formula $F_{(1)}$
+\end_inset
+
+,
+\begin_inset Formula $F_{(2)}$
+\end_inset
+
+ y 
+\begin_inset Formula $F_{(3)}$
+\end_inset
+
+.
+ Que funcion es 
+\begin_inset Formula $[F_{(1)},F_{(2)},F_{(3)}]$
+\end_inset
+
+?
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+
+\series bold
+Ejercicio 15:
+\end_layout
+
+\end_inset
+
+En la definicion anterior, para el caso 
+\begin_inset Formula $n+m=1$
+\end_inset
+
+, quien es 
+\begin_inset Formula $F_{(1)}$
+\end_inset
+
+?
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+
+\series bold
+Ejercicio 16:
+\end_layout
+
+\end_inset
+
+Pruebe que 
+\begin_inset Formula $F=[F_{(1)},...,F_{(n+m)}]$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Un conjunto 
+\begin_inset Formula $S\subseteq\omega^{n}\times\Sigma^{\ast m}$
+\end_inset
+
+ sera llamado 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+
+\shape italic
+-efectivamente enumerable
+\shape default
+ cuando sea vacio o haya una funcion 
+\begin_inset Formula $F:\omega\rightarrow\omega^{n}\times\Sigma^{\ast m}$
+\end_inset
+
+ tal que 
+\begin_inset Formula $I_{F}=S$
+\end_inset
+
+ y 
+\begin_inset Formula $F_{(i)}$
+\end_inset
+
+ sea 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-efectivamente computable, para cada 
+\begin_inset Formula $i\in\{1,...,n+m\}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Observacion:
+\series default
+ Notese que para el caso 
+\begin_inset Formula $n=m=0$
+\end_inset
+
+, la condicion anterior de que 
+\begin_inset Formula $F_{(i)}$
+\end_inset
+
+ sea 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-efectivamente computable, para cada 
+\begin_inset Formula $i\in\{1,...,n+m\}$
+\end_inset
+
+ se cumple vacuamente y por lo tanto la definicion anterior nos dice que
+ un conjunto 
+\begin_inset Formula $S\subseteq\omega^{0}\times\Sigma^{\ast0}=\{\Diamond\}$
+\end_inset
+
+ sera 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-efectivamente enumerable sii es vacio o hay una funcion 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-efectivamente computable 
+\begin_inset Formula $F:\omega\rightarrow\{\Diamond\}$
+\end_inset
+
+, tal que 
+\begin_inset Formula $I_{F}=S$
+\end_inset
+
+.
+ Por supuesto, esto nos dice que 
+\begin_inset Formula $\emptyset$
+\end_inset
+
+ y 
+\begin_inset Formula $\{\Diamond\}$
+\end_inset
+
+ son 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-efectivamente enumerables.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Para entender mejor la idea de esta definicion consideremos el siguiente
+ resultado.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{lemma}
+\end_layout
+
+\end_inset
+
+ Un conjunto no vacio 
+\begin_inset Formula $S\subseteq\omega^{n}\times\Sigma^{\ast m}$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-efectivamente enumerable sii hay un procedimiento efectivo 
+\begin_inset Formula $\mathbb{P}$
+\end_inset
+
+ tal que
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+(1)
+\end_layout
+
+\end_inset
+
+El conjunto de datos de entrada de 
+\begin_inset Formula $\mathbb{P}$
+\end_inset
+
+ es 
+\begin_inset Formula $\omega$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+(2)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\mathbb{P}$
+\end_inset
+
+ se detiene para cada 
+\begin_inset Formula $x\in\omega$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+(3)
+\end_layout
+
+\end_inset
+
+El conjunto de datos de salida de 
+\begin_inset Formula $\mathbb{P}$
+\end_inset
+
+ es igual a 
+\begin_inset Formula $S$
+\end_inset
+
+.
+ (Es decir, siempre que 
+\begin_inset Formula $\mathbb{P}$
+\end_inset
+
+ se detiene, da como salida un elemento de 
+\begin_inset Formula $S$
+\end_inset
+
+, y para cada elemento 
+\begin_inset Formula $(\vec{x},\vec{\alpha})\in S$
+\end_inset
+
+, hay un 
+\begin_inset Formula $x\in\omega$
+\end_inset
+
+ tal que 
+\begin_inset Formula $\mathbb{P}$
+\end_inset
+
+ da como salida a 
+\begin_inset Formula $(\vec{x},\vec{\alpha})$
+\end_inset
+
+ cuando lo corremos con 
+\begin_inset Formula $x$
+\end_inset
+
+ como dato de entrada) 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{lemma}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+
+\series bold
+Ejercicio 17:
+\end_layout
+
+\end_inset
+
+(S) Explique con palabras una justificacion del lema anterior 
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Cuando un procedimiento 
+\begin_inset Formula $\mathbb{P}$
+\end_inset
+
+ cumpla (1), (2) y (3) del lema anterior, diremos que 
+\begin_inset Formula $\mathbb{P}$
+\end_inset
+
+ 
+\shape italic
+enumera
+\shape default
+ a 
+\begin_inset Formula $S$
+\end_inset
+
+.
+ O sea que 
+\begin_inset Formula $S$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-efectivamente enumerable sii es vacio o hay un procedimiento efectivo el
+ cual enumera a 
+\begin_inset Formula $S$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Dicho de otra forma un conjunto no vacio 
+\begin_inset Formula $S$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-efectivamente enumerable sii hay un procedimiento efectivo 
+\begin_inset Formula $\mathbb{P}$
+\end_inset
+
+ el cual tiene conjunto de datos de entrada 
+\begin_inset Formula $\omega$
+\end_inset
+
+ y ademas para los sucesivos datos de entrada 
+\begin_inset Formula $0,1,2,3,...$
+\end_inset
+
+, el procedimiento 
+\begin_inset Formula $\mathbb{P}$
+\end_inset
+
+ produce respectivamente los datos de salida 
+\begin_inset Formula $e_{0},e_{1},e_{2},e_{3},...$
+\end_inset
+
+ de manera que 
+\begin_inset Formula $S=\{e_{0},e_{1},e_{2},...\}$
+\end_inset
+
+.
+ Cabe destacar aqui que puede suceder que 
+\begin_inset Formula $e_{i}=e_{j}$
+\end_inset
+
+, para ciertos 
+\begin_inset Formula $i,j$
+\end_inset
+
+, con 
+\begin_inset Formula $i\neq j$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Nota Importante:
+\series default
+ en lo que sigue muchas veces daremos procedimientos que son efectivos en
+ terminos de otros que ya se han dado, es decir daremos un procedimiento
+ que en principio no es claro que sea efectivo pero el cual se volveria
+ efectivo si reemplazamos ciertas instrucciones por la manera efectiva de
+ simularlas.
+ Para hacer mas dinamico el discurso no distinguiremos entre este tipo de
+ procedimientos (efectivisables) y los efectivos propiamente dichos.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Algunos ejemplos:
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+(E
+\begin_inset Formula $1$
+\end_inset
+
+)
+\end_layout
+
+\end_inset
+
+Un procedimiento efectivo que enumera 
+\begin_inset Formula $\omega\times\omega$
+\end_inset
+
+ es el siguiente:
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Etapa 1
+\end_layout
+
+\begin_layout Standard
+\noindent
+Si 
+\begin_inset Formula $x=0$
+\end_inset
+
+, dar como salida el par 
+\begin_inset Formula $(0,0)$
+\end_inset
+
+ y terminar.
+ Si 
+\begin_inset Formula $x\neq0$
+\end_inset
+
+, calcular 
+\begin_inset Formula $x_{1}=(x)_{1}$
+\end_inset
+
+ y 
+\begin_inset Formula $x_{2}=(x)_{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Etapa 2
+\end_layout
+
+\begin_layout Standard
+\noindent
+Dar como dato de salida el par 
+\begin_inset Formula $(x_{1},x_{2})$
+\end_inset
+
+ y terminar
+\end_layout
+
+\begin_layout Standard
+Como puede notarse el procedimiento es efectivo (efectivisable) y ademas
+ el conjunto de datos de salida es 
+\begin_inset Formula $\omega\times\omega$
+\end_inset
+
+ ya que si tomamos un par cualquiera 
+\begin_inset Formula $(a,b)\in\omega\times\omega$
+\end_inset
+
+, el procedimiento lo dara como dato de salida para la entrada 
+\begin_inset Formula $x=2^{a}3^{b}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+(E
+\begin_inset Formula $2$
+\end_inset
+
+)
+\end_layout
+
+\end_inset
+
+Veamos que 
+\begin_inset Formula $\omega^{2}\times\Sigma^{\ast3}$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-efectivamente enumerable cualquiera sea el alfabeto no vacio 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+.
+ Sea 
+\begin_inset Formula $\leq$
+\end_inset
+
+ un orden total para el alfabeto 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+.
+ Utilisando el orden 
+\begin_inset Formula $\leq$
+\end_inset
+
+ podemos diseñar el siguiente procedimiento para enumerar 
+\begin_inset Formula $\omega^{2}\times\Sigma^{\ast3}$
+\end_inset
+
+:
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Etapa 1
+\end_layout
+
+\begin_layout Standard
+\noindent
+Si 
+\begin_inset Formula $x=0$
+\end_inset
+
+, dar como salida 
+\begin_inset Formula $(0,0,\varepsilon,\varepsilon,\varepsilon)$
+\end_inset
+
+ y terminar.
+ Si 
+\begin_inset Formula $x\neq0$
+\end_inset
+
+, calcular
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $x_{1}=(x)_{1}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $x_{2}=(x)_{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\alpha_{1}=\ast^{\leq}((x)_{3})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\alpha_{2}=\ast^{\leq}((x)_{4})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\alpha_{3}=\ast^{\leq}((x)_{5})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Etapa 2
+\end_layout
+
+\begin_layout Standard
+\noindent
+Dar como dato de salida la 5-upla 
+\begin_inset Formula $(x_{1},x_{2},\alpha_{1},\alpha_{2},\alpha_{3})$
+\end_inset
+
+.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+Ejercicio 18:
+\end_layout
+
+\end_inset
+
+Explique por que es efectivo el procedimiento de (E
+\begin_inset Formula $2$
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+Ejercicio 19:
+\end_layout
+
+\end_inset
+
+Pruebe que el procedimiento de (E
+\begin_inset Formula $2$
+\end_inset
+
+) tiene conjunto de datos de salida igual a 
+\begin_inset Formula $\omega^{2}\times\Sigma^{\ast3}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+Ejercicio 20:
+\end_layout
+
+\end_inset
+
+Sea 
+\begin_inset Formula $S=\{(x,\uparrow^{x}):x$
+\end_inset
+
+ es par
+\begin_inset Formula $\}$
+\end_inset
+
+.
+ Pruebe que 
+\begin_inset Formula $S$
+\end_inset
+
+ es 
+\begin_inset Formula $\{@,\uparrow\}$
+\end_inset
+
+-efectivamente enumerable.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+Ejercicio 21:
+\end_layout
+
+\end_inset
+
+Sean 
+\begin_inset Formula $S_{1},S_{2}\subseteq\omega^{n}\times\Sigma^{\ast m}$
+\end_inset
+
+ conjuntos 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-efectivamente enumerables.
+ Entonces 
+\begin_inset Formula $S_{1}\cup S_{2}$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-efectivamente enumerable
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+Ejercicio 22:
+\end_layout
+
+\end_inset
+
+(S) Sean 
+\begin_inset Formula $S_{1},S_{2}\subseteq\omega^{n}\times\Sigma^{\ast m}$
+\end_inset
+
+ conjuntos 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-efectivamente enumerables.
+ Entonces 
+\begin_inset Formula $S_{1}\cap S_{2}$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-efectivamente enumerable.
+ (No es facil, en el apunte esta probado en forma de lema.)
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+Ejercicio 23:
+\end_layout
+
+\end_inset
+
+(Explicado en video en granlogico.com) Si 
+\begin_inset Formula $\mathbb{P}$
+\end_inset
+
+ es un procedimiento efectivo cuyo conjunto de datos de entrada es 
+\begin_inset Formula $\omega\times\Sigma^{\ast}$
+\end_inset
+
+ entonces el conjunto 
+\begin_inset Formula $\{(x,\alpha)\in\omega\times\Sigma^{\ast}:\mathbb{P}$
+\end_inset
+
+ termina partiendo de 
+\begin_inset Formula $(x,\alpha)\}$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-efectivamente enumerable.
+ Saque como conclusion que el dominio de una funcion 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-efectivamente computable es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-efectivamente enumerable.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{lemma}
+\end_layout
+
+\end_inset
+
+ Si 
+\begin_inset Formula $S\subseteq\omega^{n}\times\Sigma^{\ast m}$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-efectivamente computable entonces 
+\begin_inset Formula $S$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-efectivamente enumerable.
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{lemma}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{proof}
+\end_layout
+
+\end_inset
+
+ Supongamos 
+\begin_inset Formula $S\neq\emptyset$
+\end_inset
+
+.
+ Sea 
+\begin_inset Formula $(\vec{z},\gamma)\in S$
+\end_inset
+
+, fijo.
+ Sea 
+\begin_inset Formula $\mathbb{P}$
+\end_inset
+
+ un procedimiento efectivo que compute a 
+\begin_inset Formula $\chi_{S}^{\omega^{n}\times\Sigma^{\ast m}}$
+\end_inset
+
+.
+ Ya vimos en el ejemplo anterior que 
+\begin_inset Formula $\omega^{2}\times\Sigma^{\ast3}$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-efectivamente enumerable.
+ En forma similar se puede ver que 
+\begin_inset Formula $\omega^{n}\times\Sigma^{\ast m}$
+\end_inset
+
+ lo es.
+ Sea 
+\begin_inset Formula $\mathbb{P}_{1}$
+\end_inset
+
+ un procedimiento efectivo que enumere a 
+\begin_inset Formula $\omega^{n}\times\Sigma^{\ast m}$
+\end_inset
+
+.
+ Entonces el siguiente procedimiento enumera a 
+\begin_inset Formula $S$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+Etapa 1
+\end_layout
+
+\begin_layout Standard
+\noindent
+Realizar 
+\begin_inset Formula $\mathbb{P}_{1}$
+\end_inset
+
+ con 
+\begin_inset Formula $x$
+\end_inset
+
+ de entrada para obtener como salida un 
+\begin_inset Formula $(\vec{x},\vec{\alpha})\in\omega^{n}\times\Sigma^{\ast m}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Etapa 2
+\end_layout
+
+\begin_layout Standard
+\noindent
+Realizar 
+\begin_inset Formula $\mathbb{P}$
+\end_inset
+
+ con 
+\begin_inset Formula $(\vec{x},\vec{\alpha})$
+\end_inset
+
+ de entrada para obtener el valor Booleano 
+\begin_inset Formula $e$
+\end_inset
+
+ de salida.
+\end_layout
+
+\begin_layout Standard
+Etapa 3
+\end_layout
+
+\begin_layout Standard
+\noindent
+Si 
+\begin_inset Formula $e=1$
+\end_inset
+
+ dar como dato de salida 
+\begin_inset Formula $(\vec{x},\vec{\alpha}).$
+\end_inset
+
+ Si 
+\begin_inset Formula $e=0$
+\end_inset
+
+ dar como dato de salida 
+\begin_inset Formula $(\vec{z},\gamma)$
+\end_inset
+
+.
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{proof}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Como veremos mas adelante en la Guia 9, hay conjuntos que son 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-efectivamente enumerables y no 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-efectivamente computables.
+ Sin envargo tenemos el siguiente interesante resultado:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{theorem}
+\end_layout
+
+\end_inset
+
+ Sea 
+\begin_inset Formula $S\subseteq\omega^{n}\times\Sigma^{\ast m}$
+\end_inset
+
+.
+ Son equivalentes
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+(a)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $S$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-efectivamente computable
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+(b)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $S$
+\end_inset
+
+ y 
+\begin_inset Formula $(\omega^{n}\times\Sigma^{\ast m})-S$
+\end_inset
+
+ son 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-efectivamente enumerables 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{theorem}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{proof}
+\end_layout
+
+\end_inset
+
+ (a)
+\begin_inset Formula $\Rightarrow$
+\end_inset
+
+(b).
+ Por el lema anterior tenemos que 
+\begin_inset Formula $S$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-efectivamente enumerable.
+ Notese ademas que, dado que 
+\begin_inset Formula $S$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-efectivamente computable, 
+\begin_inset Formula $(\omega^{n}\times\Sigma^{\ast m})-S$
+\end_inset
+
+ tambien lo es (por que?).
+ Es decir que aplicando nuevamente el lema anterior tenemos que 
+\begin_inset Formula $(\omega^{n}\times\Sigma^{\ast m})-S$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-efectivamente enumerable.
+\end_layout
+
+\begin_layout Standard
+(b)
+\begin_inset Formula $\Rightarrow$
+\end_inset
+
+(a).
+ Si 
+\begin_inset Formula $S=\emptyset$
+\end_inset
+
+ o 
+\begin_inset Formula $S=\omega^{n}\times\Sigma^{\ast m}$
+\end_inset
+
+ es claro que se cumple (a).
+ O sea que podemos suponer que ni 
+\begin_inset Formula $S$
+\end_inset
+
+ ni 
+\begin_inset Formula $\omega^{n}\times\Sigma^{\ast m}$
+\end_inset
+
+ son igual al conjunto vacio.
+ Sea 
+\begin_inset Formula $\mathbb{P}_{1}$
+\end_inset
+
+ un procedimiento efectivo que enumere a 
+\begin_inset Formula $S$
+\end_inset
+
+ y sea 
+\begin_inset Formula $\mathbb{P}_{2}$
+\end_inset
+
+ un procedimiento efectivo que enumere a 
+\begin_inset Formula $(\omega^{n}\times\Sigma^{\ast m})-S$
+\end_inset
+
+.
+ Es facil ver que el siguiente procedimiento computa el predicado 
+\begin_inset Formula $\chi_{S}^{\omega^{n}\times\Sigma^{\ast m}}$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+Etapa 1
+\end_layout
+
+\begin_layout Standard
+\noindent
+Darle a la variable 
+\begin_inset Formula $T$
+\end_inset
+
+ el valor 
+\begin_inset Formula $0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Etapa 2
+\end_layout
+
+\begin_layout Standard
+\noindent
+Realizar 
+\begin_inset Formula $\mathbb{P}_{1}$
+\end_inset
+
+ con el valor de 
+\begin_inset Formula $T$
+\end_inset
+
+ como entrada para obtener de salida la upla 
+\begin_inset Formula $(\vec{y},\vec{\beta})$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Etapa 3
+\end_layout
+
+\begin_layout Standard
+\noindent
+Realizar 
+\begin_inset Formula $\mathbb{P}_{2}$
+\end_inset
+
+ con el valor de 
+\begin_inset Formula $T$
+\end_inset
+
+ como entrada para obtener de salida la upla 
+\begin_inset Formula $(\vec{z},\vec{\gamma})$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Etapa 4
+\end_layout
+
+\begin_layout Standard
+\noindent
+Si 
+\begin_inset Formula $(\vec{y},\vec{\beta})=(\vec{x},\vec{\alpha})$
+\end_inset
+
+, entonces detenerse y dar como dato de salida el valor 
+\begin_inset Formula $1$
+\end_inset
+
+.
+ Si 
+\begin_inset Formula $(\vec{z},\vec{\gamma})=(\vec{x},\vec{\alpha})$
+\end_inset
+
+, entonces detenerse y dar como dato de salida el valor 
+\begin_inset Formula $0.$
+\end_inset
+
+ Si no suceden ninguna de las dos posibilidades antes mensionadas, aumentar
+ en 
+\begin_inset Formula $1$
+\end_inset
+
+ el valor de la variable 
+\begin_inset Formula $T$
+\end_inset
+
+ y dirijirse a la Etapa 2.
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{proof}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+Ejercicio 24:
+\end_layout
+
+\end_inset
+
+Sea 
+\begin_inset Formula $\Sigma=\{@,!,\%\}$
+\end_inset
+
+.
+ Supongamos 
+\begin_inset Formula $f:S\subseteq\omega\times\Sigma^{\ast}\rightarrow\Sigma^{\ast}$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-efectivamente computable.
+ Suponga ademas que 
+\begin_inset Formula $(1,@@)\in S$
+\end_inset
+
+ y 
+\begin_inset Formula $f(1,@@)=@!!$
+\end_inset
+
+.
+ Pruebe que el conjunto
+\begin_inset Formula 
+\[
+\{(x,\alpha)\in S:f(x,\alpha)=@!!\}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-efectivamente enumerable.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+Ejercicio 25:
+\end_layout
+
+\end_inset
+
+Sea 
+\begin_inset Formula $S=\{(x,\alpha)\in\omega\times\{@,\uparrow\}^{\ast}:\alpha$
+\end_inset
+
+ tiene exactamente 
+\begin_inset Formula $x$
+\end_inset
+
+ ocurrencias de 
+\begin_inset Formula $@\}$
+\end_inset
+
+.
+ Pruebe que 
+\begin_inset Formula $S$
+\end_inset
+
+ es 
+\begin_inset Formula $\{@,\uparrow\}$
+\end_inset
+
+-efectivamente enumerable.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+Ejercicio 26:
+\end_layout
+
+\end_inset
+
+(Explicado en video en granlogico.com) Si 
+\begin_inset Formula $S\subseteq\omega$
+\end_inset
+
+ y 
+\begin_inset Formula $f:S\rightarrow\omega$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-efectivamente computable, entonces el conjunto
+\begin_inset Formula 
+\[
+\{x\in S:x\text{ es par }x/2\in S\text{ y }f(x)=f(x/2)\}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-efectivamente enumerable.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+Ejercicio 27:
+\end_layout
+
+\end_inset
+
+Sean 
+\begin_inset Formula $S\subseteq\omega$
+\end_inset
+
+ y 
+\begin_inset Formula $L\subseteq\{@,\uparrow\}^{\ast}$
+\end_inset
+
+ tales que 
+\begin_inset Formula $(0,\varepsilon)\in S\times L$
+\end_inset
+
+.
+ Entonces 
+\begin_inset Formula $S\times L$
+\end_inset
+
+ es 
+\begin_inset Formula $\{@,\uparrow\}$
+\end_inset
+
+-efectivamente enumerable si y solo si ambos 
+\begin_inset Formula $S$
+\end_inset
+
+ y 
+\begin_inset Formula $L$
+\end_inset
+
+ son 
+\begin_inset Formula $\{@,\uparrow\}$
+\end_inset
+
+-efectivamente enumerables
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+Ejercicio 27,5:
+\end_layout
+
+\end_inset
+
+Sea 
+\begin_inset Formula $f:S\subseteq\Sigma^{\ast}\rightarrow\Sigma^{\ast}$
+\end_inset
+
+ una funcion 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-efectivamente computable.
+ Supongamos que 
+\begin_inset Formula $\varepsilon\in S$
+\end_inset
+
+ y que 
+\begin_inset Formula $f(\varepsilon)=\varepsilon$
+\end_inset
+
+.
+ Sea 
+\begin_inset Formula 
+\[
+L=\{\alpha\in S:f(\alpha)\in S\text{ y }f(f(\alpha))=\alpha\}
+\]
+
+\end_inset
+
+Notar que 
+\begin_inset Formula $\varepsilon\in L$
+\end_inset
+
+.
+ Pruebe que 
+\begin_inset Formula $L$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-efectivamente enumerable
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+Ejercicio 28:
+\end_layout
+
+\end_inset
+
+V o F o I.
+ Justifique
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Denotemos con 
+\begin_inset Formula $e$
+\end_inset
+
+ a la cantidad de veces que estornudó Alan Turing a lo largo de su vida.
+ Sea 
+\begin_inset Formula $S=\{e\}$
+\end_inset
+
+.
+ Entonces 
+\begin_inset Formula $S$
+\end_inset
+
+ es un conjunto 
+\begin_inset Formula $\emptyset$
+\end_inset
+
+-efectivamente computable
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $(2,4,6,8,10,...)$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-efectivamente enumerable
+\end_layout
+
+\begin_layout Enumerate
+Si 
+\begin_inset Formula $\mathbb{P}$
+\end_inset
+
+ es un procedimiento efectivo, entonces 
+\begin_inset Formula $I_{\mathbb{P}}$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-efectivamente enumerable
+\end_layout
+
+\begin_layout Enumerate
+Sea 
+\begin_inset Formula $S\subseteq\omega$
+\end_inset
+
+ y supongamos 
+\begin_inset Formula $\mathbb{P}$
+\end_inset
+
+ es un procedimiento efectivo el cual enumera a 
+\begin_inset Formula $S$
+\end_inset
+
+.
+ Entonces el siguiente procedimiento (con dato de entrada 
+\begin_inset Formula $x\in\omega$
+\end_inset
+
+) enumera a 
+\begin_inset Formula $\{u\in S:u$
+\end_inset
+
+ es par
+\begin_inset Formula $\}$
+\end_inset
+
+:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Etapa 1: Guardar en la variable 
+\begin_inset Formula $X$
+\end_inset
+
+ el valor 
+\begin_inset Formula $x$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Etapa 2: Correr 
+\begin_inset Formula $\mathbb{P}$
+\end_inset
+
+ con dato de entrada 
+\begin_inset Formula $X$
+\end_inset
+
+ y guardar en la variable 
+\begin_inset Formula $E$
+\end_inset
+
+ el dato de salida dado por 
+\begin_inset Formula $\mathbb{P}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Etapa 3: Si 
+\begin_inset Formula $E$
+\end_inset
+
+ es par, dar como salida 
+\begin_inset Formula $E$
+\end_inset
+
+ y detenerse.
+ Caso contrario aumentar en 1 el valor de 
+\begin_inset Formula $X$
+\end_inset
+
+ e ir a Etapa 2 
+\end_layout
+
+\end_deeper
+\end_deeper
+\end_body
+\end_document

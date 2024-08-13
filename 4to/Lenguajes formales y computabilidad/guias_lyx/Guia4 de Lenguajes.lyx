@@ -1,0 +1,3437 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\begin_preamble
+\setcounter{MaxMatrixCols}{30}%
+\usepackage{amsfonts}\usepackage{graphicx}
+%TCIDATA{OutputFilter=latex2.dll}
+%TCIDATA{Version=5.50.0.2953}
+%TCIDATA{CSTFile=LaTeX article (bright).cst}
+%TCIDATA{Created=Thursday, March 08, 2007 06:44:18}
+%TCIDATA{LastRevised=Friday, April 19, 2024 22:04:31}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
+%TCIDATA{BibliographyScheme=BibTeX}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="Standard LaTeX\Blank - Standard LaTeX Article">}
+%TCIDATA{Language=American English}
+%TCIDATA{ComputeDefs=
+%$\varepsilon$
+%$F_{V(\mathbf{A})}(x_{1},...,x_{n})=\{t_{1},...,t_{k}\}$
+%}
+%BeginMSIPreambleData
+\providecommand{\U}[1]{\protect\rule{.1in}{.1in}}
+%EndMSIPreambleData
+\newtheorem{theorem}{Theorem}\newtheorem{acknowledgement}[theorem]{Acknowledgement}\newtheorem{algorithm}[theorem]{Algorithm}\newtheorem{axiom}[theorem]{Axiom}\newtheorem{case}[theorem]{Case}\newtheorem{claim}[theorem]{Claim}\newtheorem{conclusion}[theorem]{Conclusion}\newtheorem{condition}[theorem]{Condition}\newtheorem{conjecture}[theorem]{Conjecture}\newtheorem{corollary}[theorem]{Corollary}\newtheorem{criterion}[theorem]{Criterion}\newtheorem{definition}[theorem]{Definition}\newtheorem{example}[theorem]{Example}\newtheorem{exercise}[theorem]{Exercise}\newtheorem{lemma}[theorem]{Lemma}\newtheorem{notation}[theorem]{Notation}\newtheorem{problem}[theorem]{Problem}\newtheorem{proposition}[theorem]{Proposition}\newtheorem{remark}[theorem]{Remark}\newtheorem{solution}[theorem]{Solution}\newtheorem{summary}[theorem]{Summary}\newenvironment{proof}[1][Proof]{\noindent\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+\end_preamble
+\use_default_options false
+\maintain_unincluded_children false
+\language english
+\language_package none
+\inputencoding auto
+\fontencoding default
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 2
+\use_package amssymb 2
+\use_package cancel 0
+\use_package esint 1
+\use_package mathdots 0
+\use_package mathtools 0
+\use_package mhchem 0
+\use_package stackrel 0
+\use_package stmaryrd 0
+\use_package undertilde 0
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+Nota: Los ejercicios que tienen (S) son para una 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+"
+\end_layout
+
+\end_inset
+
+Segunda vuelta
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+"
+\end_layout
+
+\end_inset
+
+ es decir conviene hacerlos una vez que ya se completó la guía haciendo
+ los otros y ya se tiene mas madurez e intuición basica sobre los conceptos.
+ Los que tienen (O) son opcionales por lo cual no se toman en los examenes.
+\end_layout
+
+\begin_layout Section*
+Tres paradigmas matematicos de la computabilidad efectiva
+\end_layout
+
+\begin_layout Standard
+Ya que el concepto de procedimiento efectivo es un concepto intuitivo, impresiso
+ y a priori no expresado en el formalismo matematico, los conceptos de
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+
+Funcion 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-efectivamente computable
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+
+Conjunto 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-efectivamente computable
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+
+Conjunto 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-efectivamente enumerable 
+\end_layout
+
+\begin_layout Standard
+\noindent
+tambien son impresisos y estan fuera del formalismo matematico, debido a
+ que los tres se definen en terminos de la existencia de procedimientos
+ efectivos.
+ Por supuesto, los tres conceptos son fundamentales en el estudio teorico
+ de la computabilidad por lo que es muy importante poder dar un modelo o
+ formalizacion matematica de estos conceptos.
+ Pero notese que los dos ultimos se definen en funcion del primero por lo
+ que una formalizacion matematica precisa del concepto de funcion 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-efectivamente computable, resuelve el problema de modelizar en forma matematica
+ a estos tres conceptos.
+\end_layout
+
+\begin_layout Standard
+En esta materia daremos las tres formalizaciones matematicas mas clasicas
+ del concepto de funcion 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-efectivamente computable.
+ La primera y la mas apegada a la idea intuitiva de procedimiento efectivo
+ es la dada por Alan Turing via la matematizacion del concepto de maquina
+ y es tema central de esta guia.
+ La segunda, es la dada por Godel en su estudio de sistemas formales de
+ la logica de primer orden.
+ Por ultimo veremos una formalizacion via un lenguaje de programacion imperativo.
+ En honor a la influencia que tuvo Von Neumann en el diseño de la primer
+ computadora de caracter universal (i.e.
+ programable de proposito general), llamaremos a este paradigma el paradigma
+ imperativo de Von Neumann.
+\end_layout
+
+\begin_layout Section*
+El paradigma de Turing
+\end_layout
+
+\begin_layout Standard
+Estudiaremos el concepto de maquina de Turing, el cual fue introducido por
+ Alam Turing para formalizar o modelizar matematicamente la idea de procedimient
+o efectivo.
+ Una vez definidas las maquinas podremos dar una modelizacion matematica
+ precisa del concepto de funcion 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-efectivamente computable.
+ Llamaremos a estas funciones 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-Turing computables y seran aquellas que (en algun sentido que sera bien
+ precisado matematicamente) pueden ser computadas por una maquina de Turing.
+ Por supuesto, la fidedignidad de este concepto, es decir cuan buena es
+ la modelizacion matematica dada por Turing, puede no ser clara al comienzo
+ pero a medida que vayamos avanzando en nuestro estudio y conozcamos ademas
+ los otros paradigmas y su relacion, quedara claro que el modelo de Turing
+ es acertado.
+\end_layout
+
+\begin_layout Standard
+Vivimos en un mundo plagado de maquinas (ascensores, celulares, relojes,
+ taladros, etc).
+ Una caracteristica comun a todas las maquinas es que tienen distintos estados
+ posibles.
+ Un estado es el conjunto de caracteristicas que determinan un momento concreto
+ posible de la maquina cuando esta funcionando.
+ Por ejemplo un estado posible de un ascensor seria:
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+
+esta en el tercer piso, con la primer puerta abierta y la otra cerrada,
+ esta apretado el boton de ir al sexto piso, etc 
+\end_layout
+
+\begin_layout Standard
+\noindent
+donde ponemos etc porque dependiendo del tipo de ascensor (si es con memoria,
+ a que pisos puede ir, etc) habra mas datos que especificar para determinar
+ un estado concreto.
+\end_layout
+
+\begin_layout Standard
+Otra caracteristica comun de las maquinas es que interactuan de distintas
+ formas con el usuario o mas generalmente su entorno.
+ Dependiendo de que accion se ejecute sobre la maquina y en que estado este,
+ la maquina realizara alguna tarea y ademas cambiara de estado.
+ En general las maquinas son 
+\shape italic
+deterministicas
+\shape default
+ en el sentido que siempre que esten en determinado estado y se les aplique
+ determinada accion, realizaran la misma tarea y pasaran al mismo estado.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+Descripcion informal de las maquinas de Turing
+\end_layout
+
+\begin_layout Standard
+Son un modelo abstracto de maquina con una cantidad finita de estados la
+ cual trabaja sobre una cinta de papel dividida en cuadros e interactua
+ o recibe acciones externas por medio de una cabeza lectora la cual lee
+ de a un cuadro de la cinta a la ves y ademas puede borrar el contenido
+ del cuadro leido y escribir en el un simbolo.
+ Tambien la cabeza lectora puede moverse un cuadro hacia la izquierda o
+ hacia la derecha.
+ La cinta tiene un primer cuadro hacia su izquierda pero hacia la derecha
+ puede extenderse todo lo necesario.
+ En un cuadro de la cinta podra haber un simbolo o un cuadro puede simplemente
+ estar en blanco.
+ Es decir que habra un alfabeto 
+\begin_inset Formula $\Gamma$
+\end_inset
+
+ el cual consiste de todos los simbolos que pueden figurar en la cinta.
+ Esto sera parte de los datos o caracteristicas de cada maquina, es decir,
+ 
+\begin_inset Formula $\Gamma$
+\end_inset
+
+ puede cambiar dependiendo de la maquina.
+ La maquina, en funcion del estado en que se encuentre y de lo que vea su
+ cabeza lectora en el cuadro escaneado, podra modificar lo que encuentre
+ en dicho cuadro (borrando y escribiendo algun nuevo simbolo), moverse a
+ lo sumo un cuadro (izquierda, derecha o quedarse quieta), y cambiar de
+ estado (posiblemente al mismo que tenia).
+ Para simplificar supondremos que hay en 
+\begin_inset Formula $\Gamma$
+\end_inset
+
+ un simbolo el cual si aparece en un cuadro de la cinta, significara que
+ dicho cuadro esta sin escribir o en blanco.
+ Esto nos permitira describir mas facilmente el funcionamiento de la maquina.
+ En gral llamaremos 
+\begin_inset Formula $B$
+\end_inset
+
+ a tal simbolo.
+ Tambien por lo general llamaremos 
+\begin_inset Formula $Q$
+\end_inset
+
+ al conjunto de estados de la maquina.
+\end_layout
+
+\begin_layout Standard
+Tambien cada maquina tendra un estado especial el cual sera llamado su estado
+ inicial, generalmente denotado con 
+\begin_inset Formula $q_{0}$
+\end_inset
+
+, el cual sera el estado en el que estara la maquina al comenzar a trabajar
+ sobre la cinta.
+ Hay otras caracteristicas que tendran las maquinas de Turing pero para
+ dar un primer ejemplo ya nos basta.
+ Describiremos una maquina de Turing 
+\begin_inset Formula $M$
+\end_inset
+
+ que tendra 
+\begin_inset Formula $\Gamma=\{@,a,b,B\}$
+\end_inset
+
+ y tendra dos estados, es decir 
+\begin_inset Formula $Q=\{q_{0},q_{1}\}$
+\end_inset
+
+.
+ Obviamente 
+\begin_inset Formula $q_{0}$
+\end_inset
+
+ sera su estado inicial y ademas el 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+"
+\end_layout
+
+\end_inset
+
+comportamiento o personalidad
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+"
+\end_layout
+
+\end_inset
+
+ de 
+\begin_inset Formula $M$
+\end_inset
+
+ estara dado por las siguientes clausulas:
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+
+Estando en estado 
+\begin_inset Formula $q_{0}$
+\end_inset
+
+ si ve ya sea 
+\begin_inset Formula $b$
+\end_inset
+
+ o 
+\begin_inset Formula $B$
+\end_inset
+
+ o 
+\begin_inset Formula $@$
+\end_inset
+
+, entonces se queda en estado 
+\begin_inset Formula $q_{0}$
+\end_inset
+
+ y se mueve a la derecha
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+
+Estando en estado 
+\begin_inset Formula $q_{0}$
+\end_inset
+
+ si ve 
+\begin_inset Formula $a$
+\end_inset
+
+ entonces reescribe 
+\begin_inset Formula $@$
+\end_inset
+
+, se mueve a la izquierda y cambia al estado 
+\begin_inset Formula $q_{1}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+
+Estando en estado 
+\begin_inset Formula $q_{1}$
+\end_inset
+
+ si ve 
+\begin_inset Formula $a$
+\end_inset
+
+ o 
+\begin_inset Formula $b$
+\end_inset
+
+ o 
+\begin_inset Formula $B$
+\end_inset
+
+ o 
+\begin_inset Formula $@$
+\end_inset
+
+ entonces lo deja como esta, se mueve a la izquierda y queda en estado 
+\begin_inset Formula $q_{1}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+Supongamos ahora que tomamos una palabra 
+\begin_inset Formula $\alpha\in\Gamma^{\ast}$
+\end_inset
+
+ y la distribuimos en la cinta dejando el primer cuadro en blanco y luego
+ poniendo los simbolos de 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ en los siguientes cuadros.
+ Supongamos ademas que ponemos la maquina en estado 
+\begin_inset Formula $q_{0}$
+\end_inset
+
+ y con su cabeza lectora escaneando el primer cuadro de la cinta.
+ Esto lo podemos representar graficamente de la siguiente manera
+\begin_inset Formula 
+\[
+\begin{array}{cccccccc}
+B & \alpha_{1} & ... & \alpha_{n} & B & B & B & ...\\
+\uparrow\\
+q_{0}
+\end{array}
+\]
+
+\end_inset
+
+donde 
+\begin_inset Formula $\alpha_{1},...,\alpha_{n}$
+\end_inset
+
+ son los sucesivos simbolos de 
+\begin_inset Formula $\alpha$
+\end_inset
+
+.
+ Supongamos ademas que 
+\begin_inset Formula $a$
+\end_inset
+
+ ocurre an 
+\begin_inset Formula $\alpha$
+\end_inset
+
+.
+ Dejamos al lector ir aplicando las clausulas de 
+\begin_inset Formula $M$
+\end_inset
+
+ para convencerse que luego de un rato de funcionar 
+\begin_inset Formula $M$
+\end_inset
+
+, la situacion sera
+\begin_inset Formula 
+\[
+\begin{array}{cccccccc}
+B & \beta_{1} & ... & \beta_{n} & B & B & B & ...\\
+\uparrow\\
+q_{1}
+\end{array}
+\]
+
+\end_inset
+
+donde 
+\begin_inset Formula $\beta_{1}...\beta_{n}$
+\end_inset
+
+ es el resultado de reemplazar en 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ la primer ocurrencia de 
+\begin_inset Formula $a$
+\end_inset
+
+ por 
+\begin_inset Formula $@$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+
+\series bold
+Ejercicio 1:
+\end_layout
+
+\end_inset
+
+Que sucede cuando 
+\begin_inset Formula $a$
+\end_inset
+
+ no ocurre en 
+\begin_inset Formula $\alpha$
+\end_inset
+
+? 
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Una cosa que puede pasar es que para un determinado estado 
+\begin_inset Formula $p$
+\end_inset
+
+ y un 
+\begin_inset Formula $\sigma\in\Gamma$
+\end_inset
+
+, la maquina no tenga contemplada ninguna accion posible.
+ Por ejemplo sea 
+\begin_inset Formula $M$
+\end_inset
+
+ la maquina de Turing dada por 
+\begin_inset Formula $Q=\{q_{0}\}$
+\end_inset
+
+, 
+\begin_inset Formula $\Gamma=\{@,\$,B\}$
+\end_inset
+
+ y por la siguiente clausula:
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+
+Estando en estado 
+\begin_inset Formula $q_{0}$
+\end_inset
+
+ si ve ya sea 
+\begin_inset Formula $@$
+\end_inset
+
+ o 
+\begin_inset Formula $B$
+\end_inset
+
+, entonces se queda en estado 
+\begin_inset Formula $q_{0}$
+\end_inset
+
+ y se mueve a la derecha 
+\end_layout
+
+\begin_layout Standard
+Es facil ver que si partimos de una situacion
+\begin_inset Formula 
+\[
+\begin{array}{cccccccc}
+B & \alpha_{1} & ... & \alpha_{n} & B & B & B & ...\\
+\uparrow\\
+q_{0}
+\end{array}
+\]
+
+\end_inset
+
+donde 
+\begin_inset Formula $\alpha_{1},...,\alpha_{n}\in\Gamma$
+\end_inset
+
+, entonces si ningun 
+\begin_inset Formula $\alpha_{i}$
+\end_inset
+
+ es igual a 
+\begin_inset Formula $\$$
+\end_inset
+
+, la maquina se movera indefinidamente hacia la derecha y en caso contrario
+ se movera 
+\begin_inset Formula $i$
+\end_inset
+
+ pasos a la derecha y se detendra, donde 
+\begin_inset Formula $i$
+\end_inset
+
+ es el menor 
+\begin_inset Formula $l$
+\end_inset
+
+ tal que 
+\begin_inset Formula $\alpha_{l}=\$$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Otro caso posible de detencion de una maquina de Turing es cuando esta escaneand
+o el primer cuadro de la cinta y su unica accion posible implica moverse
+ un cuadro a la izquierda.
+ Tambien en estos casos diremos que la maquina se detiene ya que la cinta
+ no es extensible hacia la izquierda.
+\end_layout
+
+\begin_layout Standard
+Otra caracteristica de las maquinas de Turing es que poseen un 
+\shape italic
+alfabeto de entrada
+\shape default
+ el cual esta contenido en el alfabeto 
+\begin_inset Formula $\Gamma$
+\end_inset
+
+ y en el cual estan los simbolos que se usaran para formar la configuracion
+ inicial de la cinta (exepto 
+\begin_inset Formula $B$
+\end_inset
+
+).
+ En general lo denotaremos con 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+ al alfabeto de entrada y los simbolos de 
+\begin_inset Formula $\Gamma-\Sigma$
+\end_inset
+
+ son considerados auxiliares.
+ Tambien habra un conjunto 
+\begin_inset Formula $F$
+\end_inset
+
+ contenido en el conjunto 
+\begin_inset Formula $Q$
+\end_inset
+
+ de los estados de la maquina, cuyos elementos seran llamados 
+\shape italic
+estados finales
+\shape default
+.
+\end_layout
+
+\begin_layout Standard
+Diremos que una palabra 
+\begin_inset Formula $\alpha=\alpha_{1}...\alpha_{n}\in\Sigma^{\ast}$
+\end_inset
+
+ es 
+\shape italic
+aceptada por 
+\shape default
+
+\begin_inset Formula $M$
+\end_inset
+
+ 
+\shape italic
+por alcance de estado final
+\shape default
+ si partiendo de
+\begin_inset Formula 
+\[
+\begin{array}{cccccccc}
+B & \alpha_{1} & ... & \alpha_{n} & B & B & B & ...\\
+\uparrow\\
+q_{0}
+\end{array}
+\]
+
+\end_inset
+
+en algun momento de la computacion 
+\begin_inset Formula $M$
+\end_inset
+
+ esta en un estado de 
+\begin_inset Formula $F$
+\end_inset
+
+.
+ Llamaremos 
+\begin_inset Formula $L(M)$
+\end_inset
+
+ al conjunto formado por todas las palabras que son aceptadas por alcance
+ de estado final
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+
+\series bold
+Ejercicio 2:
+\end_layout
+
+\end_inset
+
+Para cada uno de los siguientes lenguajes, encuentre una máquina de Turing
+ 
+\begin_inset Formula $M$
+\end_inset
+
+ tal que 
+\begin_inset Formula $L(M)$
+\end_inset
+
+ sea dicho lenguaje
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $\{\alpha\in\{a,b\}^{\ast}:a$
+\end_inset
+
+ ocurre en 
+\begin_inset Formula $\alpha\}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\{ab\}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\{a^{n}b^{n}:n\geq2\}$
+\end_inset
+
+ (explicada en video en granlogico.com)
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\{\alpha\in\{a,b\}^{\ast}:\left\vert \alpha\right\vert _{a}$
+\end_inset
+
+ es par y 
+\begin_inset Formula $\left\vert \alpha\right\vert _{b}$
+\end_inset
+
+ es impar
+\begin_inset Formula $\}$
+\end_inset
+
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Diremos que una palabra 
+\begin_inset Formula $\alpha=\alpha_{1}...\alpha_{n}\in\Sigma^{\ast}$
+\end_inset
+
+ es 
+\shape italic
+aceptada por 
+\shape default
+
+\begin_inset Formula $M$
+\end_inset
+
+ 
+\shape italic
+por detencion
+\shape default
+ si partiendo de
+\begin_inset Formula 
+\[
+\begin{array}{cccccccc}
+B & \alpha_{1} & ... & \alpha_{n} & B & B & B & ...\\
+\uparrow\\
+q_{0}
+\end{array}
+\]
+
+\end_inset
+
+en algun momento 
+\begin_inset Formula $M$
+\end_inset
+
+ se detiene.
+ Llamaremos 
+\begin_inset Formula $H(M)$
+\end_inset
+
+ al conjunto formado por todas las palabras que son aceptadas por detencion
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+
+\series bold
+Ejercicio 3:
+\end_layout
+
+\end_inset
+
+Para cada uno de los lenguajes del ejercicio anterior encuentre una máquina
+ de Turing 
+\begin_inset Formula $M$
+\end_inset
+
+ tal que 
+\begin_inset Formula $H(M)$
+\end_inset
+
+ sea dicho lenguaje (hint: modifique adecuadamente cada una de las maquinas
+ construidas para el ejercicio anterior) 
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+Definicion matematica de maquina de Turing
+\end_layout
+
+\begin_layout Standard
+Una 
+\shape italic
+maquina de Turing 
+\shape default
+es una 7-upla 
+\begin_inset Formula $M=\left(Q,\Sigma,\Gamma,\delta,q_{0},B,F\right)$
+\end_inset
+
+ donde
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $Q$
+\end_inset
+
+ es un conjunto finito cuyos elementos son llamados 
+\shape italic
+estados
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\Gamma$
+\end_inset
+
+ es un alfabeto que contiene a 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\Sigma$
+\end_inset
+
+ es un alfabeto llamado el 
+\shape italic
+alfabeto de entrada
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $B\in\Gamma-\Sigma$
+\end_inset
+
+ es un simbolo de 
+\begin_inset Formula $\Gamma$
+\end_inset
+
+ llamado el 
+\shape italic
+blank symbol
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\delta:D_{\delta}\subseteq Q\times\Gamma\rightarrow Q\times\Gamma\times\{L,R,K\}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $q_{0}$
+\end_inset
+
+ es un estado llamado el 
+\shape italic
+estado inicial
+\shape default
+ de 
+\begin_inset Formula $M$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $F\subseteq Q$
+\end_inset
+
+ es un conjunto de estados llamados 
+\shape italic
+finales
+\shape default
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Notese que la funcion 
+\begin_inset Formula $\delta$
+\end_inset
+
+ da la 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+"
+\end_layout
+
+\end_inset
+
+personalidad
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+"
+\end_layout
+
+\end_inset
+
+ de la maquina.
+ Aqui los simbolos 
+\begin_inset Formula $L,R,K$
+\end_inset
+
+ serviran para especificar que hace el cabezal.
+ O sea:
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\delta(p,\sigma)=(q,\gamma,L)$
+\end_inset
+
+ significara que la maquina estando en estado 
+\begin_inset Formula $p$
+\end_inset
+
+ y leyendo el simbolo 
+\begin_inset Formula $\sigma$
+\end_inset
+
+ borrara 
+\begin_inset Formula $\sigma$
+\end_inset
+
+ y escribira 
+\begin_inset Formula $\gamma$
+\end_inset
+
+ en su lugar y luego se movera un cuadro a la izquierda (esto en caso que
+ el cabezal no este en el cuadro de mas a la izquierda, en cuyo caso no
+ podra realizar dicha tarea y se detendra).
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\delta(p,\sigma)=(q,\gamma,K)$
+\end_inset
+
+ significara que la maquina estando en estado 
+\begin_inset Formula $p$
+\end_inset
+
+ y leyendo el simbolo 
+\begin_inset Formula $\sigma$
+\end_inset
+
+ borrara 
+\begin_inset Formula $\sigma$
+\end_inset
+
+ y escribira 
+\begin_inset Formula $\gamma$
+\end_inset
+
+ en su lugar y luego el cabezal se quedara kieto
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\delta(p,\sigma)=(q,\gamma,R)$
+\end_inset
+
+ significara que la maquina estando en estado 
+\begin_inset Formula $p$
+\end_inset
+
+ y leyendo el simbolo 
+\begin_inset Formula $\sigma$
+\end_inset
+
+ borrara 
+\begin_inset Formula $\sigma$
+\end_inset
+
+ y escribira 
+\begin_inset Formula $\gamma$
+\end_inset
+
+ en su lugar y luego el cabezal se movera un cuadro a la derecha 
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Si bien en nuestra definicion de maquina de Turing no hay ninguna restriccion
+ acerca de la naturaleza de los elementos de 
+\begin_inset Formula $Q$
+\end_inset
+
+, para continuar nuestro analisis asumiremos en lo que sigue de esta guia
+ que 
+\begin_inset Formula $Q$
+\end_inset
+
+ es un alfabeto disjunto con 
+\begin_inset Formula $\Gamma$
+\end_inset
+
+.
+ Esto nos permitira dar definiciones matematicas precisas que formalizaran
+ el funcionamiento de las maquinas de Turing en el contexto de las funciones
+ mixtas.
+ Deberia quedar claro que el hecho que solo analicemos maquinas en las cuales
+ 
+\begin_inset Formula $Q$
+\end_inset
+
+ es un alfabeto disjunto con 
+\begin_inset Formula $\Gamma$
+\end_inset
+
+, no afectara la profundidad y generalidad de nuestros resultados.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+
+\series bold
+Ejercicio 4:
+\end_layout
+
+\end_inset
+
+V o F o I, justifique.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Si 
+\begin_inset Formula $M=\left(Q,\Sigma,\Gamma,\delta,q_{0},B,F\right)$
+\end_inset
+
+ es una maquina de Turing, entonces 
+\begin_inset Formula $\delta$
+\end_inset
+
+ es una funcion 
+\begin_inset Formula $(Q\cup\Gamma\cup\{L,K,R\})$
+\end_inset
+
+-mixta
+\end_layout
+
+\begin_layout Enumerate
+Si 
+\begin_inset Formula $M=\left(Q,\Sigma,\Gamma,\delta,q_{0},B,F\right)$
+\end_inset
+
+ es una maquina de Turing, entonces 
+\begin_inset Formula $D_{\delta}$
+\end_inset
+
+ es un conjunto 
+\begin_inset Formula $(Q\cup\Gamma)$
+\end_inset
+
+-mixto 
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Descripciones instantaneas
+\end_layout
+
+\begin_layout Standard
+Una 
+\shape italic
+descripcion instantanea
+\shape default
+ sera una palabra de la forma 
+\begin_inset Formula $\alpha q\beta$
+\end_inset
+
+, donde 
+\begin_inset Formula $\alpha,\beta\in\Gamma^{\ast}$
+\end_inset
+
+, 
+\begin_inset Formula $\left[\beta\right]_{\left\vert \beta\right\vert }\neq B$
+\end_inset
+
+ y 
+\begin_inset Formula $q\in Q$
+\end_inset
+
+.
+ Notese que la condicion 
+\begin_inset Formula $\left[\beta\right]_{\left\vert \beta\right\vert }\neq B$
+\end_inset
+
+ nos dice que 
+\begin_inset Formula $\beta=\varepsilon$
+\end_inset
+
+ o el ultimo simbolo de 
+\begin_inset Formula $\beta$
+\end_inset
+
+ es distinto de 
+\begin_inset Formula $B$
+\end_inset
+
+.
+ La descripcion instantanea 
+\begin_inset Formula $\alpha_{1}...\alpha_{n}q\beta_{1}...\beta_{m}$
+\end_inset
+
+, con 
+\begin_inset Formula $\alpha_{1},...,\alpha_{n}$
+\end_inset
+
+, 
+\begin_inset Formula $\beta_{1},...,\beta_{m}\in\Gamma$
+\end_inset
+
+, 
+\begin_inset Formula $n,m\geq0$
+\end_inset
+
+ representara la siguiente situacion
+\begin_inset Formula 
+\[
+\begin{array}{cccccccccccc}
+\alpha_{1} & \alpha_{2} & ... & \alpha_{n} & \beta_{1} & \beta_{2} & ... & \beta_{m} & B & B & B & ...\\
+ &  &  &  & \uparrow\\
+ &  &  &  & q
+\end{array}
+\]
+
+\end_inset
+
+Notese que aqui 
+\begin_inset Formula $n$
+\end_inset
+
+ y 
+\begin_inset Formula $m$
+\end_inset
+
+ pueden ser 
+\begin_inset Formula $0$
+\end_inset
+
+.
+ Por ejemplo si 
+\begin_inset Formula $n=0$
+\end_inset
+
+ tenemos que 
+\begin_inset Formula $\alpha_{1}...\alpha_{n}q\beta_{1}...\beta_{m}=q\beta_{1}...\beta_{m}$
+\end_inset
+
+ y representa la siguiente situacion
+\begin_inset Formula 
+\[
+\begin{array}{cccccccccccc}
+\beta_{1} & \beta_{2} & ... & \beta_{m} & B & B & B & ...\\
+\uparrow\\
+q
+\end{array}
+\]
+
+\end_inset
+
+Si 
+\begin_inset Formula $m=0$
+\end_inset
+
+ tenemos que 
+\begin_inset Formula $\alpha_{1}...\alpha_{n}q\beta_{1}...\beta_{m}=\alpha_{1}...\alpha_{n}q$
+\end_inset
+
+ y representa la siguiente situacion
+\begin_inset Formula 
+\[
+\begin{array}{cccccccccccc}
+\alpha_{1} & \alpha_{2} & ... & \alpha_{n} & B & B & ... &  &  &  & ...\\
+ &  &  &  & \uparrow\\
+ &  &  &  & q
+\end{array}
+\]
+
+\end_inset
+
+Si ambos 
+\begin_inset Formula $n$
+\end_inset
+
+ y 
+\begin_inset Formula $m$
+\end_inset
+
+ son 
+\begin_inset Formula $0$
+\end_inset
+
+ entonces tenemos que 
+\begin_inset Formula $\alpha_{1}...\alpha_{n}q\beta_{1}...\beta_{m}=q$
+\end_inset
+
+ y representa la siguiente situacion
+\begin_inset Formula 
+\[
+\begin{array}{cccccccccccc}
+B & B & B & ...\\
+\uparrow\\
+q
+\end{array}
+\]
+
+\end_inset
+
+La condicion de que en una descripcion instantanea 
+\begin_inset Formula $\alpha q\beta$
+\end_inset
+
+ deba suceder que 
+\begin_inset Formula $\left[\beta\right]_{\left\vert \beta\right\vert }\neq B$
+\end_inset
+
+ es para que haya una correspondencia biuniboca entre descripciones instantaneas
+ y situaciones de funcionamiento de la maquina.
+ Dejamos al lector meditar sobre esto hasta convenserse de su veracidad.
+\end_layout
+
+\begin_layout Standard
+Usaremos 
+\begin_inset Formula $Des$
+\end_inset
+
+ para denotar el conjunto de las descripciones instantaneas.
+ Definamos la funcion 
+\begin_inset Formula $St:Des\rightarrow Q$
+\end_inset
+
+, de la siguiente manera
+\begin_inset Formula 
+\[
+St(d)=\text{unico simbolo de }Q\text{ que ocurre en }d
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+
+\series bold
+Ejercicio 5:
+\end_layout
+
+\end_inset
+
+V o F o I, justifique.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Si 
+\begin_inset Formula $d$
+\end_inset
+
+ es una descripcion instantanea, entonces 
+\begin_inset Formula $Ti(d)=3\mathrm{-UPLA}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Si 
+\begin_inset Formula $d$
+\end_inset
+
+ es una descripcion instantanea, entonces 
+\begin_inset Formula $St(d)=d\cap Q$
+\end_inset
+
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
+La relacion 
+\begin_inset Formula $\vdash$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Dado 
+\begin_inset Formula $\alpha\in(Q\cup\Gamma)^{\ast}$
+\end_inset
+
+, definamos 
+\begin_inset Formula $\left\lfloor \alpha\right\rfloor $
+\end_inset
+
+ de la siguiente manera
+\begin_inset Formula 
+\begin{align*}
+\left\lfloor \varepsilon\right\rfloor  & =\varepsilon\\
+\left\lfloor \alpha\sigma\right\rfloor  & =\alpha\sigma\text{, si }\sigma\neq B\\
+\left\lfloor \alpha B\right\rfloor  & =\left\lfloor \alpha\right\rfloor 
+\end{align*}
+
+\end_inset
+
+Es decir 
+\begin_inset Formula $\left\lfloor \alpha\right\rfloor $
+\end_inset
+
+ es el resultado de remover de 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ el tramo final mas grande de la forma 
+\begin_inset Formula $B^{n}$
+\end_inset
+
+.
+ Dada cualquier palabra 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ definimos
+\begin_inset Formula 
+\[
+^{\curvearrowright}\alpha=\left\{ \begin{array}{lll}
+\left[\alpha\right]_{2}...\left[\alpha\right]_{\left\vert \alpha\right\vert } & \text{si} & \left\vert \alpha\right\vert \geq2\\
+\varepsilon & \text{si} & \left\vert \alpha\right\vert \leq1
+\end{array}\right.\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \alpha^{\curvearrowleft}=\left\{ \begin{array}{lll}
+\left[\alpha\right]_{1}...\left[\alpha\right]_{\left\vert \alpha\right\vert -1} & \text{si} & \left\vert \alpha\right\vert \geq2\\
+\varepsilon & \text{si} & \left\vert \alpha\right\vert \leq1
+\end{array}\right.
+\]
+
+\end_inset
+
+Dadas 
+\begin_inset Formula $d_{1},d_{2}\in Des$
+\end_inset
+
+, escribiremos 
+\begin_inset Formula $d_{1}\vdash d_{2}$
+\end_inset
+
+ cuando existan 
+\begin_inset Formula $\sigma\in\Gamma$
+\end_inset
+
+, 
+\begin_inset Formula $\alpha,\beta\in\Gamma^{\ast}$
+\end_inset
+
+ y 
+\begin_inset Formula $p,q\in Q$
+\end_inset
+
+ tales que se cumple alguno de los siguientes casos
+\end_layout
+
+\begin_layout Standard
+Caso 1.
+\begin_inset Formula 
+\begin{align*}
+d_{1} & =\alpha p\beta\\
+\delta\left(p,\left[\beta B\right]_{1}\right) & =(q,\sigma,R)\\
+d_{2} & =\alpha\sigma q^{\curvearrowright}\beta
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Caso 2.
+\begin_inset Formula 
+\begin{align*}
+d_{1} & =\alpha p\beta\\
+\delta\left(p,\left[\beta B\right]_{1}\right) & =(q,\sigma,L)\text{ y }\alpha\neq\varepsilon\\
+d_{2} & =\left\lfloor \alpha^{\curvearrowleft}q\left[\alpha\right]_{\left\vert \alpha\right\vert }\sigma^{\curvearrowright}\beta\right\rfloor 
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Caso 3.
+\begin_inset Formula 
+\begin{align*}
+d_{1} & =\alpha p\beta\\
+\delta(p,\left[\beta B\right]_{1}) & =(q,\sigma,K)\\
+d_{2} & =\left\lfloor \alpha q\sigma^{\curvearrowright}\beta\right\rfloor 
+\end{align*}
+
+\end_inset
+
+Escribiremos 
+\begin_inset Formula $d\nvdash d^{\prime}$
+\end_inset
+
+ para expresar que no se da 
+\begin_inset Formula $d\vdash d^{\prime}$
+\end_inset
+
+.
+ Para 
+\begin_inset Formula $d,d^{\prime}\in Des$
+\end_inset
+
+ y 
+\begin_inset Formula $n\geq0$
+\end_inset
+
+, escribiremos 
+\begin_inset Formula $d\overset{n}{\vdash}d^{\prime}$
+\end_inset
+
+ si existen 
+\begin_inset Formula $d_{1},...,d_{n+1}\in Des$
+\end_inset
+
+ tales que
+\begin_inset Formula 
+\begin{align*}
+d & =d_{1}\\
+d^{\prime} & =d_{n+1}\\
+d_{i} & \vdash d_{i+1}\text{, para }i=1,...,n.
+\end{align*}
+
+\end_inset
+
+Notese que 
+\begin_inset Formula $d\overset{0}{\vdash}d^{\prime}$
+\end_inset
+
+ sii 
+\begin_inset Formula $d=d^{\prime}$
+\end_inset
+
+.
+ Finalmente definamos
+\begin_inset Formula 
+\[
+d\overset{\ast}{\vdash}d^{\prime}\text{ sii }(\exists n\in\omega)\;d\overset{n}{\vdash}d^{\prime}\text{.}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+
+\series bold
+Ejercicio 6:
+\end_layout
+
+\end_inset
+
+V o F o I, justifique.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $d\vdash d$
+\end_inset
+
+, para cada 
+\begin_inset Formula $d\in Des$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Si 
+\begin_inset Formula $\alpha p\beta\nvdash d$
+\end_inset
+
+ para toda descripción instantánea 
+\begin_inset Formula $d$
+\end_inset
+
+ entonces 
+\begin_inset Formula $(p,[\beta B]_{1})\notin D_{\delta}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Si 
+\begin_inset Formula $\delta(p,a)=(p,a,L)$
+\end_inset
+
+ entonces 
+\begin_inset Formula $pa\nvdash d$
+\end_inset
+
+ para toda descripción instantánea 
+\begin_inset Formula $d$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Dadas 
+\begin_inset Formula $d,d^{\prime}\in Des$
+\end_inset
+
+, se tiene que si 
+\begin_inset Formula $d\vdash d^{\prime}$
+\end_inset
+
+, entonces 
+\begin_inset Formula $\left\vert d\right\vert \leq\left\vert d^{\prime}\right\vert +1$
+\end_inset
+
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
+Detencion
+\end_layout
+
+\begin_layout Standard
+Dada 
+\begin_inset Formula $d\in Des$
+\end_inset
+
+, diremos que 
+\begin_inset Formula $M$
+\end_inset
+
+ 
+\shape italic
+se detiene partiendo de 
+\shape default
+
+\begin_inset Formula $d$
+\end_inset
+
+ si existe 
+\begin_inset Formula $d^{\prime}\in Des$
+\end_inset
+
+ tal que
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $d\overset{\ast}{\vdash}d^{\prime}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $d^{\prime}\nvdash d^{\prime\prime}$
+\end_inset
+
+, para cada 
+\begin_inset Formula $d^{\prime\prime}\in Des$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+
+\series bold
+Ejercicio 7:
+\end_layout
+
+\end_inset
+
+Estudie los dos posibles casos de detencion:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+estando el cabezal sobre el primer cuadro de la cinta
+\end_layout
+
+\begin_layout Enumerate
+estando el cabezal en un cuadro que no es el primero 
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+
+\series bold
+Ejercicio 8:
+\end_layout
+
+\end_inset
+
+V o F o I, justifique.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Sea 
+\begin_inset Formula $d\in Des$
+\end_inset
+
+.
+ Entonces existe una infinitupla 
+\begin_inset Formula $(d_{1},d_{2},...)$
+\end_inset
+
+ tal que 
+\begin_inset Formula $d\vdash d_{1}\vdash d_{2}\vdash d_{3}\vdash d_{4}\vdash\cdots$
+\end_inset
+
+ si y solo si 
+\begin_inset Formula $M$
+\end_inset
+
+ no se detiene partiendo de
+\shape italic
+
+\begin_inset space \space{}
+\end_inset
+
+
+\shape default
+
+\begin_inset Formula $d$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Supongamos que para cada 
+\begin_inset Formula $(p,\sigma)\in Q\times\Gamma$
+\end_inset
+
+ la tercera coordenada de 
+\begin_inset Formula $\delta(p,\sigma)$
+\end_inset
+
+ es igual a 
+\begin_inset Formula $L$
+\end_inset
+
+.
+ Entonces 
+\begin_inset Formula $M$
+\end_inset
+
+ se detiene partiendo de cada 
+\begin_inset Formula $d\in Des$
+\end_inset
+
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
+El lenguaje 
+\begin_inset Formula $L(M)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Diremos que una palabra 
+\begin_inset Formula $\alpha\in\Sigma^{\ast}$
+\end_inset
+
+ es 
+\shape italic
+aceptada por 
+\shape default
+
+\begin_inset Formula $M$
+\end_inset
+
+ 
+\shape italic
+por alcance de estado final
+\shape default
+ cuando
+\begin_inset Formula 
+\[
+\left\lfloor q_{0}B\alpha\right\rfloor \overset{\ast}{\vdash}d\text{, con }d\text{ tal que }St(d)\in F.
+\]
+
+\end_inset
+
+El 
+\shape italic
+lenguage aceptado por 
+\shape default
+
+\begin_inset Formula $M$
+\end_inset
+
+ 
+\shape italic
+por alcance de estado final
+\shape default
+ se define de la siguiente manera
+\begin_inset Formula 
+\[
+L(M)=\{\alpha\in\Sigma^{\ast}:\alpha\text{ es aceptada por }M\text{ por alcance de estado final}\}\text{.}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+
+\series bold
+Ejercicio 9:
+\end_layout
+
+\end_inset
+
+Para cada uno de los siguientes conjuntos, encuentre una máquina de Turing
+ 
+\begin_inset Formula $M$
+\end_inset
+
+ tal que 
+\begin_inset Formula $L(M)$
+\end_inset
+
+ sea dicho conjunto
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $\{\alpha\in\{a,b\}^{\ast}:\left\vert \alpha\right\vert _{a}=2\left\vert \alpha\right\vert _{b}\}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left\{ a^{i}b^{j}c^{k}:i\neq j\text{ o }j\neq k\right\} $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left\{ \alpha\in\{a,b\}^{\ast}:\alpha=\alpha^{R}\right\} $
+\end_inset
+
+ (palabras capicuas)
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\{\alpha\in\{@,\%\}^{+}:\exists x\in\Sigma^{\ast}$
+\end_inset
+
+ tal que 
+\begin_inset Formula $\alpha=xx\}$
+\end_inset
+
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+
+\series bold
+Ejercicio 10:
+\end_layout
+
+\end_inset
+
+V o F o I, justifique.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Si 
+\begin_inset Formula $q_{2}$
+\end_inset
+
+ es un estado final de la máquina 
+\begin_inset Formula $M$
+\end_inset
+
+, 
+\begin_inset Formula $\delta(q_{0},B)=(q_{1},B,R)$
+\end_inset
+
+ y 
+\begin_inset Formula $\delta(q_{1},a)=(q_{2},b,R)$
+\end_inset
+
+ entonces 
+\begin_inset Formula $a\in L(M)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Si 
+\begin_inset Formula $q_{2}$
+\end_inset
+
+ es un estado final de la máquina 
+\begin_inset Formula $M$
+\end_inset
+
+, 
+\begin_inset Formula $\delta(q_{0},B)=(q_{1},B,R)$
+\end_inset
+
+ y 
+\begin_inset Formula $\delta(q_{1},a)=(q_{2},b,R)$
+\end_inset
+
+ entonces 
+\begin_inset Formula $b\in L(M)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\alpha\notin L(M)$
+\end_inset
+
+ si y solo si existe una infinitupla 
+\begin_inset Formula $(d_{1},d_{2},...)$
+\end_inset
+
+ tal que
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $St(d_{i})\notin F$
+\end_inset
+
+, para cada 
+\begin_inset Formula $i=1,2,...$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left\lfloor q_{0}B\alpha\right\rfloor \vdash d_{1}\vdash d_{2}\vdash d_{3}\vdash d_{4}\vdash\cdots$
+\end_inset
+
+ 
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
+El lenguaje 
+\begin_inset Formula $H(M)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Diremos que una palabra 
+\begin_inset Formula $\alpha\in\Sigma^{\ast}$
+\end_inset
+
+ es 
+\shape italic
+aceptada por 
+\shape default
+
+\begin_inset Formula $M$
+\end_inset
+
+ 
+\shape italic
+por detencion
+\shape default
+ cuando 
+\begin_inset Formula $M$
+\end_inset
+
+ se detiene partiendo de 
+\begin_inset Formula $\left\lfloor q_{0}B\alpha\right\rfloor $
+\end_inset
+
+.
+ El 
+\shape italic
+lenguage aceptado por 
+\shape default
+
+\begin_inset Formula $M$
+\end_inset
+
+ 
+\shape italic
+por detencion
+\shape default
+ se define de la siguiente manera
+\begin_inset Formula 
+\[
+H(M)=\{\alpha\in\Sigma^{\ast}:\alpha\text{ es aceptada por }M\text{ por detencion}\}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+
+\series bold
+Ejercicio 11:
+\end_layout
+
+\end_inset
+
+Para cada uno de los conjuntos del Ejercicio 9 encuentre una máquina de
+ Turing 
+\begin_inset Formula $M$
+\end_inset
+
+ tal que 
+\begin_inset Formula $H(M)$
+\end_inset
+
+ sea dicho conjunto (hint: modifique adecuadamente cada una de las maquinas
+ construidas para el Ejercicio 9)
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+
+\series bold
+Ejercicio 12:
+\end_layout
+
+\end_inset
+
+V o F o I, justifique.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Si 
+\begin_inset Formula $q_{2}$
+\end_inset
+
+ es un estado final de la máquina 
+\begin_inset Formula $M$
+\end_inset
+
+, 
+\begin_inset Formula $\delta(q_{0},B)=(q_{1},B,R)$
+\end_inset
+
+ y 
+\begin_inset Formula $\delta(q_{1},a)=(q_{2},b,R)$
+\end_inset
+
+ entonces 
+\begin_inset Formula $a\in H(M)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Si 
+\begin_inset Formula $q_{2}$
+\end_inset
+
+ es un estado final de la máquina 
+\begin_inset Formula $M$
+\end_inset
+
+, 
+\begin_inset Formula $\delta(q_{0},B)=(q_{1},B,R)$
+\end_inset
+
+ y 
+\begin_inset Formula $\delta(q_{1},a)=(q_{2},b,K)$
+\end_inset
+
+ entonces 
+\begin_inset Formula $a\in H(M)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Sea 
+\begin_inset Formula $\alpha\in\Sigma^{\ast}$
+\end_inset
+
+.
+ Existe una infinitupla 
+\begin_inset Formula $(d_{1},d_{2},...)$
+\end_inset
+
+ tal que 
+\begin_inset Formula $\left\lfloor q_{0}B\alpha\right\rfloor \vdash d_{1}\vdash d_{2}\vdash d_{3}\vdash d_{4}\vdash\cdots$
+\end_inset
+
+ sii 
+\begin_inset Formula $\alpha\notin H(M)$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+Aceptaremos sin demostracion el siguiente resultado.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{lemma}
+\end_layout
+
+\end_inset
+
+ Sea 
+\begin_inset Formula $L\subseteq\Sigma^{\ast}$
+\end_inset
+
+.
+ Entonces son equivalentes
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+(1)
+\end_layout
+
+\end_inset
+
+Existe una maquina de Turing 
+\begin_inset Formula $M=(Q,\Sigma,\Gamma,\delta,q_{0},B,F)$
+\end_inset
+
+ tal que 
+\begin_inset Formula $L=L(M)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+(2)
+\end_layout
+
+\end_inset
+
+Existe una maquina de Turing 
+\begin_inset Formula $M=(Q,\Sigma,\Gamma,\delta,q_{0},B,F)$
+\end_inset
+
+ tal que 
+\begin_inset Formula $L=H(M)$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{lemma}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+Funciones 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-Turing computables
+\end_layout
+
+\begin_layout Standard
+Para poder computar funciones mixtas con una maquina de Turing necesitaremos
+ un simbolo para representar numeros sobre la cinta.
+ Llamaremos a este simbolo 
+\shape italic
+unit
+\shape default
+ y lo denotaremos con 
+\begin_inset Formula $\shortmid$
+\end_inset
+
+.
+ Mas formalmente una 
+\shape italic
+maquina de Turing con unit
+\shape default
+ es una 8-upla 
+\begin_inset Formula $M=\left(Q,\Sigma,\Gamma,\delta,q_{0},B,\shortmid,F\right)$
+\end_inset
+
+ tal que 
+\begin_inset Formula $\left(Q,\Sigma,\Gamma,\delta,q_{0},B,F\right)$
+\end_inset
+
+ es una maquina de Turing y 
+\begin_inset Formula $\shortmid$
+\end_inset
+
+ es un simbolo distingido perteneciente a 
+\begin_inset Formula $\Gamma-(\{B\}\cup\Sigma)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Diremos que una funcion 
+\begin_inset Formula $f:D_{f}\subseteq\omega^{n}\times\Sigma^{\ast m}\rightarrow\Sigma^{\ast}$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-
+\shape italic
+Turing computable
+\shape default
+ si existe una maquina de Turing con unit, 
+\begin_inset Formula $M=\left(Q,\Sigma,\Gamma,\delta,q_{0},B,\shortmid,F\right)$
+\end_inset
+
+ tal que:
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+(1)
+\end_layout
+
+\end_inset
+
+Si 
+\begin_inset Formula $(\vec{x},\vec{\alpha})\in D_{f}$
+\end_inset
+
+, entonces hay un 
+\begin_inset Formula $p\in Q$
+\end_inset
+
+ tal que
+\begin_inset Formula 
+\[
+\left\lfloor q_{0}B\shortmid^{x_{1}}B...B\shortmid^{x_{n}}B\alpha_{1}B...B\alpha_{m}\right\rfloor \overset{\ast}{\vdash}\left\lfloor pBf(\vec{x},\vec{\alpha})\right\rfloor 
+\]
+
+\end_inset
+
+y 
+\begin_inset Formula $\left\lfloor pBf(\vec{x},\vec{\alpha})\right\rfloor \nvdash d$
+\end_inset
+
+, para cada 
+\begin_inset Formula $d\in Des$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+(2)
+\end_layout
+
+\end_inset
+
+Si 
+\begin_inset Formula $(\vec{x},\vec{\alpha})\in\omega^{n}\times\Sigma^{\ast m}-D_{f}$
+\end_inset
+
+, entonces 
+\begin_inset Formula $M$
+\end_inset
+
+ no se detiene partiendo de
+\begin_inset Formula 
+\[
+\left\lfloor q_{0}B\shortmid^{x_{1}}B...B\shortmid^{x_{n}}B\alpha_{1}B...B\alpha_{m}\right\rfloor .
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+En forma similar, una funcion 
+\begin_inset Formula $f:D_{f}\subseteq\omega^{n}\times\Sigma^{\ast}{}^{m}\rightarrow\omega$
+\end_inset
+
+, es llamada 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-
+\shape italic
+Turing computable
+\shape default
+ si existe una maquina de Turing con unit, 
+\begin_inset Formula $M=\left(Q,\Sigma,\Gamma,\delta,q_{0},B,\shortmid,F\right)$
+\end_inset
+
+, tal que:
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+(1)
+\end_layout
+
+\end_inset
+
+Si 
+\begin_inset Formula $(\vec{x},\vec{\alpha})\in D_{f}$
+\end_inset
+
+, entonces hay un 
+\begin_inset Formula $p\in Q$
+\end_inset
+
+ tal que
+\begin_inset Formula 
+\[
+\left\lfloor q_{0}B\shortmid^{x_{1}}B...B\shortmid^{x_{n}}B\alpha_{1}B...B\alpha_{m}\right\rfloor \overset{\ast}{\vdash}\left\lfloor pB\shortmid^{f(\vec{x},\vec{\alpha})}\right\rfloor 
+\]
+
+\end_inset
+
+y 
+\begin_inset Formula $\left\lfloor pB\shortmid^{f(\vec{x},\vec{\alpha})}\right\rfloor \nvdash d$
+\end_inset
+
+, para cada 
+\begin_inset Formula $d\in Des$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+(2)
+\end_layout
+
+\end_inset
+
+Si 
+\begin_inset Formula $(\vec{x},\vec{\alpha})\in\omega^{n}\times\Sigma^{\ast m}-D_{f}$
+\end_inset
+
+, entonces 
+\begin_inset Formula $M$
+\end_inset
+
+ no se detiene partiendo de
+\begin_inset Formula 
+\[
+\left\lfloor q_{0}B\shortmid^{x_{1}}B...B\shortmid^{x_{n}}B\alpha_{1}B...B\alpha_{m}\right\rfloor 
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+Cuando 
+\begin_inset Formula $M$
+\end_inset
+
+ y 
+\begin_inset Formula $f$
+\end_inset
+
+ cumplan los items (1) y (2) de la definicion anterior, diremos que la funcion
+ 
+\begin_inset Formula $f$
+\end_inset
+
+ es 
+\shape italic
+computada
+\shape default
+ por 
+\begin_inset Formula $M$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Por supuesto esta definicion no tendria sentido como modelo matematico del
+ concepto de funcion 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-efectivamente computable si no sucediera que toda funcion 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-Turing computable fuera 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-efectivamente computable.
+ Este hecho es intuitivamente claro y lo expresamos en forma de proposicion.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{proposition}
+\end_layout
+
+\end_inset
+
+ Si 
+\begin_inset Formula $f:D_{f}\subseteq\omega^{n}\times\Sigma^{\ast}{}^{m}\rightarrow O$
+\end_inset
+
+, con 
+\begin_inset Formula $O\in\{\omega,\Sigma^{\ast}\}$
+\end_inset
+
+, es computada por una maquina de Turing con unit 
+\begin_inset Formula $M=\left(Q,\Sigma,\Gamma,\delta,q_{0},B,\shortmid,F\right)$
+\end_inset
+
+, entonces 
+\begin_inset Formula $f$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-efectivamente computable.
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{proposition}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{proof}
+\end_layout
+
+\end_inset
+
+ Haremos el caso 
+\begin_inset Formula $O=\Sigma^{\ast}$
+\end_inset
+
+.
+ Sea 
+\begin_inset Formula $\mathbb{P}$
+\end_inset
+
+ el siguiente procedimiento efectivo.
+\end_layout
+
+\begin_layout Standard
+- Conjunto de datos de entrada de 
+\begin_inset Formula $\mathbb{P}$
+\end_inset
+
+ igual a 
+\begin_inset Formula $\omega^{n}\times\Sigma^{\ast}{}^{m}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+- Conjunto de datos de salida de 
+\begin_inset Formula $\mathbb{P}$
+\end_inset
+
+ contenido en 
+\begin_inset Formula $O$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+- Funcionamiento: Hacer funcionar paso a paso la maquina 
+\begin_inset Formula $M$
+\end_inset
+
+ partiendo de la descripcion instantanea 
+\begin_inset Formula $\left\lfloor q_{0}B\shortmid^{x_{1}}B...B\shortmid^{x_{n}}B\alpha_{1}B...B\alpha_{m}\right\rfloor $
+\end_inset
+
+.
+ Si en alguna instancia 
+\begin_inset Formula $M$
+\end_inset
+
+ termina, dar como salida el resultado de remover de la descripcion instantanea
+ final los dos primeros simbolos.
+\end_layout
+
+\begin_layout Standard
+Notese que este procedimiento termina solo en aquelos elementos 
+\begin_inset Formula $(\vec{x},\vec{\sigma})\in\omega^{n}\times\Sigma^{\ast}{}^{m}$
+\end_inset
+
+ tales que la maquina 
+\begin_inset Formula $M$
+\end_inset
+
+ termina partiendo desde
+\begin_inset Formula 
+\[
+\left\lfloor q_{0}B\shortmid^{x_{1}}B...B\shortmid^{x_{n}}B\alpha_{1}B...B\alpha_{m}\right\rfloor 
+\]
+
+\end_inset
+
+por lo cual termina solo en los elementos de 
+\begin_inset Formula $D_{f}$
+\end_inset
+
+ ya que 
+\begin_inset Formula $M$
+\end_inset
+
+ computa a 
+\begin_inset Formula $f$
+\end_inset
+
+.
+ Ademas es claro que en caso de terminacion el procedimiento da como salida
+ 
+\begin_inset Formula $f(\vec{x},\vec{\sigma})$
+\end_inset
+
+.
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{proof}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Sin envargo el modelo Turingniano podria a priori no ser del todo correcto
+ ya que podria pasar que haya una funcion que sea computada por un procedimiento
+ efectivo pero que no exista una maquina de Turing que la compute.
+ En otras palabras el modelo podria ser incompleto.
+ La completitud de este modelo puede no ser clara al comienzo pero a medida
+ que vayamos avanzando en nuestro estudio y conozcamos ademas los otros
+ paradigmas y su relacion, quedara claro que el modelo de Turing es acertado.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+
+\series bold
+Ejercicio 13:
+\end_layout
+
+\end_inset
+
+Sea 
+\begin_inset Formula $\Sigma=\{a,b\}$
+\end_inset
+
+.
+ Para cada una de las siguientes funciones 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-mixtas dar una máquina de Turing 
+\begin_inset Formula $\left(Q,\Gamma,\Sigma,\delta,q_{0},B,\shortmid,\emptyset\right)$
+\end_inset
+
+ que la compute
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $\begin{array}[t]{rll}
+Suc:\omega & \rightarrow & \omega\\
+n & \rightarrow & n+1
+\end{array}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\begin{array}[t]{rll}
+Pred:\mathbf{N} & \rightarrow & \omega\\
+n & \rightarrow & n-1
+\end{array}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\begin{array}[t]{rll}
+p_{2}^{1,1}:\omega\times\Sigma^{\ast} & \rightarrow & \Sigma^{\ast}\\
+(x,\alpha) & \rightarrow & \alpha
+\end{array}$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+(explicada en video en granlogico.com)
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset Formula $\begin{array}[t]{rll}
+C_{2}^{1,1}:\omega\times\Sigma^{\ast} & \rightarrow & \omega\\
+(x,\alpha) & \rightarrow & 2
+\end{array}$
+\end_inset
+
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+Ejercicio 13,5:
+\end_layout
+
+\end_inset
+
+Sea 
+\begin_inset Formula $\Sigma=\{@,\%\}$
+\end_inset
+
+.
+ Sea
+\begin_inset Formula 
+\[
+\begin{array}[t]{rll}
+f:\{(x,\alpha)\in\omega\times\Sigma^{\ast}:\left\vert \alpha\right\vert \text{ es impar}\} & \rightarrow & \omega\\
+(x,\alpha) & \rightarrow & x+\left\vert \alpha\right\vert 
+\end{array}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+De el diagrama de una maquina de Turing 
+\begin_inset Formula $M$
+\end_inset
+
+ la cual compute a 
+\begin_inset Formula $f$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Para cada una de los siguientes pares 
+\begin_inset Formula $(x,\alpha)$
+\end_inset
+
+ dar la sucecion de descripciones instantaneas que parte de 
+\begin_inset Formula $\left\lfloor q_{0}B\shortmid^{x}B\alpha\right\rfloor $
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $(x,\alpha)=(0,\varepsilon)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $(x,\alpha)=(100,@)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $(x,\alpha)=(3,@@\%)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $(x,\alpha)=(100,@\%)$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+(Note que dicha sucesion para ciertos casos debe ser infinita) 
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+Ejercicio 13,7:
+\end_layout
+
+\end_inset
+
+Sea 
+\begin_inset Formula $\Sigma=\{@,\%\}$
+\end_inset
+
+.
+ Sea
+\begin_inset Formula 
+\[
+\begin{array}[t]{rll}
+R:\{\alpha\in\Sigma^{+}:\exists x\in\Sigma^{\ast}\text{ tal que }\alpha=xx\} & \rightarrow & \Sigma^{\ast}\\
+\alpha & \rightarrow & \text{único }x\text{ tal que }\alpha=xx
+\end{array}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+De el diagrama de una maquina de Turing 
+\begin_inset Formula $M$
+\end_inset
+
+ la cual compute a 
+\begin_inset Formula $R$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Para cada una de las siguientes palabras 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ dar la sucecion de descripciones instantaneas que parte de 
+\begin_inset Formula $\left\lfloor q_{0}B\alpha\right\rfloor $
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $\alpha=\varepsilon$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\alpha=@@$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\alpha=@@\%\%$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\alpha=@\%@\%\%$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\alpha=@@\%@$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+(Note que dicha sucesion para ciertos casos debe ser infinita) 
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+
+\series bold
+Ejercicio 14:
+\end_layout
+
+\end_inset
+
+V o F o I, justifique.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Sea 
+\begin_inset Formula $M=\left(Q,\Sigma,\Gamma,\delta,q_{0},B,\shortmid,F\right)$
+\end_inset
+
+ una maquina de Turing con unit y supongamos que 
+\begin_inset Formula $M$
+\end_inset
+
+ computa a 
+\begin_inset Formula $f$
+\end_inset
+
+.
+ Entonces 
+\begin_inset Formula $D_{f}=\{d\in Des:M$
+\end_inset
+
+ se detiene partiendo desde 
+\begin_inset Formula $d\}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Si 
+\begin_inset Formula $f$
+\end_inset
+
+ y 
+\begin_inset Formula $g$
+\end_inset
+
+ son dos funciones y 
+\begin_inset Formula $M$
+\end_inset
+
+ es es una máquina de Turing que computa a 
+\begin_inset Formula $f$
+\end_inset
+
+ y a 
+\begin_inset Formula $g$
+\end_inset
+
+ entonces 
+\begin_inset Formula $f=g$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Sea 
+\begin_inset Formula $M=\left(Q,\Sigma,\Gamma,\delta,q_{0},B,\shortmid,F\right)$
+\end_inset
+
+ una maquina de Turing con unit y supongamos que 
+\begin_inset Formula $M$
+\end_inset
+
+ computa a 
+\begin_inset Formula $f$
+\end_inset
+
+ y que 
+\begin_inset Formula $f$
+\end_inset
+
+ es 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-total.
+ Entonces 
+\begin_inset Formula $M$
+\end_inset
+
+ se detiene partiendo desde 
+\begin_inset Formula $d$
+\end_inset
+
+, cualesquiera sea 
+\begin_inset Formula $d\in Des$
+\end_inset
+
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+
+\series bold
+Ejercicio 15:
+\end_layout
+
+\end_inset
+
+Como se vio anteriormente el modelo de Turing del concepto de funcion 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-efectivamente computable es el concepto matematico de funcion 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-Turing computable.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Cual seria el modelo de Turing del concepto de conjunto 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-efectivamente computable? que nombre le pondria?
+\end_layout
+
+\begin_layout Enumerate
+Cual seria el modelo de Turing del concepto de conjunto 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+-efectivamente enumerable? que nombre le pondria? 
+\end_layout
+
+\end_deeper
+\end_body
+\end_document
