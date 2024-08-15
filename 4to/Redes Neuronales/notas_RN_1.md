@@ -1,5 +1,7 @@
 # Redes Neuronales - 2024
 
+## Clase #2
+
 La nerona de McCulloch y Pitts (1943)
 
 La neurona toma como inputs las salidas de algunas de las neuronas de la capa anterior, todas ponderadas con algun peso asignado. Luego, esta realiza la suma de cada entrada ponderada con su peso. Y evalua una **funcion de activación** para decidir la salida de la neurona. 
@@ -21,5 +23,15 @@ $sum = h_i = \sum_{i=1}^N{W_i I_i}$ y si $h_i$ es mayor o menor que el umbral, l
 Diferentes funciones de activación **continuas**
 
 ![](imgs/2024-08-15-19-04-17-image.png)
+
+Las redes neuronales se miden con el numero de capas (desde la siguiente a la entrada hasta la salida)
+
+Red neuronal **feed-forward**
+
+![](imgs/2024-08-15-19-15-58-image.png)
+
+Es uno de los primeros modelo de red neurnoales propuesto, en este diseño las neuronas solo pueden conectar sus salidas con las entradas de neuronas que esten en capas siguientes.
+
+
 
 
