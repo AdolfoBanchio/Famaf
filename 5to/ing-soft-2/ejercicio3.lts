@@ -1,0 +1,25 @@
+// Ejercicio 3 guia 1
+
+MEETING = START,
+START = (hello -> CONVERSE),
+CONVERSE = (converse -> GODBYE),
+GODBYE = (godbye -> END).
+
+JOB = (arrive -> work -> leave -> JOB).
+
+
+MOVE = (ahead -> AHEAD),
+AHEAD = (right -> MOVE
+		|left -> STOP).
+
+GAME = ({one, two} -> WIN
+		| tree -> LOSE),
+WIN = (win -> GAME),
+LOSE = (lose -> GAME).
+
+FOURTICK = (tick -> tick -> tick -> tick -> STOP).
+
+DOUBLE = (in[i:1..3] -> out[i] -> DOUBLE).
+
+PERSON = (weekend -> sleep -> work -> PERSON
+		| weekend -> sleep -> {play,shop} -> PERSON).

@@ -1,0 +1,4 @@
+const N = 2
+
+VARIABLE = (write[i:0..N]  -> VARIABLE
+			| read[i:0..N] -> VARIABLE).
