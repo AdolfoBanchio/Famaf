@@ -1,0 +1,15 @@
+/*
+Ej 7
+Una maquina expendedora de bebidas cobra 15c por una lata de gaseosas. La maquina
+acepta monedas de 5c, 10c, y 20c, y da vuelto. Modele la maquina como un proceso FSP
+*/
+range T = 0..30
+
+EXP = EXP[0],
+EXP[i:T] = (when(i < 15) moneda -> ([5] -> EXP[i+5]
+						  |[10] -> EXP[i+10]
+						  |[20] -> EXP[i+20])
+		   |when(i == 15) gaseosa -> STOP
+		   |when(i > 15) vuelto[i-15] -> gaseosa -> STOP).
+
+

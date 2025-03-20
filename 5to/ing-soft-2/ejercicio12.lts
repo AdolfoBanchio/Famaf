@@ -1,0 +1,25 @@
+/*
+Ejercicio 12.. Considere la c´elula de producci´on industrial del ejercicio anterior. Modele una variante
+de la misma como un proceso FSP, en la cual no s´olo tenemos objetos de tipo A, sino tambi´en objetos
+de tipo B, y se cuenta con un taladro (adem´as de la prensa). Los objetos de tipo A deben ser prensados,
+mientras que los objetos de tipo B deben ser taladrados
+*/
+
+const N = 2
+range T = 0..N
+
+CINTA = CINTA[0][0],
+CINTA[a:T][b:T] = ( 
+				   |when (b>0 ) get_b -> CINTA[a][b-1]
+				   |when (a+b<N) put_a -> GET_A[a+1][b]
+				   |when (a+b<N) put_b -> GET_B[a][b+1]),
+
+GET_A[a:T][b:T] = (when (a+b<N) put_a -> GET_A[a+1][b]
+				   |when (a+b<N) put_b -> GET_A[a][b+1])
+				   |when (a > 0) get_a -> CINTA[a-1][b]),
+
+
+PRENSA = (get_a -> out_p -> PRENSA).
+TALADRO = (get_b -> out_t -> TALADRO).
+
+||PROD = (CINTA || PRENSA || TALADRO). 

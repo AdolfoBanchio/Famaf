@@ -1,0 +1,22 @@
+/*
+Considere una celula de produccion industrial, en la cual se procesan objetos, realizando
+un prensado de los mismos. Los objetos que se reciben son de cierto tipo A, y llegan a traves de una
+cinta transportadora. Al llegar el primer elemento de la cinta a la posicion de extraccion, la cinta se
+para. Luego, un brazo mecanico levanta el elemento de la cinta y lo lleva a la prensa (la cual debe
+estar desocupada), para su prensado. Luego del prensado, otro brazo mecanico extrae el elemento de
+la prensa y lo deposita en la salida de la celula. Modele la celula de produccion como un proceso FSP.
+*/
+
+const N = 2
+
+CINTA = CINTA[0],
+CINTA[i:0..N] = ( when (i>0) get -> CINTA[i-1]
+				| when (i<N) put -> CINTA[i+1]).
+
+
+PRENSA = (get -> out -> PRENSA).
+
+||PROD = (CINTA || PRENSA). 
+
+
+

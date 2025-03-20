@@ -1,0 +1,16 @@
+/*
+Muestre que S1 y S2, definidos de la siguiente manera:
+P = (a -> b -> P).
+Q = (c -> b -> Q).
+||S1 = (P || Q).
+S2 = (a -> c -> b -> S2 | c -> a -> b -> S2).
+tienen el mismo comportamiento.
+*/
+
+P = (a -> b -> P).
+Q = (c -> b -> Q).
+
+||S1 = (P || Q).
+
+
+S2 = (a -> c -> b -> S2 | c -> a -> b -> S2).
