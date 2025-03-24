@@ -1,0 +1,26 @@
+/*
+Considere el problema de lectores y escritores que desean acceder a un recurso com´un
+(por ej. una variable) donde los lectores s´olo pueden leer de ese recurso mientras los escritores pueden
+leer y escribir. Adem´as de las consideraciones usuales del problema de lectores-escritores, por una
+restricci´on de la administraci´on del recurso, s´olo se permite que K procesos lo est´en accediendo
+simult´aneamente. Suoponga que en el sistema hay N lectores y M escritores (con N y M mayores
+a K). Modele el problema descripto en FSP, proveyendo adem´as de las definiciones de los procesos
+correspondientes, el diagrama de estructura de su modelo.
+*/
+const N = 5    // Número de lectores
+const M = 3    // Número de escritores
+const K = 3    // Máximo de accesos simultáneos
+
+READER = (request_read -> start_read -> read -> end_read -> READER).
+
+WRITER = (request_write -> start_write -> write -> end_write -> WRITER).
+
+CONTROLLER = CONTROL[0][0],
+CONTROL[n:0..K][writing:0..1] = (
+		  when (writing == 0 && n < K) request_read -> start_read -> CONTROL[n+1] [writing]  
+  		| when (writing == 0 && n < K) request_write -> start_write -> CONTROL[n+1] [1]  
+  		| when (n > 0) end_read -> CONTROL[n-1][writing]  
+  		| when (writing == 1) end_write -> CONTROL[n-1][0]  
+).
+
+|| SYSTEM = (CONTROLLER || (forall [i:1..N] READER) || (forall [i:1..M] WRITER)).
