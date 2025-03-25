@@ -17,10 +17,10 @@ WRITER = (request_write -> start_write -> write -> end_write -> WRITER).
 
 CONTROLLER = CONTROL[0][0],
 CONTROL[n:0..K][writing:0..1] = (
-		  when (writing == 0 && n < K) request_read -> start_read -> CONTROL[n+1] [writing]  
-  		| when (writing == 0 && n < K) request_write -> start_write -> CONTROL[n+1] [1]  
+		  when (writing == 0 && n < K) request_read -> start_read -> CONTROL[n+1][writing]  
+  		| when (writing == 0 && n < K) request_write -> start_write -> CONTROL[n+1][1]  
   		| when (n > 0) end_read -> CONTROL[n-1][writing]  
-  		| when (writing == 1) end_write -> CONTROL[n-1][0]  
+  		| when (writing == 1) end_write -> CONTROL[n-1][0]
 ).
 
-|| SYSTEM = (CONTROLLER || (forall [i:1..N] READER) || (forall [i:1..M] WRITER)).
+|| SYSTEM = (CONTROLLER || s[1..N]:READER || w[i:1..M]:WRITER).
