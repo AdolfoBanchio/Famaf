@@ -1,0 +1,20 @@
+/*
+Ejercicio 3.. Una computadora central conectada a terminales remotas 
+a traves de enlaces de comunicacion se utiliza para realizar reservas 
+de asientos en un teatro. 
+
+Los empleados del teatro que realizan las reservas pueden mostrar 
+el estado actual de reservas en las pantallas de las terminales. 
+Para poder reservar un asiento, el cliente elije el numero, 
+y un empleado accede a traves de la terminal para saber si el mismo esta 
+reservado o no. 
+Si no lo esta, realiza la reserva correspondiente. 
+Construya un modelo FSP para este problema, asegurando que no puede 
+reservarse mas de una vez el mismo asiento en el teatro.
+*/
+
+const Seats = 5 // cantidad de asientos
+
+
+ROOM(N=5) = 
+

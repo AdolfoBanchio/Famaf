@@ -4,22 +4,19 @@ de la misma como un proceso FSP, en la cual no s´olo tenemos objetos de tipo A,
 de tipo B, y se cuenta con un taladro (adem´as de la prensa). Los objetos de tipo A deben ser prensados,
 mientras que los objetos de tipo B deben ser taladrados
 */
+range T = 0..3
+range M = 0..1
 
-const N = 2
-range T = 0..N
+ONEBUFF = (put[x:M] -> get[x] -> ONEBUFF).
 
-CINTA = CINTA[0][0],
-CINTA[a:T][b:T] = ( 
-				   |when (b>0 ) get_b -> CINTA[a][b-1]
-				   |when (a+b<N) put_a -> GET_A[a+1][b]
-				   |when (a+b<N) put_b -> GET_B[a][b+1]),
-
-GET_A[a:T][b:T] = (when (a+b<N) put_a -> GET_A[a+1][b]
-				   |when (a+b<N) put_b -> GET_A[a][b+1])
-				   |when (a > 0) get_a -> CINTA[a-1][b]),
+||BUFFER(N=3) = ([1..N]:ONEBUFF)/{
+								put/[1].put,
+								[i:1..N-1].get/[j:2..N].put,
+								get/[N].get
+								}@{put,get}.
 
 
-PRENSA = (get_a -> out_p -> PRENSA).
-TALADRO = (get_b -> out_t -> TALADRO).
+PRENSA = (get[0] -> out[0] -> PRENSA).
+TALADRO = (get[1] -> out[1] -> TALADRO).
 
-||PROD = (CINTA || PRENSA || TALADRO). 
+||PROD = (BUFFER || PRENSA || TALADRO).
