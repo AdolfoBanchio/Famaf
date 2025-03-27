@@ -46,3 +46,5 @@ Teorema [Alpern & Schneider 85]
 Toda propiedad puede escribirse como la intersección de una propiedad de safety y una de liveness
 ```
 
+FSP me permite caracterizar las propiedades que debe cumplir cierto proceso. De modo que al momento de construirlo verifica cuando un proceso NO satisface dicha propiedad y lo traduce agregando los estados de error necesarios para representar correctamente dichos casos.
+

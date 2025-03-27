@@ -1,0 +1,20 @@
+/*
+Ejercicio 4.. The Dining Savages: Una tribu de salvajes disfruta de una cena comunitaria. Cada uno
+se sirve de una gran olla que contiene hasta M porciones de estofado de misionero. Cuando un salvaje
+quiere comer se sirve una porci´on de la olla al menos que esta este vac´ıa en cuyo caso espera hasta
+que esta se vuelva a llenar. Si la olla se vac´ıa, el cocinero de la tribu la vuelve a llenar con M porciones.
+Modele los salvajes, el cocinero y la olla.
+*/
+
+const M = 3
+const S = 2
+range T = 1..2
+range P = 0..3
+
+SALVAJE = (servir -> comer -> SALVAJE).
+
+OLLA(N=0) = SERVIR[N],
+SERVIR[p:P] = ( when (p==0) llenar -> OLLA[N]
+			  | when (p > 0)[T].servir -> SERVIR[p-1]).
+
+||CENA = ([T]:SALVAJE || OLLA(M)).

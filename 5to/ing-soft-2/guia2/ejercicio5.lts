@@ -1,0 +1,31 @@
+/*
+Ejercicio 5.. 
+Disee y modele en FSP un protocolo de comunicacion que permita a un proceso 
+productor y un proceso consumidor comunicarse a traves de un canal asincronico
+con un numero maximo de mensajes, 
+de manera que el productor se bloquee cuando el buffer del canal esta lleno.
+
+Intercambio de mensajes con buffer bloqueante
+*/
+
+const MAX = 3
+const Msg = 2
+range M = 0..Msg
+
+
+ONEBUFF = (put[x:M] -> get[x] -> ONEBUFF).
+
+||PORT(N=3) = ([1..N]:ONEBUFF)/{
+				put[j:M]/[1].put[j],
+				[i:2..N].put[j:M]/[i-1].get[j],
+				get[j:M]/[N].get[j]
+				}@{put[j:M],get[j:M]}.
+
+CLIENT = (port.recive[v:M] -> CLIENT).
+
+SERVER = SERVER[0],
+SERVER[e:M] = (port.send[e] -> SERVER[(e+1)%(Msg+1)]).
+
+||AsyncMsg = ([1..4]:SERVER || CLIENT || port:PORT)
+			/{ [1..4].port.send/port.put,
+			   port.recive/port.get}.

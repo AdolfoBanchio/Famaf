@@ -4,19 +4,17 @@ de la misma como un proceso FSP, en la cual no s´olo tenemos objetos de tipo A,
 de tipo B, y se cuenta con un taladro (adem´as de la prensa). Los objetos de tipo A deben ser prensados,
 mientras que los objetos de tipo B deben ser taladrados
 */
-range T = 0..3
 range M = 0..1
 
 ONEBUFF = (put[x:M] -> get[x] -> ONEBUFF).
 
 ||BUFFER(N=3) = ([1..N]:ONEBUFF)/{
-								put/[1].put,
-								[i:1..N-1].get/[j:2..N].put,
-								get/[N].get
-								}@{put,get}.
-
+				put[j:M]/[1].put[j],
+				[i:2..N].put[j:M]/[i-1].get[j],
+				get[j:M]/[N].get[j]
+				}@{put[j:M],get[j:M]}.
 
 PRENSA = (get[0] -> out[0] -> PRENSA).
 TALADRO = (get[1] -> out[1] -> TALADRO).
 
-||PROD = (BUFFER || PRENSA || TALADRO).
+||PROD = (BUFFER(2) || PRENSA || TALADRO).
