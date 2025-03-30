@@ -1,0 +1,6 @@
+/*
+Ejercicio 6.. Modele en FSP el protocolo de Reconocimiento Positivo con Retransmision: PAR (“Posi-
+tive Acknowledgement with Retransmission”)1. Para ello modele el transmisor, el receptor y los canales
+de ida y de vuelta. Observe que estos canales corresponden a un medio con perdida y duplicacion.
+*/
+

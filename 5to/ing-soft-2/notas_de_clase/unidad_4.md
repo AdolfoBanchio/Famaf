@@ -1,4 +1,3 @@
-
 # Propiedades de los sistemas concurrentes
 
 Debido a que los sistemas concurrentes son reactivos a diferentes eventos, tienen diferentes características y por lo tanto comportamientos que suelen no ser los esperados.

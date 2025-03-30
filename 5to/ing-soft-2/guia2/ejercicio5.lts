@@ -26,6 +26,6 @@ CLIENT = (port.recive[v:M] -> CLIENT).
 SERVER = SERVER[0],
 SERVER[e:M] = (port.send[e] -> SERVER[(e+1)%(Msg+1)]).
 
-||AsyncMsg = ([1..4]:SERVER || CLIENT || port:PORT)
-			/{ [1..4].port.send/port.put,
+||AsyncMsg = (SERVER || CLIENT || port:PORT)
+			/{port.send/port.put,
 			   port.recive/port.get}.
