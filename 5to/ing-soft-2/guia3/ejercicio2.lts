@@ -1,0 +1,27 @@
+/*
+Ejercicio 2. (En referencia al problema de los fil´osofos [Cap. 6, Concurrency, Magee & Kramer 1999].)
+Una soluci´on al problema de los fil´osofos permite que solo cuatro fil´osofos se sienten a la mesa al
+mismo tiempo. Especifique el proceso BUTLER que, al componerlo con el modelo de la secci´on 6.2
+permite que un m´aximo de cuatro fil´osofos ejecuten el evento sitdown sin que antes ocurra un evento
+arise. Muestre que este sistema es libre de deadlock.
+*/
+const N = 5
+range Phils = 0..N-1
+
+FORK = (get -> put -> FORK).
+
+PHIL = (sitdown -> right.get -> left.get 
+		-> eat -> left.put -> right.put
+		-> arise -> PHIL).
+
+property BUTLER = BUTLER[0],
+
+BUTLER[s:Phils] = (when (s < N-1) phil[Phils].sitdown -> BUTLER[s+1]
+				| when (s==N-1) phil[Phils].arise -> BUTLER[s-1]).
+
+
+||DINERS =
+	forall [i:Phils]
+	(phil[i]:PHIL 
+	|| {phil[i].left,phil[((i-1)+N)%N].right}::FORK
+	|| BUTLER).

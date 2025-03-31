@@ -32,7 +32,7 @@ Buscaremos representar propiedades con expresiones $\omega -regulares$ . De modo
 ##### Propiedades safety
 - Si una traza tiene un prefijo que viola una propiedad de safety, es irremediable. Y esta traza (sin importar como continua) nunca dejara de violar la propiedad.
 
-![[Pasted image 20250325104718.png]]
+![](/imgs/Pasted%20image%2020250325104718.png)
 
 ##### Propiedades liveness
 "Siempre es posible que algo bueno ocurra". No importa como este formada mi palabra, siempre existirá una forma de completarla que cumplirá la propiedad.
