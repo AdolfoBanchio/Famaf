@@ -3,5 +3,5 @@ Las lógicas temporales son variantes de la lógica modal que conciernen al razo
 
 Donde tenemos como modelo de tiempo un conjunto numerables e instantes organizados linealmente pero no puede observer el tiempo transcurrido. Simplemente orden de eventos ocurridos en una linea temporal.
 
-![](Pasted%20image%2020250331180846.png)
+![](/imgs/Pasted%20image%2020250331180846.png)
 

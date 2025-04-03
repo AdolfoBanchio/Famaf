@@ -17,7 +17,7 @@ PHIL = (sitdown -> right.get -> left.get
 property BUTLER = BUTLER[0],
 
 BUTLER[s:Phils] = (when (s < N-1) phil[Phils].sitdown -> BUTLER[s+1]
-				| when (s==N-1) phil[Phils].arise -> BUTLER[s-1]).
+				| phil[Phils].arise -> BUTLER[s-1]).
 
 
 ||DINERS =
