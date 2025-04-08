@@ -67,6 +67,20 @@ De la misma forma, sea Q = $\bar{P}$ , entonces siempre existe alguna forma de c
 
 #### Ejercicio 8: para cada propiedad, decir si son de safety, liveness, ambas o ninguna. $\Sigma = \{a,b\}$
 
-1. $a^* b^{\omega}$ : es de safety, por ejemplo la palabra bbba, no cumple con la propiedad y es 'insalvable'
-2. 
+![[Pasted image 20250408122501.png]]
 
+1. $a^* b^{\omega}$ : es de safety, por ejemplo la palabra bbba, no cumple con la propiedad y es 'insalvable'
+2. (b + a)⁺$b^\omega$ , es una prop de liveness, no importa como comience la traza, siempre puedo completarla con infinitas b para que satisfaga la prop.
+3. safety
+4. liveness
+5. safety
+6. safety
+
+
+#### Ejercicio 11:  de ejemplos que violan la sig prop
+
+property PS = (a->( b -> PS 
+				| a -> PS)
+			| b -> a -> PS).
+
+bb (a + b)^* cualquiera de esta forma viola la propiedad.

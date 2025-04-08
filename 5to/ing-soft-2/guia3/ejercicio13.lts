@@ -1,0 +1,18 @@
+/*
+Ejercicio 13. Un ascensor tiene una capacidad m´axima de 10 personas. En el modelo del sistema de control del ascensor, 
+los pasajeros que ingresan al ascensor se se˜nalan con un evento enter y los que salen se se˜nalan con un evento exit. 
+Especifique una propiedad de safety en FSP que cuando sea compuesta con el ascensor verifique que el sistema nunca permita 
+que el ascensor controlado por este exceda los diez ocupantes.
+*/
+
+
+PASAJERO = (enter -> VIAJANDO),
+VIAJANDO = (exit -> PASAJERO).
+
+property MAX_CAP = MAX_CAP[10],
+MAX_CAP[i:0..10] = (when (i > 0) enter -> MAX_CAP[i-1]
+					| when (i == 0) exit -> MAX_CAP[i+1]).
+
+
+||ASCENSOR = ([j:0..11]:PASAJERO || MAX_CAP)/{[j:0..11].enter/enter,
+											[j:0..11].exit/exit}.
