@@ -67,5 +67,6 @@ De la misma forma, sea Q = $\bar{P}$ , entonces siempre existe alguna forma de c
 
 #### Ejercicio 8: para cada propiedad, decir si son de safety, liveness, ambas o ninguna. $\Sigma = \{a,b\}$
 
-1. $a^* b^{\omega}$ : es de safety, pues cualquier prefijo diferente 
+1. $a^* b^{\omega}$ : es de safety, por ejemplo la palabra bbba, no cumple con la propiedad y es 'insalvable'
+2. 
 
