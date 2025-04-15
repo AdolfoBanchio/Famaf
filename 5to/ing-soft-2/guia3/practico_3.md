@@ -36,19 +36,19 @@ $$
 **Liveness**: No importa como este formada mi palabra, siempre existirá una forma de completarla para que cumpla la propiedad.
 
 
-La propiedad que contiene todas las trazas posibles es de safety y de liveness. Ya que siempe no importa que prefijo tenga seguira siendo de liveness. Y no existe prefijo que viole la propiedad de safety.
+La propiedad que contiene todas las trazas posibles es de safety y de liveness. Ya que siempre no importa que prefijo tenga seguira siendo de liveness. Y no existe prefijo que viole la propiedad de safety.
 
-#### Ejercicio 6: con referencia al ej anterior, demuestre que esa propiedad es unica.
+#### Ejercicio 6: con referencia al ej anterior, demuestre que esa propiedad es única.
 
-Sean P y Q dos propiedades tales que son de safety y de liveness simultaneamente y supongamos $P \neq Q$.
+Sean P y Q dos propiedades tales que son de safety y de liveness simultáneamente y supongamos $P \neq Q$.
 
 Sea $\sigma \notin Q$, entonces como Q es de safety, significa que existe un prefijo $\beta$ tal que es "malo". Entonces tenemos que cualquier extension de $\beta$ tampoco satisface Q. 
 
-Pero como Q tambien es de liveness, deberia tener una forma de completar $\beta$ tal que satisfaga la propiedad. Pero ya dijimos que cualquier extension de $\beta$ no cumple Q. 
+Pero como Q también es de liveness, deberia tener una forma de completar $\beta$ tal que satisfaga la propiedad. Pero ya dijimos que cualquier extension de $\beta$ no cumple Q. 
 
 Entonces lo que tenemos es que Q debe contener todas las trazas posibles. 
 
-Analogamente para P, por lo que obtenemos que si existen dos propiedades que sean de safety y de liveness. Entonces son iguales.
+Análogamente para P, por lo que obtenemos que si existen dos propiedades que sean de safety y de liveness. Entonces son iguales.
 
 #### Demuestre o refute lo sig:
 

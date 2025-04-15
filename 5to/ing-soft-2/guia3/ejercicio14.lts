@@ -1,0 +1,47 @@
+/*
+Ejercicio 14
+
+Dos vecinos conflictivos tiene separado sus terrenos por un campito con moras. Ellos acordaron que
+se iban a permitir entrar al campito para recoger moras, pero bajo la condici´on de que a lo sumo uno
+de ellos est´a a la vez en el campito. Luego de varias negociaciones llegaron al acuerdo del siguiente
+protocolo.
+
+Cada vez que uno de los vecinos desea entrar al campito, iza su propia bandera. Si este vecino ve
+que la bandera del otro ya estaba izada, arr´ıa la bandera propia e intenta nuevamente. Si, en cambio,
+la bandera del otro vecino no est´a izada, ingresa al campito y recoge las moras que desea. Una vez
+que haya culminado sale del campito y arr´ıa su bandera.
+
+Modele este algoritmo para dos vecinos, n1 y n2. Especifique la propiedad de seguridad requeria
+para el campito y verifique que asegure efectivamente el acceso en exclusi´on mutua de los vecinos.
+Especifique las propiedades de progreso requeridas para que ambos vecinos puedan recoger moras
+provisto que se encuentran bajo una estrategia de scheduling equitativa. ¿Existe alguna circunstancia
+adversa en la cual los vecinos no puedan progresar? ¿Qu´e ocurrre si alguno de los vecinos es egoista?
+(En la p´agina 158, el libro da una ayuda para modelar las banderas.)
+*/
+
+const True = 1 
+const False = 0
+range Bool = False..True
+set BoolActions = {setTrue,setFalse,[False],[True]}
+
+BOOLVAR = VAL[False],
+VAL[v:Bool] = ( setTrue -> VAL[True]
+			| setFalse -> VAL[False]
+			| [v] -> VAL[v]
+			).
+
+||FLAGS = (flag1:BOOLVAR||flag2:BOOLVAR).
+
+N1 = (	flag1.setTrue -> flag2.[i:0..1] ->( when (i == 1) flag1.setFalse -> N1
+										 | when (i == 0) enter1 -> exit1 -> flag1.setFalse -> N1)).
+
+
+N2 = (	flag2.setTrue -> flag1.[i:0..1] ->( when (i == 1) flag2.setFalse -> N2
+										  | when (i == 0) enter2 -> exit2 -> flag2.setFalse -> N2)).
+
+
+progress N1enter = {enter1}
+progress N2enter = {enter2}
+
+||FIELD = (FLAGS || N1 || N2) //>> {flag1.[b:Bool],flag2.[b:Bool]}.
+
