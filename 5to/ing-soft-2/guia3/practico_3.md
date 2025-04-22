@@ -74,7 +74,19 @@ De la misma forma, sea Q = $\bar{P}$ , entonces siempre existe alguna forma de c
 3. safety
 4. liveness
 5. safety
-6. safety
+6. ninguna
+
+no es de liveness porque una palabra del complemento (ababbbb) no puede ser "rescatada" para volver a satisfacer la propiedad.
+
+Para ver que no es de safety, veamos que existen palabras del complemento, que tienen un prefijo tal que puede ser extendido para que satisfaga la propiedad.
+
+la palabra abababababab....., puedo tomar cualquier prefijo y extenderla con aaaaa... , y pasara a satisfacer la propiedad.
+$$
+\forall \sigma : \sigma \notin P \rightarrow \exists i \geq 0 : \forall \beta : \sigma [..i] \beta \notin P
+$$
+recordamos que una palabra que no este en la propiedad de safety, existe un i tal que si tomo el prefijo, no importa como intente completarla, nunca lograre que este dentro de la propiedad. En este caso tengo el ejemplo de una palabra que no esta en la propiedad, pero existe un i, tal que si tomo el prefijo, existe un $\beta$ tal que **si** pertenece a la propiedad.
+
+
 
 
 #### Ejercicio 11:  de ejemplos que violan la sig prop
