@@ -1,0 +1,24 @@
+CINTA (N=5) = COUNT[0],
+COUNT[i:0..5] = (when (i<N) put->COUNT[i+1]
+				|when (i>0) get->COUNT[i-1]).
+
+RSUJ = (suj_pava -> ESP_EPAVA
+		|suj_base -> ESP_EBASE),
+
+ESP_EPAVA = (ens_pava -> put -> RSUJ),
+ESP_EBASE = (ens_base -> put -> RSUJ).
+
+RENS = (ens_pava -> RENS
+		|ens_base -> RENS).
+
+RVERIF = (tomar_pava -> [1].get -> tomar_base -> [2].get -> VERIF),
+VERIF = (validar -> [3].put -> RVERIF
+		|rechazar -> RVERIF).
+
+REMB = ([3].get -> embalar -> comercializar -> REMB).
+
+const N = 2
+
+||FABRICA = ( [1..3]:CINTA 			
+			|| RVERIF
+			|| REMB).
