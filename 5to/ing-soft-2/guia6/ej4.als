@@ -1,7 +1,6 @@
 /*
 	Modelar grafo dirigido
 */
-
 sig Node {}
 
 sig Graph {
@@ -16,8 +15,10 @@ si (n0,n1) in edges, entonces existe una arista dirigida de n0 a n1
 /*
 Dar u predicado que especifique cada una de las siguientes propiedades
 */
+
 /*
 (a) El grafo es aciclico
+clausura transitiva estricta ^ 
 */
 pred no_cycles [g: Graph]{
 	no ^(g.edges) & iden
@@ -47,7 +48,7 @@ existe algun camino entre A y B
 */
 pred conected [g: Graph]{
 	all n1, n2: g.nodes |
-	n2 in *(g.edges + ~(g.edges))[n1]
+	n2 in ^(g.edges + ~(g.edges))[n1]
 }
 
 /*
@@ -58,6 +59,7 @@ pred has_SCC [g: Graph] {
 	all n1,n2: s |
 	n1 in *(g.edges)[n1] and n2 in *(g.edges)[n1]
 }
+
 /*
 (f) el grafo contiene una componente conexa
 */
@@ -66,6 +68,7 @@ pred has_CC [g: Graph] {
 	all n1,n2: s |
 	n2 in *(g.edges + ~(g.edges))[n1]
 }
+
 run no_cycles for 4 but 1 Graph
 
 run undirected for 4 but 1 Graph
@@ -74,6 +77,6 @@ run strong_conected for 4 but 1 Graph
 
 run conected for 4 but 1 Graph
 
-run has_SCC for 6 but 1 Graph
+run has_SCC for 3 but 1 Graph
 
-run has_CC for 6 but 1 Graph
+run has_CC for 3 but 1 Graph
