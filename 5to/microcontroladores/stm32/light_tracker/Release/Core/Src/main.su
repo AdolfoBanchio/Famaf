@@ -1,0 +1,4 @@
+../Core/Src/main.c:101:6:HAL_ADCEx_InjectedConvCpltCallback	0	static
+../Core/Src/main.c:228:6:SystemClock_Config	88	static,ignoring_inline_asm
+../Core/Src/main.c:112:5:main	128	static,ignoring_inline_asm
+../Core/Src/main.c:578:6:Error_Handler	0	static,ignoring_inline_asm

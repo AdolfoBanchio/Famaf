@@ -1,0 +1,10 @@
+15:02:49 **** Incremental Build of configuration Debug for project F7_blinky_led ****
+make -j12 all 
+arm-none-eabi-size   F7_blinky_led.elf 
+   text	   data	    bss	    dec	    hex	filename
+   6632	     20	   1572	   8224	   2020	F7_blinky_led.elf
+Finished building: default.size.stdout
+ 
+
+15:02:49 Build Finished. 0 errors, 0 warnings. (took 176ms)
+

@@ -1,0 +1,10 @@
+16:40:49 **** Build of configuration Debug for project 1_learning_stm32 ****
+make -j12 all 
+arm-none-eabi-size   1_learning_stm32.elf 
+   text	   data	    bss	    dec	    hex	filename
+  34600	    152	   3664	  38416	   9610	1_learning_stm32.elf
+Finished building: default.size.stdout
+ 
+
+16:40:49 Build Finished. 0 errors, 0 warnings. (took 180ms)
+

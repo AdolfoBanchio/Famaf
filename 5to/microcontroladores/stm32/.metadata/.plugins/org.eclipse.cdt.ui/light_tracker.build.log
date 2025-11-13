@@ -1,0 +1,17 @@
+17:41:10 **** Incremental Build of configuration Debug for project light_tracker ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F756xx -c -I../Core/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "light_tracker.elf" @"objects.list"   -mcpu=cortex-m7 -T"/home/abanchio/Documents/Famaf/5to/microcontroladores/stm32/light_tracker/STM32F756ZGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="light_tracker.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: light_tracker.elf
+ 
+arm-none-eabi-size  light_tracker.elf 
+arm-none-eabi-objdump -h -S light_tracker.elf  > "light_tracker.list"
+   text	   data	    bss	    dec	    hex	filename
+  20856	     16	   1808	  22680	   5898	light_tracker.elf
+Finished building: default.size.stdout
+ 
+Finished building: light_tracker.list
+ 
+
+17:41:10 Build Finished. 0 errors, 0 warnings. (took 332ms)
+

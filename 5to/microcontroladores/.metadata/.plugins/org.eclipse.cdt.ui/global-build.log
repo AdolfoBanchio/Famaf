@@ -1,0 +1,21 @@
+15:02:14 **** Incremental Build of configuration Debug for project F7_blinky_led ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F756xx -c -I../Core/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "F7_blinky_led.elf" @"objects.list"   -mcpu=cortex-m7 -T"/home/abanchio/Documents/Famaf/5to/microcontroladores/F7_blinky_led/STM32F756ZGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="F7_blinky_led.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: F7_blinky_led.elf
+ 
+arm-none-eabi-size   F7_blinky_led.elf 
+arm-none-eabi-objdump -h -S  F7_blinky_led.elf  > "F7_blinky_led.list"
+   text	   data	    bss	    dec	    hex	filename
+   6632	     20	   1572	   8224	   2020	F7_blinky_led.elf
+Finished building: default.size.stdout
+ 
+Finished building: F7_blinky_led.list
+ 
+15:02:49 **** Incremental Build of configuration Debug for project F7_blinky_led ****
+make -j12 all 
+arm-none-eabi-size   F7_blinky_led.elf 
+   text	   data	    bss	    dec	    hex	filename
+   6632	     20	   1572	   8224	   2020	F7_blinky_led.elf
+Finished building: default.size.stdout
+ 

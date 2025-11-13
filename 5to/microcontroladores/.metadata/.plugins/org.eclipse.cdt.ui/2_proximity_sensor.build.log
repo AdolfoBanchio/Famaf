@@ -1,0 +1,10 @@
+16:53:46 **** Incremental Build of configuration Debug for project 2_proximity_sensor ****
+make -j12 all 
+arm-none-eabi-size   2_proximity_sensor.elf 
+   text	   data	    bss	    dec	    hex	filename
+  34600	    152	   3736	  38488	   9658	2_proximity_sensor.elf
+Finished building: default.size.stdout
+ 
+
+16:53:46 Build Finished. 0 errors, 0 warnings. (took 177ms)
+

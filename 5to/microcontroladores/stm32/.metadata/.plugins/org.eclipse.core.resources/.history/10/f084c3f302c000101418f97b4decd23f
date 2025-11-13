@@ -1,0 +1,13 @@
+/*
+ * i2c_lcd_AIP31068.h
+ *
+ *  Created on: Nov 12, 2025
+ *      Author: abanchio
+ */
+
+#ifndef INC_I2C_LCD_AIP31068_H_
+#define INC_I2C_LCD_AIP31068_H_
+
+
+
+#endif /* INC_I2C_LCD_AIP31068_H_ */
